@@ -1,0 +1,112 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/*
+| -------------------------------------------------------------------------
+| URI ROUTING
+| -------------------------------------------------------------------------
+| This file lets you re-map URI requests to specific controller functions.
+|
+| Typically there is a one-to-one relationship between a URL string
+| and its corresponding controller class/method. The segments in a
+| URL normally follow this pattern:
+|
+| example.com/class/method/id/
+|
+| In some instances, however, you may want to remap this relationship
+| so that a different class/function is called than the one
+| corresponding to the URL.
+|
+| Please see the user guide for complete details:
+|
+| https://codeigniter.com/user_guide/general/routing.html
+|
+| -------------------------------------------------------------------------
+| RESERVED ROUTES
+| -------------------------------------------------------------------------
+|
+| There are three reserved routes:
+|
+| $route['default_controller'] = 'welcome';
+|
+| This route indicates which controller class should be loaded if the
+| URI contains no data. In the above example, the "welcome" class
+| would be loaded.
+|
+| $route['404_override'] = 'errors/page_missing';
+|
+| This route will tell the Router which controller/method to use if those
+| provided in the URL cannot be matched to a valid route.
+|
+| $route['translate_uri_dashes'] = FALSE;
+|
+| This is not exactly a route, but allows you to automatically route
+| controller and method names that contain dashes. '-' isn't a valid
+| class or method name character, so it requires translation.
+| When you set this option to TRUE, it will replace ALL dashes in the
+| controller and method URI segments.
+|
+| Examples: my-controller/index -> my_controller/index
+|   my-controller/my-method -> my_controller/my_method
+*/
+$route['default_controller'] = 'Auth/login';
+$route['404_override'] = '';
+$route['translate_uri_dashes'] = TRUE;
+
+/* Auth */
+$route['login_process'] = 'Auth/login_process';
+$route['registrasi'] = 'Auth/registration';
+$route['register_process'] = 'Auth/register_process';
+
+/* Admin */
+$route['admin_side/launcher'] = 'admin/App/launcher';
+$route['admin_side/beranda'] = 'admin/App/home';
+$route['admin_side/menu'] = 'admin/App/menu';
+$route['admin_side/log_activity'] = 'admin/App/log_activity';
+$route['admin_side/cleaning_log'] = 'admin/App/cleaning_log';
+$route['admin_side/tentang_aplikasi'] = 'admin/App/about';
+$route['admin_side/bantuan'] = 'admin/App/helper';
+
+$route['admin_side/dasbor'] = 'admin/Dashboard';
+$route['admin_side/peta_provinsi/(:any)'] = 'admin/Dashboard/province/$1';
+$route['admin_side/peta_kabupaten/(:any)'] = 'admin/Dashboard/city/$1';
+$route['admin_side/peta_kecamatan/(:any)'] = 'admin/Dashboard/sub_district/$1';
+
+$route['admin_side/administrator'] = 'admin/Master/administrator_data';
+$route['admin_side/tambah_data_admin'] = 'admin/Master/add_administrator_data';
+$route['admin_side/simpan_data_admin'] = 'admin/Master/save_administrator_data';
+$route['admin_side/detail_data_admin/(:any)'] = 'admin/Master/detail_administrator_data/$1';
+$route['admin_side/ubah_data_admin/(:any)'] = 'admin/Master/edit_administrator_data/$1';
+$route['admin_side/perbarui_data_admin'] = 'admin/Master/update_administrator_data';
+$route['admin_side/atur_ulang_kata_sandi_admin/(:any)'] = 'admin/Master/reset_password_administrator_account/$1';
+$route['admin_side/hapus_data_admin/(:any)'] = 'admin/Master/delete_administrator_data/$1';
+
+$route['admin_side/kube'] = 'admin/Master/kube_data';
+$route['admin_side/tambah_data_kube'] = 'admin/Master/add_kube_data';
+$route['admin_side/simpan_data_kube'] = 'admin/Master/save_kube_data';
+$route['admin_side/detail_data_kube/(:any)'] = 'admin/Master/detail_kube_data/$1';
+$route['admin_side/ubah_data_kube/(:any)'] = 'admin/Master/edit_kube_data/$1';
+$route['admin_side/perbarui_data_kube'] = 'admin/Master/update_kube_data';
+$route['admin_side/atur_ulang_kata_sandi_kube/(:any)'] = 'admin/Master/reset_password_kube_account/$1';
+$route['admin_side/hapus_data_kube/(:any)'] = 'admin/Master/delete_kube_data/$1';
+
+$route['admin_side/rutilahu'] = 'admin/Master/rutilahu_data';
+
+$route['admin_side/sarling'] = 'admin/Master/sarling_data';
+
+$route['admin_side/laporan'] = 'admin/Report';
+
+/* REST API */
+$route['api'] = 'Rest_server/documentation';
+
+$route['api/kube'] = 'api/kube/Master';
+
+$route['api/rutilahu'] = 'api/rutilahu/Master';
+
+/*
+| -------------------------------------------------------------------------
+| Sample REST API Routes
+| -------------------------------------------------------------------------
+*/
+$route['api/example/users/(:num)'] = 'api/example/users/id/$1'; // Example 4
+$route['api/example/users/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = 'api/example/users/id/$1/format/$3$4'; // Example 8
