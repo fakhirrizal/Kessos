@@ -8,7 +8,7 @@
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span><a href='<?= site_url('/admin_side/kube'); ?>'>Data Kube (Kelompok Usaha Bersama)</a></span>
+		<span><a href='<?= site_url('/admin_side/rutilahu'); ?>'>Data Rutilahu (Rumah Tidak Layak Huni)</a></span>
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
@@ -18,7 +18,7 @@
 <?= $this->session->flashdata('sukses') ?>
 <?= $this->session->flashdata('gagal') ?>
 <?php
-$id_kube = '';
+$id_rutilahu = '';
 ?>
 <div class="page-content-inner">
 	<div class="m-heading-1 border-green m-bordered">
@@ -28,7 +28,6 @@ $id_kube = '';
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<!-- BEGIN EXAMPLE TABLE PORTLET-->
 			<div class="portlet light ">
 				<div class="portlet-body">
 					<div class='row'>
@@ -36,20 +35,20 @@ $id_kube = '';
 						if(isset($data_utama)){
 							foreach($data_utama as $row)
 							{
-								$id_kube = $row->id_kube;
+								$id_rutilahu = $row->id_rutilahu;
 						?>
 								<div class="col-md-6">
 									<table class="table">
 										<tbody>
 											<tr>
-												<td> Jenis Usaha </td>
-												<td> : </td>
-												<td><?php echo $row->jenis_usaha; ?></td>
-											</tr>
-											<tr>
 												<td> Nama Kelompok </td>
 												<td> : </td>
-												<td><?php echo $row->nama_tim; ?></td>
+												<td><?php echo $row->nama_kelompok; ?></td>
+											</tr>
+											<tr>
+												<td> Alamat </td>
+												<td> : </td>
+												<td><?php echo $row->alamat; ?></td>
 											</tr>
 											<tr>
 												<td> </td>
@@ -62,11 +61,6 @@ $id_kube = '';
 								<div class="col-md-6">
 									<table class="table">
 										<tbody>
-											<tr>
-												<td> Alamat </td>
-												<td> : </td>
-												<td><?php echo $row->alamat; ?></td>
-											</tr>
 											<tr>
 												<td> Rencana Anggaran </td>
 												<td> : </td>
@@ -132,7 +126,7 @@ $id_kube = '';
 							</div>
 						</div>
 						<div class="col-md-12" >
-						<hr><a href="<?php echo base_url()."admin_side/kube"; ?>" class="btn btn-info" role="button"><i class="fa fa-angle-double-left"></i> Kembali</a></div>
+						<hr><a href="<?php echo base_url()."admin_side/rutilahu"; ?>" class="btn btn-info" role="button"><i class="fa fa-angle-double-left"></i> Kembali</a></div>
 					</div>
 				</div>
 			</div>
@@ -147,9 +141,8 @@ $id_kube = '';
 				</div>
 				<div class="modal-body">
 					<div class="box box-primary">
-						<form role="form" class="form-horizontal" action="<?=base_url('admin_side/simpan_data_anggota_kube');?>" method="post"  enctype='multipart/form-data'>
-							<input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>">
-							<input type="hidden" name="id_kube" value="<?= $id_kube; ?>">
+						<form role="form" class="form-horizontal" action="<?=base_url('admin_side/simpan_data_anggota_rutilahu');?>" method="post">
+							<input type="hidden" name="id_rutilahu" value="<?= $id_rutilahu; ?>">
 							<div class="form-body">
 								<div class="form-group form-md-line-input has-danger">
 									<label class="col-md-3 control-label" for="form_control_1">Nama Lengkap <span class="required"> * </span></label>
@@ -231,7 +224,7 @@ $id_kube = '';
 				"order": [[ 0, "asc" ]],
 				"bProcessing": true,
 				"ajax" : {
-					url:"<?= site_url('admin/Master/json_anggota_kube'); ?>",
+					url:"<?= site_url('admin/Master/json_anggota_rutilahu'); ?>",
 					data: {id: '<?= $this->uri->segment(3); ?>'}
 				},
 				"aoColumns": [
@@ -245,12 +238,11 @@ $id_kube = '';
 			});
 			$('#tbl1').on('click','.ubahdata',function(){
 				var id = $(this).attr("id");
-				var modul = 'modul_ubah_data_anggota_kube';
-				var nilai_token = '<?php echo $this->security->get_csrf_hash();?>';
+				var modul = 'modul_ubah_data_anggota_rutilahu';
 				$.ajax({
 					type:"POST",
 					url:"<?= site_url('admin/Master/ajax_function'); ?>",
-					data: {id:id,modul:modul,<?php echo $this->security->get_csrf_token_name();?>:nilai_token},
+					data: {id:id,modul:modul},
 					success:function(data){
 					$('#formubahdata').html(data);
 					$('#ubahdata').modal("show");
@@ -259,42 +251,3 @@ $id_kube = '';
 			});
 		});
 	</script>
-<style>
-	.morecontent span {
-	display: none;
-	}
-	.morelink {
-		display: block;
-	}
-</style>
-<script>
-	$(document).ready(function() {
-		var showChar = 100;
-		var ellipsestext = "...";
-		var moretext = "Show more >";
-		var lesstext = "Show less";
-
-		$('.more').each(function() {
-			var content = $(this).html();
-			if(content.length > showChar) {
-				var c = content.substr(0, showChar);
-				var h = content.substr(showChar, content.length - showChar);
-				var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
-				$(this).html(html);
-			}
-		});
-
-		$(".morelink").click(function(){
-			if($(this).hasClass("less")) {
-				$(this).removeClass("less");
-				$(this).html(moretext);
-			} else {
-				$(this).addClass("less");
-				$(this).html(lesstext);
-			}
-			$(this).parent().prev().toggle();
-			$(this).prev().toggle();
-			return false;
-		});
-	});
-</script>

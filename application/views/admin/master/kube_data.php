@@ -16,7 +16,7 @@
 <div class="page-content-inner">
 	<div class="m-heading-1 border-green m-bordered">
 		<h3>Catatan</h3>
-		<!-- <p> Ketika mengklik <b>Atur Ulang Sandi</b>, maka kata sandi otomatis menjadi "<b>1234</b>"</p> -->
+		<p> Untuk menambahkan data anggota Kube silahkan klik detil data kube-nya.</p>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
@@ -116,98 +116,98 @@
 					</table>
 					</form>
 					<script type="text/javascript" language="javascript" >
-							$(document).ready(function(){
-								$('#tbl').dataTable({
-									"order": [[ 1, "asc" ]],
-									"bProcessing": true,
-									"ajax" : {
-										url:"<?= site_url('admin/Master/json_kube'); ?>"
-									},
-									// "footerCallback": function ( row, data, start, end, display ) {
-									// 	var api = this.api(), data;
-									// 	var intVal = function ( i ) {
-									// 		return typeof i === 'string' ?
-									// 			i.replace(/[\$,]/g, '')*1 :
-									// 			typeof i === 'number' ?
-									// 				i : 0;
-									// 	};
-									// 	total = api
-									// 		.column( 5 )
-									// 		.data()
-									// 		.reduce( function (a, b) {
-									// 			return intVal(a) + intVal(b);
-									// 		}, 0 );
-									// 	pageTotal = api
-									// 		.column( 5, { page: 'current'} )
-									// 		.data()
-									// 		.reduce( function (a, b) {
-									// 			return intVal(a) + intVal(b);
-									// 		}, 0 );
-									// 	$( api.column( 5 ).footer() ).html(
-									// 		'$ '+pageTotal +' ( $ '+ total +' Total)'
-									// 		'$ '+ total
-									// 	);
+						$(document).ready(function(){
+							$('#tbl').dataTable({
+								"order": [[ 1, "asc" ]],
+								"bProcessing": true,
+								"ajax" : {
+									url:"<?= site_url('admin/Master/json_kube'); ?>"
+								},
+								// "footerCallback": function ( row, data, start, end, display ) {
+								// 	var api = this.api(), data;
+								// 	var intVal = function ( i ) {
+								// 		return typeof i === 'string' ?
+								// 			i.replace(/[\$,]/g, '')*1 :
+								// 			typeof i === 'number' ?
+								// 				i : 0;
+								// 	};
+								// 	total = api
+								// 		.column( 5 )
+								// 		.data()
+								// 		.reduce( function (a, b) {
+								// 			return intVal(a) + intVal(b);
+								// 		}, 0 );
+								// 	pageTotal = api
+								// 		.column( 5, { page: 'current'} )
+								// 		.data()
+								// 		.reduce( function (a, b) {
+								// 			return intVal(a) + intVal(b);
+								// 		}, 0 );
+								// 	$( api.column( 5 ).footer() ).html(
+								// 		'$ '+pageTotal +' ( $ '+ total +' Total)'
+								// 		'$ '+ total
+								// 	);
 
-									// 	total2 = api
-									// 		.column( 4 )
-									// 		.data()
-									// 		.reduce( function (a, b) {
-									// 			return intVal(a) + intVal(b);
-									// 		}, 0 );
-									// 	pageTotal2 = api
-									// 		.column( 4, { page: 'current'} )
-									// 		.data()
-									// 		.reduce( function (a, b) {
-									// 			return intVal(a) + intVal(b);
-									// 		}, 0 );
-									// 	$( api.column( 4 ).footer() ).html(
-									// 		'$ '+pageTotal2 +' ( $ '+ total2 +' Total)'
-									// 		'$ '+ total2
-									// 	);
-									// },
-									"aoColumns": [
-												{ mData: 'checkbox', sClass: "alignCenter", "bSortable": false} ,
-												{ mData: 'number', sClass: "alignCenter" },
-												{ mData: 'nama_tim', sClass: "alignCenter" },
-												{ mData: 'jenis_usaha', sClass: "alignCenter" },
-												{ mData: 'alamat', sClass: "alignCenter" } ,
-												{ mData: 'rencana_anggaran', sClass: "alignCenter" },
-												{ mData: 'action' }
-											]
-								});
-
-								// $('#search').click(function(){
-								// 	var payment_type = $('#type').val();
-								// 	if(payment_type != '')
-								// 	{
-								// 		$('#tbl').dataTable({
-								// 			"bProcessing": true,
-								// 			"ajax" : {
-								// 				url:"<?= site_url('admin/Master/json_kube'); ?>",
-								// 				type:"POST",
-								// 				data:{
-								// 					type:payment_type
-								// 				}
-								// 			},
-								// 			"destroy" : true,
-								// 			"aoColumns": [
-								// 						{ mData: 'date' } ,
-								// 						{ mData: 'trans_id' },
-								// 						{ mData: 'name' },
-								// 						{ mData: 'status' },
-								// 						{ mData: 'transfer_in' } ,
-								// 						{ mData: 'transfer_out' }
-								// 					]
-								// 		}).ajax.reload();
-								// 	}
-								// 	else
-								// 	{
-								// 		alert("Payment Type is Required");
-								// 	}
-								// });
-
+								// 	total2 = api
+								// 		.column( 4 )
+								// 		.data()
+								// 		.reduce( function (a, b) {
+								// 			return intVal(a) + intVal(b);
+								// 		}, 0 );
+								// 	pageTotal2 = api
+								// 		.column( 4, { page: 'current'} )
+								// 		.data()
+								// 		.reduce( function (a, b) {
+								// 			return intVal(a) + intVal(b);
+								// 		}, 0 );
+								// 	$( api.column( 4 ).footer() ).html(
+								// 		'$ '+pageTotal2 +' ( $ '+ total2 +' Total)'
+								// 		'$ '+ total2
+								// 	);
+								// },
+								"aoColumns": [
+											{ mData: 'checkbox', sClass: "alignCenter", "bSortable": false} ,
+											{ mData: 'number', sClass: "alignCenter" },
+											{ mData: 'nama_tim' },
+											{ mData: 'jenis_usaha', sClass: "alignCenter" },
+											{ mData: 'alamat', sClass: "alignCenter" } ,
+											{ mData: 'rencana_anggaran', sClass: "alignCenter" },
+											{ mData: 'action' }
+										]
 							});
-							</script>
+
+							// $('#search').click(function(){
+							// 	var payment_type = $('#type').val();
+							// 	if(payment_type != '')
+							// 	{
+							// 		$('#tbl').dataTable({
+							// 			"bProcessing": true,
+							// 			"ajax" : {
+							// 				url:"<?= site_url('admin/Master/json_kube'); ?>",
+							// 				type:"POST",
+							// 				data:{
+							// 					type:payment_type
+							// 				}
+							// 			},
+							// 			"destroy" : true,
+							// 			"aoColumns": [
+							// 						{ mData: 'date' } ,
+							// 						{ mData: 'trans_id' },
+							// 						{ mData: 'name' },
+							// 						{ mData: 'status' },
+							// 						{ mData: 'transfer_in' } ,
+							// 						{ mData: 'transfer_out' }
+							// 					]
+							// 		}).ajax.reload();
+							// 	}
+							// 	else
+							// 	{
+							// 		alert("Payment Type is Required");
+							// 	}
+							// });
+
+						});
+					</script>
 					<script type="text/javascript">
 					function deleteConfirm(){
 						var result = confirm("Yakin akan menghapus data ini?");
@@ -220,7 +220,6 @@
 					</script>
 				</div>
 			</div>
-			<!-- END EXAMPLE TABLE PORTLET-->
 		</div>
 	</div>
 </div>

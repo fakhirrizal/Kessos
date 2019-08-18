@@ -84,13 +84,26 @@ $route['admin_side/hapus_data_admin/(:any)'] = 'admin/Master/delete_administrato
 $route['admin_side/kube'] = 'admin/Master/kube_data';
 $route['admin_side/tambah_data_kube'] = 'admin/Master/add_kube_data';
 $route['admin_side/simpan_data_kube'] = 'admin/Master/save_kube_data';
-$route['admin_side/detail_data_kube/(:any)'] = 'admin/Master/detail_kube_data/$1';
+$route['admin_side/detil_data_kube/(:any)'] = 'admin/Master/detail_kube_data/$1';
 $route['admin_side/ubah_data_kube/(:any)'] = 'admin/Master/edit_kube_data/$1';
 $route['admin_side/perbarui_data_kube'] = 'admin/Master/update_kube_data';
-$route['admin_side/atur_ulang_kata_sandi_kube/(:any)'] = 'admin/Master/reset_password_kube_account/$1';
+$route['admin_side/simpan_data_anggota_kube'] = 'admin/Master/save_kube_member';
+$route['admin_side/perbarui_data_anggota_kube'] = 'admin/Master/update_kube_member';
+$route['admin_side/atur_ulang_kata_sandi_anggota_kube/(:any)'] = 'admin/Master/reset_password_kube_member_account/$1';
 $route['admin_side/hapus_data_kube/(:any)'] = 'admin/Master/delete_kube_data/$1';
+$route['admin_side/hapus_data_anggota_kube/(:any)'] = 'admin/Master/delete_kube_member/$1';
 
 $route['admin_side/rutilahu'] = 'admin/Master/rutilahu_data';
+$route['admin_side/tambah_data_rutilahu'] = 'admin/Master/add_rutilahu_data';
+$route['admin_side/simpan_data_rutilahu'] = 'admin/Master/save_rutilahu_data';
+$route['admin_side/detil_data_rutilahu/(:any)'] = 'admin/Master/detail_rutilahu_data/$1';
+$route['admin_side/ubah_data_rutilahu/(:any)'] = 'admin/Master/edit_rutilahu_data/$1';
+$route['admin_side/perbarui_data_rutilahu'] = 'admin/Master/update_rutilahu_data';
+$route['admin_side/simpan_data_anggota_rutilahu'] = 'admin/Master/save_rutilahu_member';
+$route['admin_side/perbarui_data_anggota_rutilahu'] = 'admin/Master/update_rutilahu_member';
+$route['admin_side/atur_ulang_kata_sandi_anggota_rutilahu/(:any)'] = 'admin/Master/reset_password_rutilahu_member_account/$1';
+$route['admin_side/hapus_data_rutilahu/(:any)'] = 'admin/Master/delete_rutilahu_data/$1';
+$route['admin_side/hapus_data_anggota_rutilahu/(:any)'] = 'admin/Master/delete_rutilahu_member/$1';
 
 $route['admin_side/sarling'] = 'admin/Master/sarling_data';
 

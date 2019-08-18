@@ -1,4 +1,7 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style media="all" type="text/css">
+    .alignCenter { text-align: center; }
+</style>
 <ul class="page-breadcrumb breadcrumb">
 	<li>
 		<span>Master</span>
@@ -13,26 +16,12 @@
 <div class="page-content-inner">
 	<div class="m-heading-1 border-green m-bordered">
 		<h3>Catatan</h3>
-		<!-- <p> Ketika mengklik <b>Atur Ulang Sandi</b>, maka kata sandi otomatis menjadi "<b>1234</b>"</p> -->
+		<p> Untuk menambahkan data anggota Rutilahu silahkan klik detil data rutilahu-nya.</p>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
-			<!-- BEGIN EXAMPLE TABLE PORTLET-->
 			<div class="portlet light ">
 				<div class="portlet-body">
-					<div class="form-group select2-bootstrap-prepend" >
-						<label class="control-label col-md-2">Opsi pencarian berdasarkan <b>Status</b></label>
-						<div class="col-md-5">
-							<select id='pilihan' class="form-control select2-allow-clear">
-								<option value=""></option>
-								<option value="2">Baru</option>
-								<option value="2">Renovasi</option>
-								<option value="19">Rusak</option>
-							</select>
-						</div>
-					</div>
-					<br>
-					<hr>
 					<form action="#" method="post" onsubmit="return deleteConfirm();"/>
 					<div class="table-toolbar">
 						<div class="row">
@@ -43,14 +32,11 @@
 									</button>
 								</div>
 									<span class="separator">|</span>
-									<a href="#" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
-								<!-- <button id="sample_editable_1_new" onclick="window.location.href='<?=base_url('Master/admin');?>'" class="btn sbold green"> Tambah Data Baru
-									<i class="fa fa-plus"></i>
-								</button> -->
+									<a href="<?=base_url('admin_side/tambah_data_rutilahu');?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
 							</div>
 						</div>
 					</div>
-					<table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+					<table class="table table-striped table-bordered table-hover table-checkable order-column" id="tbl">
 						<thead>
 							<tr>
 								<th width="3%">
@@ -60,56 +46,33 @@
 									</label>
 								</th>
 								<th style="text-align: center;" width="4%"> # </th>
-								<th style="text-align: center;"> Nama Lengkap </th>
-								<th style="text-align: center;"> Alamat </th>
-								<th style="text-align: center;"> Status Rumah </th>
+								<th style="text-align: center;"> Nama Kelompok </th>
+								<th style="text-align: center;"> Alamat Rumah </th>
+								<th style="text-align: center;"> Rencana Anggaran </th>
 								<th style="text-align: center;" width="7%"> Aksi </th>
 							</tr>
 						</thead>
-						<tbody>
-							<?php
-							$no = 1;
-							// foreach ($data_tabel as $key => $value) {
-							?>
-							<tr class="odd gradeX">
-								<td style="text-align: center;">
-									<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" name="selected_id[]" value="#"/>
-										<span></span>
-									</label>
-								</td>
-								<td style="text-align: center;"><?= $no++.'.'; ?></td>
-								<td style="text-align: center;">Imam Fajrul Falah</td>
-								<td style="text-align: center;">Jln. dr. Cipto 61, Proyonanggan Tengah, Batang 51211</td>
-								<td style="text-align: center;"><span class="label label-sm label-danger">Rusak</span></td>
-								<td>
-									<div class="btn-group" style="text-align: center;">
-										<button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Aksi
-											<i class="fa fa-angle-down"></i>
-										</button>
-										<ul class="dropdown-menu" role="menu">
-											<li>
-												<a href="#">
-													<i class="icon-eye"></i> Detail Data </a>
-											</li>
-											<li>
-												<a href="#">
-													<i class="icon-wrench"></i> Ubah Data </a>
-											</li>
-											<li>
-												<a onclick="return confirm('Anda yakin?')" href="#">
-													<i class="icon-trash"></i> Hapus Data </a>
-											</li>
-										</ul>
-									</div>
-								</td>
-							</tr>
-							<?php
-							// }
-							?>
-						</tbody>
 					</table>
 					</form>
+					<script type="text/javascript" language="javascript" >
+						$(document).ready(function(){
+							$('#tbl').dataTable({
+								"order": [[ 1, "asc" ]],
+								"bProcessing": true,
+								"ajax" : {
+									url:"<?= site_url('admin/Master/json_rutilahu'); ?>"
+								},
+								"aoColumns": [
+											{ mData: 'checkbox', sClass: "alignCenter", "bSortable": false} ,
+											{ mData: 'number', sClass: "alignCenter" },
+											{ mData: 'nama_tim' },
+											{ mData: 'alamat', sClass: "alignCenter" } ,
+											{ mData: 'rencana_anggaran', sClass: "alignCenter" },
+											{ mData: 'action' }
+										]
+							});
+						});
+					</script>
 					<script type="text/javascript">
 					function deleteConfirm(){
 						var result = confirm("Yakin akan menghapus data ini?");
@@ -122,7 +85,6 @@
 					</script>
 				</div>
 			</div>
-			<!-- END EXAMPLE TABLE PORTLET-->
 		</div>
 	</div>
 </div>
