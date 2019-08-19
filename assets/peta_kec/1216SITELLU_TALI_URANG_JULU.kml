@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SITELLU TALI URANG JULU/FID/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITELLU TALI URANG JULU/PROVINSI/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITELLU TALI URANG JULU/KECAMATAN/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITELLU TALI URANG JULU/DESA/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITELLU TALI URANG JULU/KABKOT/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITELLU TALI URANG JULU/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SITELLU TALI URANG JULU/FID/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITELLU TALI URANG JULU/PROVINSI/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITELLU TALI URANG JULU/KECAMATAN/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITELLU TALI URANG JULU/DESA/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITELLU TALI URANG JULU/KABKOT/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITELLU TALI URANG JULU/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SITELLU TALI URANG JULU/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC SITELLU TALI URANG JULU</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITELLU TALI URANG JULU"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITELLU TALI URANG JULU</SimpleData><SimpleData name="DESA">SILIMAKUTA</SimpleData><SimpleData name="KABKOT">PAKPAK BARAT</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.369066,2.535091,0.000000 98.375540,2.534392,0.000000 98.382013,2.534395,0.000000 98.386327,2.535992,0.000000 98.388929,2.536631,0.000000 98.385049,2.531361,0.000000 98.382832,2.528707,0.000000 98.380191,2.526795,0.000000 98.373589,2.520453,0.000000 98.373392,2.520358,0.000000 98.373343,2.520341,0.000000 98.365601,2.522377,0.000000 98.362258,2.522117,0.000000 98.356602,2.521727,0.000000 98.350301,2.523661,0.000000 98.348369,2.523959,0.000000 98.348074,2.525271,0.000000 98.347624,2.530850,0.000000 98.347429,2.533255,0.000000 98.346634,2.536616,0.000000 98.345036,2.543361,0.000000 98.352563,2.539697,0.000000 98.356016,2.538354,0.000000 98.369066,2.535091,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITELLU TALI URANG JULU"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITELLU TALI URANG JULU</SimpleData><SimpleData name="DESA">CIKAOK</SimpleData><SimpleData name="KABKOT">PAKPAK BARAT</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.350301,2.523661,0.000000 98.356602,2.521727,0.000000 98.362258,2.522117,0.000000 98.365601,2.522377,0.000000 98.373343,2.520341,0.000000 98.374617,2.515873,0.000000 98.374618,2.512829,0.000000 98.375097,2.510586,0.000000 98.375575,2.509945,0.000000 98.375745,2.509867,0.000000 98.366648,2.507378,0.000000 98.361069,2.503531,0.000000 98.357404,2.500324,0.000000 98.355332,2.499202,0.000000 98.352677,2.499087,0.000000 98.351972,2.501646,0.000000 98.351819,2.507246,0.000000 98.351653,2.509319,0.000000 98.349045,2.520945,0.000000 98.348369,2.523959,0.000000 98.350301,2.523661,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITELLU TALI URANG JULU"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITELLU TALI URANG JULU</SimpleData><SimpleData name="DESA">LAE LANGGE NAMUSENG</SimpleData><SimpleData name="KABKOT">PAKPAK BARAT</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.404648,2.511276,0.000000 98.405935,2.508134,0.000000 98.405459,2.503184,0.000000 98.405479,2.501891,0.000000 98.405509,2.500000,0.000000 98.406725,2.497875,0.000000 98.406772,2.497785,0.000000 98.403484,2.497944,0.000000 98.398061,2.499863,0.000000 98.391841,2.504026,0.000000 98.386897,2.507228,0.000000 98.382272,2.508988,0.000000 98.377648,2.510107,0.000000 98.375745,2.509867,0.000000 98.375575,2.509945,0.000000 98.375097,2.510586,0.000000 98.374618,2.512829,0.000000 98.374617,2.515873,0.000000 98.373343,2.520341,0.000000 98.373392,2.520358,0.000000 98.373589,2.520453,0.000000 98.380191,2.526795,0.000000 98.382832,2.528707,0.000000 98.385049,2.531361,0.000000 98.388929,2.536631,0.000000 98.390351,2.536222,0.000000 98.391404,2.535229,0.000000 98.394912,2.531924,0.000000 98.397319,2.529656,0.000000 98.404525,2.523823,0.000000 98.401616,2.522199,0.000000 98.400550,2.521046,0.000000 98.399704,2.520132,0.000000 98.399561,2.518354,0.000000 98.400279,2.516624,0.000000 98.401819,2.515051,0.000000 98.404498,2.511641,0.000000 98.404648,2.511276,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITELLU TALI URANG JULU"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITELLU TALI URANG JULU</SimpleData><SimpleData name="DESA">ULU MERAH</SimpleData><SimpleData name="KABKOT">PAKPAK BARAT</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.389940,2.478072,0.000000 98.394958,2.464763,0.000000 98.393581,2.465538,0.000000 98.387361,2.464776,0.000000 98.382837,2.465059,0.000000 98.377465,2.465909,0.000000 98.368889,2.466095,0.000000 98.362858,2.465808,0.000000 98.355663,2.462115,0.000000 98.355233,2.489808,0.000000 98.352890,2.498313,0.000000 98.352677,2.499087,0.000000 98.355332,2.499202,0.000000 98.357404,2.500324,0.000000 98.361069,2.503531,0.000000 98.366648,2.507378,0.000000 98.375745,2.509867,0.000000 98.377648,2.508986,0.000000 98.379883,2.504181,0.000000 98.382436,2.500336,0.000000 98.384032,2.496012,0.000000 98.385788,2.491848,0.000000 98.387704,2.485280,0.000000 98.389940,2.478072,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITELLU TALI URANG JULU"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITELLU TALI URANG JULU</SimpleData><SimpleData name="DESA">PARDOMUAN</SimpleData><SimpleData name="KABKOT">PAKPAK BARAT</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.403570,2.466111,0.000000 98.395937,2.464212,0.000000 98.394958,2.464763,0.000000 98.389940,2.478072,0.000000 98.387704,2.485280,0.000000 98.385788,2.491848,0.000000 98.384032,2.496012,0.000000 98.382436,2.500336,0.000000 98.379883,2.504181,0.000000 98.377648,2.508986,0.000000 98.375745,2.509867,0.000000 98.377648,2.510107,0.000000 98.382272,2.508988,0.000000 98.386897,2.507228,0.000000 98.391841,2.504026,0.000000 98.398061,2.499863,0.000000 98.403484,2.497944,0.000000 98.406772,2.497785,0.000000 98.408385,2.494608,0.000000 98.410554,2.490444,0.000000 98.412732,2.486785,0.000000 98.413489,2.485512,0.000000 98.413964,2.483947,0.000000 98.415061,2.480334,0.000000 98.410822,2.475972,0.000000 98.408469,2.470189,0.000000 98.403570,2.466111,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC SITELLU TALI URANG JULU" name="KEC SITELLU TALI URANG JULU"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

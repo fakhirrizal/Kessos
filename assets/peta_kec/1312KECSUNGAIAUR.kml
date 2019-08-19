@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SUNGAI AUR/FID/displayName]</td>
+          <td>$[KEC SUNGAI AUR/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI AUR/PROVINSI/displayName]</td>
+          <td>$[KEC SUNGAI AUR/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SUNGAI AUR/KECAMATAN/displayName]</td>
+          <td>$[KEC SUNGAI AUR/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI AUR/DESA/displayName]</td>
+          <td>$[KEC SUNGAI AUR/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SUNGAI AUR/KABKOT/displayName]</td>
+          <td>$[KEC SUNGAI AUR/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI AUR/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SUNGAI AUR/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SUNGAI AUR/FID/displayName]</td>
+          <td>$[KEC SUNGAI AUR/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI AUR/PROVINSI/displayName]</td>
+          <td>$[KEC SUNGAI AUR/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SUNGAI AUR/KECAMATAN/displayName]</td>
+          <td>$[KEC SUNGAI AUR/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI AUR/DESA/displayName]</td>
+          <td>$[KEC SUNGAI AUR/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SUNGAI AUR/KABKOT/displayName]</td>
+          <td>$[KEC SUNGAI AUR/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI AUR/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SUNGAI AUR/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC SUNGAI AUR</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SUNGAI AUR"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">SUNGAI AUR</SimpleData><SimpleData name="DESA">SUNGAI AUA</SimpleData><SimpleData name="KABKOT">PASAMAN BARAT</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.676008,0.163638,0.000000 99.675417,0.162709,0.000000 99.675366,0.162798,0.000000 99.645751,0.150731,0.000000 99.654917,0.143064,0.000000 99.646174,0.139231,0.000000 99.650475,0.131778,0.000000 99.641449,0.126951,0.000000 99.638911,0.119853,0.000000 99.631966,0.107343,0.000000 99.620910,0.111360,0.000000 99.615426,0.113971,0.000000 99.606412,0.118936,0.000000 99.597484,0.123474,0.000000 99.584814,0.129466,0.000000 99.565087,0.139483,0.000000 99.560835,0.130665,0.000000 99.553352,0.116284,0.000000 99.545085,0.101012,0.000000 99.538124,0.104265,0.000000 99.509163,0.118560,0.000000 99.494383,0.124001,0.000000 99.499010,0.127739,0.000000 99.503946,0.131263,0.000000 99.507332,0.133921,0.000000 99.509226,0.136232,0.000000 99.511980,0.138889,0.000000 99.513530,0.140565,0.000000 99.514620,0.142298,0.000000 99.515711,0.143453,0.000000 99.516457,0.145013,0.000000 99.517547,0.146169,0.000000 99.518738,0.148151,0.000000 99.519052,0.149101,0.000000 99.519367,0.151554,0.000000 99.518962,0.153822,0.000000 99.524758,0.165448,0.000000 99.534412,0.183360,0.000000 99.546716,0.195175,0.000000 99.569053,0.213849,0.000000 99.579748,0.221186,0.000000 99.585049,0.227093,0.000000 99.589781,0.232428,0.000000 99.593378,0.237002,0.000000 99.595839,0.242718,0.000000 99.598110,0.248626,0.000000 99.599625,0.256058,0.000000 99.602597,0.271131,0.000000 99.604869,0.278448,0.000000 99.604567,0.291711,0.000000 99.604719,0.302840,0.000000 99.604568,0.312597,0.000000 99.600405,0.337980,0.000000 99.606465,0.367250,0.000000 99.614871,0.390498,0.000000 99.622292,0.409248,0.000000 99.628047,0.414888,0.000000 99.638800,0.434553,0.000000 99.648342,0.449797,0.000000 99.656065,0.454065,0.000000 99.663940,0.458028,0.000000 99.670755,0.459095,0.000000 99.676358,0.459704,0.000000 99.678930,0.459856,0.000000 99.678984,0.459856,0.000000 99.679266,0.457972,0.000000 99.679155,0.434861,0.000000 99.675887,0.388199,0.000000 99.669249,0.371879,0.000000 99.687091,0.355010,0.000000 99.686111,0.330803,0.000000 99.672836,0.319412,0.000000 99.673270,0.310211,0.000000 99.673270,0.303420,0.000000 99.674140,0.297286,0.000000 99.676968,0.288523,0.000000 99.680341,0.276584,0.000000 99.684909,0.261468,0.000000 99.687303,0.253800,0.000000 99.690131,0.249419,0.000000 99.694048,0.245913,0.000000 99.697094,0.242189,0.000000 99.700576,0.238684,0.000000 99.704710,0.234521,0.000000 99.707974,0.231673,0.000000 99.712869,0.218857,0.000000 99.711508,0.197225,0.000000 99.710133,0.171628,0.000000 99.708761,0.170579,0.000000 99.702440,0.169133,0.000000 99.694970,0.167687,0.000000 99.692097,0.166819,0.000000 99.676008,0.163638,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC SUNGAI AUR" name="KEC SUNGAI AUR"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

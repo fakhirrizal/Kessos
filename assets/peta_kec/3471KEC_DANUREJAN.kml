@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC DANUREJAN/FID/displayName]</td>
+          <td>$[KEC DANUREJAN/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC DANUREJAN/PROVINSI/displayName]</td>
+          <td>$[KEC DANUREJAN/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC DANUREJAN/KECAMATAN/displayName]</td>
+          <td>$[KEC DANUREJAN/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC DANUREJAN/DESA/displayName]</td>
+          <td>$[KEC DANUREJAN/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC DANUREJAN/KABKOT/displayName]</td>
+          <td>$[KEC DANUREJAN/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC DANUREJAN/NAMA_PULAU/displayName]</td>
+          <td>$[KEC DANUREJAN/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC DANUREJAN/FID/displayName]</td>
+          <td>$[KEC DANUREJAN/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC DANUREJAN/PROVINSI/displayName]</td>
+          <td>$[KEC DANUREJAN/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC DANUREJAN/KECAMATAN/displayName]</td>
+          <td>$[KEC DANUREJAN/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC DANUREJAN/DESA/displayName]</td>
+          <td>$[KEC DANUREJAN/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC DANUREJAN/KABKOT/displayName]</td>
+          <td>$[KEC DANUREJAN/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC DANUREJAN/NAMA_PULAU/displayName]</td>
+          <td>$[KEC DANUREJAN/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC DANUREJAN</name><Snippet /><Placemark><name>DAERAH ISTIMEWA YOGYAKARTA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC DANUREJAN"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">DAERAH ISTIMEWA YOGYAKARTA</SimpleData><SimpleData name="KECAMATAN">DANUREJAN</SimpleData><SimpleData name="DESA">BAUSASRAN</SimpleData><SimpleData name="KABKOT">KOTA YOGYAKARTA</SimpleData><SimpleData name="NAMA_PULAU">JAWA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>110.378092,-7.790300,0.000000 110.378022,-7.790570,0.000000 110.377972,-7.790900,0.000000 110.377942,-7.791220,0.000000 110.377912,-7.791820,0.000000 110.377922,-7.792290,0.000000 110.377932,-7.792550,0.000000 110.377912,-7.793630,0.000000 110.377902,-7.793880,0.000000 110.377882,-7.794280,0.000000 110.377852,-7.794850,0.000000 110.377842,-7.794980,0.000000 110.377772,-7.795940,0.000000 110.377722,-7.796780,0.000000 110.377671,-7.797280,0.000000 110.377602,-7.797260,0.000000 110.377352,-7.797240,0.000000 110.376925,-7.797201,0.000000 110.376812,-7.797190,0.000000 110.376742,-7.797190,0.000000 110.375632,-7.797100,0.000000 110.375132,-7.797030,0.000000 110.375042,-7.797030,0.000000 110.373942,-7.796940,0.000000 110.373162,-7.796860,0.000000 110.372692,-7.796840,0.000000 110.372626,-7.796836,0.000000 110.372626,-7.796834,0.000000 110.372606,-7.796331,0.000000 110.372607,-7.795965,0.000000 110.372597,-7.795179,0.000000 110.372642,-7.794830,0.000000 110.372767,-7.794426,0.000000 110.372965,-7.793841,0.000000 110.373107,-7.793403,0.000000 110.373542,-7.792246,0.000000 110.373605,-7.792049,0.000000 110.373690,-7.791740,0.000000 110.373814,-7.791460,0.000000 110.373854,-7.791370,0.000000 110.374007,-7.790870,0.000000 110.374063,-7.790510,0.000000 110.373632,-7.790460,0.000000 110.373262,-7.790450,0.000000 110.372962,-7.790470,0.000000 110.372930,-7.790097,0.000000 110.373114,-7.789873,0.000000 110.373700,-7.789582,0.000000 110.373765,-7.789507,0.000000 110.373790,-7.789391,0.000000 110.373858,-7.789002,0.000000 110.373889,-7.788991,0.000000 110.373999,-7.788970,0.000000 110.374055,-7.788968,0.000000 110.374122,-7.788961,0.000000 110.374212,-7.788955,0.000000 110.374277,-7.788943,0.000000 110.374420,-7.788930,0.000000 110.374558,-7.788910,0.000000 110.374667,-7.788906,0.000000 110.374759,-7.788893,0.000000 110.375000,-7.788870,0.000000 110.375440,-7.788820,0.000000 110.376090,-7.788720,0.000000 110.376330,-7.788670,0.000000 110.377190,-7.788490,0.000000 110.377280,-7.788440,0.000000 110.378090,-7.788200,0.000000 110.378471,-7.788126,0.000000 110.378469,-7.788130,0.000000 110.378440,-7.788290,0.000000 110.378230,-7.789800,0.000000 110.378162,-7.790000,0.000000 110.378142,-7.790060,0.000000 110.378092,-7.790300,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>DAERAH ISTIMEWA YOGYAKARTA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC DANUREJAN"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">DAERAH ISTIMEWA YOGYAKARTA</SimpleData><SimpleData name="KECAMATAN">DANUREJAN</SimpleData><SimpleData name="DESA">SURYATMAJAN</SimpleData><SimpleData name="KABKOT">KOTA YOGYAKARTA</SimpleData><SimpleData name="NAMA_PULAU">JAWA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>110.370214,-7.796556,0.000000 110.370153,-7.796717,0.000000 110.369915,-7.796720,0.000000 110.369655,-7.796710,0.000000 110.369335,-7.796720,0.000000 110.369275,-7.796730,0.000000 110.369155,-7.796660,0.000000 110.368455,-7.796620,0.000000 110.368275,-7.796600,0.000000 110.367955,-7.796580,0.000000 110.367715,-7.796580,0.000000 110.367565,-7.796550,0.000000 110.367305,-7.796520,0.000000 110.366895,-7.796490,0.000000 110.365454,-7.796349,0.000000 110.365452,-7.796348,0.000000 110.365512,-7.795860,0.000000 110.365632,-7.795040,0.000000 110.365652,-7.794820,0.000000 110.365712,-7.794240,0.000000 110.365742,-7.794000,0.000000 110.365772,-7.793760,0.000000 110.365912,-7.792660,0.000000 110.365962,-7.792310,0.000000 110.366012,-7.791970,0.000000 110.366032,-7.791770,0.000000 110.366042,-7.791700,0.000000 110.366092,-7.791250,0.000000 110.366112,-7.791150,0.000000 110.366172,-7.790650,0.000000 110.366182,-7.790530,0.000000 110.366212,-7.790250,0.000000 110.366232,-7.790120,0.000000 110.366252,-7.789980,0.000000 110.366272,-7.789820,0.000000 110.366282,-7.789630,0.000000 110.366592,-7.789710,0.000000 110.366852,-7.789720,0.000000 110.368412,-7.789880,0.000000 110.368512,-7.789900,0.000000 110.368876,-7.789965,0.000000 110.368899,-7.789969,0.000000 110.368900,-7.789970,0.000000 110.368900,-7.789971,0.000000 110.368772,-7.790520,0.000000 110.368642,-7.791210,0.000000 110.368502,-7.791790,0.000000 110.368522,-7.792050,0.000000 110.368622,-7.792330,0.000000 110.368798,-7.792962,0.000000 110.369162,-7.793310,0.000000 110.369390,-7.793540,0.000000 110.369572,-7.793782,0.000000 110.369732,-7.794020,0.000000 110.369792,-7.794120,0.000000 110.369842,-7.794210,0.000000 110.370111,-7.794765,0.000000 110.370157,-7.795169,0.000000 110.370195,-7.795798,0.000000 110.370179,-7.796178,0.000000 110.370233,-7.796435,0.000000 110.370216,-7.796541,0.000000 110.370214,-7.796555,0.000000 110.370214,-7.796556,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>DAERAH ISTIMEWA YOGYAKARTA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC DANUREJAN"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">DAERAH ISTIMEWA YOGYAKARTA</SimpleData><SimpleData name="KECAMATAN">DANUREJAN</SimpleData><SimpleData name="DESA">TEGAL PANGGUNG</SimpleData><SimpleData name="KABKOT">KOTA YOGYAKARTA</SimpleData><SimpleData name="NAMA_PULAU">JAWA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>110.373114,-7.789873,0.000000 110.372930,-7.790097,0.000000 110.372962,-7.790470,0.000000 110.373262,-7.790450,0.000000 110.373632,-7.790460,0.000000 110.374063,-7.790510,0.000000 110.374007,-7.790870,0.000000 110.373854,-7.791370,0.000000 110.373814,-7.791460,0.000000 110.373690,-7.791740,0.000000 110.373605,-7.792049,0.000000 110.373542,-7.792246,0.000000 110.373107,-7.793403,0.000000 110.372965,-7.793841,0.000000 110.372767,-7.794426,0.000000 110.372642,-7.794830,0.000000 110.372597,-7.795179,0.000000 110.372607,-7.795965,0.000000 110.372606,-7.796331,0.000000 110.372626,-7.796834,0.000000 110.371785,-7.796815,0.000000 110.371485,-7.796795,0.000000 110.371207,-7.796785,0.000000 110.371199,-7.796700,0.000000 110.371043,-7.796653,0.000000 110.370950,-7.796614,0.000000 110.370444,-7.796512,0.000000 110.370226,-7.796551,0.000000 110.370214,-7.796555,0.000000 110.370216,-7.796541,0.000000 110.370233,-7.796435,0.000000 110.370179,-7.796178,0.000000 110.370195,-7.795798,0.000000 110.370157,-7.795169,0.000000 110.370111,-7.794765,0.000000 110.369842,-7.794210,0.000000 110.369792,-7.794120,0.000000 110.369732,-7.794020,0.000000 110.369572,-7.793782,0.000000 110.369390,-7.793540,0.000000 110.369162,-7.793310,0.000000 110.368798,-7.792962,0.000000 110.368622,-7.792330,0.000000 110.368522,-7.792050,0.000000 110.368502,-7.791790,0.000000 110.368642,-7.791210,0.000000 110.368772,-7.790520,0.000000 110.368900,-7.789971,0.000000 110.368900,-7.789970,0.000000 110.368932,-7.789960,0.000000 110.369087,-7.789914,0.000000 110.369177,-7.789903,0.000000 110.369242,-7.789889,0.000000 110.369315,-7.789898,0.000000 110.369380,-7.789903,0.000000 110.369418,-7.789906,0.000000 110.369453,-7.789911,0.000000 110.369505,-7.789914,0.000000 110.369573,-7.789909,0.000000 110.369638,-7.789901,0.000000 110.369735,-7.789898,0.000000 110.370113,-7.789843,0.000000 110.370288,-7.789735,0.000000 110.370972,-7.789620,0.000000 110.371523,-7.789471,0.000000 110.372042,-7.789285,0.000000 110.372792,-7.789131,0.000000 110.373322,-7.789079,0.000000 110.373812,-7.789018,0.000000 110.373836,-7.789009,0.000000 110.373858,-7.789002,0.000000 110.373790,-7.789391,0.000000 110.373765,-7.789507,0.000000 110.373700,-7.789582,0.000000 110.373114,-7.789873,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC DANUREJAN" name="KEC DANUREJAN"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

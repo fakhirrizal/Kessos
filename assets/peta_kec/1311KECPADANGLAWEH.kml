@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PADANG LAWEH/FID/displayName]</td>
+          <td>$[KEC PADANG LAWEH/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG LAWEH/PROVINSI/displayName]</td>
+          <td>$[KEC PADANG LAWEH/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PADANG LAWEH/KECAMATAN/displayName]</td>
+          <td>$[KEC PADANG LAWEH/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG LAWEH/DESA/displayName]</td>
+          <td>$[KEC PADANG LAWEH/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PADANG LAWEH/KABKOT/displayName]</td>
+          <td>$[KEC PADANG LAWEH/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG LAWEH/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PADANG LAWEH/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PADANG LAWEH/FID/displayName]</td>
+          <td>$[KEC PADANG LAWEH/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG LAWEH/PROVINSI/displayName]</td>
+          <td>$[KEC PADANG LAWEH/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PADANG LAWEH/KECAMATAN/displayName]</td>
+          <td>$[KEC PADANG LAWEH/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG LAWEH/DESA/displayName]</td>
+          <td>$[KEC PADANG LAWEH/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PADANG LAWEH/KABKOT/displayName]</td>
+          <td>$[KEC PADANG LAWEH/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG LAWEH/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PADANG LAWEH/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC PADANG LAWEH</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PADANG LAWEH"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">PADANG LAWEH</SimpleData><SimpleData name="DESA">BATU RIJAL</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.738558,-0.991313,0.000000 101.740051,-0.995791,0.000000 101.746395,-0.995418,0.000000 101.751246,-0.993179,0.000000 101.755724,-0.992806,0.000000 101.758337,-0.995045,0.000000 101.757217,-0.998030,0.000000 101.756471,-1.001762,0.000000 101.759829,-1.003254,0.000000 101.763561,-1.005120,0.000000 101.765054,-1.006986,0.000000 101.766920,-1.011091,0.000000 101.765427,-1.016689,0.000000 101.763182,-1.023648,0.000000 101.759370,-1.019835,0.000000 101.753739,-1.018897,0.000000 101.742477,-1.021712,0.000000 101.734444,-1.020708,0.000000 101.727461,-1.019835,0.000000 101.718076,-1.016081,0.000000 101.717866,-1.014189,0.000000 101.720869,-1.009801,0.000000 101.723417,-1.001733,0.000000 101.724681,-1.000288,0.000000 101.726389,-0.998336,0.000000 101.730106,-0.987522,0.000000 101.735946,-0.987954,0.000000 101.738558,-0.991313,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PADANG LAWEH"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">PADANG LAWEH</SimpleData><SimpleData name="DESA">PADANG LAWEH</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.755733,-0.974939,0.000000 101.762718,-0.975714,0.000000 101.762722,-0.975712,0.000000 101.769303,-0.972237,0.000000 101.773577,-0.969981,0.000000 101.783665,-0.969452,0.000000 101.792720,-0.971266,0.000000 101.795375,-0.969986,0.000000 101.798667,-0.968399,0.000000 101.798668,-0.968399,0.000000 101.814969,-0.975670,0.000000 101.818334,-0.978790,0.000000 101.820661,-0.979568,0.000000 101.820679,-0.979495,0.000000 101.821533,-0.977189,0.000000 101.824852,-0.979777,0.000000 101.828461,-0.980289,0.000000 101.832352,-0.981435,0.000000 101.833406,-0.981526,0.000000 101.832269,-0.982414,0.000000 101.823411,-0.992187,0.000000 101.821991,-0.995769,0.000000 101.822012,-1.000000,0.000000 101.823977,-1.002100,0.000000 101.826463,-1.005176,0.000000 101.827331,-1.007382,0.000000 101.827390,-1.009532,0.000000 101.826700,-1.012669,0.000000 101.825895,-1.016910,0.000000 101.823988,-1.023112,0.000000 101.823142,-1.026044,0.000000 101.820760,-1.024071,0.000000 101.818133,-1.021443,0.000000 101.817973,-1.021417,0.000000 101.815267,-1.020966,0.000000 101.811685,-1.018100,0.000000 101.809296,-1.016667,0.000000 101.804997,-1.016189,0.000000 101.799027,-1.016428,0.000000 101.794966,-1.020488,0.000000 101.790190,-1.020488,0.000000 101.784219,-1.023115,0.000000 101.778487,-1.025981,0.000000 101.775382,-1.030041,0.000000 101.774188,-1.032430,0.000000 101.769889,-1.036729,0.000000 101.766068,-1.039595,0.000000 101.761432,-1.040522,0.000000 101.756554,-1.036728,0.000000 101.748618,-1.035846,0.000000 101.748236,-1.035804,0.000000 101.748108,-1.035789,0.000000 101.748108,-1.032974,0.000000 101.753739,-1.030159,0.000000 101.762650,-1.025298,0.000000 101.763182,-1.023648,0.000000 101.765427,-1.016689,0.000000 101.766920,-1.011091,0.000000 101.765054,-1.006986,0.000000 101.763561,-1.005120,0.000000 101.759829,-1.003254,0.000000 101.756471,-1.001762,0.000000 101.757217,-0.998030,0.000000 101.758337,-0.995045,0.000000 101.755724,-0.992806,0.000000 101.751246,-0.993179,0.000000 101.746395,-0.995418,0.000000 101.740051,-0.995791,0.000000 101.738558,-0.991313,0.000000 101.735946,-0.987954,0.000000 101.730106,-0.987522,0.000000 101.731060,-0.984747,0.000000 101.733183,-0.980501,0.000000 101.734032,-0.974132,0.000000 101.737005,-0.963091,0.000000 101.737372,-0.960153,0.000000 101.737614,-0.960382,0.000000 101.747708,-0.968180,0.000000 101.755733,-0.974939,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PADANG LAWEH"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">PADANG LAWEH</SimpleData><SimpleData name="DESA">SOPAN JAYA</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.789235,-1.066582,0.000000 101.791623,-1.069210,0.000000 101.798788,-1.068971,0.000000 101.807386,-1.070404,0.000000 101.813356,-1.069687,0.000000 101.812162,-1.066582,0.000000 101.815506,-1.065627,0.000000 101.822432,-1.064672,0.000000 101.825377,-1.063581,0.000000 101.826676,-1.064861,0.000000 101.827204,-1.065789,0.000000 101.828296,-1.067706,0.000000 101.828761,-1.071056,0.000000 101.826920,-1.077969,0.000000 101.824734,-1.087497,0.000000 101.824909,-1.088485,0.000000 101.826782,-1.093050,0.000000 101.825243,-1.094190,0.000000 101.812863,-1.103360,0.000000 101.805355,-1.103360,0.000000 101.804886,-1.103517,0.000000 101.796337,-1.106366,0.000000 101.785647,-1.109930,0.000000 101.775324,-1.096791,0.000000 101.775417,-1.096232,0.000000 101.776228,-1.091363,0.000000 101.776262,-1.091160,0.000000 101.784709,-1.089283,0.000000 101.780955,-1.082714,0.000000 101.776701,-1.082182,0.000000 101.773447,-1.081775,0.000000 101.773262,-1.081544,0.000000 101.769693,-1.077083,0.000000 101.770065,-1.076041,0.000000 101.774385,-1.063944,0.000000 101.774072,-1.063057,0.000000 101.779681,-1.062283,0.000000 101.783980,-1.062283,0.000000 101.786846,-1.062522,0.000000 101.789235,-1.066582,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PADANG LAWEH"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">PADANG LAWEH</SimpleData><SimpleData name="DESA">MUARO SOPAN</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.823613,-1.061844,0.000000 101.825377,-1.063581,0.000000 101.822432,-1.064672,0.000000 101.815506,-1.065627,0.000000 101.812162,-1.066582,0.000000 101.813356,-1.069687,0.000000 101.807386,-1.070404,0.000000 101.798788,-1.068971,0.000000 101.791623,-1.069210,0.000000 101.789235,-1.066582,0.000000 101.786846,-1.062522,0.000000 101.783980,-1.062283,0.000000 101.779681,-1.062283,0.000000 101.774072,-1.063057,0.000000 101.770420,-1.052708,0.000000 101.769901,-1.051239,0.000000 101.768754,-1.047990,0.000000 101.765000,-1.043297,0.000000 101.761432,-1.040522,0.000000 101.766068,-1.039595,0.000000 101.769889,-1.036729,0.000000 101.774188,-1.032430,0.000000 101.775382,-1.030041,0.000000 101.778487,-1.025981,0.000000 101.784219,-1.023115,0.000000 101.790190,-1.020488,0.000000 101.794966,-1.020488,0.000000 101.799027,-1.016428,0.000000 101.804997,-1.016189,0.000000 101.809296,-1.016667,0.000000 101.811685,-1.018100,0.000000 101.815267,-1.020966,0.000000 101.817973,-1.021417,0.000000 101.818133,-1.021443,0.000000 101.820760,-1.024071,0.000000 101.823142,-1.026044,0.000000 101.822261,-1.029096,0.000000 101.821974,-1.031071,0.000000 101.822241,-1.032837,0.000000 101.822439,-1.034149,0.000000 101.824750,-1.036180,0.000000 101.825387,-1.038155,0.000000 101.825220,-1.040134,0.000000 101.825216,-1.040188,0.000000 101.823253,-1.047555,0.000000 101.821586,-1.055224,0.000000 101.821532,-1.059174,0.000000 101.823613,-1.061844,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC PADANG LAWEH" name="KEC PADANG LAWEH"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

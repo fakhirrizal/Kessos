@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC LEBONG ATAS/FID/displayName]</td>
+          <td>$[KEC LEBONG ATAS/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC LEBONG ATAS/PROVINSI/displayName]</td>
+          <td>$[KEC LEBONG ATAS/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC LEBONG ATAS/KECAMATAN/displayName]</td>
+          <td>$[KEC LEBONG ATAS/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC LEBONG ATAS/DESA/displayName]</td>
+          <td>$[KEC LEBONG ATAS/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC LEBONG ATAS/KABKOT/displayName]</td>
+          <td>$[KEC LEBONG ATAS/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC LEBONG ATAS/NAMA_PULAU/displayName]</td>
+          <td>$[KEC LEBONG ATAS/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC LEBONG ATAS/FID/displayName]</td>
+          <td>$[KEC LEBONG ATAS/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC LEBONG ATAS/PROVINSI/displayName]</td>
+          <td>$[KEC LEBONG ATAS/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC LEBONG ATAS/KECAMATAN/displayName]</td>
+          <td>$[KEC LEBONG ATAS/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC LEBONG ATAS/DESA/displayName]</td>
+          <td>$[KEC LEBONG ATAS/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC LEBONG ATAS/KABKOT/displayName]</td>
+          <td>$[KEC LEBONG ATAS/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC LEBONG ATAS/NAMA_PULAU/displayName]</td>
+          <td>$[KEC LEBONG ATAS/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC LEBONG ATAS</name><Snippet /><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC LEBONG ATAS"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">LEBONG ATAS</SimpleData><SimpleData name="DESA">TABEAK BLAU</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.176062,-3.174327,0.000000 102.179033,-3.176203,0.000000 102.179740,-3.176924,0.000000 102.182433,-3.179669,0.000000 102.188257,-3.185607,0.000000 102.188244,-3.185621,0.000000 102.188236,-3.185630,0.000000 102.188213,-3.185654,0.000000 102.185912,-3.188112,0.000000 102.182559,-3.191928,0.000000 102.182470,-3.192029,0.000000 102.182397,-3.192102,0.000000 102.180353,-3.190624,0.000000 102.178146,-3.189819,0.000000 102.177492,-3.189178,0.000000 102.176430,-3.188138,0.000000 102.175274,-3.187157,0.000000 102.173488,-3.185826,0.000000 102.171803,-3.184722,0.000000 102.171456,-3.184495,0.000000 102.169460,-3.182428,0.000000 102.169074,-3.180957,0.000000 102.169810,-3.179486,0.000000 102.170265,-3.176999,0.000000 102.170896,-3.176404,0.000000 102.171491,-3.175143,0.000000 102.171469,-3.174945,0.000000 102.171456,-3.174827,0.000000 102.171409,-3.174849,0.000000 102.171334,-3.172936,0.000000 102.171387,-3.171504,0.000000 102.172140,-3.170858,0.000000 102.172227,-3.170980,0.000000 102.173411,-3.172654,0.000000 102.176062,-3.174327,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC LEBONG ATAS"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">LEBONG ATAS</SimpleData><SimpleData name="DESA">SUKAU KAYO</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.170761,-3.168668,0.000000 102.170746,-3.168804,0.000000 102.168485,-3.166509,0.000000 102.168455,-3.166479,0.000000 102.167223,-3.164092,0.000000 102.166351,-3.163010,0.000000 102.166107,-3.162707,0.000000 102.165184,-3.161649,0.000000 102.164963,-3.161282,0.000000 102.164972,-3.161271,0.000000 102.165505,-3.160604,0.000000 102.165728,-3.160214,0.000000 102.166024,-3.159697,0.000000 102.166367,-3.159097,0.000000 102.166624,-3.158454,0.000000 102.166672,-3.158334,0.000000 102.168736,-3.158128,0.000000 102.171428,-3.158020,0.000000 102.173135,-3.158321,0.000000 102.173135,-3.158416,0.000000 102.172515,-3.160004,0.000000 102.172397,-3.160305,0.000000 102.171338,-3.163254,0.000000 102.171167,-3.164856,0.000000 102.170761,-3.168668,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC LEBONG ATAS"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">LEBONG ATAS</SimpleData><SimpleData name="DESA">TABEAK BLAU SATU</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.191143,-3.182428,0.000000 102.188257,-3.185607,0.000000 102.182433,-3.179669,0.000000 102.179740,-3.176924,0.000000 102.179033,-3.176203,0.000000 102.176062,-3.174327,0.000000 102.173411,-3.172654,0.000000 102.172227,-3.170980,0.000000 102.172140,-3.170858,0.000000 102.170738,-3.168876,0.000000 102.170746,-3.168804,0.000000 102.170761,-3.168668,0.000000 102.171167,-3.164856,0.000000 102.171338,-3.163254,0.000000 102.172397,-3.160305,0.000000 102.172515,-3.160004,0.000000 102.173135,-3.158416,0.000000 102.173135,-3.158321,0.000000 102.173259,-3.158343,0.000000 102.173313,-3.158354,0.000000 102.173333,-3.158357,0.000000 102.173778,-3.158857,0.000000 102.174769,-3.159808,0.000000 102.175284,-3.160164,0.000000 102.175878,-3.161353,0.000000 102.176552,-3.162502,0.000000 102.177186,-3.163493,0.000000 102.177899,-3.164285,0.000000 102.178225,-3.164909,0.000000 102.178797,-3.166006,0.000000 102.178850,-3.166108,0.000000 102.181584,-3.169080,0.000000 102.184411,-3.170512,0.000000 102.190302,-3.173496,0.000000 102.190738,-3.173717,0.000000 102.193235,-3.176015,0.000000 102.195050,-3.176891,0.000000 102.194947,-3.177062,0.000000 102.193634,-3.179847,0.000000 102.191143,-3.182428,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC LEBONG ATAS"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">LEBONG ATAS</SimpleData><SimpleData name="DESA">DANEU</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.193520,-3.153966,0.000000 102.195671,-3.154034,0.000000 102.199682,-3.153602,0.000000 102.199683,-3.153602,0.000000 102.199688,-3.153605,0.000000 102.202342,-3.155499,0.000000 102.202995,-3.156372,0.000000 102.204425,-3.158287,0.000000 102.204523,-3.158446,0.000000 102.205080,-3.159345,0.000000 102.205584,-3.160436,0.000000 102.205582,-3.160438,0.000000 102.205582,-3.160440,0.000000 102.203982,-3.161936,0.000000 102.202596,-3.163929,0.000000 102.202328,-3.164252,0.000000 102.201264,-3.165536,0.000000 102.199793,-3.167846,0.000000 102.198208,-3.171129,0.000000 102.198169,-3.171204,0.000000 102.196283,-3.174843,0.000000 102.195065,-3.176865,0.000000 102.195050,-3.176891,0.000000 102.193235,-3.176015,0.000000 102.190738,-3.173717,0.000000 102.190302,-3.173496,0.000000 102.184411,-3.170512,0.000000 102.181584,-3.169080,0.000000 102.178850,-3.166108,0.000000 102.178797,-3.166006,0.000000 102.178225,-3.164909,0.000000 102.177899,-3.164285,0.000000 102.177186,-3.163493,0.000000 102.176552,-3.162502,0.000000 102.175878,-3.161353,0.000000 102.175284,-3.160164,0.000000 102.174769,-3.159808,0.000000 102.173778,-3.158857,0.000000 102.173333,-3.158357,0.000000 102.173345,-3.158329,0.000000 102.173474,-3.158020,0.000000 102.174012,-3.156512,0.000000 102.174985,-3.155475,0.000000 102.175089,-3.155364,0.000000 102.175379,-3.155504,0.000000 102.180633,-3.157896,0.000000 102.183496,-3.155407,0.000000 102.183502,-3.155401,0.000000 102.183513,-3.155392,0.000000 102.183577,-3.155337,0.000000 102.185175,-3.152760,0.000000 102.185179,-3.152755,0.000000 102.185879,-3.151624,0.000000 102.185912,-3.151633,0.000000 102.190260,-3.153218,0.000000 102.192036,-3.153533,0.000000 102.193520,-3.153966,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC LEBONG ATAS"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">LEBONG ATAS</SimpleData><SimpleData name="DESA">DUSUN BARU/SUKASERI</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.159453,-3.160342,0.000000 102.160983,-3.160820,0.000000 102.161049,-3.160820,0.000000 102.161100,-3.160835,0.000000 102.161168,-3.160857,0.000000 102.163186,-3.160857,0.000000 102.163214,-3.160857,0.000000 102.164972,-3.161271,0.000000 102.164963,-3.161282,0.000000 102.165184,-3.161649,0.000000 102.166107,-3.162707,0.000000 102.166351,-3.163010,0.000000 102.167223,-3.164092,0.000000 102.168455,-3.166479,0.000000 102.168485,-3.166509,0.000000 102.170746,-3.168804,0.000000 102.170738,-3.168876,0.000000 102.172140,-3.170858,0.000000 102.171387,-3.171504,0.000000 102.171334,-3.172936,0.000000 102.171409,-3.174849,0.000000 102.171456,-3.174827,0.000000 102.171469,-3.174945,0.000000 102.168629,-3.176266,0.000000 102.167684,-3.176511,0.000000 102.166738,-3.176581,0.000000 102.165442,-3.176651,0.000000 102.163971,-3.176686,0.000000 102.162605,-3.176686,0.000000 102.161698,-3.176655,0.000000 102.161689,-3.176624,0.000000 102.161512,-3.176617,0.000000 102.160875,-3.174280,0.000000 102.160444,-3.171588,0.000000 102.160404,-3.171295,0.000000 102.160013,-3.168465,0.000000 102.159718,-3.167482,0.000000 102.158368,-3.167964,0.000000 102.156968,-3.168610,0.000000 102.155569,-3.168933,0.000000 102.155398,-3.168893,0.000000 102.155383,-3.168896,0.000000 102.153277,-3.168395,0.000000 102.153122,-3.168358,0.000000 102.153009,-3.168358,0.000000 102.152840,-3.168357,0.000000 102.152629,-3.168357,0.000000 102.153572,-3.166978,0.000000 102.153660,-3.166850,0.000000 102.153983,-3.165773,0.000000 102.154101,-3.165146,0.000000 102.154306,-3.164050,0.000000 102.154378,-3.163184,0.000000 102.154414,-3.162758,0.000000 102.154845,-3.161143,0.000000 102.154777,-3.159996,0.000000 102.154776,-3.159968,0.000000 102.154845,-3.159958,0.000000 102.156460,-3.160066,0.000000 102.157644,-3.160174,0.000000 102.159260,-3.160281,0.000000 102.159360,-3.160313,0.000000 102.159453,-3.160342,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC LEBONG ATAS"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">LEBONG ATAS</SimpleData><SimpleData name="DESA">TIK TEBING</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.170896,-3.176404,0.000000 102.170265,-3.176999,0.000000 102.169810,-3.179486,0.000000 102.169074,-3.180957,0.000000 102.169460,-3.182428,0.000000 102.171456,-3.184495,0.000000 102.171803,-3.184722,0.000000 102.173488,-3.185826,0.000000 102.175274,-3.187157,0.000000 102.176430,-3.188138,0.000000 102.177492,-3.189178,0.000000 102.178146,-3.189819,0.000000 102.180353,-3.190624,0.000000 102.182397,-3.192102,0.000000 102.179038,-3.195465,0.000000 102.176017,-3.198641,0.000000 102.173314,-3.201725,0.000000 102.172643,-3.202490,0.000000 102.170175,-3.206928,0.000000 102.169663,-3.207893,0.000000 102.169269,-3.208636,0.000000 102.163281,-3.201291,0.000000 102.157561,-3.194276,0.000000 102.153625,-3.189450,0.000000 102.154988,-3.187080,0.000000 102.155598,-3.186018,0.000000 102.157429,-3.182572,0.000000 102.158197,-3.180940,0.000000 102.158275,-3.180775,0.000000 102.158290,-3.180741,0.000000 102.159690,-3.179126,0.000000 102.161507,-3.176677,0.000000 102.161515,-3.176648,0.000000 102.161512,-3.176617,0.000000 102.161689,-3.176624,0.000000 102.161698,-3.176655,0.000000 102.162605,-3.176686,0.000000 102.163971,-3.176686,0.000000 102.165442,-3.176651,0.000000 102.166738,-3.176581,0.000000 102.167684,-3.176511,0.000000 102.168629,-3.176266,0.000000 102.171469,-3.174945,0.000000 102.171491,-3.175143,0.000000 102.170896,-3.176404,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC LEBONG ATAS" name="KEC LEBONG ATAS"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

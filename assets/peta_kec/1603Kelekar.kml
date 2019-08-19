@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Muara_Enim/FID/displayName]</td>
+          <td>$[Muara_Enim/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Muara_Enim/PROVINSI/displayName]</td>
+          <td>$[Muara_Enim/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Muara_Enim/KABKOT/displayName]</td>
+          <td>$[Muara_Enim/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Muara_Enim/KECAMATAN/displayName]</td>
+          <td>$[Muara_Enim/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Muara_Enim/DESA/displayName]</td>
+          <td>$[Muara_Enim/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Muara_Enim/FID/displayName]</td>
+          <td>$[Muara_Enim/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Muara_Enim/PROVINSI/displayName]</td>
+          <td>$[Muara_Enim/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Muara_Enim/KABKOT/displayName]</td>
+          <td>$[Muara_Enim/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Muara_Enim/KECAMATAN/displayName]</td>
+          <td>$[Muara_Enim/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Muara_Enim/DESA/displayName]</td>
+          <td>$[Muara_Enim/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Muara_Enim</name><Snippet /><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Muara_Enim"><SimpleData name="FID">14</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">MUARA ENIM</SimpleData><SimpleData name="KECAMATAN">KELEKAR</SimpleData><SimpleData name="DESA">TANJUNG MEDANG</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.551138,-3.261039,0.000000 104.550437,-3.262265,0.000000 104.550377,-3.262190,0.000000 104.548003,-3.262530,0.000000 104.547483,-3.262604,0.000000 104.541176,-3.266860,0.000000 104.539935,-3.268418,0.000000 104.536520,-3.277558,0.000000 104.533824,-3.284289,0.000000 104.530950,-3.291463,0.000000 104.528027,-3.302051,0.000000 104.529382,-3.323070,0.000000 104.534898,-3.321261,0.000000 104.537158,-3.319325,0.000000 104.539104,-3.317659,0.000000 104.536601,-3.325069,0.000000 104.534865,-3.333197,0.000000 104.536246,-3.344377,0.000000 104.536253,-3.344436,0.000000 104.536444,-3.345983,0.000000 104.536237,-3.353704,0.000000 104.536185,-3.353773,0.000000 104.531795,-3.353340,0.000000 104.516761,-3.351859,0.000000 104.510294,-3.349863,0.000000 104.515004,-3.324585,0.000000 104.516702,-3.311905,0.000000 104.509702,-3.309969,0.000000 104.503472,-3.307414,0.000000 104.501167,-3.302194,0.000000 104.500848,-3.293642,0.000000 104.501221,-3.285910,0.000000 104.499993,-3.279816,0.000000 104.496182,-3.270907,0.000000 104.493685,-3.267265,0.000000 104.493673,-3.267248,0.000000 104.502156,-3.262435,0.000000 104.508680,-3.260026,0.000000 104.522957,-3.264425,0.000000 104.527265,-3.264056,0.000000 104.527447,-3.264003,0.000000 104.531635,-3.262790,0.000000 104.537791,-3.260195,0.000000 104.542099,-3.259578,0.000000 104.543392,-3.258960,0.000000 104.546408,-3.258714,0.000000 104.551138,-3.261039,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Muara_Enim"><SimpleData name="FID">15</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">MUARA ENIM</SimpleData><SimpleData name="KECAMATAN">KELEKAR</SimpleData><SimpleData name="DESA">PELEMPANG</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.497503,-3.341942,0.000000 104.480831,-3.345195,0.000000 104.480587,-3.345137,0.000000 104.467635,-3.342077,0.000000 104.467603,-3.342047,0.000000 104.462820,-3.337409,0.000000 104.458082,-3.328978,0.000000 104.455918,-3.323305,0.000000 104.455618,-3.322829,0.000000 104.452551,-3.317955,0.000000 104.450034,-3.308657,0.000000 104.449851,-3.301473,0.000000 104.448620,-3.297621,0.000000 104.448770,-3.297591,0.000000 104.453408,-3.296186,0.000000 104.456418,-3.294213,0.000000 104.456451,-3.294191,0.000000 104.458144,-3.293081,0.000000 104.460271,-3.290461,0.000000 104.463460,-3.288909,0.000000 104.467228,-3.289979,0.000000 104.470801,-3.292700,0.000000 104.474373,-3.297557,0.000000 104.475917,-3.300762,0.000000 104.480069,-3.306493,0.000000 104.483640,-3.313875,0.000000 104.489626,-3.322132,0.000000 104.492089,-3.328481,0.000000 104.496766,-3.340536,0.000000 104.497503,-3.341942,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Muara_Enim"><SimpleData name="FID">16</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">MUARA ENIM</SimpleData><SimpleData name="KECAMATAN">KELEKAR</SimpleData><SimpleData name="DESA">EMBACANG KELEKAR</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.434011,-3.332074,0.000000 104.424642,-3.343360,0.000000 104.423667,-3.341530,0.000000 104.421215,-3.337119,0.000000 104.418761,-3.336120,0.000000 104.408236,-3.336717,0.000000 104.403934,-3.336619,0.000000 104.408946,-3.330097,0.000000 104.414263,-3.324566,0.000000 104.418615,-3.318160,0.000000 104.419694,-3.317175,0.000000 104.423931,-3.313308,0.000000 104.427605,-3.309426,0.000000 104.431085,-3.305058,0.000000 104.433985,-3.303021,0.000000 104.437562,-3.299818,0.000000 104.448620,-3.297621,0.000000 104.449851,-3.301473,0.000000 104.450034,-3.308657,0.000000 104.452551,-3.317955,0.000000 104.455618,-3.322829,0.000000 104.434011,-3.332074,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Muara_Enim"><SimpleData name="FID">17</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">MUARA ENIM</SimpleData><SimpleData name="KECAMATAN">KELEKAR</SimpleData><SimpleData name="DESA">TELUK JAYA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.453150,-3.350670,0.000000 104.427818,-3.355170,0.000000 104.427811,-3.355127,0.000000 104.426940,-3.348216,0.000000 104.426850,-3.347502,0.000000 104.424642,-3.343360,0.000000 104.434011,-3.332074,0.000000 104.455618,-3.322829,0.000000 104.455918,-3.323305,0.000000 104.458082,-3.328978,0.000000 104.462820,-3.337409,0.000000 104.467603,-3.342047,0.000000 104.464710,-3.343374,0.000000 104.460511,-3.345539,0.000000 104.457789,-3.347310,0.000000 104.453150,-3.350670,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Muara_Enim"><SimpleData name="FID">18</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">MUARA ENIM</SimpleData><SimpleData name="KECAMATAN">KELEKAR</SimpleData><SimpleData name="DESA">MENANTI</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.451912,-3.413971,0.000000 104.447921,-3.415222,0.000000 104.446739,-3.412104,0.000000 104.443818,-3.404347,0.000000 104.439539,-3.397114,0.000000 104.435025,-3.389513,0.000000 104.431060,-3.382319,0.000000 104.429809,-3.377161,0.000000 104.429159,-3.373815,0.000000 104.429034,-3.363658,0.000000 104.427818,-3.355170,0.000000 104.453150,-3.350670,0.000000 104.457789,-3.347310,0.000000 104.460511,-3.345539,0.000000 104.464710,-3.343374,0.000000 104.467603,-3.342047,0.000000 104.467635,-3.342077,0.000000 104.480587,-3.345137,0.000000 104.479621,-3.353233,0.000000 104.477915,-3.359649,0.000000 104.474689,-3.364476,0.000000 104.470673,-3.368508,0.000000 104.467873,-3.373090,0.000000 104.467853,-3.373136,0.000000 104.465247,-3.379010,0.000000 104.457490,-3.383971,0.000000 104.451560,-3.385190,0.000000 104.451912,-3.413971,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Muara_Enim"><SimpleData name="FID">19</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">MUARA ENIM</SimpleData><SimpleData name="KECAMATAN">KELEKAR</SimpleData><SimpleData name="DESA">MENANTI SELATAN</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.474430,-3.404445,0.000000 104.469878,-3.405326,0.000000 104.469913,-3.405454,0.000000 104.469877,-3.405326,0.000000 104.465949,-3.417204,0.000000 104.464658,-3.421116,0.000000 104.464077,-3.422878,0.000000 104.464024,-3.422882,0.000000 104.462886,-3.422980,0.000000 104.462035,-3.423054,0.000000 104.459325,-3.423180,0.000000 104.459253,-3.423183,0.000000 104.458167,-3.423313,0.000000 104.455820,-3.423705,0.000000 104.452039,-3.424576,0.000000 104.449649,-3.424881,0.000000 104.447563,-3.425054,0.000000 104.447569,-3.425130,0.000000 104.447502,-3.425134,0.000000 104.447567,-3.424597,0.000000 104.447805,-3.419676,0.000000 104.447938,-3.415267,0.000000 104.447921,-3.415222,0.000000 104.451912,-3.413971,0.000000 104.451560,-3.385190,0.000000 104.457490,-3.383971,0.000000 104.465247,-3.379010,0.000000 104.467853,-3.373136,0.000000 104.471574,-3.376731,0.000000 104.470587,-3.382409,0.000000 104.474299,-3.385122,0.000000 104.472817,-3.390604,0.000000 104.472789,-3.396411,0.000000 104.474622,-3.404397,0.000000 104.474469,-3.404435,0.000000 104.474430,-3.404445,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Muara_Enim"><SimpleData name="FID">20</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">MUARA ENIM</SimpleData><SimpleData name="KECAMATAN">KELEKAR</SimpleData><SimpleData name="DESA">SUBAN BARU</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.498600,-3.344033,0.000000 104.506520,-3.348698,0.000000 104.510294,-3.349863,0.000000 104.516761,-3.351859,0.000000 104.531795,-3.353340,0.000000 104.536185,-3.353773,0.000000 104.526349,-3.366637,0.000000 104.526344,-3.366643,0.000000 104.524050,-3.369644,0.000000 104.524037,-3.369660,0.000000 104.522176,-3.372094,0.000000 104.513269,-3.388168,0.000000 104.513242,-3.388218,0.000000 104.507455,-3.379539,0.000000 104.501413,-3.388345,0.000000 104.494270,-3.397939,0.000000 104.496053,-3.405411,0.000000 104.494266,-3.397941,0.000000 104.494244,-3.397944,0.000000 104.493983,-3.398075,0.000000 104.489356,-3.400537,0.000000 104.480111,-3.403076,0.000000 104.478071,-3.403534,0.000000 104.474622,-3.404397,0.000000 104.472789,-3.396411,0.000000 104.472817,-3.390604,0.000000 104.474299,-3.385122,0.000000 104.470587,-3.382409,0.000000 104.471574,-3.376731,0.000000 104.467853,-3.373136,0.000000 104.467873,-3.373090,0.000000 104.470673,-3.368508,0.000000 104.474689,-3.364476,0.000000 104.477915,-3.359649,0.000000 104.479621,-3.353233,0.000000 104.480587,-3.345137,0.000000 104.480831,-3.345195,0.000000 104.497503,-3.341942,0.000000 104.498600,-3.344033,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="Muara_Enim" name="Muara_Enim"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema></Document></kml>

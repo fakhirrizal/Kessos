@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC KOTO BARU/FID/displayName]</td>
+          <td>$[KEC KOTO BARU/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC KOTO BARU/PROVINSI/displayName]</td>
+          <td>$[KEC KOTO BARU/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC KOTO BARU/KECAMATAN/displayName]</td>
+          <td>$[KEC KOTO BARU/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC KOTO BARU/DESA/displayName]</td>
+          <td>$[KEC KOTO BARU/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC KOTO BARU/KABKOT/displayName]</td>
+          <td>$[KEC KOTO BARU/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC KOTO BARU/NAMA_PULAU/displayName]</td>
+          <td>$[KEC KOTO BARU/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC KOTO BARU/FID/displayName]</td>
+          <td>$[KEC KOTO BARU/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC KOTO BARU/PROVINSI/displayName]</td>
+          <td>$[KEC KOTO BARU/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC KOTO BARU/KECAMATAN/displayName]</td>
+          <td>$[KEC KOTO BARU/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC KOTO BARU/DESA/displayName]</td>
+          <td>$[KEC KOTO BARU/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC KOTO BARU/KABKOT/displayName]</td>
+          <td>$[KEC KOTO BARU/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC KOTO BARU/NAMA_PULAU/displayName]</td>
+          <td>$[KEC KOTO BARU/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC KOTO BARU</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC KOTO BARU"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">KOTO BARU</SimpleData><SimpleData name="DESA">SIALANG GAUNG</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.708716,-1.058393,0.000000 101.721976,-1.071653,0.000000 101.726206,-1.077999,0.000000 101.725723,-1.081383,0.000000 101.722987,-1.084727,0.000000 101.720251,-1.084727,0.000000 101.718427,-1.086855,0.000000 101.720859,-1.088071,0.000000 101.723291,-1.089591,0.000000 101.722987,-1.091111,0.000000 101.719947,-1.096583,0.000000 101.716603,-1.096887,0.000000 101.711739,-1.102968,0.000000 101.704139,-1.104488,0.000000 101.701508,-1.103501,0.000000 101.699275,-1.102664,0.000000 101.697147,-1.096887,0.000000 101.693803,-1.091111,0.000000 101.691371,-1.084119,0.000000 101.686203,-1.075607,0.000000 101.682555,-1.067703,0.000000 101.681596,-1.064144,0.000000 101.681803,-1.064153,0.000000 101.686049,-1.060756,0.000000 101.697939,-1.055236,0.000000 101.703276,-1.049585,0.000000 101.708716,-1.058393,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC KOTO BARU"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">KOTO BARU</SimpleData><SimpleData name="DESA">KOTO PADANG</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.685473,-1.118950,0.000000 101.675943,-1.123716,0.000000 101.664923,-1.123336,0.000000 101.651622,-1.130176,0.000000 101.646263,-1.130970,0.000000 101.645922,-1.130936,0.000000 101.638322,-1.129036,0.000000 101.633382,-1.126756,0.000000 101.628062,-1.126376,0.000000 101.625022,-1.125996,0.000000 101.620082,-1.127516,0.000000 101.617042,-1.130176,0.000000 101.616144,-1.130867,0.000000 101.605262,-1.127136,0.000000 101.599182,-1.117636,0.000000 101.593102,-1.115356,0.000000 101.591202,-1.108516,0.000000 101.586308,-1.102065,0.000000 101.587110,-1.101521,0.000000 101.602397,-1.098973,0.000000 101.606881,-1.096410,0.000000 101.608341,-1.095576,0.000000 101.608766,-1.095451,0.000000 101.615560,-1.093453,0.000000 101.617032,-1.092507,0.000000 101.627450,-1.085810,0.000000 101.641038,-1.084111,0.000000 101.644011,-1.081988,0.000000 101.652928,-1.081139,0.000000 101.658023,-1.078591,0.000000 101.663968,-1.075194,0.000000 101.666091,-1.068400,0.000000 101.672461,-1.063729,0.000000 101.679250,-1.064037,0.000000 101.681596,-1.064144,0.000000 101.682555,-1.067703,0.000000 101.686203,-1.075607,0.000000 101.691371,-1.084119,0.000000 101.693803,-1.091111,0.000000 101.697147,-1.096887,0.000000 101.699275,-1.102664,0.000000 101.701508,-1.103501,0.000000 101.702163,-1.107756,0.000000 101.700263,-1.111556,0.000000 101.699503,-1.112316,0.000000 101.694563,-1.117256,0.000000 101.685823,-1.118776,0.000000 101.685473,-1.118950,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC KOTO BARU"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">KOTO BARU</SimpleData><SimpleData name="DESA">AMPANG KURANJI</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.703683,-1.122196,0.000000 101.706229,-1.126970,0.000000 101.706723,-1.127896,0.000000 101.705963,-1.131316,0.000000 101.705583,-1.135116,0.000000 101.705963,-1.140056,0.000000 101.707103,-1.142716,0.000000 101.710903,-1.148416,0.000000 101.711283,-1.149556,0.000000 101.712423,-1.156016,0.000000 101.715083,-1.163616,0.000000 101.719643,-1.167796,0.000000 101.719643,-1.173496,0.000000 101.721501,-1.175540,0.000000 101.721177,-1.178778,0.000000 101.719623,-1.180333,0.000000 101.717673,-1.179862,0.000000 101.710680,-1.178174,0.000000 101.709340,-1.177851,0.000000 101.704128,-1.176593,0.000000 101.703999,-1.176562,0.000000 101.697166,-1.172462,0.000000 101.685229,-1.165300,0.000000 101.676539,-1.162403,0.000000 101.675937,-1.162203,0.000000 101.675183,-1.162496,0.000000 101.670767,-1.164213,0.000000 101.664171,-1.162234,0.000000 101.647020,-1.149041,0.000000 101.641083,-1.151020,0.000000 101.627272,-1.146992,0.000000 101.626129,-1.146658,0.000000 101.623122,-1.136636,0.000000 101.621441,-1.134814,0.000000 101.618562,-1.131696,0.000000 101.616144,-1.130867,0.000000 101.617042,-1.130176,0.000000 101.620082,-1.127516,0.000000 101.625022,-1.125996,0.000000 101.628062,-1.126376,0.000000 101.633382,-1.126756,0.000000 101.638322,-1.129036,0.000000 101.645922,-1.130936,0.000000 101.646263,-1.130970,0.000000 101.651622,-1.130176,0.000000 101.664923,-1.123336,0.000000 101.675943,-1.123716,0.000000 101.685473,-1.118950,0.000000 101.685823,-1.118776,0.000000 101.694563,-1.117256,0.000000 101.699503,-1.112316,0.000000 101.701023,-1.118396,0.000000 101.703683,-1.122196,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC KOTO BARU"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">KOTO BARU</SimpleData><SimpleData name="DESA">KOTO BARU</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.743119,-1.091005,0.000000 101.753870,-1.092438,0.000000 101.762112,-1.092438,0.000000 101.774297,-1.091363,0.000000 101.776228,-1.091363,0.000000 101.775417,-1.096232,0.000000 101.761246,-1.099606,0.000000 101.751862,-1.108991,0.000000 101.749985,-1.127761,0.000000 101.749140,-1.146352,0.000000 101.749046,-1.148407,0.000000 101.744354,-1.157792,0.000000 101.755616,-1.178439,0.000000 101.766220,-1.189573,0.000000 101.765939,-1.189701,0.000000 101.751862,-1.193454,0.000000 101.735533,-1.185290,0.000000 101.731215,-1.183131,0.000000 101.726142,-1.181907,0.000000 101.720542,-1.180555,0.000000 101.719623,-1.180333,0.000000 101.721177,-1.178778,0.000000 101.721501,-1.175540,0.000000 101.719643,-1.173496,0.000000 101.719643,-1.167796,0.000000 101.715083,-1.163616,0.000000 101.712423,-1.156016,0.000000 101.711283,-1.149556,0.000000 101.710903,-1.148416,0.000000 101.707103,-1.142716,0.000000 101.705963,-1.140056,0.000000 101.705583,-1.135116,0.000000 101.705963,-1.131316,0.000000 101.706723,-1.127896,0.000000 101.706229,-1.126970,0.000000 101.703683,-1.122196,0.000000 101.701023,-1.118396,0.000000 101.699503,-1.112316,0.000000 101.700263,-1.111556,0.000000 101.702163,-1.107756,0.000000 101.701508,-1.103501,0.000000 101.704139,-1.104488,0.000000 101.711739,-1.102968,0.000000 101.716603,-1.096887,0.000000 101.719947,-1.096583,0.000000 101.722987,-1.091111,0.000000 101.723291,-1.089591,0.000000 101.720859,-1.088071,0.000000 101.718427,-1.086855,0.000000 101.720251,-1.084727,0.000000 101.722987,-1.084727,0.000000 101.725723,-1.081383,0.000000 101.726206,-1.077999,0.000000 101.726993,-1.079179,0.000000 101.731293,-1.085987,0.000000 101.732671,-1.086572,0.000000 101.742561,-1.090768,0.000000 101.743119,-1.091005,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC KOTO BARU" name="KEC KOTO BARU"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

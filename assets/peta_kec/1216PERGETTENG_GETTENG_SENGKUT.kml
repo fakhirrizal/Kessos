@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/FID/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/PROVINSI/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/KECAMATAN/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/DESA/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/KABKOT/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/FID/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/PROVINSI/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/KECAMATAN/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/DESA/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/KABKOT/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PERGETTENG GETTENG SENGKUT/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC PERGETTENG GETTENG SENGKUT</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PERGETTENG GETTENG SENGKUT"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PERGETTENG-GETTENG SENGKUT</SimpleData><SimpleData name="DESA">AORNAKAN II</SimpleData><SimpleData name="KABKOT">PAKPAK BARAT</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.306898,2.556059,0.000000 98.309582,2.555037,0.000000 98.309583,2.555037,0.000000 98.309345,2.554330,0.000000 98.309927,2.553370,0.000000 98.309222,2.551281,0.000000 98.308209,2.549320,0.000000 98.309247,2.547238,0.000000 98.309249,2.544577,0.000000 98.309252,2.541359,0.000000 98.308323,2.539089,0.000000 98.308429,2.534467,0.000000 98.308567,2.532639,0.000000 98.309228,2.523879,0.000000 98.310093,2.519594,0.000000 98.306265,2.512811,0.000000 98.309682,2.508886,0.000000 98.309456,2.508411,0.000000 98.301405,2.506228,0.000000 98.293119,2.507543,0.000000 98.292796,2.508709,0.000000 98.292136,2.513524,0.000000 98.291448,2.518956,0.000000 98.290608,2.524464,0.000000 98.289844,2.528441,0.000000 98.288851,2.535785,0.000000 98.287804,2.540556,0.000000 98.286940,2.541808,0.000000 98.285308,2.542674,0.000000 98.283389,2.544022,0.000000 98.280129,2.546640,0.000000 98.280879,2.547286,0.000000 98.280878,2.548953,0.000000 98.281153,2.550343,0.000000 98.282950,2.551316,0.000000 98.283779,2.552706,0.000000 98.285162,2.554096,0.000000 98.286405,2.555487,0.000000 98.288065,2.555488,0.000000 98.294150,2.555074,0.000000 98.296085,2.555214,0.000000 98.297450,2.556931,0.000000 98.297542,2.557045,0.000000 98.298111,2.557141,0.000000 98.300543,2.559179,0.000000 98.302842,2.559181,0.000000 98.304329,2.558774,0.000000 98.305681,2.557824,0.000000 98.306898,2.556059,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PERGETTENG GETTENG SENGKUT"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PERGETTENG-GETTENG SENGKUT</SimpleData><SimpleData name="DESA">KECUPAK II</SimpleData><SimpleData name="KABKOT">PAKPAK BARAT</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.309572,2.560017,0.000000 98.308183,2.558204,0.000000 98.308845,2.556835,0.000000 98.309864,2.555875,0.000000 98.309583,2.555037,0.000000 98.309582,2.555037,0.000000 98.306898,2.556059,0.000000 98.305681,2.557824,0.000000 98.304329,2.558774,0.000000 98.302842,2.559181,0.000000 98.300543,2.559179,0.000000 98.298111,2.557141,0.000000 98.297542,2.557045,0.000000 98.297450,2.556931,0.000000 98.296085,2.555214,0.000000 98.294150,2.555074,0.000000 98.288065,2.555488,0.000000 98.286405,2.555487,0.000000 98.286556,2.558680,0.000000 98.286493,2.561705,0.000000 98.286001,2.563124,0.000000 98.285693,2.564852,0.000000 98.285447,2.566087,0.000000 98.285139,2.566889,0.000000 98.284524,2.567629,0.000000 98.284155,2.568123,0.000000 98.284338,2.571950,0.000000 98.284642,2.576518,0.000000 98.284561,2.578998,0.000000 98.286326,2.579627,0.000000 98.287554,2.580378,0.000000 98.289583,2.580325,0.000000 98.292100,2.579309,0.000000 98.295403,2.578827,0.000000 98.297966,2.578453,0.000000 98.304329,2.577739,0.000000 98.304730,2.577603,0.000000 98.308616,2.576288,0.000000 98.308485,2.571389,0.000000 98.307987,2.566403,0.000000 98.307831,2.564831,0.000000 98.310796,2.562773,0.000000 98.309572,2.560017,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PERGETTENG GETTENG SENGKUT"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PERGETTENG-GETTENG SENGKUT</SimpleData><SimpleData name="DESA">KECUPAK I</SimpleData><SimpleData name="KABKOT">PAKPAK BARAT</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.286493,2.561705,0.000000 98.286556,2.558680,0.000000 98.286405,2.555487,0.000000 98.285162,2.554096,0.000000 98.283779,2.552706,0.000000 98.282950,2.551316,0.000000 98.281153,2.550343,0.000000 98.280878,2.548953,0.000000 98.280879,2.547286,0.000000 98.280129,2.546640,0.000000 98.279911,2.546452,0.000000 98.278529,2.545617,0.000000 98.278198,2.544176,0.000000 98.277565,2.543768,0.000000 98.273272,2.543427,0.000000 98.268726,2.543086,0.000000 98.264011,2.543084,0.000000 98.255340,2.542063,0.000000 98.249279,2.540791,0.000000 98.242124,2.539433,0.000000 98.236482,2.542560,0.000000 98.231344,2.546449,0.000000 98.225110,2.553213,0.000000 98.220729,2.557864,0.000000 98.217682,2.560534,0.000000 98.219917,2.561659,0.000000 98.224882,2.562659,0.000000 98.227966,2.561611,0.000000 98.231730,2.560931,0.000000 98.235068,2.560648,0.000000 98.238121,2.561496,0.000000 98.240278,2.562925,0.000000 98.242383,2.564725,0.000000 98.245645,2.566260,0.000000 98.250328,2.568960,0.000000 98.260770,2.572262,0.000000 98.270815,2.575242,0.000000 98.277290,2.576603,0.000000 98.280876,2.577686,0.000000 98.281291,2.577834,0.000000 98.284561,2.578998,0.000000 98.284642,2.576518,0.000000 98.284338,2.571950,0.000000 98.284155,2.568123,0.000000 98.284524,2.567629,0.000000 98.285139,2.566889,0.000000 98.285447,2.566087,0.000000 98.285693,2.564852,0.000000 98.286001,2.563124,0.000000 98.286493,2.561705,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PERGETTENG GETTENG SENGKUT"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PERGETTENG-GETTENG SENGKUT</SimpleData><SimpleData name="DESA">SIMERPARA</SimpleData><SimpleData name="KABKOT">PAKPAK BARAT</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.237243,2.537230,0.000000 98.233898,2.534478,0.000000 98.228760,2.534590,0.000000 98.225221,2.534667,0.000000 98.225555,2.526945,0.000000 98.222697,2.526943,0.000000 98.219149,2.526318,0.000000 98.215947,2.525348,0.000000 98.210953,2.524929,0.000000 98.205901,2.523280,0.000000 98.203174,2.522210,0.000000 98.200855,2.521551,0.000000 98.198702,2.520619,0.000000 98.195156,2.520616,0.000000 98.185928,2.519677,0.000000 98.182852,2.519366,0.000000 98.172393,2.518649,0.000000 98.170542,2.518648,0.000000 98.165872,2.520409,0.000000 98.163383,2.521163,0.000000 98.161797,2.521986,0.000000 98.159806,2.523518,0.000000 98.157951,2.524723,0.000000 98.155482,2.526125,0.000000 98.151495,2.527796,0.000000 98.150978,2.528315,0.000000 98.150997,2.528378,0.000000 98.151065,2.528376,0.000000 98.153524,2.528522,0.000000 98.155651,2.529150,0.000000 98.158920,2.530924,0.000000 98.164766,2.534751,0.000000 98.167457,2.536164,0.000000 98.170148,2.537930,0.000000 98.173015,2.539637,0.000000 98.175530,2.541638,0.000000 98.180143,2.544782,0.000000 98.182312,2.545282,0.000000 98.184622,2.545813,0.000000 98.190134,2.546979,0.000000 98.194387,2.549002,0.000000 98.198016,2.550728,0.000000 98.201116,2.552387,0.000000 98.206196,2.554712,0.000000 98.212237,2.557243,0.000000 98.216051,2.559713,0.000000 98.217682,2.560534,0.000000 98.220729,2.557864,0.000000 98.225110,2.553213,0.000000 98.231344,2.546449,0.000000 98.236482,2.542560,0.000000 98.242124,2.539433,0.000000 98.237243,2.537230,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PERGETTENG GETTENG SENGKUT"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PERGETTENG-GETTENG SENGKUT</SimpleData><SimpleData name="DESA">AORNAKAN</SimpleData><SimpleData name="KABKOT">PAKPAK BARAT</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.289844,2.528441,0.000000 98.290608,2.524464,0.000000 98.291448,2.518956,0.000000 98.292136,2.513524,0.000000 98.292796,2.508709,0.000000 98.293119,2.507543,0.000000 98.290137,2.508658,0.000000 98.285055,2.510761,0.000000 98.278888,2.514314,0.000000 98.274550,2.516491,0.000000 98.270437,2.519930,0.000000 98.265754,2.524745,0.000000 98.258903,2.527265,0.000000 98.252054,2.526114,0.000000 98.247260,2.524391,0.000000 98.244862,2.524849,0.000000 98.241893,2.528174,0.000000 98.238656,2.531797,0.000000 98.233898,2.534478,0.000000 98.237243,2.537230,0.000000 98.242124,2.539433,0.000000 98.249279,2.540791,0.000000 98.255340,2.542063,0.000000 98.264011,2.543084,0.000000 98.268726,2.543086,0.000000 98.273272,2.543427,0.000000 98.277565,2.543768,0.000000 98.278198,2.544176,0.000000 98.278529,2.545617,0.000000 98.279911,2.546452,0.000000 98.280129,2.546640,0.000000 98.283389,2.544022,0.000000 98.285308,2.542674,0.000000 98.286940,2.541808,0.000000 98.287804,2.540556,0.000000 98.288851,2.535785,0.000000 98.289844,2.528441,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC PERGETTENG GETTENG SENGKUT" name="KEC PERGETTENG GETTENG SENGKUT"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

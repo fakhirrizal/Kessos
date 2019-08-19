@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC HARANGGAOL HORISON/FID/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HARANGGAOL HORISON/PROVINSI/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC HARANGGAOL HORISON/KECAMATAN/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HARANGGAOL HORISON/DESA/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC HARANGGAOL HORISON/KABKOT/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HARANGGAOL HORISON/NAMA_PULAU/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC HARANGGAOL HORISON/FID/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HARANGGAOL HORISON/PROVINSI/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC HARANGGAOL HORISON/KECAMATAN/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HARANGGAOL HORISON/DESA/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC HARANGGAOL HORISON/KABKOT/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HARANGGAOL HORISON/NAMA_PULAU/displayName]</td>
+          <td>$[KEC HARANGGAOL HORISON/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC HARANGGAOL HORISON</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC HARANGGAOL HORISON"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">HARANGGAOL HORISON</SimpleData><SimpleData name="DESA">HARANG GAOL</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.695646,2.874552,0.000000 98.699188,2.871218,0.000000 98.700775,2.868677,0.000000 98.702445,2.866004,0.000000 98.702837,2.865378,0.000000 98.703813,2.860399,0.000000 98.704050,2.856930,0.000000 98.704184,2.854975,0.000000 98.703605,2.852300,0.000000 98.700100,2.849916,0.000000 98.698820,2.849497,0.000000 98.697923,2.847718,0.000000 98.694940,2.849260,0.000000 98.692872,2.849942,0.000000 98.691842,2.850744,0.000000 98.691491,2.851204,0.000000 98.690454,2.852640,0.000000 98.689126,2.854652,0.000000 98.687516,2.856893,0.000000 98.686761,2.858965,0.000000 98.686814,2.860522,0.000000 98.687150,2.861620,0.000000 98.687661,2.863121,0.000000 98.687768,2.863929,0.000000 98.687417,2.865369,0.000000 98.686608,2.866807,0.000000 98.685060,2.868356,0.000000 98.683389,2.870366,0.000000 98.682527,2.871342,0.000000 98.680337,2.873234,0.000000 98.679307,2.873459,0.000000 98.678506,2.873744,0.000000 98.677705,2.873971,0.000000 98.676614,2.874139,0.000000 98.675759,2.874077,0.000000 98.674554,2.873552,0.000000 98.674104,2.873030,0.000000 98.673020,2.871526,0.000000 98.672448,2.870716,0.000000 98.672052,2.869618,0.000000 98.671434,2.868404,0.000000 98.670693,2.866959,0.000000 98.670411,2.865573,0.000000 98.669786,2.864417,0.000000 98.669564,2.863378,0.000000 98.669564,2.862974,0.000000 98.669625,2.862456,0.000000 98.669862,2.861707,0.000000 98.669976,2.861016,0.000000 98.669747,2.860495,0.000000 98.669465,2.860148,0.000000 98.668840,2.859914,0.000000 98.667977,2.859968,0.000000 98.667291,2.860253,0.000000 98.666200,2.860882,0.000000 98.665505,2.861455,0.000000 98.664765,2.861970,0.000000 98.664396,2.865252,0.000000 98.664535,2.865445,0.000000 98.661257,2.874177,0.000000 98.656467,2.879199,0.000000 98.657466,2.880081,0.000000 98.664346,2.884633,0.000000 98.669269,2.886311,0.000000 98.676738,2.888448,0.000000 98.682915,2.888367,0.000000 98.686400,2.887937,0.000000 98.686698,2.887485,0.000000 98.689203,2.880828,0.000000 98.694108,2.876438,0.000000 98.695646,2.874552,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC HARANGGAOL HORISON"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">HARANGGAOL HORISON</SimpleData><SimpleData name="DESA">NAGORI SIHALPE</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.638553,2.887630,0.000000 98.644639,2.886429,0.000000 98.648260,2.884738,0.000000 98.650514,2.883685,0.000000 98.654357,2.881410,0.000000 98.656467,2.879199,0.000000 98.661257,2.874177,0.000000 98.664535,2.865445,0.000000 98.664396,2.865252,0.000000 98.664765,2.861970,0.000000 98.647274,2.856298,0.000000 98.641912,2.857243,0.000000 98.635581,2.858359,0.000000 98.630097,2.867154,0.000000 98.630131,2.867276,0.000000 98.628259,2.869699,0.000000 98.627708,2.874547,0.000000 98.629470,2.880275,0.000000 98.628479,2.886665,0.000000 98.628530,2.886943,0.000000 98.628530,2.886940,0.000000 98.628544,2.886942,0.000000 98.630937,2.887299,0.000000 98.636008,2.887519,0.000000 98.638553,2.887630,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC HARANGGAOL HORISON"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">HARANGGAOL HORISON</SimpleData><SimpleData name="DESA">PURBA HARISON</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.724203,2.844265,0.000000 98.729553,2.839196,0.000000 98.734739,2.836351,0.000000 98.736362,2.835797,0.000000 98.739994,2.834558,0.000000 98.739855,2.834447,0.000000 98.739414,2.833676,0.000000 98.738864,2.833125,0.000000 98.738092,2.832794,0.000000 98.737211,2.832684,0.000000 98.736660,2.832574,0.000000 98.735889,2.832464,0.000000 98.735008,2.832684,0.000000 98.734567,2.832574,0.000000 98.733906,2.831803,0.000000 98.733466,2.831362,0.000000 98.732805,2.830921,0.000000 98.732126,2.830667,0.000000 98.731318,2.832083,0.000000 98.730623,2.834329,0.000000 98.729639,2.835996,0.000000 98.729067,2.836512,0.000000 98.726023,2.838689,0.000000 98.724474,2.839545,0.000000 98.722750,2.839998,0.000000 98.721209,2.839933,0.000000 98.719141,2.839922,0.000000 98.717371,2.840202,0.000000 98.715532,2.840885,0.000000 98.713411,2.841509,0.000000 98.710947,2.842015,0.000000 98.709116,2.842410,0.000000 98.707682,2.843037,0.000000 98.706011,2.843894,0.000000 98.703547,2.844574,0.000000 98.702516,2.845145,0.000000 98.699761,2.846689,0.000000 98.697923,2.847718,0.000000 98.698820,2.849497,0.000000 98.700100,2.849916,0.000000 98.703605,2.852300,0.000000 98.704184,2.854975,0.000000 98.704050,2.856930,0.000000 98.710087,2.854812,0.000000 98.718282,2.849727,0.000000 98.724203,2.844265,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC HARANGGAOL HORISON"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">HARANGGAOL HORISON</SimpleData><SimpleData name="DESA">PURBA PASIR</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.744222,2.833554,0.000000 98.752092,2.829570,0.000000 98.758314,2.823562,0.000000 98.761821,2.821569,0.000000 98.755118,2.818821,0.000000 98.754389,2.818305,0.000000 98.754282,2.818588,0.000000 98.753824,2.819278,0.000000 98.752726,2.820310,0.000000 98.751757,2.820594,0.000000 98.751413,2.820592,0.000000 98.750895,2.820417,0.000000 98.750956,2.820013,0.000000 98.750384,2.819607,0.000000 98.749125,2.819197,0.000000 98.747469,2.819419,0.000000 98.746607,2.819819,0.000000 98.746027,2.820681,0.000000 98.745623,2.821601,0.000000 98.744990,2.822694,0.000000 98.743952,2.823381,0.000000 98.742861,2.824010,0.000000 98.741778,2.824293,0.000000 98.740687,2.824460,0.000000 98.737826,2.824043,0.000000 98.735705,2.824436,0.000000 98.734614,2.825237,0.000000 98.733980,2.826388,0.000000 98.733690,2.827424,0.000000 98.733278,2.828922,0.000000 98.732302,2.830358,0.000000 98.732126,2.830667,0.000000 98.732805,2.830921,0.000000 98.733466,2.831362,0.000000 98.733906,2.831803,0.000000 98.734567,2.832574,0.000000 98.735008,2.832684,0.000000 98.735889,2.832464,0.000000 98.736660,2.832574,0.000000 98.737211,2.832684,0.000000 98.738092,2.832794,0.000000 98.738864,2.833125,0.000000 98.739414,2.833676,0.000000 98.739855,2.834447,0.000000 98.739994,2.834558,0.000000 98.740722,2.834309,0.000000 98.744222,2.833554,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC HARANGGAOL HORISON"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">HARANGGAOL HORISON</SimpleData><SimpleData name="DESA">NAGORI PURBA</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.628535,2.886973,0.000000 98.628544,2.886942,0.000000 98.628530,2.886940,0.000000 98.628530,2.886943,0.000000 98.628479,2.886665,0.000000 98.629470,2.880275,0.000000 98.627708,2.874547,0.000000 98.628259,2.869699,0.000000 98.630131,2.867276,0.000000 98.630097,2.867154,0.000000 98.630021,2.867276,0.000000 98.621979,2.868049,0.000000 98.617793,2.865293,0.000000 98.611962,2.869012,0.000000 98.607107,2.869479,0.000000 98.607132,2.869621,0.000000 98.607433,2.871317,0.000000 98.608319,2.876309,0.000000 98.609641,2.881928,0.000000 98.610743,2.885343,0.000000 98.613528,2.892413,0.000000 98.618327,2.896607,0.000000 98.619335,2.897461,0.000000 98.619668,2.897780,0.000000 98.620736,2.898713,0.000000 98.621011,2.899067,0.000000 98.621954,2.899970,0.000000 98.625239,2.893762,0.000000 98.628420,2.887748,0.000000 98.628516,2.887043,0.000000 98.628535,2.886973,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC HARANGGAOL HORISON" name="KEC HARANGGAOL HORISON"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

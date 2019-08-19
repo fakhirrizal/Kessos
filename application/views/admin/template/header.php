@@ -199,11 +199,11 @@ License: You must have a valid license purchased only from themeforest(the above
 									<span class="arrow <?php if($parent=='master'){echo 'open';}else{echo '';} ?>"></span>
 								</a>
 								<ul class="dropdown-menu pull-left">
-									<li class=" <?php if($child=='administrator'){echo 'active';}else{echo '';} ?>">
+									<!-- <li class=" <?php if($child=='administrator'){echo 'active';}else{echo '';} ?>">
 										<a href="<?php echo site_url('admin_side/administrator'); ?>" class="nav-link nav-toggle ">
 											<i class="icon-user-following"></i> Data Admin
 										</a>
-									</li>
+									</li> -->
 									<li class=" <?php if($child=='kube'){echo 'active';}else{echo '';} ?>">
 										<a href="<?php echo site_url('admin_side/kube'); ?>" class="nav-link nav-toggle ">
 											<i class="icon-grid"></i> Data Kube
@@ -226,16 +226,16 @@ License: You must have a valid license purchased only from themeforest(the above
 										</a>
 										<ul class="dropdown-menu">
 											<li class=" <?php if($grand_child=='province'){echo 'active';}else{echo '';} ?>">
-												<a href="#" class="nav-link "> Provinsi </a>
+												<a href="<?php echo site_url('admin_side/data_provinsi'); ?>" class="nav-link "> Provinsi </a>
 											</li>
 											<li class=" <?php if($grand_child=='city'){echo 'active';}else{echo '';} ?>">
-												<a href="#" class="nav-link "> Kabupaten/ Kota </a>
+												<a href="<?php echo site_url('admin_side/data_kabkot'); ?>" class="nav-link "> Kabupaten/ Kota </a>
 											</li>
-											<li class=" <?php if($grand_child=='district'){echo 'active';}else{echo '';} ?>">
-												<a href="#" class="nav-link "> Kecamatan </a>
+											<li class=" <?php if($grand_child=='sub_district'){echo 'active';}else{echo '';} ?>">
+												<a href="<?php echo site_url('admin_side/data_kecamatan'); ?>" class="nav-link "> Kecamatan </a>
 											</li>
 											<li class=" <?php if($grand_child=='village'){echo 'active';}else{echo '';} ?>">
-												<a href="#" class="nav-link "> Kelurahan </a>
+												<a href="<?php echo site_url('admin_side/data_kelurahan'); ?>" class="nav-link "> Kelurahan </a>
 											</li>
 										</ul>
 									</li>

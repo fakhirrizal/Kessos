@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Kab_Banjar" name="Kab_Banjar"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Kab_Banjar/FID/displayName]</td>
+          <td>$[Kab_Banjar/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Kab_Banjar/PROVINSI/displayName]</td>
+          <td>$[Kab_Banjar/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Kab_Banjar/KABKOT/displayName]</td>
+          <td>$[Kab_Banjar/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Kab_Banjar/KECAMATAN/displayName]</td>
+          <td>$[Kab_Banjar/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Kab_Banjar/DESA/displayName]</td>
+          <td>$[Kab_Banjar/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Kab_Banjar</name><Placemark><name>KALIMANTAN SELATAN</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>115.237592,-3.113961,0.000000 115.233780,-3.123203,0.000000 115.233474,-3.123943,0.000000 115.231528,-3.128661,0.000000 115.229441,-3.133627,0.000000 115.226350,-3.132941,0.000000 115.226092,-3.132753,0.000000 115.218217,-3.127045,0.000000 115.209965,-3.126038,0.000000 115.208299,-3.125835,0.000000 115.201768,-3.124672,0.000000 115.199471,-3.124263,0.000000 115.193998,-3.122056,0.000000 115.187951,-3.120725,0.000000 115.187357,-3.121022,0.000000 115.187346,-3.121028,0.000000 115.177903,-3.117996,0.000000 115.174163,-3.116795,0.000000 115.173426,-3.116610,0.000000 115.169084,-3.115525,0.000000 115.169128,-3.115475,0.000000 115.177822,-3.105819,0.000000 115.185532,-3.097262,0.000000 115.187380,-3.095169,0.000000 115.190635,-3.091483,0.000000 115.191005,-3.091064,0.000000 115.194132,-3.087192,0.000000 115.195023,-3.086089,0.000000 115.199138,-3.080995,0.000000 115.202766,-3.076097,0.000000 115.207628,-3.080760,0.000000 115.218451,-3.088976,0.000000 115.228274,-3.096433,0.000000 115.243506,-3.099624,0.000000 115.238378,-3.112054,0.000000 115.237592,-3.113961,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Kab_Banjar"><SimpleData name="FID">286</SimpleData><SimpleData name="PROVINSI">KALIMANTAN SELATAN</SimpleData><SimpleData name="KABKOT">BANJAR</SimpleData><SimpleData name="KECAMATAN">TELAGA BAUNTUNG</SimpleData><SimpleData name="DESA">TELAGA BARU</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>KALIMANTAN SELATAN</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>115.255482,-3.134773,0.000000 115.242194,-3.135057,0.000000 115.235058,-3.134876,0.000000 115.229441,-3.133627,0.000000 115.231528,-3.128661,0.000000 115.233474,-3.123943,0.000000 115.233780,-3.123203,0.000000 115.237592,-3.113961,0.000000 115.238378,-3.112054,0.000000 115.243506,-3.099624,0.000000 115.274010,-3.106015,0.000000 115.270764,-3.113361,0.000000 115.270576,-3.113837,0.000000 115.269262,-3.117169,0.000000 115.266933,-3.123077,0.000000 115.264956,-3.126509,0.000000 115.262808,-3.130237,0.000000 115.258294,-3.134019,0.000000 115.255482,-3.134773,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Kab_Banjar"><SimpleData name="FID">287</SimpleData><SimpleData name="PROVINSI">KALIMANTAN SELATAN</SimpleData><SimpleData name="KABKOT">BANJAR</SimpleData><SimpleData name="KECAMATAN">TELAGA BAUNTUNG</SimpleData><SimpleData name="DESA">LOKTANAH</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>KALIMANTAN SELATAN</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>115.223324,-3.040376,0.000000 115.237991,-3.049580,0.000000 115.242267,-3.046896,0.000000 115.244983,-3.049681,0.000000 115.249991,-3.055118,0.000000 115.251686,-3.056957,0.000000 115.257312,-3.060868,0.000000 115.260002,-3.062739,0.000000 115.260712,-3.063137,0.000000 115.254959,-3.074681,0.000000 115.251916,-3.080787,0.000000 115.248205,-3.088233,0.000000 115.243506,-3.099624,0.000000 115.228274,-3.096433,0.000000 115.218451,-3.088976,0.000000 115.207628,-3.080760,0.000000 115.202766,-3.076097,0.000000 115.203704,-3.073890,0.000000 115.204308,-3.071834,0.000000 115.204335,-3.071732,0.000000 115.205794,-3.066189,0.000000 115.205820,-3.066089,0.000000 115.208632,-3.058379,0.000000 115.213319,-3.048976,0.000000 115.216372,-3.043200,0.000000 115.219952,-3.038298,0.000000 115.219971,-3.038272,0.000000 115.223324,-3.040376,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Kab_Banjar"><SimpleData name="FID">288</SimpleData><SimpleData name="PROVINSI">KALIMANTAN SELATAN</SimpleData><SimpleData name="KABKOT">BANJAR</SimpleData><SimpleData name="KECAMATAN">TELAGA BAUNTUNG</SimpleData><SimpleData name="DESA">RANTAU BUJUR</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>KALIMANTAN SELATAN</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>115.275585,-3.102450,0.000000 115.274010,-3.106015,0.000000 115.243506,-3.099624,0.000000 115.248205,-3.088233,0.000000 115.251916,-3.080787,0.000000 115.254959,-3.074681,0.000000 115.260712,-3.063137,0.000000 115.264912,-3.065492,0.000000 115.268035,-3.067243,0.000000 115.275530,-3.072574,0.000000 115.277684,-3.075069,0.000000 115.279291,-3.076929,0.000000 115.281425,-3.082394,0.000000 115.279680,-3.091636,0.000000 115.279107,-3.093149,0.000000 115.277182,-3.098233,0.000000 115.275585,-3.102450,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Kab_Banjar"><SimpleData name="FID">289</SimpleData><SimpleData name="PROVINSI">KALIMANTAN SELATAN</SimpleData><SimpleData name="KABKOT">BANJAR</SimpleData><SimpleData name="KECAMATAN">TELAGA BAUNTUNG</SimpleData><SimpleData name="DESA">RAMPAH</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

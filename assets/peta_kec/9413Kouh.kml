@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Boven_digoel" name="Boven_digoel"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Boven_digoel/FID/displayName]</td>
+          <td>$[Boven_digoel/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Boven_digoel/PROVINSI/displayName]</td>
+          <td>$[Boven_digoel/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Boven_digoel/KABKOT/displayName]</td>
+          <td>$[Boven_digoel/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Boven_digoel/KECAMATAN/displayName]</td>
+          <td>$[Boven_digoel/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Boven_digoel/DESA/displayName]</td>
+          <td>$[Boven_digoel/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Boven_digoel</name><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.237397,-5.939820,0.000000 140.233827,-5.957325,0.000000 140.231980,-5.956955,0.000000 140.205582,-5.947817,0.000000 140.176138,-5.937664,0.000000 140.143649,-5.932588,0.000000 140.121312,-5.928527,0.000000 140.102488,-5.916637,0.000000 140.109236,-5.906457,0.000000 140.119314,-5.890332,0.000000 140.128049,-5.877567,0.000000 140.140815,-5.858754,0.000000 140.156267,-5.850692,0.000000 140.167689,-5.845317,0.000000 140.184232,-5.840862,0.000000 140.185158,-5.840614,0.000000 140.195236,-5.831879,0.000000 140.207118,-5.816193,0.000000 140.210073,-5.811114,0.000000 140.212382,-5.806774,0.000000 140.213628,-5.804096,0.000000 140.214687,-5.799958,0.000000 140.217019,-5.802088,0.000000 140.215743,-5.804597,0.000000 140.214925,-5.806076,0.000000 140.214579,-5.807145,0.000000 140.214359,-5.808435,0.000000 140.214799,-5.809347,0.000000 140.215743,-5.810857,0.000000 140.218554,-5.815428,0.000000 140.217455,-5.819456,0.000000 140.216654,-5.827521,0.000000 140.219515,-5.836105,0.000000 140.223091,-5.849695,0.000000 140.223807,-5.858994,0.000000 140.228098,-5.870438,0.000000 140.233105,-5.882598,0.000000 140.237397,-5.888320,0.000000 140.240258,-5.904056,0.000000 140.238827,-5.921223,0.000000 140.237397,-5.939820,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Boven_digoel"><SimpleData name="FID">43</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">BOVEN DIGOEL</SimpleData><SimpleData name="KECAMATAN">KOUH</SimpleData><SimpleData name="DESA">JAIR</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.340902,-5.750894,0.000000 140.338842,-5.761712,0.000000 140.341223,-5.782349,0.000000 140.344398,-5.795842,0.000000 140.345191,-5.812510,0.000000 140.345191,-5.832353,0.000000 140.342016,-5.849815,0.000000 140.335667,-5.874420,0.000000 140.334079,-5.906169,0.000000 140.330465,-5.921420,0.000000 140.321327,-5.934618,0.000000 140.313204,-5.945787,0.000000 140.296959,-5.963047,0.000000 140.270561,-5.962032,0.000000 140.257363,-5.962032,0.000000 140.233827,-5.957325,0.000000 140.237397,-5.939820,0.000000 140.238827,-5.921223,0.000000 140.240258,-5.904056,0.000000 140.237397,-5.888320,0.000000 140.233105,-5.882598,0.000000 140.228098,-5.870438,0.000000 140.223807,-5.858994,0.000000 140.223091,-5.849695,0.000000 140.219515,-5.836105,0.000000 140.216654,-5.827521,0.000000 140.217455,-5.819456,0.000000 140.218554,-5.815428,0.000000 140.215743,-5.810857,0.000000 140.214799,-5.809347,0.000000 140.214359,-5.808435,0.000000 140.214579,-5.807145,0.000000 140.214925,-5.806076,0.000000 140.215743,-5.804597,0.000000 140.217019,-5.802088,0.000000 140.217599,-5.800948,0.000000 140.219652,-5.795652,0.000000 140.222582,-5.792356,0.000000 140.222582,-5.788693,0.000000 140.222582,-5.784665,0.000000 140.221483,-5.780637,0.000000 140.218187,-5.778805,0.000000 140.213060,-5.778805,0.000000 140.211229,-5.777707,0.000000 140.207933,-5.776242,0.000000 140.203905,-5.774777,0.000000 140.201341,-5.771847,0.000000 140.201708,-5.766354,0.000000 140.205736,-5.763790,0.000000 140.208666,-5.760494,0.000000 140.212328,-5.758663,0.000000 140.213060,-5.761593,0.000000 140.215624,-5.765988,0.000000 140.220019,-5.767819,0.000000 140.224047,-5.768917,0.000000 140.228442,-5.771115,0.000000 140.232836,-5.772580,0.000000 140.235034,-5.770016,0.000000 140.232836,-5.767086,0.000000 140.229174,-5.763790,0.000000 140.227709,-5.760494,0.000000 140.229471,-5.757757,0.000000 140.235323,-5.759885,0.000000 140.257024,-5.760970,0.000000 140.272214,-5.760970,0.000000 140.299340,-5.755544,0.000000 140.318871,-5.751204,0.000000 140.340902,-5.750894,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Boven_digoel"><SimpleData name="FID">44</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">BOVEN DIGOEL</SimpleData><SimpleData name="KECAMATAN">KOUH</SimpleData><SimpleData name="DESA">MANDOBO</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.185158,-5.840614,0.000000 140.184232,-5.840862,0.000000 140.181599,-5.835099,0.000000 140.188261,-5.829885,0.000000 140.195502,-5.823803,0.000000 140.204250,-5.812975,0.000000 140.207216,-5.809534,0.000000 140.209945,-5.806331,0.000000 140.211250,-5.803721,0.000000 140.212317,-5.798620,0.000000 140.214453,-5.798738,0.000000 140.214687,-5.799958,0.000000 140.213628,-5.804096,0.000000 140.212382,-5.806774,0.000000 140.210073,-5.811114,0.000000 140.207118,-5.816193,0.000000 140.195236,-5.831879,0.000000 140.185158,-5.840614,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Boven_digoel"><SimpleData name="FID">45</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">BOVEN DIGOEL</SimpleData><SimpleData name="KECAMATAN">KOUH</SimpleData><SimpleData name="DESA">KOUH</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

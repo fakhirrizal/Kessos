@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC HILIRAN GUMANTI/FID/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HILIRAN GUMANTI/PROVINSI/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC HILIRAN GUMANTI/KECAMATAN/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HILIRAN GUMANTI/DESA/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC HILIRAN GUMANTI/KABKOT/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HILIRAN GUMANTI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC HILIRAN GUMANTI/FID/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HILIRAN GUMANTI/PROVINSI/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC HILIRAN GUMANTI/KECAMATAN/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HILIRAN GUMANTI/DESA/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC HILIRAN GUMANTI/KABKOT/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC HILIRAN GUMANTI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC HILIRAN GUMANTI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC HILIRAN GUMANTI</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC HILIRAN GUMANTI"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">HILIRAN GUMANTI</SimpleData><SimpleData name="DESA">TALANG BABUNGO</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.885344,-1.141191,0.000000 100.883434,-1.143591,0.000000 100.876526,-1.140198,0.000000 100.872498,-1.139404,0.000000 100.871786,-1.139315,0.000000 100.871489,-1.139254,0.000000 100.871292,-1.139194,0.000000 100.870728,-1.138977,0.000000 100.866089,-1.137512,0.000000 100.861084,-1.135498,0.000000 100.859381,-1.134832,0.000000 100.858314,-1.134383,0.000000 100.856154,-1.133476,0.000000 100.855104,-1.132927,0.000000 100.853088,-1.131775,0.000000 100.851318,-1.130920,0.000000 100.846497,-1.128479,0.000000 100.841919,-1.125916,0.000000 100.841708,-1.125813,0.000000 100.839682,-1.119683,0.000000 100.838591,-1.114515,0.000000 100.838011,-1.109542,0.000000 100.837515,-1.103552,0.000000 100.836927,-1.097868,0.000000 100.836332,-1.091778,0.000000 100.835844,-1.085991,0.000000 100.835760,-1.080402,0.000000 100.836515,-1.076854,0.000000 100.836347,-1.075892,0.000000 100.836836,-1.075326,0.000000 100.837049,-1.075077,0.000000 100.840414,-1.071162,0.000000 100.845136,-1.067775,0.000000 100.849874,-1.060344,0.000000 100.852575,-1.055613,0.000000 100.855947,-1.050883,0.000000 100.859334,-1.047496,0.000000 100.862363,-1.044466,0.000000 100.865255,-1.047225,0.000000 100.867437,-1.049305,0.000000 100.874532,-1.054279,0.000000 100.882116,-1.058230,0.000000 100.889608,-1.062690,0.000000 100.897497,-1.066738,0.000000 100.905294,-1.070990,0.000000 100.906286,-1.077161,0.000000 100.904729,-1.082367,0.000000 100.902563,-1.087176,0.000000 100.901113,-1.092278,0.000000 100.900625,-1.095626,0.000000 100.902570,-1.098872,0.000000 100.905279,-1.104288,0.000000 100.907308,-1.108346,0.000000 100.908522,-1.111579,0.000000 100.908209,-1.111897,0.000000 100.905012,-1.116008,0.000000 100.901625,-1.120529,0.000000 100.898634,-1.124637,0.000000 100.895544,-1.128950,0.000000 100.892142,-1.133065,0.000000 100.888441,-1.137183,0.000000 100.885344,-1.141191,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC HILIRAN GUMANTI"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">HILIRAN GUMANTI</SimpleData><SimpleData name="DESA">SUNGAI ABU</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.017333,-1.166346,0.000000 101.019212,-1.168753,0.000000 101.021025,-1.175428,0.000000 101.020933,-1.183556,0.000000 101.021368,-1.192895,0.000000 101.022108,-1.201722,0.000000 101.020499,-1.210583,0.000000 101.019492,-1.218522,0.000000 101.017882,-1.226876,0.000000 101.013808,-1.234047,0.000000 101.008925,-1.241129,0.000000 101.003821,-1.247503,0.000000 100.997398,-1.253693,0.000000 100.990723,-1.261058,0.000000 100.990705,-1.261077,0.000000 100.990632,-1.261158,0.000000 100.990585,-1.261210,0.000000 100.990573,-1.261190,0.000000 100.985160,-1.251640,0.000000 100.979881,-1.245522,0.000000 100.974197,-1.239104,0.000000 100.968619,-1.232991,0.000000 100.966445,-1.229485,0.000000 100.963042,-1.227080,0.000000 100.957458,-1.221068,0.000000 100.951972,-1.214343,0.000000 100.946181,-1.207725,0.000000 100.940101,-1.202329,0.000000 100.938993,-1.199083,0.000000 100.938956,-1.198976,0.000000 100.933722,-1.197243,0.000000 100.927840,-1.191337,0.000000 100.920645,-1.186263,0.000000 100.914061,-1.181282,0.000000 100.907584,-1.176400,0.000000 100.906311,-1.175348,0.000000 100.901305,-1.171211,0.000000 100.901309,-1.171206,0.000000 100.906311,-1.165423,0.000000 100.906340,-1.165389,0.000000 100.910323,-1.166450,0.000000 100.913466,-1.165796,0.000000 100.920348,-1.163767,0.000000 100.925299,-1.161561,0.000000 100.930861,-1.159348,0.000000 100.935805,-1.156736,0.000000 100.940954,-1.154020,0.000000 100.946310,-1.152012,0.000000 100.951674,-1.150005,0.000000 100.956717,-1.147087,0.000000 100.961851,-1.143558,0.000000 100.965872,-1.140451,0.000000 100.970190,-1.136730,0.000000 100.974104,-1.133219,0.000000 100.978529,-1.129700,0.000000 100.983061,-1.126484,0.000000 100.987058,-1.124053,0.000000 100.990125,-1.127227,0.000000 100.995207,-1.133857,0.000000 100.996645,-1.135757,0.000000 101.000074,-1.140286,0.000000 101.004141,-1.145826,0.000000 101.009230,-1.154270,0.000000 101.013899,-1.161007,0.000000 101.016903,-1.164944,0.000000 101.017333,-1.166346,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC HILIRAN GUMANTI"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">HILIRAN GUMANTI</SimpleData><SimpleData name="DESA">SARIAK ALAHAN TIGO</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.913466,-1.165796,0.000000 100.910323,-1.166450,0.000000 100.906340,-1.165389,0.000000 100.906311,-1.163453,0.000000 100.906311,-1.163450,0.000000 100.906311,-1.163391,0.000000 100.906311,-1.160278,0.000000 100.903503,-1.156006,0.000000 100.899475,-1.152893,0.000000 100.895325,-1.149902,0.000000 100.890930,-1.146912,0.000000 100.886475,-1.144592,0.000000 100.883484,-1.143616,0.000000 100.883434,-1.143591,0.000000 100.885344,-1.141191,0.000000 100.888441,-1.137183,0.000000 100.892142,-1.133065,0.000000 100.895544,-1.128950,0.000000 100.898634,-1.124637,0.000000 100.901625,-1.120529,0.000000 100.905012,-1.116008,0.000000 100.908209,-1.111897,0.000000 100.908522,-1.111579,0.000000 100.907308,-1.108346,0.000000 100.905279,-1.104288,0.000000 100.902570,-1.098872,0.000000 100.900625,-1.095626,0.000000 100.901113,-1.092278,0.000000 100.902563,-1.087176,0.000000 100.904729,-1.082367,0.000000 100.906286,-1.077161,0.000000 100.905294,-1.070990,0.000000 100.913076,-1.074532,0.000000 100.920751,-1.078075,0.000000 100.930158,-1.082615,0.000000 100.936521,-1.084850,0.000000 100.943204,-1.089830,0.000000 100.945341,-1.091463,0.000000 100.949583,-1.094713,0.000000 100.957479,-1.099472,0.000000 100.964078,-1.105266,0.000000 100.970563,-1.111061,0.000000 100.978033,-1.117040,0.000000 100.983930,-1.120818,0.000000 100.987058,-1.124053,0.000000 100.983061,-1.126484,0.000000 100.978529,-1.129700,0.000000 100.974104,-1.133219,0.000000 100.970190,-1.136730,0.000000 100.965872,-1.140451,0.000000 100.961851,-1.143558,0.000000 100.956717,-1.147087,0.000000 100.951674,-1.150005,0.000000 100.946310,-1.152012,0.000000 100.940954,-1.154020,0.000000 100.935805,-1.156736,0.000000 100.930861,-1.159348,0.000000 100.925299,-1.161561,0.000000 100.920348,-1.163767,0.000000 100.913466,-1.165796,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC HILIRAN GUMANTI" name="KEC HILIRAN GUMANTI"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

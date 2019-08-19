@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SITOLU ORI/FID/displayName]</td>
+          <td>$[KEC SITOLU ORI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITOLU ORI/PROVINSI/displayName]</td>
+          <td>$[KEC SITOLU ORI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITOLU ORI/KECAMATAN/displayName]</td>
+          <td>$[KEC SITOLU ORI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITOLU ORI/DESA/displayName]</td>
+          <td>$[KEC SITOLU ORI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITOLU ORI/KABKOT/displayName]</td>
+          <td>$[KEC SITOLU ORI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITOLU ORI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SITOLU ORI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SITOLU ORI/FID/displayName]</td>
+          <td>$[KEC SITOLU ORI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITOLU ORI/PROVINSI/displayName]</td>
+          <td>$[KEC SITOLU ORI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITOLU ORI/KECAMATAN/displayName]</td>
+          <td>$[KEC SITOLU ORI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITOLU ORI/DESA/displayName]</td>
+          <td>$[KEC SITOLU ORI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITOLU ORI/KABKOT/displayName]</td>
+          <td>$[KEC SITOLU ORI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITOLU ORI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SITOLU ORI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC SITOLU ORI</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITOLU ORI"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITOLU ORI</SimpleData><SimpleData name="DESA">FULOLO SALOO</SimpleData><SimpleData name="KABKOT">NIAS UTARA</SimpleData><SimpleData name="NAMA_PULAU">NIAS</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.414421,1.424228,0.000000 97.407803,1.424115,0.000000 97.407725,1.424141,0.000000 97.407736,1.424163,0.000000 97.393804,1.436038,0.000000 97.399838,1.439899,0.000000 97.406202,1.444220,0.000000 97.407719,1.445681,0.000000 97.407756,1.445716,0.000000 97.411649,1.449449,0.000000 97.417646,1.454195,0.000000 97.422887,1.455997,0.000000 97.422978,1.454752,0.000000 97.426427,1.447719,0.000000 97.427236,1.446372,0.000000 97.429563,1.444694,0.000000 97.433073,1.443293,0.000000 97.433606,1.443080,0.000000 97.434003,1.441467,0.000000 97.434819,1.435406,0.000000 97.435987,1.432727,0.000000 97.436036,1.432714,0.000000 97.436027,1.432712,0.000000 97.433199,1.431354,0.000000 97.426015,1.429318,0.000000 97.414421,1.424228,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITOLU ORI"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITOLU ORI</SimpleData><SimpleData name="DESA">HILISALOO</SimpleData><SimpleData name="KABKOT">NIAS UTARA</SimpleData><SimpleData name="NAMA_PULAU">NIAS</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.452573,1.426929,0.000000 97.456685,1.423658,0.000000 97.456719,1.423513,0.000000 97.457814,1.418853,0.000000 97.456456,1.415042,0.000000 97.456487,1.415015,0.000000 97.454126,1.407656,0.000000 97.447678,1.402056,0.000000 97.447384,1.401999,0.000000 97.433368,1.399285,0.000000 97.426706,1.399397,0.000000 97.426669,1.399442,0.000000 97.417293,1.397483,0.000000 97.415440,1.397094,0.000000 97.405654,1.395035,0.000000 97.401864,1.394310,0.000000 97.399673,1.393892,0.000000 97.392707,1.395378,0.000000 97.392073,1.395514,0.000000 97.391920,1.398370,0.000000 97.392167,1.401669,0.000000 97.392230,1.402511,0.000000 97.399338,1.410489,0.000000 97.404550,1.417430,0.000000 97.407725,1.424141,0.000000 97.407803,1.424115,0.000000 97.414421,1.424228,0.000000 97.426015,1.429318,0.000000 97.433199,1.431354,0.000000 97.436027,1.432712,0.000000 97.436036,1.432714,0.000000 97.445310,1.430156,0.000000 97.452573,1.426929,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITOLU ORI"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITOLU ORI</SimpleData><SimpleData name="DESA">TETEHOSI MAZIAYA</SimpleData><SimpleData name="KABKOT">NIAS UTARA</SimpleData><SimpleData name="NAMA_PULAU">NIAS</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.447378,1.399438,0.000000 97.447030,1.398043,0.000000 97.451910,1.394558,0.000000 97.455674,1.392257,0.000000 97.456511,1.391420,0.000000 97.459230,1.390096,0.000000 97.460485,1.389259,0.000000 97.462227,1.389050,0.000000 97.462367,1.387551,0.000000 97.461739,1.385878,0.000000 97.460485,1.385530,0.000000 97.460345,1.384902,0.000000 97.460694,1.384066,0.000000 97.463970,1.381138,0.000000 97.473661,1.374584,0.000000 97.478037,1.371439,0.000000 97.476420,1.366050,0.000000 97.475704,1.360981,0.000000 97.470777,1.346843,0.000000 97.470712,1.346656,0.000000 97.470671,1.346702,0.000000 97.470671,1.346702,0.000000 97.469350,1.348171,0.000000 97.464791,1.353859,0.000000 97.464688,1.353986,0.000000 97.459172,1.356137,0.000000 97.448280,1.367160,0.000000 97.447544,1.369456,0.000000 97.447238,1.370409,0.000000 97.451679,1.377571,0.000000 97.454889,1.379900,0.000000 97.455028,1.380001,0.000000 97.457454,1.382227,0.000000 97.454463,1.391744,0.000000 97.446099,1.392649,0.000000 97.436609,1.387183,0.000000 97.434620,1.386573,0.000000 97.430110,1.395160,0.000000 97.429087,1.396433,0.000000 97.426706,1.399397,0.000000 97.433368,1.399285,0.000000 97.447384,1.401999,0.000000 97.447448,1.401529,0.000000 97.447378,1.399438,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITOLU ORI"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITOLU ORI</SimpleData><SimpleData name="DESA">UMBU BALODANO</SimpleData><SimpleData name="KABKOT">NIAS UTARA</SimpleData><SimpleData name="NAMA_PULAU">NIAS</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.457616,1.414045,0.000000 97.463796,1.409264,0.000000 97.471333,1.409888,0.000000 97.479177,1.410630,0.000000 97.486508,1.412344,0.000000 97.486556,1.412375,0.000000 97.486558,1.412370,0.000000 97.490741,1.406723,0.000000 97.492135,1.403028,0.000000 97.491298,1.401843,0.000000 97.491786,1.400588,0.000000 97.493250,1.399403,0.000000 97.496078,1.398041,0.000000 97.494984,1.395917,0.000000 97.490377,1.389779,0.000000 97.486379,1.386737,0.000000 97.488003,1.380855,0.000000 97.489003,1.378052,0.000000 97.488926,1.378006,0.000000 97.478057,1.371506,0.000000 97.478037,1.371439,0.000000 97.473661,1.374584,0.000000 97.463970,1.381138,0.000000 97.460694,1.384066,0.000000 97.460345,1.384902,0.000000 97.460485,1.385530,0.000000 97.461739,1.385878,0.000000 97.462367,1.387551,0.000000 97.462227,1.389050,0.000000 97.460485,1.389259,0.000000 97.459230,1.390096,0.000000 97.456511,1.391420,0.000000 97.455674,1.392257,0.000000 97.451910,1.394558,0.000000 97.447030,1.398043,0.000000 97.447378,1.399438,0.000000 97.447448,1.401529,0.000000 97.447384,1.401999,0.000000 97.447678,1.402056,0.000000 97.454126,1.407656,0.000000 97.456487,1.415015,0.000000 97.457616,1.414045,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITOLU ORI"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITOLU ORI</SimpleData><SimpleData name="DESA">HILIMBOSI</SimpleData><SimpleData name="KABKOT">NIAS UTARA</SimpleData><SimpleData name="NAMA_PULAU">NIAS</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.498799,1.403327,0.000000 97.496078,1.398041,0.000000 97.493250,1.399403,0.000000 97.491786,1.400588,0.000000 97.491298,1.401843,0.000000 97.492135,1.403028,0.000000 97.490741,1.406723,0.000000 97.486558,1.412370,0.000000 97.486556,1.412375,0.000000 97.493535,1.416969,0.000000 97.499043,1.422260,0.000000 97.504438,1.427914,0.000000 97.510862,1.432417,0.000000 97.512573,1.432778,0.000000 97.512669,1.432599,0.000000 97.512836,1.432328,0.000000 97.513026,1.432064,0.000000 97.513146,1.431785,0.000000 97.513328,1.431449,0.000000 97.513527,1.431042,0.000000 97.513765,1.430683,0.000000 97.514282,1.430132,0.000000 97.514631,1.429693,0.000000 97.514792,1.429553,0.000000 97.515016,1.429351,0.000000 97.516014,1.428221,0.000000 97.516869,1.427191,0.000000 97.518542,1.425473,0.000000 97.520034,1.424181,0.000000 97.521254,1.423448,0.000000 97.516431,1.419686,0.000000 97.509946,1.415122,0.000000 97.504071,1.409952,0.000000 97.498799,1.403327,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITOLU ORI"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITOLU ORI</SimpleData><SimpleData name="DESA">BOTOMBAWO</SimpleData><SimpleData name="KABKOT">NIAS UTARA</SimpleData><SimpleData name="NAMA_PULAU">NIAS</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.424857,1.383990,0.000000 97.424796,1.381332,0.000000 97.424676,1.381452,0.000000 97.424246,1.381797,0.000000 97.423213,1.382485,0.000000 97.422438,1.382485,0.000000 97.421147,1.381797,0.000000 97.420716,1.382399,0.000000 97.420028,1.383088,0.000000 97.419339,1.384637,0.000000 97.418392,1.385843,0.000000 97.417359,1.387736,0.000000 97.415896,1.389458,0.000000 97.414605,1.390663,0.000000 97.413744,1.392040,0.000000 97.413744,1.393159,0.000000 97.414002,1.393676,0.000000 97.414346,1.395656,0.000000 97.414949,1.396602,0.000000 97.415440,1.397094,0.000000 97.417293,1.397483,0.000000 97.426669,1.399442,0.000000 97.426706,1.399397,0.000000 97.429087,1.396433,0.000000 97.430110,1.395160,0.000000 97.434620,1.386573,0.000000 97.430010,1.385160,0.000000 97.424857,1.383990,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC SITOLU ORI" name="KEC SITOLU ORI"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

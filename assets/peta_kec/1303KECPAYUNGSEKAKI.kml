@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PAYUNG SEKAKI/FID/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAYUNG SEKAKI/PROVINSI/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PAYUNG SEKAKI/KECAMATAN/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAYUNG SEKAKI/DESA/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PAYUNG SEKAKI/KABKOT/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAYUNG SEKAKI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PAYUNG SEKAKI/FID/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAYUNG SEKAKI/PROVINSI/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PAYUNG SEKAKI/KECAMATAN/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAYUNG SEKAKI/DESA/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PAYUNG SEKAKI/KABKOT/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAYUNG SEKAKI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PAYUNG SEKAKI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC PAYUNG SEKAKI</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PAYUNG SEKAKI"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">PAYUNG SEKAKI</SimpleData><SimpleData name="DESA">SUPAYANG</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.831059,-0.916616,0.000000 100.820995,-0.917267,0.000000 100.810688,-0.914568,0.000000 100.802662,-0.907872,0.000000 100.795040,-0.901272,0.000000 100.788418,-0.893438,0.000000 100.787540,-0.889938,0.000000 100.785938,-0.883512,0.000000 100.778416,-0.876809,0.000000 100.777454,-0.866760,0.000000 100.776699,-0.856606,0.000000 100.777805,-0.848571,0.000000 100.781688,-0.848324,0.000000 100.789287,-0.845672,0.000000 100.796657,-0.841702,0.000000 100.802684,-0.836229,0.000000 100.807269,-0.829456,0.000000 100.810344,-0.823718,0.000000 100.811778,-0.821039,0.000000 100.821406,-0.825780,0.000000 100.828227,-0.833510,0.000000 100.834048,-0.842067,0.000000 100.838359,-0.852272,0.000000 100.840442,-0.862610,0.000000 100.838954,-0.864969,0.000000 100.840892,-0.872768,0.000000 100.841251,-0.883334,0.000000 100.840389,-0.893918,0.000000 100.839214,-0.904201,0.000000 100.840885,-0.914138,0.000000 100.831059,-0.916616,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PAYUNG SEKAKI"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">PAYUNG SEKAKI</SimpleData><SimpleData name="DESA">SIRUKAM</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.765827,-0.848092,0.000000 100.773357,-0.848854,0.000000 100.777805,-0.848571,0.000000 100.776699,-0.856606,0.000000 100.777454,-0.866760,0.000000 100.778416,-0.876809,0.000000 100.785938,-0.883512,0.000000 100.787540,-0.889938,0.000000 100.788418,-0.893438,0.000000 100.795040,-0.901272,0.000000 100.802662,-0.907872,0.000000 100.810688,-0.914568,0.000000 100.820995,-0.917267,0.000000 100.831059,-0.916616,0.000000 100.840885,-0.914138,0.000000 100.841747,-0.924494,0.000000 100.842800,-0.934440,0.000000 100.841404,-0.939311,0.000000 100.839993,-0.944238,0.000000 100.835759,-0.953853,0.000000 100.832753,-0.962243,0.000000 100.829846,-0.973758,0.000000 100.828572,-0.983941,0.000000 100.827321,-0.987876,0.000000 100.820897,-0.981224,0.000000 100.816426,-0.978216,0.000000 100.813809,-0.976453,0.000000 100.805241,-0.974548,0.000000 100.796903,-0.975180,0.000000 100.788564,-0.975609,0.000000 100.785413,-0.975576,0.000000 100.780530,-0.975525,0.000000 100.772717,-0.977266,0.000000 100.764806,-0.979313,0.000000 100.757513,-0.979827,0.000000 100.757507,-0.979797,0.000000 100.756938,-0.975867,0.000000 100.756897,-0.975586,0.000000 100.756287,-0.971680,0.000000 100.755618,-0.968107,0.000000 100.754700,-0.963196,0.000000 100.753296,-0.954102,0.000000 100.752930,-0.951721,0.000000 100.752515,-0.949943,0.000000 100.761098,-0.947166,0.000000 100.761479,-0.944407,0.000000 100.762211,-0.939125,0.000000 100.762196,-0.930795,0.000000 100.762120,-0.921890,0.000000 100.761349,-0.914351,0.000000 100.759609,-0.906250,0.000000 100.757969,-0.897945,0.000000 100.755924,-0.890051,0.000000 100.754284,-0.882152,0.000000 100.752544,-0.874153,0.000000 100.750606,-0.866360,0.000000 100.750576,-0.864220,0.000000 100.750492,-0.858133,0.000000 100.748112,-0.855622,0.000000 100.756382,-0.850021,0.000000 100.765827,-0.848092,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PAYUNG SEKAKI"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">PAYUNG SEKAKI</SimpleData><SimpleData name="DESA">AIE LUO</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.886208,-0.822776,0.000000 100.887985,-0.824876,0.000000 100.891053,-0.823423,0.000000 100.896868,-0.818900,0.000000 100.900421,-0.813570,0.000000 100.903511,-0.811844,0.000000 100.905913,-0.810501,0.000000 100.911566,-0.808886,0.000000 100.916734,-0.807756,0.000000 100.918296,-0.807705,0.000000 100.919062,-0.813596,0.000000 100.919878,-0.821430,0.000000 100.924311,-0.839765,0.000000 100.926593,-0.849694,0.000000 100.927348,-0.859848,0.000000 100.928508,-0.870097,0.000000 100.926730,-0.880694,0.000000 100.922290,-0.890210,0.000000 100.917545,-0.899223,0.000000 100.915370,-0.901192,0.000000 100.910495,-0.896884,0.000000 100.900661,-0.898853,0.000000 100.896633,-0.901555,0.000000 100.892490,-0.896733,0.000000 100.884372,-0.890547,0.000000 100.875247,-0.885493,0.000000 100.866023,-0.880745,0.000000 100.862209,-0.878791,0.000000 100.857196,-0.874975,0.000000 100.848163,-0.869209,0.000000 100.838954,-0.864969,0.000000 100.840442,-0.862610,0.000000 100.838359,-0.852272,0.000000 100.834048,-0.842067,0.000000 100.828227,-0.833510,0.000000 100.821406,-0.825780,0.000000 100.811778,-0.821039,0.000000 100.817370,-0.816913,0.000000 100.824016,-0.811736,0.000000 100.830241,-0.806158,0.000000 100.830836,-0.797616,0.000000 100.831698,-0.788742,0.000000 100.832594,-0.783229,0.000000 100.835222,-0.783229,0.000000 100.838668,-0.783229,0.000000 100.841827,-0.783229,0.000000 100.843745,-0.782523,0.000000 100.846564,-0.781043,0.000000 100.848115,-0.779774,0.000000 100.849949,-0.779554,0.000000 100.850019,-0.779294,0.000000 100.852451,-0.781913,0.000000 100.855843,-0.787405,0.000000 100.862950,-0.793542,0.000000 100.866364,-0.797323,0.000000 100.867472,-0.798549,0.000000 100.871348,-0.801779,0.000000 100.875871,-0.804848,0.000000 100.878240,-0.806724,0.000000 100.879747,-0.807917,0.000000 100.883301,-0.810824,0.000000 100.884593,-0.813893,0.000000 100.885723,-0.817931,0.000000 100.886208,-0.822776,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC PAYUNG SEKAKI" name="KEC PAYUNG SEKAKI"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC GEDONG TENGEN/FID/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GEDONG TENGEN/PROVINSI/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC GEDONG TENGEN/KECAMATAN/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GEDONG TENGEN/DESA/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC GEDONG TENGEN/KABKOT/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GEDONG TENGEN/NAMA_PULAU/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC GEDONG TENGEN/FID/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GEDONG TENGEN/PROVINSI/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC GEDONG TENGEN/KECAMATAN/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GEDONG TENGEN/DESA/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC GEDONG TENGEN/KABKOT/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GEDONG TENGEN/NAMA_PULAU/displayName]</td>
+          <td>$[KEC GEDONG TENGEN/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC GEDONG TENGEN</name><Snippet /><Placemark><name>DAERAH ISTIMEWA YOGYAKARTA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC GEDONG TENGEN"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">DAERAH ISTIMEWA YOGYAKARTA</SimpleData><SimpleData name="KECAMATAN">GEDONG TENGEN</SimpleData><SimpleData name="DESA">PRINGGOKUSUMAN</SimpleData><SimpleData name="KABKOT">KOTA YOGYAKARTA</SimpleData><SimpleData name="NAMA_PULAU">JAWA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>110.356982,-7.788600,0.000000 110.357492,-7.788630,0.000000 110.357682,-7.788630,0.000000 110.358002,-7.788650,0.000000 110.358492,-7.788690,0.000000 110.358782,-7.788720,0.000000 110.358985,-7.788739,0.000000 110.359452,-7.788828,0.000000 110.359460,-7.788829,0.000000 110.359884,-7.789161,0.000000 110.360311,-7.789417,0.000000 110.360414,-7.789421,0.000000 110.361017,-7.789373,0.000000 110.361250,-7.789364,0.000000 110.361903,-7.789446,0.000000 110.361938,-7.789450,0.000000 110.361964,-7.789695,0.000000 110.362036,-7.789878,0.000000 110.361973,-7.790190,0.000000 110.361684,-7.791559,0.000000 110.361612,-7.791951,0.000000 110.361540,-7.792254,0.000000 110.361423,-7.792748,0.000000 110.361261,-7.793515,0.000000 110.361238,-7.793974,0.000000 110.361215,-7.794692,0.000000 110.361206,-7.794915,0.000000 110.361187,-7.795147,0.000000 110.361173,-7.795445,0.000000 110.361296,-7.795616,0.000000 110.361302,-7.795624,0.000000 110.361293,-7.795666,0.000000 110.361233,-7.795735,0.000000 110.361113,-7.796022,0.000000 110.360924,-7.796025,0.000000 110.360538,-7.796010,0.000000 110.360206,-7.795998,0.000000 110.359828,-7.795960,0.000000 110.359536,-7.795954,0.000000 110.359150,-7.795951,0.000000 110.358713,-7.795901,0.000000 110.358286,-7.795829,0.000000 110.357975,-7.795792,0.000000 110.357683,-7.795752,0.000000 110.357683,-7.795566,0.000000 110.357109,-7.795538,0.000000 110.356670,-7.795516,0.000000 110.356296,-7.795547,0.000000 110.355938,-7.795615,0.000000 110.355422,-7.795655,0.000000 110.355427,-7.795423,0.000000 110.355343,-7.795280,0.000000 110.355200,-7.795005,0.000000 110.355153,-7.794836,0.000000 110.355200,-7.794693,0.000000 110.355406,-7.794485,0.000000 110.355410,-7.794480,0.000000 110.355490,-7.794370,0.000000 110.355550,-7.794190,0.000000 110.355559,-7.794088,0.000000 110.355416,-7.793882,0.000000 110.355326,-7.793718,0.000000 110.355342,-7.793612,0.000000 110.355554,-7.793427,0.000000 110.355724,-7.793359,0.000000 110.355793,-7.793195,0.000000 110.355772,-7.792963,0.000000 110.355672,-7.792624,0.000000 110.355519,-7.792339,0.000000 110.355429,-7.792122,0.000000 110.355392,-7.791926,0.000000 110.355520,-7.791720,0.000000 110.355637,-7.791578,0.000000 110.355849,-7.791378,0.000000 110.356109,-7.791204,0.000000 110.356353,-7.791061,0.000000 110.356586,-7.790892,0.000000 110.356788,-7.790761,0.000000 110.356941,-7.790629,0.000000 110.357042,-7.790407,0.000000 110.357106,-7.790227,0.000000 110.357096,-7.790090,0.000000 110.357027,-7.789963,0.000000 110.356911,-7.789831,0.000000 110.356752,-7.789762,0.000000 110.356620,-7.789719,0.000000 110.356429,-7.789635,0.000000 110.356074,-7.789565,0.000000 110.355735,-7.789512,0.000000 110.355391,-7.789448,0.000000 110.355259,-7.789374,0.000000 110.355240,-7.789280,0.000000 110.355230,-7.789060,0.000000 110.355290,-7.788860,0.000000 110.355380,-7.788520,0.000000 110.355572,-7.788520,0.000000 110.356982,-7.788600,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>DAERAH ISTIMEWA YOGYAKARTA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC GEDONG TENGEN"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">DAERAH ISTIMEWA YOGYAKARTA</SimpleData><SimpleData name="KECAMATAN">GEDONG TENGEN</SimpleData><SimpleData name="DESA">SOSROMENDURAN</SimpleData><SimpleData name="KABKOT">KOTA YOGYAKARTA</SimpleData><SimpleData name="NAMA_PULAU">JAWA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>110.363532,-7.787310,0.000000 110.363852,-7.787350,0.000000 110.363912,-7.787350,0.000000 110.364662,-7.787430,0.000000 110.364792,-7.787460,0.000000 110.365152,-7.787500,0.000000 110.365672,-7.787580,0.000000 110.365922,-7.787610,0.000000 110.366522,-7.787700,0.000000 110.366422,-7.788450,0.000000 110.366382,-7.788780,0.000000 110.366372,-7.788890,0.000000 110.366302,-7.789440,0.000000 110.366282,-7.789630,0.000000 110.366272,-7.789820,0.000000 110.366252,-7.789980,0.000000 110.366232,-7.790120,0.000000 110.366212,-7.790250,0.000000 110.366182,-7.790530,0.000000 110.366172,-7.790650,0.000000 110.366112,-7.791150,0.000000 110.366092,-7.791250,0.000000 110.366042,-7.791700,0.000000 110.366032,-7.791770,0.000000 110.366012,-7.791970,0.000000 110.365962,-7.792310,0.000000 110.365912,-7.792660,0.000000 110.365772,-7.793760,0.000000 110.365742,-7.794000,0.000000 110.365712,-7.794240,0.000000 110.365652,-7.794820,0.000000 110.365632,-7.795040,0.000000 110.365512,-7.795860,0.000000 110.365452,-7.796348,0.000000 110.365210,-7.796320,0.000000 110.364610,-7.796250,0.000000 110.364060,-7.796180,0.000000 110.363950,-7.796170,0.000000 110.363780,-7.796160,0.000000 110.363610,-7.796130,0.000000 110.363450,-7.796120,0.000000 110.363390,-7.796100,0.000000 110.363160,-7.796100,0.000000 110.362910,-7.796070,0.000000 110.362830,-7.796060,0.000000 110.362620,-7.796040,0.000000 110.362195,-7.796014,0.000000 110.362130,-7.796010,0.000000 110.362130,-7.796019,0.000000 110.361645,-7.795932,0.000000 110.361373,-7.795695,0.000000 110.361302,-7.795622,0.000000 110.361302,-7.795624,0.000000 110.361296,-7.795616,0.000000 110.361173,-7.795445,0.000000 110.361187,-7.795147,0.000000 110.361206,-7.794915,0.000000 110.361215,-7.794692,0.000000 110.361238,-7.793974,0.000000 110.361261,-7.793515,0.000000 110.361423,-7.792748,0.000000 110.361540,-7.792254,0.000000 110.361612,-7.791951,0.000000 110.361684,-7.791559,0.000000 110.361973,-7.790190,0.000000 110.362036,-7.789878,0.000000 110.361964,-7.789695,0.000000 110.361938,-7.789450,0.000000 110.361903,-7.789446,0.000000 110.361434,-7.789190,0.000000 110.360435,-7.788849,0.000000 110.360052,-7.788542,0.000000 110.359508,-7.788514,0.000000 110.359530,-7.788267,0.000000 110.359427,-7.788068,0.000000 110.359406,-7.787944,0.000000 110.359319,-7.787727,0.000000 110.359754,-7.787765,0.000000 110.360149,-7.787849,0.000000 110.361288,-7.788079,0.000000 110.361551,-7.788107,0.000000 110.361915,-7.788127,0.000000 110.362063,-7.788154,0.000000 110.362319,-7.788162,0.000000 110.362468,-7.788169,0.000000 110.362542,-7.788040,0.000000 110.362602,-7.787760,0.000000 110.362662,-7.787560,0.000000 110.362722,-7.787200,0.000000 110.362748,-7.787201,0.000000 110.362912,-7.787210,0.000000 110.363312,-7.787260,0.000000 110.363532,-7.787310,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC GEDONG TENGEN" name="KEC GEDONG TENGEN"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

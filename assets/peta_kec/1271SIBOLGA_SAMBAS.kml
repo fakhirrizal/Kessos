@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SIBOLGA SAMBAS/FID/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SIBOLGA SAMBAS/PROVINSI/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SIBOLGA SAMBAS/KECAMATAN/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SIBOLGA SAMBAS/DESA/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SIBOLGA SAMBAS/KABKOT/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SIBOLGA SAMBAS/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SIBOLGA SAMBAS/FID/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SIBOLGA SAMBAS/PROVINSI/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SIBOLGA SAMBAS/KECAMATAN/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SIBOLGA SAMBAS/DESA/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SIBOLGA SAMBAS/KABKOT/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SIBOLGA SAMBAS/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SIBOLGA SAMBAS/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC SIBOLGA SAMBAS</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SIBOLGA SAMBAS"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SIBOLGA SAMBAS</SimpleData><SimpleData name="DESA">PANCURAN BAMBU</SimpleData><SimpleData name="KABKOT">SIBOLGA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.791117,1.735543,0.000000 98.792268,1.734507,0.000000 98.792348,1.734353,0.000000 98.792367,1.734239,0.000000 98.792376,1.734189,0.000000 98.792389,1.734110,0.000000 98.792392,1.734054,0.000000 98.792406,1.733841,0.000000 98.792395,1.733632,0.000000 98.792376,1.733496,0.000000 98.792324,1.733394,0.000000 98.792290,1.733328,0.000000 98.792256,1.733262,0.000000 98.792196,1.733147,0.000000 98.792289,1.733103,0.000000 98.792094,1.732737,0.000000 98.791919,1.732440,0.000000 98.791480,1.731747,0.000000 98.791034,1.731048,0.000000 98.790704,1.730498,0.000000 98.790439,1.730124,0.000000 98.790361,1.729969,0.000000 98.790326,1.729864,0.000000 98.790234,1.729776,0.000000 98.790122,1.729528,0.000000 98.790028,1.729296,0.000000 98.789849,1.728929,0.000000 98.789789,1.728796,0.000000 98.789762,1.728743,0.000000 98.789515,1.728282,0.000000 98.789411,1.728376,0.000000 98.788968,1.728747,0.000000 98.788835,1.728940,0.000000 98.788729,1.729348,0.000000 98.788445,1.729699,0.000000 98.788118,1.729699,0.000000 98.787758,1.729579,0.000000 98.787404,1.729668,0.000000 98.787330,1.729816,0.000000 98.787071,1.729852,0.000000 98.786666,1.729401,0.000000 98.786574,1.729303,0.000000 98.786374,1.729599,0.000000 98.786296,1.729730,0.000000 98.785776,1.730540,0.000000 98.786009,1.730738,0.000000 98.786261,1.730983,0.000000 98.786642,1.731354,0.000000 98.786752,1.731458,0.000000 98.787041,1.731772,0.000000 98.787334,1.732095,0.000000 98.787813,1.732618,0.000000 98.787873,1.732655,0.000000 98.788056,1.732835,0.000000 98.788219,1.733003,0.000000 98.788808,1.733580,0.000000 98.789358,1.734134,0.000000 98.789436,1.734208,0.000000 98.789502,1.734252,0.000000 98.789698,1.734416,0.000000 98.789876,1.734595,0.000000 98.789939,1.734645,0.000000 98.790002,1.734638,0.000000 98.791117,1.735543,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SIBOLGA SAMBAS"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SIBOLGA SAMBAS</SimpleData><SimpleData name="DESA">PANCURAN DEWA</SimpleData><SimpleData name="KABKOT">SIBOLGA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.790961,1.735704,0.000000 98.791117,1.735543,0.000000 98.790002,1.734638,0.000000 98.789939,1.734645,0.000000 98.789876,1.734595,0.000000 98.789698,1.734416,0.000000 98.789502,1.734252,0.000000 98.789436,1.734208,0.000000 98.789358,1.734134,0.000000 98.788808,1.733580,0.000000 98.788219,1.733003,0.000000 98.788056,1.732835,0.000000 98.787873,1.732655,0.000000 98.787813,1.732618,0.000000 98.787334,1.732095,0.000000 98.787041,1.731772,0.000000 98.786752,1.731458,0.000000 98.786642,1.731354,0.000000 98.786261,1.730983,0.000000 98.786009,1.730738,0.000000 98.785776,1.730540,0.000000 98.786296,1.729730,0.000000 98.786374,1.729599,0.000000 98.786574,1.729303,0.000000 98.786430,1.729148,0.000000 98.786223,1.728940,0.000000 98.785915,1.728359,0.000000 98.785249,1.728272,0.000000 98.784781,1.728557,0.000000 98.784475,1.728930,0.000000 98.784017,1.729215,0.000000 98.783581,1.729457,0.000000 98.783479,1.729489,0.000000 98.782933,1.729519,0.000000 98.782549,1.729549,0.000000 98.782228,1.729710,0.000000 98.784729,1.732213,0.000000 98.785483,1.732980,0.000000 98.786876,1.734346,0.000000 98.788102,1.735574,0.000000 98.788155,1.735621,0.000000 98.788179,1.735597,0.000000 98.788431,1.735816,0.000000 98.788561,1.735910,0.000000 98.790040,1.737073,0.000000 98.790381,1.736712,0.000000 98.790523,1.736561,0.000000 98.790579,1.736502,0.000000 98.790662,1.736416,0.000000 98.790716,1.736246,0.000000 98.790745,1.736081,0.000000 98.790771,1.735957,0.000000 98.790816,1.735857,0.000000 98.790851,1.735819,0.000000 98.790961,1.735704,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SIBOLGA SAMBAS"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SIBOLGA SAMBAS</SimpleData><SimpleData name="DESA">PANCURAN KERAMBIL</SimpleData><SimpleData name="KABKOT">SIBOLGA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.788431,1.735816,0.000000 98.788179,1.735597,0.000000 98.788155,1.735621,0.000000 98.788102,1.735574,0.000000 98.786876,1.734346,0.000000 98.785483,1.732980,0.000000 98.783835,1.735101,0.000000 98.785044,1.735961,0.000000 98.785796,1.736495,0.000000 98.786186,1.736801,0.000000 98.786354,1.736932,0.000000 98.786550,1.737080,0.000000 98.786452,1.737251,0.000000 98.788508,1.738656,0.000000 98.788724,1.738434,0.000000 98.788901,1.738252,0.000000 98.789023,1.738125,0.000000 98.789212,1.737929,0.000000 98.789380,1.737756,0.000000 98.789549,1.737580,0.000000 98.789870,1.737250,0.000000 98.790040,1.737073,0.000000 98.788561,1.735910,0.000000 98.788431,1.735816,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SIBOLGA SAMBAS"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SIBOLGA SAMBAS</SimpleData><SimpleData name="DESA">PANCURAN PINANG</SimpleData><SimpleData name="KABKOT">SIBOLGA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><MultiGeometry><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.779996,1.729788,0.000000 98.780176,1.729752,0.000000 98.780444,1.729752,0.000000 98.780567,1.729773,0.000000 98.780734,1.729662,0.000000 98.780820,1.729526,0.000000 98.780956,1.729455,0.000000 98.781189,1.729418,0.000000 98.781376,1.729236,0.000000 98.781287,1.728638,0.000000 98.781283,1.728501,0.000000 98.781256,1.728418,0.000000 98.781326,1.728352,0.000000 98.781317,1.728257,0.000000 98.781326,1.728150,0.000000 98.781404,1.728046,0.000000 98.781416,1.728001,0.000000 98.781297,1.727895,0.000000 98.781297,1.727717,0.000000 98.781355,1.727721,0.000000 98.781418,1.727746,0.000000 98.781515,1.727744,0.000000 98.781587,1.727690,0.000000 98.781616,1.727550,0.000000 98.781587,1.727403,0.000000 98.781519,1.727303,0.000000 98.781392,1.727248,0.000000 98.781260,1.727214,0.000000 98.781026,1.727231,0.000000 98.780946,1.727217,0.000000 98.780824,1.727188,0.000000 98.780563,1.727049,0.000000 98.780395,1.726933,0.000000 98.780333,1.726958,0.000000 98.780031,1.727018,0.000000 98.779804,1.727012,0.000000 98.779733,1.726914,0.000000 98.779496,1.726680,0.000000 98.779375,1.726703,0.000000 98.779305,1.726807,0.000000 98.779202,1.726923,0.000000 98.779184,1.727009,0.000000 98.779112,1.727065,0.000000 98.779054,1.727191,0.000000 98.778938,1.727301,0.000000 98.778847,1.727361,0.000000 98.778791,1.727490,0.000000 98.778744,1.727537,0.000000 98.778698,1.727640,0.000000 98.778570,1.727726,0.000000 98.778527,1.727920,0.000000 98.778556,1.728132,0.000000 98.778669,1.728349,0.000000 98.778649,1.728499,0.000000 98.778608,1.728572,0.000000 98.778644,1.728644,0.000000 98.778618,1.728753,0.000000 98.778551,1.728919,0.000000 98.778489,1.729017,0.000000 98.778479,1.729110,0.000000 98.778546,1.729152,0.000000 98.778572,1.729260,0.000000 98.778587,1.729338,0.000000 98.778669,1.729338,0.000000 98.778710,1.729307,0.000000 98.778762,1.729271,0.000000 98.778854,1.729297,0.000000 98.778968,1.729354,0.000000 98.779281,1.729457,0.000000 98.779482,1.729493,0.000000 98.779518,1.729638,0.000000 98.779610,1.729788,0.000000 98.779801,1.729845,0.000000 98.779996,1.729788,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.784729,1.732213,0.000000 98.782228,1.729710,0.000000 98.782047,1.729801,0.000000 98.782077,1.730128,0.000000 98.781988,1.730378,0.000000 98.781726,1.730708,0.000000 98.781412,1.731018,0.000000 98.781265,1.731256,0.000000 98.781073,1.731479,0.000000 98.780866,1.731642,0.000000 98.780660,1.731954,0.000000 98.780453,1.732236,0.000000 98.780416,1.732442,0.000000 98.781134,1.733015,0.000000 98.782455,1.734069,0.000000 98.782799,1.734344,0.000000 98.783224,1.734681,0.000000 98.783835,1.735101,0.000000 98.785483,1.732980,0.000000 98.784729,1.732213,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry></Placemark></Folder><Schema id="KEC SIBOLGA SAMBAS" name="KEC SIBOLGA SAMBAS"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

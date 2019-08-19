@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Manokwari" name="Manokwari"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Manokwari/FID/displayName]</td>
+          <td>$[Manokwari/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Manokwari/PROVINSI/displayName]</td>
+          <td>$[Manokwari/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Manokwari/KABKOT/displayName]</td>
+          <td>$[Manokwari/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Manokwari/KECAMATAN/displayName]</td>
+          <td>$[Manokwari/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Manokwari/DESA/displayName]</td>
+          <td>$[Manokwari/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Manokwari</name><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.890624,-0.817015,0.000000 132.835549,-1.000878,0.000000 132.823125,-1.179796,0.000000 132.820908,-1.179425,0.000000 132.817432,-1.178633,0.000000 132.815064,-1.178094,0.000000 132.805664,-1.175951,0.000000 132.794418,-1.172111,0.000000 132.779999,-1.171730,0.000000 132.761566,-1.170683,0.000000 132.746445,-1.170076,0.000000 132.731903,-1.168663,0.000000 132.719849,-1.164598,0.000000 132.712631,-1.162801,0.000000 132.708801,-1.160487,0.000000 132.707411,-1.159851,0.000000 132.675995,-1.145474,0.000000 132.674710,-1.145318,0.000000 132.674402,-1.145280,0.000000 132.672695,-1.145072,0.000000 132.635874,-1.140587,0.000000 132.613394,-1.137849,0.000000 132.609909,-1.137425,0.000000 132.590322,-1.135376,0.000000 132.581223,-1.134424,0.000000 132.581268,-1.133245,0.000000 132.577030,-1.132868,0.000000 132.551608,-1.130607,0.000000 132.542039,-1.129756,0.000000 132.505661,-1.126520,0.000000 132.505345,-1.126277,0.000000 132.496462,-1.119436,0.000000 132.492706,-1.116543,0.000000 132.491387,-1.111235,0.000000 132.489215,-1.102496,0.000000 132.487213,-1.094441,0.000000 132.486053,-1.089779,0.000000 132.497391,-1.075203,0.000000 132.527679,-1.069028,0.000000 132.529642,-1.069032,0.000000 132.551880,-1.069076,0.000000 132.581802,-1.060357,0.000000 132.604172,-1.046418,0.000000 132.623810,-1.026386,0.000000 132.662338,-0.987092,0.000000 132.679306,-0.959010,0.000000 132.681273,-0.960821,0.000000 132.682455,-0.957621,0.000000 132.687868,-0.970477,0.000000 132.699913,-0.967466,0.000000 132.719236,-0.962635,0.000000 132.726340,-0.960859,0.000000 132.749204,-0.942283,0.000000 132.750514,-0.942340,0.000000 132.778278,-0.943547,0.000000 132.816750,-0.928158,0.000000 132.833277,-0.877794,0.000000 132.849257,-0.848118,0.000000 132.860670,-0.823008,0.000000 132.871636,-0.812773,0.000000 132.890624,-0.817015,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Manokwari"><SimpleData name="FID">305</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">MANOKWARI</SimpleData><SimpleData name="KECAMATAN">SENOPI</SimpleData><SimpleData name="DESA">KEBAR BARAT / SENOPI</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>133.020269,-0.967137,0.000000 133.026637,-1.219494,0.000000 133.005432,-1.215600,0.000000 132.988235,-1.210531,0.000000 132.984685,-1.210012,0.000000 132.969330,-1.207765,0.000000 132.961639,-1.205282,0.000000 132.947418,-1.200426,0.000000 132.922333,-1.196660,0.000000 132.899185,-1.193458,0.000000 132.882568,-1.190795,0.000000 132.881813,-1.190673,0.000000 132.863998,-1.187797,0.000000 132.855744,-1.185547,0.000000 132.840851,-1.182760,0.000000 132.823125,-1.179796,0.000000 132.835549,-1.000878,0.000000 132.890624,-0.817015,0.000000 132.905282,-0.820289,0.000000 132.958028,-0.856049,0.000000 133.017829,-0.870459,0.000000 133.017838,-0.870817,0.000000 133.020269,-0.967137,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Manokwari"><SimpleData name="FID">306</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">MANOKWARI</SimpleData><SimpleData name="KECAMATAN">SENOPI</SimpleData><SimpleData name="DESA">WAUSIN</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>133.016502,-0.817858,0.000000 133.017829,-0.870459,0.000000 132.958028,-0.856049,0.000000 132.905282,-0.820289,0.000000 132.890624,-0.817015,0.000000 132.871636,-0.812773,0.000000 132.871636,-0.812773,0.000000 132.814199,-0.799941,0.000000 132.814535,-0.799478,0.000000 132.823674,-0.787188,0.000000 132.835108,-0.782572,0.000000 132.848829,-0.777186,0.000000 132.850345,-0.767206,0.000000 132.856434,-0.755687,0.000000 132.866337,-0.744165,0.000000 132.874718,-0.737249,0.000000 132.886908,-0.725725,0.000000 132.898337,-0.716505,0.000000 132.899496,-0.715337,0.000000 132.906326,-0.718475,0.000000 132.920593,-0.723669,0.000000 132.938405,-0.730152,0.000000 132.938406,-0.730152,0.000000 132.942352,-0.731588,0.000000 132.945958,-0.733511,0.000000 132.961319,-0.741701,0.000000 132.967667,-0.745086,0.000000 132.974502,-0.748508,0.000000 132.981282,-0.753250,0.000000 132.984268,-0.755339,0.000000 132.995758,-0.762160,0.000000 133.002884,-0.766366,0.000000 133.009644,-0.767248,0.000000 133.018707,-0.770870,0.000000 133.031817,-0.775587,0.000000 133.033157,-0.776069,0.000000 133.033209,-0.776090,0.000000 133.016502,-0.817858,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Manokwari"><SimpleData name="FID">307</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">MANOKWARI</SimpleData><SimpleData name="KECAMATAN">SENOPI</SimpleData><SimpleData name="DESA">AFRAWI</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

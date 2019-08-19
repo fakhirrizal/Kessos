@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Lampung_Barat" name="Lampung_Barat"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Lampung_Barat/FID/displayName]</td>
+          <td>$[Lampung_Barat/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Lampung_Barat/PROVINSI/displayName]</td>
+          <td>$[Lampung_Barat/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Lampung_Barat/KABKOT/displayName]</td>
+          <td>$[Lampung_Barat/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Lampung_Barat/KECAMATAN/displayName]</td>
+          <td>$[Lampung_Barat/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Lampung_Barat/DESA/displayName]</td>
+          <td>$[Lampung_Barat/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Lampung_Barat</name><Placemark><name>LAMPUNG</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>104.218503,-5.064857,0.000000 104.222083,-5.067510,0.000000 104.225095,-5.070049,0.000000 104.226357,-5.071122,0.000000 104.227425,-5.072391,0.000000 104.228103,-5.074146,0.000000 104.229114,-5.075451,0.000000 104.230142,-5.076390,0.000000 104.230724,-5.077560,0.000000 104.230877,-5.078573,0.000000 104.231416,-5.078764,0.000000 104.232744,-5.079527,0.000000 104.232742,-5.081105,0.000000 104.232741,-5.081430,0.000000 104.233974,-5.081812,0.000000 104.234637,-5.083144,0.000000 104.235014,-5.085333,0.000000 104.234538,-5.086855,0.000000 104.232925,-5.086948,0.000000 104.231502,-5.086661,0.000000 104.230174,-5.085993,0.000000 104.229131,-5.085612,0.000000 104.229129,-5.086944,0.000000 104.229128,-5.088085,0.000000 104.228462,-5.089131,0.000000 104.227324,-5.088749,0.000000 104.226092,-5.087416,0.000000 104.225523,-5.087129,0.000000 104.224194,-5.087984,0.000000 104.224003,-5.088840,0.000000 104.224192,-5.089982,0.000000 104.225045,-5.090459,0.000000 104.226183,-5.091221,0.000000 104.227226,-5.091223,0.000000 104.228461,-5.090082,0.000000 104.229980,-5.089228,0.000000 104.232068,-5.089326,0.000000 104.234058,-5.091421,0.000000 104.234244,-5.094180,0.000000 104.234052,-5.096654,0.000000 104.233385,-5.098746,0.000000 104.231390,-5.100456,0.000000 104.229207,-5.101310,0.000000 104.227406,-5.099976,0.000000 104.226553,-5.099119,0.000000 104.225129,-5.099497,0.000000 104.223610,-5.100447,0.000000 104.222090,-5.101301,0.000000 104.221142,-5.100729,0.000000 104.220289,-5.099872,0.000000 104.218488,-5.098538,0.000000 104.217065,-5.098251,0.000000 104.215742,-5.098364,0.000000 104.215009,-5.097996,0.000000 104.213504,-5.097234,0.000000 104.213389,-5.096910,0.000000 104.213094,-5.095370,0.000000 104.213837,-5.094626,0.000000 104.213941,-5.094523,0.000000 104.213997,-5.093381,0.000000 104.214011,-5.093266,0.000000 104.214002,-5.093268,0.000000 104.213554,-5.093331,0.000000 104.212108,-5.093438,0.000000 104.211740,-5.092472,0.000000 104.211271,-5.091243,0.000000 104.209502,-5.089843,0.000000 104.209050,-5.088476,0.000000 104.207369,-5.088153,0.000000 104.205525,-5.085458,0.000000 104.205519,-5.085461,0.000000 104.204851,-5.085933,0.000000 104.204241,-5.086408,0.000000 104.204194,-5.086396,0.000000 104.203169,-5.086030,0.000000 104.202318,-5.083607,0.000000 104.200231,-5.080610,0.000000 104.197991,-5.080001,0.000000 104.196348,-5.080297,0.000000 104.195363,-5.080017,0.000000 104.195361,-5.080014,0.000000 104.195355,-5.080006,0.000000 104.194855,-5.079255,0.000000 104.195146,-5.075131,0.000000 104.194878,-5.074185,0.000000 104.199633,-5.069154,0.000000 104.202698,-5.065449,0.000000 104.207801,-5.064688,0.000000 104.215836,-5.064954,0.000000 104.215936,-5.064925,0.000000 104.215804,-5.064707,0.000000 104.217894,-5.063925,0.000000 104.218503,-5.064857,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Lampung_Barat"><SimpleData name="FID">239</SimpleData><SimpleData name="PROVINSI">LAMPUNG</SimpleData><SimpleData name="KABKOT">LAMPUNG BARAT</SimpleData><SimpleData name="KECAMATAN">BATU KETULIS</SimpleData><SimpleData name="DESA">ATAR KUWAU</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

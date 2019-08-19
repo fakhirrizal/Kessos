@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Sorong_Selatan" name="Sorong_Selatan"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Sorong_Selatan/FID/displayName]</td>
+          <td>$[Sorong_Selatan/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Sorong_Selatan/PROVINSI/displayName]</td>
+          <td>$[Sorong_Selatan/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Sorong_Selatan/KABKOT/displayName]</td>
+          <td>$[Sorong_Selatan/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Sorong_Selatan/KECAMATAN/displayName]</td>
+          <td>$[Sorong_Selatan/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Sorong_Selatan/DESA/displayName]</td>
+          <td>$[Sorong_Selatan/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Sorong_Selatan</name><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>131.994535,-1.176305,0.000000 131.979349,-1.190304,0.000000 131.973758,-1.181381,0.000000 131.973669,-1.181239,0.000000 131.964767,-1.167034,0.000000 131.973669,-1.154490,0.000000 131.973755,-1.154369,0.000000 131.975079,-1.152503,0.000000 131.981140,-1.144018,0.000000 131.992456,-1.154975,0.000000 132.004434,-1.166573,0.000000 132.004755,-1.166884,0.000000 131.994535,-1.176305,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Sorong_Selatan"><SimpleData name="FID">114</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">SORONG SELATAN</SimpleData><SimpleData name="KECAMATAN">FOKOUR</SimpleData><SimpleData name="DESA">PASIR PUTIH</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.018801,-1.208290,0.000000 131.997010,-1.224997,0.000000 131.989231,-1.206981,0.000000 131.987967,-1.204056,0.000000 131.979349,-1.190304,0.000000 131.994535,-1.176305,0.000000 132.004755,-1.166884,0.000000 132.010135,-1.172093,0.000000 132.021180,-1.183137,0.000000 132.021263,-1.183221,0.000000 132.031716,-1.193674,0.000000 132.032112,-1.193692,0.000000 132.029313,-1.196691,0.000000 132.020962,-1.206634,0.000000 132.018801,-1.208290,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Sorong_Selatan"><SimpleData name="FID">115</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">SORONG SELATAN</SimpleData><SimpleData name="KECAMATAN">FOKOUR</SimpleData><SimpleData name="DESA">WELEK</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.034384,-1.191259,0.000000 132.032112,-1.193692,0.000000 132.031716,-1.193674,0.000000 132.021263,-1.183221,0.000000 132.021180,-1.183137,0.000000 132.010135,-1.172093,0.000000 132.004755,-1.166884,0.000000 132.004434,-1.166573,0.000000 132.014596,-1.147175,0.000000 132.016457,-1.143622,0.000000 132.039200,-1.100203,0.000000 132.054304,-1.135602,0.000000 132.060647,-1.149479,0.000000 132.064833,-1.158635,0.000000 132.034772,-1.190843,0.000000 132.034384,-1.191259,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Sorong_Selatan"><SimpleData name="FID">116</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">SORONG SELATAN</SimpleData><SimpleData name="KECAMATAN">FOKOUR</SimpleData><SimpleData name="DESA">BEMUS</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.014596,-1.147175,0.000000 132.004434,-1.166573,0.000000 131.992456,-1.154975,0.000000 131.981140,-1.144018,0.000000 131.982812,-1.141677,0.000000 131.982297,-1.123633,0.000000 131.977141,-1.099403,0.000000 131.972756,-1.063125,0.000000 131.979080,-1.063263,0.000000 131.988846,-1.064620,0.000000 132.002336,-1.065504,0.000000 132.015579,-1.066372,0.000000 132.022659,-1.067480,0.000000 132.025351,-1.067744,0.000000 132.039200,-1.100203,0.000000 132.016457,-1.143622,0.000000 132.014596,-1.147175,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Sorong_Selatan"><SimpleData name="FID">117</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">SORONG SELATAN</SimpleData><SimpleData name="KECAMATAN">FOKOUR</SimpleData><SimpleData name="DESA">WONDUM</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

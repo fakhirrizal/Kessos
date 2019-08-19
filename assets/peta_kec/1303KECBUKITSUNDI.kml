@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC BUKIT SUNDI/FID/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BUKIT SUNDI/PROVINSI/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC BUKIT SUNDI/KECAMATAN/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BUKIT SUNDI/DESA/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC BUKIT SUNDI/KABKOT/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BUKIT SUNDI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC BUKIT SUNDI/FID/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BUKIT SUNDI/PROVINSI/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC BUKIT SUNDI/KECAMATAN/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BUKIT SUNDI/DESA/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC BUKIT SUNDI/KABKOT/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BUKIT SUNDI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC BUKIT SUNDI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC BUKIT SUNDI</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC BUKIT SUNDI"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">BUKIT SUNDI</SimpleData><SimpleData name="DESA">PARAMBAHAN</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.737988,-0.898402,0.000000 100.732807,-0.899186,0.000000 100.727810,-0.898849,0.000000 100.723370,-0.901657,0.000000 100.719967,-0.905365,0.000000 100.718007,-0.910272,0.000000 100.717274,-0.915366,0.000000 100.716702,-0.921198,0.000000 100.716675,-0.921204,0.000000 100.713928,-0.921692,0.000000 100.710461,-0.922257,0.000000 100.708218,-0.922578,0.000000 100.708172,-0.919967,0.000000 100.708501,-0.914879,0.000000 100.709645,-0.909678,0.000000 100.711705,-0.904972,0.000000 100.715420,-0.901463,0.000000 100.718724,-0.897655,0.000000 100.721714,-0.893648,0.000000 100.722615,-0.888149,0.000000 100.733143,-0.888100,0.000000 100.744770,-0.889156,0.000000 100.746884,-0.893803,0.000000 100.742749,-0.896505,0.000000 100.737988,-0.898402,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC BUKIT SUNDI"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">BUKIT SUNDI</SimpleData><SimpleData name="DESA">MUARO PANEH</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.703198,-0.914445,0.000000 100.701222,-0.918482,0.000000 100.696118,-0.912693,0.000000 100.694867,-0.911274,0.000000 100.689587,-0.904953,0.000000 100.687840,-0.903199,0.000000 100.683911,-0.899247,0.000000 100.681057,-0.891671,0.000000 100.682324,-0.883018,0.000000 100.684086,-0.875677,0.000000 100.687245,-0.868316,0.000000 100.690487,-0.860446,0.000000 100.691708,-0.856986,0.000000 100.693546,-0.851764,0.000000 100.695217,-0.847663,0.000000 100.696377,-0.844816,0.000000 100.699741,-0.837535,0.000000 100.700031,-0.837045,0.000000 100.702091,-0.833550,0.000000 100.703197,-0.831667,0.000000 100.705997,-0.833682,0.000000 100.709919,-0.837186,0.000000 100.713146,-0.841309,0.000000 100.715458,-0.845750,0.000000 100.716656,-0.850613,0.000000 100.717197,-0.854147,0.000000 100.716480,-0.860317,0.000000 100.716480,-0.865607,0.000000 100.714367,-0.869482,0.000000 100.713413,-0.870992,0.000000 100.712856,-0.874761,0.000000 100.710179,-0.879272,0.000000 100.708424,-0.883973,0.000000 100.707684,-0.888965,0.000000 100.707364,-0.894257,0.000000 100.706929,-0.899346,0.000000 100.706196,-0.904541,0.000000 100.704953,-0.909540,0.000000 100.703198,-0.914445,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC BUKIT SUNDI"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">BUKIT SUNDI</SimpleData><SimpleData name="DESA">KINARI</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.754284,-0.882152,0.000000 100.755924,-0.890051,0.000000 100.757969,-0.897945,0.000000 100.752842,-0.896871,0.000000 100.746884,-0.893803,0.000000 100.744770,-0.889156,0.000000 100.733143,-0.888100,0.000000 100.722615,-0.888149,0.000000 100.721714,-0.893648,0.000000 100.718724,-0.897655,0.000000 100.715420,-0.901463,0.000000 100.711705,-0.904972,0.000000 100.709645,-0.909678,0.000000 100.708501,-0.914879,0.000000 100.708172,-0.919967,0.000000 100.708218,-0.922578,0.000000 100.706085,-0.922883,0.000000 100.701294,-0.918396,0.000000 100.701245,-0.918503,0.000000 100.701222,-0.918482,0.000000 100.703198,-0.914445,0.000000 100.704953,-0.909540,0.000000 100.706196,-0.904541,0.000000 100.706929,-0.899346,0.000000 100.707364,-0.894257,0.000000 100.707684,-0.888965,0.000000 100.708424,-0.883973,0.000000 100.710179,-0.879272,0.000000 100.712856,-0.874761,0.000000 100.713413,-0.870992,0.000000 100.714367,-0.869482,0.000000 100.716480,-0.865607,0.000000 100.716480,-0.860317,0.000000 100.717197,-0.854147,0.000000 100.717586,-0.854015,0.000000 100.720562,-0.852998,0.000000 100.725857,-0.852415,0.000000 100.730175,-0.855201,0.000000 100.734402,-0.858192,0.000000 100.738720,-0.860775,0.000000 100.743542,-0.863045,0.000000 100.750576,-0.864220,0.000000 100.750606,-0.866360,0.000000 100.752544,-0.874153,0.000000 100.754284,-0.882152,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC BUKIT SUNDI"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">BUKIT SUNDI</SimpleData><SimpleData name="DESA">DILAM</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.757969,-0.897945,0.000000 100.759609,-0.906250,0.000000 100.761349,-0.914351,0.000000 100.762120,-0.921890,0.000000 100.762196,-0.930795,0.000000 100.762211,-0.939125,0.000000 100.761479,-0.944407,0.000000 100.761098,-0.947166,0.000000 100.752515,-0.949943,0.000000 100.752502,-0.949890,0.000000 100.752319,-0.948303,0.000000 100.752075,-0.946899,0.000000 100.747531,-0.941286,0.000000 100.746968,-0.940570,0.000000 100.746935,-0.940549,0.000000 100.746887,-0.940491,0.000000 100.740112,-0.936279,0.000000 100.733521,-0.931702,0.000000 100.731933,-0.930220,0.000000 100.731763,-0.930046,0.000000 100.731475,-0.929751,0.000000 100.730713,-0.928894,0.000000 100.729675,-0.927795,0.000000 100.729675,-0.927795,0.000000 100.727722,-0.925903,0.000000 100.722107,-0.920105,0.000000 100.722058,-0.920115,0.000000 100.716702,-0.921198,0.000000 100.717274,-0.915366,0.000000 100.718007,-0.910272,0.000000 100.719967,-0.905365,0.000000 100.723370,-0.901657,0.000000 100.727810,-0.898849,0.000000 100.732807,-0.899186,0.000000 100.737988,-0.898402,0.000000 100.742749,-0.896505,0.000000 100.746884,-0.893803,0.000000 100.752842,-0.896871,0.000000 100.757969,-0.897945,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC BUKIT SUNDI"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">BUKIT SUNDI</SimpleData><SimpleData name="DESA">BUKIK TANDANG</SimpleData><SimpleData name="KABKOT">SOLOK</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.744709,-0.852022,0.000000 100.748112,-0.855622,0.000000 100.750492,-0.858133,0.000000 100.750576,-0.864220,0.000000 100.743542,-0.863045,0.000000 100.738720,-0.860775,0.000000 100.734402,-0.858192,0.000000 100.730175,-0.855201,0.000000 100.725857,-0.852415,0.000000 100.720562,-0.852998,0.000000 100.717586,-0.854015,0.000000 100.717197,-0.854147,0.000000 100.716656,-0.850613,0.000000 100.715458,-0.845750,0.000000 100.713146,-0.841309,0.000000 100.709919,-0.837186,0.000000 100.705997,-0.833682,0.000000 100.703197,-0.831667,0.000000 100.706035,-0.822426,0.000000 100.706821,-0.813678,0.000000 100.715168,-0.813757,0.000000 100.723056,-0.817297,0.000000 100.728435,-0.823922,0.000000 100.731495,-0.831495,0.000000 100.734958,-0.839063,0.000000 100.738880,-0.845601,0.000000 100.744709,-0.852022,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC BUKIT SUNDI" name="KEC BUKIT SUNDI"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

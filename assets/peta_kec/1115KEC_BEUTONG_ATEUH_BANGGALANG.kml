@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/FID/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/PROVINSI/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/KECAMATAN/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/DESA/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/KABKOT/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/NAMA_PULAU/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/FID/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/PROVINSI/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/KECAMATAN/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/DESA/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/KABKOT/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/NAMA_PULAU/displayName]</td>
+          <td>$[KEC BEUTONG ATEUH BANGGALANG/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC BEUTONG ATEUH BANGGALANG</name><Snippet /><Placemark><name>ACEH</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC BEUTONG ATEUH BANGGALANG"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">ACEH</SimpleData><SimpleData name="KECAMATAN">BEUTONG ATEUH BANGGALANG</SimpleData><SimpleData name="DESA">BLANG PUUK</SimpleData><SimpleData name="KABKOT">NAGAN RAYA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>96.551464,4.447961,0.000000 96.549819,4.443371,0.000000 96.548447,4.444383,0.000000 96.546071,4.445829,0.000000 96.544877,4.445357,0.000000 96.543211,4.445843,0.000000 96.541311,4.447287,0.000000 96.538696,4.448496,0.000000 96.536320,4.450182,0.000000 96.533225,4.450675,0.000000 96.530133,4.452125,0.000000 96.528230,4.452852,0.000000 96.527041,4.453336,0.000000 96.526334,4.455014,0.000000 96.525989,4.455950,0.000000 96.527280,4.458431,0.000000 96.531771,4.461901,0.000000 96.537299,4.474472,0.000000 96.537677,4.474788,0.000000 96.539468,4.476283,0.000000 96.540451,4.477052,0.000000 96.540527,4.477112,0.000000 96.546692,4.472290,0.000000 96.550293,4.468079,0.000000 96.550297,4.468072,0.000000 96.550318,4.468048,0.000000 96.550423,4.467851,0.000000 96.552535,4.463921,0.000000 96.555231,4.456050,0.000000 96.551464,4.447961,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>ACEH</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC BEUTONG ATEUH BANGGALANG"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">ACEH</SimpleData><SimpleData name="KECAMATAN">BEUTONG ATEUH BANGGALANG</SimpleData><SimpleData name="DESA">KUTA TEUNGOH</SimpleData><SimpleData name="KABKOT">NAGAN RAYA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>96.527280,4.458431,0.000000 96.525989,4.455950,0.000000 96.525628,4.456931,0.000000 96.524440,4.457654,0.000000 96.522293,4.457186,0.000000 96.520630,4.458390,0.000000 96.519675,4.457916,0.000000 96.517529,4.457687,0.000000 96.516101,4.458172,0.000000 96.514913,4.458896,0.000000 96.513729,4.460576,0.000000 96.513531,4.460696,0.000000 96.516749,4.465217,0.000000 96.518017,4.470574,0.000000 96.519995,4.473571,0.000000 96.520396,4.474180,0.000000 96.521014,4.474935,0.000000 96.523646,4.478156,0.000000 96.530730,4.478121,0.000000 96.532401,4.477320,0.000000 96.537677,4.474788,0.000000 96.537299,4.474472,0.000000 96.531771,4.461901,0.000000 96.527280,4.458431,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>ACEH</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC BEUTONG ATEUH BANGGALANG"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">ACEH</SimpleData><SimpleData name="KECAMATAN">BEUTONG ATEUH BANGGALANG</SimpleData><SimpleData name="DESA">BABAH SUAK</SimpleData><SimpleData name="KABKOT">NAGAN RAYA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>96.519995,4.473571,0.000000 96.518017,4.470574,0.000000 96.516749,4.465217,0.000000 96.513531,4.460696,0.000000 96.512541,4.461299,0.000000 96.511353,4.462022,0.000000 96.509450,4.462749,0.000000 96.509222,4.464903,0.000000 96.507081,4.465870,0.000000 96.505184,4.467793,0.000000 96.505194,4.469945,0.000000 96.504484,4.470906,0.000000 96.502577,4.470915,0.000000 96.500436,4.471882,0.000000 96.499970,4.471728,0.000000 96.499344,4.471522,0.000000 96.502004,4.475974,0.000000 96.502262,4.476512,0.000000 96.507612,4.477734,0.000000 96.507674,4.477719,0.000000 96.515929,4.475698,0.000000 96.519995,4.473571,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>ACEH</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC BEUTONG ATEUH BANGGALANG"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">ACEH</SimpleData><SimpleData name="KECAMATAN">BEUTONG ATEUH BANGGALANG</SimpleData><SimpleData name="DESA">BLANG MEURANDEH</SimpleData><SimpleData name="KABKOT">NAGAN RAYA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>96.516101,4.458172,0.000000 96.517529,4.457687,0.000000 96.519675,4.457916,0.000000 96.520630,4.458390,0.000000 96.522293,4.457186,0.000000 96.524440,4.457654,0.000000 96.525628,4.456931,0.000000 96.525989,4.455950,0.000000 96.526334,4.455014,0.000000 96.527041,4.453336,0.000000 96.528230,4.452852,0.000000 96.530133,4.452125,0.000000 96.533225,4.450675,0.000000 96.536320,4.450182,0.000000 96.538696,4.448496,0.000000 96.541311,4.447287,0.000000 96.543211,4.445843,0.000000 96.544877,4.445357,0.000000 96.546071,4.445829,0.000000 96.548447,4.444383,0.000000 96.549819,4.443371,0.000000 96.551059,4.442457,0.000000 96.552964,4.442208,0.000000 96.552075,4.440915,0.000000 96.550552,4.438700,0.000000 96.548255,4.438304,0.000000 96.541687,4.437073,0.000000 96.538657,4.436148,0.000000 96.535869,4.435189,0.000000 96.529627,4.433850,0.000000 96.523772,4.436043,0.000000 96.523759,4.436068,0.000000 96.522547,4.438424,0.000000 96.520001,4.443373,0.000000 96.513689,4.448891,0.000000 96.509287,4.451086,0.000000 96.506897,4.452271,0.000000 96.506883,4.452285,0.000000 96.506870,4.452292,0.000000 96.502665,4.456677,0.000000 96.500943,4.461104,0.000000 96.500332,4.462676,0.000000 96.500304,4.462709,0.000000 96.496889,4.468321,0.000000 96.496887,4.468323,0.000000 96.496894,4.468331,0.000000 96.499329,4.471497,0.000000 96.499344,4.471522,0.000000 96.499970,4.471728,0.000000 96.500436,4.471882,0.000000 96.502577,4.470915,0.000000 96.504484,4.470906,0.000000 96.505194,4.469945,0.000000 96.505184,4.467793,0.000000 96.507081,4.465870,0.000000 96.509222,4.464903,0.000000 96.509450,4.462749,0.000000 96.511353,4.462022,0.000000 96.512541,4.461299,0.000000 96.513531,4.460696,0.000000 96.513729,4.460576,0.000000 96.514913,4.458896,0.000000 96.516101,4.458172,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC BEUTONG ATEUH BANGGALANG" name="KEC BEUTONG ATEUH BANGGALANG"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

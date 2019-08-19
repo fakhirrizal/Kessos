@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SUNGAI RUMBAI/FID/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI RUMBAI/PROVINSI/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SUNGAI RUMBAI/KECAMATAN/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI RUMBAI/DESA/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SUNGAI RUMBAI/KABKOT/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI RUMBAI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SUNGAI RUMBAI/FID/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI RUMBAI/PROVINSI/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SUNGAI RUMBAI/KECAMATAN/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI RUMBAI/DESA/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SUNGAI RUMBAI/KABKOT/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SUNGAI RUMBAI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SUNGAI RUMBAI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC SUNGAI RUMBAI</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SUNGAI RUMBAI"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">SUNGAI RUMBAI</SimpleData><SimpleData name="DESA">SUNGAI RUMBAI TIMUR</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.744011,-1.196989,0.000000 101.746811,-1.202589,0.000000 101.746811,-1.209588,0.000000 101.748911,-1.211688,0.000000 101.752410,-1.213787,0.000000 101.752410,-1.214137,0.000000 101.752410,-1.219387,0.000000 101.751010,-1.225686,0.000000 101.751710,-1.229886,0.000000 101.755910,-1.234085,0.000000 101.760683,-1.237069,0.000000 101.759996,-1.236999,0.000000 101.759994,-1.236996,0.000000 101.756631,-1.236173,0.000000 101.754017,-1.235944,0.000000 101.750034,-1.236440,0.000000 101.748491,-1.236188,0.000000 101.743736,-1.236031,0.000000 101.743708,-1.236046,0.000000 101.743311,-1.231286,0.000000 101.742611,-1.229886,0.000000 101.741211,-1.227086,0.000000 101.740511,-1.224986,0.000000 101.740511,-1.222187,0.000000 101.740511,-1.217987,0.000000 101.740511,-1.213787,0.000000 101.739812,-1.206088,0.000000 101.733512,-1.200489,0.000000 101.734212,-1.201189,0.000000 101.728613,-1.196289,0.000000 101.725113,-1.194889,0.000000 101.723013,-1.192789,0.000000 101.721613,-1.188590,0.000000 101.720542,-1.180555,0.000000 101.726142,-1.181907,0.000000 101.731215,-1.183131,0.000000 101.735533,-1.185290,0.000000 101.739112,-1.192090,0.000000 101.744011,-1.196989,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SUNGAI RUMBAI"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">SUNGAI RUMBAI</SimpleData><SimpleData name="DESA">KURNIA SELATAN</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.787524,-1.203778,0.000000 101.790339,-1.215978,0.000000 101.793516,-1.219917,0.000000 101.793928,-1.220428,0.000000 101.791909,-1.222285,0.000000 101.791682,-1.222084,0.000000 101.791669,-1.222098,0.000000 101.791667,-1.222102,0.000000 101.791549,-1.222352,0.000000 101.791394,-1.222672,0.000000 101.791054,-1.222679,0.000000 101.790527,-1.223076,0.000000 101.789513,-1.223128,0.000000 101.785300,-1.224365,0.000000 101.784104,-1.226887,0.000000 101.783446,-1.228864,0.000000 101.782693,-1.230859,0.000000 101.780906,-1.234056,0.000000 101.777914,-1.236408,0.000000 101.777914,-1.236408,0.000000 101.774655,-1.237642,0.000000 101.773163,-1.237940,0.000000 101.772237,-1.237876,0.000000 101.771505,-1.238169,0.000000 101.760683,-1.237069,0.000000 101.755910,-1.234085,0.000000 101.751710,-1.229886,0.000000 101.751010,-1.225686,0.000000 101.752410,-1.219387,0.000000 101.752410,-1.214137,0.000000 101.758710,-1.210988,0.000000 101.765709,-1.210288,0.000000 101.767809,-1.210288,0.000000 101.768509,-1.210988,0.000000 101.770609,-1.211688,0.000000 101.773408,-1.213087,0.000000 101.774808,-1.210988,0.000000 101.774108,-1.208888,0.000000 101.774108,-1.206788,0.000000 101.777608,-1.204688,0.000000 101.782424,-1.201592,0.000000 101.787524,-1.203778,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SUNGAI RUMBAI"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">SUNGAI RUMBAI</SimpleData><SimpleData name="DESA">KURNIA KOTO SALAK</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.735533,-1.185290,0.000000 101.751862,-1.193454,0.000000 101.765939,-1.189701,0.000000 101.766220,-1.189573,0.000000 101.774385,-1.198147,0.000000 101.782424,-1.201592,0.000000 101.777608,-1.204688,0.000000 101.774108,-1.206788,0.000000 101.774108,-1.208888,0.000000 101.774808,-1.210988,0.000000 101.773408,-1.213087,0.000000 101.770609,-1.211688,0.000000 101.768509,-1.210988,0.000000 101.767809,-1.210288,0.000000 101.765709,-1.210288,0.000000 101.758710,-1.210988,0.000000 101.752410,-1.214137,0.000000 101.752410,-1.213787,0.000000 101.748911,-1.211688,0.000000 101.746811,-1.209588,0.000000 101.746811,-1.202589,0.000000 101.744011,-1.196989,0.000000 101.739112,-1.192090,0.000000 101.735533,-1.185290,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SUNGAI RUMBAI"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">SUNGAI RUMBAI</SimpleData><SimpleData name="DESA">SUNGAI RUMBAI</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.728613,-1.196289,0.000000 101.734212,-1.201189,0.000000 101.733512,-1.200489,0.000000 101.739812,-1.206088,0.000000 101.740511,-1.213787,0.000000 101.740511,-1.217987,0.000000 101.740511,-1.222187,0.000000 101.740511,-1.224986,0.000000 101.741211,-1.227086,0.000000 101.742611,-1.229886,0.000000 101.743311,-1.231286,0.000000 101.743708,-1.236046,0.000000 101.742989,-1.236406,0.000000 101.740836,-1.236575,0.000000 101.736972,-1.235464,0.000000 101.733577,-1.235190,0.000000 101.731785,-1.235699,0.000000 101.730822,-1.236263,0.000000 101.729554,-1.237354,0.000000 101.728011,-1.238682,0.000000 101.726245,-1.240106,0.000000 101.723276,-1.240775,0.000000 101.721698,-1.241069,0.000000 101.721001,-1.242548,0.000000 101.720946,-1.244109,0.000000 101.720783,-1.245858,0.000000 101.721794,-1.250165,0.000000 101.718663,-1.252368,0.000000 101.716737,-1.253281,0.000000 101.716040,-1.254168,0.000000 101.715770,-1.256267,0.000000 101.715313,-1.258311,0.000000 101.714937,-1.259925,0.000000 101.714908,-1.263240,0.000000 101.711877,-1.259830,0.000000 101.711877,-1.252088,0.000000 101.710469,-1.244345,0.000000 101.709062,-1.241530,0.000000 101.709765,-1.234491,0.000000 101.710469,-1.230268,0.000000 101.706950,-1.224637,0.000000 101.706950,-1.216190,0.000000 101.707654,-1.207744,0.000000 101.706246,-1.201409,0.000000 101.706950,-1.195074,0.000000 101.709062,-1.185924,0.000000 101.709340,-1.177851,0.000000 101.710680,-1.178174,0.000000 101.717673,-1.179862,0.000000 101.719623,-1.180333,0.000000 101.720542,-1.180555,0.000000 101.721613,-1.188590,0.000000 101.723013,-1.192789,0.000000 101.725113,-1.194889,0.000000 101.728613,-1.196289,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC SUNGAI RUMBAI" name="KEC SUNGAI RUMBAI"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

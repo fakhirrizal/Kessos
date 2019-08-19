@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Pegungungan_Bintang" name="Pegungungan_Bintang"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Pegungungan_Bintang/FID/displayName]</td>
+          <td>$[Pegungungan_Bintang/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Pegungungan_Bintang/PROVINSI/displayName]</td>
+          <td>$[Pegungungan_Bintang/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Pegungungan_Bintang/KABKOT/displayName]</td>
+          <td>$[Pegungungan_Bintang/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Pegungungan_Bintang/KECAMATAN/displayName]</td>
+          <td>$[Pegungungan_Bintang/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Pegungungan_Bintang/DESA/displayName]</td>
+          <td>$[Pegungungan_Bintang/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Pegungungan_Bintang</name><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.702418,-4.739368,0.000000 140.701968,-4.739537,0.000000 140.699733,-4.734788,0.000000 140.698358,-4.722413,0.000000 140.704296,-4.721353,0.000000 140.712840,-4.720112,0.000000 140.713618,-4.723468,0.000000 140.713618,-4.728168,0.000000 140.714118,-4.736768,0.000000 140.702418,-4.739368,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Pegungungan_Bintang"><SimpleData name="FID">185</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PEGUNUNGAN BINTANG</SimpleData><SimpleData name="KECAMATAN">OKHIKA</SimpleData><SimpleData name="DESA">OKELWEL</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.695518,-4.741968,0.000000 140.690518,-4.743868,0.000000 140.685318,-4.730668,0.000000 140.682138,-4.723888,0.000000 140.690100,-4.723888,0.000000 140.698358,-4.722413,0.000000 140.699733,-4.734788,0.000000 140.701968,-4.739537,0.000000 140.695518,-4.741968,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Pegungungan_Bintang"><SimpleData name="FID">186</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PEGUNUNGAN BINTANG</SimpleData><SimpleData name="KECAMATAN">OKHIKA</SimpleData><SimpleData name="DESA">TENGNONG</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.690100,-4.723888,0.000000 140.682138,-4.723888,0.000000 140.677718,-4.714468,0.000000 140.675718,-4.710068,0.000000 140.668618,-4.695168,0.000000 140.666199,-4.684427,0.000000 140.677425,-4.681808,0.000000 140.687565,-4.676738,0.000000 140.693395,-4.673696,0.000000 140.696504,-4.672660,0.000000 140.698394,-4.676530,0.000000 140.703155,-4.681678,0.000000 140.707809,-4.686707,0.000000 140.709133,-4.693299,0.000000 140.707108,-4.696336,0.000000 140.705899,-4.698150,0.000000 140.699440,-4.703587,0.000000 140.704218,-4.707868,0.000000 140.709318,-4.712168,0.000000 140.712318,-4.717868,0.000000 140.712840,-4.720112,0.000000 140.704296,-4.721353,0.000000 140.698358,-4.722413,0.000000 140.690100,-4.723888,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Pegungungan_Bintang"><SimpleData name="FID">187</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PEGUNUNGAN BINTANG</SimpleData><SimpleData name="KECAMATAN">OKHIKA</SimpleData><SimpleData name="DESA">KOTYOBAKON</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.677425,-4.681808,0.000000 140.666199,-4.684427,0.000000 140.666118,-4.684068,0.000000 140.662118,-4.679168,0.000000 140.656518,-4.672468,0.000000 140.647059,-4.661431,0.000000 140.646918,-4.661268,0.000000 140.622318,-4.634768,0.000000 140.622318,-4.634760,0.000000 140.634217,-4.627007,0.000000 140.648230,-4.617845,0.000000 140.664643,-4.613957,0.000000 140.683716,-4.606388,0.000000 140.687067,-4.605532,0.000000 140.699999,-4.602230,0.000000 140.704303,-4.600989,0.000000 140.704318,-4.601168,0.000000 140.704314,-4.601169,0.000000 140.710750,-4.607604,0.000000 140.715601,-4.615689,0.000000 140.732339,-4.627141,0.000000 140.736081,-4.629702,0.000000 140.727731,-4.638052,0.000000 140.721159,-4.645166,0.000000 140.717218,-4.650182,0.000000 140.709133,-4.656111,0.000000 140.702127,-4.665273,0.000000 140.696395,-4.672437,0.000000 140.696504,-4.672660,0.000000 140.693395,-4.673696,0.000000 140.687565,-4.676738,0.000000 140.677425,-4.681808,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Pegungungan_Bintang"><SimpleData name="FID">188</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PEGUNUNGAN BINTANG</SimpleData><SimpleData name="KECAMATAN">OKHIKA</SimpleData><SimpleData name="DESA">OKTENENG</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

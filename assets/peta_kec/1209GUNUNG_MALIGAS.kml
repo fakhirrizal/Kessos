@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC GUNUNG MALIGAS/FID/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GUNUNG MALIGAS/PROVINSI/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC GUNUNG MALIGAS/KECAMATAN/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GUNUNG MALIGAS/DESA/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC GUNUNG MALIGAS/KABKOT/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GUNUNG MALIGAS/NAMA_PULAU/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC GUNUNG MALIGAS/FID/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GUNUNG MALIGAS/PROVINSI/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC GUNUNG MALIGAS/KECAMATAN/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GUNUNG MALIGAS/DESA/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC GUNUNG MALIGAS/KABKOT/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC GUNUNG MALIGAS/NAMA_PULAU/displayName]</td>
+          <td>$[KEC GUNUNG MALIGAS/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC GUNUNG MALIGAS</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC GUNUNG MALIGAS"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">GUNUNG MALIGAS</SimpleData><SimpleData name="DESA">RABUHIT</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.150796,3.061352,0.000000 99.146539,3.059923,0.000000 99.142455,3.062716,0.000000 99.148502,3.072900,0.000000 99.154474,3.082572,0.000000 99.162195,3.095177,0.000000 99.167230,3.103384,0.000000 99.170501,3.108715,0.000000 99.171470,3.111339,0.000000 99.174776,3.104435,0.000000 99.178507,3.098248,0.000000 99.183309,3.093396,0.000000 99.185393,3.091290,0.000000 99.190280,3.084037,0.000000 99.193383,3.081050,0.000000 99.187654,3.075625,0.000000 99.182073,3.069807,0.000000 99.175250,3.065469,0.000000 99.168370,3.063423,0.000000 99.167851,3.063269,0.000000 99.161428,3.062575,0.000000 99.155568,3.061696,0.000000 99.150796,3.061352,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC GUNUNG MALIGAS"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">GUNUNG MALIGAS</SimpleData><SimpleData name="DESA">HUTA DIPAR</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.156090,3.036332,0.000000 99.163011,3.035094,0.000000 99.169139,3.035683,0.000000 99.168233,3.033598,0.000000 99.166565,3.032972,0.000000 99.163257,3.030527,0.000000 99.160236,3.027075,0.000000 99.156927,3.024629,0.000000 99.153907,3.023191,0.000000 99.151318,3.022759,0.000000 99.149160,3.023191,0.000000 99.148153,3.023910,0.000000 99.147146,3.025349,0.000000 99.146283,3.026643,0.000000 99.145155,3.027646,0.000000 99.147164,3.029254,0.000000 99.153524,3.034687,0.000000 99.155090,3.037034,0.000000 99.156090,3.036332,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC GUNUNG MALIGAS"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">GUNUNG MALIGAS</SimpleData><SimpleData name="DESA">KARANG SARI</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.114747,3.007778,0.000000 99.117837,3.005249,0.000000 99.119242,3.000754,0.000000 99.119242,2.999630,0.000000 99.119242,2.997102,0.000000 99.118399,2.994292,0.000000 99.116994,2.993449,0.000000 99.114466,2.991202,0.000000 99.112582,2.990622,0.000000 99.110527,2.993507,0.000000 99.105358,2.997609,0.000000 99.100129,2.998221,0.000000 99.098524,2.997895,0.000000 99.095280,2.997236,0.000000 99.093564,2.997426,0.000000 99.093687,2.997549,0.000000 99.093811,2.997889,0.000000 99.093913,2.998389,0.000000 99.093969,2.999728,0.000000 99.093874,3.000615,0.000000 99.093868,3.000704,0.000000 99.093852,3.000827,0.000000 99.093846,3.000874,0.000000 99.093925,3.000913,0.000000 99.093992,3.000945,0.000000 99.094197,3.000993,0.000000 99.094479,3.000974,0.000000 99.094821,3.000952,0.000000 99.094986,3.001002,0.000000 99.095137,3.001154,0.000000 99.095318,3.001473,0.000000 99.095501,3.003236,0.000000 99.095776,3.005881,0.000000 99.096191,3.005864,0.000000 99.096523,3.005852,0.000000 99.097004,3.006454,0.000000 99.097509,3.006825,0.000000 99.098004,3.007043,0.000000 99.098413,3.007132,0.000000 99.098802,3.007203,0.000000 99.099081,3.007358,0.000000 99.099495,3.007811,0.000000 99.099859,3.008095,0.000000 99.100257,3.008300,0.000000 99.100584,3.008298,0.000000 99.100888,3.008240,0.000000 99.101070,3.008094,0.000000 99.101353,3.007710,0.000000 99.101686,3.007209,0.000000 99.101863,3.006967,0.000000 99.102066,3.006838,0.000000 99.102279,3.006863,0.000000 99.102509,3.006848,0.000000 99.102887,3.006747,0.000000 99.103144,3.006557,0.000000 99.103391,3.006522,0.000000 99.103610,3.006643,0.000000 99.103699,3.006829,0.000000 99.103861,3.007241,0.000000 99.103798,3.007456,0.000000 99.103554,3.007856,0.000000 99.103342,3.008139,0.000000 99.102975,3.008412,0.000000 99.102758,3.008618,0.000000 99.102734,3.008850,0.000000 99.102877,3.008976,0.000000 99.104002,3.009729,0.000000 99.104424,3.010009,0.000000 99.104681,3.010226,0.000000 99.104713,3.010452,0.000000 99.104749,3.010730,0.000000 99.104960,3.011015,0.000000 99.105298,3.011344,0.000000 99.105500,3.011489,0.000000 99.105600,3.011676,0.000000 99.105918,3.012515,0.000000 99.106260,3.012915,0.000000 99.106558,3.013176,0.000000 99.106829,3.013299,0.000000 99.107146,3.013314,0.000000 99.107310,3.013408,0.000000 99.107458,3.013522,0.000000 99.107744,3.013872,0.000000 99.108050,3.014256,0.000000 99.108655,3.014638,0.000000 99.110509,3.015846,0.000000 99.111656,3.014446,0.000000 99.111656,3.012835,0.000000 99.113061,3.010306,0.000000 99.114747,3.007778,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC GUNUNG MALIGAS"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">GUNUNG MALIGAS</SimpleData><SimpleData name="DESA">KARANG REJO</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.120366,3.001035,0.000000 99.119242,2.999630,0.000000 99.119242,3.000754,0.000000 99.117837,3.005249,0.000000 99.114747,3.007778,0.000000 99.113061,3.010306,0.000000 99.111656,3.012835,0.000000 99.111656,3.014446,0.000000 99.111856,3.014487,0.000000 99.122502,3.023522,0.000000 99.123380,3.024714,0.000000 99.123737,3.023854,0.000000 99.126278,3.020467,0.000000 99.127487,3.018854,0.000000 99.129496,3.016225,0.000000 99.132335,3.012507,0.000000 99.133402,3.007463,0.000000 99.132165,3.007216,0.000000 99.129918,3.007216,0.000000 99.125423,3.006373,0.000000 99.122332,3.004125,0.000000 99.120366,3.001035,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC GUNUNG MALIGAS"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">GUNUNG MALIGAS</SimpleData><SimpleData name="DESA">TUMORANG</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.169139,3.035683,0.000000 99.163011,3.035094,0.000000 99.156090,3.036332,0.000000 99.155090,3.037034,0.000000 99.158220,3.041724,0.000000 99.155860,3.049922,0.000000 99.152824,3.053259,0.000000 99.147128,3.059520,0.000000 99.146539,3.059923,0.000000 99.150796,3.061352,0.000000 99.155568,3.061696,0.000000 99.161428,3.062575,0.000000 99.167851,3.063269,0.000000 99.168370,3.063423,0.000000 99.168688,3.060876,0.000000 99.170093,3.056662,0.000000 99.173745,3.053291,0.000000 99.178240,3.051043,0.000000 99.181893,3.049920,0.000000 99.185237,3.048891,0.000000 99.177906,3.040476,0.000000 99.169575,3.035725,0.000000 99.169139,3.035683,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC GUNUNG MALIGAS"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">GUNUNG MALIGAS</SimpleData><SimpleData name="DESA">BANDAR MALELA</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.134440,3.020129,0.000000 99.129496,3.016225,0.000000 99.127487,3.018854,0.000000 99.126278,3.020467,0.000000 99.130480,3.022668,0.000000 99.139470,3.031658,0.000000 99.148460,3.041772,0.000000 99.150989,3.050201,0.000000 99.152824,3.053259,0.000000 99.155860,3.049922,0.000000 99.158220,3.041724,0.000000 99.155090,3.037034,0.000000 99.153524,3.034687,0.000000 99.147164,3.029254,0.000000 99.145155,3.027646,0.000000 99.139985,3.023506,0.000000 99.134440,3.020129,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC GUNUNG MALIGAS"><SimpleData name="FID">6</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">GUNUNG MALIGAS</SimpleData><SimpleData name="DESA">SILAU BAYU</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.130480,3.022668,0.000000 99.126278,3.020467,0.000000 99.123737,3.023854,0.000000 99.123380,3.024714,0.000000 99.125034,3.026959,0.000000 99.129455,3.032957,0.000000 99.135167,3.045477,0.000000 99.137595,3.051410,0.000000 99.141704,3.061450,0.000000 99.142455,3.062716,0.000000 99.146539,3.059923,0.000000 99.147128,3.059520,0.000000 99.152824,3.053259,0.000000 99.150989,3.050201,0.000000 99.148460,3.041772,0.000000 99.139470,3.031658,0.000000 99.130480,3.022668,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC GUNUNG MALIGAS"><SimpleData name="FID">7</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">GUNUNG MALIGAS</SimpleData><SimpleData name="DESA">GAJING</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.186175,3.049967,0.000000 99.185237,3.048891,0.000000 99.181893,3.049920,0.000000 99.178240,3.051043,0.000000 99.173745,3.053291,0.000000 99.170093,3.056662,0.000000 99.168688,3.060876,0.000000 99.168370,3.063423,0.000000 99.175250,3.065469,0.000000 99.182073,3.069807,0.000000 99.187654,3.075625,0.000000 99.193383,3.081050,0.000000 99.195343,3.079163,0.000000 99.199834,3.077961,0.000000 99.203934,3.075568,0.000000 99.201156,3.071322,0.000000 99.193650,3.060190,0.000000 99.189127,3.054004,0.000000 99.186175,3.049967,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC GUNUNG MALIGAS" name="KEC GUNUNG MALIGAS"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

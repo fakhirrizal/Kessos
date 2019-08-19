@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PINANGSORI/FID/displayName]</td>
+          <td>$[KEC PINANGSORI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PINANGSORI/PROVINSI/displayName]</td>
+          <td>$[KEC PINANGSORI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PINANGSORI/KECAMATAN/displayName]</td>
+          <td>$[KEC PINANGSORI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PINANGSORI/DESA/displayName]</td>
+          <td>$[KEC PINANGSORI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PINANGSORI/KABKOT/displayName]</td>
+          <td>$[KEC PINANGSORI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PINANGSORI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PINANGSORI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PINANGSORI/FID/displayName]</td>
+          <td>$[KEC PINANGSORI/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PINANGSORI/PROVINSI/displayName]</td>
+          <td>$[KEC PINANGSORI/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PINANGSORI/KECAMATAN/displayName]</td>
+          <td>$[KEC PINANGSORI/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PINANGSORI/DESA/displayName]</td>
+          <td>$[KEC PINANGSORI/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PINANGSORI/KABKOT/displayName]</td>
+          <td>$[KEC PINANGSORI/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PINANGSORI/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PINANGSORI/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC PINANGSORI</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PINANGSORI"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PINANGSORI</SimpleData><SimpleData name="DESA">PINANGBARU</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.909654,1.614948,0.000000 98.912319,1.602049,0.000000 98.912857,1.600964,0.000000 98.913451,1.578542,0.000000 98.909723,1.579696,0.000000 98.906881,1.577599,0.000000 98.905769,1.578455,0.000000 98.900440,1.582556,0.000000 98.899114,1.579696,0.000000 98.896689,1.580184,0.000000 98.893665,1.585867,0.000000 98.884895,1.602347,0.000000 98.892564,1.609700,0.000000 98.898120,1.612410,0.000000 98.901655,1.613766,0.000000 98.906216,1.613759,0.000000 98.909654,1.614948,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PINANGSORI"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PINANGSORI</SimpleData><SimpleData name="DESA">TOGA BASIR</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.914944,1.570291,0.000000 98.913677,1.569997,0.000000 98.913451,1.578542,0.000000 98.912857,1.600964,0.000000 98.912319,1.602049,0.000000 98.909654,1.614948,0.000000 98.928589,1.625287,0.000000 98.939531,1.619019,0.000000 98.942095,1.618122,0.000000 98.939738,1.610725,0.000000 98.934127,1.601801,0.000000 98.933223,1.597247,0.000000 98.926888,1.588687,0.000000 98.921459,1.584133,0.000000 98.918202,1.580855,0.000000 98.916754,1.579398,0.000000 98.916392,1.576120,0.000000 98.916392,1.572477,0.000000 98.914944,1.570291,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PINANGSORI"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PINANGSORI</SimpleData><SimpleData name="DESA">PINANGSORI</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.897323,1.569414,0.000000 98.903590,1.569172,0.000000 98.905519,1.573781,0.000000 98.905769,1.578455,0.000000 98.906881,1.577599,0.000000 98.909723,1.579696,0.000000 98.913451,1.578542,0.000000 98.913677,1.569997,0.000000 98.913757,1.566982,0.000000 98.913783,1.566482,0.000000 98.913188,1.566482,0.000000 98.912096,1.565182,0.000000 98.900625,1.557186,0.000000 98.898390,1.554387,0.000000 98.894167,1.554194,0.000000 98.878995,1.566503,0.000000 98.881193,1.574202,0.000000 98.882205,1.577748,0.000000 98.882204,1.586468,0.000000 98.882341,1.598510,0.000000 98.882367,1.598549,0.000000 98.884895,1.602347,0.000000 98.893665,1.585867,0.000000 98.889609,1.581785,0.000000 98.892261,1.573780,0.000000 98.897323,1.569414,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PINANGSORI"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PINANGSORI</SimpleData><SimpleData name="DESA">SITONONG BANGUN</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.896689,1.580184,0.000000 98.899114,1.579696,0.000000 98.900440,1.582556,0.000000 98.905769,1.578455,0.000000 98.905519,1.573781,0.000000 98.903590,1.569172,0.000000 98.897323,1.569414,0.000000 98.892261,1.573780,0.000000 98.889609,1.581785,0.000000 98.893665,1.585867,0.000000 98.896689,1.580184,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PINANGSORI"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PINANGSORI</SimpleData><SimpleData name="DESA">PARJALIHOTAN BARU</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.791692,1.453812,0.000000 98.775986,1.445784,0.000000 98.776840,1.451068,0.000000 98.776550,1.458659,0.000000 98.775520,1.464179,0.000000 98.773972,1.469297,0.000000 98.772542,1.473607,0.000000 98.782458,1.478675,0.000000 98.793850,1.489119,0.000000 98.797971,1.491554,0.000000 98.801632,1.500028,0.000000 98.809103,1.510702,0.000000 98.820913,1.520164,0.000000 98.826168,1.525453,0.000000 98.839532,1.533407,0.000000 98.850848,1.542866,0.000000 98.860338,1.548126,0.000000 98.867077,1.553525,0.000000 98.867344,1.553659,0.000000 98.869828,1.554909,0.000000 98.874641,1.561000,0.000000 98.878767,1.565706,0.000000 98.878995,1.566503,0.000000 98.894167,1.554194,0.000000 98.885335,1.542418,0.000000 98.876924,1.530222,0.000000 98.868246,1.518898,0.000000 98.854962,1.506780,0.000000 98.857021,1.487206,0.000000 98.856043,1.486706,0.000000 98.847474,1.482326,0.000000 98.817783,1.467149,0.000000 98.791692,1.453812,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PINANGSORI"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PINANGSORI</SimpleData><SimpleData name="DESA">GUNUNG MARIJO</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.879631,1.498585,0.000000 98.857021,1.487206,0.000000 98.854962,1.506780,0.000000 98.868246,1.518898,0.000000 98.876924,1.530222,0.000000 98.885335,1.542418,0.000000 98.894167,1.554194,0.000000 98.898390,1.554387,0.000000 98.900625,1.557186,0.000000 98.912096,1.565182,0.000000 98.913188,1.566482,0.000000 98.913783,1.566482,0.000000 98.915913,1.562102,0.000000 98.917709,1.559933,0.000000 98.918640,1.556526,0.000000 98.918222,1.556526,0.000000 98.910950,1.551387,0.000000 98.905101,1.543174,0.000000 98.899750,1.534588,0.000000 98.895644,1.525753,0.000000 98.896747,1.517314,0.000000 98.894373,1.515084,0.000000 98.891999,1.514766,0.000000 98.889308,1.513969,0.000000 98.885894,1.511463,0.000000 98.884402,1.504411,0.000000 98.883927,1.500747,0.000000 98.879631,1.498585,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PINANGSORI"><SimpleData name="FID">6</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PINANGSORI</SimpleData><SimpleData name="DESA">SIHAPORAS</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.937117,1.557029,0.000000 98.936594,1.555627,0.000000 98.935897,1.554531,0.000000 98.935049,1.553315,0.000000 98.925817,1.556526,0.000000 98.918640,1.556526,0.000000 98.917709,1.559933,0.000000 98.915913,1.562102,0.000000 98.913783,1.566482,0.000000 98.913757,1.566982,0.000000 98.913677,1.569997,0.000000 98.914944,1.570291,0.000000 98.916392,1.572477,0.000000 98.916392,1.576120,0.000000 98.916754,1.579398,0.000000 98.918202,1.580855,0.000000 98.921459,1.584133,0.000000 98.926888,1.588687,0.000000 98.933223,1.597247,0.000000 98.934127,1.601801,0.000000 98.939738,1.610725,0.000000 98.942095,1.618122,0.000000 98.949873,1.615279,0.000000 98.948606,1.611454,0.000000 98.945167,1.605444,0.000000 98.943177,1.602894,0.000000 98.941729,1.599433,0.000000 98.940462,1.594698,0.000000 98.939615,1.590935,0.000000 98.939541,1.586513,0.000000 98.939269,1.576927,0.000000 98.938725,1.563233,0.000000 98.937117,1.557029,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC PINANGSORI" name="KEC PINANGSORI"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

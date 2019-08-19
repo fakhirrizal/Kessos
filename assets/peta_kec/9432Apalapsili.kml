@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Yalimo" name="Yalimo"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Yalimo/FID/displayName]</td>
+          <td>$[Yalimo/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Yalimo/PROVINSI/displayName]</td>
+          <td>$[Yalimo/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Yalimo/KABKOT/displayName]</td>
+          <td>$[Yalimo/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Yalimo/KECAMATAN/displayName]</td>
+          <td>$[Yalimo/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Yalimo/DESA/displayName]</td>
+          <td>$[Yalimo/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Yalimo</name><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>139.349204,-3.873335,0.000000 139.343334,-3.879739,0.000000 139.336930,-3.887210,0.000000 139.326132,-3.882986,0.000000 139.324655,-3.882407,0.000000 139.312381,-3.878672,0.000000 139.302775,-3.878672,0.000000 139.296371,-3.876003,0.000000 139.284096,-3.880806,0.000000 139.272356,-3.885076,0.000000 139.261148,-3.887744,0.000000 139.252076,-3.889879,0.000000 139.239802,-3.892013,0.000000 139.232000,-3.892138,0.000000 139.232086,-3.890136,0.000000 139.240918,-3.851275,0.000000 139.311484,-3.812720,0.000000 139.312287,-3.813661,0.000000 139.328552,-3.832714,0.000000 139.342515,-3.844293,0.000000 139.348545,-3.849294,0.000000 139.357317,-3.857862,0.000000 139.352406,-3.864263,0.000000 139.349204,-3.873335,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Yalimo"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">YALIMO</SimpleData><SimpleData name="KECAMATAN">APALAPSILI</SimpleData><SimpleData name="DESA">YAREMA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>139.349761,-3.992830,0.000000 139.348062,-4.002009,0.000000 139.343957,-4.020993,0.000000 139.340365,-4.037926,0.000000 139.337287,-4.050240,0.000000 139.327538,-4.063068,0.000000 139.324395,-4.066670,0.000000 139.322045,-4.069364,0.000000 139.305328,-4.058548,0.000000 139.290820,-4.047996,0.000000 139.276311,-4.036125,0.000000 139.261802,-4.024254,0.000000 139.247293,-4.012383,0.000000 139.242827,-3.999478,0.000000 139.260081,-3.999601,0.000000 139.278760,-3.999601,0.000000 139.288899,-3.999601,0.000000 139.298505,-3.991062,0.000000 139.300640,-3.981990,0.000000 139.302241,-3.973451,0.000000 139.302241,-3.965980,0.000000 139.304935,-3.962089,0.000000 139.310780,-3.968435,0.000000 139.317184,-3.975906,0.000000 139.325722,-3.984445,0.000000 139.339598,-3.991916,0.000000 139.349761,-3.992830,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Yalimo"><SimpleData name="FID">6</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">YALIMO</SimpleData><SimpleData name="KECAMATAN">APALAPSILI</SimpleData><SimpleData name="DESA">KULET</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>139.380242,-3.877090,0.000000 139.381414,-3.895796,0.000000 139.381414,-3.906572,0.000000 139.377309,-3.920425,0.000000 139.373717,-3.935305,0.000000 139.362942,-3.948646,0.000000 139.354219,-3.964039,0.000000 139.350627,-3.988155,0.000000 139.349761,-3.992830,0.000000 139.339598,-3.991916,0.000000 139.325722,-3.984445,0.000000 139.317184,-3.975906,0.000000 139.310780,-3.968435,0.000000 139.304935,-3.962089,0.000000 139.307044,-3.959042,0.000000 139.311847,-3.952105,0.000000 139.317717,-3.945167,0.000000 139.317184,-3.937162,0.000000 139.322520,-3.929157,0.000000 139.327323,-3.913680,0.000000 139.325722,-3.906209,0.000000 139.328924,-3.899271,0.000000 139.325722,-3.891800,0.000000 139.326132,-3.882986,0.000000 139.336930,-3.887210,0.000000 139.343334,-3.879739,0.000000 139.349204,-3.873335,0.000000 139.352406,-3.864263,0.000000 139.357317,-3.857862,0.000000 139.369514,-3.869775,0.000000 139.380242,-3.877090,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Yalimo"><SimpleData name="FID">7</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">YALIMO</SimpleData><SimpleData name="KECAMATAN">APALAPSILI</SimpleData><SimpleData name="DESA">HUBURI/HUBLIKI</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>139.296371,-3.876003,0.000000 139.302775,-3.878672,0.000000 139.312381,-3.878672,0.000000 139.324655,-3.882407,0.000000 139.326132,-3.882986,0.000000 139.325722,-3.891800,0.000000 139.328924,-3.899271,0.000000 139.325722,-3.906209,0.000000 139.327323,-3.913680,0.000000 139.322520,-3.929157,0.000000 139.317184,-3.937162,0.000000 139.317717,-3.945167,0.000000 139.311847,-3.952105,0.000000 139.307044,-3.959042,0.000000 139.304935,-3.962089,0.000000 139.302241,-3.965980,0.000000 139.302241,-3.973451,0.000000 139.300640,-3.981990,0.000000 139.298505,-3.991062,0.000000 139.288899,-3.999601,0.000000 139.278760,-3.999601,0.000000 139.260081,-3.999601,0.000000 139.242827,-3.999478,0.000000 139.237385,-3.983755,0.000000 139.230320,-3.930763,0.000000 139.232000,-3.892138,0.000000 139.239802,-3.892013,0.000000 139.252076,-3.889879,0.000000 139.261148,-3.887744,0.000000 139.272356,-3.885076,0.000000 139.284096,-3.880806,0.000000 139.296371,-3.876003,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Yalimo"><SimpleData name="FID">8</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">YALIMO</SimpleData><SimpleData name="KECAMATAN">APALAPSILI</SimpleData><SimpleData name="DESA">APALAPSILI</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

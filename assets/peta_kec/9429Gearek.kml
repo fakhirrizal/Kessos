@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="nduga" name="nduga"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[nduga/FID/displayName]</td>
+          <td>$[nduga/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[nduga/PROVINSI/displayName]</td>
+          <td>$[nduga/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[nduga/KABKOT/displayName]</td>
+          <td>$[nduga/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[nduga/KECAMATAN/displayName]</td>
+          <td>$[nduga/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[nduga/DESA/displayName]</td>
+          <td>$[nduga/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>nduga</name><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.701028,-4.662865,0.000000 138.692367,-4.668375,0.000000 138.690668,-4.668191,0.000000 138.656946,-4.664531,0.000000 138.646100,-4.663354,0.000000 138.615973,-4.658333,0.000000 138.589432,-4.647214,0.000000 138.586495,-4.645256,0.000000 138.582976,-4.642910,0.000000 138.582521,-4.642673,0.000000 138.579135,-4.640909,0.000000 138.584806,-4.620493,0.000000 138.592746,-4.610285,0.000000 138.605222,-4.597808,0.000000 138.605283,-4.597781,0.000000 138.623370,-4.589868,0.000000 138.623422,-4.589805,0.000000 138.623830,-4.589317,0.000000 138.623871,-4.589329,0.000000 138.646744,-4.595952,0.000000 138.669172,-4.603428,0.000000 138.687861,-4.608412,0.000000 138.687861,-4.624610,0.000000 138.693285,-4.633906,0.000000 138.696583,-4.639562,0.000000 138.693789,-4.653817,0.000000 138.701028,-4.662865,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#nduga"><SimpleData name="FID">24</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">NDUGA</SimpleData><SimpleData name="KECAMATAN">GEAREK</SimpleData><SimpleData name="DESA">TRIBIT</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.805081,-4.528056,0.000000 138.807793,-4.535289,0.000000 138.807793,-4.546146,0.000000 138.808698,-4.558813,0.000000 138.813222,-4.574195,0.000000 138.813222,-4.585957,0.000000 138.814133,-4.596465,0.000000 138.814952,-4.605920,0.000000 138.814877,-4.605908,0.000000 138.792524,-4.602182,0.000000 138.776327,-4.593460,0.000000 138.752678,-4.587237,0.000000 138.752653,-4.587230,0.000000 138.752653,-4.568540,0.000000 138.753950,-4.554920,0.000000 138.755145,-4.542375,0.000000 138.756213,-4.538533,0.000000 138.759585,-4.526404,0.000000 138.759586,-4.526401,0.000000 138.776119,-4.529707,0.000000 138.785212,-4.527759,0.000000 138.799377,-4.524723,0.000000 138.804760,-4.527864,0.000000 138.805079,-4.528050,0.000000 138.805081,-4.528056,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#nduga"><SimpleData name="FID">25</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">NDUGA</SimpleData><SimpleData name="KECAMATAN">GEAREK</SimpleData><SimpleData name="DESA">MANDALA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.814952,-4.605920,0.000000 138.805838,-4.641942,0.000000 138.801472,-4.659196,0.000000 138.801460,-4.659245,0.000000 138.787888,-4.664674,0.000000 138.771785,-4.665441,0.000000 138.768887,-4.665579,0.000000 138.692367,-4.668375,0.000000 138.701028,-4.662865,0.000000 138.693789,-4.653817,0.000000 138.696583,-4.639562,0.000000 138.693285,-4.633906,0.000000 138.693291,-4.633899,0.000000 138.704059,-4.622118,0.000000 138.719011,-4.620872,0.000000 138.726487,-4.628348,0.000000 138.742685,-4.610904,0.000000 138.745425,-4.604397,0.000000 138.746234,-4.602474,0.000000 138.752653,-4.587230,0.000000 138.752678,-4.587237,0.000000 138.776327,-4.593460,0.000000 138.792524,-4.602182,0.000000 138.814877,-4.605908,0.000000 138.814952,-4.605920,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#nduga"><SimpleData name="FID">26</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">NDUGA</SimpleData><SimpleData name="KECAMATAN">GEAREK</SimpleData><SimpleData name="DESA">GEAREK</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.742685,-4.610904,0.000000 138.726487,-4.628348,0.000000 138.719011,-4.620872,0.000000 138.704059,-4.622118,0.000000 138.693291,-4.633899,0.000000 138.693285,-4.633906,0.000000 138.687861,-4.624610,0.000000 138.687861,-4.608412,0.000000 138.669172,-4.603428,0.000000 138.646744,-4.595952,0.000000 138.623901,-4.589294,0.000000 138.634606,-4.576232,0.000000 138.634705,-4.576111,0.000000 138.642700,-4.561523,0.000000 138.689514,-4.558716,0.000000 138.714478,-4.552979,0.000000 138.723877,-4.537598,0.000000 138.724304,-4.521423,0.000000 138.734680,-4.521423,0.000000 138.742541,-4.522996,0.000000 138.744434,-4.523374,0.000000 138.759585,-4.526404,0.000000 138.756213,-4.538533,0.000000 138.755145,-4.542375,0.000000 138.753950,-4.554920,0.000000 138.752653,-4.568540,0.000000 138.752653,-4.587230,0.000000 138.746234,-4.602474,0.000000 138.745425,-4.604397,0.000000 138.742685,-4.610904,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#nduga"><SimpleData name="FID">31</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">NDUGA</SimpleData><SimpleData name="KECAMATAN">GEAREK</SimpleData><SimpleData name="DESA">WUSI</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

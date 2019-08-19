@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Teluk_Bintuni" name="Teluk_Bintuni"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Teluk_Bintuni/FID/displayName]</td>
+          <td>$[Teluk_Bintuni/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Teluk_Bintuni/PROVINSI/displayName]</td>
+          <td>$[Teluk_Bintuni/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Teluk_Bintuni/KABKOT/displayName]</td>
+          <td>$[Teluk_Bintuni/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Teluk_Bintuni/KECAMATAN/displayName]</td>
+          <td>$[Teluk_Bintuni/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Teluk_Bintuni/DESA/displayName]</td>
+          <td>$[Teluk_Bintuni/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Teluk_Bintuni</name><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>133.673497,-2.970600,0.000000 133.668199,-2.991792,0.000000 133.644363,-2.964899,0.000000 133.596543,-2.936489,0.000000 133.593063,-2.933625,0.000000 133.588407,-2.929795,0.000000 133.584648,-2.926704,0.000000 133.596172,-2.905430,0.000000 133.608742,-2.873585,0.000000 133.620232,-2.844478,0.000000 133.620302,-2.844289,0.000000 133.620989,-2.842459,0.000000 133.624213,-2.833860,0.000000 133.627574,-2.824897,0.000000 133.632211,-2.812533,0.000000 133.640546,-2.790307,0.000000 133.692357,-2.885294,0.000000 133.711972,-2.894284,0.000000 133.708975,-2.905672,0.000000 133.702222,-2.931333,0.000000 133.675914,-2.960929,0.000000 133.673497,-2.970600,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Teluk_Bintuni"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">TELUK BINTUNI</SimpleData><SimpleData name="KECAMATAN">IRORUTU / FAFURWAR</SimpleData><SimpleData name="DESA">IRARUTU II / FRUATA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>133.741477,-3.010382,0.000000 133.712982,-3.013584,0.000000 133.708155,-3.012288,0.000000 133.707306,-3.012060,0.000000 133.704617,-3.011339,0.000000 133.678314,-3.004281,0.000000 133.672577,-2.996732,0.000000 133.668199,-2.991792,0.000000 133.673497,-2.970600,0.000000 133.675914,-2.960929,0.000000 133.702222,-2.931333,0.000000 133.708975,-2.905672,0.000000 133.711972,-2.894284,0.000000 133.771280,-2.921467,0.000000 133.824950,-2.975137,0.000000 133.809485,-2.982701,0.000000 133.805139,-2.985193,0.000000 133.791589,-2.992962,0.000000 133.783201,-2.996593,0.000000 133.775601,-2.999882,0.000000 133.769635,-3.005609,0.000000 133.761619,-3.006259,0.000000 133.760806,-3.006325,0.000000 133.751977,-3.009427,0.000000 133.741477,-3.010382,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Teluk_Bintuni"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">TELUK BINTUNI</SimpleData><SimpleData name="KECAMATAN">IRORUTU / FAFURWAR</SimpleData><SimpleData name="DESA">MARYEDI</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>133.847553,-2.964083,0.000000 133.824950,-2.975137,0.000000 133.771280,-2.921467,0.000000 133.711972,-2.894284,0.000000 133.692357,-2.885294,0.000000 133.640546,-2.790307,0.000000 133.642086,-2.786200,0.000000 133.642157,-2.786010,0.000000 133.644291,-2.780319,0.000000 133.648150,-2.768741,0.000000 133.649645,-2.764259,0.000000 133.649684,-2.764140,0.000000 133.657765,-2.739898,0.000000 133.677975,-2.751447,0.000000 133.681588,-2.755138,0.000000 133.682830,-2.756407,0.000000 133.723213,-2.797671,0.000000 133.731560,-2.806200,0.000000 133.751759,-2.826834,0.000000 133.760253,-2.836839,0.000000 133.771378,-2.849942,0.000000 133.797784,-2.881045,0.000000 133.813628,-2.899704,0.000000 133.815660,-2.902097,0.000000 133.823938,-2.911846,0.000000 133.854145,-2.954999,0.000000 133.847553,-2.964083,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Teluk_Bintuni"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">TELUK BINTUNI</SimpleData><SimpleData name="KECAMATAN">IRORUTU / FAFURWAR</SimpleData><SimpleData name="DESA">RIENDO</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SASAK RANAH PASISIE/FID/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SASAK RANAH PASISIE/PROVINSI/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SASAK RANAH PASISIE/KECAMATAN/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SASAK RANAH PASISIE/DESA/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SASAK RANAH PASISIE/KABKOT/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SASAK RANAH PASISIE/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SASAK RANAH PASISIE/FID/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SASAK RANAH PASISIE/PROVINSI/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SASAK RANAH PASISIE/KECAMATAN/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SASAK RANAH PASISIE/DESA/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SASAK RANAH PASISIE/KABKOT/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SASAK RANAH PASISIE/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SASAK RANAH PASISIE/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC SASAK RANAH PASISIE</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SASAK RANAH PASISIE"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">SASAK RANAH PASISIE</SimpleData><SimpleData name="DESA">SASAK</SimpleData><SimpleData name="KABKOT">PASAMAN BARAT</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.738124,0.006708,0.000000 99.747733,-0.005448,0.000000 99.750694,-0.009604,0.000000 99.758744,-0.020899,0.000000 99.762279,-0.025619,0.000000 99.746920,-0.037068,0.000000 99.744284,-0.033596,0.000000 99.740271,-0.029372,0.000000 99.734832,-0.024573,0.000000 99.729827,-0.020535,0.000000 99.724624,-0.017373,0.000000 99.716895,-0.013533,0.000000 99.707831,-0.008542,0.000000 99.703590,-0.005718,0.000000 99.698414,-0.002779,0.000000 99.697660,-0.002069,0.000000 99.696070,-0.001136,0.000000 99.694714,-0.000300,0.000000 99.693525,0.000535,0.000000 99.691194,0.002192,0.000000 99.690973,0.002499,0.000000 99.690793,0.002721,0.000000 99.690834,0.003223,0.000000 99.690821,0.003571,0.000000 99.691083,0.004016,0.000000 99.691208,0.004378,0.000000 99.691139,0.004768,0.000000 99.690862,0.005047,0.000000 99.690198,0.005715,0.000000 99.688912,0.006495,0.000000 99.688317,0.006579,0.000000 99.687985,0.006606,0.000000 99.687570,0.006620,0.000000 99.687252,0.006593,0.000000 99.686934,0.006704,0.000000 99.686754,0.006982,0.000000 99.686602,0.007136,0.000000 99.686201,0.007317,0.000000 99.685827,0.007414,0.000000 99.685371,0.007442,0.000000 99.684887,0.007818,0.000000 99.684444,0.008277,0.000000 99.683877,0.009183,0.000000 99.683799,0.009428,0.000000 99.683654,0.011418,0.000000 99.682952,0.013267,0.000000 99.681678,0.014263,0.000000 99.677688,0.018019,0.000000 99.666801,0.029396,0.000000 99.653648,0.041769,0.000000 99.617096,0.065935,0.000000 99.595802,0.076734,0.000000 99.595795,0.076738,0.000000 99.573631,0.087498,0.000000 99.572846,0.088041,0.000000 99.545085,0.101012,0.000000 99.553352,0.116284,0.000000 99.560835,0.130665,0.000000 99.565087,0.139483,0.000000 99.584814,0.129466,0.000000 99.597484,0.123474,0.000000 99.606412,0.118936,0.000000 99.615426,0.113971,0.000000 99.620910,0.111360,0.000000 99.631966,0.107343,0.000000 99.632219,0.107251,0.000000 99.641658,0.100916,0.000000 99.674352,0.081012,0.000000 99.689955,0.071638,0.000000 99.690166,0.071353,0.000000 99.690223,0.071276,0.000000 99.694682,0.065248,0.000000 99.701859,0.055545,0.000000 99.711765,0.040692,0.000000 99.723457,0.026525,0.000000 99.723492,0.026479,0.000000 99.731067,0.016552,0.000000 99.738124,0.006708,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC SASAK RANAH PASISIE" name="KEC SASAK RANAH PASISIE"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

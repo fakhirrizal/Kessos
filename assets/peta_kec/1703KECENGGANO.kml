@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC ENGGANO/FID/displayName]</td>
+          <td>$[KEC ENGGANO/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC ENGGANO/PROVINSI/displayName]</td>
+          <td>$[KEC ENGGANO/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC ENGGANO/KECAMATAN/displayName]</td>
+          <td>$[KEC ENGGANO/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC ENGGANO/DESA/displayName]</td>
+          <td>$[KEC ENGGANO/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC ENGGANO/KABKOT/displayName]</td>
+          <td>$[KEC ENGGANO/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC ENGGANO/NAMA_PULAU/displayName]</td>
+          <td>$[KEC ENGGANO/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC ENGGANO/FID/displayName]</td>
+          <td>$[KEC ENGGANO/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC ENGGANO/PROVINSI/displayName]</td>
+          <td>$[KEC ENGGANO/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC ENGGANO/KECAMATAN/displayName]</td>
+          <td>$[KEC ENGGANO/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC ENGGANO/DESA/displayName]</td>
+          <td>$[KEC ENGGANO/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC ENGGANO/KABKOT/displayName]</td>
+          <td>$[KEC ENGGANO/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC ENGGANO/NAMA_PULAU/displayName]</td>
+          <td>$[KEC ENGGANO/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC ENGGANO</name><Snippet /><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC ENGGANO"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">ENGGANO</SimpleData><SimpleData name="DESA">BANJAR SARI</SimpleData><SimpleData name="KABKOT">BENGKULU UTARA</SimpleData><SimpleData name="NAMA_PULAU">ENGGANO</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.161867,-5.276062,0.000000 102.186567,-5.288462,0.000000 102.201567,-5.298462,0.000000 102.173783,-5.335461,0.000000 102.172759,-5.336846,0.000000 102.171733,-5.338234,0.000000 102.170833,-5.339451,0.000000 102.169918,-5.340689,0.000000 102.169374,-5.341424,0.000000 102.168684,-5.342358,0.000000 102.168130,-5.343107,0.000000 102.167492,-5.343970,0.000000 102.166862,-5.344823,0.000000 102.166579,-5.345205,0.000000 102.147967,-5.336262,0.000000 102.126267,-5.314762,0.000000 102.126367,-5.292962,0.000000 102.136167,-5.287362,0.000000 102.144567,-5.282762,0.000000 102.155167,-5.285162,0.000000 102.161867,-5.276062,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC ENGGANO"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">ENGGANO</SimpleData><SimpleData name="DESA">MEOK</SimpleData><SimpleData name="KABKOT">BENGKULU UTARA</SimpleData><SimpleData name="NAMA_PULAU">ENGGANO</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.251392,-5.372735,0.000000 102.254767,-5.384162,0.000000 102.235367,-5.374062,0.000000 102.205467,-5.361862,0.000000 102.182567,-5.352362,0.000000 102.166167,-5.345762,0.000000 102.166579,-5.345205,0.000000 102.166862,-5.344823,0.000000 102.167492,-5.343970,0.000000 102.168130,-5.343107,0.000000 102.168684,-5.342358,0.000000 102.169374,-5.341424,0.000000 102.169918,-5.340689,0.000000 102.170833,-5.339451,0.000000 102.171733,-5.338234,0.000000 102.172759,-5.336846,0.000000 102.173783,-5.335461,0.000000 102.201567,-5.298462,0.000000 102.208667,-5.303662,0.000000 102.214167,-5.305462,0.000000 102.237967,-5.312362,0.000000 102.237967,-5.319062,0.000000 102.237968,-5.319080,0.000000 102.238190,-5.323968,0.000000 102.238767,-5.336662,0.000000 102.239031,-5.338070,0.000000 102.240126,-5.339532,0.000000 102.242514,-5.342562,0.000000 102.243067,-5.343262,0.000000 102.243659,-5.346025,0.000000 102.243667,-5.346062,0.000000 102.245367,-5.352139,0.000000 102.249067,-5.365362,0.000000 102.251392,-5.372735,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC ENGGANO"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">ENGGANO</SimpleData><SimpleData name="DESA">APOHO</SimpleData><SimpleData name="KABKOT">BENGKULU UTARA</SimpleData><SimpleData name="NAMA_PULAU">ENGGANO</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.290767,-5.338462,0.000000 102.290770,-5.338472,0.000000 102.290769,-5.338472,0.000000 102.274439,-5.359202,0.000000 102.271469,-5.362972,0.000000 102.269524,-5.365460,0.000000 102.267584,-5.367931,0.000000 102.261936,-5.375157,0.000000 102.255367,-5.383562,0.000000 102.255363,-5.383566,0.000000 102.255363,-5.383567,0.000000 102.254767,-5.384162,0.000000 102.251392,-5.372735,0.000000 102.249067,-5.365362,0.000000 102.245367,-5.352139,0.000000 102.243667,-5.346062,0.000000 102.243659,-5.346025,0.000000 102.243067,-5.343262,0.000000 102.242514,-5.342562,0.000000 102.240126,-5.339532,0.000000 102.239031,-5.338070,0.000000 102.238767,-5.336662,0.000000 102.238190,-5.323968,0.000000 102.237968,-5.319080,0.000000 102.237967,-5.319062,0.000000 102.237967,-5.312362,0.000000 102.255167,-5.316062,0.000000 102.263467,-5.321862,0.000000 102.276967,-5.330162,0.000000 102.290767,-5.338462,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC ENGGANO"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">ENGGANO</SimpleData><SimpleData name="DESA">MALAKONI</SimpleData><SimpleData name="KABKOT">BENGKULU UTARA</SimpleData><SimpleData name="NAMA_PULAU">ENGGANO</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.294566,-5.402373,0.000000 102.294069,-5.402572,0.000000 102.255369,-5.383572,0.000000 102.255363,-5.383567,0.000000 102.255363,-5.383566,0.000000 102.255367,-5.383562,0.000000 102.261936,-5.375157,0.000000 102.267584,-5.367931,0.000000 102.269524,-5.365460,0.000000 102.271469,-5.362972,0.000000 102.274439,-5.359202,0.000000 102.290769,-5.338472,0.000000 102.290770,-5.338472,0.000000 102.305369,-5.345172,0.000000 102.311469,-5.346972,0.000000 102.330555,-5.350698,0.000000 102.330448,-5.351021,0.000000 102.330091,-5.352098,0.000000 102.328914,-5.355666,0.000000 102.328044,-5.358299,0.000000 102.327450,-5.360093,0.000000 102.326734,-5.362254,0.000000 102.326147,-5.364027,0.000000 102.325567,-5.365777,0.000000 102.325072,-5.367270,0.000000 102.324911,-5.367443,0.000000 102.324669,-5.368172,0.000000 102.319542,-5.373464,0.000000 102.316479,-5.376874,0.000000 102.313469,-5.380072,0.000000 102.312686,-5.381635,0.000000 102.312269,-5.382470,0.000000 102.312066,-5.382698,0.000000 102.309673,-5.385391,0.000000 102.306835,-5.388581,0.000000 102.304028,-5.391737,0.000000 102.301520,-5.394556,0.000000 102.298719,-5.397706,0.000000 102.297262,-5.399343,0.000000 102.296504,-5.400196,0.000000 102.294676,-5.402251,0.000000 102.294569,-5.402372,0.000000 102.294566,-5.402373,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC ENGGANO"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">ENGGANO</SimpleData><SimpleData name="DESA">KAANA</SimpleData><SimpleData name="KABKOT">BENGKULU UTARA</SimpleData><SimpleData name="NAMA_PULAU">ENGGANO</SimpleData></SchemaData></ExtendedData><MultiGeometry><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.375899,-5.369705,0.000000 102.375884,-5.369727,0.000000 102.375874,-5.369690,0.000000 102.375899,-5.369705,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.344567,-5.408862,0.000000 102.327641,-5.419660,0.000000 102.318499,-5.411305,0.000000 102.294599,-5.402405,0.000000 102.294566,-5.402373,0.000000 102.294569,-5.402372,0.000000 102.294676,-5.402251,0.000000 102.296504,-5.400196,0.000000 102.297262,-5.399343,0.000000 102.298719,-5.397706,0.000000 102.301520,-5.394556,0.000000 102.304028,-5.391737,0.000000 102.306835,-5.388581,0.000000 102.309673,-5.385391,0.000000 102.312066,-5.382698,0.000000 102.312269,-5.382470,0.000000 102.312686,-5.381635,0.000000 102.313469,-5.380072,0.000000 102.316479,-5.376874,0.000000 102.319542,-5.373464,0.000000 102.324669,-5.368172,0.000000 102.324911,-5.367443,0.000000 102.325072,-5.367270,0.000000 102.325567,-5.365777,0.000000 102.326147,-5.364027,0.000000 102.326734,-5.362254,0.000000 102.327450,-5.360093,0.000000 102.328044,-5.358299,0.000000 102.328914,-5.355666,0.000000 102.330091,-5.352098,0.000000 102.330448,-5.351021,0.000000 102.330555,-5.350698,0.000000 102.330599,-5.350705,0.000000 102.344099,-5.354205,0.000000 102.354499,-5.357005,0.000000 102.375855,-5.369679,0.000000 102.368067,-5.380662,0.000000 102.360903,-5.390667,0.000000 102.352267,-5.404062,0.000000 102.344567,-5.408862,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC ENGGANO"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">ENGGANO</SimpleData><SimpleData name="DESA">KAHYAPU</SimpleData><SimpleData name="KABKOT">BENGKULU UTARA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.378767,-5.440462,0.000000 102.352667,-5.442462,0.000000 102.327167,-5.419962,0.000000 102.327641,-5.419660,0.000000 102.344567,-5.408862,0.000000 102.352267,-5.404062,0.000000 102.360903,-5.390667,0.000000 102.368067,-5.380662,0.000000 102.375855,-5.369679,0.000000 102.375867,-5.369662,0.000000 102.375874,-5.369690,0.000000 102.375884,-5.369727,0.000000 102.380667,-5.388262,0.000000 102.375667,-5.407962,0.000000 102.367967,-5.410262,0.000000 102.367067,-5.417162,0.000000 102.374067,-5.420562,0.000000 102.381167,-5.425562,0.000000 102.380167,-5.431962,0.000000 102.378767,-5.440462,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC ENGGANO" name="KEC ENGGANO"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

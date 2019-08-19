@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PUREMAN/FID/displayName]</td>
+          <td>$[KEC PUREMAN/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PUREMAN/PROVINSI/displayName]</td>
+          <td>$[KEC PUREMAN/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PUREMAN/KECAMATAN/displayName]</td>
+          <td>$[KEC PUREMAN/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PUREMAN/DESA/displayName]</td>
+          <td>$[KEC PUREMAN/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PUREMAN/KABKOT/displayName]</td>
+          <td>$[KEC PUREMAN/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PUREMAN/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PUREMAN/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PUREMAN/FID/displayName]</td>
+          <td>$[KEC PUREMAN/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PUREMAN/PROVINSI/displayName]</td>
+          <td>$[KEC PUREMAN/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PUREMAN/KECAMATAN/displayName]</td>
+          <td>$[KEC PUREMAN/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PUREMAN/DESA/displayName]</td>
+          <td>$[KEC PUREMAN/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PUREMAN/KABKOT/displayName]</td>
+          <td>$[KEC PUREMAN/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PUREMAN/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PUREMAN/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC PUREMAN</name><Snippet /><Placemark><name>NUSA TENGGARA TIMUR</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PUREMAN"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">NUSA TENGGARA TIMUR</SimpleData><SimpleData name="KECAMATAN">PUREMAN</SimpleData><SimpleData name="DESA">LANGKURU UTARA</SimpleData><SimpleData name="KABKOT">ALOR</SimpleData><SimpleData name="NAMA_PULAU">ALOR</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>124.884431,-8.280881,0.000000 124.888826,-8.281539,0.000000 124.907484,-8.281495,0.000000 124.907778,-8.281495,0.000000 124.907783,-8.281491,0.000000 124.908859,-8.281489,0.000000 124.909060,-8.281489,0.000000 124.893974,-8.330658,0.000000 124.891900,-8.333136,0.000000 124.890199,-8.335167,0.000000 124.887278,-8.338656,0.000000 124.881958,-8.345253,0.000000 124.880946,-8.345269,0.000000 124.854673,-8.345668,0.000000 124.853998,-8.345676,0.000000 124.843495,-8.344029,0.000000 124.835638,-8.343834,0.000000 124.798745,-8.342913,0.000000 124.798634,-8.328966,0.000000 124.798257,-8.326385,0.000000 124.796843,-8.316689,0.000000 124.796828,-8.316666,0.000000 124.796862,-8.316617,0.000000 124.810765,-8.317077,0.000000 124.812063,-8.307721,0.000000 124.812109,-8.307392,0.000000 124.809173,-8.295918,0.000000 124.809540,-8.296061,0.000000 124.815785,-8.298490,0.000000 124.817235,-8.299054,0.000000 124.824299,-8.295017,0.000000 124.831202,-8.301920,0.000000 124.831610,-8.301893,0.000000 124.831477,-8.301641,0.000000 124.838820,-8.301505,0.000000 124.847725,-8.298038,0.000000 124.849869,-8.293060,0.000000 124.853708,-8.284147,0.000000 124.853799,-8.284138,0.000000 124.872186,-8.282526,0.000000 124.879470,-8.281843,0.000000 124.882559,-8.281553,0.000000 124.884392,-8.280875,0.000000 124.884431,-8.280881,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>NUSA TENGGARA TIMUR</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PUREMAN"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">NUSA TENGGARA TIMUR</SimpleData><SimpleData name="KECAMATAN">PUREMAN</SimpleData><SimpleData name="DESA">KAILESA</SimpleData><SimpleData name="KABKOT">ALOR</SimpleData><SimpleData name="NAMA_PULAU">ALOR</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>124.843495,-8.344029,0.000000 124.853998,-8.345676,0.000000 124.854673,-8.345668,0.000000 124.880946,-8.345269,0.000000 124.881173,-8.346586,0.000000 124.879980,-8.348386,0.000000 124.864993,-8.354439,0.000000 124.854803,-8.359123,0.000000 124.845402,-8.356322,0.000000 124.839214,-8.355910,0.000000 124.829987,-8.356189,0.000000 124.804764,-8.356949,0.000000 124.795918,-8.357968,0.000000 124.793907,-8.354559,0.000000 124.785855,-8.350748,0.000000 124.785796,-8.350720,0.000000 124.798817,-8.351829,0.000000 124.798798,-8.349557,0.000000 124.798745,-8.342913,0.000000 124.835638,-8.343834,0.000000 124.843495,-8.344029,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>NUSA TENGGARA TIMUR</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PUREMAN"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">NUSA TENGGARA TIMUR</SimpleData><SimpleData name="KECAMATAN">PUREMAN</SimpleData><SimpleData name="DESA">LANGKURU</SimpleData><SimpleData name="KABKOT">ALOR</SimpleData><SimpleData name="NAMA_PULAU">ALOR</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>124.920105,-8.279695,0.000000 124.916156,-8.286048,0.000000 124.914299,-8.292312,0.000000 124.914289,-8.292344,0.000000 124.908266,-8.315118,0.000000 124.902473,-8.326457,0.000000 124.891366,-8.350151,0.000000 124.890897,-8.362549,0.000000 124.890399,-8.362685,0.000000 124.889821,-8.362861,0.000000 124.886694,-8.365456,0.000000 124.884445,-8.365477,0.000000 124.881313,-8.365506,0.000000 124.877033,-8.368135,0.000000 124.875898,-8.368832,0.000000 124.872273,-8.370274,0.000000 124.866525,-8.372822,0.000000 124.863476,-8.374919,0.000000 124.856873,-8.376154,0.000000 124.855063,-8.377671,0.000000 124.853954,-8.378078,0.000000 124.852244,-8.379494,0.000000 124.850228,-8.380208,0.000000 124.846494,-8.380527,0.000000 124.844379,-8.381643,0.000000 124.842766,-8.382253,0.000000 124.841561,-8.383667,0.000000 124.840863,-8.385480,0.000000 124.838952,-8.387198,0.000000 124.834406,-8.386717,0.000000 124.832496,-8.385991,0.000000 124.831680,-8.386629,0.000000 124.828135,-8.384333,0.000000 124.826624,-8.385245,0.000000 124.826326,-8.386252,0.000000 124.824003,-8.386061,0.000000 124.823100,-8.387373,0.000000 124.822197,-8.388583,0.000000 124.820992,-8.390097,0.000000 124.819176,-8.390307,0.000000 124.817669,-8.392023,0.000000 124.816655,-8.391022,0.000000 124.812930,-8.393352,0.000000 124.808591,-8.394076,0.000000 124.806582,-8.396398,0.000000 124.802645,-8.396718,0.000000 124.800624,-8.396325,0.000000 124.799925,-8.398037,0.000000 124.797094,-8.397346,0.000000 124.795987,-8.398156,0.000000 124.793167,-8.399576,0.000000 124.788486,-8.400811,0.000000 124.791151,-8.394144,0.000000 124.796010,-8.387332,0.000000 124.796431,-8.383493,0.000000 124.796927,-8.378975,0.000000 124.797675,-8.372160,0.000000 124.798400,-8.362175,0.000000 124.797375,-8.360437,0.000000 124.795918,-8.357968,0.000000 124.804764,-8.356949,0.000000 124.829987,-8.356189,0.000000 124.839214,-8.355910,0.000000 124.845402,-8.356322,0.000000 124.854803,-8.359123,0.000000 124.864993,-8.354439,0.000000 124.879980,-8.348386,0.000000 124.881173,-8.346586,0.000000 124.880946,-8.345269,0.000000 124.881958,-8.345253,0.000000 124.887278,-8.338656,0.000000 124.890199,-8.335167,0.000000 124.891900,-8.333136,0.000000 124.893974,-8.330658,0.000000 124.909060,-8.281489,0.000000 124.908859,-8.281489,0.000000 124.907783,-8.281491,0.000000 124.907915,-8.281412,0.000000 124.908258,-8.280726,0.000000 124.919508,-8.279747,0.000000 124.920085,-8.279697,0.000000 124.920104,-8.279696,0.000000 124.920105,-8.279695,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>NUSA TENGGARA TIMUR</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PUREMAN"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">NUSA TENGGARA TIMUR</SimpleData><SimpleData name="KECAMATAN">PUREMAN</SimpleData><SimpleData name="DESA">PURNAMA</SimpleData><SimpleData name="KABKOT">ALOR</SimpleData><SimpleData name="NAMA_PULAU">ALOR</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>124.949107,-8.338961,0.000000 124.955285,-8.343051,0.000000 124.956895,-8.339918,0.000000 124.964683,-8.325734,0.000000 124.971638,-8.312927,0.000000 124.971660,-8.312982,0.000000 124.972124,-8.313331,0.000000 124.987134,-8.327257,0.000000 124.987308,-8.328519,0.000000 124.988206,-8.332271,0.000000 124.988442,-8.332565,0.000000 124.989293,-8.333624,0.000000 124.989701,-8.334131,0.000000 124.994095,-8.338482,0.000000 124.994780,-8.340371,0.000000 124.995879,-8.342920,0.000000 124.996000,-8.343556,0.000000 124.996003,-8.344226,0.000000 124.995852,-8.346872,0.000000 124.995792,-8.349882,0.000000 124.995836,-8.351926,0.000000 124.996314,-8.355581,0.000000 124.996250,-8.355584,0.000000 124.992745,-8.355739,0.000000 124.990987,-8.355823,0.000000 124.986921,-8.357540,0.000000 124.983147,-8.356953,0.000000 124.979080,-8.358548,0.000000 124.975279,-8.358606,0.000000 124.973181,-8.358638,0.000000 124.969112,-8.360023,0.000000 124.964300,-8.358379,0.000000 124.959739,-8.358463,0.000000 124.957294,-8.357352,0.000000 124.952978,-8.356376,0.000000 124.949812,-8.355847,0.000000 124.946837,-8.356770,0.000000 124.946228,-8.356621,0.000000 124.944645,-8.356235,0.000000 124.935713,-8.358036,0.000000 124.933338,-8.357502,0.000000 124.930541,-8.358167,0.000000 124.926951,-8.358908,0.000000 124.926910,-8.358917,0.000000 124.924945,-8.359322,0.000000 124.923833,-8.359480,0.000000 124.921123,-8.359500,0.000000 124.910853,-8.361367,0.000000 124.902550,-8.363960,0.000000 124.900113,-8.364249,0.000000 124.897575,-8.364550,0.000000 124.896823,-8.364639,0.000000 124.894265,-8.363741,0.000000 124.893672,-8.363533,0.000000 124.890896,-8.362558,0.000000 124.890897,-8.362549,0.000000 124.891366,-8.350151,0.000000 124.902473,-8.326457,0.000000 124.908266,-8.315118,0.000000 124.914289,-8.292344,0.000000 124.914386,-8.292374,0.000000 124.914475,-8.292437,0.000000 124.924263,-8.299411,0.000000 124.928744,-8.305894,0.000000 124.928956,-8.306238,0.000000 124.931281,-8.310024,0.000000 124.932878,-8.312594,0.000000 124.933661,-8.314073,0.000000 124.934575,-8.316597,0.000000 124.936794,-8.322688,0.000000 124.937288,-8.323931,0.000000 124.937863,-8.325377,0.000000 124.940185,-8.327546,0.000000 124.941841,-8.331434,0.000000 124.943973,-8.334479,0.000000 124.944538,-8.335306,0.000000 124.946844,-8.337177,0.000000 124.949107,-8.338961,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC PUREMAN" name="KEC PUREMAN"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

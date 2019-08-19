@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Lampung_Barat" name="Lampung_Barat"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Lampung_Barat/FID/displayName]</td>
+          <td>$[Lampung_Barat/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Lampung_Barat/PROVINSI/displayName]</td>
+          <td>$[Lampung_Barat/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Lampung_Barat/KABKOT/displayName]</td>
+          <td>$[Lampung_Barat/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Lampung_Barat/KECAMATAN/displayName]</td>
+          <td>$[Lampung_Barat/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Lampung_Barat/DESA/displayName]</td>
+          <td>$[Lampung_Barat/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Lampung_Barat</name><Placemark><name>LAMPUNG</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>104.363079,-5.343323,0.000000 104.354205,-5.345711,0.000000 104.347189,-5.339894,0.000000 104.334165,-5.329191,0.000000 104.332248,-5.325864,0.000000 104.325477,-5.321653,0.000000 104.322856,-5.316257,0.000000 104.313504,-5.311550,0.000000 104.312393,-5.307778,0.000000 104.307663,-5.302047,0.000000 104.298025,-5.299258,0.000000 104.302384,-5.293594,0.000000 104.304855,-5.290521,0.000000 104.305031,-5.290302,0.000000 104.305560,-5.289645,0.000000 104.315714,-5.277019,0.000000 104.315868,-5.276828,0.000000 104.323020,-5.281166,0.000000 104.326711,-5.299060,0.000000 104.327108,-5.300984,0.000000 104.328413,-5.307312,0.000000 104.328459,-5.314158,0.000000 104.329688,-5.314773,0.000000 104.330726,-5.315195,0.000000 104.331264,-5.316002,0.000000 104.331456,-5.316963,0.000000 104.331264,-5.318461,0.000000 104.331647,-5.318845,0.000000 104.332608,-5.319806,0.000000 104.333223,-5.321458,0.000000 104.333838,-5.322918,0.000000 104.334527,-5.324487,0.000000 104.334529,-5.324493,0.000000 104.335311,-5.325437,0.000000 104.336363,-5.326235,0.000000 104.336364,-5.326235,0.000000 104.338913,-5.328337,0.000000 104.353618,-5.331491,0.000000 104.358134,-5.332493,0.000000 104.361770,-5.333299,0.000000 104.362569,-5.333477,0.000000 104.370035,-5.335133,0.000000 104.363079,-5.343323,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Lampung_Barat"><SimpleData name="FID">240</SimpleData><SimpleData name="PROVINSI">LAMPUNG</SimpleData><SimpleData name="KABKOT">LAMPUNG BARAT</SimpleData><SimpleData name="KECAMATAN">BANDAR NEGERI SUOH</SimpleData><SimpleData name="DESA">TANJUNG SARI</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

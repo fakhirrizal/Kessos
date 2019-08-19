@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC AEK KUO/FID/displayName]</td>
+          <td>$[KEC AEK KUO/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC AEK KUO/PROVINSI/displayName]</td>
+          <td>$[KEC AEK KUO/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC AEK KUO/KECAMATAN/displayName]</td>
+          <td>$[KEC AEK KUO/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC AEK KUO/DESA/displayName]</td>
+          <td>$[KEC AEK KUO/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC AEK KUO/KABKOT/displayName]</td>
+          <td>$[KEC AEK KUO/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC AEK KUO/NAMA_PULAU/displayName]</td>
+          <td>$[KEC AEK KUO/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC AEK KUO/FID/displayName]</td>
+          <td>$[KEC AEK KUO/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC AEK KUO/PROVINSI/displayName]</td>
+          <td>$[KEC AEK KUO/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC AEK KUO/KECAMATAN/displayName]</td>
+          <td>$[KEC AEK KUO/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC AEK KUO/DESA/displayName]</td>
+          <td>$[KEC AEK KUO/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC AEK KUO/KABKOT/displayName]</td>
+          <td>$[KEC AEK KUO/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC AEK KUO/NAMA_PULAU/displayName]</td>
+          <td>$[KEC AEK KUO/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC AEK KUO</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC AEK KUO"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">AEK KUO</SimpleData><SimpleData name="DESA">PADANG MANINJAU</SimpleData><SimpleData name="KABKOT">LABUHANBATU UTARA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.786555,2.331863,0.000000 99.791120,2.312860,0.000000 99.789252,2.313434,0.000000 99.789252,2.313390,0.000000 99.785071,2.315685,0.000000 99.782439,2.315290,0.000000 99.781443,2.314590,0.000000 99.781590,2.313961,0.000000 99.781630,2.313560,0.000000 99.781281,2.312837,0.000000 99.779886,2.313101,0.000000 99.777880,2.313540,0.000000 99.776135,2.312752,0.000000 99.775000,2.311701,0.000000 99.773481,2.311089,0.000000 99.771921,2.311202,0.000000 99.769245,2.311540,0.000000 99.767015,2.311316,0.000000 99.765788,2.310756,0.000000 99.764227,2.309860,0.000000 99.763446,2.307954,0.000000 99.761104,2.307058,0.000000 99.759431,2.305825,0.000000 99.756755,2.306163,0.000000 99.755306,2.305940,0.000000 99.751849,2.305156,0.000000 99.748506,2.307289,0.000000 99.745942,2.308860,0.000000 99.743044,2.308974,0.000000 99.743044,2.308974,0.000000 99.740480,2.310770,0.000000 99.754388,2.322022,0.000000 99.761225,2.323204,0.000000 99.763818,2.324862,0.000000 99.771362,2.326755,0.000000 99.779142,2.328648,0.000000 99.782914,2.329831,0.000000 99.786555,2.331863,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC AEK KUO"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">AEK KUO</SimpleData><SimpleData name="DESA">PANIGORAN</SimpleData><SimpleData name="KABKOT">LABUHANBATU UTARA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.835878,2.321166,0.000000 99.836312,2.305103,0.000000 99.833009,2.305134,0.000000 99.821983,2.305236,0.000000 99.817029,2.304491,0.000000 99.811434,2.305076,0.000000 99.810092,2.318468,0.000000 99.800830,2.316726,0.000000 99.793688,2.312073,0.000000 99.791120,2.312860,0.000000 99.786555,2.331863,0.000000 99.787159,2.332200,0.000000 99.787158,2.332205,0.000000 99.787082,2.332312,0.000000 99.834890,2.334625,0.000000 99.835513,2.334655,0.000000 99.835878,2.321166,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC AEK KUO"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">AEK KUO</SimpleData><SimpleData name="DESA">KARANG ANYAR</SimpleData><SimpleData name="KABKOT">LABUHANBATU UTARA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.861089,2.322166,0.000000 99.835878,2.321166,0.000000 99.835513,2.334655,0.000000 99.835700,2.334664,0.000000 99.841533,2.335640,0.000000 99.849580,2.342599,0.000000 99.852649,2.339680,0.000000 99.861099,2.338179,0.000000 99.866529,2.331616,0.000000 99.861762,2.322192,0.000000 99.861089,2.322166,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC AEK KUO"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">AEK KUO</SimpleData><SimpleData name="DESA">SIDOMULYO</SimpleData><SimpleData name="KABKOT">LABUHANBATU UTARA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.855233,2.309902,0.000000 99.845044,2.304823,0.000000 99.841146,2.305059,0.000000 99.836312,2.305103,0.000000 99.835878,2.321166,0.000000 99.861089,2.322166,0.000000 99.861082,2.309970,0.000000 99.855233,2.309902,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC AEK KUO"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">AEK KUO</SimpleData><SimpleData name="DESA">PERK. PADANG HALABAN</SimpleData><SimpleData name="KABKOT">LABUHANBATU UTARA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.900233,2.351887,0.000000 99.901091,2.334405,0.000000 99.934765,2.336350,0.000000 99.934956,2.318151,0.000000 99.931870,2.317871,0.000000 99.922956,2.316846,0.000000 99.905784,2.315693,0.000000 99.901880,2.315370,0.000000 99.888999,2.314345,0.000000 99.877216,2.313209,0.000000 99.864530,2.310011,0.000000 99.861082,2.309970,0.000000 99.861089,2.322166,0.000000 99.861762,2.322192,0.000000 99.866529,2.331616,0.000000 99.861099,2.338179,0.000000 99.852649,2.339680,0.000000 99.849580,2.342599,0.000000 99.862431,2.349945,0.000000 99.900233,2.351887,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC AEK KUO"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">AEK KUO</SimpleData><SimpleData name="DESA">PURWOREJO</SimpleData><SimpleData name="KABKOT">LABUHANBATU UTARA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.771269,2.380507,0.000000 99.787210,2.377947,0.000000 99.830326,2.378286,0.000000 99.833586,2.376826,0.000000 99.835959,2.371421,0.000000 99.841908,2.357870,0.000000 99.834890,2.334625,0.000000 99.787082,2.332312,0.000000 99.785981,2.333860,0.000000 99.776787,2.333154,0.000000 99.772074,2.334105,0.000000 99.770897,2.338374,0.000000 99.771372,2.344064,0.000000 99.770903,2.348095,0.000000 99.768782,2.349756,0.000000 99.764304,2.350944,0.000000 99.760063,2.354266,0.000000 99.758651,2.358298,0.000000 99.758183,2.364463,0.000000 99.759598,2.367070,0.000000 99.752768,2.377270,0.000000 99.755130,2.386753,0.000000 99.755131,2.387958,0.000000 99.771269,2.380507,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC AEK KUO"><SimpleData name="FID">6</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">AEK KUO</SimpleData><SimpleData name="DESA">AEK KORSIK</SimpleData><SimpleData name="KABKOT">LABUHANBATU UTARA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.987483,2.375131,0.000000 99.980321,2.364664,0.000000 99.976617,2.357175,0.000000 99.973752,2.351433,0.000000 99.972123,2.348485,0.000000 99.970714,2.345937,0.000000 99.969523,2.343994,0.000000 99.967731,2.341074,0.000000 99.965055,2.337863,0.000000 99.959341,2.327356,0.000000 99.954598,2.319930,0.000000 99.934956,2.318151,0.000000 99.934765,2.336350,0.000000 99.901091,2.334405,0.000000 99.900233,2.351887,0.000000 99.862431,2.349945,0.000000 99.849580,2.342599,0.000000 99.841533,2.335640,0.000000 99.835700,2.334664,0.000000 99.835513,2.334655,0.000000 99.834890,2.334625,0.000000 99.841908,2.357870,0.000000 99.835959,2.371421,0.000000 99.837568,2.370264,0.000000 99.838655,2.369899,0.000000 99.839742,2.370627,0.000000 99.881801,2.417978,0.000000 99.871052,2.434711,0.000000 99.871628,2.434409,0.000000 99.877280,2.432590,0.000000 99.883454,2.429380,0.000000 99.890823,2.426770,0.000000 99.900031,2.422711,0.000000 99.900382,2.422556,0.000000 99.916115,2.415332,0.000000 99.930852,2.409111,0.000000 99.936227,2.404699,0.000000 99.947380,2.401686,0.000000 99.964159,2.389621,0.000000 99.968694,2.386619,0.000000 99.976340,2.382050,0.000000 99.981263,2.378786,0.000000 99.987483,2.375131,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC AEK KUO"><SimpleData name="FID">7</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">AEK KUO</SimpleData><SimpleData name="DESA">BANDAR SELAMAT</SimpleData><SimpleData name="KABKOT">LABUHANBATU UTARA</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.835719,2.472411,0.000000 99.838660,2.462022,0.000000 99.840105,2.457651,0.000000 99.840682,2.453280,0.000000 99.844154,2.447742,0.000000 99.851974,2.445406,0.000000 99.858798,2.441328,0.000000 99.864889,2.437934,0.000000 99.871052,2.434711,0.000000 99.881801,2.417978,0.000000 99.839742,2.370627,0.000000 99.838655,2.369899,0.000000 99.837568,2.370264,0.000000 99.835959,2.371421,0.000000 99.833586,2.376826,0.000000 99.830326,2.378286,0.000000 99.787210,2.377947,0.000000 99.771269,2.380507,0.000000 99.755131,2.387958,0.000000 99.755134,2.393866,0.000000 99.756080,2.399319,0.000000 99.758203,2.402163,0.000000 99.762448,2.405717,0.000000 99.763125,2.406941,0.000000 99.764808,2.409984,0.000000 99.769762,2.416857,0.000000 99.774714,2.419937,0.000000 99.775060,2.420203,0.000000 99.782733,2.426097,0.000000 99.787920,2.428465,0.000000 99.790280,2.432020,0.000000 99.794055,2.438183,0.000000 99.795707,2.441738,0.000000 99.797124,2.445057,0.000000 99.799483,2.448375,0.000000 99.805850,2.452165,0.000000 99.814104,2.456428,0.000000 99.820471,2.459744,0.000000 99.827546,2.464244,0.000000 99.831791,2.468272,0.000000 99.835678,2.472368,0.000000 99.835681,2.472349,0.000000 99.835719,2.472411,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC AEK KUO" name="KEC AEK KUO"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

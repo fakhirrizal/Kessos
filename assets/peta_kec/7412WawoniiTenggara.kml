@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Konawe" name="Konawe"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Konawe/FID/displayName]</td>
+          <td>$[Konawe/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Konawe/PROVINSI/displayName]</td>
+          <td>$[Konawe/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Konawe/KABKOT/displayName]</td>
+          <td>$[Konawe/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Konawe/KECAMATAN/displayName]</td>
+          <td>$[Konawe/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Konawe/DESA/displayName]</td>
+          <td>$[Konawe/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Konawe</name><Placemark><name>SULAWESI TENGGARA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>123.112000,-4.148076,0.000000 123.107657,-4.148076,0.000000 123.109463,-4.143304,0.000000 123.111971,-4.148008,0.000000 123.112000,-4.148076,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Konawe"><SimpleData name="FID">29</SimpleData><SimpleData name="PROVINSI">SULAWESI TENGGARA</SimpleData><SimpleData name="KABKOT">KONAWE</SimpleData><SimpleData name="KECAMATAN">WAWONII TENGGARA</SimpleData><SimpleData name="DESA">TEPOROKO</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>SULAWESI TENGGARA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>123.098475,-4.116168,0.000000 123.160451,-4.148076,0.000000 123.112000,-4.148076,0.000000 123.111971,-4.148008,0.000000 123.109463,-4.143304,0.000000 123.109695,-4.142690,0.000000 123.109236,-4.141617,0.000000 123.107857,-4.138398,0.000000 123.107686,-4.137997,0.000000 123.106251,-4.134645,0.000000 123.103815,-4.128955,0.000000 123.102283,-4.125376,0.000000 123.098398,-4.116297,0.000000 123.098467,-4.116333,0.000000 123.098475,-4.116168,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Konawe"><SimpleData name="FID">38</SimpleData><SimpleData name="PROVINSI">SULAWESI TENGGARA</SimpleData><SimpleData name="KABKOT">KONAWE</SimpleData><SimpleData name="KECAMATAN">WAWONII TENGGARA</SimpleData><SimpleData name="DESA">TONDONGITU</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>SULAWESI TENGGARA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>123.211497,-4.148076,0.000000 123.160451,-4.148076,0.000000 123.098475,-4.116168,0.000000 123.098482,-4.116031,0.000000 123.098530,-4.115057,0.000000 123.102852,-4.111865,0.000000 123.108508,-4.106950,0.000000 123.110733,-4.105576,0.000000 123.111573,-4.105057,0.000000 123.211497,-4.148076,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Konawe"><SimpleData name="FID">39</SimpleData><SimpleData name="PROVINSI">SULAWESI TENGGARA</SimpleData><SimpleData name="KABKOT">KONAWE</SimpleData><SimpleData name="KECAMATAN">WAWONII TENGGARA</SimpleData><SimpleData name="DESA">POLARA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

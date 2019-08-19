@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Biak_Numfor" name="Biak_Numfor"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Biak_Numfor/FID/displayName]</td>
+          <td>$[Biak_Numfor/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Biak_Numfor/PROVINSI/displayName]</td>
+          <td>$[Biak_Numfor/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Biak_Numfor/KABKOT/displayName]</td>
+          <td>$[Biak_Numfor/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Biak_Numfor/KECAMATAN/displayName]</td>
+          <td>$[Biak_Numfor/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Biak_Numfor/DESA/displayName]</td>
+          <td>$[Biak_Numfor/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Biak_Numfor</name><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>135.821208,-0.689662,0.000000 135.821746,-0.689770,0.000000 135.824220,-0.689769,0.000000 135.825045,-0.689877,0.000000 135.825834,-0.690094,0.000000 135.826838,-0.690419,0.000000 135.830998,-0.692548,0.000000 135.833221,-0.693919,0.000000 135.833723,-0.694099,0.000000 135.834118,-0.694208,0.000000 135.834441,-0.694208,0.000000 135.834907,-0.694280,0.000000 135.835588,-0.694424,0.000000 135.836162,-0.694677,0.000000 135.837865,-0.695543,0.000000 135.839336,-0.696048,0.000000 135.839623,-0.696120,0.000000 135.840053,-0.696084,0.000000 135.840304,-0.695975,0.000000 135.840555,-0.695795,0.000000 135.840734,-0.695795,0.000000 135.841093,-0.695975,0.000000 135.841523,-0.696228,0.000000 135.841774,-0.696408,0.000000 135.843460,-0.697094,0.000000 135.845540,-0.698285,0.000000 135.846042,-0.698501,0.000000 135.846436,-0.698754,0.000000 135.846759,-0.698934,0.000000 135.847655,-0.699078,0.000000 135.848157,-0.699151,0.000000 135.848875,-0.699295,0.000000 135.849520,-0.699511,0.000000 135.850309,-0.699619,0.000000 135.850811,-0.699619,0.000000 135.851349,-0.699547,0.000000 135.852066,-0.699619,0.000000 135.852640,-0.699799,0.000000 135.854038,-0.700160,0.000000 135.855276,-0.700774,0.000000 135.856423,-0.701459,0.000000 135.857679,-0.702614,0.000000 135.858109,-0.703047,0.000000 135.858575,-0.703480,0.000000 135.858862,-0.703697,0.000000 135.860010,-0.703949,0.000000 135.860583,-0.704094,0.000000 135.861301,-0.704238,0.000000 135.862233,-0.704707,0.000000 135.863632,-0.705429,0.000000 135.864098,-0.705862,0.000000 135.864385,-0.706150,0.000000 135.864708,-0.706259,0.000000 135.864994,-0.706331,0.000000 135.865640,-0.706656,0.000000 135.866214,-0.707233,0.000000 135.867075,-0.708388,0.000000 135.868043,-0.709796,0.000000 135.869890,-0.712575,0.000000 135.871935,-0.715246,0.000000 135.862984,-0.726622,0.000000 135.860792,-0.734900,0.000000 135.851416,-0.749337,0.000000 135.847611,-0.762177,0.000000 135.834295,-0.775018,0.000000 135.825259,-0.782151,0.000000 135.784381,-0.756666,0.000000 135.791587,-0.750691,0.000000 135.803537,-0.740780,0.000000 135.803573,-0.715462,0.000000 135.803573,-0.686843,0.000000 135.803991,-0.686672,0.000000 135.804802,-0.686379,0.000000 135.806415,-0.685729,0.000000 135.807419,-0.685549,0.000000 135.808029,-0.685440,0.000000 135.808459,-0.685440,0.000000 135.811185,-0.685332,0.000000 135.811687,-0.685404,0.000000 135.812260,-0.685584,0.000000 135.812942,-0.685873,0.000000 135.815416,-0.686883,0.000000 135.817604,-0.687857,0.000000 135.818070,-0.688182,0.000000 135.818715,-0.688615,0.000000 135.819146,-0.688976,0.000000 135.820311,-0.689409,0.000000 135.821208,-0.689662,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Biak_Numfor"><SimpleData name="FID">155</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">BIAK NUMFOR</SimpleData><SimpleData name="KECAMATAN">BONDIFUAR</SimpleData><SimpleData name="DESA">SANSUNDI</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

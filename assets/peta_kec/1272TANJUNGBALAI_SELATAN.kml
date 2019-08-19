@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC TANJUNGBALAI SELATAN/FID/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TANJUNGBALAI SELATAN/PROVINSI/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC TANJUNGBALAI SELATAN/KECAMATAN/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TANJUNGBALAI SELATAN/DESA/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC TANJUNGBALAI SELATAN/KABKOT/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TANJUNGBALAI SELATAN/NAMA_PULAU/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC TANJUNGBALAI SELATAN/FID/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TANJUNGBALAI SELATAN/PROVINSI/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC TANJUNGBALAI SELATAN/KECAMATAN/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TANJUNGBALAI SELATAN/DESA/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC TANJUNGBALAI SELATAN/KABKOT/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TANJUNGBALAI SELATAN/NAMA_PULAU/displayName]</td>
+          <td>$[KEC TANJUNGBALAI SELATAN/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC TANJUNGBALAI SELATAN</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC TANJUNGBALAI SELATAN"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">TANJUNGBALAI SELATAN</SimpleData><SimpleData name="DESA">PANTAI BURUNG</SimpleData><SimpleData name="KABKOT">KOTA TANJUNGBALAI</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.801881,2.963336,0.000000 99.801504,2.963137,0.000000 99.800919,2.962986,0.000000 99.800476,2.962977,0.000000 99.799533,2.963309,0.000000 99.799005,2.963158,0.000000 99.798383,2.963016,0.000000 99.797289,2.962771,0.000000 99.797147,2.962761,0.000000 99.796789,2.962792,0.000000 99.794906,2.963424,0.000000 99.794856,2.964181,0.000000 99.794736,2.965271,0.000000 99.796181,2.965771,0.000000 99.797243,2.966161,0.000000 99.797703,2.966336,0.000000 99.798433,2.966687,0.000000 99.798451,2.966688,0.000000 99.799068,2.966734,0.000000 99.800036,2.966813,0.000000 99.801289,2.966844,0.000000 99.802217,2.967073,0.000000 99.802560,2.966599,0.000000 99.802590,2.966446,0.000000 99.802634,2.966250,0.000000 99.802667,2.966213,0.000000 99.802715,2.966149,0.000000 99.802837,2.965953,0.000000 99.802892,2.965893,0.000000 99.803187,2.965392,0.000000 99.803526,2.964843,0.000000 99.803523,2.964833,0.000000 99.802881,2.964208,0.000000 99.801881,2.963336,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC TANJUNGBALAI SELATAN"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">TANJUNGBALAI SELATAN</SimpleData><SimpleData name="DESA">TANJUNG BALAI KOTA II</SimpleData><SimpleData name="KABKOT">KOTA TANJUNGBALAI</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.804648,2.964129,0.000000 99.802085,2.962109,0.000000 99.800449,2.960800,0.000000 99.800068,2.960555,0.000000 99.800038,2.960295,0.000000 99.799986,2.959768,0.000000 99.799946,2.959375,0.000000 99.799927,2.958666,0.000000 99.798955,2.957813,0.000000 99.797711,2.956881,0.000000 99.797711,2.956881,0.000000 99.797520,2.956732,0.000000 99.797477,2.956758,0.000000 99.797039,2.957009,0.000000 99.795595,2.957719,0.000000 99.794431,2.958334,0.000000 99.794612,2.959185,0.000000 99.794888,2.960650,0.000000 99.794992,2.961480,0.000000 99.794937,2.962967,0.000000 99.794906,2.963424,0.000000 99.796789,2.962792,0.000000 99.797147,2.962761,0.000000 99.797289,2.962771,0.000000 99.798383,2.963016,0.000000 99.799005,2.963158,0.000000 99.799533,2.963309,0.000000 99.800476,2.962977,0.000000 99.800919,2.962986,0.000000 99.801504,2.963137,0.000000 99.801881,2.963336,0.000000 99.802881,2.964208,0.000000 99.803523,2.964833,0.000000 99.803526,2.964843,0.000000 99.804099,2.965395,0.000000 99.804865,2.964271,0.000000 99.804648,2.964129,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC TANJUNGBALAI SELATAN"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">TANJUNGBALAI SELATAN</SimpleData><SimpleData name="DESA">INDRA SAKTI</SimpleData><SimpleData name="KABKOT">KOTA TANJUNGBALAI</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.810472,2.967642,0.000000 99.810482,2.967638,0.000000 99.810472,2.967642,0.000000 99.809314,2.966789,0.000000 99.808174,2.966196,0.000000 99.808160,2.966060,0.000000 99.807122,2.965619,0.000000 99.806893,2.965523,0.000000 99.805741,2.965023,0.000000 99.805460,2.964808,0.000000 99.805058,2.964470,0.000000 99.804866,2.964270,0.000000 99.804865,2.964271,0.000000 99.804099,2.965395,0.000000 99.803526,2.964843,0.000000 99.803187,2.965392,0.000000 99.802892,2.965893,0.000000 99.802837,2.965953,0.000000 99.802715,2.966149,0.000000 99.802667,2.966213,0.000000 99.802634,2.966250,0.000000 99.802590,2.966446,0.000000 99.802560,2.966599,0.000000 99.802217,2.967073,0.000000 99.802225,2.967075,0.000000 99.802447,2.967130,0.000000 99.803495,2.967720,0.000000 99.804923,2.968452,0.000000 99.808615,2.970430,0.000000 99.808617,2.970426,0.000000 99.808622,2.970417,0.000000 99.808645,2.970375,0.000000 99.808698,2.970277,0.000000 99.808699,2.970275,0.000000 99.808707,2.970260,0.000000 99.808954,2.969801,0.000000 99.808968,2.969776,0.000000 99.808985,2.969745,0.000000 99.809311,2.969140,0.000000 99.809315,2.969132,0.000000 99.809352,2.969065,0.000000 99.809366,2.969039,0.000000 99.809428,2.968923,0.000000 99.809461,2.968861,0.000000 99.809628,2.968553,0.000000 99.809666,2.968479,0.000000 99.809873,2.968263,0.000000 99.810023,2.968104,0.000000 99.810115,2.968008,0.000000 99.810117,2.968005,0.000000 99.810121,2.968001,0.000000 99.810132,2.967991,0.000000 99.810265,2.967857,0.000000 99.810326,2.967794,0.000000 99.810339,2.967782,0.000000 99.810391,2.967730,0.000000 99.810472,2.967642,0.000000 99.810472,2.967642,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC TANJUNGBALAI SELATAN"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">TANJUNGBALAI SELATAN</SimpleData><SimpleData name="DESA">TANJUNG BALAI KOTA I</SimpleData><SimpleData name="KABKOT">KOTA TANJUNGBALAI</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.802950,2.957933,0.000000 99.803219,2.957433,0.000000 99.803443,2.957465,0.000000 99.803569,2.957179,0.000000 99.803661,2.957075,0.000000 99.803689,2.956973,0.000000 99.803689,2.956972,0.000000 99.803471,2.956898,0.000000 99.803044,2.956760,0.000000 99.802391,2.956731,0.000000 99.802348,2.956538,0.000000 99.802237,2.956526,0.000000 99.801523,2.956565,0.000000 99.801467,2.956747,0.000000 99.801364,2.956898,0.000000 99.800835,2.956847,0.000000 99.800298,2.956817,0.000000 99.800164,2.956821,0.000000 99.800109,2.956839,0.000000 99.799722,2.956778,0.000000 99.799416,2.956701,0.000000 99.799283,2.956632,0.000000 99.798969,2.956515,0.000000 99.799016,2.956381,0.000000 99.798733,2.956215,0.000000 99.798298,2.955954,0.000000 99.798036,2.956305,0.000000 99.797711,2.956881,0.000000 99.797711,2.956881,0.000000 99.798955,2.957813,0.000000 99.799927,2.958666,0.000000 99.799946,2.959375,0.000000 99.799986,2.959768,0.000000 99.800038,2.960295,0.000000 99.800068,2.960555,0.000000 99.800449,2.960800,0.000000 99.802085,2.962109,0.000000 99.802269,2.961092,0.000000 99.801406,2.960107,0.000000 99.802291,2.959270,0.000000 99.802950,2.957933,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC TANJUNGBALAI SELATAN"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">TANJUNGBALAI SELATAN</SimpleData><SimpleData name="DESA">KARYA</SimpleData><SimpleData name="KABKOT">KOTA TANJUNGBALAI</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.808938,2.964735,0.000000 99.807516,2.964123,0.000000 99.805981,2.963408,0.000000 99.804640,2.962752,0.000000 99.804041,2.962423,0.000000 99.803956,2.962363,0.000000 99.803428,2.961976,0.000000 99.803048,2.961692,0.000000 99.803254,2.960523,0.000000 99.803401,2.959688,0.000000 99.803588,2.958831,0.000000 99.803710,2.958560,0.000000 99.804112,2.957832,0.000000 99.804425,2.957216,0.000000 99.804027,2.957102,0.000000 99.803794,2.957013,0.000000 99.803689,2.956972,0.000000 99.803689,2.956973,0.000000 99.803661,2.957075,0.000000 99.803569,2.957179,0.000000 99.803443,2.957465,0.000000 99.803219,2.957433,0.000000 99.802950,2.957933,0.000000 99.802291,2.959270,0.000000 99.801406,2.960107,0.000000 99.802269,2.961092,0.000000 99.802085,2.962109,0.000000 99.804648,2.964129,0.000000 99.804865,2.964271,0.000000 99.804866,2.964270,0.000000 99.805058,2.964470,0.000000 99.805460,2.964808,0.000000 99.805741,2.965023,0.000000 99.806893,2.965523,0.000000 99.807122,2.965619,0.000000 99.808160,2.966060,0.000000 99.808174,2.966196,0.000000 99.809314,2.966789,0.000000 99.809546,2.966444,0.000000 99.810109,2.965327,0.000000 99.808938,2.964735,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC TANJUNGBALAI SELATAN"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">TANJUNGBALAI SELATAN</SimpleData><SimpleData name="DESA">PERWIRA</SimpleData><SimpleData name="KABKOT">KOTA TANJUNGBALAI</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.805311,2.955917,0.000000 99.804860,2.955792,0.000000 99.804856,2.955794,0.000000 99.804746,2.956277,0.000000 99.804570,2.956880,0.000000 99.804562,2.956907,0.000000 99.804425,2.957216,0.000000 99.804112,2.957832,0.000000 99.803710,2.958560,0.000000 99.803588,2.958831,0.000000 99.803401,2.959688,0.000000 99.803254,2.960523,0.000000 99.803048,2.961692,0.000000 99.803428,2.961976,0.000000 99.803956,2.962363,0.000000 99.804041,2.962423,0.000000 99.804640,2.962752,0.000000 99.805981,2.963408,0.000000 99.807516,2.964123,0.000000 99.808938,2.964735,0.000000 99.810109,2.965327,0.000000 99.810695,2.963988,0.000000 99.809919,2.963650,0.000000 99.809153,2.963346,0.000000 99.808577,2.963034,0.000000 99.807935,2.962727,0.000000 99.807189,2.962380,0.000000 99.806532,2.961922,0.000000 99.806016,2.961323,0.000000 99.805519,2.960729,0.000000 99.805494,2.960366,0.000000 99.805463,2.959802,0.000000 99.805448,2.959319,0.000000 99.805603,2.958850,0.000000 99.805848,2.958331,0.000000 99.806509,2.957696,0.000000 99.807135,2.957217,0.000000 99.807405,2.957076,0.000000 99.807218,2.956670,0.000000 99.806886,2.956362,0.000000 99.806419,2.956275,0.000000 99.805681,2.956165,0.000000 99.805570,2.956103,0.000000 99.805311,2.955917,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC TANJUNGBALAI SELATAN" name="KEC TANJUNGBALAI SELATAN"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

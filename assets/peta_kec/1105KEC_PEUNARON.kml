@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PEUNARON/FID/displayName]</td>
+          <td>$[KEC PEUNARON/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEUNARON/PROVINSI/displayName]</td>
+          <td>$[KEC PEUNARON/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PEUNARON/KECAMATAN/displayName]</td>
+          <td>$[KEC PEUNARON/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEUNARON/DESA/displayName]</td>
+          <td>$[KEC PEUNARON/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PEUNARON/KABKOT/displayName]</td>
+          <td>$[KEC PEUNARON/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEUNARON/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PEUNARON/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PEUNARON/FID/displayName]</td>
+          <td>$[KEC PEUNARON/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEUNARON/PROVINSI/displayName]</td>
+          <td>$[KEC PEUNARON/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PEUNARON/KECAMATAN/displayName]</td>
+          <td>$[KEC PEUNARON/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEUNARON/DESA/displayName]</td>
+          <td>$[KEC PEUNARON/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PEUNARON/KABKOT/displayName]</td>
+          <td>$[KEC PEUNARON/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEUNARON/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PEUNARON/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC PEUNARON</name><Snippet /><Placemark><name>ACEH</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEUNARON"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">ACEH</SimpleData><SimpleData name="KECAMATAN">PEUNARON</SimpleData><SimpleData name="DESA">ARUL PINANG</SimpleData><SimpleData name="KABKOT">ACEH TIMUR</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.656646,4.612229,0.000000 97.659045,4.611689,0.000000 97.664904,4.616987,0.000000 97.666644,4.623069,0.000000 97.672267,4.625872,0.000000 97.676281,4.627436,0.000000 97.683412,4.630214,0.000000 97.687596,4.631339,0.000000 97.693668,4.632972,0.000000 97.694047,4.632749,0.000000 97.692652,4.631789,0.000000 97.688583,4.629052,0.000000 97.682316,4.621416,0.000000 97.682211,4.621288,0.000000 97.677967,4.615459,0.000000 97.668624,4.602625,0.000000 97.663242,4.595232,0.000000 97.656460,4.585730,0.000000 97.650649,4.577589,0.000000 97.635220,4.560413,0.000000 97.630508,4.565756,0.000000 97.618887,4.579111,0.000000 97.597863,4.603270,0.000000 97.597800,4.603343,0.000000 97.597738,4.603647,0.000000 97.596784,4.608333,0.000000 97.594994,4.617122,0.000000 97.594506,4.619515,0.000000 97.591526,4.634146,0.000000 97.591081,4.634944,0.000000 97.573056,4.667504,0.000000 97.566681,4.683371,0.000000 97.562778,4.693085,0.000000 97.562765,4.693172,0.000000 97.559857,4.712528,0.000000 97.556381,4.735742,0.000000 97.556369,4.735745,0.000000 97.556368,4.735751,0.000000 97.562323,4.734433,0.000000 97.571620,4.732185,0.000000 97.579361,4.730581,0.000000 97.592491,4.727700,0.000000 97.603100,4.725372,0.000000 97.603274,4.725367,0.000000 97.603464,4.725363,0.000000 97.603846,4.725353,0.000000 97.641214,4.634421,0.000000 97.648072,4.622194,0.000000 97.653050,4.613317,0.000000 97.653229,4.612998,0.000000 97.656646,4.612229,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>ACEH</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEUNARON"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">ACEH</SimpleData><SimpleData name="KECAMATAN">PEUNARON</SimpleData><SimpleData name="DESA">PEUNARON BARU</SimpleData><SimpleData name="KABKOT">ACEH TIMUR</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.694689,4.624986,0.000000 97.695860,4.623309,0.000000 97.698403,4.623766,0.000000 97.699042,4.623881,0.000000 97.700425,4.624577,0.000000 97.701489,4.623836,0.000000 97.701470,4.623811,0.000000 97.700839,4.622969,0.000000 97.699837,4.621693,0.000000 97.698885,4.620359,0.000000 97.698402,4.619714,0.000000 97.698539,4.619516,0.000000 97.699650,4.617922,0.000000 97.700030,4.617852,0.000000 97.700612,4.617746,0.000000 97.701556,4.617566,0.000000 97.701564,4.617571,0.000000 97.701570,4.617574,0.000000 97.701660,4.617623,0.000000 97.703340,4.619092,0.000000 97.703585,4.621298,0.000000 97.704129,4.622642,0.000000 97.704851,4.624422,0.000000 97.704868,4.624428,0.000000 97.705529,4.624635,0.000000 97.706259,4.624813,0.000000 97.706297,4.624822,0.000000 97.707226,4.623641,0.000000 97.707332,4.621996,0.000000 97.706060,4.620165,0.000000 97.706032,4.620125,0.000000 97.706535,4.617224,0.000000 97.706673,4.616430,0.000000 97.706370,4.613130,0.000000 97.706369,4.613129,0.000000 97.705469,4.611995,0.000000 97.705317,4.611804,0.000000 97.705314,4.611800,0.000000 97.705817,4.611026,0.000000 97.706098,4.610595,0.000000 97.709145,4.605877,0.000000 97.711793,4.601743,0.000000 97.709939,4.598445,0.000000 97.708786,4.596396,0.000000 97.702706,4.583590,0.000000 97.699881,4.575951,0.000000 97.699407,4.574668,0.000000 97.694534,4.560753,0.000000 97.693796,4.561389,0.000000 97.684246,4.560621,0.000000 97.680266,4.559533,0.000000 97.673207,4.557603,0.000000 97.667018,4.552895,0.000000 97.659854,4.547445,0.000000 97.656434,4.544865,0.000000 97.653462,4.539723,0.000000 97.647611,4.546359,0.000000 97.641017,4.553838,0.000000 97.639114,4.555996,0.000000 97.635220,4.560413,0.000000 97.650649,4.577589,0.000000 97.656460,4.585730,0.000000 97.663242,4.595232,0.000000 97.668624,4.602625,0.000000 97.677967,4.615459,0.000000 97.682211,4.621288,0.000000 97.682316,4.621416,0.000000 97.688583,4.629052,0.000000 97.692652,4.631789,0.000000 97.694047,4.632749,0.000000 97.694406,4.632538,0.000000 97.694741,4.630068,0.000000 97.695435,4.628771,0.000000 97.694359,4.625489,0.000000 97.694362,4.625485,0.000000 97.694356,4.625464,0.000000 97.694689,4.624986,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>ACEH</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEUNARON"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">ACEH</SimpleData><SimpleData name="KECAMATAN">PEUNARON</SimpleData><SimpleData name="DESA">PEUNARON LAMA</SimpleData><SimpleData name="KABKOT">ACEH TIMUR</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.661289,4.722174,0.000000 97.663426,4.718323,0.000000 97.665160,4.715431,0.000000 97.666055,4.713822,0.000000 97.667821,4.708055,0.000000 97.669068,4.703728,0.000000 97.670161,4.700201,0.000000 97.670211,4.700020,0.000000 97.671095,4.696836,0.000000 97.671472,4.695411,0.000000 97.672961,4.689785,0.000000 97.674532,4.686255,0.000000 97.676099,4.682245,0.000000 97.677668,4.678396,0.000000 97.679866,4.673262,0.000000 97.679855,4.671663,0.000000 97.680048,4.666423,0.000000 97.680125,4.664302,0.000000 97.682155,4.657890,0.000000 97.684031,4.652279,0.000000 97.684575,4.646729,0.000000 97.684578,4.646683,0.000000 97.684656,4.645376,0.000000 97.684645,4.643763,0.000000 97.684760,4.643648,0.000000 97.685783,4.642618,0.000000 97.687624,4.641058,0.000000 97.687649,4.640936,0.000000 97.688033,4.639059,0.000000 97.688236,4.637865,0.000000 97.688290,4.637734,0.000000 97.688322,4.637657,0.000000 97.689158,4.635627,0.000000 97.689427,4.635468,0.000000 97.691626,4.634174,0.000000 97.691909,4.634003,0.000000 97.693394,4.633118,0.000000 97.693486,4.633079,0.000000 97.693668,4.632972,0.000000 97.687596,4.631339,0.000000 97.683412,4.630214,0.000000 97.676281,4.627436,0.000000 97.672267,4.625872,0.000000 97.666644,4.623069,0.000000 97.666718,4.623327,0.000000 97.665528,4.635023,0.000000 97.663229,4.640219,0.000000 97.660516,4.646349,0.000000 97.653801,4.661526,0.000000 97.641976,4.685860,0.000000 97.639059,4.691862,0.000000 97.628050,4.722702,0.000000 97.631783,4.721766,0.000000 97.631965,4.721780,0.000000 97.632744,4.721841,0.000000 97.638947,4.722324,0.000000 97.640883,4.721799,0.000000 97.642187,4.721351,0.000000 97.645397,4.722101,0.000000 97.647834,4.722610,0.000000 97.648918,4.723082,0.000000 97.651530,4.724219,0.000000 97.651592,4.724252,0.000000 97.653895,4.725621,0.000000 97.656482,4.725668,0.000000 97.661289,4.722174,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>ACEH</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEUNARON"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">ACEH</SimpleData><SimpleData name="KECAMATAN">PEUNARON</SimpleData><SimpleData name="DESA">BUKIT TIGA</SimpleData><SimpleData name="KABKOT">ACEH TIMUR</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.613420,4.723360,0.000000 97.613626,4.723304,0.000000 97.615868,4.723344,0.000000 97.616731,4.723359,0.000000 97.616790,4.723360,0.000000 97.619727,4.725026,0.000000 97.621122,4.724989,0.000000 97.623358,4.724930,0.000000 97.625035,4.723813,0.000000 97.625890,4.723244,0.000000 97.625922,4.723222,0.000000 97.627031,4.722957,0.000000 97.628050,4.722702,0.000000 97.639059,4.691862,0.000000 97.641976,4.685860,0.000000 97.653801,4.661526,0.000000 97.660516,4.646349,0.000000 97.663229,4.640219,0.000000 97.665528,4.635023,0.000000 97.666718,4.623327,0.000000 97.666644,4.623069,0.000000 97.664904,4.616987,0.000000 97.659045,4.611689,0.000000 97.656646,4.612229,0.000000 97.653229,4.612998,0.000000 97.653050,4.613317,0.000000 97.648072,4.622194,0.000000 97.641214,4.634421,0.000000 97.603846,4.725353,0.000000 97.608015,4.725251,0.000000 97.611405,4.723906,0.000000 97.612601,4.723582,0.000000 97.612861,4.723512,0.000000 97.613420,4.723360,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>ACEH</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEUNARON"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">ACEH</SimpleData><SimpleData name="KECAMATAN">PEUNARON</SimpleData><SimpleData name="DESA">SRI MULYA</SimpleData><SimpleData name="KABKOT">ACEH TIMUR</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.710733,4.547276,0.000000 97.723188,4.543942,0.000000 97.725597,4.544428,0.000000 97.727180,4.544747,0.000000 97.735681,4.546461,0.000000 97.738703,4.547341,0.000000 97.743615,4.548771,0.000000 97.743639,4.548732,0.000000 97.746884,4.543363,0.000000 97.750132,4.532590,0.000000 97.750323,4.531956,0.000000 97.750321,4.531949,0.000000 97.750292,4.531951,0.000000 97.748691,4.528441,0.000000 97.748587,4.528413,0.000000 97.725061,4.522043,0.000000 97.686738,4.508714,0.000000 97.686460,4.508490,0.000000 97.683734,4.506280,0.000000 97.683486,4.506079,0.000000 97.683464,4.506102,0.000000 97.683325,4.506257,0.000000 97.673011,4.517730,0.000000 97.672997,4.517745,0.000000 97.664852,4.526804,0.000000 97.662645,4.529308,0.000000 97.654089,4.539012,0.000000 97.653462,4.539723,0.000000 97.656434,4.544865,0.000000 97.659854,4.547445,0.000000 97.667018,4.552895,0.000000 97.673207,4.557603,0.000000 97.680266,4.559533,0.000000 97.684246,4.560621,0.000000 97.693796,4.561389,0.000000 97.694534,4.560753,0.000000 97.700095,4.555964,0.000000 97.710733,4.547276,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>ACEH</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEUNARON"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">ACEH</SimpleData><SimpleData name="KECAMATAN">PEUNARON</SimpleData><SimpleData name="DESA">SUMBER MULYA</SimpleData><SimpleData name="KABKOT">ACEH TIMUR</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>97.725597,4.544428,0.000000 97.723188,4.543942,0.000000 97.710733,4.547276,0.000000 97.700095,4.555964,0.000000 97.694534,4.560753,0.000000 97.699407,4.574668,0.000000 97.699881,4.575951,0.000000 97.702706,4.583590,0.000000 97.708786,4.596396,0.000000 97.709939,4.598445,0.000000 97.711793,4.601743,0.000000 97.714059,4.597869,0.000000 97.714223,4.597592,0.000000 97.714769,4.596648,0.000000 97.715856,4.594831,0.000000 97.719963,4.587887,0.000000 97.726981,4.576265,0.000000 97.738082,4.557904,0.000000 97.741978,4.551473,0.000000 97.743615,4.548771,0.000000 97.738703,4.547341,0.000000 97.735681,4.546461,0.000000 97.727180,4.544747,0.000000 97.725597,4.544428,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC PEUNARON" name="KEC PEUNARON"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

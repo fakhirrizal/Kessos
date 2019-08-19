@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC TIUMANG/FID/displayName]</td>
+          <td>$[KEC TIUMANG/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TIUMANG/PROVINSI/displayName]</td>
+          <td>$[KEC TIUMANG/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC TIUMANG/KECAMATAN/displayName]</td>
+          <td>$[KEC TIUMANG/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TIUMANG/DESA/displayName]</td>
+          <td>$[KEC TIUMANG/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC TIUMANG/KABKOT/displayName]</td>
+          <td>$[KEC TIUMANG/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TIUMANG/NAMA_PULAU/displayName]</td>
+          <td>$[KEC TIUMANG/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC TIUMANG/FID/displayName]</td>
+          <td>$[KEC TIUMANG/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TIUMANG/PROVINSI/displayName]</td>
+          <td>$[KEC TIUMANG/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC TIUMANG/KECAMATAN/displayName]</td>
+          <td>$[KEC TIUMANG/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TIUMANG/DESA/displayName]</td>
+          <td>$[KEC TIUMANG/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC TIUMANG/KABKOT/displayName]</td>
+          <td>$[KEC TIUMANG/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC TIUMANG/NAMA_PULAU/displayName]</td>
+          <td>$[KEC TIUMANG/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC TIUMANG</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC TIUMANG"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">TIUMANG</SimpleData><SimpleData name="DESA">KOTO BERINGIN</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.734444,-1.020708,0.000000 101.742477,-1.021712,0.000000 101.753739,-1.018897,0.000000 101.759370,-1.019835,0.000000 101.763182,-1.023648,0.000000 101.762650,-1.025298,0.000000 101.753739,-1.030159,0.000000 101.748108,-1.032974,0.000000 101.748108,-1.035789,0.000000 101.748236,-1.035804,0.000000 101.748179,-1.037777,0.000000 101.746604,-1.038227,0.000000 101.744803,-1.038790,0.000000 101.742665,-1.038227,0.000000 101.742121,-1.038376,0.000000 101.742665,-1.041153,0.000000 101.746942,-1.044866,0.000000 101.748067,-1.045879,0.000000 101.750563,-1.048076,0.000000 101.749771,-1.048503,0.000000 101.747222,-1.048895,0.000000 101.745261,-1.047914,0.000000 101.744673,-1.046738,0.000000 101.740751,-1.046542,0.000000 101.738437,-1.047141,0.000000 101.738052,-1.046667,0.000000 101.737039,-1.045429,0.000000 101.737039,-1.043741,0.000000 101.735014,-1.041828,0.000000 101.732768,-1.038003,0.000000 101.731975,-1.036652,0.000000 101.729050,-1.034064,0.000000 101.724098,-1.033051,0.000000 101.719035,-1.033051,0.000000 101.713633,-1.031926,0.000000 101.710253,-1.032264,0.000000 101.710253,-1.029758,0.000000 101.715349,-1.017869,0.000000 101.717866,-1.014189,0.000000 101.718076,-1.016081,0.000000 101.727461,-1.019835,0.000000 101.734444,-1.020708,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC TIUMANG"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">TIUMANG</SimpleData><SimpleData name="DESA">SIPANGKUR</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.745261,-1.047914,0.000000 101.747222,-1.048895,0.000000 101.749771,-1.048503,0.000000 101.750563,-1.048076,0.000000 101.750880,-1.048355,0.000000 101.751893,-1.050268,0.000000 101.753806,-1.051956,0.000000 101.755020,-1.053170,0.000000 101.754931,-1.053194,0.000000 101.755606,-1.054769,0.000000 101.756056,-1.057019,0.000000 101.756957,-1.060058,0.000000 101.757632,-1.060620,0.000000 101.762020,-1.063884,0.000000 101.764383,-1.066922,0.000000 101.764833,-1.068722,0.000000 101.766184,-1.070973,0.000000 101.767422,-1.072773,0.000000 101.766409,-1.074461,0.000000 101.763821,-1.076487,0.000000 101.761008,-1.076599,0.000000 101.758870,-1.076937,0.000000 101.754933,-1.076500,0.000000 101.754228,-1.077028,0.000000 101.752078,-1.077387,0.000000 101.750286,-1.077028,0.000000 101.748495,-1.076670,0.000000 101.744911,-1.077028,0.000000 101.743809,-1.077763,0.000000 101.743728,-1.077608,0.000000 101.743836,-1.076312,0.000000 101.741686,-1.068428,0.000000 101.741686,-1.061260,0.000000 101.740827,-1.059298,0.000000 101.741143,-1.057719,0.000000 101.740947,-1.055758,0.000000 101.740800,-1.053995,0.000000 101.741315,-1.053531,0.000000 101.740865,-1.052181,0.000000 101.740978,-1.050268,0.000000 101.738437,-1.047141,0.000000 101.740751,-1.046542,0.000000 101.744673,-1.046738,0.000000 101.745261,-1.047914,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC TIUMANG"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">TIUMANG</SimpleData><SimpleData name="DESA">SUNGAI LANGKOK</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.758419,-1.052293,0.000000 101.761458,-1.053194,0.000000 101.767197,-1.052518,0.000000 101.770420,-1.052708,0.000000 101.774072,-1.063057,0.000000 101.774385,-1.063944,0.000000 101.770065,-1.076041,0.000000 101.769693,-1.077083,0.000000 101.773262,-1.081544,0.000000 101.773447,-1.081775,0.000000 101.776701,-1.082182,0.000000 101.780955,-1.082714,0.000000 101.784709,-1.089283,0.000000 101.776262,-1.091160,0.000000 101.776228,-1.091363,0.000000 101.774297,-1.091363,0.000000 101.762112,-1.092438,0.000000 101.753870,-1.092438,0.000000 101.743119,-1.091005,0.000000 101.742561,-1.090768,0.000000 101.742761,-1.089571,0.000000 101.742761,-1.086704,0.000000 101.742402,-1.084196,0.000000 101.743477,-1.080612,0.000000 101.743728,-1.077608,0.000000 101.743809,-1.077763,0.000000 101.744911,-1.077028,0.000000 101.748495,-1.076670,0.000000 101.750286,-1.077028,0.000000 101.752078,-1.077387,0.000000 101.754228,-1.077028,0.000000 101.754933,-1.076500,0.000000 101.758870,-1.076937,0.000000 101.761008,-1.076599,0.000000 101.763821,-1.076487,0.000000 101.766409,-1.074461,0.000000 101.767422,-1.072773,0.000000 101.766184,-1.070973,0.000000 101.764833,-1.068722,0.000000 101.764383,-1.066922,0.000000 101.762020,-1.063884,0.000000 101.757632,-1.060620,0.000000 101.756957,-1.060058,0.000000 101.756056,-1.057019,0.000000 101.755606,-1.054769,0.000000 101.754931,-1.053194,0.000000 101.755020,-1.053170,0.000000 101.758419,-1.052293,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC TIUMANG"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">TIUMANG</SimpleData><SimpleData name="DESA">TIUMANG</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><MultiGeometry><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.756554,-1.036728,0.000000 101.761432,-1.040522,0.000000 101.765000,-1.043297,0.000000 101.768754,-1.047990,0.000000 101.769901,-1.051239,0.000000 101.770420,-1.052708,0.000000 101.767197,-1.052518,0.000000 101.761458,-1.053194,0.000000 101.758419,-1.052293,0.000000 101.755020,-1.053170,0.000000 101.753806,-1.051956,0.000000 101.751893,-1.050268,0.000000 101.750880,-1.048355,0.000000 101.750563,-1.048076,0.000000 101.748067,-1.045879,0.000000 101.746942,-1.044866,0.000000 101.742665,-1.041153,0.000000 101.742121,-1.038376,0.000000 101.742665,-1.038227,0.000000 101.744803,-1.038790,0.000000 101.746604,-1.038227,0.000000 101.748179,-1.037777,0.000000 101.748236,-1.035804,0.000000 101.748618,-1.035846,0.000000 101.756554,-1.036728,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.713633,-1.031926,0.000000 101.719035,-1.033051,0.000000 101.724098,-1.033051,0.000000 101.729050,-1.034064,0.000000 101.731975,-1.036652,0.000000 101.732768,-1.038003,0.000000 101.735014,-1.041828,0.000000 101.737039,-1.043741,0.000000 101.737039,-1.045429,0.000000 101.738052,-1.046667,0.000000 101.738437,-1.047141,0.000000 101.740978,-1.050268,0.000000 101.740865,-1.052181,0.000000 101.741315,-1.053531,0.000000 101.740800,-1.053995,0.000000 101.740947,-1.055758,0.000000 101.741143,-1.057719,0.000000 101.740827,-1.059298,0.000000 101.741686,-1.061260,0.000000 101.741686,-1.068428,0.000000 101.743836,-1.076312,0.000000 101.743728,-1.077608,0.000000 101.743477,-1.080612,0.000000 101.742402,-1.084196,0.000000 101.742761,-1.086704,0.000000 101.742761,-1.089571,0.000000 101.742561,-1.090768,0.000000 101.732671,-1.086572,0.000000 101.731293,-1.085987,0.000000 101.726993,-1.079179,0.000000 101.726206,-1.077999,0.000000 101.721976,-1.071653,0.000000 101.708716,-1.058393,0.000000 101.703276,-1.049585,0.000000 101.705158,-1.047593,0.000000 101.708721,-1.039873,0.000000 101.710253,-1.036552,0.000000 101.710253,-1.032264,0.000000 101.713633,-1.031926,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry></Placemark></Folder><Schema id="KEC TIUMANG" name="KEC TIUMANG"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

@@ -106,6 +106,26 @@ $route['admin_side/hapus_data_rutilahu/(:any)'] = 'admin/Master/delete_rutilahu_
 $route['admin_side/hapus_data_anggota_rutilahu/(:any)'] = 'admin/Master/delete_rutilahu_member/$1';
 
 $route['admin_side/sarling'] = 'admin/Master/sarling_data';
+$route['admin_side/tambah_data_sarling'] = 'admin/Master/add_sarling_data';
+$route['admin_side/simpan_data_sarling'] = 'admin/Master/save_sarling_data';
+$route['admin_side/detil_data_sarling/(:any)'] = 'admin/Master/detail_sarling_data/$1';
+$route['admin_side/ubah_data_sarling/(:any)'] = 'admin/Master/edit_sarling_data/$1';
+$route['admin_side/perbarui_data_sarling'] = 'admin/Master/update_sarling_data';
+$route['admin_side/simpan_data_anggota_sarling'] = 'admin/Master/save_sarling_member';
+$route['admin_side/perbarui_data_anggota_sarling'] = 'admin/Master/update_sarling_member';
+$route['admin_side/atur_ulang_kata_sandi_anggota_sarling/(:any)'] = 'admin/Master/reset_password_sarling_member_account/$1';
+$route['admin_side/hapus_data_sarling/(:any)'] = 'admin/Master/delete_sarling_data/$1';
+$route['admin_side/hapus_data_anggota_sarling/(:any)'] = 'admin/Master/delete_sarling_member/$1';
+
+$route['admin_side/data_provinsi'] = 'admin/Map/province';
+$route['admin_side/tambah_data_provinsi'] = 'admin/Map/add_province';
+$route['admin_side/simpan_data_provinsi'] = 'admin/Map/save_province';
+$route['admin_side/ubah_data_provinsi/(:any)'] = 'admin/Map/edit_province/$1';
+$route['admin_side/perbarui_data_provinsi'] = 'admin/Map/update_province_data';
+$route['admin_side/hapus_data_provinsi/(:any)'] = 'admin/Map/delete_province/$1';
+$route['admin_side/data_kabkot'] = 'admin/Map/city';
+$route['admin_side/data_kecamatan'] = 'admin/Map/sub_district';
+$route['admin_side/data_kelurahan'] = 'admin/Map/village';
 
 $route['admin_side/laporan'] = 'admin/Report';
 

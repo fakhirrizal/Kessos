@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Teluk_Bintuni" name="Teluk_Bintuni"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Teluk_Bintuni/FID/displayName]</td>
+          <td>$[Teluk_Bintuni/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Teluk_Bintuni/PROVINSI/displayName]</td>
+          <td>$[Teluk_Bintuni/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Teluk_Bintuni/KABKOT/displayName]</td>
+          <td>$[Teluk_Bintuni/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Teluk_Bintuni/KECAMATAN/displayName]</td>
+          <td>$[Teluk_Bintuni/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Teluk_Bintuni/DESA/displayName]</td>
+          <td>$[Teluk_Bintuni/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Teluk_Bintuni</name><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.757710,-1.819618,0.000000 132.743237,-1.849328,0.000000 132.739197,-1.849263,0.000000 132.737015,-1.848013,0.000000 132.735325,-1.848067,0.000000 132.715500,-1.848703,0.000000 132.688019,-1.849195,0.000000 132.668369,-1.849301,0.000000 132.665359,-1.849317,0.000000 132.646835,-1.848730,0.000000 132.640625,-1.848533,0.000000 132.634338,-1.848665,0.000000 132.618530,-1.848996,0.000000 132.608351,-1.849267,0.000000 132.633286,-1.811322,0.000000 132.649743,-1.786279,0.000000 132.659471,-1.720620,0.000000 132.658376,-1.706937,0.000000 132.665127,-1.705746,0.000000 132.691084,-1.701165,0.000000 132.708500,-1.696134,0.000000 132.777083,-1.676321,0.000000 132.781061,-1.691438,0.000000 132.781061,-1.728098,0.000000 132.781061,-1.748494,0.000000 132.781061,-1.771688,0.000000 132.757710,-1.819618,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Teluk_Bintuni"><SimpleData name="FID">87</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">TELUK BINTUNI</SimpleData><SimpleData name="KECAMATAN">MOSKONA BARAT</SimpleData><SimpleData name="DESA">MEYERGA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.642506,-1.583243,0.000000 132.647311,-1.618484,0.000000 132.650896,-1.638800,0.000000 132.654607,-1.659825,0.000000 132.658376,-1.706937,0.000000 132.649743,-1.708461,0.000000 132.596243,-1.730347,0.000000 132.564630,-1.732779,0.000000 132.515385,-1.736427,0.000000 132.516708,-1.733414,0.000000 132.524521,-1.705240,0.000000 132.531952,-1.689267,0.000000 132.532913,-1.687213,0.000000 132.539864,-1.672272,0.000000 132.541674,-1.668381,0.000000 132.542553,-1.666492,0.000000 132.549602,-1.651340,0.000000 132.549866,-1.650772,0.000000 132.552288,-1.643220,0.000000 132.553003,-1.640988,0.000000 132.568054,-1.594052,0.000000 132.569824,-1.584100,0.000000 132.585998,-1.584510,0.000000 132.602036,-1.584653,0.000000 132.614517,-1.585045,0.000000 132.617676,-1.584766,0.000000 132.633850,-1.583334,0.000000 132.642506,-1.583243,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Teluk_Bintuni"><SimpleData name="FID">88</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">TELUK BINTUNI</SimpleData><SimpleData name="KECAMATAN">MOSKONA BARAT</SimpleData><SimpleData name="DESA">MACOK</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.608351,-1.849267,0.000000 132.575256,-1.850147,0.000000 132.562515,-1.851324,0.000000 132.552841,-1.852218,0.000000 132.523300,-1.850886,0.000000 132.502335,-1.849278,0.000000 132.487564,-1.849473,0.000000 132.477249,-1.848084,0.000000 132.484160,-1.818155,0.000000 132.487167,-1.805134,0.000000 132.496719,-1.781364,0.000000 132.497461,-1.779516,0.000000 132.506592,-1.756793,0.000000 132.508240,-1.752697,0.000000 132.515385,-1.736427,0.000000 132.564630,-1.732779,0.000000 132.596243,-1.730347,0.000000 132.649743,-1.708461,0.000000 132.658376,-1.706937,0.000000 132.659471,-1.720620,0.000000 132.649743,-1.786279,0.000000 132.633286,-1.811322,0.000000 132.608351,-1.849267,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Teluk_Bintuni"><SimpleData name="FID">89</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">TELUK BINTUNI</SimpleData><SimpleData name="KECAMATAN">MOSKONA BARAT</SimpleData><SimpleData name="DESA">ISTIKEM</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.762956,-1.582541,0.000000 132.766470,-1.596597,0.000000 132.768902,-1.645234,0.000000 132.777083,-1.676321,0.000000 132.708500,-1.696134,0.000000 132.691084,-1.701165,0.000000 132.665127,-1.705746,0.000000 132.658376,-1.706937,0.000000 132.654607,-1.659825,0.000000 132.650896,-1.638800,0.000000 132.647311,-1.618484,0.000000 132.642506,-1.583243,0.000000 132.656403,-1.583098,0.000000 132.677002,-1.582987,0.000000 132.694519,-1.582994,0.000000 132.696808,-1.582995,0.000000 132.709355,-1.582856,0.000000 132.717072,-1.582771,0.000000 132.734510,-1.582406,0.000000 132.739166,-1.582308,0.000000 132.761719,-1.582415,0.000000 132.762956,-1.582541,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Teluk_Bintuni"><SimpleData name="FID">90</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">TELUK BINTUNI</SimpleData><SimpleData name="KECAMATAN">MOSKONA BARAT</SimpleData><SimpleData name="DESA">MAJNIK</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PANAI HULU/FID/displayName]</td>
+          <td>$[KEC PANAI HULU/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PANAI HULU/PROVINSI/displayName]</td>
+          <td>$[KEC PANAI HULU/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PANAI HULU/KECAMATAN/displayName]</td>
+          <td>$[KEC PANAI HULU/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PANAI HULU/DESA/displayName]</td>
+          <td>$[KEC PANAI HULU/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PANAI HULU/KABKOT/displayName]</td>
+          <td>$[KEC PANAI HULU/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PANAI HULU/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PANAI HULU/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PANAI HULU/FID/displayName]</td>
+          <td>$[KEC PANAI HULU/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PANAI HULU/PROVINSI/displayName]</td>
+          <td>$[KEC PANAI HULU/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PANAI HULU/KECAMATAN/displayName]</td>
+          <td>$[KEC PANAI HULU/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PANAI HULU/DESA/displayName]</td>
+          <td>$[KEC PANAI HULU/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PANAI HULU/KABKOT/displayName]</td>
+          <td>$[KEC PANAI HULU/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PANAI HULU/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PANAI HULU/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC PANAI HULU</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PANAI HULU"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PANAI HULU</SimpleData><SimpleData name="DESA">SEI SENTOSA</SimpleData><SimpleData name="KABKOT">LABUHANBATU</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.137859,2.439610,0.000000 100.129564,2.422914,0.000000 100.129548,2.422927,0.000000 100.129298,2.428217,0.000000 100.129616,2.453527,0.000000 100.129617,2.453528,0.000000 100.129618,2.453632,0.000000 100.129625,2.454166,0.000000 100.144762,2.460186,0.000000 100.145480,2.461289,0.000000 100.149859,2.455357,0.000000 100.151501,2.455337,0.000000 100.137859,2.439610,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PANAI HULU"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PANAI HULU</SimpleData><SimpleData name="DESA">CINTA MAKMUR</SimpleData><SimpleData name="KABKOT">LABUHANBATU</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.144762,2.460186,0.000000 100.129625,2.454166,0.000000 100.129631,2.454651,0.000000 100.127406,2.464793,0.000000 100.128648,2.472302,0.000000 100.129847,2.472855,0.000000 100.136418,2.473562,0.000000 100.145480,2.461289,0.000000 100.144762,2.460186,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PANAI HULU"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PANAI HULU</SimpleData><SimpleData name="DESA">AJAMU</SimpleData><SimpleData name="KABKOT">LABUHANBATU</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.163203,2.466025,0.000000 100.162983,2.454347,0.000000 100.173131,2.454228,0.000000 100.193046,2.448379,0.000000 100.194069,2.446431,0.000000 100.194484,2.445643,0.000000 100.193171,2.440118,0.000000 100.195933,2.435665,0.000000 100.194268,2.429547,0.000000 100.193156,2.423428,0.000000 100.193149,2.415083,0.000000 100.189825,2.408410,0.000000 100.187053,2.401737,0.000000 100.185390,2.397288,0.000000 100.184281,2.393394,0.000000 100.182064,2.388946,0.000000 100.181682,2.386780,0.000000 100.173759,2.378382,0.000000 100.172649,2.373376,0.000000 100.175414,2.373374,0.000000 100.177068,2.366697,0.000000 100.191445,2.362790,0.000000 100.193653,2.358337,0.000000 100.201483,2.351840,0.000000 100.198066,2.344982,0.000000 100.194742,2.337752,0.000000 100.191545,2.331375,0.000000 100.191410,2.325307,0.000000 100.194723,2.311732,0.000000 100.195266,2.303260,0.000000 100.191943,2.297699,0.000000 100.187962,2.291383,0.000000 100.187933,2.288470,0.000000 100.187602,2.251767,0.000000 100.187602,2.251766,0.000000 100.161306,2.249627,0.000000 100.153994,2.251670,0.000000 100.153994,2.251653,0.000000 100.153994,2.251432,0.000000 100.151001,2.249636,0.000000 100.149947,2.342797,0.000000 100.147187,2.346691,0.000000 100.168202,2.347233,0.000000 100.169304,2.342225,0.000000 100.177047,2.342218,0.000000 100.177060,2.357795,0.000000 100.151065,2.357817,0.000000 100.151086,2.382296,0.000000 100.141786,2.382729,0.000000 100.143957,2.397673,0.000000 100.145576,2.408448,0.000000 100.134514,2.408458,0.000000 100.130093,2.413469,0.000000 100.129828,2.418196,0.000000 100.129564,2.422914,0.000000 100.137859,2.439610,0.000000 100.151501,2.455337,0.000000 100.159565,2.455238,0.000000 100.159381,2.466028,0.000000 100.163203,2.466025,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PANAI HULU"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PANAI HULU</SimpleData><SimpleData name="DESA">TANJUNG SARANG E</SimpleData><SimpleData name="KABKOT">LABUHANBATU</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.158841,2.523846,0.000000 100.158896,2.523818,0.000000 100.158900,2.523821,0.000000 100.158905,2.523814,0.000000 100.158903,2.523815,0.000000 100.158900,2.523812,0.000000 100.159430,2.522860,0.000000 100.160983,2.520065,0.000000 100.162239,2.517805,0.000000 100.165341,2.514277,0.000000 100.165337,2.510145,0.000000 100.165330,2.502119,0.000000 100.165323,2.493785,0.000000 100.165321,2.491782,0.000000 100.147115,2.480360,0.000000 100.147113,2.480361,0.000000 100.147113,2.479961,0.000000 100.136418,2.473563,0.000000 100.136418,2.473562,0.000000 100.129847,2.472855,0.000000 100.128648,2.472302,0.000000 100.128648,2.472304,0.000000 100.124379,2.475796,0.000000 100.118891,2.489764,0.000000 100.118890,2.489763,0.000000 100.118889,2.489764,0.000000 100.113582,2.491752,0.000000 100.109563,2.491770,0.000000 100.110386,2.500786,0.000000 100.126998,2.507453,0.000000 100.141186,2.505315,0.000000 100.158841,2.523846,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PANAI HULU"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PANAI HULU</SimpleData><SimpleData name="DESA">SEI JAWI JAWI</SimpleData><SimpleData name="KABKOT">LABUHANBATU</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.105282,2.546191,0.000000 100.109091,2.545762,0.000000 100.112897,2.546154,0.000000 100.112940,2.546095,0.000000 100.113153,2.545801,0.000000 100.136595,2.543328,0.000000 100.136602,2.543304,0.000000 100.147865,2.542937,0.000000 100.149065,2.542886,0.000000 100.149053,2.528779,0.000000 100.158841,2.523846,0.000000 100.141186,2.505315,0.000000 100.126998,2.507453,0.000000 100.110386,2.500786,0.000000 100.109563,2.491770,0.000000 100.107525,2.491779,0.000000 100.100086,2.490944,0.000000 100.096245,2.489192,0.000000 100.093101,2.485684,0.000000 100.091583,2.479718,0.000000 100.089719,2.476677,0.000000 100.078082,2.472942,0.000000 100.074823,2.470955,0.000000 100.073309,2.468967,0.000000 100.073142,2.466209,0.000000 100.069230,2.458793,0.000000 100.069228,2.458790,0.000000 100.060387,2.459850,0.000000 100.043279,2.460338,0.000000 100.022886,2.461481,0.000000 100.040051,2.490759,0.000000 100.047502,2.496721,0.000000 100.052511,2.504908,0.000000 100.054093,2.510443,0.000000 100.058462,2.525733,0.000000 100.066147,2.532748,0.000000 100.069555,2.537250,0.000000 100.072685,2.540767,0.000000 100.072876,2.542855,0.000000 100.072986,2.544062,0.000000 100.074542,2.544716,0.000000 100.074623,2.544714,0.000000 100.074623,2.544716,0.000000 100.080848,2.544550,0.000000 100.083968,2.545408,0.000000 100.088920,2.545546,0.000000 100.092903,2.544760,0.000000 100.097042,2.543567,0.000000 100.101742,2.544345,0.000000 100.104467,2.545707,0.000000 100.104468,2.545705,0.000000 100.105282,2.546191,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PANAI HULU"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PANAI HULU</SimpleData><SimpleData name="DESA">TELUK SENTOSA</SimpleData><SimpleData name="KABKOT">LABUHANBATU</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><MultiGeometry><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.177429,2.466988,0.000000 100.187753,2.462432,0.000000 100.188207,2.461056,0.000000 100.191294,2.451716,0.000000 100.191341,2.451625,0.000000 100.192931,2.448598,0.000000 100.193046,2.448379,0.000000 100.173131,2.454228,0.000000 100.162983,2.454347,0.000000 100.163203,2.466025,0.000000 100.164558,2.466024,0.000000 100.165388,2.466023,0.000000 100.177429,2.466988,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.159381,2.466028,0.000000 100.159565,2.455238,0.000000 100.151501,2.455337,0.000000 100.149859,2.455357,0.000000 100.145480,2.461289,0.000000 100.136418,2.473562,0.000000 100.136418,2.473563,0.000000 100.147113,2.479961,0.000000 100.147111,2.476569,0.000000 100.147111,2.476285,0.000000 100.147106,2.469303,0.000000 100.155092,2.466032,0.000000 100.159381,2.466028,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PANAI HULU"><SimpleData name="FID">6</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PANAI HULU</SimpleData><SimpleData name="DESA">MERANTI PAHAM</SimpleData><SimpleData name="KABKOT">LABUHANBATU</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><MultiGeometry><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.177060,2.357795,0.000000 100.177047,2.342218,0.000000 100.169304,2.342225,0.000000 100.168202,2.347233,0.000000 100.147187,2.346691,0.000000 100.147185,2.346694,0.000000 100.141654,2.346698,0.000000 100.137789,2.355603,0.000000 100.141786,2.382729,0.000000 100.151086,2.382296,0.000000 100.151065,2.357817,0.000000 100.177060,2.357795,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.202499,2.353879,0.000000 100.201483,2.351840,0.000000 100.193653,2.358337,0.000000 100.191445,2.362790,0.000000 100.177068,2.366697,0.000000 100.175414,2.373374,0.000000 100.172649,2.373376,0.000000 100.173759,2.378382,0.000000 100.181682,2.386780,0.000000 100.181295,2.384591,0.000000 100.180579,2.378521,0.000000 100.191937,2.375654,0.000000 100.193352,2.368868,0.000000 100.196189,2.365652,0.000000 100.202223,2.364575,0.000000 100.202847,2.362827,0.000000 100.203392,2.361301,0.000000 100.202499,2.353879,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry></Placemark></Folder><Schema id="KEC PANAI HULU" name="KEC PANAI HULU"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

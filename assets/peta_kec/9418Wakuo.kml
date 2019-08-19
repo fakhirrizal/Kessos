@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Tolikara" name="Tolikara"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Tolikara/FID/displayName]</td>
+          <td>$[Tolikara/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Tolikara/PROVINSI/displayName]</td>
+          <td>$[Tolikara/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Tolikara/KABKOT/displayName]</td>
+          <td>$[Tolikara/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Tolikara/KECAMATAN/displayName]</td>
+          <td>$[Tolikara/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Tolikara/DESA/displayName]</td>
+          <td>$[Tolikara/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Tolikara</name><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.424349,-3.661885,0.000000 138.431240,-3.662161,0.000000 138.434965,-3.658790,0.000000 138.435328,-3.659237,0.000000 138.435237,-3.659410,0.000000 138.432020,-3.665576,0.000000 138.431840,-3.666003,0.000000 138.430278,-3.669694,0.000000 138.427381,-3.667122,0.000000 138.424625,-3.667122,0.000000 138.421868,-3.669052,0.000000 138.419112,-3.669052,0.000000 138.415196,-3.669131,0.000000 138.415174,-3.668750,0.000000 138.414977,-3.665193,0.000000 138.417734,-3.661609,0.000000 138.421075,-3.658053,0.000000 138.422419,-3.659128,0.000000 138.424349,-3.661885,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Tolikara"><SimpleData name="FID">70</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">TOLIKARA</SimpleData><SimpleData name="KECAMATAN">WAKUO</SimpleData><SimpleData name="DESA">KUMBUR</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.426003,-3.689449,0.000000 138.430138,-3.690828,0.000000 138.433629,-3.690074,0.000000 138.434272,-3.694135,0.000000 138.430964,-3.694687,0.000000 138.428484,-3.696065,0.000000 138.424073,-3.696616,0.000000 138.420214,-3.697994,0.000000 138.415759,-3.699503,0.000000 138.415804,-3.691655,0.000000 138.420214,-3.687244,0.000000 138.420283,-3.687017,0.000000 138.426003,-3.689449,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Tolikara"><SimpleData name="FID">71</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">TOLIKARA</SimpleData><SimpleData name="KECAMATAN">WAKUO</SimpleData><SimpleData name="DESA">WAMA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.420214,-3.687244,0.000000 138.415804,-3.691655,0.000000 138.415759,-3.699503,0.000000 138.415305,-3.699657,0.000000 138.414701,-3.699097,0.000000 138.409464,-3.697167,0.000000 138.409294,-3.696913,0.000000 138.405605,-3.691379,0.000000 138.404262,-3.686812,0.000000 138.408086,-3.687520,0.000000 138.411118,-3.683661,0.000000 138.411118,-3.679802,0.000000 138.413923,-3.676451,0.000000 138.414366,-3.676475,0.000000 138.414701,-3.676494,0.000000 138.417734,-3.678424,0.000000 138.421077,-3.679710,0.000000 138.421868,-3.681731,0.000000 138.420283,-3.687017,0.000000 138.420214,-3.687244,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Tolikara"><SimpleData name="FID">72</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">TOLIKARA</SimpleData><SimpleData name="KECAMATAN">WAKUO</SimpleData><SimpleData name="DESA">KWARINI</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.425452,-3.678975,0.000000 138.421317,-3.679802,0.000000 138.421077,-3.679710,0.000000 138.417734,-3.678424,0.000000 138.414701,-3.676494,0.000000 138.414366,-3.676475,0.000000 138.415253,-3.670154,0.000000 138.415196,-3.669131,0.000000 138.419112,-3.669052,0.000000 138.421868,-3.669052,0.000000 138.424625,-3.667122,0.000000 138.427381,-3.667122,0.000000 138.430278,-3.669694,0.000000 138.428988,-3.672743,0.000000 138.428987,-3.676770,0.000000 138.425452,-3.678975,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Tolikara"><SimpleData name="FID">74</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">TOLIKARA</SimpleData><SimpleData name="KECAMATAN">WAKUO</SimpleData><SimpleData name="DESA">WEYAGE</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.428988,-3.678532,0.000000 138.431193,-3.684596,0.000000 138.433441,-3.688887,0.000000 138.434018,-3.689989,0.000000 138.433629,-3.690074,0.000000 138.430138,-3.690828,0.000000 138.426003,-3.689449,0.000000 138.420283,-3.687017,0.000000 138.421868,-3.681731,0.000000 138.421077,-3.679710,0.000000 138.421317,-3.679802,0.000000 138.425452,-3.678975,0.000000 138.428987,-3.676770,0.000000 138.428988,-3.678511,0.000000 138.428988,-3.678532,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Tolikara"><SimpleData name="FID">360</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">TOLIKARA</SimpleData><SimpleData name="KECAMATAN">WAKUO</SimpleData><SimpleData name="DESA">YEBENA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

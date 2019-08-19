@@ -110,7 +110,7 @@
 			infoWindow.open(map, marker);
 		});
 		}
-		var situs = 'https://kppnpan.id/assets/peta_kabupaten/';
+		var situs = 'http://kemensos.aplikasiku.online/assets/peta_kabupaten/';
 		var nama_file = '<?php echo $kml ?>';
 		var situs_full = situs.concat(nama_file);
 		var kmldashboard = new google.maps.KmlLayer({

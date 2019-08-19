@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Deiyai" name="Deiyai"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Deiyai/FID/displayName]</td>
+          <td>$[Deiyai/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Deiyai/PROVINSI/displayName]</td>
+          <td>$[Deiyai/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Deiyai/KABKOT/displayName]</td>
+          <td>$[Deiyai/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Deiyai/KECAMATAN/displayName]</td>
+          <td>$[Deiyai/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Deiyai/DESA/displayName]</td>
+          <td>$[Deiyai/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Deiyai</name><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>136.278584,-4.232776,0.000000 136.277124,-4.238614,0.000000 136.276638,-4.245911,0.000000 136.276151,-4.249317,0.000000 136.276151,-4.255641,0.000000 136.274966,-4.261472,0.000000 136.271019,-4.259424,0.000000 136.268269,-4.259084,0.000000 136.266552,-4.259777,0.000000 136.265439,-4.262020,0.000000 136.265534,-4.267450,0.000000 136.265545,-4.274433,0.000000 136.265361,-4.275765,0.000000 136.264781,-4.279951,0.000000 136.263672,-4.284436,0.000000 136.261529,-4.287629,0.000000 136.257583,-4.291169,0.000000 136.253808,-4.294107,0.000000 136.251405,-4.295576,0.000000 136.249086,-4.295752,0.000000 136.246507,-4.294894,0.000000 136.241776,-4.290937,0.000000 136.236180,-4.284049,0.000000 136.232476,-4.277935,0.000000 136.229395,-4.274019,0.000000 136.222771,-4.268340,0.000000 136.216921,-4.263436,0.000000 136.211420,-4.261203,0.000000 136.210861,-4.260906,0.000000 136.210385,-4.260652,0.000000 136.209818,-4.260349,0.000000 136.206261,-4.258453,0.000000 136.201014,-4.254582,0.000000 136.195682,-4.250711,0.000000 136.191037,-4.246494,0.000000 136.186134,-4.242881,0.000000 136.180977,-4.240906,0.000000 136.174359,-4.238761,0.000000 136.169978,-4.238595,0.000000 136.163964,-4.238432,0.000000 136.156145,-4.237668,0.000000 136.149373,-4.238718,0.000000 136.139757,-4.242439,0.000000 136.135896,-4.245031,0.000000 136.132293,-4.249605,0.000000 136.125943,-4.254614,0.000000 136.123025,-4.256602,0.000000 136.118903,-4.257470,0.000000 136.112115,-4.256704,0.000000 136.105327,-4.256110,0.000000 136.098281,-4.254913,0.000000 136.096548,-4.254646,0.000000 136.094558,-4.254284,0.000000 136.090059,-4.243408,0.000000 136.085661,-4.224838,0.000000 136.087127,-4.209689,0.000000 136.088593,-4.191608,0.000000 136.090547,-4.175971,0.000000 136.089081,-4.159356,0.000000 136.087615,-4.138343,0.000000 136.088593,-4.121239,0.000000 136.089570,-4.106579,0.000000 136.090625,-4.087881,0.000000 136.092147,-4.079339,0.000000 136.093592,-4.071391,0.000000 136.093663,-4.070509,0.000000 136.100658,-4.072374,0.000000 136.102636,-4.075341,0.000000 136.105272,-4.078637,0.000000 136.112524,-4.082262,0.000000 136.125940,-4.084629,0.000000 136.129334,-4.085229,0.000000 136.146803,-4.087536,0.000000 136.157681,-4.089514,0.000000 136.159658,-4.092151,0.000000 136.162954,-4.095117,0.000000 136.166910,-4.098413,0.000000 136.171524,-4.101050,0.000000 136.175150,-4.104676,0.000000 136.180753,-4.109620,0.000000 136.186027,-4.113576,0.000000 136.187148,-4.114696,0.000000 136.190312,-4.117861,0.000000 136.193279,-4.122145,0.000000 136.200530,-4.127090,0.000000 136.204156,-4.134671,0.000000 136.207452,-4.142581,0.000000 136.210748,-4.152470,0.000000 136.213385,-4.161369,0.000000 136.217340,-4.168291,0.000000 136.230195,-4.173235,0.000000 136.241732,-4.175543,0.000000 136.249642,-4.179498,0.000000 136.260190,-4.181146,0.000000 136.266452,-4.183124,0.000000 136.273719,-4.184126,0.000000 136.274205,-4.188991,0.000000 136.277611,-4.194342,0.000000 136.281989,-4.202126,0.000000 136.278584,-4.211370,0.000000 136.277611,-4.216235,0.000000 136.276151,-4.219640,0.000000 136.278584,-4.224992,0.000000 136.278584,-4.232776,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Deiyai"><SimpleData name="FID">24</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">DEIYAI</SimpleData><SimpleData name="KECAMATAN">KAPIRAYA</SimpleData><SimpleData name="DESA">KOMAUTO</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

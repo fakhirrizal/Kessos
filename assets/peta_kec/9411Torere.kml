@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Puncak_Jaya" name="Puncak_Jaya"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Puncak_Jaya/FID/displayName]</td>
+          <td>$[Puncak_Jaya/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Puncak_Jaya/PROVINSI/displayName]</td>
+          <td>$[Puncak_Jaya/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Puncak_Jaya/KABKOT/displayName]</td>
+          <td>$[Puncak_Jaya/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Puncak_Jaya/KECAMATAN/displayName]</td>
+          <td>$[Puncak_Jaya/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Puncak_Jaya/DESA/displayName]</td>
+          <td>$[Puncak_Jaya/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Puncak_Jaya</name><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.110831,-3.650174,0.000000 138.110299,-3.656297,0.000000 138.101560,-3.654228,0.000000 138.099356,-3.653705,0.000000 138.085233,-3.651057,0.000000 138.073757,-3.649292,0.000000 138.068902,-3.636492,0.000000 138.070226,-3.626341,0.000000 138.068019,-3.613542,0.000000 138.065813,-3.606480,0.000000 138.060516,-3.600301,0.000000 138.052572,-3.591474,0.000000 138.038890,-3.582646,0.000000 138.046834,-3.575585,0.000000 138.053896,-3.570288,0.000000 138.060075,-3.563668,0.000000 138.061629,-3.559894,0.000000 138.071109,-3.565875,0.000000 138.078612,-3.573378,0.000000 138.083908,-3.580881,0.000000 138.087881,-3.587060,0.000000 138.091412,-3.594122,0.000000 138.091412,-3.601184,0.000000 138.091853,-3.608245,0.000000 138.095384,-3.616190,0.000000 138.098915,-3.621927,0.000000 138.102887,-3.627665,0.000000 138.108183,-3.635168,0.000000 138.109066,-3.640465,0.000000 138.111273,-3.645761,0.000000 138.110831,-3.650174,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Puncak_Jaya"><SimpleData name="FID">40</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PUNCAK JAYA</SimpleData><SimpleData name="KECAMATAN">TORERE</SimpleData><SimpleData name="DESA">GUBUGANI</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.176153,-3.653264,0.000000 138.177035,-3.661650,0.000000 138.164136,-3.661064,0.000000 138.157616,-3.660767,0.000000 138.150604,-3.659913,0.000000 138.139520,-3.658560,0.000000 138.128319,-3.658138,0.000000 138.128486,-3.648850,0.000000 138.127603,-3.642671,0.000000 138.126720,-3.636934,0.000000 138.129810,-3.628106,0.000000 138.131575,-3.621927,0.000000 138.133782,-3.613983,0.000000 138.133782,-3.606480,0.000000 138.132899,-3.590150,0.000000 138.129810,-3.582646,0.000000 138.129433,-3.581235,0.000000 138.128044,-3.576026,0.000000 138.128044,-3.572054,0.000000 138.129512,-3.566158,0.000000 138.129512,-3.566157,0.000000 138.133579,-3.567832,0.000000 138.137243,-3.569341,0.000000 138.145938,-3.577415,0.000000 138.151072,-3.582182,0.000000 138.157462,-3.588572,0.000000 138.160949,-3.592059,0.000000 138.163916,-3.595406,0.000000 138.168124,-3.600153,0.000000 138.183279,-3.609109,0.000000 138.180566,-3.613542,0.000000 138.176153,-3.620603,0.000000 138.174387,-3.627665,0.000000 138.174829,-3.637816,0.000000 138.174387,-3.645319,0.000000 138.176153,-3.653264,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Puncak_Jaya"><SimpleData name="FID">41</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PUNCAK JAYA</SimpleData><SimpleData name="KECAMATAN">TORERE</SimpleData><SimpleData name="DESA">TUMBIWOLU</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>138.128486,-3.648850,0.000000 138.128319,-3.658138,0.000000 138.116128,-3.657678,0.000000 138.110299,-3.656297,0.000000 138.110831,-3.650174,0.000000 138.111273,-3.645761,0.000000 138.109066,-3.640465,0.000000 138.108183,-3.635168,0.000000 138.102887,-3.627665,0.000000 138.098915,-3.621927,0.000000 138.095384,-3.616190,0.000000 138.091853,-3.608245,0.000000 138.091412,-3.601184,0.000000 138.091412,-3.594122,0.000000 138.087881,-3.587060,0.000000 138.083908,-3.580881,0.000000 138.078612,-3.573378,0.000000 138.071109,-3.565875,0.000000 138.061629,-3.559894,0.000000 138.063165,-3.556165,0.000000 138.066254,-3.549986,0.000000 138.066695,-3.542483,0.000000 138.066695,-3.537186,0.000000 138.067054,-3.535634,0.000000 138.068019,-3.531449,0.000000 138.068605,-3.529806,0.000000 138.071062,-3.522916,0.000000 138.076989,-3.530818,0.000000 138.084891,-3.540695,0.000000 138.089788,-3.544776,0.000000 138.096744,-3.550573,0.000000 138.100260,-3.552624,0.000000 138.108598,-3.557487,0.000000 138.118196,-3.561487,0.000000 138.120451,-3.562426,0.000000 138.123151,-3.563538,0.000000 138.129512,-3.566157,0.000000 138.129512,-3.566158,0.000000 138.128044,-3.572054,0.000000 138.128044,-3.576026,0.000000 138.129433,-3.581235,0.000000 138.129810,-3.582646,0.000000 138.132899,-3.590150,0.000000 138.133782,-3.606480,0.000000 138.133782,-3.613983,0.000000 138.131575,-3.621927,0.000000 138.129810,-3.628106,0.000000 138.126720,-3.636934,0.000000 138.127603,-3.642671,0.000000 138.128486,-3.648850,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Puncak_Jaya"><SimpleData name="FID">42</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PUNCAK JAYA</SimpleData><SimpleData name="KECAMATAN">TORERE</SimpleData><SimpleData name="DESA">AMBOK</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SITAHUIS/FID/displayName]</td>
+          <td>$[KEC SITAHUIS/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITAHUIS/PROVINSI/displayName]</td>
+          <td>$[KEC SITAHUIS/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITAHUIS/KECAMATAN/displayName]</td>
+          <td>$[KEC SITAHUIS/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITAHUIS/DESA/displayName]</td>
+          <td>$[KEC SITAHUIS/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITAHUIS/KABKOT/displayName]</td>
+          <td>$[KEC SITAHUIS/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITAHUIS/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SITAHUIS/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SITAHUIS/FID/displayName]</td>
+          <td>$[KEC SITAHUIS/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITAHUIS/PROVINSI/displayName]</td>
+          <td>$[KEC SITAHUIS/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITAHUIS/KECAMATAN/displayName]</td>
+          <td>$[KEC SITAHUIS/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITAHUIS/DESA/displayName]</td>
+          <td>$[KEC SITAHUIS/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITAHUIS/KABKOT/displayName]</td>
+          <td>$[KEC SITAHUIS/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITAHUIS/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SITAHUIS/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC SITAHUIS</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITAHUIS"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITAHUIS</SimpleData><SimpleData name="DESA">SIMANINGGIR</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.817952,1.758866,0.000000 98.815722,1.756060,0.000000 98.813210,1.753110,0.000000 98.810698,1.752057,0.000000 98.806930,1.751003,0.000000 98.804627,1.747211,0.000000 98.801697,1.745526,0.000000 98.799426,1.743431,0.000000 98.792747,1.751142,0.000000 98.794812,1.756404,0.000000 98.792348,1.756402,0.000000 98.792923,1.766360,0.000000 98.793397,1.772251,0.000000 98.795987,1.771527,0.000000 98.799684,1.769910,0.000000 98.799684,1.767484,0.000000 98.800488,1.765705,0.000000 98.805311,1.765220,0.000000 98.814474,1.764250,0.000000 98.817952,1.758866,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITAHUIS"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITAHUIS</SimpleData><SimpleData name="DESA">BONAN DOLOK</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.809120,1.790067,0.000000 98.810195,1.789932,0.000000 98.810452,1.790454,0.000000 98.810960,1.790378,0.000000 98.811282,1.789608,0.000000 98.814626,1.790270,0.000000 98.814801,1.790176,0.000000 98.815056,1.790473,0.000000 98.815808,1.790135,0.000000 98.816079,1.789808,0.000000 98.822249,1.787853,0.000000 98.828553,1.783424,0.000000 98.832056,1.775067,0.000000 98.833885,1.766357,0.000000 98.831573,1.765826,0.000000 98.827654,1.763855,0.000000 98.825142,1.760274,0.000000 98.821374,1.759010,0.000000 98.819331,1.759146,0.000000 98.818233,1.759220,0.000000 98.817952,1.758866,0.000000 98.814474,1.764250,0.000000 98.805311,1.765220,0.000000 98.800488,1.765705,0.000000 98.799684,1.767484,0.000000 98.799684,1.769910,0.000000 98.795987,1.771527,0.000000 98.793397,1.772251,0.000000 98.793499,1.773510,0.000000 98.793981,1.781190,0.000000 98.794361,1.787230,0.000000 98.795032,1.794573,0.000000 98.797999,1.797044,0.000000 98.802362,1.799456,0.000000 98.802428,1.800193,0.000000 98.804021,1.797571,0.000000 98.806916,1.791263,0.000000 98.809120,1.790067,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITAHUIS"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITAHUIS</SimpleData><SimpleData name="DESA">NAGA TIMBUL</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.824181,1.851297,0.000000 98.826073,1.848710,0.000000 98.827675,1.845721,0.000000 98.830139,1.841236,0.000000 98.832481,1.838132,0.000000 98.835457,1.834683,0.000000 98.835875,1.834132,0.000000 98.837338,1.832209,0.000000 98.838211,1.831061,0.000000 98.838722,1.829960,0.000000 98.839020,1.829322,0.000000 98.840210,1.826749,0.000000 98.842331,1.824162,0.000000 98.844630,1.822095,0.000000 98.845757,1.821644,0.000000 98.841542,1.821190,0.000000 98.835539,1.824331,0.000000 98.831136,1.827150,0.000000 98.829295,1.828841,0.000000 98.829375,1.827230,0.000000 98.827774,1.826827,0.000000 98.826093,1.826666,0.000000 98.823706,1.827867,0.000000 98.821930,1.831659,0.000000 98.817447,1.834961,0.000000 98.811683,1.839310,0.000000 98.805839,1.843256,0.000000 98.800236,1.846155,0.000000 98.793191,1.849054,0.000000 98.789669,1.846154,0.000000 98.787028,1.844865,0.000000 98.785979,1.843926,0.000000 98.785335,1.844037,0.000000 98.783737,1.842862,0.000000 98.782262,1.843975,0.000000 98.779128,1.844283,0.000000 98.773044,1.847560,0.000000 98.774826,1.850281,0.000000 98.776854,1.848797,0.000000 98.779312,1.848426,0.000000 98.780602,1.848117,0.000000 98.782507,1.848427,0.000000 98.784043,1.850962,0.000000 98.786133,1.851581,0.000000 98.787730,1.853745,0.000000 98.789696,1.857208,0.000000 98.788489,1.861539,0.000000 98.790142,1.862731,0.000000 98.803591,1.872432,0.000000 98.810501,1.869809,0.000000 98.812904,1.869235,0.000000 98.815819,1.868546,0.000000 98.817596,1.866419,0.000000 98.816223,1.864751,0.000000 98.815777,1.863571,0.000000 98.815025,1.861587,0.000000 98.815475,1.860975,0.000000 98.818855,1.856356,0.000000 98.821548,1.854114,0.000000 98.824181,1.851297,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITAHUIS"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITAHUIS</SimpleData><SimpleData name="DESA">NAULI</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.817447,1.834961,0.000000 98.821930,1.831659,0.000000 98.823706,1.827867,0.000000 98.826093,1.826666,0.000000 98.827774,1.826827,0.000000 98.829375,1.827230,0.000000 98.829295,1.828841,0.000000 98.831136,1.827150,0.000000 98.835539,1.824331,0.000000 98.841542,1.821190,0.000000 98.845757,1.821644,0.000000 98.850588,1.820030,0.000000 98.852798,1.819624,0.000000 98.859039,1.816354,0.000000 98.860474,1.815602,0.000000 98.864594,1.811865,0.000000 98.868889,1.806462,0.000000 98.872032,1.802092,0.000000 98.872408,1.798664,0.000000 98.872940,1.795630,0.000000 98.873050,1.794187,0.000000 98.857422,1.799998,0.000000 98.846087,1.799617,0.000000 98.844298,1.802894,0.000000 98.840045,1.808935,0.000000 98.836167,1.813088,0.000000 98.836820,1.816196,0.000000 98.822534,1.821518,0.000000 98.821783,1.822651,0.000000 98.819082,1.824790,0.000000 98.815904,1.827307,0.000000 98.811777,1.828187,0.000000 98.808775,1.828313,0.000000 98.802863,1.827827,0.000000 98.802420,1.829322,0.000000 98.801191,1.832661,0.000000 98.799347,1.833712,0.000000 98.795475,1.834577,0.000000 98.793140,1.834515,0.000000 98.792648,1.836927,0.000000 98.793508,1.839648,0.000000 98.791726,1.841008,0.000000 98.790374,1.843172,0.000000 98.785979,1.843926,0.000000 98.787028,1.844865,0.000000 98.789669,1.846154,0.000000 98.793191,1.849054,0.000000 98.800236,1.846155,0.000000 98.805839,1.843256,0.000000 98.811683,1.839310,0.000000 98.817447,1.834961,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITAHUIS"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITAHUIS</SimpleData><SimpleData name="DESA">MARDAME</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.822534,1.821518,0.000000 98.836820,1.816196,0.000000 98.836167,1.813088,0.000000 98.840045,1.808935,0.000000 98.844298,1.802894,0.000000 98.846087,1.799617,0.000000 98.857422,1.799998,0.000000 98.873050,1.794187,0.000000 98.873118,1.793310,0.000000 98.874182,1.791882,0.000000 98.875069,1.789205,0.000000 98.876335,1.785474,0.000000 98.877249,1.782046,0.000000 98.868766,1.778341,0.000000 98.864730,1.776195,0.000000 98.845861,1.783313,0.000000 98.840759,1.786521,0.000000 98.839659,1.789063,0.000000 98.835256,1.799332,0.000000 98.832254,1.804164,0.000000 98.825649,1.809701,0.000000 98.820146,1.813124,0.000000 98.814442,1.816440,0.000000 98.813776,1.816749,0.000000 98.810651,1.817986,0.000000 98.801993,1.818603,0.000000 98.801173,1.818603,0.000000 98.801173,1.818139,0.000000 98.800814,1.817727,0.000000 98.800456,1.820923,0.000000 98.803281,1.826416,0.000000 98.802863,1.827827,0.000000 98.808775,1.828313,0.000000 98.811777,1.828187,0.000000 98.815904,1.827307,0.000000 98.819082,1.824790,0.000000 98.821783,1.822651,0.000000 98.822534,1.821518,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITAHUIS"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">SITAHUIS</SimpleData><SimpleData name="DESA">RAMPA</SimpleData><SimpleData name="KABKOT">TAPANULI TENGAH</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.835256,1.799332,0.000000 98.839659,1.789063,0.000000 98.840759,1.786521,0.000000 98.845861,1.783313,0.000000 98.864730,1.776195,0.000000 98.863085,1.775320,0.000000 98.856440,1.772516,0.000000 98.854357,1.771792,0.000000 98.844664,1.768424,0.000000 98.840299,1.767869,0.000000 98.837682,1.767229,0.000000 98.833885,1.766357,0.000000 98.832056,1.775067,0.000000 98.828553,1.783424,0.000000 98.822249,1.787853,0.000000 98.816079,1.789808,0.000000 98.815808,1.790135,0.000000 98.815056,1.790473,0.000000 98.814801,1.790176,0.000000 98.814626,1.790270,0.000000 98.811282,1.789608,0.000000 98.810960,1.790378,0.000000 98.810452,1.790454,0.000000 98.810195,1.789932,0.000000 98.809120,1.790067,0.000000 98.806916,1.791263,0.000000 98.804021,1.797571,0.000000 98.802428,1.800193,0.000000 98.802792,1.804218,0.000000 98.802823,1.805934,0.000000 98.802852,1.809103,0.000000 98.800814,1.817727,0.000000 98.801173,1.818139,0.000000 98.801173,1.818603,0.000000 98.801993,1.818603,0.000000 98.810651,1.817986,0.000000 98.813776,1.816749,0.000000 98.814442,1.816440,0.000000 98.820146,1.813124,0.000000 98.825649,1.809701,0.000000 98.832254,1.804164,0.000000 98.835256,1.799332,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC SITAHUIS" name="KEC SITAHUIS"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

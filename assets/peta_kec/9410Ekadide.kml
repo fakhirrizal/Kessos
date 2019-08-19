@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Paniai" name="Paniai"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Paniai/FID/displayName]</td>
+          <td>$[Paniai/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Paniai/PROVINSI/displayName]</td>
+          <td>$[Paniai/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Paniai/KABKOT/displayName]</td>
+          <td>$[Paniai/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Paniai/KECAMATAN/displayName]</td>
+          <td>$[Paniai/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Paniai/DESA/displayName]</td>
+          <td>$[Paniai/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Paniai</name><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>136.726671,-3.843085,0.000000 136.726672,-3.905003,0.000000 136.654588,-3.902399,0.000000 136.627778,-3.901431,0.000000 136.544046,-3.898406,0.000000 136.509577,-3.897161,0.000000 136.505804,-3.897025,0.000000 136.467564,-3.895642,0.000000 136.454882,-3.889302,0.000000 136.445039,-3.884380,0.000000 136.438311,-3.881016,0.000000 136.417108,-3.870414,0.000000 136.425453,-3.860555,0.000000 136.429627,-3.857519,0.000000 136.436457,-3.856381,0.000000 136.442908,-3.853345,0.000000 136.452774,-3.853345,0.000000 136.454440,-3.853261,0.000000 136.460364,-3.852966,0.000000 136.467194,-3.851827,0.000000 136.475543,-3.847274,0.000000 136.491860,-3.846515,0.000000 136.726671,-3.843085,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Paniai"><SimpleData name="FID">27</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PANIAI</SimpleData><SimpleData name="KECAMATAN">EKADIDE</SimpleData><SimpleData name="DESA">OBAIPUGAIDA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>136.460364,-3.852966,0.000000 136.454440,-3.853261,0.000000 136.452774,-3.849930,0.000000 136.449739,-3.843858,0.000000 136.446785,-3.840202,0.000000 136.460907,-3.833223,0.000000 136.474589,-3.826463,0.000000 136.480855,-3.823367,0.000000 136.484490,-3.821113,0.000000 136.495937,-3.814016,0.000000 136.499829,-3.811603,0.000000 136.521458,-3.800219,0.000000 136.531704,-3.797943,0.000000 136.568892,-3.788076,0.000000 136.654024,-3.769858,0.000000 136.706032,-3.824033,0.000000 136.726671,-3.843085,0.000000 136.491860,-3.846515,0.000000 136.475543,-3.847274,0.000000 136.467194,-3.851827,0.000000 136.460364,-3.852966,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Paniai"><SimpleData name="FID">28</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PANIAI</SimpleData><SimpleData name="KECAMATAN">EKADIDE</SimpleData><SimpleData name="DESA">EYAGITAIDA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>136.451290,-3.818255,0.000000 136.456035,-3.824509,0.000000 136.460907,-3.833223,0.000000 136.446785,-3.840202,0.000000 136.441770,-3.833992,0.000000 136.439274,-3.826502,0.000000 136.441585,-3.825372,0.000000 136.443526,-3.824078,0.000000 136.444820,-3.823000,0.000000 136.446330,-3.823431,0.000000 136.448271,-3.821921,0.000000 136.448055,-3.819549,0.000000 136.451290,-3.818255,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Paniai"><SimpleData name="FID">29</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PANIAI</SimpleData><SimpleData name="KECAMATAN">EKADIDE</SimpleData><SimpleData name="DESA">PASIR PUTIH</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>136.454440,-3.853261,0.000000 136.452774,-3.853345,0.000000 136.442908,-3.853345,0.000000 136.441011,-3.849550,0.000000 136.435319,-3.842340,0.000000 136.430386,-3.835131,0.000000 136.418294,-3.826969,0.000000 136.420763,-3.824022,0.000000 136.424164,-3.819031,0.000000 136.429811,-3.810745,0.000000 136.437975,-3.822608,0.000000 136.439274,-3.826502,0.000000 136.441770,-3.833992,0.000000 136.446785,-3.840202,0.000000 136.449739,-3.843858,0.000000 136.452774,-3.849930,0.000000 136.454440,-3.853261,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Paniai"><SimpleData name="FID">30</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PANIAI</SimpleData><SimpleData name="KECAMATAN">EKADIDE</SimpleData><SimpleData name="DESA">AGAPO / WIDIMEIDA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>136.425453,-3.860555,0.000000 136.417108,-3.870414,0.000000 136.416508,-3.870115,0.000000 136.398780,-3.850259,0.000000 136.418294,-3.826969,0.000000 136.430386,-3.835131,0.000000 136.435319,-3.842340,0.000000 136.441011,-3.849550,0.000000 136.442908,-3.853345,0.000000 136.436457,-3.856381,0.000000 136.429627,-3.857519,0.000000 136.425453,-3.860555,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Paniai"><SimpleData name="FID">31</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PANIAI</SimpleData><SimpleData name="KECAMATAN">EKADIDE</SimpleData><SimpleData name="DESA">GEIDA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

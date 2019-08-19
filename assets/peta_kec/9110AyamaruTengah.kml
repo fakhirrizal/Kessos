@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Maybrat" name="Maybrat"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Maybrat/FID/displayName]</td>
+          <td>$[Maybrat/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Maybrat/PROVINSI/displayName]</td>
+          <td>$[Maybrat/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Maybrat/KABKOT/displayName]</td>
+          <td>$[Maybrat/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Maybrat/KECAMATAN/displayName]</td>
+          <td>$[Maybrat/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Maybrat/DESA/displayName]</td>
+          <td>$[Maybrat/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Maybrat</name><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.211044,-1.224669,0.000000 132.215195,-1.225406,0.000000 132.215629,-1.225356,0.000000 132.217270,-1.225165,0.000000 132.219833,-1.225291,0.000000 132.222641,-1.225660,0.000000 132.226059,-1.226396,0.000000 132.228500,-1.226887,0.000000 132.231033,-1.226760,0.000000 132.231512,-1.226749,0.000000 132.233949,-1.243668,0.000000 132.235790,-1.256446,0.000000 132.249750,-1.272049,0.000000 132.250766,-1.271889,0.000000 132.249506,-1.285954,0.000000 132.249477,-1.286283,0.000000 132.255225,-1.301064,0.000000 132.256100,-1.300740,0.000000 132.254951,-1.308455,0.000000 132.259423,-1.312773,0.000000 132.256418,-1.313574,0.000000 132.244464,-1.316762,0.000000 132.230421,-1.320507,0.000000 132.223478,-1.314398,0.000000 132.218081,-1.309648,0.000000 132.219109,-1.302626,0.000000 132.221108,-1.301127,0.000000 132.221556,-1.300791,0.000000 132.221830,-1.285736,0.000000 132.210364,-1.242870,0.000000 132.204960,-1.222670,0.000000 132.206161,-1.222835,0.000000 132.208237,-1.223325,0.000000 132.211044,-1.224669,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Maybrat"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">MAYBRAT</SimpleData><SimpleData name="KECAMATAN">AYAMARU TENGAH</SimpleData><SimpleData name="DESA">FIANE</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.221108,-1.301127,0.000000 132.219109,-1.302626,0.000000 132.219142,-1.302399,0.000000 132.210789,-1.301048,0.000000 132.216918,-1.286455,0.000000 132.213951,-1.282376,0.000000 132.205237,-1.266431,0.000000 132.202154,-1.254652,0.000000 132.198525,-1.240788,0.000000 132.198007,-1.238806,0.000000 132.193621,-1.221938,0.000000 132.195419,-1.221601,0.000000 132.195586,-1.221601,0.000000 132.198960,-1.221606,0.000000 132.201035,-1.222096,0.000000 132.203256,-1.222432,0.000000 132.203476,-1.222465,0.000000 132.204897,-1.222661,0.000000 132.204960,-1.222670,0.000000 132.210364,-1.242870,0.000000 132.221830,-1.285736,0.000000 132.221556,-1.300791,0.000000 132.221108,-1.301127,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Maybrat"><SimpleData name="FID">6</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">MAYBRAT</SimpleData><SimpleData name="KECAMATAN">AYAMARU TENGAH</SimpleData><SimpleData name="DESA">KARTAPURA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.216918,-1.286455,0.000000 132.210789,-1.301048,0.000000 132.202210,-1.299660,0.000000 132.193287,-1.298217,0.000000 132.192776,-1.298290,0.000000 132.201715,-1.286269,0.000000 132.205423,-1.276258,0.000000 132.203294,-1.273676,0.000000 132.199862,-1.269514,0.000000 132.199556,-1.268145,0.000000 132.198290,-1.262484,0.000000 132.197265,-1.257902,0.000000 132.191332,-1.244553,0.000000 132.189594,-1.239218,0.000000 132.184634,-1.223993,0.000000 132.186023,-1.223496,0.000000 132.187607,-1.222929,0.000000 132.190903,-1.222447,0.000000 132.192470,-1.222153,0.000000 132.193621,-1.221938,0.000000 132.198007,-1.238806,0.000000 132.198525,-1.240788,0.000000 132.202154,-1.254652,0.000000 132.205237,-1.266431,0.000000 132.213951,-1.282376,0.000000 132.216918,-1.286455,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Maybrat"><SimpleData name="FID">7</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">MAYBRAT</SimpleData><SimpleData name="KECAMATAN">AYAMARU TENGAH</SimpleData><SimpleData name="DESA">MEN</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

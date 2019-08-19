@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Pegungungan_Bintang" name="Pegungungan_Bintang"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Pegungungan_Bintang/FID/displayName]</td>
+          <td>$[Pegungungan_Bintang/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Pegungungan_Bintang/PROVINSI/displayName]</td>
+          <td>$[Pegungungan_Bintang/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Pegungungan_Bintang/KABKOT/displayName]</td>
+          <td>$[Pegungungan_Bintang/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Pegungungan_Bintang/KECAMATAN/displayName]</td>
+          <td>$[Pegungungan_Bintang/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Pegungungan_Bintang/DESA/displayName]</td>
+          <td>$[Pegungungan_Bintang/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Pegungungan_Bintang</name><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.719945,-4.745184,0.000000 140.723618,-4.746668,0.000000 140.730018,-4.746668,0.000000 140.730571,-4.746668,0.000000 140.730571,-4.747039,0.000000 140.727759,-4.753599,0.000000 140.726509,-4.761097,0.000000 140.727447,-4.765471,0.000000 140.731195,-4.771094,0.000000 140.733531,-4.773764,0.000000 140.723018,-4.780268,0.000000 140.712518,-4.775868,0.000000 140.706253,-4.768939,0.000000 140.704018,-4.766468,0.000000 140.692818,-4.749768,0.000000 140.692382,-4.748648,0.000000 140.690518,-4.743868,0.000000 140.695518,-4.741968,0.000000 140.701968,-4.739537,0.000000 140.702418,-4.739368,0.000000 140.714118,-4.736768,0.000000 140.718418,-4.744568,0.000000 140.719945,-4.745184,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Pegungungan_Bintang"><SimpleData name="FID">84</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PEGUNUNGAN BINTANG</SimpleData><SimpleData name="KECAMATAN">SEBANG</SimpleData><SimpleData name="DESA">KUBIBKOP</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.734818,-4.772968,0.000000 140.733531,-4.773764,0.000000 140.731195,-4.771094,0.000000 140.727447,-4.765471,0.000000 140.726509,-4.761097,0.000000 140.727759,-4.753599,0.000000 140.730571,-4.747039,0.000000 140.730571,-4.746668,0.000000 140.736918,-4.746668,0.000000 140.738845,-4.744988,0.000000 140.741193,-4.748601,0.000000 140.741193,-4.754537,0.000000 140.744629,-4.759847,0.000000 140.747793,-4.763855,0.000000 140.746018,-4.764368,0.000000 140.739818,-4.766768,0.000000 140.734818,-4.772968,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Pegungungan_Bintang"><SimpleData name="FID">85</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PEGUNUNGAN BINTANG</SimpleData><SimpleData name="KECAMATAN">SEBANG</SimpleData><SimpleData name="DESA">OKANO</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.773118,-4.754068,0.000000 140.766532,-4.758554,0.000000 140.762436,-4.753912,0.000000 140.758063,-4.749538,0.000000 140.755563,-4.745477,0.000000 140.749732,-4.739645,0.000000 140.756318,-4.735468,0.000000 140.758440,-4.735053,0.000000 140.765018,-4.733768,0.000000 140.769318,-4.731668,0.000000 140.772429,-4.730603,0.000000 140.773118,-4.730368,0.000000 140.775718,-4.735468,0.000000 140.777518,-4.742368,0.000000 140.785618,-4.751868,0.000000 140.773118,-4.754068,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Pegungungan_Bintang"><SimpleData name="FID">86</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PEGUNUNGAN BINTANG</SimpleData><SimpleData name="KECAMATAN">SEBANG</SimpleData><SimpleData name="DESA">MANGABIT</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>140.755018,-4.761768,0.000000 140.747793,-4.763855,0.000000 140.744629,-4.759847,0.000000 140.741193,-4.754537,0.000000 140.741193,-4.748601,0.000000 140.738845,-4.744988,0.000000 140.740818,-4.743268,0.000000 140.747703,-4.740816,0.000000 140.748118,-4.740668,0.000000 140.749732,-4.739645,0.000000 140.755563,-4.745477,0.000000 140.758063,-4.749538,0.000000 140.762436,-4.753912,0.000000 140.766532,-4.758554,0.000000 140.766218,-4.758768,0.000000 140.755018,-4.761768,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Pegungungan_Bintang"><SimpleData name="FID">87</SimpleData><SimpleData name="PROVINSI">PAPUA</SimpleData><SimpleData name="KABKOT">PEGUNUNGAN BINTANG</SimpleData><SimpleData name="KECAMATAN">SEBANG</SimpleData><SimpleData name="DESA">SEBUL</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>

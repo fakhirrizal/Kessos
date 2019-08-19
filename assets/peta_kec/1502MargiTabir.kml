@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Merangin/FID/displayName]</td>
+          <td>$[Merangin/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Merangin/PROVINSI/displayName]</td>
+          <td>$[Merangin/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Merangin/KABKOT/displayName]</td>
+          <td>$[Merangin/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Merangin/KECAMATAN/displayName]</td>
+          <td>$[Merangin/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Merangin/DESA/displayName]</td>
+          <td>$[Merangin/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Merangin/FID/displayName]</td>
+          <td>$[Merangin/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Merangin/PROVINSI/displayName]</td>
+          <td>$[Merangin/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Merangin/KABKOT/displayName]</td>
+          <td>$[Merangin/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Merangin/KECAMATAN/displayName]</td>
+          <td>$[Merangin/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Merangin/DESA/displayName]</td>
+          <td>$[Merangin/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Merangin</name><Snippet /><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Merangin"><SimpleData name="FID">192</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">MERANGIN</SimpleData><SimpleData name="KECAMATAN">MARGO TABIR</SimpleData><SimpleData name="DESA">TANJUNG REJO</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.346874,-1.885354,0.000000 102.348650,-1.885851,0.000000 102.349919,-1.885383,0.000000 102.351521,-1.885889,0.000000 102.352921,-1.886966,0.000000 102.354991,-1.886734,0.000000 102.356516,-1.887051,0.000000 102.360757,-1.888998,0.000000 102.410848,-1.908489,0.000000 102.410303,-1.910532,0.000000 102.407079,-1.919741,0.000000 102.399712,-1.921583,0.000000 102.396489,-1.929410,0.000000 102.393727,-1.927568,0.000000 102.388662,-1.929871,0.000000 102.384518,-1.934015,0.000000 102.384399,-1.934467,0.000000 102.382216,-1.942763,0.000000 102.377611,-1.950591,0.000000 102.378993,-1.953353,0.000000 102.373756,-1.955972,0.000000 102.373467,-1.956116,0.000000 102.373080,-1.957454,0.000000 102.372196,-1.958677,0.000000 102.371800,-1.959880,0.000000 102.370731,-1.962010,0.000000 102.369272,-1.961182,0.000000 102.366100,-1.961641,0.000000 102.365640,-1.965785,0.000000 102.362417,-1.965785,0.000000 102.360114,-1.969008,0.000000 102.360089,-1.969028,0.000000 102.357911,-1.970722,0.000000 102.357919,-1.970731,0.000000 102.356827,-1.971618,0.000000 102.356058,-1.972163,0.000000 102.355971,-1.972231,0.000000 102.354129,-1.976836,0.000000 102.349524,-1.977757,0.000000 102.342457,-1.974812,0.000000 102.342624,-1.962846,0.000000 102.342505,-1.927862,0.000000 102.342481,-1.920752,0.000000 102.342452,-1.912447,0.000000 102.341781,-1.910897,0.000000 102.346815,-1.902552,0.000000 102.344117,-1.895421,0.000000 102.338348,-1.888599,0.000000 102.338469,-1.885449,0.000000 102.346743,-1.886777,0.000000 102.346874,-1.885354,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Merangin"><SimpleData name="FID">193</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">MERANGIN</SimpleData><SimpleData name="KECAMATAN">MARGO TABIR</SimpleData><SimpleData name="DESA">SUMBER AGUNG</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.411615,-1.869805,0.000000 102.410303,-1.874618,0.000000 102.410144,-1.874586,0.000000 102.408000,-1.874157,0.000000 102.408000,-1.876459,0.000000 102.408788,-1.878233,0.000000 102.409842,-1.880603,0.000000 102.410156,-1.881545,0.000000 102.413065,-1.890273,0.000000 102.410303,-1.893956,0.000000 102.410763,-1.897179,0.000000 102.412144,-1.903626,0.000000 102.411202,-1.907161,0.000000 102.410848,-1.908489,0.000000 102.360757,-1.888998,0.000000 102.356516,-1.887051,0.000000 102.354991,-1.886734,0.000000 102.352921,-1.886966,0.000000 102.351521,-1.885889,0.000000 102.349919,-1.885383,0.000000 102.348650,-1.885851,0.000000 102.346874,-1.885354,0.000000 102.346743,-1.886777,0.000000 102.338469,-1.885449,0.000000 102.339118,-1.868501,0.000000 102.337151,-1.856515,0.000000 102.359505,-1.850690,0.000000 102.364624,-1.849356,0.000000 102.368038,-1.829121,0.000000 102.378390,-1.838371,0.000000 102.411615,-1.869805,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Merangin"><SimpleData name="FID">194</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">MERANGIN</SimpleData><SimpleData name="KECAMATAN">MARGO TABIR</SimpleData><SimpleData name="DESA">SUKO REJO</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.338348,-1.888599,0.000000 102.338312,-1.889537,0.000000 102.336377,-1.889144,0.000000 102.333858,-1.890698,0.000000 102.331727,-1.891669,0.000000 102.329598,-1.891081,0.000000 102.328046,-1.893027,0.000000 102.326498,-1.892635,0.000000 102.323506,-1.893634,0.000000 102.324191,-1.882308,0.000000 102.323174,-1.866420,0.000000 102.324563,-1.866053,0.000000 102.324211,-1.859887,0.000000 102.337151,-1.856515,0.000000 102.339118,-1.868501,0.000000 102.338469,-1.885449,0.000000 102.338348,-1.888599,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Merangin"><SimpleData name="FID">195</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">MERANGIN</SimpleData><SimpleData name="KECAMATAN">MARGO TABIR</SimpleData><SimpleData name="DESA">SIDO RUKUN</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.323506,-1.893634,0.000000 102.323207,-1.898545,0.000000 102.310743,-1.898317,0.000000 102.309422,-1.898293,0.000000 102.308915,-1.898284,0.000000 102.307419,-1.894250,0.000000 102.303678,-1.884164,0.000000 102.301506,-1.874872,0.000000 102.305049,-1.871485,0.000000 102.305451,-1.871101,0.000000 102.316658,-1.868140,0.000000 102.323174,-1.866420,0.000000 102.324191,-1.882308,0.000000 102.323506,-1.893634,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Merangin"><SimpleData name="FID">196</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">MERANGIN</SimpleData><SimpleData name="KECAMATAN">MARGO TABIR</SimpleData><SimpleData name="DESA">LUBUK BUMBUN</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.404752,-1.787683,0.000000 102.413635,-1.797252,0.000000 102.421512,-1.805737,0.000000 102.429203,-1.824429,0.000000 102.428720,-1.824430,0.000000 102.428260,-1.827653,0.000000 102.431022,-1.830876,0.000000 102.430102,-1.835480,0.000000 102.430562,-1.841005,0.000000 102.431022,-1.845610,0.000000 102.428720,-1.849293,0.000000 102.424116,-1.858042,0.000000 102.420893,-1.865869,0.000000 102.415828,-1.868172,0.000000 102.411684,-1.869553,0.000000 102.411615,-1.869805,0.000000 102.378390,-1.838371,0.000000 102.368038,-1.829121,0.000000 102.369688,-1.819333,0.000000 102.373423,-1.812989,0.000000 102.377062,-1.812886,0.000000 102.376832,-1.809978,0.000000 102.376828,-1.809927,0.000000 102.379525,-1.810167,0.000000 102.379050,-1.814295,0.000000 102.381744,-1.816187,0.000000 102.382687,-1.812413,0.000000 102.385034,-1.811236,0.000000 102.389486,-1.813839,0.000000 102.390313,-1.809946,0.000000 102.392159,-1.807909,0.000000 102.395010,-1.804762,0.000000 102.391026,-1.803340,0.000000 102.391733,-1.800391,0.000000 102.396774,-1.801342,0.000000 102.397364,-1.799102,0.000000 102.392787,-1.798330,0.000000 102.393150,-1.793432,0.000000 102.400006,-1.791449,0.000000 102.399138,-1.787777,0.000000 102.403254,-1.788552,0.000000 102.404752,-1.787683,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Merangin"><SimpleData name="FID">197</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">MERANGIN</SimpleData><SimpleData name="KECAMATAN">MARGO TABIR</SimpleData><SimpleData name="DESA">TEGAL REJO</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.338348,-1.888599,0.000000 102.344117,-1.895421,0.000000 102.346815,-1.902552,0.000000 102.341781,-1.910897,0.000000 102.338959,-1.904378,0.000000 102.334209,-1.898323,0.000000 102.323941,-1.898559,0.000000 102.323207,-1.898545,0.000000 102.323506,-1.893634,0.000000 102.326498,-1.892635,0.000000 102.328046,-1.893027,0.000000 102.329598,-1.891081,0.000000 102.331727,-1.891669,0.000000 102.333858,-1.890698,0.000000 102.336377,-1.889144,0.000000 102.338312,-1.889537,0.000000 102.338348,-1.888599,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="Merangin" name="Merangin"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema></Document></kml>

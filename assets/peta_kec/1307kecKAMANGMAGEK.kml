@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[kec KAMANG MAGEK/FID/displayName]</td>
+          <td>$[kec KAMANG MAGEK/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[kec KAMANG MAGEK/PROVINSI/displayName]</td>
+          <td>$[kec KAMANG MAGEK/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[kec KAMANG MAGEK/KECAMATAN/displayName]</td>
+          <td>$[kec KAMANG MAGEK/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[kec KAMANG MAGEK/DESA/displayName]</td>
+          <td>$[kec KAMANG MAGEK/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[kec KAMANG MAGEK/KABKOT/displayName]</td>
+          <td>$[kec KAMANG MAGEK/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[kec KAMANG MAGEK/NAMA_PULAU/displayName]</td>
+          <td>$[kec KAMANG MAGEK/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[kec KAMANG MAGEK/FID/displayName]</td>
+          <td>$[kec KAMANG MAGEK/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[kec KAMANG MAGEK/PROVINSI/displayName]</td>
+          <td>$[kec KAMANG MAGEK/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[kec KAMANG MAGEK/KECAMATAN/displayName]</td>
+          <td>$[kec KAMANG MAGEK/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[kec KAMANG MAGEK/DESA/displayName]</td>
+          <td>$[kec KAMANG MAGEK/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[kec KAMANG MAGEK/KABKOT/displayName]</td>
+          <td>$[kec KAMANG MAGEK/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[kec KAMANG MAGEK/NAMA_PULAU/displayName]</td>
+          <td>$[kec KAMANG MAGEK/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>kec KAMANG MAGEK</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#kec KAMANG MAGEK"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">KAMANG MAGEK</SimpleData><SimpleData name="DESA">KAMANG HILIR</SimpleData><SimpleData name="KABKOT">AGAM</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.454898,-0.238165,0.000000 100.451721,-0.238465,0.000000 100.450629,-0.238166,0.000000 100.448246,-0.238865,0.000000 100.447963,-0.239045,0.000000 100.445784,-0.232466,0.000000 100.439192,-0.225555,0.000000 100.433974,-0.220579,0.000000 100.430636,-0.218060,0.000000 100.431501,-0.215050,0.000000 100.438366,-0.205096,0.000000 100.444689,-0.198022,0.000000 100.445462,-0.199286,0.000000 100.446058,-0.201285,0.000000 100.447547,-0.203334,0.000000 100.449136,-0.204633,0.000000 100.449590,-0.204775,0.000000 100.453604,-0.206032,0.000000 100.457376,-0.206931,0.000000 100.462241,-0.209929,0.000000 100.464823,-0.212228,0.000000 100.467702,-0.214926,0.000000 100.467802,-0.217625,0.000000 100.466015,-0.219424,0.000000 100.464966,-0.220949,0.000000 100.463335,-0.223322,0.000000 100.462277,-0.226109,0.000000 100.462044,-0.226720,0.000000 100.458868,-0.231418,0.000000 100.457955,-0.233214,0.000000 100.456784,-0.235516,0.000000 100.454898,-0.238165,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#kec KAMANG MAGEK"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">KAMANG MAGEK</SimpleData><SimpleData name="DESA">MAGEK</SimpleData><SimpleData name="KABKOT">AGAM</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.445784,-0.232466,0.000000 100.447963,-0.239045,0.000000 100.446360,-0.240065,0.000000 100.445665,-0.241764,0.000000 100.445069,-0.243264,0.000000 100.444970,-0.246162,0.000000 100.442964,-0.248399,0.000000 100.442191,-0.249261,0.000000 100.438044,-0.253255,0.000000 100.436503,-0.254992,0.000000 100.435764,-0.253600,0.000000 100.434960,-0.252514,0.000000 100.433979,-0.251903,0.000000 100.432763,-0.251429,0.000000 100.430371,-0.250679,0.000000 100.428723,-0.250363,0.000000 100.427390,-0.250047,0.000000 100.426213,-0.249791,0.000000 100.425448,-0.249534,0.000000 100.424938,-0.249317,0.000000 100.424742,-0.249001,0.000000 100.424723,-0.248547,0.000000 100.424566,-0.247935,0.000000 100.424487,-0.247501,0.000000 100.424252,-0.246790,0.000000 100.424252,-0.246040,0.000000 100.424183,-0.245280,0.000000 100.424154,-0.245132,0.000000 100.423997,-0.244638,0.000000 100.423859,-0.244184,0.000000 100.423604,-0.243927,0.000000 100.423036,-0.243572,0.000000 100.422055,-0.243217,0.000000 100.421682,-0.242802,0.000000 100.421623,-0.242250,0.000000 100.421565,-0.241953,0.000000 100.421447,-0.241598,0.000000 100.421153,-0.241262,0.000000 100.420682,-0.240808,0.000000 100.420192,-0.240295,0.000000 100.419780,-0.239881,0.000000 100.419270,-0.239308,0.000000 100.418917,-0.239032,0.000000 100.418309,-0.238716,0.000000 100.417681,-0.238558,0.000000 100.417093,-0.238262,0.000000 100.416583,-0.238045,0.000000 100.415975,-0.237768,0.000000 100.415563,-0.237354,0.000000 100.415269,-0.236880,0.000000 100.415033,-0.235972,0.000000 100.415014,-0.235695,0.000000 100.415193,-0.234236,0.000000 100.415385,-0.234208,0.000000 100.415595,-0.234152,0.000000 100.415854,-0.234224,0.000000 100.415853,-0.234202,0.000000 100.420243,-0.232193,0.000000 100.428481,-0.225556,0.000000 100.430636,-0.218060,0.000000 100.433974,-0.220579,0.000000 100.439192,-0.225555,0.000000 100.445784,-0.232466,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#kec KAMANG MAGEK"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">KAMANG MAGEK</SimpleData><SimpleData name="DESA">KAMANG MUDIK</SimpleData><SimpleData name="KABKOT">AGAM</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>100.376631,-0.137822,0.000000 100.377748,-0.142320,0.000000 100.378493,-0.145693,0.000000 100.379926,-0.145796,0.000000 100.380231,-0.145818,0.000000 100.382316,-0.147167,0.000000 100.385691,-0.148466,0.000000 100.387776,-0.149166,0.000000 100.392244,-0.149066,0.000000 100.394528,-0.149365,0.000000 100.396017,-0.151864,0.000000 100.396315,-0.156662,0.000000 100.396517,-0.156936,0.000000 100.398599,-0.159760,0.000000 100.399373,-0.160397,0.000000 100.399691,-0.160659,0.000000 100.400083,-0.160755,0.000000 100.400171,-0.160799,0.000000 100.400264,-0.160799,0.000000 100.405846,-0.162158,0.000000 100.406587,-0.162238,0.000000 100.411406,-0.162758,0.000000 100.415576,-0.163657,0.000000 100.421235,-0.165556,0.000000 100.425504,-0.166755,0.000000 100.429575,-0.168304,0.000000 100.434043,-0.169802,0.000000 100.439801,-0.172301,0.000000 100.441787,-0.174200,0.000000 100.442482,-0.175899,0.000000 100.442284,-0.179197,0.000000 100.443078,-0.184394,0.000000 100.443065,-0.184701,0.000000 100.442880,-0.188892,0.000000 100.442582,-0.190491,0.000000 100.442529,-0.191046,0.000000 100.442285,-0.193589,0.000000 100.443079,-0.195388,0.000000 100.444689,-0.198022,0.000000 100.438366,-0.205096,0.000000 100.431501,-0.215050,0.000000 100.430636,-0.218060,0.000000 100.428481,-0.225556,0.000000 100.420243,-0.232193,0.000000 100.415853,-0.234202,0.000000 100.415854,-0.234224,0.000000 100.415595,-0.234152,0.000000 100.415385,-0.234208,0.000000 100.415193,-0.234236,0.000000 100.415646,-0.230555,0.000000 100.408235,-0.226776,0.000000 100.399199,-0.222479,0.000000 100.391753,-0.219931,0.000000 100.387186,-0.218432,0.000000 100.382321,-0.215534,0.000000 100.376661,-0.211036,0.000000 100.372789,-0.208238,0.000000 100.370704,-0.205840,0.000000 100.368520,-0.203641,0.000000 100.366355,-0.201369,0.000000 100.367081,-0.199015,0.000000 100.367322,-0.196297,0.000000 100.367403,-0.191509,0.000000 100.366999,-0.187370,0.000000 100.364097,-0.182420,0.000000 100.362646,-0.179093,0.000000 100.362645,-0.177619,0.000000 100.362645,-0.176901,0.000000 100.363613,-0.174791,0.000000 100.364741,-0.171951,0.000000 100.365789,-0.169760,0.000000 100.366433,-0.167934,0.000000 100.368368,-0.163876,0.000000 100.368045,-0.160873,0.000000 100.367481,-0.159169,0.000000 100.367481,-0.158520,0.000000 100.366997,-0.153894,0.000000 100.365626,-0.151297,0.000000 100.363772,-0.148376,0.000000 100.363449,-0.146347,0.000000 100.361918,-0.144156,0.000000 100.359467,-0.141487,0.000000 100.359123,-0.140886,0.000000 100.359421,-0.140146,0.000000 100.359580,-0.139409,0.000000 100.364345,-0.139222,0.000000 100.367802,-0.139327,0.000000 100.369978,-0.137217,0.000000 100.372719,-0.134376,0.000000 100.374250,-0.132429,0.000000 100.374284,-0.131571,0.000000 100.376631,-0.137822,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="kec KAMANG MAGEK" name="kec KAMANG MAGEK"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

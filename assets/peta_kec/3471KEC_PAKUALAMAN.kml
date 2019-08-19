@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PAKUALAMAN/FID/displayName]</td>
+          <td>$[KEC PAKUALAMAN/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAKUALAMAN/PROVINSI/displayName]</td>
+          <td>$[KEC PAKUALAMAN/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PAKUALAMAN/KECAMATAN/displayName]</td>
+          <td>$[KEC PAKUALAMAN/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAKUALAMAN/DESA/displayName]</td>
+          <td>$[KEC PAKUALAMAN/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PAKUALAMAN/KABKOT/displayName]</td>
+          <td>$[KEC PAKUALAMAN/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAKUALAMAN/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PAKUALAMAN/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PAKUALAMAN/FID/displayName]</td>
+          <td>$[KEC PAKUALAMAN/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAKUALAMAN/PROVINSI/displayName]</td>
+          <td>$[KEC PAKUALAMAN/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PAKUALAMAN/KECAMATAN/displayName]</td>
+          <td>$[KEC PAKUALAMAN/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAKUALAMAN/DESA/displayName]</td>
+          <td>$[KEC PAKUALAMAN/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PAKUALAMAN/KABKOT/displayName]</td>
+          <td>$[KEC PAKUALAMAN/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PAKUALAMAN/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PAKUALAMAN/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC PAKUALAMAN</name><Snippet /><Placemark><name>DAERAH ISTIMEWA YOGYAKARTA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PAKUALAMAN"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">DAERAH ISTIMEWA YOGYAKARTA</SimpleData><SimpleData name="KECAMATAN">PAKUALAMAN</SimpleData><SimpleData name="DESA">PURWO KINANTI</SimpleData><SimpleData name="KABKOT">KOTA YOGYAKARTA</SimpleData><SimpleData name="NAMA_PULAU">JAWA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>110.373942,-7.796940,0.000000 110.375042,-7.797030,0.000000 110.375132,-7.797030,0.000000 110.375632,-7.797100,0.000000 110.376742,-7.797190,0.000000 110.376812,-7.797190,0.000000 110.376925,-7.797201,0.000000 110.376812,-7.798040,0.000000 110.376802,-7.798570,0.000000 110.376802,-7.799200,0.000000 110.376802,-7.799450,0.000000 110.376792,-7.799900,0.000000 110.376782,-7.800430,0.000000 110.376772,-7.800760,0.000000 110.376802,-7.801130,0.000000 110.376812,-7.801700,0.000000 110.375619,-7.801661,0.000000 110.375602,-7.800823,0.000000 110.373087,-7.800837,0.000000 110.373068,-7.801553,0.000000 110.373026,-7.801549,0.000000 110.372768,-7.801531,0.000000 110.372570,-7.801537,0.000000 110.372360,-7.801543,0.000000 110.372210,-7.801554,0.000000 110.371600,-7.801540,0.000000 110.371520,-7.801550,0.000000 110.371349,-7.801543,0.000000 110.371087,-7.800936,0.000000 110.370970,-7.800717,0.000000 110.370912,-7.800344,0.000000 110.370886,-7.800059,0.000000 110.370802,-7.799747,0.000000 110.370354,-7.798882,0.000000 110.369912,-7.798063,0.000000 110.369815,-7.797849,0.000000 110.369790,-7.797559,0.000000 110.369779,-7.797267,0.000000 110.370014,-7.796846,0.000000 110.370153,-7.796717,0.000000 110.370214,-7.796556,0.000000 110.370214,-7.796555,0.000000 110.370226,-7.796551,0.000000 110.370444,-7.796512,0.000000 110.370950,-7.796614,0.000000 110.371043,-7.796653,0.000000 110.371199,-7.796700,0.000000 110.371207,-7.796785,0.000000 110.371485,-7.796795,0.000000 110.371785,-7.796815,0.000000 110.372626,-7.796834,0.000000 110.372626,-7.796836,0.000000 110.372692,-7.796840,0.000000 110.373162,-7.796860,0.000000 110.373942,-7.796940,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>DAERAH ISTIMEWA YOGYAKARTA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PAKUALAMAN"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">DAERAH ISTIMEWA YOGYAKARTA</SimpleData><SimpleData name="KECAMATAN">PAKUALAMAN</SimpleData><SimpleData name="DESA">GUNUNG KETUR</SimpleData><SimpleData name="KABKOT">KOTA YOGYAKARTA</SimpleData><SimpleData name="NAMA_PULAU">JAWA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>110.377962,-7.797940,0.000000 110.377972,-7.798000,0.000000 110.378222,-7.797970,0.000000 110.378602,-7.798000,0.000000 110.379002,-7.798030,0.000000 110.379222,-7.798040,0.000000 110.379472,-7.798080,0.000000 110.379662,-7.798090,0.000000 110.379762,-7.798100,0.000000 110.380292,-7.798180,0.000000 110.380452,-7.798210,0.000000 110.380501,-7.799146,0.000000 110.380500,-7.799601,0.000000 110.380485,-7.800714,0.000000 110.380502,-7.801200,0.000000 110.380562,-7.801804,0.000000 110.380510,-7.801800,0.000000 110.380430,-7.801790,0.000000 110.380020,-7.801770,0.000000 110.379950,-7.801770,0.000000 110.379840,-7.801750,0.000000 110.379610,-7.801750,0.000000 110.379320,-7.801740,0.000000 110.378780,-7.801740,0.000000 110.378650,-7.801770,0.000000 110.378597,-7.802003,0.000000 110.378513,-7.802378,0.000000 110.378449,-7.802792,0.000000 110.378237,-7.803784,0.000000 110.378205,-7.803905,0.000000 110.378173,-7.804064,0.000000 110.378134,-7.804249,0.000000 110.378070,-7.804580,0.000000 110.377830,-7.804580,0.000000 110.376950,-7.804480,0.000000 110.376690,-7.804460,0.000000 110.376520,-7.804440,0.000000 110.375910,-7.804370,0.000000 110.375790,-7.804390,0.000000 110.375420,-7.804350,0.000000 110.375313,-7.804327,0.000000 110.375307,-7.804226,0.000000 110.375250,-7.803735,0.000000 110.375213,-7.803169,0.000000 110.375163,-7.802704,0.000000 110.375138,-7.802367,0.000000 110.375125,-7.802195,0.000000 110.375049,-7.801660,0.000000 110.374040,-7.801629,0.000000 110.373068,-7.801553,0.000000 110.373087,-7.800837,0.000000 110.375602,-7.800823,0.000000 110.375619,-7.801661,0.000000 110.376812,-7.801700,0.000000 110.376802,-7.801130,0.000000 110.376772,-7.800760,0.000000 110.376782,-7.800430,0.000000 110.376792,-7.799900,0.000000 110.376802,-7.799450,0.000000 110.376802,-7.799200,0.000000 110.376802,-7.798570,0.000000 110.376812,-7.798040,0.000000 110.376925,-7.797201,0.000000 110.377352,-7.797240,0.000000 110.377602,-7.797260,0.000000 110.377671,-7.797280,0.000000 110.377672,-7.797350,0.000000 110.377712,-7.797560,0.000000 110.377812,-7.797730,0.000000 110.377962,-7.797940,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC PAKUALAMAN" name="KEC PAKUALAMAN"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

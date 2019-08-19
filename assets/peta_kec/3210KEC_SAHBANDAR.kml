@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SAHBANDAR/FID/displayName]</td>
+          <td>$[KEC SAHBANDAR/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SAHBANDAR/PROVINSI/displayName]</td>
+          <td>$[KEC SAHBANDAR/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SAHBANDAR/KECAMATAN/displayName]</td>
+          <td>$[KEC SAHBANDAR/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SAHBANDAR/DESA/displayName]</td>
+          <td>$[KEC SAHBANDAR/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SAHBANDAR/KABKOT/displayName]</td>
+          <td>$[KEC SAHBANDAR/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SAHBANDAR/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SAHBANDAR/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SAHBANDAR/FID/displayName]</td>
+          <td>$[KEC SAHBANDAR/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SAHBANDAR/PROVINSI/displayName]</td>
+          <td>$[KEC SAHBANDAR/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SAHBANDAR/KECAMATAN/displayName]</td>
+          <td>$[KEC SAHBANDAR/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SAHBANDAR/DESA/displayName]</td>
+          <td>$[KEC SAHBANDAR/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SAHBANDAR/KABKOT/displayName]</td>
+          <td>$[KEC SAHBANDAR/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SAHBANDAR/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SAHBANDAR/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC SAHBANDAR</name><Snippet /><Placemark><name>JAWA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SAHBANDAR"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">JAWA BARAT</SimpleData><SimpleData name="KECAMATAN">SAHBANDAR</SimpleData><SimpleData name="DESA">MEKARJAYA</SimpleData><SimpleData name="KABKOT">MAJALENGKA</SimpleData><SimpleData name="NAMA_PULAU">JAWA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>108.056826,-6.642154,0.000000 108.057339,-6.643549,0.000000 108.059968,-6.643421,0.000000 108.059597,-6.646669,0.000000 108.059768,-6.647172,0.000000 108.057059,-6.649776,0.000000 108.059347,-6.651539,0.000000 108.062260,-6.652081,0.000000 108.063791,-6.655149,0.000000 108.067031,-6.654178,0.000000 108.068887,-6.655733,0.000000 108.068848,-6.657246,0.000000 108.068657,-6.657271,0.000000 108.068398,-6.657179,0.000000 108.068169,-6.656986,0.000000 108.068066,-6.656922,0.000000 108.067963,-6.656858,0.000000 108.067791,-6.657017,0.000000 108.067764,-6.657042,0.000000 108.067654,-6.657065,0.000000 108.067543,-6.657088,0.000000 108.067238,-6.657036,0.000000 108.066383,-6.656727,0.000000 108.066376,-6.656638,0.000000 108.066368,-6.656548,0.000000 108.066419,-6.656415,0.000000 108.066475,-6.656267,0.000000 108.066506,-6.656108,0.000000 108.066452,-6.655956,0.000000 108.066330,-6.655770,0.000000 108.066269,-6.655737,0.000000 108.066208,-6.655704,0.000000 108.066055,-6.655724,0.000000 108.065910,-6.655820,0.000000 108.065834,-6.655947,0.000000 108.065834,-6.656077,0.000000 108.065857,-6.656309,0.000000 108.065826,-6.656462,0.000000 108.065897,-6.656607,0.000000 108.065926,-6.656667,0.000000 108.065949,-6.656891,0.000000 108.065960,-6.656996,0.000000 108.065971,-6.657102,0.000000 108.065903,-6.657362,0.000000 108.065758,-6.657447,0.000000 108.065491,-6.657524,0.000000 108.065033,-6.657568,0.000000 108.064583,-6.657638,0.000000 108.064308,-6.657756,0.000000 108.064205,-6.657842,0.000000 108.064102,-6.657929,0.000000 108.063759,-6.658184,0.000000 108.063461,-6.658276,0.000000 108.063366,-6.658275,0.000000 108.063271,-6.658274,0.000000 108.062981,-6.658178,0.000000 108.062880,-6.658113,0.000000 108.062779,-6.658049,0.000000 108.062645,-6.657798,0.000000 108.062576,-6.657652,0.000000 108.062508,-6.657505,0.000000 108.062294,-6.657070,0.000000 108.062206,-6.657034,0.000000 108.062119,-6.656997,0.000000 108.061920,-6.656873,0.000000 108.061836,-6.656787,0.000000 108.061752,-6.656702,0.000000 108.061615,-6.656444,0.000000 108.061581,-6.656310,0.000000 108.061546,-6.656176,0.000000 108.061455,-6.655525,0.000000 108.061485,-6.654995,0.000000 108.061417,-6.654844,0.000000 108.061348,-6.654693,0.000000 108.061066,-6.654302,0.000000 108.060986,-6.654232,0.000000 108.060906,-6.654161,0.000000 108.060593,-6.653900,0.000000 108.060643,-6.653662,0.000000 108.060715,-6.653378,0.000000 108.060674,-6.653262,0.000000 108.060633,-6.653145,0.000000 108.060110,-6.652817,0.000000 108.059853,-6.652931,0.000000 108.059738,-6.653083,0.000000 108.059412,-6.653574,0.000000 108.059372,-6.653635,0.000000 108.059280,-6.653736,0.000000 108.059189,-6.653837,0.000000 108.059052,-6.654145,0.000000 108.059036,-6.654250,0.000000 108.059021,-6.654354,0.000000 108.059019,-6.654419,0.000000 108.058998,-6.655293,0.000000 108.058930,-6.655564,0.000000 108.058746,-6.655616,0.000000 108.058556,-6.655581,0.000000 108.058453,-6.655518,0.000000 108.058350,-6.655455,0.000000 108.057976,-6.655106,0.000000 108.057823,-6.654745,0.000000 108.057640,-6.654400,0.000000 108.057381,-6.654112,0.000000 108.056877,-6.653622,0.000000 108.056152,-6.653089,0.000000 108.056096,-6.653048,0.000000 108.056095,-6.653047,0.000000 108.056038,-6.653005,0.000000 108.055542,-6.652806,0.000000 108.055467,-6.652800,0.000000 108.055407,-6.652795,0.000000 108.054947,-6.652846,0.000000 108.054863,-6.652886,0.000000 108.054779,-6.652926,0.000000 108.054298,-6.653209,0.000000 108.054077,-6.653216,0.000000 108.053894,-6.653114,0.000000 108.053917,-6.652943,0.000000 108.054047,-6.652704,0.000000 108.054176,-6.652418,0.000000 108.054199,-6.652301,0.000000 108.054222,-6.652183,0.000000 108.054185,-6.651835,0.000000 108.054147,-6.651750,0.000000 108.054108,-6.651661,0.000000 108.053806,-6.650908,0.000000 108.053900,-6.650844,0.000000 108.053993,-6.650780,0.000000 108.054344,-6.650657,0.000000 108.054543,-6.650524,0.000000 108.054497,-6.650283,0.000000 108.054407,-6.650011,0.000000 108.054326,-6.649765,0.000000 108.054276,-6.649613,0.000000 108.054291,-6.649344,0.000000 108.054436,-6.649303,0.000000 108.054611,-6.649271,0.000000 108.054695,-6.649256,0.000000 108.054863,-6.649097,0.000000 108.054878,-6.648897,0.000000 108.054848,-6.648514,0.000000 108.054814,-6.648392,0.000000 108.054780,-6.648270,0.000000 108.054573,-6.647835,0.000000 108.054460,-6.647709,0.000000 108.054456,-6.647704,0.000000 108.054340,-6.647576,0.000000 108.054074,-6.647368,0.000000 108.053757,-6.647108,0.000000 108.053478,-6.646933,0.000000 108.053373,-6.646998,0.000000 108.053269,-6.647064,0.000000 108.052979,-6.647258,0.000000 108.052654,-6.647328,0.000000 108.052559,-6.647142,0.000000 108.052448,-6.646739,0.000000 108.052429,-6.646672,0.000000 108.052372,-6.646628,0.000000 108.052315,-6.646583,0.000000 108.052285,-6.646570,0.000000 108.051819,-6.646355,0.000000 108.051704,-6.646211,0.000000 108.051674,-6.646082,0.000000 108.051720,-6.645956,0.000000 108.051880,-6.645773,0.000000 108.052004,-6.645687,0.000000 108.052128,-6.645600,0.000000 108.052475,-6.645359,0.000000 108.052658,-6.645120,0.000000 108.052681,-6.645030,0.000000 108.052704,-6.644941,0.000000 108.052677,-6.644705,0.000000 108.052676,-6.644703,0.000000 108.053372,-6.644693,0.000000 108.053807,-6.642620,0.000000 108.056826,-6.642154,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC SAHBANDAR" name="KEC SAHBANDAR"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

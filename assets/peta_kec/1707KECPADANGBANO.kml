@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PADANG BANO/FID/displayName]</td>
+          <td>$[KEC PADANG BANO/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG BANO/PROVINSI/displayName]</td>
+          <td>$[KEC PADANG BANO/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PADANG BANO/KECAMATAN/displayName]</td>
+          <td>$[KEC PADANG BANO/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG BANO/DESA/displayName]</td>
+          <td>$[KEC PADANG BANO/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PADANG BANO/KABKOT/displayName]</td>
+          <td>$[KEC PADANG BANO/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG BANO/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PADANG BANO/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PADANG BANO/FID/displayName]</td>
+          <td>$[KEC PADANG BANO/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG BANO/PROVINSI/displayName]</td>
+          <td>$[KEC PADANG BANO/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PADANG BANO/KECAMATAN/displayName]</td>
+          <td>$[KEC PADANG BANO/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG BANO/DESA/displayName]</td>
+          <td>$[KEC PADANG BANO/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PADANG BANO/KABKOT/displayName]</td>
+          <td>$[KEC PADANG BANO/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PADANG BANO/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PADANG BANO/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC PADANG BANO</name><Snippet /><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PADANG BANO"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">PADANG BANO</SimpleData><SimpleData name="DESA">PADANG BANO</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.164627,-3.217865,0.000000 102.160154,-3.226608,0.000000 102.159500,-3.225944,0.000000 102.158718,-3.225143,0.000000 102.156861,-3.223209,0.000000 102.155547,-3.221724,0.000000 102.153747,-3.219587,0.000000 102.153561,-3.219366,0.000000 102.152888,-3.218174,0.000000 102.151021,-3.214864,0.000000 102.157324,-3.207886,0.000000 102.164858,-3.217382,0.000000 102.164627,-3.217865,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PADANG BANO"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">PADANG BANO</SimpleData><SimpleData name="DESA">SEBAYUA</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.151900,-3.201106,0.000000 102.147101,-3.206896,0.000000 102.147011,-3.206702,0.000000 102.146912,-3.206422,0.000000 102.146490,-3.205230,0.000000 102.146197,-3.204692,0.000000 102.145600,-3.203247,0.000000 102.145451,-3.202987,0.000000 102.143300,-3.199220,0.000000 102.142335,-3.197988,0.000000 102.141712,-3.196988,0.000000 102.141627,-3.196909,0.000000 102.141922,-3.196786,0.000000 102.143753,-3.196463,0.000000 102.149783,-3.194633,0.000000 102.153122,-3.190325,0.000000 102.153625,-3.189450,0.000000 102.157561,-3.194276,0.000000 102.151900,-3.201106,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PADANG BANO"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">PADANG BANO</SimpleData><SimpleData name="DESA">UEI</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.163281,-3.201291,0.000000 102.157324,-3.207886,0.000000 102.151900,-3.201106,0.000000 102.157561,-3.194276,0.000000 102.163281,-3.201291,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PADANG BANO"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">PADANG BANO</SimpleData><SimpleData name="DESA">KEMBUNG</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.157324,-3.207886,0.000000 102.151021,-3.214864,0.000000 102.149751,-3.212612,0.000000 102.148708,-3.210362,0.000000 102.148382,-3.209659,0.000000 102.147603,-3.207980,0.000000 102.147163,-3.207031,0.000000 102.147101,-3.206896,0.000000 102.151900,-3.201106,0.000000 102.157324,-3.207886,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PADANG BANO"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">PADANG BANO</SimpleData><SimpleData name="DESA">LIMES</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.166127,-3.214723,0.000000 102.164858,-3.217382,0.000000 102.157324,-3.207886,0.000000 102.163281,-3.201291,0.000000 102.169269,-3.208636,0.000000 102.166908,-3.213086,0.000000 102.166127,-3.214723,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC PADANG BANO" name="KEC PADANG BANO"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

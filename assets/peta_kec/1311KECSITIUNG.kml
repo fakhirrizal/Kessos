@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SITIUNG/FID/displayName]</td>
+          <td>$[KEC SITIUNG/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITIUNG/PROVINSI/displayName]</td>
+          <td>$[KEC SITIUNG/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITIUNG/KECAMATAN/displayName]</td>
+          <td>$[KEC SITIUNG/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITIUNG/DESA/displayName]</td>
+          <td>$[KEC SITIUNG/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITIUNG/KABKOT/displayName]</td>
+          <td>$[KEC SITIUNG/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITIUNG/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SITIUNG/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC SITIUNG/FID/displayName]</td>
+          <td>$[KEC SITIUNG/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITIUNG/PROVINSI/displayName]</td>
+          <td>$[KEC SITIUNG/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITIUNG/KECAMATAN/displayName]</td>
+          <td>$[KEC SITIUNG/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITIUNG/DESA/displayName]</td>
+          <td>$[KEC SITIUNG/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC SITIUNG/KABKOT/displayName]</td>
+          <td>$[KEC SITIUNG/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC SITIUNG/NAMA_PULAU/displayName]</td>
+          <td>$[KEC SITIUNG/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC SITIUNG</name><Snippet /><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITIUNG"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">SITIUNG</SimpleData><SimpleData name="DESA">SITIUNG</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.684617,-0.985931,0.000000 101.687644,-0.988424,0.000000 101.687673,-0.988391,0.000000 101.690313,-0.991785,0.000000 101.690918,-0.998448,0.000000 101.686678,-0.994813,0.000000 101.680621,-0.994813,0.000000 101.679410,-0.997236,0.000000 101.680621,-1.003293,0.000000 101.677593,-1.010561,0.000000 101.675170,-1.014196,0.000000 101.671536,-1.011167,0.000000 101.666085,-1.006322,0.000000 101.662451,-1.011773,0.000000 101.661845,-1.017224,0.000000 101.656642,-1.025548,0.000000 101.655788,-1.026915,0.000000 101.646097,-1.031761,0.000000 101.640646,-1.033578,0.000000 101.630955,-1.031761,0.000000 101.627926,-1.023281,0.000000 101.628532,-1.017830,0.000000 101.624898,-1.016013,0.000000 101.620658,-1.012378,0.000000 101.616418,-1.006322,0.000000 101.607332,-1.006927,0.000000 101.599458,-1.000870,0.000000 101.589767,-0.989968,0.000000 101.584465,-0.983034,0.000000 101.592193,-0.979895,0.000000 101.599946,-0.975243,0.000000 101.605760,-0.964777,0.000000 101.607311,-0.952372,0.000000 101.606148,-0.942293,0.000000 101.608474,-0.937642,0.000000 101.608626,-0.935506,0.000000 101.617950,-0.940920,0.000000 101.627560,-0.951431,0.000000 101.631538,-0.955782,0.000000 101.648524,-0.963425,0.000000 101.661263,-0.977863,0.000000 101.671454,-0.982534,0.000000 101.683113,-0.985543,0.000000 101.684617,-0.985931,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITIUNG"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">SITIUNG</SimpleData><SimpleData name="DESA">SUNGAI DUO</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.708130,-0.996212,0.000000 101.717047,-0.999609,0.000000 101.722143,-1.000034,0.000000 101.724681,-1.000288,0.000000 101.723417,-1.001733,0.000000 101.720869,-1.009801,0.000000 101.717866,-1.014189,0.000000 101.715349,-1.017869,0.000000 101.710253,-1.029758,0.000000 101.710253,-1.032264,0.000000 101.710253,-1.036552,0.000000 101.708721,-1.039873,0.000000 101.705158,-1.047593,0.000000 101.703276,-1.049585,0.000000 101.697939,-1.055236,0.000000 101.686049,-1.060756,0.000000 101.681803,-1.064153,0.000000 101.681596,-1.064144,0.000000 101.679250,-1.064037,0.000000 101.678804,-1.063257,0.000000 101.672747,-1.058411,0.000000 101.672142,-1.049326,0.000000 101.671536,-1.042058,0.000000 101.665479,-1.040240,0.000000 101.658816,-1.031761,0.000000 101.656642,-1.025548,0.000000 101.661845,-1.017224,0.000000 101.662451,-1.011773,0.000000 101.666085,-1.006322,0.000000 101.671536,-1.011167,0.000000 101.675170,-1.014196,0.000000 101.677593,-1.010561,0.000000 101.680621,-1.003293,0.000000 101.679410,-0.997236,0.000000 101.680621,-0.994813,0.000000 101.686678,-0.994813,0.000000 101.690918,-0.998448,0.000000 101.690313,-0.991785,0.000000 101.687673,-0.988391,0.000000 101.688518,-0.987391,0.000000 101.695816,-0.989418,0.000000 101.703459,-0.993240,0.000000 101.708130,-0.996212,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITIUNG"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">SITIUNG</SimpleData><SimpleData name="DESA">GUNUNG MEDAN</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.599458,-1.000870,0.000000 101.607332,-1.006927,0.000000 101.616418,-1.006322,0.000000 101.620658,-1.012378,0.000000 101.624898,-1.016013,0.000000 101.628532,-1.017830,0.000000 101.627926,-1.023281,0.000000 101.630955,-1.031761,0.000000 101.640646,-1.033578,0.000000 101.646097,-1.031761,0.000000 101.655788,-1.026915,0.000000 101.656642,-1.025548,0.000000 101.658816,-1.031761,0.000000 101.665479,-1.040240,0.000000 101.671536,-1.042058,0.000000 101.672142,-1.049326,0.000000 101.672747,-1.058411,0.000000 101.678804,-1.063257,0.000000 101.679250,-1.064037,0.000000 101.672461,-1.063729,0.000000 101.666091,-1.068400,0.000000 101.663968,-1.075194,0.000000 101.658023,-1.078591,0.000000 101.652928,-1.081139,0.000000 101.644011,-1.081988,0.000000 101.641038,-1.084111,0.000000 101.627450,-1.085810,0.000000 101.617032,-1.092507,0.000000 101.615560,-1.093453,0.000000 101.608766,-1.095451,0.000000 101.608766,-1.091330,0.000000 101.608766,-1.089313,0.000000 101.608766,-1.088357,0.000000 101.608766,-1.083262,0.000000 101.610040,-1.078591,0.000000 101.610040,-1.075194,0.000000 101.609615,-1.065427,0.000000 101.609615,-1.062455,0.000000 101.609615,-1.061957,0.000000 101.611056,-1.061094,0.000000 101.610030,-1.053401,0.000000 101.607376,-1.047031,0.000000 101.600476,-1.039600,0.000000 101.597291,-1.039070,0.000000 101.594637,-1.032700,0.000000 101.588267,-1.022615,0.000000 101.584552,-1.018900,0.000000 101.580306,-1.008284,0.000000 101.572794,-1.000354,0.000000 101.570751,-0.998199,0.000000 101.567567,-0.993422,0.000000 101.566107,-0.993032,0.000000 101.566687,-0.990904,0.000000 101.567325,-0.988992,0.000000 101.568491,-0.987476,0.000000 101.579788,-0.984934,0.000000 101.584465,-0.983034,0.000000 101.589767,-0.989968,0.000000 101.599458,-1.000870,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA BARAT</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC SITIUNG"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA BARAT</SimpleData><SimpleData name="KECAMATAN">SITIUNG</SimpleData><SimpleData name="DESA">SIGUNTUR</SimpleData><SimpleData name="KABKOT">DHARMASRAYA</SimpleData><SimpleData name="NAMA_PULAU"> </SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>101.564871,-0.919688,0.000000 101.586527,-0.929455,0.000000 101.597568,-0.926907,0.000000 101.604787,-0.933277,0.000000 101.608626,-0.935506,0.000000 101.608474,-0.937642,0.000000 101.606148,-0.942293,0.000000 101.607311,-0.952372,0.000000 101.605760,-0.964777,0.000000 101.599946,-0.975243,0.000000 101.592193,-0.979895,0.000000 101.584465,-0.983034,0.000000 101.579788,-0.984934,0.000000 101.568491,-0.987476,0.000000 101.564410,-0.988394,0.000000 101.562439,-0.987080,0.000000 101.559890,-0.986018,0.000000 101.558347,-0.984255,0.000000 101.557866,-0.981562,0.000000 101.556951,-0.976436,0.000000 101.554992,-0.973824,0.000000 101.552174,-0.970067,0.000000 101.548840,-0.956731,0.000000 101.547057,-0.954537,0.000000 101.545859,-0.952393,0.000000 101.541027,-0.948305,0.000000 101.539435,-0.941935,0.000000 101.535719,-0.939281,0.000000 101.535581,-0.935551,0.000000 101.535189,-0.924950,0.000000 101.532630,-0.918809,0.000000 101.534298,-0.917141,0.000000 101.544598,-0.918725,0.000000 101.545338,-0.918839,0.000000 101.564871,-0.919688,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC SITIUNG" name="KEC SITIUNG"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

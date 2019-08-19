@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC RIMBO PENGADANG/FID/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC RIMBO PENGADANG/PROVINSI/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC RIMBO PENGADANG/KECAMATAN/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC RIMBO PENGADANG/DESA/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC RIMBO PENGADANG/KABKOT/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC RIMBO PENGADANG/NAMA_PULAU/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC RIMBO PENGADANG/FID/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC RIMBO PENGADANG/PROVINSI/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC RIMBO PENGADANG/KECAMATAN/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC RIMBO PENGADANG/DESA/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC RIMBO PENGADANG/KABKOT/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC RIMBO PENGADANG/NAMA_PULAU/displayName]</td>
+          <td>$[KEC RIMBO PENGADANG/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC RIMBO PENGADANG</name><Snippet /><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC RIMBO PENGADANG"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">RIMBO PENGADANG</SimpleData><SimpleData name="DESA">BIOA SENGOK</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.422251,-3.358172,0.000000 102.416753,-3.358630,0.000000 102.410970,-3.357403,0.000000 102.407373,-3.356640,0.000000 102.399129,-3.356356,0.000000 102.396167,-3.355548,0.000000 102.399736,-3.348101,0.000000 102.405535,-3.337792,0.000000 102.422600,-3.327582,0.000000 102.427698,-3.324532,0.000000 102.446012,-3.326237,0.000000 102.449038,-3.326519,0.000000 102.450448,-3.326651,0.000000 102.450296,-3.328783,0.000000 102.447737,-3.330773,0.000000 102.444611,-3.331341,0.000000 102.444602,-3.331428,0.000000 102.444326,-3.334184,0.000000 102.444962,-3.334820,0.000000 102.446032,-3.335889,0.000000 102.446032,-3.336223,0.000000 102.447391,-3.337649,0.000000 102.445402,-3.338920,0.000000 102.444408,-3.339666,0.000000 102.444176,-3.339840,0.000000 102.442621,-3.341006,0.000000 102.442721,-3.341472,0.000000 102.443473,-3.344986,0.000000 102.441199,-3.347260,0.000000 102.437103,-3.349436,0.000000 102.436750,-3.349624,0.000000 102.433390,-3.351409,0.000000 102.432103,-3.352092,0.000000 102.427151,-3.355559,0.000000 102.423575,-3.358062,0.000000 102.422251,-3.358172,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC RIMBO PENGADANG"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">RIMBO PENGADANG</SimpleData><SimpleData name="DESA">RIMBO PENGADANG</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.415866,-3.270505,0.000000 102.420910,-3.272363,0.000000 102.424361,-3.271169,0.000000 102.427083,-3.272363,0.000000 102.429883,-3.273110,0.000000 102.431065,-3.273425,0.000000 102.437436,-3.273624,0.000000 102.446825,-3.276742,0.000000 102.450154,-3.277847,0.000000 102.454626,-3.279332,0.000000 102.468498,-3.290150,0.000000 102.471544,-3.299778,0.000000 102.469750,-3.299778,0.000000 102.446340,-3.309228,0.000000 102.442239,-3.312767,0.000000 102.430915,-3.322540,0.000000 102.430662,-3.322758,0.000000 102.427698,-3.324532,0.000000 102.422600,-3.327582,0.000000 102.405535,-3.337792,0.000000 102.399736,-3.348101,0.000000 102.396167,-3.355548,0.000000 102.392876,-3.354650,0.000000 102.386906,-3.357777,0.000000 102.382358,-3.365452,0.000000 102.380368,-3.374833,0.000000 102.376059,-3.382015,0.000000 102.375119,-3.381759,0.000000 102.374155,-3.381173,0.000000 102.372293,-3.380041,0.000000 102.367581,-3.377159,0.000000 102.360314,-3.373696,0.000000 102.359323,-3.373223,0.000000 102.357398,-3.373059,0.000000 102.356152,-3.372953,0.000000 102.352921,-3.372678,0.000000 102.352917,-3.372676,0.000000 102.354063,-3.363972,0.000000 102.355116,-3.358039,0.000000 102.356410,-3.350924,0.000000 102.357934,-3.348379,0.000000 102.361160,-3.342995,0.000000 102.362731,-3.340297,0.000000 102.367351,-3.334420,0.000000 102.369791,-3.331259,0.000000 102.371934,-3.328505,0.000000 102.375871,-3.322203,0.000000 102.378158,-3.318513,0.000000 102.379364,-3.316566,0.000000 102.380399,-3.315291,0.000000 102.385500,-3.309211,0.000000 102.389455,-3.304424,0.000000 102.394057,-3.298843,0.000000 102.397162,-3.295368,0.000000 102.399789,-3.292381,0.000000 102.402281,-3.289546,0.000000 102.402229,-3.289524,0.000000 102.402454,-3.289401,0.000000 102.403703,-3.287528,0.000000 102.405437,-3.287320,0.000000 102.405645,-3.284407,0.000000 102.407379,-3.278927,0.000000 102.408436,-3.277451,0.000000 102.410709,-3.274279,0.000000 102.410986,-3.269782,0.000000 102.415866,-3.270505,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC RIMBO PENGADANG"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">RIMBO PENGADANG</SimpleData><SimpleData name="DESA">TALANG RATAU</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.402443,-3.253004,0.000000 102.402508,-3.253133,0.000000 102.402643,-3.253117,0.000000 102.403772,-3.255689,0.000000 102.407633,-3.263225,0.000000 102.410986,-3.269771,0.000000 102.410986,-3.269782,0.000000 102.410709,-3.274279,0.000000 102.408436,-3.277451,0.000000 102.407379,-3.278927,0.000000 102.405645,-3.284407,0.000000 102.405437,-3.287320,0.000000 102.403703,-3.287528,0.000000 102.402454,-3.289401,0.000000 102.402229,-3.289524,0.000000 102.400526,-3.288807,0.000000 102.395203,-3.284113,0.000000 102.393944,-3.283007,0.000000 102.393225,-3.282375,0.000000 102.389566,-3.281932,0.000000 102.389378,-3.281835,0.000000 102.385580,-3.279874,0.000000 102.384483,-3.279307,0.000000 102.382913,-3.278383,0.000000 102.377775,-3.271212,0.000000 102.376758,-3.269715,0.000000 102.375473,-3.268754,0.000000 102.373967,-3.267627,0.000000 102.373927,-3.267570,0.000000 102.371251,-3.263801,0.000000 102.370328,-3.262487,0.000000 102.369901,-3.261879,0.000000 102.369917,-3.261857,0.000000 102.372230,-3.258663,0.000000 102.373995,-3.257305,0.000000 102.374319,-3.257056,0.000000 102.376093,-3.253581,0.000000 102.378216,-3.250683,0.000000 102.379179,-3.249367,0.000000 102.380880,-3.247002,0.000000 102.382062,-3.244806,0.000000 102.382486,-3.243974,0.000000 102.384479,-3.240059,0.000000 102.384481,-3.240060,0.000000 102.384500,-3.240073,0.000000 102.384720,-3.240274,0.000000 102.391098,-3.245880,0.000000 102.391178,-3.245950,0.000000 102.391490,-3.246224,0.000000 102.395299,-3.248700,0.000000 102.395325,-3.248717,0.000000 102.397749,-3.250292,0.000000 102.402443,-3.253004,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC RIMBO PENGADANG"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">RIMBO PENGADANG</SimpleData><SimpleData name="DESA">TIK KUTO</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.488955,-3.296662,0.000000 102.495208,-3.302063,0.000000 102.500241,-3.308857,0.000000 102.500893,-3.309738,0.000000 102.500325,-3.315423,0.000000 102.497482,-3.319971,0.000000 102.492366,-3.322529,0.000000 102.492176,-3.322803,0.000000 102.489807,-3.326225,0.000000 102.484691,-3.326225,0.000000 102.483608,-3.325431,0.000000 102.480427,-3.323098,0.000000 102.479676,-3.322848,0.000000 102.477074,-3.321980,0.000000 102.475310,-3.321392,0.000000 102.475150,-3.321396,0.000000 102.462964,-3.321644,0.000000 102.461382,-3.321677,0.000000 102.457005,-3.319926,0.000000 102.455697,-3.319403,0.000000 102.453991,-3.320824,0.000000 102.448590,-3.320824,0.000000 102.450580,-3.324803,0.000000 102.450448,-3.326651,0.000000 102.449038,-3.326519,0.000000 102.446012,-3.326237,0.000000 102.427698,-3.324532,0.000000 102.430662,-3.322758,0.000000 102.430915,-3.322540,0.000000 102.442239,-3.312767,0.000000 102.446340,-3.309228,0.000000 102.469750,-3.299778,0.000000 102.471544,-3.299778,0.000000 102.471898,-3.299778,0.000000 102.472141,-3.299578,0.000000 102.482851,-3.290758,0.000000 102.487495,-3.290758,0.000000 102.487533,-3.291261,0.000000 102.488955,-3.296662,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC RIMBO PENGADANG"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">RIMBO PENGADANG</SimpleData><SimpleData name="DESA">TELUK DIEN</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.494242,-3.252791,0.000000 102.497287,-3.255382,0.000000 102.498084,-3.258129,0.000000 102.498079,-3.260057,0.000000 102.497725,-3.260077,0.000000 102.493906,-3.260289,0.000000 102.475643,-3.261304,0.000000 102.450359,-3.262026,0.000000 102.443206,-3.262231,0.000000 102.421250,-3.262844,0.000000 102.407633,-3.263225,0.000000 102.403772,-3.255689,0.000000 102.402643,-3.253117,0.000000 102.409893,-3.252257,0.000000 102.413319,-3.253191,0.000000 102.416768,-3.254132,0.000000 102.422586,-3.252399,0.000000 102.424112,-3.251944,0.000000 102.427922,-3.250213,0.000000 102.434425,-3.247257,0.000000 102.443175,-3.243976,0.000000 102.451457,-3.241788,0.000000 102.458176,-3.239757,0.000000 102.464187,-3.239124,0.000000 102.470051,-3.238507,0.000000 102.484739,-3.236475,0.000000 102.491479,-3.236984,0.000000 102.491403,-3.237098,0.000000 102.491365,-3.237475,0.000000 102.489777,-3.239380,0.000000 102.489449,-3.242285,0.000000 102.491955,-3.244284,0.000000 102.492693,-3.245828,0.000000 102.493129,-3.248268,0.000000 102.492800,-3.251173,0.000000 102.494242,-3.252791,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>BENGKULU</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC RIMBO PENGADANG"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">BENGKULU</SimpleData><SimpleData name="KECAMATAN">RIMBO PENGADANG</SimpleData><SimpleData name="DESA">BAJOK</SimpleData><SimpleData name="KABKOT">LEBONG</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.494640,-3.267952,0.000000 102.492592,-3.271560,0.000000 102.488670,-3.278470,0.000000 102.486965,-3.283870,0.000000 102.487495,-3.290758,0.000000 102.482851,-3.290758,0.000000 102.472141,-3.299578,0.000000 102.471898,-3.299778,0.000000 102.471544,-3.299778,0.000000 102.468498,-3.290150,0.000000 102.454626,-3.279332,0.000000 102.450154,-3.277847,0.000000 102.446825,-3.276742,0.000000 102.437436,-3.273624,0.000000 102.431065,-3.273425,0.000000 102.429883,-3.273110,0.000000 102.427083,-3.272363,0.000000 102.424361,-3.271169,0.000000 102.420910,-3.272363,0.000000 102.415866,-3.270505,0.000000 102.410986,-3.269782,0.000000 102.410986,-3.269771,0.000000 102.407633,-3.263225,0.000000 102.421250,-3.262844,0.000000 102.443206,-3.262231,0.000000 102.450359,-3.262026,0.000000 102.475643,-3.261304,0.000000 102.493906,-3.260289,0.000000 102.493787,-3.263972,0.000000 102.494640,-3.267952,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC RIMBO PENGADANG" name="KEC RIMBO PENGADANG"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

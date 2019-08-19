@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PEMATANG SIDAMANIK/FID/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEMATANG SIDAMANIK/PROVINSI/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PEMATANG SIDAMANIK/KECAMATAN/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEMATANG SIDAMANIK/DESA/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PEMATANG SIDAMANIK/KABKOT/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEMATANG SIDAMANIK/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC PEMATANG SIDAMANIK/FID/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEMATANG SIDAMANIK/PROVINSI/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PEMATANG SIDAMANIK/KECAMATAN/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEMATANG SIDAMANIK/DESA/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC PEMATANG SIDAMANIK/KABKOT/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC PEMATANG SIDAMANIK/NAMA_PULAU/displayName]</td>
+          <td>$[KEC PEMATANG SIDAMANIK/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC PEMATANG SIDAMANIK</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEMATANG SIDAMANIK"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PEMATANG SIDAMANIK</SimpleData><SimpleData name="DESA">BANDAR MANIK</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.876416,2.796445,0.000000 98.879305,2.793779,0.000000 98.882939,2.796653,0.000000 98.884210,2.790756,0.000000 98.883821,2.790348,0.000000 98.879710,2.785916,0.000000 98.874331,2.780313,0.000000 98.870535,2.774989,0.000000 98.868472,2.770411,0.000000 98.865110,2.772104,0.000000 98.858053,2.774938,0.000000 98.850847,2.774766,0.000000 98.844734,2.773967,0.000000 98.847880,2.782519,0.000000 98.851992,2.792900,0.000000 98.852012,2.792950,0.000000 98.858198,2.799145,0.000000 98.862117,2.804824,0.000000 98.866929,2.807473,0.000000 98.867026,2.807415,0.000000 98.869634,2.805846,0.000000 98.871206,2.801520,0.000000 98.872976,2.797412,0.000000 98.876305,2.796932,0.000000 98.876416,2.796445,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEMATANG SIDAMANIK"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PEMATANG SIDAMANIK</SimpleData><SimpleData name="DESA">SIMANTIN</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.887038,2.831984,0.000000 98.878923,2.828705,0.000000 98.872873,2.829071,0.000000 98.871394,2.829519,0.000000 98.868235,2.830475,0.000000 98.861283,2.827594,0.000000 98.853936,2.822604,0.000000 98.849878,2.821801,0.000000 98.842877,2.821502,0.000000 98.845777,2.825251,0.000000 98.852827,2.832321,0.000000 98.859577,2.839935,0.000000 98.863391,2.844842,0.000000 98.868278,2.847355,0.000000 98.873009,2.851883,0.000000 98.874769,2.860586,0.000000 98.875185,2.862648,0.000000 98.877905,2.870437,0.000000 98.880423,2.875100,0.000000 98.881376,2.876864,0.000000 98.890905,2.879507,0.000000 98.897415,2.879895,0.000000 98.898351,2.877317,0.000000 98.898176,2.870056,0.000000 98.895477,2.861780,0.000000 98.895482,2.855154,0.000000 98.897115,2.850547,0.000000 98.897138,2.850483,0.000000 98.896229,2.845771,0.000000 98.893221,2.838249,0.000000 98.891168,2.836169,0.000000 98.887038,2.831984,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEMATANG SIDAMANIK"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PEMATANG SIDAMANIK</SimpleData><SimpleData name="DESA">JORLANG HULUAN</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.934016,2.779471,0.000000 98.931098,2.769362,0.000000 98.929817,2.769468,0.000000 98.928179,2.770833,0.000000 98.925449,2.771652,0.000000 98.922719,2.773290,0.000000 98.919716,2.775201,0.000000 98.916713,2.777113,0.000000 98.915621,2.778478,0.000000 98.913983,2.780935,0.000000 98.913164,2.783665,0.000000 98.912873,2.784827,0.000000 98.920989,2.790556,0.000000 98.930050,2.797642,0.000000 98.932773,2.800178,0.000000 98.937589,2.804663,0.000000 98.943884,2.811560,0.000000 98.951275,2.818783,0.000000 98.962112,2.824899,0.000000 98.970751,2.828898,0.000000 98.971644,2.829522,0.000000 98.972572,2.828488,0.000000 98.973796,2.827425,0.000000 98.975389,2.825746,0.000000 98.963649,2.818131,0.000000 98.948075,2.802743,0.000000 98.938336,2.790398,0.000000 98.934530,2.780771,0.000000 98.934016,2.779471,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEMATANG SIDAMANIK"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PEMATANG SIDAMANIK</SimpleData><SimpleData name="DESA">GORAK</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.905630,2.783129,0.000000 98.907608,2.782307,0.000000 98.912572,2.784614,0.000000 98.912873,2.784827,0.000000 98.913164,2.783665,0.000000 98.913983,2.780935,0.000000 98.915621,2.778478,0.000000 98.916713,2.777113,0.000000 98.919716,2.775201,0.000000 98.922719,2.773290,0.000000 98.925449,2.771652,0.000000 98.928179,2.770833,0.000000 98.929817,2.769468,0.000000 98.931098,2.769362,0.000000 98.930571,2.767536,0.000000 98.929658,2.762144,0.000000 98.929550,2.761507,0.000000 98.928707,2.756527,0.000000 98.928632,2.756084,0.000000 98.918196,2.740569,0.000000 98.915119,2.737049,0.000000 98.912203,2.739613,0.000000 98.906137,2.743606,0.000000 98.901061,2.750431,0.000000 98.898686,2.755699,0.000000 98.895169,2.758476,0.000000 98.894599,2.759572,0.000000 98.896238,2.761005,0.000000 98.897876,2.764281,0.000000 98.899787,2.767011,0.000000 98.901425,2.770560,0.000000 98.902517,2.773563,0.000000 98.902517,2.775474,0.000000 98.902517,2.777386,0.000000 98.902244,2.779297,0.000000 98.901698,2.780389,0.000000 98.901152,2.781754,0.000000 98.900879,2.783665,0.000000 98.901425,2.785303,0.000000 98.901698,2.788306,0.000000 98.903063,2.790490,0.000000 98.903336,2.793220,0.000000 98.905520,2.795950,0.000000 98.905994,2.797609,0.000000 98.907876,2.798778,0.000000 98.909338,2.797028,0.000000 98.908977,2.792479,0.000000 98.905753,2.786761,0.000000 98.905630,2.783129,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEMATANG SIDAMANIK"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PEMATANG SIDAMANIK</SimpleData><SimpleData name="DESA">SAIT BUTTU SARIBU</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.895633,2.828868,0.000000 98.898760,2.828724,0.000000 98.903921,2.832677,0.000000 98.903934,2.832643,0.000000 98.905615,2.829019,0.000000 98.906019,2.826038,0.000000 98.904206,2.824635,0.000000 98.902556,2.822680,0.000000 98.903463,2.819302,0.000000 98.901531,2.815801,0.000000 98.896678,2.814127,0.000000 98.888624,2.811060,0.000000 98.882525,2.804450,0.000000 98.880271,2.800377,0.000000 98.876326,2.796929,0.000000 98.876305,2.796932,0.000000 98.872976,2.797412,0.000000 98.871206,2.801520,0.000000 98.869634,2.805846,0.000000 98.867026,2.807415,0.000000 98.867026,2.808508,0.000000 98.867026,2.810692,0.000000 98.867299,2.812876,0.000000 98.867299,2.814788,0.000000 98.867299,2.816699,0.000000 98.867572,2.818337,0.000000 98.867572,2.820248,0.000000 98.868118,2.821340,0.000000 98.868664,2.822159,0.000000 98.870302,2.822978,0.000000 98.871121,2.824070,0.000000 98.871394,2.826254,0.000000 98.871394,2.828711,0.000000 98.871394,2.829519,0.000000 98.872873,2.829071,0.000000 98.878923,2.828705,0.000000 98.887038,2.831984,0.000000 98.891168,2.836169,0.000000 98.892755,2.834532,0.000000 98.894394,2.831883,0.000000 98.895633,2.828868,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEMATANG SIDAMANIK"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PEMATANG SIDAMANIK</SimpleData><SimpleData name="DESA">PEMATANG SIDAMANIK</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.832495,2.803863,0.000000 98.833847,2.803187,0.000000 98.835764,2.803187,0.000000 98.838001,2.802548,0.000000 98.841515,2.800950,0.000000 98.843751,2.800311,0.000000 98.845029,2.799353,0.000000 98.845029,2.797436,0.000000 98.845349,2.797116,0.000000 98.845988,2.795838,0.000000 98.847266,2.794880,0.000000 98.847905,2.793602,0.000000 98.851100,2.793283,0.000000 98.851992,2.792900,0.000000 98.847880,2.782519,0.000000 98.844734,2.773967,0.000000 98.843673,2.773829,0.000000 98.835191,2.774299,0.000000 98.828842,2.778419,0.000000 98.820533,2.781338,0.000000 98.818788,2.782369,0.000000 98.820312,2.784885,0.000000 98.821761,2.786999,0.000000 98.825731,2.792791,0.000000 98.832495,2.803863,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC PEMATANG SIDAMANIK"><SimpleData name="FID">6</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">PEMATANG SIDAMANIK</SimpleData><SimpleData name="DESA">SARIMATTIN</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>98.867026,2.808508,0.000000 98.867026,2.807415,0.000000 98.866929,2.807473,0.000000 98.862117,2.804824,0.000000 98.858198,2.799145,0.000000 98.852012,2.792950,0.000000 98.851992,2.792900,0.000000 98.851100,2.793283,0.000000 98.847905,2.793602,0.000000 98.847266,2.794880,0.000000 98.845988,2.795838,0.000000 98.845349,2.797116,0.000000 98.845029,2.797436,0.000000 98.845029,2.799353,0.000000 98.843751,2.800311,0.000000 98.841515,2.800950,0.000000 98.838001,2.802548,0.000000 98.835764,2.803187,0.000000 98.833847,2.803187,0.000000 98.832495,2.803863,0.000000 98.832733,2.804253,0.000000 98.832971,2.804797,0.000000 98.836711,2.813340,0.000000 98.836903,2.813778,0.000000 98.842877,2.821502,0.000000 98.849878,2.821801,0.000000 98.853936,2.822604,0.000000 98.861283,2.827594,0.000000 98.868235,2.830475,0.000000 98.871394,2.829519,0.000000 98.871394,2.828711,0.000000 98.871394,2.826254,0.000000 98.871121,2.824070,0.000000 98.870302,2.822978,0.000000 98.868664,2.822159,0.000000 98.868118,2.821340,0.000000 98.867572,2.820248,0.000000 98.867572,2.818337,0.000000 98.867299,2.816699,0.000000 98.867299,2.814788,0.000000 98.867299,2.812876,0.000000 98.867026,2.810692,0.000000 98.867026,2.808508,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC PEMATANG SIDAMANIK" name="KEC PEMATANG SIDAMANIK"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

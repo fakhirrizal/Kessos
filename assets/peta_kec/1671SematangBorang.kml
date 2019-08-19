@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Palembang/FID/displayName]</td>
+          <td>$[Palembang/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Palembang/PROVINSI/displayName]</td>
+          <td>$[Palembang/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Palembang/KABKOT/displayName]</td>
+          <td>$[Palembang/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Palembang/KECAMATAN/displayName]</td>
+          <td>$[Palembang/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Palembang/DESA/displayName]</td>
+          <td>$[Palembang/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Palembang/FID/displayName]</td>
+          <td>$[Palembang/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Palembang/PROVINSI/displayName]</td>
+          <td>$[Palembang/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Palembang/KABKOT/displayName]</td>
+          <td>$[Palembang/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Palembang/KECAMATAN/displayName]</td>
+          <td>$[Palembang/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Palembang/DESA/displayName]</td>
+          <td>$[Palembang/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Palembang</name><Snippet /><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Palembang"><SimpleData name="FID">72</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">PALEMBANG</SimpleData><SimpleData name="KECAMATAN">SEMATANG BORANG</SimpleData><SimpleData name="DESA">SRIMULYO</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.802021,-2.931224,0.000000 104.808378,-2.940015,0.000000 104.814221,-2.938967,0.000000 104.814200,-2.939426,0.000000 104.814682,-2.944263,0.000000 104.814800,-2.945438,0.000000 104.813100,-2.949460,0.000000 104.816300,-2.952977,0.000000 104.816733,-2.953645,0.000000 104.816315,-2.953578,0.000000 104.813320,-2.953142,0.000000 104.812627,-2.953041,0.000000 104.807903,-2.952357,0.000000 104.804153,-2.951807,0.000000 104.796949,-2.950807,0.000000 104.796956,-2.950752,0.000000 104.796946,-2.950750,0.000000 104.796988,-2.950514,0.000000 104.797010,-2.950356,0.000000 104.796877,-2.950308,0.000000 104.796638,-2.950247,0.000000 104.796641,-2.950223,0.000000 104.796420,-2.950144,0.000000 104.796689,-2.948199,0.000000 104.796735,-2.947809,0.000000 104.794429,-2.947368,0.000000 104.794554,-2.946023,0.000000 104.794699,-2.946034,0.000000 104.794716,-2.945842,0.000000 104.795128,-2.945944,0.000000 104.796438,-2.945974,0.000000 104.796759,-2.945981,0.000000 104.796758,-2.945946,0.000000 104.798481,-2.946043,0.000000 104.801832,-2.946266,0.000000 104.802049,-2.945206,0.000000 104.802291,-2.943231,0.000000 104.802292,-2.943231,0.000000 104.802291,-2.942819,0.000000 104.802346,-2.942198,0.000000 104.802375,-2.941871,0.000000 104.802474,-2.941368,0.000000 104.802556,-2.939934,0.000000 104.802564,-2.938398,0.000000 104.802407,-2.937010,0.000000 104.803029,-2.934882,0.000000 104.803029,-2.933753,0.000000 104.803029,-2.933750,0.000000 104.803029,-2.933749,0.000000 104.802021,-2.931224,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Palembang"><SimpleData name="FID">73</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">PALEMBANG</SimpleData><SimpleData name="KECAMATAN">SEMATANG BORANG</SimpleData><SimpleData name="DESA">LEBONG GAJAH</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.802021,-2.931224,0.000000 104.803029,-2.933749,0.000000 104.803029,-2.933750,0.000000 104.803029,-2.933753,0.000000 104.803029,-2.934882,0.000000 104.802407,-2.937010,0.000000 104.802564,-2.938398,0.000000 104.802556,-2.939934,0.000000 104.802474,-2.941368,0.000000 104.802375,-2.941871,0.000000 104.802346,-2.942198,0.000000 104.802291,-2.942819,0.000000 104.802292,-2.943231,0.000000 104.802291,-2.943231,0.000000 104.802049,-2.945206,0.000000 104.801832,-2.946266,0.000000 104.798481,-2.946043,0.000000 104.796758,-2.945946,0.000000 104.796759,-2.945981,0.000000 104.796438,-2.945974,0.000000 104.796380,-2.945199,0.000000 104.795592,-2.945222,0.000000 104.795421,-2.944312,0.000000 104.795318,-2.942910,0.000000 104.795153,-2.942536,0.000000 104.794762,-2.942208,0.000000 104.792980,-2.940714,0.000000 104.792751,-2.940521,0.000000 104.792744,-2.940314,0.000000 104.792145,-2.939691,0.000000 104.790975,-2.938714,0.000000 104.790328,-2.939220,0.000000 104.790238,-2.939124,0.000000 104.790211,-2.939142,0.000000 104.789850,-2.938741,0.000000 104.789743,-2.938825,0.000000 104.789653,-2.939226,0.000000 104.789412,-2.939247,0.000000 104.789404,-2.939535,0.000000 104.788835,-2.939744,0.000000 104.788293,-2.940065,0.000000 104.787543,-2.940093,0.000000 104.787543,-2.940847,0.000000 104.786709,-2.940763,0.000000 104.786740,-2.940691,0.000000 104.786474,-2.940658,0.000000 104.786654,-2.940361,0.000000 104.786734,-2.940274,0.000000 104.786760,-2.940246,0.000000 104.786913,-2.940079,0.000000 104.786920,-2.940073,0.000000 104.787548,-2.939467,0.000000 104.787667,-2.939379,0.000000 104.788656,-2.938647,0.000000 104.789368,-2.938149,0.000000 104.792114,-2.936227,0.000000 104.793970,-2.934844,0.000000 104.793162,-2.933780,0.000000 104.792785,-2.933245,0.000000 104.792552,-2.932986,0.000000 104.792505,-2.932935,0.000000 104.792513,-2.932937,0.000000 104.792632,-2.932973,0.000000 104.793399,-2.932432,0.000000 104.793880,-2.933448,0.000000 104.794075,-2.933476,0.000000 104.794772,-2.934448,0.000000 104.795412,-2.934066,0.000000 104.795409,-2.933986,0.000000 104.795561,-2.933896,0.000000 104.795558,-2.933835,0.000000 104.796382,-2.933257,0.000000 104.796844,-2.932834,0.000000 104.797257,-2.932493,0.000000 104.797669,-2.932386,0.000000 104.797871,-2.932412,0.000000 104.797979,-2.932238,0.000000 104.798017,-2.932242,0.000000 104.798328,-2.931744,0.000000 104.798914,-2.931022,0.000000 104.799697,-2.930067,0.000000 104.800356,-2.929261,0.000000 104.800415,-2.929193,0.000000 104.800505,-2.929127,0.000000 104.800995,-2.928762,0.000000 104.801247,-2.929285,0.000000 104.802021,-2.931224,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Palembang"><SimpleData name="FID">105</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">PALEMBANG</SimpleData><SimpleData name="KECAMATAN">SEMATANG BORANG</SimpleData><SimpleData name="DESA">KARYA MULYA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.841057,-2.956978,0.000000 104.838403,-2.960272,0.000000 104.838342,-2.960218,0.000000 104.838329,-2.960234,0.000000 104.837867,-2.959792,0.000000 104.836262,-2.958351,0.000000 104.840270,-2.929844,0.000000 104.847509,-2.925992,0.000000 104.849842,-2.924750,0.000000 104.851421,-2.924949,0.000000 104.850459,-2.943871,0.000000 104.849024,-2.944787,0.000000 104.846145,-2.946625,0.000000 104.841218,-2.950339,0.000000 104.844875,-2.952382,0.000000 104.843582,-2.953836,0.000000 104.843235,-2.954276,0.000000 104.841977,-2.955803,0.000000 104.841150,-2.956807,0.000000 104.841057,-2.956978,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA SELATAN</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Palembang"><SimpleData name="FID">106</SimpleData><SimpleData name="PROVINSI">SUMATERA SELATAN</SimpleData><SimpleData name="KABKOT">PALEMBANG</SimpleData><SimpleData name="KECAMATAN">SEMATANG BORANG</SimpleData><SimpleData name="DESA">SUKA MULYA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>104.840270,-2.929844,0.000000 104.836262,-2.958351,0.000000 104.834981,-2.957202,0.000000 104.834728,-2.956380,0.000000 104.834726,-2.956372,0.000000 104.834708,-2.956346,0.000000 104.832670,-2.956037,0.000000 104.830972,-2.955809,0.000000 104.824274,-2.954799,0.000000 104.823530,-2.954685,0.000000 104.823110,-2.954598,0.000000 104.823110,-2.954604,0.000000 104.818871,-2.953985,0.000000 104.816733,-2.953645,0.000000 104.816300,-2.952977,0.000000 104.813100,-2.949460,0.000000 104.814800,-2.945438,0.000000 104.814682,-2.944263,0.000000 104.821864,-2.940169,0.000000 104.835790,-2.932231,0.000000 104.835884,-2.932178,0.000000 104.840270,-2.929844,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="Palembang" name="Palembang"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema></Document></kml>

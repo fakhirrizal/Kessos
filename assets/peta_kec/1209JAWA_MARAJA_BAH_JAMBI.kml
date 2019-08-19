@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC JAWA MARAJA BAH JA/FID/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC JAWA MARAJA BAH JA/PROVINSI/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC JAWA MARAJA BAH JA/KECAMATAN/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC JAWA MARAJA BAH JA/DESA/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC JAWA MARAJA BAH JA/KABKOT/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC JAWA MARAJA BAH JA/NAMA_PULAU/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[KEC JAWA MARAJA BAH JA/FID/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC JAWA MARAJA BAH JA/PROVINSI/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[KEC JAWA MARAJA BAH JA/KECAMATAN/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/KECAMATAN]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC JAWA MARAJA BAH JA/DESA/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/DESA]</td>
+        </tr>
+        <tr>
+          <td>$[KEC JAWA MARAJA BAH JA/KABKOT/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[KEC JAWA MARAJA BAH JA/NAMA_PULAU/displayName]</td>
+          <td>$[KEC JAWA MARAJA BAH JA/NAMA_PULAU]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>KEC JAWA MARAJA BAH JA</name><Snippet /><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC JAWA MARAJA BAH JA"><SimpleData name="FID">0</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">JAWA MARAJA BAH JA</SimpleData><SimpleData name="DESA">BAH JAMBI I</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.227484,2.988690,0.000000 99.226797,2.988154,0.000000 99.226427,2.989063,0.000000 99.221537,2.991504,0.000000 99.215894,2.993703,0.000000 99.214006,2.995004,0.000000 99.214439,2.995314,0.000000 99.224240,3.001383,0.000000 99.228285,3.003545,0.000000 99.236586,3.007980,0.000000 99.247061,3.012892,0.000000 99.252327,3.016326,0.000000 99.252497,3.016462,0.000000 99.252690,3.016616,0.000000 99.252410,3.014376,0.000000 99.250266,3.007659,0.000000 99.246256,3.004070,0.000000 99.245468,3.003595,0.000000 99.241521,3.001217,0.000000 99.234636,2.995064,0.000000 99.229975,2.990470,0.000000 99.227484,2.988690,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC JAWA MARAJA BAH JA"><SimpleData name="FID">1</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">JAWA MARAJA BAH JA</SimpleData><SimpleData name="DESA">MARIAH JAMBI</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.184913,2.976104,0.000000 99.190513,2.974104,0.000000 99.194837,2.975185,0.000000 99.198080,2.973564,0.000000 99.200242,2.973023,0.000000 99.202404,2.970321,0.000000 99.204565,2.967619,0.000000 99.204565,2.965602,0.000000 99.202102,2.967237,0.000000 99.199529,2.966594,0.000000 99.198395,2.966311,0.000000 99.194041,2.961033,0.000000 99.191078,2.957280,0.000000 99.189588,2.956045,0.000000 99.187081,2.958294,0.000000 99.180927,2.957821,0.000000 99.173862,2.954310,0.000000 99.168037,2.950991,0.000000 99.163922,2.951512,0.000000 99.161942,2.955681,0.000000 99.161863,2.958329,0.000000 99.168958,2.965258,0.000000 99.179603,2.972689,0.000000 99.184913,2.976104,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC JAWA MARAJA BAH JA"><SimpleData name="FID">2</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">JAWA MARAJA BAH JA</SimpleData><SimpleData name="DESA">MOHO</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.228771,2.976331,0.000000 99.227653,2.974567,0.000000 99.225455,2.971098,0.000000 99.221086,2.967772,0.000000 99.217925,2.967079,0.000000 99.215271,2.969127,0.000000 99.212715,2.968878,0.000000 99.209152,2.966215,0.000000 99.205457,2.965010,0.000000 99.204565,2.965602,0.000000 99.204565,2.967619,0.000000 99.202404,2.970321,0.000000 99.200242,2.973023,0.000000 99.198080,2.973564,0.000000 99.194837,2.975185,0.000000 99.190513,2.974104,0.000000 99.184913,2.976104,0.000000 99.186194,2.976928,0.000000 99.193311,2.981506,0.000000 99.199973,2.985539,0.000000 99.205215,2.988712,0.000000 99.212965,2.994259,0.000000 99.214006,2.995004,0.000000 99.215894,2.993703,0.000000 99.221537,2.991504,0.000000 99.226427,2.989063,0.000000 99.226797,2.988154,0.000000 99.228906,2.982962,0.000000 99.228771,2.976331,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC JAWA MARAJA BAH JA"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">JAWA MARAJA BAH JA</SimpleData><SimpleData name="DESA">MEKAR BAHALAT</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.199033,2.925155,0.000000 99.197316,2.924699,0.000000 99.190538,2.929415,0.000000 99.189668,2.930020,0.000000 99.189785,2.937069,0.000000 99.192778,2.945008,0.000000 99.192273,2.953635,0.000000 99.189588,2.956045,0.000000 99.191078,2.957280,0.000000 99.194041,2.961033,0.000000 99.198395,2.966311,0.000000 99.199529,2.966594,0.000000 99.201193,2.962435,0.000000 99.207678,2.955949,0.000000 99.213083,2.950544,0.000000 99.218488,2.947302,0.000000 99.223892,2.946761,0.000000 99.224462,2.946382,0.000000 99.217653,2.937496,0.000000 99.212148,2.928264,0.000000 99.212397,2.927525,0.000000 99.206764,2.927197,0.000000 99.206714,2.927194,0.000000 99.199033,2.925155,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC JAWA MARAJA BAH JA"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">JAWA MARAJA BAH JA</SimpleData><SimpleData name="DESA">BAHALAT BAYU</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.239887,2.971018,0.000000 99.242266,2.965611,0.000000 99.242520,2.964287,0.000000 99.241699,2.964261,0.000000 99.237440,2.961638,0.000000 99.231558,2.954760,0.000000 99.228415,2.951101,0.000000 99.225278,2.947447,0.000000 99.224462,2.946382,0.000000 99.223892,2.946761,0.000000 99.218488,2.947302,0.000000 99.213083,2.950544,0.000000 99.207678,2.955949,0.000000 99.201193,2.962435,0.000000 99.199529,2.966594,0.000000 99.202102,2.967237,0.000000 99.204565,2.965602,0.000000 99.205457,2.965010,0.000000 99.209152,2.966215,0.000000 99.212715,2.968878,0.000000 99.215271,2.969127,0.000000 99.217925,2.967079,0.000000 99.221086,2.967772,0.000000 99.225455,2.971098,0.000000 99.227653,2.974567,0.000000 99.233465,2.973603,0.000000 99.239887,2.971018,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>SUMATERA UTARA</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#KEC JAWA MARAJA BAH JA"><SimpleData name="FID">5</SimpleData><SimpleData name="PROVINSI">SUMATERA UTARA</SimpleData><SimpleData name="KECAMATAN">JAWA MARAJA BAH JA</SimpleData><SimpleData name="DESA">BAH JOGA</SimpleData><SimpleData name="KABKOT">SIMALUNGUN</SimpleData><SimpleData name="NAMA_PULAU">SUMATERA</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>99.252812,2.965574,0.000000 99.252194,2.964388,0.000000 99.247519,2.964441,0.000000 99.242520,2.964287,0.000000 99.242266,2.965611,0.000000 99.239887,2.971018,0.000000 99.233465,2.973603,0.000000 99.227653,2.974567,0.000000 99.228771,2.976331,0.000000 99.228906,2.982962,0.000000 99.226797,2.988154,0.000000 99.227484,2.988690,0.000000 99.229975,2.990470,0.000000 99.234636,2.995064,0.000000 99.241521,3.001217,0.000000 99.245468,3.003595,0.000000 99.247672,2.999186,0.000000 99.247672,2.992700,0.000000 99.244430,2.988377,0.000000 99.246051,2.983512,0.000000 99.253077,2.978648,0.000000 99.259022,2.975946,0.000000 99.261742,2.975266,0.000000 99.256335,2.969212,0.000000 99.252812,2.965574,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="KEC JAWA MARAJA BAH JA" name="KEC JAWA MARAJA BAH JA"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="NAMA_PULAU"><displayName>NAMA_PULAU</displayName></SimpleField></Schema></Document></kml>

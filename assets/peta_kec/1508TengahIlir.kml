@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><Snippet /><Style id="defaultStyle"><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Tebo/FID/displayName]</td>
+          <td>$[Tebo/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Tebo/PROVINSI/displayName]</td>
+          <td>$[Tebo/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Tebo/KABKOT/displayName]</td>
+          <td>$[Tebo/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Tebo/KECAMATAN/displayName]</td>
+          <td>$[Tebo/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Tebo/DESA/displayName]</td>
+          <td>$[Tebo/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Style id="style0"><LineStyle><color>ffff7000</color><colorMode>normal</colorMode><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><colorMode>normal</colorMode><fill>1</fill><outline>1</outline></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Tebo/FID/displayName]</td>
+          <td>$[Tebo/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Tebo/PROVINSI/displayName]</td>
+          <td>$[Tebo/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Tebo/KABKOT/displayName]</td>
+          <td>$[Tebo/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Tebo/KECAMATAN/displayName]</td>
+          <td>$[Tebo/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Tebo/DESA/displayName]</td>
+          <td>$[Tebo/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Tebo</name><Snippet /><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Tebo"><SimpleData name="FID">32</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">TEBO</SimpleData><SimpleData name="KECAMATAN">TENGAH ILIR</SimpleData><SimpleData name="DESA">LUBUK MANDARSAH</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.723173,-1.261036,0.000000 102.725354,-1.261705,0.000000 102.727349,-1.261623,0.000000 102.730984,-1.260839,0.000000 102.732956,-1.260575,0.000000 102.735245,-1.259706,0.000000 102.739248,-1.259838,0.000000 102.742378,-1.260758,0.000000 102.746328,-1.262890,0.000000 102.751449,-1.267075,0.000000 102.753819,-1.268259,0.000000 102.756759,-1.270701,0.000000 102.759631,-1.273635,0.000000 102.761315,-1.275984,0.000000 102.762208,-1.278636,0.000000 102.762365,-1.280454,0.000000 102.762785,-1.282522,0.000000 102.763559,-1.283371,0.000000 102.764800,-1.283766,0.000000 102.766488,-1.284793,0.000000 102.767425,-1.286246,0.000000 102.767645,-1.288178,0.000000 102.767640,-1.288395,0.000000 102.767600,-1.289995,0.000000 102.766097,-1.294171,0.000000 102.766093,-1.294283,0.000000 102.766052,-1.295336,0.000000 102.766415,-1.296826,0.000000 102.767244,-1.297684,0.000000 102.768006,-1.298471,0.000000 102.772725,-1.300670,0.000000 102.774923,-1.301897,0.000000 102.777173,-1.303745,0.000000 102.777919,-1.304464,0.000000 102.777948,-1.304492,0.000000 102.780006,-1.307709,0.000000 102.780777,-1.311504,0.000000 102.782138,-1.316676,0.000000 102.782728,-1.318125,0.000000 102.785051,-1.323833,0.000000 102.786477,-1.326609,0.000000 102.786613,-1.326875,0.000000 102.788916,-1.331189,0.000000 102.789737,-1.333390,0.000000 102.790911,-1.342099,0.000000 102.793712,-1.348589,0.000000 102.797293,-1.355475,0.000000 102.798077,-1.356717,0.000000 102.803178,-1.368094,0.000000 102.804677,-1.371570,0.000000 102.805584,-1.373990,0.000000 102.805783,-1.375298,0.000000 102.805684,-1.376824,0.000000 102.805095,-1.379010,0.000000 102.803049,-1.381025,0.000000 102.799184,-1.383905,0.000000 102.797728,-1.387249,0.000000 102.797687,-1.389603,0.000000 102.798031,-1.392591,0.000000 102.798305,-1.393553,0.000000 102.798336,-1.393662,0.000000 102.799241,-1.396845,0.000000 102.800111,-1.399539,0.000000 102.801797,-1.404137,0.000000 102.802908,-1.406620,0.000000 102.784426,-1.409999,0.000000 102.784408,-1.409915,0.000000 102.784078,-1.409997,0.000000 102.783627,-1.410110,0.000000 102.776855,-1.411807,0.000000 102.773452,-1.418642,0.000000 102.773441,-1.430038,0.000000 102.760976,-1.439143,0.000000 102.749652,-1.439132,0.000000 102.739464,-1.435703,0.000000 102.722472,-1.442524,0.000000 102.717329,-1.448378,0.000000 102.705468,-1.461880,0.000000 102.692513,-1.478142,0.000000 102.681553,-1.460350,0.000000 102.667277,-1.468630,0.000000 102.667477,-1.468421,0.000000 102.657432,-1.451497,0.000000 102.664409,-1.448351,0.000000 102.670352,-1.441754,0.000000 102.697725,-1.405465,0.000000 102.702920,-1.371089,0.000000 102.704748,-1.357829,0.000000 102.648899,-1.328481,0.000000 102.702706,-1.252745,0.000000 102.703476,-1.251661,0.000000 102.703243,-1.251515,0.000000 102.706958,-1.247649,0.000000 102.709029,-1.245879,0.000000 102.709211,-1.245723,0.000000 102.709444,-1.245524,0.000000 102.710274,-1.245506,0.000000 102.710632,-1.245498,0.000000 102.712043,-1.245468,0.000000 102.712462,-1.245795,0.000000 102.715334,-1.248797,0.000000 102.716018,-1.250047,0.000000 102.717249,-1.253222,0.000000 102.718120,-1.255692,0.000000 102.719172,-1.257564,0.000000 102.721826,-1.260081,0.000000 102.723173,-1.261036,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Tebo"><SimpleData name="FID">33</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">TEBO</SimpleData><SimpleData name="KECAMATAN">TENGAH ILIR</SimpleData><SimpleData name="DESA">MENGUPEH</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.646115,-1.486485,0.000000 102.622002,-1.495233,0.000000 102.621649,-1.490507,0.000000 102.615398,-1.479376,0.000000 102.607413,-1.477891,0.000000 102.628933,-1.464349,0.000000 102.657432,-1.451497,0.000000 102.667477,-1.468421,0.000000 102.667277,-1.468630,0.000000 102.653047,-1.483478,0.000000 102.646115,-1.486485,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Tebo"><SimpleData name="FID">34</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">TEBO</SimpleData><SimpleData name="KECAMATAN">TENGAH ILIR</SimpleData><SimpleData name="DESA">MUARA KILIS</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.607413,-1.477891,0.000000 102.606737,-1.478316,0.000000 102.600958,-1.477996,0.000000 102.583768,-1.476418,0.000000 102.582606,-1.456428,0.000000 102.589245,-1.438477,0.000000 102.595318,-1.416986,0.000000 102.616936,-1.377496,0.000000 102.634650,-1.348538,0.000000 102.648899,-1.328481,0.000000 102.704748,-1.357829,0.000000 102.702920,-1.371089,0.000000 102.697725,-1.405465,0.000000 102.670352,-1.441754,0.000000 102.664409,-1.448351,0.000000 102.657432,-1.451497,0.000000 102.628933,-1.464349,0.000000 102.607413,-1.477891,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Tebo"><SimpleData name="FID">35</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">TEBO</SimpleData><SimpleData name="KECAMATAN">TENGAH ILIR</SimpleData><SimpleData name="DESA">PENAPALAN</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.600958,-1.477996,0.000000 102.606737,-1.478316,0.000000 102.607413,-1.477891,0.000000 102.615398,-1.479376,0.000000 102.621649,-1.490507,0.000000 102.622002,-1.495233,0.000000 102.623465,-1.514796,0.000000 102.611229,-1.514833,0.000000 102.581365,-1.514923,0.000000 102.582863,-1.510945,0.000000 102.584007,-1.480545,0.000000 102.583768,-1.476418,0.000000 102.600958,-1.477996,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark><Placemark><name>JAMBI</name><Snippet></Snippet><styleUrl>#style0</styleUrl><ExtendedData><SchemaData schemaUrl="#Tebo"><SimpleData name="FID">36</SimpleData><SimpleData name="PROVINSI">JAMBI</SimpleData><SimpleData name="KABKOT">TEBO</SimpleData><SimpleData name="KECAMATAN">TENGAH ILIR</SimpleData><SimpleData name="DESA">RANTAU API</SimpleData></SchemaData></ExtendedData><Polygon><extrude>false</extrude><tessellate>false</tessellate><outerBoundaryIs><LinearRing><extrude>false</extrude><tessellate>false</tessellate><coordinates>102.601637,-1.562732,0.000000 102.600857,-1.562862,0.000000 102.607042,-1.539250,0.000000 102.611229,-1.514833,0.000000 102.623465,-1.514796,0.000000 102.622002,-1.495233,0.000000 102.646115,-1.486485,0.000000 102.653047,-1.483478,0.000000 102.667277,-1.468630,0.000000 102.681553,-1.460350,0.000000 102.692513,-1.478142,0.000000 102.687573,-1.484343,0.000000 102.687327,-1.484653,0.000000 102.685742,-1.486699,0.000000 102.671452,-1.505148,0.000000 102.669997,-1.508981,0.000000 102.662368,-1.529069,0.000000 102.661409,-1.530994,0.000000 102.657829,-1.538181,0.000000 102.654620,-1.539469,0.000000 102.652164,-1.540454,0.000000 102.646628,-1.544424,0.000000 102.644232,-1.546143,0.000000 102.636284,-1.550131,0.000000 102.628370,-1.554102,0.000000 102.612510,-1.560921,0.000000 102.601637,-1.562732,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Folder><Schema id="Tebo" name="Tebo"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema></Document></kml>

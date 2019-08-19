@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><kml><xmlns>http://www.opengis.net/kml/2.2</xmlns><Document><name /><visibility>true</visibility><open>false</open><address /><Snippet /><description /><styleUrl /><Schema id="Maybrat" name="Maybrat"><SimpleField type="string" name="FID"><displayName>FID</displayName></SimpleField><SimpleField type="string" name="PROVINSI"><displayName>PROVINSI</displayName></SimpleField><SimpleField type="string" name="KABKOT"><displayName>KABKOT</displayName></SimpleField><SimpleField type="string" name="KECAMATAN"><displayName>KECAMATAN</displayName></SimpleField><SimpleField type="string" name="DESA"><displayName>DESA</displayName></SimpleField></Schema><Style id="style0"><LineStyle><color>ffff7000</color><width>2</width></LineStyle><PolyStyle><color>00f0f0f0</color><outline>1</outline><fill>1</fill></PolyStyle><BalloonStyle><text><![CDATA[<html>
+  <head>
+    <META http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="0" style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+      <thead style="text-align:center; font-weight:bold;background:#9CBCE2;">
+        <tr>
+          <th colspan="2">$[name]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$[Maybrat/FID/displayName]</td>
+          <td>$[Maybrat/FID]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Maybrat/PROVINSI/displayName]</td>
+          <td>$[Maybrat/PROVINSI]</td>
+        </tr>
+        <tr>
+          <td>$[Maybrat/KABKOT/displayName]</td>
+          <td>$[Maybrat/KABKOT]</td>
+        </tr>
+        <tr bgcolor="#D4E4F3">
+          <td>$[Maybrat/KECAMATAN/displayName]</td>
+          <td>$[Maybrat/KECAMATAN]</td>
+        </tr>
+        <tr>
+          <td>$[Maybrat/DESA/displayName]</td>
+          <td>$[Maybrat/DESA]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>]]></text><displayMode>default</displayMode></BalloonStyle></Style><Folder><name>Maybrat</name><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.219109,-1.302626,0.000000 132.218081,-1.309648,0.000000 132.217621,-1.309243,0.000000 132.215318,-1.310626,0.000000 132.194808,-1.322931,0.000000 132.178078,-1.331296,0.000000 132.172996,-1.358501,0.000000 132.120832,-1.361609,0.000000 132.109650,-1.355509,0.000000 132.140816,-1.327114,0.000000 132.167812,-1.308483,0.000000 132.172302,-1.305396,0.000000 132.179979,-1.300118,0.000000 132.180333,-1.300068,0.000000 132.192776,-1.298290,0.000000 132.193287,-1.298217,0.000000 132.202210,-1.299660,0.000000 132.210789,-1.301048,0.000000 132.219142,-1.302399,0.000000 132.219109,-1.302626,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Maybrat"><SimpleData name="FID">3</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">MAYBRAT</SimpleData><SimpleData name="KECAMATAN">AYAMARU SELATAN</SimpleData><SimpleData name="DESA">KOMA KOMA</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.236632,-1.325973,0.000000 132.241379,-1.336521,0.000000 132.240815,-1.336239,0.000000 132.219142,-1.344984,0.000000 132.219069,-1.345115,0.000000 132.212356,-1.357049,0.000000 132.212298,-1.357151,0.000000 132.212713,-1.359352,0.000000 132.206595,-1.358672,0.000000 132.206205,-1.359321,0.000000 132.202032,-1.356771,0.000000 132.172996,-1.358501,0.000000 132.178078,-1.331296,0.000000 132.194808,-1.322931,0.000000 132.215318,-1.310626,0.000000 132.217621,-1.309243,0.000000 132.218081,-1.309648,0.000000 132.223478,-1.314398,0.000000 132.230421,-1.320507,0.000000 132.236632,-1.325973,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Maybrat"><SimpleData name="FID">4</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">MAYBRAT</SimpleData><SimpleData name="KECAMATAN">AYAMARU SELATAN</SimpleData><SimpleData name="DESA">SAYEMSEMBARO</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.140816,-1.327114,0.000000 132.109650,-1.355509,0.000000 132.097498,-1.348881,0.000000 132.094968,-1.348473,0.000000 132.145354,-1.303942,0.000000 132.164638,-1.285799,0.000000 132.164956,-1.285500,0.000000 132.173821,-1.277159,0.000000 132.178485,-1.287153,0.000000 132.175943,-1.288123,0.000000 132.170280,-1.295249,0.000000 132.170196,-1.295354,0.000000 132.170625,-1.297400,0.000000 132.172302,-1.305396,0.000000 132.167812,-1.308483,0.000000 132.140816,-1.327114,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Maybrat"><SimpleData name="FID">9</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">MAYBRAT</SimpleData><SimpleData name="KECAMATAN">AYAMARU SELATAN</SimpleData><SimpleData name="DESA">SAUF</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark><Placemark><name>PAPUA BARAT</name><Snippet /><Polygon><outerBoundaryIs><LinearRing><coordinates>132.145354,-1.303942,0.000000 132.094968,-1.348473,0.000000 132.078333,-1.345790,0.000000 132.078126,-1.345418,0.000000 132.076995,-1.344720,0.000000 132.075992,-1.344100,0.000000 132.066346,-1.338142,0.000000 132.110858,-1.307735,0.000000 132.142856,-1.285876,0.000000 132.155209,-1.277437,0.000000 132.166824,-1.269503,0.000000 132.169421,-1.267729,0.000000 132.171272,-1.271696,0.000000 132.173821,-1.277159,0.000000 132.164956,-1.285500,0.000000 132.164638,-1.285799,0.000000 132.145354,-1.303942,0.000000</coordinates></LinearRing></outerBoundaryIs></Polygon><ExtendedData><SchemaData schemaUrl="#Maybrat"><SimpleData name="FID">10</SimpleData><SimpleData name="PROVINSI">PAPUA BARAT</SimpleData><SimpleData name="KABKOT">MAYBRAT</SimpleData><SimpleData name="KECAMATAN">AYAMARU SELATAN</SimpleData><SimpleData name="DESA">KANISABAR</SimpleData></SchemaData></ExtendedData><styleUrl>#style0</styleUrl></Placemark></Folder></Document></kml>
