@@ -1,170 +1,175 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Kementerian Sosial Republik Indonesia">
-	<meta name="author" content="Creative Tim">
-	<title>Kementerian Sosial Republik Indonesia - Halaman Login</title>
-	<!-- Favicon -->
-	<link href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg/220px-Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg.png" rel="icon" type="image/png">
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-	<!-- Icons -->
-	<link href="<?= site_url(); ?>assets/login_page/nucleo.css" rel="stylesheet">
-	<link href="<?= site_url(); ?>assets/login_page/all.min.css" rel="stylesheet">
-	<!-- Argon CSS -->
-	<link type="text/css" href="<?= site_url(); ?>assets/login_page/argon.css?v=1.0.0" rel="stylesheet">
-</head>
-
-<body class="bg-default" onload="getLocation()">
-	<div class="main-content">
-		<!-- Header -->
-		<div class="header bg-gradient-primary py-7 py-lg-8">
-		<div class="separator separator-bottom separator-skew zindex-100">
-			<svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-			<polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
-			</svg>
-		</div>
-		</div>
-		<!-- Page content -->
-		<div class="container mt--8 pb-5">
-		<div class="row justify-content-center">
-			<div class="col-lg-5 col-md-7">
-			<div class="card bg-secondary shadow border-0">
-				<!-- <div class="card-header bg-transparent pb-5">
-					<div class="text-muted text-center mt-2 mb-3">
-						<small>Sign in with</small>
-					</div>
-					<div class="btn-wrapper text-center">
-					</div>
-				</div> -->
-				<div class="card-body px-lg-5 py-lg-5" style='text-align: center'>
-				<!-- <div class="text-center text-muted mb-4">
-					<small>Or sign in with credentials</small>
-				</div> -->
-				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg/220px-Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg.png" width='70%'>
-				<hr>
-				<?= $this->session->flashdata('error') ?>
-				<form role="form" action="<?= site_url('login_process'); ?>" method='post'>
-					<input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>">
-					<div class="form-group mb-3">
-					<div class="input-group input-group-alternative">
-						<div class="input-group-prepend">
-						<span class="input-group-text"><i class="ni ni-single-02"></i></span>
-						</div>
-						<input class="form-control" placeholder="Nama Pengguna" type="text" name='username'>
-					</div>
-					</div>
-					<div class="form-group">
-					<div class="input-group input-group-alternative">
-						<div class="input-group-prepend">
-						<span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-						</div>
-						<input class="form-control" placeholder="Kata Sandi" type="password" name='password'>
-					</div>
-					</div>
-					<p id="getLocation"></p>
-					<div class="custom-control custom-control-alternative custom-checkbox">
-					<input class="custom-control-input" id=" customCheckLogin" type="checkbox">
-					<label class="custom-control-label" for=" customCheckLogin">
-						<span class="text-muted">Ingat saya</span>
-					</label>
-					</div>
-					<div class="text-center">
-					<button type="submit" class="btn btn-primary my-4">Masuk</button>
-					</div>
-				</form>
-				</div>
-			</div>
-			<div class="row mt-3">
-				<div class="col-6">
-				<a href="#" class="text-light" data-toggle="modal" data-target="#exampleModal"><small>Lupa Kata Sandi?</small></a>
-				</div>
-				<div class="col-6 text-right">
-				<!-- <a href="<?= site_url('registrasi'); ?>" class="text-light"><small>Create new account</small></a> -->
-				</div>
-			</div>
-			</div>
-		</div>
-		</div>
-	</div>
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-		<div class="modal-header">
-			<h5 class="modal-title" id="exampleModalLabel">Form Lupa Kata Sandi</h5>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-		<form role="form" action="#" method='post'>
-		<div class="modal-body">
-				<div class="form-group mb-3">
-				<div class="input-group input-group-alternative">
-					<div class="input-group-prepend">
-					<span class="input-group-text"><i class="ni ni-email-83"></i></span>
-					</div>
-					<input class="form-control" placeholder="Email" type="email" name='email' required>
-				</div>
-				</div>
-		</div>
-		<div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-			<button type="submit" class="btn btn-primary">Kirim</button>
-		</div>
-		</form>
-		</div>
-	</div>
-	</div>
-	<script>
-		var view = document.getElementById("getLocation");
-		function getLocation() {
-			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(showPosition);
-			} else {
-				view.innerHTML = "";
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Kementerian Sosial Republik Indonesia">
+		<meta name="author" content="Kementerian Sosial Republik Indonesia">
+		<title>Kementerian Sosial Republik Indonesia - Halaman Login</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg/220px-Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg.png" rel="icon" type="image/png">
+		<style type="text/css">
+			body {
+				color: #434343;
+				background: #dfe7e9;
+				font-family: 'Varela Round', sans-serif;
+				/* background-image: url("http://pks.id/contentAsset/image/a94620bb-2c7d-4b1a-babb-feb66f90b674/fileAsset/filter/Resize/resize_w/1340/byInode/1"); */
 			}
-		}
-		function showPosition(position) {
-			view.innerHTML = "<input type='hidden' name='location' value='" + position.coords.latitude + "," + position.coords.longitude +"' />";
-		}
-	</script>
-	<!-- Footer -->
-	<footer class="py-5">
-		<div class="container">
-		<div class="row align-items-center justify-content-xl-between">
-			<div class="col-xl-6">
-			<div class="copyright text-center text-xl-left text-muted">
-				&copy; 2019 <a href="#" class="font-weight-bold ml-1" target="_blank">Kementerian Sosial Republik Indonesia</a>
-			</div>
-			</div>
-			<div class="col-xl-6">
-			<ul class="nav nav-footer justify-content-center justify-content-xl-end">
-				<li class="nav-item">
-				<a href="#" class="nav-link" target="_blank">Creative Tim</a>
-				</li>
-				<li class="nav-item">
-				<a href="#" class="nav-link" target="_blank">About Us</a>
-				</li>
-				<li class="nav-item">
-				<a href="#" class="nav-link" target="_blank">Blog</a>
-				</li>
-				<li class="nav-item">
-				<a href="#" class="nav-link" target="_blank">MIT License</a>
-				</li>
-			</ul>
-			</div>
+			.form-control {
+				font-size: 16px;
+				transition: all 0.4s;
+				box-shadow: none;
+			}
+			.form-control:focus {
+				border-color: #5cb85c;
+			}
+			.form-control, .btn {
+				border-radius: 50px;
+				outline: none !important;
+			}
+			.signin-form {
+				width: 400px;
+				margin: 0 auto;
+				padding: 30px 0;
+			}
+			.signin-form form {
+				border-radius: 5px;
+				margin-bottom: 20px;
+				background: #fff;
+				box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+				padding: 40px;
+			}
+			.signin-form a {
+				color: #5cb85c;
+			}
+			.signin-form h2 {
+				text-align: center;
+				font-size: 34px;
+				margin: 10px 0 15px;
+			}
+			.signin-form .hint-text {
+				color: #999;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.signin-form .form-group {
+				margin-bottom: 20px;
+			}
+			.signin-form .btn {
+				font-size: 18px;
+				line-height: 26px;
+				font-weight: bold;
+				text-align: center;
+			}
+			.signin-form .small {
+				font-size: 13px;
+			}
+			.signup-btn {
+				text-align: center;
+				border-color: #5cb85c;
+				transition: all 0.4s;
+			}
+			.signup-btn:hover {
+				background: #5cb85c;
+				opacity: 0.8;
+			}
+			.or-seperator {
+				margin: 50px 0 15px;
+				text-align: center;
+				border-top: 1px solid #e0e0e0;
+			}
+			.or-seperator b {
+				padding: 0 10px;
+				width: 40px;
+				height: 40px;
+				font-size: 16px;
+				text-align: center;
+				line-height: 40px;
+				background: #fff;
+				display: inline-block;
+				border: 1px solid #e0e0e0;
+				border-radius: 50%;
+				position: relative;
+				top: -22px;
+				z-index: 1;
+			}
+			.social-btn .btn {
+				color: #fff;
+				margin: 10px 0 0 30px;
+				font-size: 15px;
+				width: 55px;
+				height: 55px;
+				line-height: 38px;
+				border-radius: 50%;
+				font-weight: normal;
+				text-align: center;
+				border: none;
+				transition: all 0.4s;
+			}
+			.social-btn .btn:first-child {
+				margin-left: 0;
+			}
+			.social-btn .btn:hover {
+				opacity: 0.8;
+			}
+			.social-btn .btn-primary {
+				background: #507cc0;
+			}
+			.social-btn .btn-info {
+				background: #64ccf1;
+			}
+			.social-btn .btn-danger {
+				background: #df4930;
+			}
+			.social-btn .btn i {
+				font-size: 20px;
+			}
+		</style>
+		<!-- <style>
+			.signin-form {
+				background-image: url("http://pks.id/contentAsset/image/a94620bb-2c7d-4b1a-babb-feb66f90b674/fileAsset/filter/Resize/resize_w/1340/byInode/1");
+				-webkit-filter: blur(99px);
+				-moz-filter: blur(99px);
+				-o-filter: blur(99px);
+				-ms-filter: blur(99px);
+				filter: blur(99px);
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+		</style> -->
+	</head>
+	<body>
+		<div class="signin-form">
+			<?= $this->session->flashdata('error') ?>
+			<form role="form" action="<?= site_url('login_process'); ?>" method='post'>
+				<!-- <h2>Sign in</h2>
+				<p class="hint-text">Sign in with your social media account</p> -->
+				<div class="social-btn text-center">
+					<!-- <a href="#" class="btn btn-danger btn-lg" title="Google"><i class="fa fa-google"></i></a> -->
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg/220px-Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg.png" width='45%'>
+				</div>
+				<div class="or-seperator"><br><p>Silahkan login untuk menggunakan sistem</p></div>
+				<div class="form-group">
+					<input type="text" class="form-control input-lg" name="username" placeholder="Nama Pengguna" required="required">
+				</div>
+				<div class="form-group">
+					<input type="password" class="form-control input-lg" name="password" placeholder="Kata Sandi" required="required">
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-success btn-lg btn-block signup-btn">Masuk</button>
+				</div>
+				<div class="text-center small"><a href="#">Lupa Kata Sandi?</a></div>
+			</form>
+			<!-- <div class="text-center small">Don't have an account? <a href="#">Sign up</a></div> -->
 		</div>
-		</div>
-	</footer>
-	<!-- Argon Scripts -->
-	<!-- Core -->
-	<script src="<?= site_url(); ?>assets/login_page/jquery.min.js"></script>
-	<script src="<?= site_url(); ?>assets/login_page/bootstrap.bundle.min.js"></script>
-	<!-- Argon JS -->
-	<script src="<?= site_url(); ?>assets/login_page/argon.js?v=1.0.0"></script>
-</body>
+	</body>
 </html>

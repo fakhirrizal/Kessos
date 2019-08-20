@@ -156,41 +156,40 @@
 								<th style='text-align: center'>Rencana Keuangan</th>
 								<th style='text-align: center'>Realisasi Keuangan</th>
 								<th style='text-align: center'>Realisasi Fisik</th>
-								<th style='text-align: center'>Aksi</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td>1.</td>
 								<td>Jawa Tengah</td>
-								<td>2,980</td>
-								<td>Kerajinan Tangan</td>
-								<td>2,980</td>
-								<td>2,980</td>
-								<td>Kerajinan Tangan</td>
-								<td>
+								<td>2.980</td>
+								<td>12.009</td>
+								<td>2.980</td>
+								<td>29.81 %</td>
+								<td>11.11 %</td>
+								<!-- <td>
 									<div class="btn-group" style="text-align: center;">
 										<button class="btn btn-xs green" type="button"> Detail Data
-											<!-- <i class="fa fa-eye"></i> -->
+											<i class="fa fa-eye"></i>
 										</button>
 									</div>
-								</td>
+								</td> -->
 							</tr>
 							<tr>
 								<td>2.</td>
 								<td>Jawa Barat</td>
-								<td>4,107</td>
-								<td>Usaha Makanan</td>
-								<td>4,107</td>
-								<td>4,107</td>
-								<td>Usaha Makanan</td>
-								<td>
+								<td>4.107</td>
+								<td>90.009</td>
+								<td>4.107</td>
+								<td>41.07 %</td>
+								<td>90.01 %</td>
+								<!-- <td>
 									<div class="btn-group" style="text-align: center;">
 										<button class="btn btn-xs green" type="button"> Detail Data
-											<!-- <i class="fa fa-eye"></i> -->
+											<i class="fa fa-eye"></i>
 										</button>
 									</div>
-								</td>
+								</td> -->
 							</tr>
 						</tbody>
 					</table>
@@ -212,7 +211,6 @@
 								<td class="sum sah">Rencana Keuangan</td>
 								<td class="sum tsah">Realisasi Keuangan</td>
 								<td class="sum tsah">Realisasi Fisik</td>
-								<td class="sum tsah">Aksi</td>
 							</tr>
 							<tr class="row">
 								<td class="idx">1.</td>
@@ -220,27 +218,27 @@
 									<a href="#pilpres:1">ACEH</a>
 								</td>
 								<td class="sum pas pas1 per ">
-									<span class="abs">397.188</span><span class="per"> (14,46%)</span>
+									<span class="abs">397.188</span>
 								</td>
 								<td class="sum pas pas2 per win">
-									<span class="abs">2.349.288</span><span class="per"> (85,54%)</span>
+									<span class="abs">2.349.288</span>
 								</td>
 								<td class="sum sah error">
 									<span class="sah">2.740.814</span>
 								</td>
 								<td class="sum tsah">
-									<span class="tsah">89.733</span>
+									<span class="tsah">89.73 %</span>
 								</td>
 								<td class="sum tsah">
-									<span class="tsah">89.733</span>
+									<span class="tsah">89.73 %</span>
 								</td>
-								<td>
+								<!-- <td>
 									<div class="btn-group" style="text-align: center;">
 										<button class="btn btn-xs green" type="button"> Detail Data
-											<!-- <i class="fa fa-eye"></i> -->
+											<i class="fa fa-eye"></i>
 										</button>
 									</div>
-								</td>
+								</td> -->
 							</tr>
 							<tr class="row">
 								<td class="idx">2.</td>
@@ -248,27 +246,27 @@
 									<a href="#pilpres:6728">SUMATERA UTARA</a>
 								</td>
 								<td class="sum pas pas1 per win">
-									<span class="abs">3.878.670</span><span class="per"> (52,19%)</span>
+									<span class="abs">3.878.670</span>
 								</td>
 								<td class="sum pas pas2 per ">
-									<span class="abs">3.553.749</span><span class="per"> (47,81%)</span>
+									<span class="abs">3.553.749</span>
 								</td>
 								<td class="sum sah error">
 									<span class="sah">7.405.496</span>
 								</td>
 								<td class="sum tsah">
-									<span class="tsah">134.702</span>
+									<span class="tsah">14.71 %</span>
 								</td>
 								<td class="sum tsah">
-									<span class="tsah">43.324</span>
+									<span class="tsah">43.31 %</span>
 								</td>
-								<td>
+								<!-- <td>
 									<div class="btn-group" style="text-align: center;">
 										<button class="btn btn-xs green" type="button"> Detail Data
-											<!-- <i class="fa fa-eye"></i> -->
+											<i class="fa fa-eye"></i>
 										</button>
 									</div>
-								</td>
+								</td> -->
 							</tr>
 							<tr class="row">
 								<td class="idx">3</td>
@@ -276,27 +274,27 @@
 									<a href="#pilpres:12920">SUMATERA BARAT</a>
 								</td>
 								<td class="sum pas pas1 per ">
-									<span class="abs">404.728</span><span class="per"> (14,05%)</span>
+									<span class="abs">404.728</span>
 								</td>
 								<td class="sum pas pas2 per win">
-									<span class="abs">2.476.300</span><span class="per"> (85,95%)</span>
+									<span class="abs">2.476.300</span>
 								</td>
 								<td class="sum sah error">
 									<span class="sah">2.879.305</span>
 								</td>
 								<td class="sum tsah">
-									<span class="tsah">43.324</span>
+									<span class="tsah">43.32 %</span>
 								</td>
 								<td class="sum tsah">
-									<span class="tsah">43.324</span>
+									<span class="tsah">43.32 %</span>
 								</td>
-								<td>
+								<!-- <td>
 									<div class="btn-group" style="text-align: center;">
 										<button class="btn btn-xs green" type="button"> Detail Data
-											<!-- <i class="fa fa-eye"></i> -->
+											<i class="fa fa-eye"></i>
 										</button>
 									</div>
-								</td>
+								</td> -->
 							</tr>
 						</tbody>
 					</table>
@@ -312,11 +310,12 @@
 							<tr class="header">
 								<td class="idx"></td>
 								<td class="idx">#</td>
-								<td class="name">Wilayah</td>
-								<td class="sum pas1">Rumah Tidak Layak Huni</td>
-								<td class="sum pas2">Rumah Layak Huni</td>
-								<td class="sum sah">Terdata</td>
-								<td class="sum tsah">Estimasi Belum Terdata</td>
+								<td class="name">Nama Provinsi</td>
+								<td class="sum pas1">Rencana Sarling</td>
+								<td class="sum pas2">Realisasi Sarling</td>
+								<td class="sum sah">Rencana Keuangan</td>
+								<td class="sum tsah">Realisasi Keuangan</td>
+								<td>Realisasi Fisik</td>
 							</tr>
 							<tr class="row">
 								<td class="idx">1.</td>
@@ -324,16 +323,19 @@
 									<a href="#pilpres:1">ACEH</a>
 								</td>
 								<td class="sum pas pas1 per ">
-									<span class="abs">397.188</span><span class="per"> (14,46%)</span>
+									<span class="abs">397.188</span>
 								</td>
 								<td class="sum pas pas2 per win">
-									<span class="abs">2.349.288</span><span class="per"> (85,54%)</span>
+									<span class="abs">2.349.288</span>
 								</td>
 								<td class="sum sah error">
 									<span class="sah">2.740.814</span>
 								</td>
 								<td class="sum tsah">
-									<span class="tsah">89.733</span>
+									<span class="tsah">89.73 %</span>
+								</td>
+								<td class="sum tsah">
+									<span class="tsah">89.73 %</span>
 								</td>
 							</tr>
 							<tr class="row">
@@ -342,16 +344,19 @@
 									<a href="#pilpres:6728">SUMATERA UTARA</a>
 								</td>
 								<td class="sum pas pas1 per win">
-									<span class="abs">3.878.670</span><span class="per"> (52,19%)</span>
+									<span class="abs">3.878.670</span>
 								</td>
 								<td class="sum pas pas2 per ">
-									<span class="abs">3.553.749</span><span class="per"> (47,81%)</span>
+									<span class="abs">3.553.749</span>
 								</td>
 								<td class="sum sah error">
 									<span class="sah">7.405.496</span>
 								</td>
 								<td class="sum tsah">
-									<span class="tsah">134.702</span>
+									<span class="tsah">14.70 %</span>
+								</td>
+								<td class="sum tsah">
+									<span class="tsah">13.70 %</span>
 								</td>
 							</tr>
 							<tr class="row">
@@ -360,16 +365,19 @@
 									<a href="#pilpres:12920">SUMATERA BARAT</a>
 								</td>
 								<td class="sum pas pas1 per ">
-									<span class="abs">404.728</span><span class="per"> (14,05%)</span>
+									<span class="abs">404.728</span>
 								</td>
 								<td class="sum pas pas2 per win">
-									<span class="abs">2.476.300</span><span class="per"> (85,95%)</span>
+									<span class="abs">2.476.300</span>
 								</td>
 								<td class="sum sah error">
 									<span class="sah">2.879.305</span>
 								</td>
 								<td class="sum tsah">
-									<span class="tsah">43.324</span>
+									<span class="tsah">43.32 %</span>
+								</td>
+								<td class="sum tsah">
+									<span class="tsah">43.32 %</span>
 								</td>
 							</tr>
 						</tbody>

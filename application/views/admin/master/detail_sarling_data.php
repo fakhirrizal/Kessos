@@ -51,6 +51,16 @@ $id_sarling = '';
 												<td><?php echo $row->nama_tim; ?></td>
 											</tr>
 											<tr>
+												<td> Alamat Sarling </td>
+												<td> : </td>
+												<td><?php echo $row->alamat; ?></td>
+											</tr>
+											<tr>
+												<td> Rencana Anggaran </td>
+												<td> : </td>
+												<td><?php echo 'Rp '.number_format($row->rencana_anggaran,2); ?></td>
+											</tr>
+											<tr>
 												<td> </td>
 												<td> </td>
 												<td> </td>
@@ -62,14 +72,24 @@ $id_sarling = '';
 									<table class="table">
 										<tbody>
 											<tr>
-												<td> Alamat Sarling </td>
+												<td> Provinsi </td>
 												<td> : </td>
-												<td><?php echo $row->alamat; ?></td>
+												<td><?php echo $row->nm_provinsi; ?></td>
 											</tr>
 											<tr>
-												<td> Rencana Anggaran </td>
+												<td> Kabupaten/ Kota </td>
 												<td> : </td>
-												<td><?php echo 'Rp '.number_format($row->rencana_anggaran,2); ?></td>
+												<td><?php echo $row->nm_kabupaten; ?></td>
+											</tr>
+											<tr>
+												<td> Kecamatan </td>
+												<td> : </td>
+												<td><?php echo $row->nm_kecamatan; ?></td>
+											</tr>
+											<tr>
+												<td> Kelurahan/ Desa </td>
+												<td> : </td>
+												<td><?php echo $row->nm_desa; ?></td>
 											</tr>
 											<tr>
 												<td> </td>

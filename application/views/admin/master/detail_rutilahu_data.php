@@ -51,6 +51,11 @@ $id_rutilahu = '';
 												<td><?php echo $row->alamat; ?></td>
 											</tr>
 											<tr>
+												<td> Rencana Anggaran </td>
+												<td> : </td>
+												<td><?php echo 'Rp '.number_format($row->rencana_anggaran,2); ?></td>
+											</tr>
+											<tr>
 												<td> </td>
 												<td> </td>
 												<td> </td>
@@ -62,9 +67,24 @@ $id_rutilahu = '';
 									<table class="table">
 										<tbody>
 											<tr>
-												<td> Rencana Anggaran </td>
+												<td> Provinsi </td>
 												<td> : </td>
-												<td><?php echo 'Rp '.number_format($row->rencana_anggaran,2); ?></td>
+												<td><?php echo $row->nm_provinsi; ?></td>
+											</tr>
+											<tr>
+												<td> Kabupaten/ Kota </td>
+												<td> : </td>
+												<td><?php echo $row->nm_kabupaten; ?></td>
+											</tr>
+											<tr>
+												<td> Kecamatan </td>
+												<td> : </td>
+												<td><?php echo $row->nm_kecamatan; ?></td>
+											</tr>
+											<tr>
+												<td> Kelurahan/ Desa </td>
+												<td> : </td>
+												<td><?php echo $row->nm_desa; ?></td>
 											</tr>
 											<tr>
 												<td> </td>

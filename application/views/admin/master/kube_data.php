@@ -53,7 +53,7 @@
 							</div>
 						</div>
 					</div>
-					<table class="table table-striped table-bordered table-hover table-checkable order-column" id="tbl">
+					<table class="table table-striped table-bordered table-hover table-checkable order-column" style="overflow-x: auto;width: 120%;" id="tbl">
 						<thead>
 							<tr>
 								<th width="3%">
@@ -67,6 +67,10 @@
 								<th style="text-align: center;"> Jenis Usaha </th>
 								<th style="text-align: center;"> Alamat </th>
 								<th style="text-align: center;"> Rencana Anggaran </th>
+								<th style="text-align: center;"> Provinsi </th>
+								<th style="text-align: center;"> Kabupaten </th>
+								<th style="text-align: center;"> Kecamatan </th>
+								<th style="text-align: center;"> Desa </th>
 								<th style="text-align: center;" width="7%"> Aksi </th>
 							</tr>
 						</thead>
@@ -172,6 +176,10 @@
 											{ mData: 'jenis_usaha', sClass: "alignCenter" },
 											{ mData: 'alamat', sClass: "alignCenter" } ,
 											{ mData: 'rencana_anggaran', sClass: "alignCenter" },
+											{ mData: 'nm_provinsi', sClass: "alignCenter" },
+											{ mData: 'nm_kabupaten', sClass: "alignCenter" },
+											{ mData: 'nm_kecamatan', sClass: "alignCenter" },
+											{ mData: 'nm_desa', sClass: "alignCenter" },
 											{ mData: 'action' }
 										]
 							});

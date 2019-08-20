@@ -111,10 +111,32 @@ class Master extends CI_Controller {
 		$this->load->view('admin/template/footer');
 	}
 	public function json_kube(){
-		$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha',array('a.deleted'=>'0'),'','','','',array(
-			'table' => 'jenis_usaha b',
-			'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
-			'pos' => 'LEFT',
+		$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0'),'','','','',array(
+			array(
+				'table' => 'jenis_usaha b',
+				'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'provinsi c',
+				'on' => 'a.id_provinsi=c.id_provinsi',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'kabupaten d',
+				'on' => 'a.id_kabupaten=d.id_kabupaten',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'kecamatan e',
+				'on' => 'a.id_kecamatan=e.id_kecamatan',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'desa f',
+				'on' => 'a.id_desa=f.id_desa',
+				'pos' => 'LEFT'
+			)
 		))->result();
 		$data_tampil = array();
 		$no = 1;
@@ -130,13 +152,17 @@ class Master extends CI_Controller {
 			$isi['jenis_usaha'] = $value->jenis_usaha;
 			$isi['alamat'] = $value->alamat;
 			$isi['rencana_anggaran'] = 'Rp '.number_format($value->rencana_anggaran,2);
+			$isi['nm_provinsi'] = $value->nm_provinsi;
+			$isi['nm_kabupaten'] = $value->nm_kabupaten;
+			$isi['nm_kecamatan'] = $value->nm_kecamatan;
+			$isi['nm_desa'] = $value->nm_desa;
 			$return_on_click = "return confirm('Anda yakin?')";
 			$isi['action'] =	'
-								<div class="btn-group">
+								<div class="dropdown">
 									<button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Aksi
 										<i class="fa fa-angle-down"></i>
 									</button>
-									<ul class="dropdown-menu" role="menu">
+									<ul class="dropdown-menu pull-right" role="menu">
 										<li>
 											<a href="'.site_url('admin_side/detil_data_kube/'.md5($value->id_kube)).'">
 												<i class="icon-eye"></i> Detil Data </a>
@@ -204,7 +230,12 @@ class Master extends CI_Controller {
 		$data['parent'] = 'master';
 		$data['child'] = 'kube';
 		$data['grand_child'] = '';
-		$data['data_utama'] = $this->Main_model->getSelectedData('kube a', 'a.*,e.jenis_usaha,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('md5(a.id_kube)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
+		$data['data_utama'] = $this->Main_model->getSelectedData('kube a', 'a.*,e.jenis_usaha,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('md5(a.id_kube)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
+			array(
+				'table' => 'provinsi f',
+				'on' => 'a.id_provinsi=f.id_provinsi',
+				'pos' => 'left',
+			),
 			array(
 				'table' => 'kabupaten b',
 				'on' => 'a.id_kabupaten=b.id_kabupaten',
@@ -486,7 +517,28 @@ class Master extends CI_Controller {
 		$this->load->view('admin/template/footer');
 	}
 	public function json_rutilahu(){
-		$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*',array('a.deleted'=>'0'))->result();
+		$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0'),'','','','',array(
+			array(
+				'table' => 'provinsi c',
+				'on' => 'a.id_provinsi=c.id_provinsi',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'kabupaten d',
+				'on' => 'a.id_kabupaten=d.id_kabupaten',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'kecamatan e',
+				'on' => 'a.id_kecamatan=e.id_kecamatan',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'desa f',
+				'on' => 'a.id_desa=f.id_desa',
+				'pos' => 'LEFT'
+			)
+		))->result();
 		$data_tampil = array();
 		$no = 1;
 		foreach ($get_data as $key => $value) {
@@ -500,13 +552,17 @@ class Master extends CI_Controller {
 			$isi['nama_tim'] = $value->nama_kelompok;
 			$isi['alamat'] = $value->alamat;
 			$isi['rencana_anggaran'] = 'Rp '.number_format($value->rencana_anggaran,2);
+			$isi['nm_provinsi'] = $value->nm_provinsi;
+			$isi['nm_kabupaten'] = $value->nm_kabupaten;
+			$isi['nm_kecamatan'] = $value->nm_kecamatan;
+			$isi['nm_desa'] = $value->nm_desa;
 			$return_on_click = "return confirm('Anda yakin?')";
 			$isi['action'] =	'
-								<div class="btn-group">
+								<div class="dropdown">
 									<button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Aksi
 										<i class="fa fa-angle-down"></i>
 									</button>
-									<ul class="dropdown-menu" role="menu">
+									<ul class="dropdown-menu pull-right" role="menu">
 										<li>
 											<a href="'.site_url('admin_side/detil_data_rutilahu/'.md5($value->id_rutilahu)).'">
 												<i class="icon-eye"></i> Detil Data </a>
@@ -572,7 +628,12 @@ class Master extends CI_Controller {
 		$data['parent'] = 'master';
 		$data['child'] = 'rutilahu';
 		$data['grand_child'] = '';
-		$data['data_utama'] = $this->Main_model->getSelectedData('rutilahu a', 'a.*,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('md5(a.id_rutilahu)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
+		$data['data_utama'] = $this->Main_model->getSelectedData('rutilahu a', 'a.*,e.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('md5(a.id_rutilahu)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
+			array(
+				'table' => 'provinsi e',
+				'on' => 'a.id_provinsi=e.id_provinsi',
+				'pos' => 'left',
+			),
 			array(
 				'table' => 'kabupaten b',
 				'on' => 'a.id_kabupaten=b.id_kabupaten',
@@ -743,7 +804,7 @@ class Master extends CI_Controller {
 		$get_data = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*',array('md5(a.id_rutilahu)'=>$this->input->get('id'),'b.deleted'=>'0'),'','','','',array(
 			'table' => 'rutilahu b',
 			'on' => 'a.id_rutilahu=b.id_rutilahu',
-			'pos' => 'LEFT',
+			'pos' => 'LEFT'
 		))->result();
 		$data_tampil = array();
 		$no = 1;
@@ -847,10 +908,32 @@ class Master extends CI_Controller {
 		$this->load->view('admin/template/footer');
 	}
 	public function json_sarling(){
-		$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,b.jenis_sarling',array('a.deleted'=>'0'),'','','','',array(
-			'table' => 'jenis_sarling b',
-			'on' => 'a.id_jenis_sarling=b.id_jenis_sarling',
-			'pos' => 'LEFT',
+		$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,b.jenis_sarling,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0'),'','','','',array(
+			array(
+				'table' => 'jenis_sarling b',
+				'on' => 'a.id_jenis_sarling=b.id_jenis_sarling',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'provinsi c',
+				'on' => 'a.id_provinsi=c.id_provinsi',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'kabupaten d',
+				'on' => 'a.id_kabupaten=d.id_kabupaten',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'kecamatan e',
+				'on' => 'a.id_kecamatan=e.id_kecamatan',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'desa f',
+				'on' => 'a.id_desa=f.id_desa',
+				'pos' => 'LEFT'
+			)
 		))->result();
 		$data_tampil = array();
 		$no = 1;
@@ -866,13 +949,17 @@ class Master extends CI_Controller {
 			$isi['jenis_sarling'] = $value->jenis_sarling;
 			$isi['alamat'] = $value->alamat;
 			$isi['rencana_anggaran'] = 'Rp '.number_format($value->rencana_anggaran,2);
+			$isi['nm_provinsi'] = $value->nm_provinsi;
+			$isi['nm_kabupaten'] = $value->nm_kabupaten;
+			$isi['nm_kecamatan'] = $value->nm_kecamatan;
+			$isi['nm_desa'] = $value->nm_desa;
 			$return_on_click = "return confirm('Anda yakin?')";
 			$isi['action'] =	'
-								<div class="btn-group">
+								<div class="dropdown">
 									<button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Aksi
 										<i class="fa fa-angle-down"></i>
 									</button>
-									<ul class="dropdown-menu" role="menu">
+									<ul class="dropdown-menu pull-right" role="menu">
 										<li>
 											<a href="'.site_url('admin_side/detil_data_sarling/'.md5($value->id_sarling)).'">
 												<i class="icon-eye"></i> Detil Data </a>
@@ -940,7 +1027,12 @@ class Master extends CI_Controller {
 		$data['parent'] = 'master';
 		$data['child'] = 'sarling';
 		$data['grand_child'] = '';
-		$data['data_utama'] = $this->Main_model->getSelectedData('sarling a', 'a.*,e.jenis_sarling,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('md5(a.id_sarling)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
+		$data['data_utama'] = $this->Main_model->getSelectedData('sarling a', 'a.*,e.jenis_sarling,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('md5(a.id_sarling)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
+			array(
+				'table' => 'provinsi f',
+				'on' => 'a.id_provinsi=f.id_provinsi',
+				'pos' => 'left',
+			),
 			array(
 				'table' => 'kabupaten b',
 				'on' => 'a.id_kabupaten=b.id_kabupaten',
