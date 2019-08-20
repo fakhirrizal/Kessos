@@ -336,7 +336,7 @@ class Master extends CI_Controller {
 			);
 			$this->Main_model->insertData('anggota_kube',$data_insert4);
 
-			$this->Main_model->log_activity($this->session->userdata('id'),"Adding kube's member","Add kube member",$this->input->post('nama'));
+			$this->Main_model->log_activity($this->session->userdata('id'),"Adding kube's member","Add kube member (".$this->input->post('nama').")",$this->session->userdata('location'));
 			$this->db->trans_complete();
 			if($this->db->trans_status() === false){
 				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
@@ -367,7 +367,7 @@ class Master extends CI_Controller {
 		);
 		$this->Main_model->updateData('anggota_kube',$data_update2,array('md5(id_anggota_kube)'=>$this->input->post('id_anggota_kube')));
 
-		$this->Main_model->log_activity($this->session->userdata('id'),"Updating kube's member","Update kube member",$this->input->post('nama'));
+		$this->Main_model->log_activity($this->session->userdata('id'),"Updating kube's member","Update kube member (".$this->input->post('nama').")",$this->session->userdata('location'));
 		$this->db->trans_complete();
 		if($this->db->trans_status() === false){
 			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diubah.<br /></div>' );
@@ -697,7 +697,7 @@ class Master extends CI_Controller {
 			);
 			$this->Main_model->insertData('anggota_rutilahu',$data_insert4);
 
-			$this->Main_model->log_activity($this->session->userdata('id'),"Adding rutilahu's member","Add rutilahu member",$this->input->post('nama'));
+			$this->Main_model->log_activity($this->session->userdata('id'),"Adding rutilahu's member","Add rutilahu member (".$this->input->post('nama').")",$this->session->userdata('location'));
 			$this->db->trans_complete();
 			if($this->db->trans_status() === false){
 				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
@@ -728,7 +728,7 @@ class Master extends CI_Controller {
 		);
 		$this->Main_model->updateData('anggota_rutilahu',$data_update2,array('md5(id_anggota_rutilahu)'=>$this->input->post('id_anggota_rutilahu')));
 
-		$this->Main_model->log_activity($this->session->userdata('id'),"Updating rutilahu's member","Update rutilahu member",$this->input->post('nama'));
+		$this->Main_model->log_activity($this->session->userdata('id'),"Updating rutilahu's member","Update rutilahu member (".$this->input->post('nama').")",$this->session->userdata('location'));
 		$this->db->trans_complete();
 		if($this->db->trans_status() === false){
 			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diubah.<br /></div>' );
@@ -1072,7 +1072,7 @@ class Master extends CI_Controller {
 			);
 			$this->Main_model->insertData('anggota_sarling',$data_insert4);
 
-			$this->Main_model->log_activity($this->session->userdata('id'),"Adding sarling's member","Add sarling member",$this->input->post('nama'));
+			$this->Main_model->log_activity($this->session->userdata('id'),"Adding sarling's member","Add sarling member (".$this->input->post('nama').")",$this->session->userdata('location'));
 			$this->db->trans_complete();
 			if($this->db->trans_status() === false){
 				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
@@ -1103,7 +1103,7 @@ class Master extends CI_Controller {
 		);
 		$this->Main_model->updateData('anggota_sarling',$data_update2,array('md5(id_anggota_sarling)'=>$this->input->post('id_anggota_sarling')));
 
-		$this->Main_model->log_activity($this->session->userdata('id'),"Updating sarling's member","Update sarling member",$this->input->post('nama'));
+		$this->Main_model->log_activity($this->session->userdata('id'),"Updating sarling's member","Update sarling member (".$this->input->post('nama').")",$this->session->userdata('location'));
 		$this->db->trans_complete();
 		if($this->db->trans_status() === false){
 			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diubah.<br /></div>' );

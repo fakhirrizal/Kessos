@@ -36,7 +36,7 @@
 									</button>
 								</div>
 									<span class="separator">|</span>
-									<a href="<?=base_url('admin_side/tambah_data_kube');?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
+									<a href="<?=base_url('admin_side/tambah_data_kabkot');?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
 							</div>
 						</div>
 					</div>

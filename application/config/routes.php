@@ -124,6 +124,11 @@ $route['admin_side/ubah_data_provinsi/(:any)'] = 'admin/Map/edit_province/$1';
 $route['admin_side/perbarui_data_provinsi'] = 'admin/Map/update_province_data';
 $route['admin_side/hapus_data_provinsi/(:any)'] = 'admin/Map/delete_province/$1';
 $route['admin_side/data_kabkot'] = 'admin/Map/city';
+$route['admin_side/tambah_data_kabkot'] = 'admin/Map/add_city';
+$route['admin_side/simpan_data_kabkot'] = 'admin/Map/save_city';
+$route['admin_side/ubah_data_kabkot/(:any)'] = 'admin/Map/edit_city/$1';
+$route['admin_side/perbarui_data_kabkot'] = 'admin/Map/update_city_data';
+$route['admin_side/hapus_data_kabkot/(:any)'] = 'admin/Map/delete_city/$1';
 $route['admin_side/data_kecamatan'] = 'admin/Map/sub_district';
 $route['admin_side/data_kelurahan'] = 'admin/Map/village';
 

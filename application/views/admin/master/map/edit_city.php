@@ -9,11 +9,11 @@
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span><a href='<?= site_url('/admin_side/data_provinsi'); ?>'>Data Provinsi</a></span>
+		<span><a href='<?= site_url('/admin_side/data_provinsi'); ?>'>Data Kabupaten/ Kota</a></span>
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span>Tambah Data</span>
+		<span>Ubah Data</span>
 	</li>
 </ul>
 <?= $this->session->flashdata('sukses') ?>
@@ -23,19 +23,39 @@
 		<h3>Catatan</h3>
 		<p> 1. Kolom isian dengan tanda bintang (<font color='red'>*</font>) adalah wajib untuk di isi</p>
 		<p> 2. Ekstensi file berupa <b>.kml</b></p>
-		<p> 3. Untuk marker disini merupakan titik ibu kota dari suatu Provinsi</p>
+		<p> 3. Untuk marker disini merupakan titik ibu kota dari suatu Kabupaten/ Kota</p>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="portlet light ">
 				<div class="portlet-body">
-					<form role="form" class="form-horizontal" action="<?=base_url('admin_side/simpan_data_provinsi');?>" method="post"  enctype='multipart/form-data'>
+					<form role="form" class="form-horizontal" action="<?=base_url('admin_side/perbarui_data_kabkot');?>" method="post"  enctype='multipart/form-data'>
+						<input type="hidden" name="id_kabupaten" value="<?= md5($data_utama->id_kabupaten); ?>">
 						<div class="form-body">
 							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1">Nama Provinsi <span class="required"> * </span></label>
+								<label class="col-md-2 control-label" for="form_control_1">Provinsi <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<div class="input-icon">
-										<input type="text" class="form-control" name="nm_provinsi" placeholder="Type something" required>
+										<select name='id_provinsi' id='id_provinsi' class="form-control select2-allow-clear" required>
+											<option value=''></option>
+											<?php
+											foreach ($provinsi as $key => $value) {
+												if($value->id_provinsi==$data_utama->id_provinsi){
+													echo '<option value="'.$value->id_provinsi.'" selected>'.$value->nm_provinsi.'</option>';
+												}else{
+													echo '<option value="'.$value->id_provinsi.'">'.$value->nm_provinsi.'</option>';
+												}
+											}
+											?>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1">Nama Kabupaten/ Kota <span class="required"> * </span></label>
+								<div class="col-md-10">
+									<div class="input-icon">
+										<input type="text" class="form-control" name="nm_kabupaten" value="<?= $data_utama->nm_kabupaten; ?>" required>
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Some help goes here...</span>
 										<i class="fa fa-map"></i>
@@ -52,7 +72,7 @@
 								<label class="col-md-2 control-label" for="form_control_1"></label>
 								<div class="col-md-5">
 									<div class="input-icon">
-										<input type="text" class="form-control" name='latitude' id='latitude' required>
+										<input type="text" class="form-control" name='latitude' id='latitude' readonly="">
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Garis lintang</span>
 										<i class="icon-pin"></i>
@@ -60,7 +80,7 @@
 								</div>
 								<div class="col-md-5">
 									<div class="input-icon">
-									<input type="text" class="form-control" name='longitude' id='longitude' required>
+									<input type="text" class="form-control" name='longitude' id='longitude' readonly="">
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Garis Bujur</span>
 										<i class="icon-pin"></i>
@@ -84,7 +104,7 @@
 							<div class="row">
 								<div class="col-md-offset-2 col-md-10">
 									<button type="reset" class="btn default">Batal</button>
-									<button type="submit" class="btn blue">Simpan</button>
+									<button type="submit" class="btn blue">Perbarui</button>
 								</div>
 							</div>
 						</div>
@@ -109,16 +129,24 @@
 
 	var map = new google.maps.Map(document.getElementById('map'), {
 	zoom: 7,
-	center: new google.maps.LatLng(-6.200309654,106.8344433),
+	center: new google.maps.LatLng(<?= $data_utama->lintang.','.$data_utama->bujur; ?>),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
-	var latLng = new google.maps.LatLng(-6.200309654,106.8344433);
+	var latLng = new google.maps.LatLng(<?= $data_utama->lintang.','.$data_utama->bujur; ?>);
 
 	var marker = new google.maps.Marker({
 		position : latLng,
 		title : 'lokasi',
 		map : map,
 		draggable : true
+	});
+
+	var situs = 'http://kemensos.aplikasiku.online/assets/peta_kabupaten/';
+	var nama_file = '<?php echo $data_utama->kml; ?>';
+	var situs_full = situs.concat(nama_file);
+	var kmldashboard = new google.maps.KmlLayer({
+		url: situs_full,
+		map: map
 	});
 
 	updateMarkerPosition(latLng);

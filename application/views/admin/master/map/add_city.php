@@ -9,7 +9,7 @@
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span><a href='<?= site_url('/admin_side/data_provinsi'); ?>'>Data Provinsi</a></span>
+		<span><a href='<?= site_url('/admin_side/data_kabupaten'); ?>'>Data Kabupaten/ Kota</a></span>
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
@@ -23,19 +23,34 @@
 		<h3>Catatan</h3>
 		<p> 1. Kolom isian dengan tanda bintang (<font color='red'>*</font>) adalah wajib untuk di isi</p>
 		<p> 2. Ekstensi file berupa <b>.kml</b></p>
-		<p> 3. Untuk marker disini merupakan titik ibu kota dari suatu Provinsi</p>
+		<p> 3. Untuk marker disini merupakan titik ibu kota dari suatu Kabupaten/ Kota</p>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="portlet light ">
 				<div class="portlet-body">
-					<form role="form" class="form-horizontal" action="<?=base_url('admin_side/simpan_data_provinsi');?>" method="post"  enctype='multipart/form-data'>
+					<form role="form" class="form-horizontal" action="<?=base_url('admin_side/simpan_data_kabkot');?>" method="post"  enctype='multipart/form-data'>
 						<div class="form-body">
 							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1">Nama Provinsi <span class="required"> * </span></label>
+								<label class="col-md-2 control-label" for="form_control_1">Provinsi <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<div class="input-icon">
-										<input type="text" class="form-control" name="nm_provinsi" placeholder="Type something" required>
+										<select name='id_provinsi' id='id_provinsi' class="form-control select2-allow-clear" required>
+											<option value=''></option>
+											<?php
+											foreach ($provinsi as $key => $value) {
+												echo '<option value="'.$value->id_provinsi.'">'.$value->nm_provinsi.'</option>';
+											}
+											?>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1">Nama Kabupaten/ Kota <span class="required"> * </span></label>
+								<div class="col-md-10">
+									<div class="input-icon">
+										<input type="text" class="form-control" name="nm_kabupaten" placeholder="Type something" required>
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Some help goes here...</span>
 										<i class="fa fa-map"></i>
