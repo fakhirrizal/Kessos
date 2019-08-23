@@ -1,4 +1,22 @@
 <script src="<?=base_url('assets/global/plugins/jquery.min.js');?>" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		$.ajaxSetup({
+			type:"POST",
+			url: "<?php echo site_url('/admin/Master/ajax_function')?>",
+			cache: false,
+		});
+		$("#id_provinsi").change(function(){
+			var value=$(this).val();
+			$.ajax({
+				data:{id:value,modul:'get_kabupaten_by_id_provinsi'},
+				success: function(respond){
+					$("#id_kabupaten").html(respond);
+				}
+			})
+		});
+	})
+</script>
 <ul class="page-breadcrumb breadcrumb">
 	<li>
 		<span>Master</span>
@@ -9,11 +27,11 @@
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span><a href='<?= site_url('/admin_side/data_kabupaten'); ?>'>Data Kabupaten/ Kota</a></span>
+		<span><a href='<?= site_url('/admin_side/data_kabupaten'); ?>'>Data Kecamatan</a></span>
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span>Ubah Data</span>
+		<span>Tambah Data</span>
 	</li>
 </ul>
 <?= $this->session->flashdata('sukses') ?>
@@ -23,14 +41,13 @@
 		<h3>Catatan</h3>
 		<p> 1. Kolom isian dengan tanda bintang (<font color='red'>*</font>) adalah wajib untuk di isi</p>
 		<p> 2. Ekstensi file berupa <b>.kml</b></p>
-		<p> 3. Untuk marker disini merupakan titik ibu kota dari suatu Kabupaten/ Kota</p>
+		<p> 3. Untuk marker disini merupakan titik ibu kota dari suatu Kecamatan</p>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="portlet light ">
 				<div class="portlet-body">
-					<form role="form" class="form-horizontal" action="<?=base_url('admin_side/perbarui_data_kabkot');?>" method="post"  enctype='multipart/form-data'>
-						<input type="hidden" name="id_kabupaten" value="<?= md5($data_utama->id_kabupaten); ?>">
+					<form role="form" class="form-horizontal" action="<?=base_url('admin_side/simpan_data_kecamatan');?>" method="post"  enctype='multipart/form-data'>
 						<div class="form-body">
 							<div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Provinsi <span class="required"> * </span></label>
@@ -40,11 +57,7 @@
 											<option value=''></option>
 											<?php
 											foreach ($provinsi as $key => $value) {
-												if($value->id_provinsi==$data_utama->id_provinsi){
-													echo '<option value="'.$value->id_provinsi.'" selected>'.$value->nm_provinsi.'</option>';
-												}else{
-													echo '<option value="'.$value->id_provinsi.'">'.$value->nm_provinsi.'</option>';
-												}
+												echo '<option value="'.$value->id_provinsi.'">'.$value->nm_provinsi.'</option>';
 											}
 											?>
 										</select>
@@ -52,10 +65,20 @@
 								</div>
 							</div>
 							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1">Nama Kabupaten/ Kota <span class="required"> * </span></label>
+								<label class="col-md-2 control-label" for="form_control_1">Kabupaten/ Kota <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<div class="input-icon">
-										<input type="text" class="form-control" name="nm_kabupaten" value="<?= $data_utama->nm_kabupaten; ?>" required>
+										<select name='id_kabupaten' id='id_kabupaten' class="form-control select2-allow-clear" required>
+											<option value=''></option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1">Nama Kecamatan <span class="required"> * </span></label>
+								<div class="col-md-10">
+									<div class="input-icon">
+										<input type="text" class="form-control" name="nm_kecamatan" placeholder="Type something" required>
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Some help goes here...</span>
 										<i class="fa fa-map"></i>
@@ -72,7 +95,7 @@
 								<label class="col-md-2 control-label" for="form_control_1"></label>
 								<div class="col-md-5">
 									<div class="input-icon">
-										<input type="text" class="form-control" name='latitude' id='latitude' readonly="">
+										<input type="text" class="form-control" name='latitude' id='latitude' required>
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Garis lintang</span>
 										<i class="icon-pin"></i>
@@ -80,7 +103,7 @@
 								</div>
 								<div class="col-md-5">
 									<div class="input-icon">
-									<input type="text" class="form-control" name='longitude' id='longitude' readonly="">
+									<input type="text" class="form-control" name='longitude' id='longitude' required>
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Garis Bujur</span>
 										<i class="icon-pin"></i>
@@ -104,7 +127,7 @@
 							<div class="row">
 								<div class="col-md-offset-2 col-md-10">
 									<button type="reset" class="btn default">Batal</button>
-									<button type="submit" class="btn blue">Perbarui</button>
+									<button type="submit" class="btn blue">Simpan</button>
 								</div>
 							</div>
 						</div>
@@ -129,24 +152,16 @@
 
 	var map = new google.maps.Map(document.getElementById('map'), {
 	zoom: 7,
-	center: new google.maps.LatLng(<?= $data_utama->lintang.','.$data_utama->bujur; ?>),
+	center: new google.maps.LatLng(-6.200309654,106.8344433),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	});
-	var latLng = new google.maps.LatLng(<?= $data_utama->lintang.','.$data_utama->bujur; ?>);
+	var latLng = new google.maps.LatLng(-6.200309654,106.8344433);
 
 	var marker = new google.maps.Marker({
 		position : latLng,
 		title : 'lokasi',
 		map : map,
 		draggable : true
-	});
-
-	var situs = 'http://kemensos.aplikasiku.online/assets/peta_kabupaten/';
-	var nama_file = '<?php echo $data_utama->kml; ?>';
-	var situs_full = situs.concat(nama_file);
-	var kmldashboard = new google.maps.KmlLayer({
-		url: situs_full,
-		map: map
 	});
 
 	updateMarkerPosition(latLng);

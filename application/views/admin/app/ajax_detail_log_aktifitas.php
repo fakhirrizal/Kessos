@@ -68,15 +68,17 @@
 								<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize&key=AIzaSyCnjlDXASsyIUKAd1QANakIHIM8jjWWyNU"></script>
 								<script>
 									function initialize() {
+									<?php
+										$get_location = explode(',',$row->activity_location);
+									?>
 									var propertiPeta = {
-										center: {lat: -6.994163, lng: 110.416438},
-										zoom:9,
+										center: {lat: <?= $get_location[0] ?>, lng: <?= $get_location[1] ?>},
+										zoom:15,
 										mapTypeId:google.maps.MapTypeId.ROADMAP
 									};
 
 									var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
 									<?php
-										$get_location = explode(',',$row->activity_location);
 										echo ("addMarker($get_location[0], $get_location[1],);\n");
 									?>
 

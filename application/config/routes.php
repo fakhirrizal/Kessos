@@ -130,7 +130,17 @@ $route['admin_side/ubah_data_kabkot/(:any)'] = 'admin/Map/edit_city/$1';
 $route['admin_side/perbarui_data_kabkot'] = 'admin/Map/update_city_data';
 $route['admin_side/hapus_data_kabkot/(:any)'] = 'admin/Map/delete_city/$1';
 $route['admin_side/data_kecamatan'] = 'admin/Map/sub_district';
+$route['admin_side/tambah_data_kecamatan'] = 'admin/Map/add_sub_district';
+$route['admin_side/simpan_data_kecamatan'] = 'admin/Map/save_sub_district';
+$route['admin_side/ubah_data_kecamatan/(:any)'] = 'admin/Map/edit_sub_district/$1';
+$route['admin_side/perbarui_data_kecamatan'] = 'admin/Map/update_sub_district_data';
+$route['admin_side/hapus_data_kecamatan/(:any)'] = 'admin/Map/delete_sub_district/$1';
 $route['admin_side/data_kelurahan'] = 'admin/Map/village';
+$route['admin_side/tambah_data_kelurahan'] = 'admin/Map/add_village';
+$route['admin_side/simpan_data_kelurahan'] = 'admin/Map/save_village';
+$route['admin_side/ubah_data_kelurahan/(:any)'] = 'admin/Map/edit_village/$1';
+$route['admin_side/perbarui_data_kelurahan'] = 'admin/Map/update_village_data';
+$route['admin_side/hapus_data_kelurahan/(:any)'] = 'admin/Map/delete_village/$1';
 
 $route['admin_side/laporan'] = 'admin/Report';
 

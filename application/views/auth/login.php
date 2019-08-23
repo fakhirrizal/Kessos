@@ -147,17 +147,19 @@
 			}
 		</style> -->
 	</head>
-	<body>
+	<body onload="getLocation()">
 		<div class="signin-form">
 			<?= $this->session->flashdata('error') ?>
 			<form role="form" action="<?= site_url('login_process'); ?>" method='post'>
+				<p id="getLocation"></p>
 				<!-- <h2>Sign in</h2>
 				<p class="hint-text">Sign in with your social media account</p> -->
 				<div class="social-btn text-center">
 					<!-- <a href="#" class="btn btn-danger btn-lg" title="Google"><i class="fa fa-google"></i></a> -->
 					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg/220px-Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg.png" width='45%'>
+					<br><br><p><font size="5">Silahkan login<br>untuk menggunakan sistem</font></p><hr>
 				</div>
-				<div class="or-seperator"><br><p>Silahkan login untuk menggunakan sistem</p></div>
+				<!-- <div class="or-seperator"><b></b></div> -->
 				<div class="form-group">
 					<input type="text" class="form-control input-lg" name="username" placeholder="Nama Pengguna" required="required">
 				</div>
@@ -170,6 +172,19 @@
 				<div class="text-center small"><a href="#">Lupa Kata Sandi?</a></div>
 			</form>
 			<!-- <div class="text-center small">Don't have an account? <a href="#">Sign up</a></div> -->
+			<script>
+				var view = document.getElementById("getLocation");
+				function getLocation() {
+					if (navigator.geolocation) {
+						navigator.geolocation.getCurrentPosition(showPosition);
+					} else {
+						view.innerHTML = "";
+					}
+				}
+				function showPosition(position) {
+					view.innerHTML = "<input type='hidden' name='location' value='" + position.coords.latitude + "," + position.coords.longitude +"' />";
+				}
+			</script>
 		</div>
 	</body>
 </html>

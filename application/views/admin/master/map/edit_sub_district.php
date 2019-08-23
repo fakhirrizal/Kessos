@@ -1,4 +1,22 @@
 <script src="<?=base_url('assets/global/plugins/jquery.min.js');?>" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		$.ajaxSetup({
+			type:"POST",
+			url: "<?php echo site_url('/admin/Master/ajax_function')?>",
+			cache: false,
+		});
+		$("#id_provinsi").change(function(){
+			var value=$(this).val();
+			$.ajax({
+				data:{id:value,modul:'get_kabupaten_by_id_provinsi'},
+				success: function(respond){
+					$("#id_kabupaten").html(respond);
+				}
+			})
+		});
+	})
+</script>
 <ul class="page-breadcrumb breadcrumb">
 	<li>
 		<span>Master</span>
@@ -9,7 +27,7 @@
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span><a href='<?= site_url('/admin_side/data_kabupaten'); ?>'>Data Kabupaten/ Kota</a></span>
+		<span><a href='<?= site_url('/admin_side/data_kecamatan'); ?>'>Data Kecamatan</a></span>
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
@@ -23,14 +41,14 @@
 		<h3>Catatan</h3>
 		<p> 1. Kolom isian dengan tanda bintang (<font color='red'>*</font>) adalah wajib untuk di isi</p>
 		<p> 2. Ekstensi file berupa <b>.kml</b></p>
-		<p> 3. Untuk marker disini merupakan titik ibu kota dari suatu Kabupaten/ Kota</p>
+		<p> 3. Untuk marker disini merupakan titik ibu kota dari suatu Kecamatan</p>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<div class="portlet light ">
 				<div class="portlet-body">
-					<form role="form" class="form-horizontal" action="<?=base_url('admin_side/perbarui_data_kabkot');?>" method="post"  enctype='multipart/form-data'>
-						<input type="hidden" name="id_kabupaten" value="<?= md5($data_utama->id_kabupaten); ?>">
+					<form role="form" class="form-horizontal" action="<?=base_url('admin_side/perbarui_data_kecamatan');?>" method="post"  enctype='multipart/form-data'>
+						<input type="hidden" name="id_kecamatan" value="<?= md5($data_utama->id_kecamatan); ?>">
 						<div class="form-body">
 							<div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Provinsi <span class="required"> * </span></label>
@@ -52,10 +70,20 @@
 								</div>
 							</div>
 							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1">Nama Kabupaten/ Kota <span class="required"> * </span></label>
+								<label class="col-md-2 control-label" for="form_control_1">Kabupaten/ Kota <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<div class="input-icon">
-										<input type="text" class="form-control" name="nm_kabupaten" value="<?= $data_utama->nm_kabupaten; ?>" required>
+										<select name='id_kabupaten' id='id_kabupaten' class="form-control select2-allow-clear" required>
+											<option value='<?= $data_utama->id_kabupaten; ?>'><?= $data_utama->nm_kabupaten; ?></option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1">Nama Kecamatan <span class="required"> * </span></label>
+								<div class="col-md-10">
+									<div class="input-icon">
+										<input type="text" class="form-control" name="nm_kecamatan" value="<?= $data_utama->nm_kecamatan; ?>" required>
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Some help goes here...</span>
 										<i class="fa fa-map"></i>

@@ -64,7 +64,7 @@
 							</div>
 							<div class="col-md-4" style='text-align: right;'>
 								<a href="#" class="btn btn-info" data-toggle="modal" data-target="#fi">Import Data <i class="fa fa-cloud-upload"></i></a>
-								<!-- <a href="<?=base_url()?>data_upload/format_data_kehadiran.xlsx" class="btn btn-warning">Import Data Template</a> -->
+								<a href="<?=base_url()?>import_data_template/template_kube.xlsx" class="btn btn-warning">Import Data Template</a>
 							</div>
 						</div>
 					</div>
