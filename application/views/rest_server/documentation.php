@@ -18,7 +18,8 @@
 		<link href="https://sitri.online/assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css" />
 		<link href="https://sitri.online/assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
 		<link href="https://sitri.online/assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css" />
-		<link rel="shortcut icon" href="https://sitri.online/assets/icon.png" /> </head>
+		<link href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg/220px-Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg.png" rel="icon" type="image/x-icon">
+	</head>
 
 		<body class="page-container-bg-solid page-md">
 		<div class="page-container">
@@ -43,74 +44,117 @@
 								<div class="col-md-12">
 									<div class="portlet light ">
 										<div class="portlet-body">
-											<div class="panel-group" id="accordion">
-												<div class="heading">
-													<h4>
-														<a class="toggleEndpointList">KUBE (Kelompok Usaha Bersama)</a>
-													</h4>
-												</div>
+											<h2>User Authentification</h2>
+											<div class="panel-group accordion" id="accordion1">
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/kube</a>
+															<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1_1"> <span class="label label-info">POST</span>&nbsp;{url}/login </a>
 														</h4>
 													</div>
-													<div id="collapse5" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+													<div id="collapse_1_1" class="panel-collapse in">
 														<div class="panel-body">
-															Fungsi untuk mengubah data master kube tingkat desa<br>Berikut beberapa atribut yang harus diisi,
-															<div class="signature-container">
-																<div class="snippet" style="display: block;">
-																	<div class="snippet_json" style="display: block;">
-																		<pre>
-																			<code>{
-	"id_desa": "int",
-	"jumlah_umkm": "int",
-	"bidang_usaha_terbesar": "string"
-}</code>
-																		</pre>
-																	</div>
+															<p> Fungsi untuk bisa masuk ke sistem, berikut parameter yang harus dipenuhi. </p>
+															<code>
+																{<br>&nbsp; &nbsp; &nbsp;
+																	"username": "string",<br>&nbsp; &nbsp; &nbsp;
+																	"password": "string"<br>
+																}
+															</code>
+															<p> Berikut data balikannya jika parameter yang dihantarkan terdaftar di database. </p>
+															<code>
+																{<br>&nbsp; &nbsp; &nbsp;
+																	"user_id": "int",<br>&nbsp; &nbsp; &nbsp;
+																	"nama": "string",<br>&nbsp; &nbsp; &nbsp;
+																	"nik": "string",<br>&nbsp; &nbsp; &nbsp;
+																	"tanggal_lahir": "YYYY-mm-dd",<br>&nbsp; &nbsp; &nbsp;
+																	"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
+																	"foto": "base64",<br>
+																}
+															</code>
+														</div>
+													</div>
+												</div>
+											</div>
+											<h2>Data Master</h2>
+											<div class="portlet box yellow">
+												<div class="portlet-title">
+													<div class="caption">
+														<i></i>Data Kube (Kelompok Usaha Bersama) </div>
+													<div class="tools">
+														<a href="javascript:;" class="collapse"> </a>
+													</div>
+												</div>
+												<div class="portlet-body">
+													<div class="panel-group accordion" id="accordion2_1">
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_1" href="#collapse_2_1_1"> <span class="label label-success">GET</span>&nbsp;{url}/kube </a>
+																</h4>
+															</div>
+															<div id="collapse_2_1_1" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat semua data kube, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_kube": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nama_kelompok": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"rencana_anggaran": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"jumlah_anggota": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"jenis_usaha": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string"<br>
+																		}
+																	</code>
 																</div>
-																Keterangan :
-																<ul>
-																	<li>Index "id_desa" digunakan sebagai parameter untuk mengubah data lain.</li>
-																</ul>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_1" href="#collapse_2_1_2"> <span class="label label-success">GET</span>&nbsp;{url}/kube?id_kube={$id_kube} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_1_2" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data kube berdasarkan id_kube yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_kube": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nama_kelompok": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"rencana_anggaran": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"jumlah_anggota": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"jenis_usaha": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string"<br>
+																		}
+																	</code>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-												<div class="heading">
-													<h4>
-														<a class="toggleEndpointList">RUTILAHU (Rumah Tidak Layak Huni)</a>
-													</h4>
-												</div>
+											</div>
+											<h2>Data Laporan</h2>
+											<div class="panel-group accordion" id="accordion3">
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
-															<a data-toggle="collapse" data-parent="#accordion" href="#collapse69" aria-expanded="false" class="collapsed"><span class="label label-warning">PUT</span>&nbsp;{url}/rutilahu</a>
+															<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion1" href="#collapse_3_1"> Fungsi #1 </a>
 														</h4>
 													</div>
-													<div id="collapse69" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+													<div id="collapse_3_1" class="panel-collapse in">
 														<div class="panel-body">
-															Fungsi untuk mengubah data master rutilahu tingkat desa<br>Berikut beberapa atribut yang harus diisi,
-															<div class="signature-container">
-																<div class="snippet" style="display: block;">
-																	<div class="snippet_json" style="display: block;">
-																		<pre>
-																			<code>{
-	"id_desa": "int",
-	"rutilahu": "int",
-	"rulahu": "int",
-	"terdata": "int",
-	"estimasi_belum_terdata": "int"
-}</code>
-																		</pre>
-																	</div>
-																</div>
-																Keterangan :
-																<ul>
-																	<li>Index "id_desa" digunakan sebagai parameter untuk mengubah data lain.</li>
-																</ul>
-															</div>
+															<p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+															<p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+																eiusmod. </p>
 														</div>
 													</div>
 												</div>

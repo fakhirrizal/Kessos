@@ -242,9 +242,31 @@ License: You must have a valid license purchased only from themeforest(the above
 								</ul>
 							</li>
 							<li class="menu-dropdown classic-menu-dropdown <?php if($parent=='report'){echo 'active';}else{echo '';} ?>">
+								<a href="javascript:;"><i class="icon-notebook"></i> Laporan
+									<span class="arrow <?php if($parent=='report'){echo 'open';}else{echo '';} ?>"></span>
+								</a>
+								<ul class="dropdown-menu pull-left">
+									<li class=" <?php if($child=='kube'){echo 'active';}else{echo '';} ?>">
+										<a href="<?php echo site_url('admin_side/laporan_kube'); ?>" class="nav-link nav-toggle ">
+											<i class="icon-grid"></i> Data Kube
+										</a>
+									</li>
+									<li class=" <?php if($child=='rutilahu'){echo 'active';}else{echo '';} ?>">
+										<a href="<?php echo site_url('admin_side/laporan_rutilahu'); ?>" class="nav-link nav-toggle ">
+											<i class="icon-home"></i> Data Rutilahu
+										</a>
+									</li>
+									<li class=" <?php if($child=='sarling'){echo 'active';}else{echo '';} ?>">
+										<a href="<?php echo site_url('admin_side/laporan_sarling'); ?>" class="nav-link nav-toggle ">
+											<i class="icon-layers"></i> Data Sarling
+										</a>
+									</li>
+								</ul>
+							</li>
+							<!-- <li class="menu-dropdown classic-menu-dropdown <?php if($parent=='report'){echo 'active';}else{echo '';} ?>">
 								<a href="<?php echo site_url('admin_side/laporan'); ?>"><i class="icon-notebook"></i> Laporan
 								</a>
-							</li>
+							</li> -->
 							<li class="menu-dropdown classic-menu-dropdown <?php if($parent=='log_activity'){echo 'active';}else{echo '';} ?>">
 								<a href="<?php echo site_url('admin_side/log_activity'); ?>"><i class="fa fa-rss"></i> Log Activity
 								</a>

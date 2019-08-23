@@ -63,8 +63,8 @@
 									<a href="<?=base_url('admin_side/tambah_data_kube');?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
 							</div>
 							<div class="col-md-4" style='text-align: right;'>
-								<a href="#" class="btn btn-info" data-toggle="modal" data-target="#fi">Import Data <i class="fa fa-cloud-upload"></i></a>
-								<a href="<?=base_url()?>import_data_template/template_kube.xlsx" class="btn btn-warning">Import Data Template</a>
+								<a href="#" class="btn btn-info" data-toggle="modal" data-target="#fi">Impor Data <i class="fa fa-cloud-upload"></i></a>
+								<a href="<?=base_url()?>import_data_template/template_kube.xlsx" class="btn btn-warning">Unduh Template</a>
 							</div>
 						</div>
 					</div>

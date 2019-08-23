@@ -142,10 +142,12 @@ $route['admin_side/ubah_data_kelurahan/(:any)'] = 'admin/Map/edit_village/$1';
 $route['admin_side/perbarui_data_kelurahan'] = 'admin/Map/update_village_data';
 $route['admin_side/hapus_data_kelurahan/(:any)'] = 'admin/Map/delete_village/$1';
 
-$route['admin_side/laporan'] = 'admin/Report';
+$route['admin_side/laporan_kube'] = 'admin/Report/kube';
 
 /* REST API */
 $route['api'] = 'Rest_server/documentation';
+
+$route['api/login'] = 'api/auth/Login';
 
 $route['api/kube'] = 'api/kube/Master';
 
