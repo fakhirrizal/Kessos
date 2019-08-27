@@ -1838,6 +1838,13 @@ class Master extends CI_Controller {
 				echo'<option value="'.$value->id_desa.'">'.$value->nm_desa.'</option>';
 			}
 		}
+		elseif($this->input->post('modul')=='get_anggota_kube_by_id_kube'){
+			$data = $this->Main_model->getSelectedData('anggota_kube a', 'a.*', array('a.id_kube'=>$this->input->post('id')))->result();
+			echo'<option value=""></option>';
+			foreach ($data as $key => $value) {
+				echo'<option value="'.$value->id_anggota_kube.'-'.$value->user_id.'">'.$value->nama.'</option>';
+			}
+		}
 		elseif($this->input->post('modul')=='modul_ubah_data_anggota_kube'){
 			$data = $this->Main_model->getSelectedData('anggota_kube a', 'a.*', array('md5(a.id_anggota_kube)'=>$this->input->post('id')))->row();
 			echo'
@@ -2032,6 +2039,26 @@ class Master extends CI_Controller {
 				</div>
 			</form>
 			';
+		}
+		elseif($this->input->post('modul')=='get_indikator_by_tipe'){
+			$data = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.id_master_indikator'=>$this->input->post('id')))->result();
+			echo'<div class="md-checkbox-list">';
+				foreach ($data as $key => $value) {
+					echo'
+					<div class="md-checkbox">
+						<input type="checkbox" id="'.$value->id_indikator.'" value="'.$value->id_indikator.'" name="indikator[]" class="md-check">
+						<label for="'.$value->id_indikator.'">
+							<span class="inc"></span>
+							<span class="check"></span>
+							<span class="box"></span> '.$value->indikator.' </label>
+					</div>
+					';
+				}
+			echo'</div>';
+			// echo'<option value=""></option>';
+			// foreach ($data as $key => $value) {
+			// 	echo'<option value="'.$value->id_indikator.'">'.$value->indikator.'</option>';
+			// }
 		}
 	}
 }

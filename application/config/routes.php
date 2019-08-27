@@ -143,11 +143,22 @@ $route['admin_side/perbarui_data_kelurahan'] = 'admin/Map/update_village_data';
 $route['admin_side/hapus_data_kelurahan/(:any)'] = 'admin/Map/delete_village/$1';
 
 $route['admin_side/laporan_kube'] = 'admin/Report/kube';
+$route['admin_side/tambah_laporan_kube'] = 'admin/Report/add_kube_report';
+$route['admin_side/simpan_laporan_kube'] = 'admin/Report/save_kube_report';
 
 /* REST API */
 $route['api'] = 'Rest_server/documentation';
 
 $route['api/login'] = 'api/auth/Login';
+$route['api/change_password'] = 'api/auth/Change_password';
+
+$route['api/indikator'] = 'api/master/Indikator';
+$route['api/user_data'] = 'api/master/User_data';
+$route['api/device'] = 'api/master/Device';
+$route['api/provinsi'] = 'api/master/Provinsi';
+$route['api/kabupaten'] = 'api/master/Kabupaten';
+$route['api/kecamatan'] = 'api/master/Kecamatan';
+$route['api/desa'] = 'api/master/Desa';
 
 $route['api/kube'] = 'api/kube/Master';
 

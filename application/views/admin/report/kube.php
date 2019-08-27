@@ -31,7 +31,7 @@
 									</button>
 								</div>
 									<span class="separator">|</span>
-									<a href="<?=base_url('admin_side/tambah_data_kube');?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
+									<a href="<?=base_url('admin_side/tambah_laporan_kube');?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
 							</div>
 						</div>
 					</div>
@@ -67,7 +67,7 @@
 											{ mData: 'id_kube', sClass: "alignCenter" },
 											{ mData: 'realisasi_fisik', sClass: "alignCenter" } ,
 											{ mData: 'realisasi_anggaran', sClass: "alignCenter" },
-											{ mData: 'persentase_raalisasi', sClass: "alignCenter" }
+											{ mData: 'persentase_realisasi', sClass: "alignCenter" }
 										]
 							});
 						});

@@ -69,7 +69,27 @@
 																	"nik": "string",<br>&nbsp; &nbsp; &nbsp;
 																	"tanggal_lahir": "YYYY-mm-dd",<br>&nbsp; &nbsp; &nbsp;
 																	"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
-																	"foto": "base64",<br>
+																	"foto": "base64"<br>
+																}
+															</code>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="panel-group accordion" id="accordion1">
+												<div class="panel panel-default">
+													<div class="panel-heading">
+														<h4 class="panel-title">
+															<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1_2"> <span class="label label-info">POST</span>&nbsp;{url}/change_password </a>
+														</h4>
+													</div>
+													<div id="collapse_1_2" class="panel-collapse in">
+														<div class="panel-body">
+															<p> Fungsi untuk mengubah kata sandi, berikut parameter yang harus dipenuhi. </p>
+															<code>
+																{<br>&nbsp; &nbsp; &nbsp;
+																	"username": "string",<br>&nbsp; &nbsp; &nbsp;
+																	"new_password": "string"<br>
 																}
 															</code>
 														</div>
@@ -77,6 +97,122 @@
 												</div>
 											</div>
 											<h2>Data Master</h2>
+											<div class="portlet box red">
+												<div class="portlet-title">
+													<div class="caption">
+														<i></i>User Data </div>
+													<div class="tools">
+														<a href="javascript:;" class="collapse"> </a>
+													</div>
+												</div>
+												<div class="portlet-body">
+													<div class="panel-group accordion" id="accordion2_3">
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_3" href="#collapse_2_3_1"> <span class="label label-success">GET</span>&nbsp;{url}/user_data </a>
+																</h4>
+															</div>
+															<div id="collapse_2_3_1" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat semua data user, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"username": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"password": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nama_lengkap": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nik": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"id_bdt": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"id_pkh": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"id_kks": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"tanggal_lahir": "YYYY-mm-dd",<br>&nbsp; &nbsp; &nbsp;
+																			"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"foto": "base64"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_3" href="#collapse_2_3_2"> <span class="label label-success">GET</span>&nbsp;{url}/user_data?user_id={$user_id} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_3_2" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data user berdasarkan id yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"username": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"password": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nama_lengkap": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nik": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"id_bdt": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"id_pkh": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"id_kks": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"tanggal_lahir": "YYYY-mm-dd",<br>&nbsp; &nbsp; &nbsp;
+																			"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"foto": "base64"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="portlet box green">
+												<div class="portlet-title">
+													<div class="caption">
+														<i></i>Data Indikator </div>
+													<div class="tools">
+														<a href="javascript:;" class="collapse"> </a>
+													</div>
+												</div>
+												<div class="portlet-body">
+													<div class="panel-group accordion" id="accordion2_2">
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_2" href="#collapse_2_2_1"> <span class="label label-success">GET</span>&nbsp;{url}/indikator </a>
+																</h4>
+															</div>
+															<div id="collapse_2_2_1" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat semua data indikator (kaitannya dengan laporan), berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"tipe": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"indikator": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_2" href="#collapse_2_2_2"> <span class="label label-success">GET</span>&nbsp;{url}/indikator?id_tipe={$id_tipe} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_2_2" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data indikator berdasarkan id_tipe yang dipilih (1: Pengadaan; 2: Proses; 3: Benefit), berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"tipe": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"indikator": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 											<div class="portlet box yellow">
 												<div class="portlet-title">
 													<div class="caption">
@@ -134,6 +270,213 @@
 																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
 																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
 																			"nm_desa": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="portlet box purple">
+												<div class="portlet-title">
+													<div class="caption">
+														<i></i>Wilayah </div>
+													<div class="tools">
+														<a href="javascript:;" class="collapse"> </a>
+													</div>
+												</div>
+												<div class="portlet-body">
+													<div class="panel-group accordion" id="accordion2_4">
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_1"> <span class="label label-success">GET</span>&nbsp;{url}/provinsi </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_1" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat semua data provinsi, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_provinsi": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_2"> <span class="label label-success">GET</span>&nbsp;{url}/provinsi?id_provinsi={$id_provinsi} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_2" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data provinsi berdasarkan id yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_provinsi": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_3"> <span class="label label-success">GET</span>&nbsp;{url}/kabupaten </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_3" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat semua data kabupaten, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_kabupaten": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_4"> <span class="label label-success">GET</span>&nbsp;{url}/kabupaten?id_kabupaten={$id_kabupaten} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_4" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data kabupaten berdasarkan id_kabupaten yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_kabupaten": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_5"> <span class="label label-success">GET</span>&nbsp;{url}/kabupaten?id_provinsi={$id_provinsi} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_5" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data kabupaten berdasarkan provinsi tertentu, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_kabupaten": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_6"> <span class="label label-success">GET</span>&nbsp;{url}/kecamatan </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_6" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat semua data kecamatan, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_kecamatan": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_7"> <span class="label label-success">GET</span>&nbsp;{url}/kecamatan?id_kecamatan={$id_kecamatan} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_7" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data kecamatan berdasarkan id_kecamatan yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_kecamatan": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_8"> <span class="label label-success">GET</span>&nbsp;{url}/kecamatan?id_kabupaten={$id_kabupaten} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_8" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data kecamatan berdasarkan id_kabupaten yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_kecamatan": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_9"> <span class="label label-success">GET</span>&nbsp;{url}/kecamatan?id_provinsi={$id_provinsi} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_9" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data kecamatan berdasarkan id_provinsi yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_kecamatan": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_10"> <span class="label label-success">GET</span>&nbsp;{url}/desa </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_10" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat semua data kelurahan/ desa, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_desa": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
 																		}
 																	</code>
 																</div>
