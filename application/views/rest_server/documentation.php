@@ -482,6 +482,90 @@
 																</div>
 															</div>
 														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_11"> <span class="label label-success">GET</span>&nbsp;{url}/desa?id_desa={$id_desa} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_11" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data kelurahan/ desa berdasarkan id_desa yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_desa": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_12"> <span class="label label-success">GET</span>&nbsp;{url}/desa?id_kecamatan={$id_kecamatan} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_12" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data kelurahan/ desa berdasarkan kecamatan yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_desa": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_13"> <span class="label label-success">GET</span>&nbsp;{url}/desa?id_kabupaten={$id_kabupaten} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_13" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data kelurahan/ desa berdasarkan kabupaten yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_desa": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_4" href="#collapse_2_4_14"> <span class="label label-success">GET</span>&nbsp;{url}/desa?id_provinsi={$id_provinsi} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_4_14" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data kelurahan/ desa berdasarkan provinsi yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_desa": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
