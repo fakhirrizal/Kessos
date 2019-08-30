@@ -194,6 +194,15 @@ class Master extends CI_Controller {
 						);
 						$this->Main_model->insertData('kube',$data_insert_kube);
 						// print_r($data_insert_kube);
+						$data_insert_status_laporan_kube = array(
+							'id_kube' => $get_id_kube['id_kube']+1,
+							'persentase_fisik' => 0,
+							'anggaran' => 0,
+							'persentase_anggaran' => 0,
+							'persentase_realisasi' => 0
+						);
+						$this->Main_model->insertData('status_laporan_kube',$data_insert_status_laporan_kube);
+						// print_r($data_insert_status_laporan_kube);
 						$id_kube = $get_id_kube['id_kube']+1;
 					}else{
 						echo'';
@@ -329,7 +338,7 @@ class Master extends CI_Controller {
 			$isi['number'] = $no++.'.';
 			$isi['nama_tim'] = $value->nama_tim;
 			$isi['jenis_usaha'] = $value->jenis_usaha;
-			$isi['alamat'] = $value->alamat;
+			// $isi['alamat'] = $value->alamat;
 			$isi['rencana_anggaran'] = 'Rp '.number_format($value->rencana_anggaran,2);
 			$isi['nm_provinsi'] = $value->nm_provinsi;
 			$isi['nm_kabupaten'] = $value->nm_kabupaten;
@@ -379,8 +388,10 @@ class Master extends CI_Controller {
 	}
 	public function save_kube_data(){
 		$this->db->trans_start();
+		$get_id_kube = $this->Main_model->getLastID('kube','id_kube');
 		$rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
-		$data_insert = array(
+		$data_insert1 = array(
+			'id_kube' => $get_id_kube['id_kube']+1,
 			'id_jenis_usaha' => $this->input->post('id_jenis_usaha'),
 			'nama_tim' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
@@ -392,7 +403,15 @@ class Master extends CI_Controller {
 			'created_at' => date('Y-m-d H:i:s'),
 			'created_by' => $this->session->userdata('id')
 		);
-		$this->Main_model->insertData('kube',$data_insert);
+		$this->Main_model->insertData('kube',$data_insert1);
+		$data_insert2 = array(
+			'id_kube' => $get_id_kube['id_kube']+1,
+			'persentase_fisik' => 0,
+			'anggaran' => 0,
+			'persentase_anggaran' => 0,
+			'persentase_realisasi' => 0
+		);
+		$this->Main_model->insertData('status_laporan_kube',$data_insert2);
 		$this->Main_model->log_activity($this->session->userdata('id'),'Adding data',"Add kube data",$this->session->userdata('location'));
 		$this->db->trans_complete();
 		if($this->db->trans_status() === false){
@@ -752,7 +771,7 @@ class Master extends CI_Controller {
 						$data_insert_rutilahu = array(
 							'id_rutilahu' => $get_id_rutilahu['id_rutilahu']+1,
 							'nama_kelompok' => $nama_tim,
-							'alamat' => '',
+							'alamat' => $row['L'],
 							'rencana_anggaran' => '0',
 							'id_provinsi' => $this->input->post('id_provinsi'),
 							'id_kabupaten' => $this->input->post('id_kabupaten'),
@@ -2040,25 +2059,31 @@ class Master extends CI_Controller {
 			</form>
 			';
 		}
-		elseif($this->input->post('modul')=='get_indikator_by_tipe'){
-			$data = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.id_master_indikator'=>$this->input->post('id')))->result();
-			echo'<div class="md-checkbox-list">';
-				foreach ($data as $key => $value) {
-					echo'
-					<div class="md-checkbox">
-						<input type="checkbox" id="'.$value->id_indikator.'" value="'.$value->id_indikator.'" name="indikator[]" class="md-check">
-						<label for="'.$value->id_indikator.'">
-							<span class="inc"></span>
-							<span class="check"></span>
-							<span class="box"></span> '.$value->indikator.' </label>
-					</div>
-					';
-				}
-			echo'</div>';
+		elseif($this->input->post('modul')=='get_isian_indikator_by_id_kube'){
+			$data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
+			$data['data_kube'] = $this->Main_model->getSelectedData('laporan_kube a', 'a.*', array('a.id_kube'=>$this->input->post('id'),'a.deleted'=>'0'),'a.created_at DESC','1')->row();
+			$this->load->view('admin/report/ajax_list_indicator',$data);
+			// print_r($data);
+		}
+		// elseif($this->input->post('modul')=='get_indikator_by_tipe'){
+		// 	$data = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.id_master_indikator'=>$this->input->post('id')))->result();
+		// 	echo'<div class="md-checkbox-list">';
+		// 		foreach ($data as $key => $value) {
+		// 			echo'
+		// 			<div class="md-checkbox">
+		// 				<input type="checkbox" id="'.$value->id_indikator.'" value="'.$value->id_indikator.'" name="indikator[]" class="md-check">
+		// 				<label for="'.$value->id_indikator.'">
+		// 					<span class="inc"></span>
+		// 					<span class="check"></span>
+		// 					<span class="box"></span> '.$value->indikator.' </label>
+		// 			</div>
+		// 			';
+		// 		}
+		// 	echo'</div>';
 			// echo'<option value=""></option>';
 			// foreach ($data as $key => $value) {
 			// 	echo'<option value="'.$value->id_indikator.'">'.$value->indikator.'</option>';
 			// }
-		}
+		// }
 	}
 }

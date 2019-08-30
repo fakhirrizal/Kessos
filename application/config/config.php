@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/kemensos/';
-// $config['base_url'] = 'http://rehsos.gbnku.co.id/';
+// $config['base_url'] = 'http://pfm.gbnku.co.id/';
 
 /*
 |--------------------------------------------------------------------------

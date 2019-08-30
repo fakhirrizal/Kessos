@@ -18,15 +18,25 @@
 			})
 		});
 
-		$("#id_indikator").change(function(){
+		$("#id_kube").change(function(){
 			var value=$(this).val();
 			$.ajax({
-				data:{id:value,modul:'get_indikator_by_tipe'},
+				data:{id:value,modul:'get_isian_indikator_by_id_kube'},
 				success: function(respond){
-					$("#indikator").html(respond);
+					$("#list_indikator").html(respond);
 				}
 			})
 		});
+
+		// $("#id_indikator").change(function(){
+		// 	var value=$(this).val();
+		// 	$.ajax({
+		// 		data:{id:value,modul:'get_indikator_by_tipe'},
+		// 		success: function(respond){
+		// 			$("#indikator").html(respond);
+		// 		}
+		// 	})
+		// });
 
 	})
 
@@ -80,7 +90,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="form-group form-md-line-input has-danger">
+							<!-- <div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Fisik <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<div class="input-icon">
@@ -101,8 +111,8 @@
 										<i class="fa fa-list"></i>
 									</div>
 								</div>
-							</div>
-							<div class="form-group form-md-line-input has-danger">
+							</div> -->
+							<!-- <div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Tipe Indikator <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<select name='id_indikator' id='id_indikator' class="form-control select2-allow-clear" required>
@@ -114,16 +124,16 @@
 										?>
 									</select>
 								</div>
-							</div>
-							<div class="form-group form-md-line-input has-danger">
+							</div> -->
+							<!-- <div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Indikator <span class="required"> * </span></label>
 								<div class="col-md-10" id='indikator'>
-									<!-- <select name='indikator' id='indikator' class="form-control select2-allow-clear" required>
+									<select name='indikator' id='indikator' class="form-control select2-allow-clear" required>
 										<option value=''></option>
-									</select> -->
+									</select>
 								</div>
-							</div>
-							<div class="form-group form-md-line-input has-danger">
+							</div> -->
+							<!-- <div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Keuangan <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<div class="input-icon">
@@ -133,7 +143,52 @@
 										<i class="fa fa-dollar"></i>
 									</div>
 								</div>
+							</div> -->
+							<hr>
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-3 control-label" for="form_control_1"><b>Indikator Progres Fisik</b></label>
 							</div>
+							<div class="form-group form-md-line-input has-danger" id='list_indikator'>
+							</div>
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-3 control-label" for="form_control_1"><b>Penjelasan Progres Fisik</b></label>
+							</div>
+							<?php
+							foreach ($indikator as $key => $i) {
+							?>
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1"><?= $i->master_indikator; ?></label>
+								<div class="col-md-10">
+									<div class="input-icon">
+										<input type="text" class="form-control" name="penjelasan_progres_fisik_<?= $i->id_master_indikator; ?>" placeholder="Type something">
+										<div class="form-control-focus"> </div>
+										<span class="help-block">Some help goes here...</span>
+										<i class="fa fa-list"></i>
+									</div>
+								</div>
+							</div>
+							<?php } ?>
+							<hr>
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-3 control-label" for="form_control_1"><b>Progres Keuangan</b></label>
+							</div>
+							<?php
+							$no = 0;
+							foreach ($indikator as $key => $i) {
+							?>
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1"><?= $i->master_indikator; ?></label>
+								<div class="col-md-10">
+									<div class="input-icon">
+										<input type="number" class="form-control" name="progres_keuangan<?= $i->id_master_indikator; ?>" placeholder="Type something">
+										<div class="form-control-focus"> </div>
+										<span class="help-block">Some help goes here...</span>
+										<i class="fa fa-list"></i>
+									</div>
+								</div>
+							</div>
+							<?php } ?>
+							<hr>
 							<div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Keterangan</label>
 								<div class="col-md-10">
@@ -162,24 +217,28 @@
 	</div>
 </div>
 <script>
-	var rupiah = document.getElementById("rupiah");
-	rupiah.addEventListener("keyup", function(e) {
-		rupiah.value = formatRupiah(this.value, "Rp. ");
-	});
+	var jum_arr = <?= count($indikator); ?>;
+	for (let i = 0; i < jum_arr; i++) {
+		var get_id = 'rupiah'+i;
+		var rupiah = document.getElementById(get_id);
+		rupiah.addEventListener("keyup", function(e) {
+			rupiah.value = formatRupiah(this.value, "Rp. ");
+		});
 
-	function formatRupiah(angka, prefix) {
-		var number_string = angka.replace(/[^,\d]/g, "").toString(),
-			split = number_string.split(","),
-			sisa = split[0].length % 3,
-			rupiah = split[0].substr(0, sisa),
-			ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+		function formatRupiah(angka, prefix) {
+			var number_string = angka.replace(/[^,\d]/g, "").toString(),
+				split = number_string.split(","),
+				sisa = split[0].length % 3,
+				rupiah = split[0].substr(0, sisa),
+				ribuan = split[0].substr(sisa).match(/\d{3}/gi);
 
-		if (ribuan) {
-			separator = sisa ? "." : "";
-			rupiah += separator + ribuan.join(".");
+			if (ribuan) {
+				separator = sisa ? "." : "";
+				rupiah += separator + ribuan.join(".");
+			}
+
+			rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+			return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
 		}
-
-		rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
-		return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
 	}
 </script>

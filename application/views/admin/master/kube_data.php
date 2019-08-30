@@ -80,7 +80,7 @@
 								<th style="text-align: center;" width="4%"> # </th>
 								<th style="text-align: center;"> Nama Kelompok </th>
 								<th style="text-align: center;"> Jenis Usaha </th>
-								<th style="text-align: center;"> Alamat </th>
+								<!-- <th style="text-align: center;"> Alamat </th> -->
 								<th style="text-align: center;"> Rencana Anggaran </th>
 								<th style="text-align: center;"> Provinsi </th>
 								<th style="text-align: center;"> Kabupaten </th>
@@ -189,7 +189,7 @@
 											{ mData: 'number', sClass: "alignCenter" },
 											{ mData: 'nama_tim' },
 											{ mData: 'jenis_usaha', sClass: "alignCenter" },
-											{ mData: 'alamat', sClass: "alignCenter" } ,
+											// { mData: 'alamat', sClass: "alignCenter" } ,
 											{ mData: 'rencana_anggaran', sClass: "alignCenter" },
 											{ mData: 'nm_provinsi', sClass: "alignCenter" },
 											{ mData: 'nm_kabupaten', sClass: "alignCenter" },

@@ -45,10 +45,14 @@
 									</label>
 								</th>
 								<th style="text-align: center;" width="4%"> # </th>
-								<th style="text-align: center;"> ID Kube </th>
+								<!-- <th style="text-align: center;"> ID Kube </th> -->
+								<th style="text-align: center;"> Nama Kube </th>
 								<th style="text-align: center;"> Realisasi Fisik </th>
-								<th style="text-align: center;"> Realisasi Anggaran </th>
-								<th style="text-align: center;"> Persentase Realisasi </th>
+								<th style="text-align: center;"> Rencana Keuangan </th>
+								<th style="text-align: center;"> Realisasi Keuangan </th>
+								<th style="text-align: center;"> Realisasi Keuangan </th>
+								<th style="text-align: center;" width="7%"> Aksi </th>
+								<!-- <th style="text-align: center;"> Persentase Realisasi </th> -->
 							</tr>
 						</thead>
 					</table>
@@ -66,8 +70,11 @@
 											{ mData: 'number', sClass: "alignCenter" },
 											{ mData: 'id_kube', sClass: "alignCenter" },
 											{ mData: 'realisasi_fisik', sClass: "alignCenter" } ,
+											{ mData: 'rencana_anggaran', sClass: "alignCenter" },
 											{ mData: 'realisasi_anggaran', sClass: "alignCenter" },
-											{ mData: 'persentase_realisasi', sClass: "alignCenter" }
+											{ mData: 'persentase_anggaran', sClass: "alignCenter" },
+											{ mData: 'aksi', sClass: "alignCenter" },
+											// { mData: 'persentase_realisasi', sClass: "alignCenter" }
 										]
 							});
 						});
