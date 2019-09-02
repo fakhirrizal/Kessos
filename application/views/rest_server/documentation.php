@@ -69,9 +69,19 @@
 																	"nik": "string",<br>&nbsp; &nbsp; &nbsp;
 																	"tanggal_lahir": "YYYY-mm-dd",<br>&nbsp; &nbsp; &nbsp;
 																	"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
-																	"foto": "base64"<br>
+																	"foto": "base64",<br>&nbsp; &nbsp; &nbsp;
+																	"id_anggota_{kegiatan}": "int",<br>&nbsp; &nbsp; &nbsp;
+																	"id_{kegiatan}": "int"<br>
 																}
 															</code>
+															<br>
+															<br>
+															<p>
+															Keterangan:
+															<ol>
+																<li>Kegiatan disini bisa berisi kube/ rutilahu/ sarling</li>
+															</ol>
+															<p>
 														</div>
 													</div>
 												</div>
@@ -270,6 +280,23 @@
 																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
 																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
 																			"nm_desa": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_1" href="#collapse_2_1_3"> <span class="label label-success">GET</span>&nbsp;{url}/anggota_kube?user_id={user_id}&id_kube={$id_kube} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_1_3" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan id_anggota_kube, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_anggota_kube": "int"<br>
 																		}
 																	</code>
 																</div>
@@ -570,7 +597,7 @@
 												</div>
 											</div>
 											<h2>Data Laporan</h2>
-											<div class="panel-group accordion" id="accordion3">
+											<!-- <div class="panel-group accordion" id="accordion3">
 												<div class="panel panel-default">
 													<div class="panel-heading">
 														<h4 class="panel-title">
@@ -582,6 +609,51 @@
 															<p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
 															<p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
 																eiusmod. </p>
+														</div>
+													</div>
+												</div>
+											</div> -->
+											<div class="portlet box red">
+												<div class="portlet-title">
+													<div class="caption">
+														<i></i>Laporan Kube </div>
+													<div class="tools">
+														<a href="javascript:;" class="collapse"> </a>
+													</div>
+												</div>
+												<div class="portlet-body">
+													<div class="panel-group accordion" id="accordion3_1">
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_1"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_kube </a>
+																</h4>
+															</div>
+															<div id="collapse_3_1_1" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan laporan kube, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"penjelasan_progres_fisik": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"id_kube": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_anggota_kube": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"keterangan": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Jika akan melaporkan beberapa indikator, pisahkan dengan tanda koma "<b>,</b>"</li>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
+																	</ol>
+																	<p>
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>

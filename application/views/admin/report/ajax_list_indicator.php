@@ -1,6 +1,6 @@
 <label class="col-md-2 control-label" for="form_control_1"></label>
 <?php
-$list_indikator = explode(',',$data_kube->indikator);
+$list_indikator = explode(',',$data_master->indikator);
 foreach ($indikator as $key => $i) {
 ?>
 <div class="col-md-3">
@@ -12,7 +12,7 @@ foreach ($indikator as $key => $i) {
 				$checked = '';
 				for ($l=0; $l < count($list_indikator); $l++) {
 					if($list_indikator[$l]==$value->id_indikator){
-						$checked = 'checked';
+						$checked = 'checked disabled';
 					}else{
 						echo'';
 					}

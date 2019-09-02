@@ -2061,9 +2061,19 @@ class Master extends CI_Controller {
 		}
 		elseif($this->input->post('modul')=='get_isian_indikator_by_id_kube'){
 			$data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-			$data['data_kube'] = $this->Main_model->getSelectedData('laporan_kube a', 'a.*', array('a.id_kube'=>$this->input->post('id'),'a.deleted'=>'0'),'a.created_at DESC','1')->row();
+			$data['data_master'] = $this->Main_model->getSelectedData('status_laporan_kube a', 'a.*', array('a.id_kube'=>$this->input->post('id')),'','1')->row();
 			$this->load->view('admin/report/ajax_list_indicator',$data);
 			// print_r($data);
+		}
+		elseif($this->input->post('modul')=='get_isian_indikator_by_id_rutilahu'){
+			$data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
+			$data['data_master'] = $this->Main_model->getSelectedData('laporan_rutilahu a', 'a.*,g.indikator_progres_fisik', array('a.id_rutilahu'=>$this->input->post('id'),'a.deleted'=>'0'),'a.created_at DESC','1','','',array(
+				'table' => 'detail_laporan_kube g',
+				'on' => 'a.id_laporan_kube=g.id_laporan_kube',
+				'pos' => 'LEFT'
+			))->result();
+			// $this->load->view('admin/report/ajax_list_indicator',$data);
+			print_r($data);
 		}
 		// elseif($this->input->post('modul')=='get_indikator_by_tipe'){
 		// 	$data = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.id_master_indikator'=>$this->input->post('id')))->result();

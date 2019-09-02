@@ -36,7 +36,7 @@ class Login extends REST_Controller {
 					);
 					$this->Main_model->updateData('user',$data_log,array('id'=>$value->id));
 					$this->Main_model->log_activity($value->id,'Login to system','Login via mobile apps');
-					$role = $this->Main_model->getSelectedData('user_to_role a', 'b.route,a.user_id,up.*', array('a.user_id'=>$value->id,'b.deleted'=>'0'), "",'','','',array(
+					$role = $this->Main_model->getSelectedData('user_to_role a', 'b.route,a.user_id,up.*,a.role_id', array('a.user_id'=>$value->id,'b.deleted'=>'0'), "",'','','',array(
 						array(
 							'table' => 'user_role b',
 							'on' => 'a.role_id=b.id',
@@ -53,13 +53,40 @@ class Login extends REST_Controller {
 						$this->response($hasil, 200);
 					}else{
 						foreach ($role as $key => $value2) {
-							$hasil['user_id'] = $value2->user_id;
-							$hasil['nama'] = $value2->fullname;
-							$hasil['nik'] = $value2->nin;
-							$hasil['tanggal_lahir'] = $value2->birth_date;
-							$hasil['alamat'] = $value2->address;
-							$hasil['foto'] = $value2->photo;
-							$this->response($hasil, 200);
+							if($value2->role_id=='2'){
+								$get_anggota_kube = $this->Main_model->getSelectedData('anggota_kube a', 'a.*', array('a.user_id'=>$value2->user_id),'','1')->row();
+								$hasil['user_id'] = $value2->user_id;
+								$hasil['nama'] = $value2->fullname;
+								$hasil['nik'] = $value2->nin;
+								$hasil['tanggal_lahir'] = $value2->birth_date;
+								$hasil['alamat'] = $value2->address;
+								$hasil['foto'] = $value2->photo;
+								$hasil['id_anggota_kegiatan'] = $get_anggota_kube->id_anggota_kube;
+								$hasil['id_kegiatan'] = $get_anggota_kube->id_kube;
+								$this->response($hasil, 200);
+							}elseif($value2->role_id=='3'){
+								$get_anggota_rutilahu = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*', array('a.user_id'=>$value2->user_id),'','1')->row();
+								$hasil['user_id'] = $value2->user_id;
+								$hasil['nama'] = $value2->fullname;
+								$hasil['nik'] = $value2->nin;
+								$hasil['tanggal_lahir'] = $value2->birth_date;
+								$hasil['alamat'] = $value2->address;
+								$hasil['foto'] = $value2->photo;
+								$hasil['id_anggota_kegiatan'] = $get_anggota_rutilahu->id_anggota_rutilahu;
+								$hasil['id_kegiatan'] = $get_anggota_rutilahu->id_rutilahu;
+								$this->response($hasil, 200);
+							}else{
+								$get_anggota_sarling = $this->Main_model->getSelectedData('anggota_sarling a', 'a.*', array('a.user_id'=>$value2->user_id),'','1')->row();
+								$hasil['user_id'] = $value2->user_id;
+								$hasil['nama'] = $value2->fullname;
+								$hasil['nik'] = $value2->nin;
+								$hasil['tanggal_lahir'] = $value2->birth_date;
+								$hasil['alamat'] = $value2->address;
+								$hasil['foto'] = $value2->photo;
+								$hasil['id_anggota_kegiatan'] = $get_anggota_sarling->id_anggota_sarling;
+								$hasil['id_kegiatan'] = $get_anggota_sarling->id_sarling;
+								$this->response($hasil, 200);
+							}
 						}
 					}
 				}
