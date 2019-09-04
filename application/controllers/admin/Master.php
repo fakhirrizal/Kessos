@@ -212,6 +212,9 @@ class Master extends CI_Controller {
 					}else{
 						$cek_nik = $this->Main_model->getSelectedData('user_profile a', 'a.*',array('a.nin'=>$row['J']))->row();
 						if($cek_nik==NULL){
+							$get_kube = $this->Main_model->getSelectedData('kube a', 'a.*',array('a.id_kube'=>$id_kube))->row();
+							$this->Main_model->updateData('kube',array('rencana_anggaran'=>(($get_kube->rencana_anggaran)+'2000000')),array('id_kube'=>$id_kube));
+
 							$get_user_id = $this->Main_model->getLastID('user','id');
 
 							$data_insert1 = array(
@@ -270,6 +273,9 @@ class Master extends CI_Controller {
 
 							$cek_anggota_kube = $this->Main_model->getSelectedData('anggota_kube a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.id_kube'=>$id_kube))->row();
 							if($cek_anggota_kube==NULL){
+								$get_kube = $this->Main_model->getSelectedData('kube a', 'a.*',array('a.id_kube'=>$id_kube))->row();
+								$this->Main_model->updateData('kube',array('rencana_anggaran'=>(($get_kube->rencana_anggaran)+'2000000')),array('id_kube'=>$id_kube));
+
 								$data_insert4 = array(
 									'user_id' => $cek_nik->user_id,
 									'id_kube' => $id_kube,
@@ -389,13 +395,13 @@ class Master extends CI_Controller {
 	public function save_kube_data(){
 		$this->db->trans_start();
 		$get_id_kube = $this->Main_model->getLastID('kube','id_kube');
-		$rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
+		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_insert1 = array(
 			'id_kube' => $get_id_kube['id_kube']+1,
 			'id_jenis_usaha' => $this->input->post('id_jenis_usaha'),
 			'nama_tim' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
-			'rencana_anggaran' => $rencana_anggaran,
+			// 'rencana_anggaran' => $rencana_anggaran,
 			'id_provinsi' => $this->input->post('id_provinsi'),
 			'id_kabupaten' => $this->input->post('id_kabupaten'),
 			'id_kecamatan' => $this->input->post('id_kecamatan'),
@@ -489,12 +495,12 @@ class Master extends CI_Controller {
 	}
 	public function update_kube_data(){
 		$this->db->trans_start();
-		$rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
+		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_update = array(
 			'id_jenis_usaha' => $this->input->post('id_jenis_usaha'),
 			'nama_tim' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
-			'rencana_anggaran' => $rencana_anggaran,
+			// 'rencana_anggaran' => $rencana_anggaran,
 			'id_provinsi' => $this->input->post('id_provinsi'),
 			'id_kabupaten' => $this->input->post('id_kabupaten'),
 			'id_kecamatan' => $this->input->post('id_kecamatan'),
@@ -531,48 +537,76 @@ class Master extends CI_Controller {
 		$this->db->trans_start();
 		$cek = $this->Main_model->getSelectedData('user a', 'a.*',array('a.username'=>$this->input->post('nik')))->result();
 		if($cek==NULL){
-			$get_user_id = $this->Main_model->getLastID('user','id');
+			$cek_nik = $this->Main_model->getSelectedData('anggota_kube a', 'a.*',array('a.nik'=>$this->input->post('nik')))->result();
+			if($cek_nik==NULL){
+				$cek_bdt = $this->Main_model->getSelectedData('anggota_kube a', 'a.*',array('b.bdt_id'=>$this->input->post('bdt'),'c.role_id'=>'2'),'','','','',array(
+					array(
+						'table' => 'user_profile b',
+						'on' => 'a.user_id=b.user_id',
+						'pos' => 'left'
+					),
+					array(
+						'table' => 'user_to_role c',
+						'on' => 'a.user_id=c.user_id',
+						'pos' => 'left'
+					)
+				))->result();
+				if($cek_bdt==NULL){
+					$get_kube = $this->Main_model->getSelectedData('kube a', 'a.*',array('a.id_kube'=>$this->input->post('id_kube')))->row();
+					$this->Main_model->updateData('kube',array('a.rencana_anggaran'=>(($get_kube->rencana_anggaran)+'2000000')),array('a.id_kube'=>$this->input->post('id_kube'))); 				
 
-			$data_insert1 = array(
-				'id' => $get_user_id['id']+1,
-				'username' => $this->input->post('nik'),
-				'pass' => $this->input->post('nik'),
-				'is_active' => '1',
-				'created_by' => $this->session->userdata('id'),
-				'created_at' => date('Y-m-d H:i:s')
-			);
-			$this->Main_model->insertData('user',$data_insert1);
+					$get_user_id = $this->Main_model->getLastID('user','id');
 
-			$data_insert2 = array(
-				'user_id' => $get_user_id['id']+1,
-				'fullname' => $this->input->post('nama')
-			);
-			$this->Main_model->insertData('user_profile',$data_insert2);
+					$data_insert1 = array(
+						'id' => $get_user_id['id']+1,
+						'username' => $this->input->post('nik'),
+						'pass' => $this->input->post('nik'),
+						'is_active' => '1',
+						'created_by' => $this->session->userdata('id'),
+						'created_at' => date('Y-m-d H:i:s')
+					);
+					$this->Main_model->insertData('user',$data_insert1);
 
-			$data_insert3 = array(
-				'user_id' => $get_user_id['id']+1,
-				'role_id' => '2'
-			);
-			$this->Main_model->insertData('user_to_role',$data_insert3);
+					$data_insert2 = array(
+						'user_id' => $get_user_id['id']+1,
+						'fullname' => $this->input->post('nama'),
+						'nin' => $this->input->post('nik'),
+						'bdt_id' => $this->input->post('bdt')
+					);
+					$this->Main_model->insertData('user_profile',$data_insert2);
 
-			$data_insert4 = array(
-				'user_id' => $get_user_id['id']+1,
-				'id_kube' => $this->input->post('id_kube'),
-				'nama' => $this->input->post('nama'),
-				'nik' => $this->input->post('nik'),
-				'jabatan_kelompok' => $this->input->post('jabatan_kelompok'),
-				'no_kk' => $this->input->post('no_kk')
-			);
-			$this->Main_model->insertData('anggota_kube',$data_insert4);
+					$data_insert3 = array(
+						'user_id' => $get_user_id['id']+1,
+						'role_id' => '2'
+					);
+					$this->Main_model->insertData('user_to_role',$data_insert3);
 
-			$this->Main_model->log_activity($this->session->userdata('id'),"Adding kube's member","Add kube member (".$this->input->post('nama').")",$this->session->userdata('location'));
-			$this->db->trans_complete();
-			if($this->db->trans_status() === false){
-				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
-				echo "<script>window.location='".base_url()."admin_side/detil_data_kube/".md5($this->input->post('id_kube'))."'</script>";
-			}
-			else{
-				$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil ditambahkan.<br /></div>' );
+					$data_insert4 = array(
+						'user_id' => $get_user_id['id']+1,
+						'id_kube' => $this->input->post('id_kube'),
+						'nama' => $this->input->post('nama'),
+						'nik' => $this->input->post('nik'),
+						'jabatan_kelompok' => $this->input->post('jabatan_kelompok'),
+						'no_kk' => $this->input->post('no_kk')
+					);
+					$this->Main_model->insertData('anggota_kube',$data_insert4);
+
+					$this->Main_model->log_activity($this->session->userdata('id'),"Adding kube's member","Add kube member (".$this->input->post('nama').")",$this->session->userdata('location'));
+					$this->db->trans_complete();
+					if($this->db->trans_status() === false){
+						$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
+						echo "<script>window.location='".base_url()."admin_side/detil_data_kube/".md5($this->input->post('id_kube'))."'</script>";
+					}
+					else{
+						$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil ditambahkan.<br /></div>' );
+						echo "<script>window.location='".base_url()."admin_side/detil_data_kube/".md5($this->input->post('id_kube'))."'</script>";
+					}
+				}else{
+					$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>BDT telah digunakan.<br /></div>' );
+					echo "<script>window.location='".base_url()."admin_side/detil_data_kube/".md5($this->input->post('id_kube'))."'</script>";
+				}
+			}else{
+				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>NIK telah digunakan.<br /></div>' );
 				echo "<script>window.location='".base_url()."admin_side/detil_data_kube/".md5($this->input->post('id_kube'))."'</script>";
 			}
 		}else{
@@ -687,6 +721,8 @@ class Master extends CI_Controller {
 		$user_id = $get_data->user_id;
 		$name = $get_data->nama;
 
+		$this->Main_model->updateData('kube',array('a.rencana_anggaran'=>(($get_data->rencana_anggaran)-'2000000')),array('a.id_kube'=>$get_data->id_kube));
+
 		$this->Main_model->deleteData('anggota_kube',array('user_id'=>$user_id));
 		$this->Main_model->deleteData('user_profile',array('user_id'=>$user_id));
 		$this->Main_model->deleteData('user_to_role',array('user_id'=>$user_id));
@@ -791,6 +827,9 @@ class Master extends CI_Controller {
 					}else{
 						$cek_nik = $this->Main_model->getSelectedData('user_profile a', 'a.*',array('a.nin'=>$row['H']))->row();
 						if($cek_nik==NULL){
+							$get_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*',array('a.id_rutilahu'=>$id_rutilahu))->row();
+							$this->Main_model->updateData('rutilahu',array('rencana_anggaran'=>(($get_rutilahu->rencana_anggaran)+'15000000')),array('id_rutilahu'=>$id_rutilahu));
+
 							$get_user_id = $this->Main_model->getLastID('user','id');
 
 							$data_insert1 = array(
@@ -848,6 +887,9 @@ class Master extends CI_Controller {
 
 							$cek_anggota_rutilahu = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.id_rutilahu'=>$id_rutilahu))->row();
 							if($cek_anggota_rutilahu==NULL){
+								$get_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*',array('a.id_rutilahu'=>$id_rutilahu))->row();
+								$this->Main_model->updateData('rutilahu',array('rencana_anggaran'=>(($get_rutilahu->rencana_anggaran)+'15000000')),array('id_rutilahu'=>$id_rutilahu));
+								
 								$data_insert4 = array(
 									'user_id' => $cek_nik->user_id,
 									'id_rutilahu' => $id_rutilahu,
@@ -959,11 +1001,11 @@ class Master extends CI_Controller {
 	}
 	public function save_rutilahu_data(){
 		$this->db->trans_start();
-		$rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
+		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_insert = array(
 			'nama_kelompok' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
-			'rencana_anggaran' => $rencana_anggaran,
+			// 'rencana_anggaran' => $rencana_anggaran,
 			'id_provinsi' => $this->input->post('id_provinsi'),
 			'id_kabupaten' => $this->input->post('id_kabupaten'),
 			'id_kecamatan' => $this->input->post('id_kecamatan'),
@@ -1043,11 +1085,11 @@ class Master extends CI_Controller {
 	}
 	public function update_rutilahu_data(){
 		$this->db->trans_start();
-		$rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
+		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_update = array(
 			'nama_kelompok' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
-			'rencana_anggaran' => $rencana_anggaran,
+			// 'rencana_anggaran' => $rencana_anggaran,
 			'id_provinsi' => $this->input->post('id_provinsi'),
 			'id_kabupaten' => $this->input->post('id_kabupaten'),
 			'id_kecamatan' => $this->input->post('id_kecamatan'),
@@ -1084,49 +1126,77 @@ class Master extends CI_Controller {
 		$this->db->trans_start();
 		$cek = $this->Main_model->getSelectedData('user a', 'a.*',array('a.username'=>$this->input->post('nik')))->result();
 		if($cek==NULL){
-			$get_user_id = $this->Main_model->getLastID('user','id');
+			$cek_nik = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*',array('a.nik'=>$this->input->post('nik')))->result();
+			if($cek_nik==NULL){
+				$cek_bdt = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*',array('b.bdt_id'=>$this->input->post('bdt'),'c.role_id'=>'3'),'','','','',array(
+					array(
+						'table' => 'user_profile b',
+						'on' => 'a.user_id=b.user_id',
+						'pos' => 'left'
+					),
+					array(
+						'table' => 'user_to_role c',
+						'on' => 'a.user_id=c.user_id',
+						'pos' => 'left'
+					)
+				))->result();
+				if($cek_bdt==NULL){
+					$get_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*',array('a.id_rutilahu'=>$this->input->post('id_rutilahu')))->row();
+					$this->Main_model->updateData('rutilahu',array('a.rencana_anggaran'=>(($get_rutilahu->rencana_anggaran)+'15000000')),array('a.id_rutilahu'=>$this->input->post('id_rutilahu')));
 
-			$data_insert1 = array(
-				'id' => $get_user_id['id']+1,
-				'username' => $this->input->post('nik'),
-				'pass' => $this->input->post('nik'),
-				'is_active' => '1',
-				'created_by' => $this->session->userdata('id'),
-				'created_at' => date('Y-m-d H:i:s')
-			);
-			$this->Main_model->insertData('user',$data_insert1);
+					$get_user_id = $this->Main_model->getLastID('user','id');
 
-			$data_insert2 = array(
-				'user_id' => $get_user_id['id']+1,
-				'fullname' => $this->input->post('nama')
-			);
-			$this->Main_model->insertData('user_profile',$data_insert2);
+					$data_insert1 = array(
+						'id' => $get_user_id['id']+1,
+						'username' => $this->input->post('nik'),
+						'pass' => $this->input->post('nik'),
+						'is_active' => '1',
+						'created_by' => $this->session->userdata('id'),
+						'created_at' => date('Y-m-d H:i:s')
+					);
+					$this->Main_model->insertData('user',$data_insert1);
 
-			$data_insert3 = array(
-				'user_id' => $get_user_id['id']+1,
-				'role_id' => '3'
-			);
-			$this->Main_model->insertData('user_to_role',$data_insert3);
+					$data_insert2 = array(
+						'user_id' => $get_user_id['id']+1,
+						'fullname' => $this->input->post('nama'),
+						'nin' => $this->input->post('nik'),
+						'bdt_id' => $this->input->post('bdt')
+					);
+					$this->Main_model->insertData('user_profile',$data_insert2);
 
-			$data_insert4 = array(
-				'user_id' => $get_user_id['id']+1,
-				'id_rutilahu' => $this->input->post('id_rutilahu'),
-				'nama' => $this->input->post('nama'),
-				'nik' => $this->input->post('nik'),
-				'jabatan_kelompok' => $this->input->post('jabatan_kelompok'),
-				'no_kk' => $this->input->post('no_kk')
-			);
-			$this->Main_model->insertData('anggota_rutilahu',$data_insert4);
+					$data_insert3 = array(
+						'user_id' => $get_user_id['id']+1,
+						'role_id' => '3'
+					);
+					$this->Main_model->insertData('user_to_role',$data_insert3);
 
-			$this->Main_model->log_activity($this->session->userdata('id'),"Adding rutilahu's member","Add rutilahu member (".$this->input->post('nama').")",$this->session->userdata('location'));
-			$this->db->trans_complete();
-			if($this->db->trans_status() === false){
-				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
-				echo "<script>window.location='".base_url()."admin_side/detil_data_rutilahu/".md5($this->input->post('id_rutilahu'))."'</script>";
-			}
-			else{
-				$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil ditambahkan.<br /></div>' );
-				echo "<script>window.location='".base_url()."admin_side/detil_data_rutilahu/".md5($this->input->post('id_rutilahu'))."'</script>";
+					$data_insert4 = array(
+						'user_id' => $get_user_id['id']+1,
+						'id_rutilahu' => $this->input->post('id_rutilahu'),
+						'nama' => $this->input->post('nama'),
+						'nik' => $this->input->post('nik'),
+						'jabatan_kelompok' => $this->input->post('jabatan_kelompok'),
+						'no_kk' => $this->input->post('no_kk')
+					);
+					$this->Main_model->insertData('anggota_rutilahu',$data_insert4);
+
+					$this->Main_model->log_activity($this->session->userdata('id'),"Adding rutilahu's member","Add rutilahu member (".$this->input->post('nama').")",$this->session->userdata('location'));
+					$this->db->trans_complete();
+					if($this->db->trans_status() === false){
+						$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
+						echo "<script>window.location='".base_url()."admin_side/detil_data_rutilahu/".md5($this->input->post('id_rutilahu'))."'</script>";
+					}
+					else{
+						$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil ditambahkan.<br /></div>' );
+						echo "<script>window.location='".base_url()."admin_side/detil_data_rutilahu/".md5($this->input->post('id_rutilahu'))."'</script>";
+					}
+				}else{
+					$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>BDT telah digunakan.<br /></div>' );
+					echo "<script>window.location='".base_url()."admin_side/detil_data_rutilahu/".md5($this->input->post('id_rutilahu'))."'</script>";
+				}
+			}else{
+				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>NIK telah digunakan.<br /></div>' );
+				echo "<script>window.location='".base_url()."admin_side/detil_data_rutilahu/".md5($this->input->post('id_rutilahu'))."'</script>";	
 			}
 		}else{
 			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>username telah digunakan.<br /></div>' );
@@ -1239,6 +1309,8 @@ class Master extends CI_Controller {
 		$id_rutilahu = md5($get_data->id_rutilahu);
 		$user_id = $get_data->user_id;
 		$name = $get_data->nama;
+
+		$this->Main_model->updateData('rutilahu',array('a.rencana_anggaran'=>(($get_data->rencana_anggaran)-'15000000')),array('a.id_rutilahu'=>$get_data->id_rutilahu));
 
 		$this->Main_model->deleteData('anggota_rutilahu',array('user_id'=>$user_id));
 		$this->Main_model->deleteData('user_profile',array('user_id'=>$user_id));
@@ -1529,12 +1601,13 @@ class Master extends CI_Controller {
 	}
 	public function save_sarling_data(){
 		$this->db->trans_start();
-		$rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
+		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_insert = array(
 			'id_jenis_sarling' => $this->input->post('id_jenis_sarling'),
 			'nama_tim' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
-			'rencana_anggaran' => $rencana_anggaran,
+			// 'rencana_anggaran' => $rencana_anggaran,
+			'rencana_anggaran' => '50000000',
 			'id_provinsi' => $this->input->post('id_provinsi'),
 			'id_kabupaten' => $this->input->post('id_kabupaten'),
 			'id_kecamatan' => $this->input->post('id_kecamatan'),
@@ -1620,12 +1693,12 @@ class Master extends CI_Controller {
 	}
 	public function update_sarling_data(){
 		$this->db->trans_start();
-		$rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
+		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_update = array(
 			'id_jenis_sarling' => $this->input->post('id_jenis_sarling'),
 			'nama_tim' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
-			'rencana_anggaran' => $rencana_anggaran,
+			// 'rencana_anggaran' => $rencana_anggaran,
 			'id_provinsi' => $this->input->post('id_provinsi'),
 			'id_kabupaten' => $this->input->post('id_kabupaten'),
 			'id_kecamatan' => $this->input->post('id_kecamatan'),
@@ -1662,48 +1735,73 @@ class Master extends CI_Controller {
 		$this->db->trans_start();
 		$cek = $this->Main_model->getSelectedData('user a', 'a.*',array('a.username'=>$this->input->post('nik')))->result();
 		if($cek==NULL){
-			$get_user_id = $this->Main_model->getLastID('user','id');
+			$cek_nik = $this->Main_model->getSelectedData('anggota_sarling a', 'a.*',array('a.nik'=>$this->input->post('nik')))->result();
+			if($cek_nik==NULL){
+				$cek_bdt = $this->Main_model->getSelectedData('anggota_sarling a', 'a.*',array('b.bdt_id'=>$this->input->post('bdt'),'c.role_id'=>'4'),'','','','',array(
+					array(
+						'table' => 'user_profile b',
+						'on' => 'a.user_id=b.user_id',
+						'pos' => 'left'
+					),
+					array(
+						'table' => 'user_to_role c',
+						'on' => 'a.user_id=c.user_id',
+						'pos' => 'left'
+					)
+				))->result();
+				if($cek_bdt==NULL){
+					$get_user_id = $this->Main_model->getLastID('user','id');
 
-			$data_insert1 = array(
-				'id' => $get_user_id['id']+1,
-				'username' => $this->input->post('nik'),
-				'pass' => $this->input->post('nik'),
-				'is_active' => '1',
-				'created_by' => $this->session->userdata('id'),
-				'created_at' => date('Y-m-d H:i:s')
-			);
-			$this->Main_model->insertData('user',$data_insert1);
+					$data_insert1 = array(
+						'id' => $get_user_id['id']+1,
+						'username' => $this->input->post('nik'),
+						'pass' => $this->input->post('nik'),
+						'is_active' => '1',
+						'created_by' => $this->session->userdata('id'),
+						'created_at' => date('Y-m-d H:i:s')
+					);
+					$this->Main_model->insertData('user',$data_insert1);
 
-			$data_insert2 = array(
-				'user_id' => $get_user_id['id']+1,
-				'fullname' => $this->input->post('nama')
-			);
-			$this->Main_model->insertData('user_profile',$data_insert2);
+					$data_insert2 = array(
+						'user_id' => $get_user_id['id']+1,
+						'fullname' => $this->input->post('nama'),
+						'nin' => $this->input->post('nik'),
+						'bdt_id' => $this->input->post('bdt')
+					);
+					$this->Main_model->insertData('user_profile',$data_insert2);
 
-			$data_insert3 = array(
-				'user_id' => $get_user_id['id']+1,
-				'role_id' => '4'
-			);
-			$this->Main_model->insertData('user_to_role',$data_insert3);
+					$data_insert3 = array(
+						'user_id' => $get_user_id['id']+1,
+						'role_id' => '4'
+					);
+					$this->Main_model->insertData('user_to_role',$data_insert3);
 
-			$data_insert4 = array(
-				'user_id' => $get_user_id['id']+1,
-				'id_sarling' => $this->input->post('id_sarling'),
-				'nama' => $this->input->post('nama'),
-				'nik' => $this->input->post('nik'),
-				'jabatan_kelompok' => $this->input->post('jabatan_kelompok'),
-				'jabatan_masyarakat' => $this->input->post('jabatan_masyarakat')
-			);
-			$this->Main_model->insertData('anggota_sarling',$data_insert4);
+					$data_insert4 = array(
+						'user_id' => $get_user_id['id']+1,
+						'id_sarling' => $this->input->post('id_sarling'),
+						'nama' => $this->input->post('nama'),
+						'nik' => $this->input->post('nik'),
+						'jabatan_kelompok' => $this->input->post('jabatan_kelompok'),
+						'jabatan_masyarakat' => $this->input->post('jabatan_masyarakat')
+					);
+					$this->Main_model->insertData('anggota_sarling',$data_insert4);
 
-			$this->Main_model->log_activity($this->session->userdata('id'),"Adding sarling's member","Add sarling member (".$this->input->post('nama').")",$this->session->userdata('location'));
-			$this->db->trans_complete();
-			if($this->db->trans_status() === false){
-				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
-				echo "<script>window.location='".base_url()."admin_side/detil_data_sarling/".md5($this->input->post('id_sarling'))."'</script>";
-			}
-			else{
-				$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil ditambahkan.<br /></div>' );
+					$this->Main_model->log_activity($this->session->userdata('id'),"Adding sarling's member","Add sarling member (".$this->input->post('nama').")",$this->session->userdata('location'));
+					$this->db->trans_complete();
+					if($this->db->trans_status() === false){
+						$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
+						echo "<script>window.location='".base_url()."admin_side/detil_data_sarling/".md5($this->input->post('id_sarling'))."'</script>";
+					}
+					else{
+						$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil ditambahkan.<br /></div>' );
+						echo "<script>window.location='".base_url()."admin_side/detil_data_sarling/".md5($this->input->post('id_sarling'))."'</script>";
+					}
+				}else{
+					$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>BDT telah digunakan.<br /></div>' );
+					echo "<script>window.location='".base_url()."admin_side/detil_data_sarling/".md5($this->input->post('id_sarling'))."'</script>";
+				}
+			}else{
+				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>NIK telah digunakan.<br /></div>' );
 				echo "<script>window.location='".base_url()."admin_side/detil_data_sarling/".md5($this->input->post('id_sarling'))."'</script>";
 			}
 		}else{

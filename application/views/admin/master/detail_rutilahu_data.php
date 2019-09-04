@@ -187,6 +187,17 @@ $id_rutilahu = '';
 									</div>
 								</div>
 								<div class="form-group form-md-line-input has-danger">
+									<label class="col-md-3 control-label" for="form_control_1">BDT <span class="required"> * </span></label>
+									<div class="col-md-9">
+										<div class="input-icon">
+											<input type="text" class="form-control" name="bdt" placeholder="Type something" required>
+											<div class="form-control-focus"> </div>
+											<span class="help-block">Some help goes here...</span>
+											<i class="fa fa-credit-card"></i>
+										</div>
+									</div>
+								</div>
+								<div class="form-group form-md-line-input has-danger">
 									<label class="col-md-3 control-label" for="form_control_1">Jabatan Kelompok <span class="required"> * </span></label>
 									<div class="col-md-9">
 										<div class="input-icon">

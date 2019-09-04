@@ -198,7 +198,7 @@ class Report extends CI_Controller {
 	}
 	public function detail_kube_report()
 	{
-		$data['parent'] = 'master';
+		$data['parent'] = 'report';
 		$data['child'] = 'kube';
 		$data['grand_child'] = '';
 		$data['status_laporan'] = $this->Main_model->getSelectedData('status_laporan_kube a', 'a.*', array('md5(a.id_kube)'=>$this->uri->segment(3)))->row();
@@ -467,7 +467,7 @@ class Report extends CI_Controller {
 	}
 	public function detail_rutilahu_report()
 	{
-		$data['parent'] = 'master';
+		$data['parent'] = 'report';
 		$data['child'] = 'rutilahu';
 		$data['grand_child'] = '';
 		$data['status_laporan'] = $this->Main_model->getSelectedData('status_laporan_rutilahu a', 'a.*', array('md5(a.id_rutilahu)'=>$this->uri->segment(3)))->row();

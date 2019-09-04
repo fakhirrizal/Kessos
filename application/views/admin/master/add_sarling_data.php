@@ -105,7 +105,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="form-group form-md-line-input has-danger">
+							<!-- <div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Rencana Anggaran <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<div class="input-icon">
@@ -115,7 +115,7 @@
 										<i class="fa fa-dollar"></i>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Provinsi <span class="required"> * </span></label>
 								<div class="col-md-10">
