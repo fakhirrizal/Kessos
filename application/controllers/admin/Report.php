@@ -185,7 +185,7 @@ class Report extends CI_Controller {
 			// print_r($data_update1);
 			$this->Main_model->updateData('status_laporan_kube',$data_update1,array('id_kube'=>$get_status_laporan_kube->id_kube));
 		}
-		$this->Main_model->log_activity($this->session->userdata('id'),'Adding data',"Add kube's report data (".$get_data_kube->nama_tim.")",$this->session->userdata('location'));
+		$this->Main_model->log_activity($this->session->userdata('id'),'Adding data',"Add Kube's report data (".$get_data_kube->nama_tim.")",$this->session->userdata('location'));
 		$this->db->trans_complete();
 		if($this->db->trans_status() === false){
 			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
@@ -266,9 +266,30 @@ class Report extends CI_Controller {
 		$this->db->trans_start();
 		$get_data = $this->Main_model->getSelectedData('laporan_kube a', 'a.*',array('md5(a.id_laporan_kube)'=>$this->uri->segment(3)))->row();
 		$get_status_laporan_kube = $this->Main_model->getSelectedData('status_laporan_kube a', 'a.*',array('a.id_kube'=>$get_data->id_kube))->row();
+		$indikator_status = explode(',',$get_status_laporan_kube->indikator);
+		$indikator_laporan = explode(',',$get_data->indikator);
+
+		$array_indikator_update = array();
+		$status = '';
+		for ($i=0; $i < count($indikator_status); $i++) { 
+			for ($j=0; $j < count($indikator_laporan); $j++) { 
+				if($indikator_laporan[$j]==$indikator_status[$i]){
+					$status = '0';
+					break;
+				}else{
+					$status = '1';
+				}	
+			}
+			if($status=='0'){
+				echo'';
+			}else{
+				$array_indikator_update[] = $indikator_status[$i];
+			}
+		}
 
 		$this->Main_model->updateData('laporan_kube',array('deleted'=>'1'),array('md5(id_laporan_kube)'=>$this->uri->segment(3)));
 		$data_update = array(
+			'indikator' => implode(',',array_unique($array_indikator_update)),
 			'persentase_fisik' => ($get_status_laporan_kube->persentase_fisik)-($get_data->persentase_fisik),
 			'anggaran' => ($get_status_laporan_kube->anggaran)-($get_data->anggaran),
 			'persentase_anggaran' => ($get_status_laporan_kube->persentase_anggaran)-($get_data->persentase_anggaran),
@@ -382,42 +403,51 @@ class Report extends CI_Controller {
 	}
 	public function save_rutilahu_report(){
 		$this->db->trans_start();
-		// $keuangan = preg_replace("/[^0-9]/", "", $this->input->post('keuangan'));
 		$get_id_laporan_rutilahu = $this->Main_model->getLastID('laporan_rutilahu','id_laporan_rutilahu');
-		$get_data_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*', array('a.id_rutilahu'=>$this->input->post('id_rutilahu')))->row();
-		$get_anggota_rutilahu = explode('-',$this->input->post('id_anggota_rutilahu'));
+		$get_data_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*,(SELECT k.id_anggota_rutilahu FROM anggota_rutilahu k WHERE k.id_rutilahu=a.id_rutilahu AND k.jabatan_kelompok="Ketua") AS ketua,(SELECT i.user_id FROM anggota_rutilahu i WHERE i.id_rutilahu=a.id_rutilahu AND i.jabatan_kelompok="Ketua") AS id_ketua', array('a.id_rutilahu'=>$this->input->post('id_rutilahu')))->row();
 		$indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
 		$data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
 		$total_uang = 0;
 		$get_indikator = array();
 		foreach ($indikator as $key => $value) {
-			$total_uang += $this->input->post('progres_keuangan'.$value->id_master_indikator);
-			$push = $this->input->post('indikator_progres_fisik_'.$value->id_master_indikator);
+			$push = $this->input->post('progres_keuangan_'.$value->id_master_indikator);
 			if($push==NULL){
 				echo'';
 			}else{
-				array_push($get_indikator,implode(',',$this->input->post('indikator_progres_fisik_'.$value->id_master_indikator)));
+				$total_uang += $this->input->post('progres_keuangan_'.$value->id_master_indikator);
+				$data_insert2b = array(
+					'id_laporan_rutilahu' => $get_id_laporan_rutilahu['id_laporan_rutilahu']+1,
+					'id_master_indikator' => $value->id_master_indikator,
+					'progres_keuangan' => $this->input->post('progres_keuangan_'.$value->id_master_indikator)
+				);
+				// print_r($data_insert2b);
+				$this->Main_model->insertData('detail_laporan_rutilahu_aspek_keuangan',$data_insert2b);
 			}
-			$data_insert2 = array(
-				'id_laporan_rutilahu' => $get_id_laporan_rutilahu['id_laporan_rutilahu']+1,
-				'id_master_indikator' => $value->id_master_indikator,
-				'indikator_progres_fisik' => implode(',',$this->input->post('indikator_progres_fisik_'.$value->id_master_indikator)),
-				'penjelasan_progres_fisik' => $this->input->post('penjelasan_progres_fisik_'.$value->id_master_indikator),
-				'progres_keuangan' => $this->input->post('progres_keuangan'.$value->id_master_indikator)
-				// 'penjelasan_progres_keuangan' => ''
-			);
-			// print_r($data_insert2);
-			$this->Main_model->insertData('detail_laporan_rutilahu',$data_insert2);
 		}
-		// print_r($get_indikator);
+		foreach ($data_indikator as $key => $value) {
+			$push = $this->input->post('indikator_progres_fisik_'.$value->id_indikator);
+			if($push==NULL){
+				echo'';
+			}else{
+				array_push($get_indikator,implode(',',$this->input->post('indikator_progres_fisik_'.$value->id_indikator)));
+				$data_insert2a = array(
+					'id_laporan_rutilahu' => $get_id_laporan_rutilahu['id_laporan_rutilahu']+1,
+					'id_master_indikator' => $value->id_master_indikator,
+					'indikator_progres_fisik' => $value->id_indikator,
+					'penjelasan_progres_fisik' => $this->input->post('penjelasan_progres_fisik_'.$value->id_indikator)
+				);
+				// print_r($data_insert2a);
+				$this->Main_model->insertData('detail_laporan_rutilahu_aspek_fisik',$data_insert2a);
+			}
+		}
 		$tampung_indikator = implode(',',$get_indikator);
 		$explode_indikator = explode(',',$tampung_indikator);
 		$get_status_laporan_rutilahu = $this->Main_model->getSelectedData('status_laporan_rutilahu a', 'a.*', array('a.id_rutilahu'=>$this->input->post('id_rutilahu')))->row();
 		$persentase_fisik = (count($explode_indikator)/count($data_indikator))*100;
 		$data_insert1 = array(
 			'id_laporan_rutilahu' => $get_id_laporan_rutilahu['id_laporan_rutilahu']+1,
-			'id_anggota_rutilahu' => $get_anggota_rutilahu[0],
-			'user_id' => $get_anggota_rutilahu[1],
+			'id_anggota_rutilahu' => $get_data_rutilahu->ketua,
+			'user_id' => $get_data_rutilahu->id_ketua,
 			'id_rutilahu' => $this->input->post('id_rutilahu'),
 			'indikator' => $tampung_indikator,
 			'persentase_fisik' => $persentase_fisik,
@@ -435,6 +465,7 @@ class Report extends CI_Controller {
 			$persentase_realisasi = ($persentase_anggaran+$persentase_fisik)/2;
 			$data_insert3 = array(
 				'id_rutilahu' => $this->input->post('id_rutilahu'),
+				'indikator' => $tampung_indikator,
 				'persentase_fisik' => $persentase_fisik,
 				'anggaran' => $total_uang,
 				'persentase_anggaran' => $persentase_anggaran,
@@ -443,10 +474,15 @@ class Report extends CI_Controller {
 			// print_r($data_insert3);
 			$this->Main_model->insertData('status_laporan_rutilahu',$data_insert3);
 		}else{
+			$bb = explode(',',$get_status_laporan_rutilahu->indikator);
+			$c = array_unique(array_merge($get_indikator,$bb));
+			$d = implode(',',$c);
+			$persentase_fisik2 = (count($c)/count($data_indikator))*100;
 			$persentase_anggaran = (($total_uang+$get_status_laporan_rutilahu->anggaran)/$get_data_rutilahu->rencana_anggaran)*100;
-			$persentase_realisasi = ($persentase_anggaran+$persentase_fisik)/2;
+			$persentase_realisasi = ($persentase_anggaran+$persentase_fisik2)/2;
 			$data_update1 = array(
-				'persentase_fisik' => $persentase_fisik,
+				'indikator' => $d,
+				'persentase_fisik' => $persentase_fisik2,
 				'anggaran' => $total_uang+$get_status_laporan_rutilahu->anggaran,
 				'persentase_anggaran' => $persentase_anggaran,
 				'persentase_realisasi' => $persentase_realisasi
@@ -454,7 +490,7 @@ class Report extends CI_Controller {
 			// print_r($data_update1);
 			$this->Main_model->updateData('status_laporan_rutilahu',$data_update1,array('id_rutilahu'=>$get_status_laporan_rutilahu->id_rutilahu));
 		}
-		$this->Main_model->log_activity($this->session->userdata('id'),'Adding data',"Add rutilahu's report data (".$get_data_rutilahu->nama_tim.")",$this->session->userdata('location'));
+		$this->Main_model->log_activity($this->session->userdata('id'),'Adding data',"Add Rutilahu's report data (".$get_data_rutilahu->nama_kelompok.")",$this->session->userdata('location'));
 		$this->db->trans_complete();
 		if($this->db->trans_status() === false){
 			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
@@ -507,30 +543,6 @@ class Report extends CI_Controller {
 		$this->load->view('admin/report/detail_rutilahu_report',$data);
 		$this->load->view('admin/template/footer');
 	}
-	// public function json_laporan_rutilahu(){
-	// 	$get_data = $this->Main_model->getSelectedData('laporan_rutilahu a', 'a.*,b.fullname',array('md5(a.id_rutilahu)'=>$this->input->get('id'),'a.deleted'=>'0'),'','','','',array(
-	// 		'table' => 'user_profile b',
-	// 		'on' => 'a.user_id=b.user_id',
-	// 		'pos' => 'LEFT',
-	// 	))->result();
-	// 	$data_tampil = array();
-	// 	$no = 1;
-	// 	foreach ($get_data as $key => $value) {
-	// 		$get_tanggal = explode(' ',$value->created_at);
-	// 		$isi['no'] = $no++.'.';
-	// 		$isi['pelapor'] = $value->fullname;
-	// 		$isi['tanggal_lapor'] = $this->Main_model->convert_tanggal($get_tanggal[0]);
-	// 		$isi['keterangan'] = $value->keterangan;
-	// 		$isi['aksi'] =	'';
-	// 		$data_tampil[] = $isi;
-	// 	}
-	// 	$results = array(
-	// 		"sEcho" => 1,
-	// 		"iTotalRecords" => count($data_tampil),
-	// 		"iTotalDisplayRecords" => count($data_tampil),
-	// 		"aaData"=>$data_tampil);
-	// 	echo json_encode($results);
-	// }
 	public function delete_rutilahu_report(){
 		$this->db->trans_start();
 		$get_data = $this->Main_model->getSelectedData('laporan_rutilahu a', 'a.*',array('md5(a.id_laporan_rutilahu)'=>$this->uri->segment(3)))->row();

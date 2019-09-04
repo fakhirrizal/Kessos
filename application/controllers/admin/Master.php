@@ -1840,7 +1840,7 @@ class Master extends CI_Controller {
 		$get_data = $this->Main_model->getSelectedData('anggota_sarling a', 'a.*',array('md5(a.id_sarling)'=>$this->input->get('id'),'b.deleted'=>'0'),'','','','',array(
 			'table' => 'sarling b',
 			'on' => 'a.id_sarling=b.id_sarling',
-			'pos' => 'LEFT',
+			'pos' => 'LEFT'
 		))->result();
 		$data_tampil = array();
 		$no = 1;
@@ -1960,6 +1960,13 @@ class Master extends CI_Controller {
 			echo'<option value=""></option>';
 			foreach ($data as $key => $value) {
 				echo'<option value="'.$value->id_anggota_kube.'-'.$value->user_id.'">'.$value->nama.'</option>';
+			}
+		}
+		elseif($this->input->post('modul')=='get_anggota_rutilahu_by_id_rutilahu'){
+			$data = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*', array('a.id_rutilahu'=>$this->input->post('id')))->result();
+			echo'<option value=""></option>';
+			foreach ($data as $key => $value) {
+				echo'<option value="'.$value->id_anggota_rutilahu.'-'.$value->user_id.'">'.$value->nama.'</option>';
 			}
 		}
 		elseif($this->input->post('modul')=='modul_ubah_data_anggota_kube'){
@@ -2165,13 +2172,9 @@ class Master extends CI_Controller {
 		}
 		elseif($this->input->post('modul')=='get_isian_indikator_by_id_rutilahu'){
 			$data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-			$data['data_master'] = $this->Main_model->getSelectedData('laporan_rutilahu a', 'a.*,g.indikator_progres_fisik', array('a.id_rutilahu'=>$this->input->post('id'),'a.deleted'=>'0'),'a.created_at DESC','1','','',array(
-				'table' => 'detail_laporan_kube g',
-				'on' => 'a.id_laporan_kube=g.id_laporan_kube',
-				'pos' => 'LEFT'
-			))->result();
-			// $this->load->view('admin/report/ajax_list_indicator',$data);
-			print_r($data);
+			$data['data_master'] = $this->Main_model->getSelectedData('status_laporan_rutilahu a', 'a.*', array('a.id_rutilahu'=>$this->input->post('id')),'','1')->row();
+			$this->load->view('admin/report/ajax_list_indicator2',$data);
+			// print_r($data);
 		}
 		// elseif($this->input->post('modul')=='get_indikator_by_tipe'){
 		// 	$data = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.id_master_indikator'=>$this->input->post('id')))->result();

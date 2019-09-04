@@ -1,0 +1,6 @@
+Tanggal 4 September 2019
+    - RENAME TABLE detail_laporan_rutilahu TO detail_laporan_rutilahu_aspek_fisik;
+    - ALTER TABLE `detail_laporan_rutilahu_aspek_fisik`
+        DROP `progres_keuangan`,
+        DROP `penjelasan_progres_keuangan`;
+    - Buat tabel baru (detail_laporan_rutilahu_aspek_keuangan)
