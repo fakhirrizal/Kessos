@@ -51,7 +51,7 @@ class Auth extends CI_Controller {
 															<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 															<strong>Ups! </strong>Akun Anda tidak dikenali sistem.
 														</div>' );
-						echo "<script>window.location='".base_url()."'</script>";
+						echo "<script>window.location='".base_url('login')."'</script>";
 					}else{
 						foreach ($role as $key => $value2) {
 							$sess_data['id'] = $value2->user_id;
@@ -73,7 +73,7 @@ class Auth extends CI_Controller {
 													<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 													<strong>Ups! </strong>Password yg Anda masukkan tidak valid.
 												</div>' );
-					echo "<script>window.location='".base_url()."'</script>";
+					echo "<script>window.location='".base_url('login')."'</script>";
 				}
 			}
 		}
@@ -82,7 +82,7 @@ class Auth extends CI_Controller {
 											<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 											<strong>Ups! </strong>Username/ Email yang Anda masukkan tidak terdaftar.
 										</div>' );
-			echo "<script>window.location='".base_url()."'</script>";
+			echo "<script>window.location='".base_url('login')."'</script>";
 		}
 	}
 	public function registration()
@@ -176,7 +176,7 @@ class Auth extends CI_Controller {
 	}
 	public function logout(){
 		$this->session->sess_destroy();
-		echo "<script>window.location='".base_url()."'</script>";
+		echo "<script>window.location='".base_url('login')."'</script>";
 	}
 	public function forget_password() {
 		$q1 = "SELECT a.*,b.fullname FROM user a LEFT JOIN user_profile b ON a.id=b.user_id WHERE a.email='".$this->input->post('email')."' AND a.deleted='0'";
@@ -186,7 +186,7 @@ class Auth extends CI_Controller {
 													<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 													<strong>Ups! </strong>Email tidak terdaftar.
 												</div>' );
-			echo "<script>window.location='".base_url()."'</script>";
+			echo "<script>window.location='".base_url('login')."'</script>";
 		}
 		else{
 			foreach ($cek as $key => $value) {
@@ -220,7 +220,7 @@ class Auth extends CI_Controller {
 			// 	echo 'Kirim Pesan Error: ' . $mail->ErrorInfo;
 			// } else {
 			// 	echo "<script>alert('Pesan telah dikirim. Silahkan cek di Folder Kotak Masuk (Inbox) atau Spam')</script>";
-			// 	echo "<script>window.location='".base_url()."'</script>";
+			// 	echo "<script>window.location='".base_url('login')."'</script>";
 			// }
 			// Biasa
 			$to = $value->email;
@@ -234,7 +234,7 @@ class Auth extends CI_Controller {
 			$subjek = 'Lupa Kata Sandi';
 			mail($to,$subjek,$pesan, $headers);
 			echo "<script>alert('Pesan telah dikirim. Silahkan cek di Folder Kotak Masuk (Inbox) atau Spam')</script>";
-			echo "<script>window.location='".base_url()."'</script>";
+			echo "<script>window.location='".base_url('login')."'</script>";
 		}}
     }
 }

@@ -1,7 +1,7 @@
 <?php
 if(($this->session->userdata('id'))==NULL){
             echo "<script>alert('Harap login terlebih dahulu')</script>";
-            echo "<script>window.location='".base_url()."'</script>";
+            echo "<script>window.location='".base_url('login')."'</script>";
         }
 else{
 ?>
