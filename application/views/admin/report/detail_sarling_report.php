@@ -8,7 +8,7 @@
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span><a href='<?= site_url('/admin_side/laporan_rutilahu'); ?>'>Data Rutilahu (Kelompok Usaha Bersama)</a></span>
+		<span><a href='<?= site_url('/admin_side/laporan_sarling'); ?>'>Data Sarling (Sarana Lingkungan)</a></span>
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
@@ -18,7 +18,7 @@
 <?= $this->session->flashdata('sukses') ?>
 <?= $this->session->flashdata('gagal') ?>
 <?php
-$id_rutilahu = '';
+$id_sarling = '';
 ?>
 <div class="page-content-inner">
 	<div class="m-heading-1 border-green m-bordered">
@@ -36,15 +36,20 @@ $id_rutilahu = '';
 						if(isset($data_utama)){
 							foreach($data_utama as $row)
 							{
-								$id_rutilahu = $row->id_rutilahu;
+								$id_sarling = $row->id_sarling;
 						?>
 								<div class="col-md-6">
 									<table class="table">
 										<tbody>
-											<tr>
-												<td> Nama Kelompok </td>
+                                            <tr>
+												<td> Jenis Sarling </td>
 												<td> : </td>
-												<td><?php echo $row->nama_kelompok; ?></td>
+												<td><?php echo $row->jenis_sarling; ?></td>
+											</tr>
+											<tr>
+												<td> Nama Tim </td>
+												<td> : </td>
+												<td><?php echo $row->nama_tim; ?></td>
 											</tr>
 											<tr>
 												<td> Alamat </td>
@@ -172,7 +177,7 @@ $id_rutilahu = '';
 										$no = 1;
 										foreach ($data_detail_laporan as $key => $value) {
 											$get_tanggal = explode(' ',$value->created_at);
-											$master_indikator = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu),'a.id_master_indikator ASC','','','a.id_master_indikator',array(
+											$master_indikator = $this->Main_model->getSelectedData('detail_laporan_sarling_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_sarling'=>$value->id_laporan_sarling),'a.id_master_indikator ASC','','','a.id_master_indikator',array(
 												array(
 													'table' => 'master_indikator b',
 													'on' => 'a.id_master_indikator=b.id_master_indikator',
@@ -183,7 +188,7 @@ $id_rutilahu = '';
 													'pos' => 'LEFT'
 												)
 											))->result();
-											// $detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu),'a.id_master_indikator ASC','','','',array(
+											// $detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_sarling_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_sarling'=>$value->id_laporan_sarling),'a.id_master_indikator ASC','','','',array(
 											// 	'table' => 'master_indikator b',
 											// 	'on' => 'a.id_master_indikator=b.id_master_indikator',
 											// 	'pos' => 'LEFT'
@@ -202,11 +207,11 @@ $id_rutilahu = '';
 														</button>
 														<ul class="dropdown-menu pull-right" role="menu">
 															<li>
-																<a href="'.site_url('admin_side/ubah_data_laporan_rutilahu/'.md5($value->id_laporan_rutilahu)).'">
+																<a href="'.site_url('admin_side/ubah_data_laporan_sarling/'.md5($value->id_laporan_sarling)).'">
 																	<i class="icon-wrench"></i> Ubah Data </a>
 															</li>
 															<li>
-																<a onclick="'.$return_on_click.'" href="'.site_url('admin_side/hapus_data_laporan_rutilahu/'.md5($value->id_laporan_rutilahu)).'">
+																<a onclick="'.$return_on_click.'" href="'.site_url('admin_side/hapus_data_laporan_sarling/'.md5($value->id_laporan_sarling)).'">
 																	<i class="icon-trash"></i> Hapus Data </a>
 															</li>
 														</ul>
@@ -215,17 +220,17 @@ $id_rutilahu = '';
 											</tr>
 											<tr>
 												<td colspan="5">
-													<div class="panel-group accordion" id="accordion'.$value->id_laporan_rutilahu.'">
+													<div class="panel-group accordion" id="accordion'.$value->id_laporan_sarling.'">
 														<div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
-																	<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion'.$value->id_laporan_rutilahu.'" href="#collapse_'.$value->id_laporan_rutilahu.'_1" aria-expanded="false"> Detail Laporan </a>
+																	<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion'.$value->id_laporan_sarling.'" href="#collapse_'.$value->id_laporan_sarling.'_1" aria-expanded="false"> Detail Laporan </a>
 																</h4>
 															</div>
-															<div id="collapse_'.$value->id_laporan_rutilahu.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+															<div id="collapse_'.$value->id_laporan_sarling.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
 																<div class="panel-body">';
 																foreach ($master_indikator as $key => $mi) {
-																	$detail_laporan = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
+																	$detail_laporan = $this->Main_model->getSelectedData('detail_laporan_sarling_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_sarling'=>$value->id_laporan_sarling,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
 																		array(
 																			'table' => 'master_indikator b',
 																			'on' => 'a.id_master_indikator=b.id_master_indikator',
@@ -241,7 +246,7 @@ $id_rutilahu = '';
 																	foreach ($detail_laporan as $key => $dl) {
 																		echo $dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';
 																	}
-																	$detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
+																	$detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_sarling_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_sarling'=>$value->id_laporan_sarling,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
 																		'table' => 'master_indikator b',
 																		'on' => 'a.id_master_indikator=b.id_master_indikator',
 																		'pos' => 'LEFT'
@@ -269,7 +274,7 @@ $id_rutilahu = '';
 							</div>
 						</div>
 						<div class="col-md-12" >
-						<hr><a href="<?php echo base_url()."admin_side/laporan_rutilahu"; ?>" class="btn btn-info" role="button"><i class="fa fa-angle-double-left"></i> Kembali</a></div>
+						<hr><a href="<?php echo base_url()."admin_side/laporan_sarling"; ?>" class="btn btn-info" role="button"><i class="fa fa-angle-double-left"></i> Kembali</a></div>
 					</div>
 				</div>
 			</div>
@@ -295,7 +300,7 @@ $id_rutilahu = '';
 		// 		"order": [[ 0, "asc" ]],
 		// 		"bProcessing": true,
 		// 		"ajax" : {
-		// 			url:"<?= site_url('admin/Report/json_laporan_rutilahu'); ?>",
+		// 			url:"<?= site_url('admin/Report/json_laporan_sarling'); ?>",
 		// 			data: {id: '<?= $this->uri->segment(3); ?>'}
 		// 		},
 		// 		"aoColumns": [

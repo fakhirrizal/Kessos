@@ -2167,13 +2167,19 @@ class Master extends CI_Controller {
 		elseif($this->input->post('modul')=='get_isian_indikator_by_id_kube'){
 			$data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
 			$data['data_master'] = $this->Main_model->getSelectedData('status_laporan_kube a', 'a.*', array('a.id_kube'=>$this->input->post('id')),'','1')->row();
-			$this->load->view('admin/report/ajax_list_indicator',$data);
+			$this->load->view('admin/report/ajax_list_indicator1',$data);
 			// print_r($data);
 		}
 		elseif($this->input->post('modul')=='get_isian_indikator_by_id_rutilahu'){
 			$data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
 			$data['data_master'] = $this->Main_model->getSelectedData('status_laporan_rutilahu a', 'a.*', array('a.id_rutilahu'=>$this->input->post('id')),'','1')->row();
 			$this->load->view('admin/report/ajax_list_indicator2',$data);
+			// print_r($data);
+		}
+		elseif($this->input->post('modul')=='get_isian_indikator_by_id_sarling'){
+			$data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
+			$data['data_master'] = $this->Main_model->getSelectedData('status_laporan_sarling a', 'a.*', array('a.id_sarling'=>$this->input->post('id')),'','1')->row();
+			$this->load->view('admin/report/ajax_list_indicator3',$data);
 			// print_r($data);
 		}
 		// elseif($this->input->post('modul')=='get_indikator_by_tipe'){

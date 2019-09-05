@@ -21,11 +21,11 @@
 	}
 </style>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<ul class="page-breadcrumb breadcrumb">
+<!-- <ul class="page-breadcrumb breadcrumb">
 	<li>
 		<span>Laporan</span>
 	</li>
-</ul>
+</ul> -->
 <?= $this->session->flashdata('sukses') ?>
 <?= $this->session->flashdata('gagal') ?>
 <div class="page-content-inner">
@@ -110,7 +110,7 @@
 			infoWindow.open(map, marker);
 		});
 		}
-		var situs = 'http://kemensos.aplikasiku.online/assets/peta_kabupaten/';
+		var situs = 'http://pfm.gbnku.co.id/assets/peta_kabupaten/';
 		var nama_file = '<?php echo $kml ?>';
 		var situs_full = situs.concat(nama_file);
 		var kmldashboard = new google.maps.KmlLayer({

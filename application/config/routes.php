@@ -67,10 +67,12 @@ $route['admin_side/cleaning_log'] = 'admin/App/cleaning_log';
 $route['admin_side/tentang_aplikasi'] = 'admin/App/about';
 $route['admin_side/bantuan'] = 'admin/App/helper';
 
-$route['admin_side/dasbor'] = 'admin/Dashboard';
+$route['admin_side/dasbor_peta'] = 'admin/Dashboard';
 $route['admin_side/peta_provinsi/(:any)'] = 'admin/Dashboard/province/$1';
 $route['admin_side/peta_kabupaten/(:any)'] = 'admin/Dashboard/city/$1';
 $route['admin_side/peta_kecamatan/(:any)'] = 'admin/Dashboard/sub_district/$1';
+
+$route['admin_side/dasbor_grafik'] = 'admin/Dashboard/main_graph';
 
 $route['admin_side/administrator'] = 'admin/Master/administrator_data';
 $route['admin_side/tambah_data_admin'] = 'admin/Master/add_administrator_data';
