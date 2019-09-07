@@ -43,6 +43,18 @@
 								</div>
 							</div>
 							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1">Wilayah <span class="required"> * </span></label>
+								<div class="col-md-10">
+									<div class="input-icon">
+										<select name='wilayah' class="form-control select2-allow-clear" required>
+											<option value='1'>Wilayah I</option>
+											<option value='2'>Wilayah II</option>
+											<option value='3'>Wilayah III</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Marker <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<div id="map"></div>

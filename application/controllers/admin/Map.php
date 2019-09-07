@@ -28,6 +28,16 @@ class Map extends CI_Controller {
 								';
 			$isi['number'] = $no++.'.';
 			$isi['nm_provinsi'] = $value->nm_provinsi;
+			$wilayah = '';
+			if($value->wilayah=='1'){
+				$wilayah = 'Wilayah I';
+			}elseif($value->wilayah=='2'){
+				$wilayah = 'Wilayah II';
+			}
+			elseif($value->wilayah=='3'){
+				$wilayah = 'Wilayah III';
+			}
+			$isi['wilayah'] = $wilayah;
 			$return_on_click = "return confirm('Anda yakin?')";
 			$isi['action'] =	'
 								<div class="btn-group">
@@ -89,6 +99,7 @@ class Map extends CI_Controller {
 		}
 		$data_insert = array(
 			'nm_provinsi' => $this->input->post('nm_provinsi'),
+			'wilayah' => $this->input->post('wilayah'),
 			'bujur' => $this->input->post('longitude'),
 			'lintang' => $this->input->post('latitude'),
 			'kml' => $file_kml
@@ -140,6 +151,7 @@ class Map extends CI_Controller {
 		}
 		$data_update = array(
 			'nm_provinsi' => $this->input->post('nm_provinsi'),
+			'wilayah' => $this->input->post('wilayah'),
 			'bujur' => $this->input->post('longitude'),
 			'lintang' => $this->input->post('latitude')
 		);

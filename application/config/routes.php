@@ -49,9 +49,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples: my-controller/index -> my_controller/index
 |   my-controller/my-method -> my_controller/my_method
 */
-$route['default_controller'] = 'user/App/home';
+$route['default_controller'] = 'User';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
+
+/* User */
+$route['data_peta'] = 'guest/Dashboard/main_map';
+$route['data_peta_provinsi/(:any)'] = 'guest/Dashboard/map_province/$1';
+$route['data_peta_provinsi'] = 'guest/Dashboard/map_province';
+$route['data_peta_kabupaten/(:any)'] = 'guest/Dashboard/map_region/$1';
+$route['data_peta_kabupaten'] = 'guest/Dashboard/map_region';
+$route['data_peta_kecamatan/(:any)'] = 'guest/Dashboard/map_district/$1';
+$route['data_peta_kecamatan'] = 'guest/Dashboard/map_district';
+$route['data_grafik'] = 'guest/Dashboard/main_graph';
 
 /* Auth */
 $route['login'] = 'Auth/login';

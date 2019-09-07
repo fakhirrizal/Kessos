@@ -9,3 +9,5 @@ Tanggal 5 September 2019
     - Buat tabel baru detail_laporan_sarling_aspek_fisik
     - Buat tabel baru status_laporan_sarling
     - Buat tabel baru laporan_sarling
+Tanggal 6 September 2019
+    - ALTER TABLE `provinsi` ADD `wilayah` INT(1) NULL AFTER `nm_provinsi`;

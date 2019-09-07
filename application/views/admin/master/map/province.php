@@ -1,6 +1,6 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <style media="all" type="text/css">
-    .alignCenter { text-align: center; }
+	.alignCenter { text-align: center; }
 </style>
 <ul class="page-breadcrumb breadcrumb">
 	<li>
@@ -51,6 +51,7 @@
 								</th>
 								<th style="text-align: center;" width="4%"> # </th>
 								<th style="text-align: center;"> Nama Provinsi </th>
+								<th style="text-align: center;"> Wilayah </th>
 								<th style="text-align: center;" width="7%"> Aksi </th>
 							</tr>
 						</thead>
@@ -68,6 +69,7 @@
 											{ mData: 'checkbox', sClass: "alignCenter", "bSortable": false} ,
 											{ mData: 'number', sClass: "alignCenter" },
 											{ mData: 'nm_provinsi', sClass: "alignCenter" },
+											{ mData: 'wilayah', sClass: "alignCenter" },
 											{ mData: 'action' }
 										]
 							});

@@ -553,7 +553,7 @@ class Master extends CI_Controller {
 				))->result();
 				if($cek_bdt==NULL){
 					$get_kube = $this->Main_model->getSelectedData('kube a', 'a.*',array('a.id_kube'=>$this->input->post('id_kube')))->row();
-					$this->Main_model->updateData('kube',array('a.rencana_anggaran'=>(($get_kube->rencana_anggaran)+'2000000')),array('a.id_kube'=>$this->input->post('id_kube'))); 				
+					$this->Main_model->updateData('kube a',array('a.rencana_anggaran'=>(($get_kube->rencana_anggaran)+'2000000')),array('a.id_kube'=>$this->input->post('id_kube'))); 				
 
 					$get_user_id = $this->Main_model->getLastID('user','id');
 
@@ -1142,7 +1142,7 @@ class Master extends CI_Controller {
 				))->result();
 				if($cek_bdt==NULL){
 					$get_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*',array('a.id_rutilahu'=>$this->input->post('id_rutilahu')))->row();
-					$this->Main_model->updateData('rutilahu',array('a.rencana_anggaran'=>(($get_rutilahu->rencana_anggaran)+'15000000')),array('a.id_rutilahu'=>$this->input->post('id_rutilahu')));
+					$this->Main_model->updateData('rutilahu a',array('a.rencana_anggaran'=>(($get_rutilahu->rencana_anggaran)+'15000000')),array('a.id_rutilahu'=>$this->input->post('id_rutilahu')));
 
 					$get_user_id = $this->Main_model->getLastID('user','id');
 

@@ -6,6 +6,11 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 	}
 	/* Map */
+	public function main_map()
+	{
+		$data['data_marker'] = $this->Main_model->getSelectedData('provinsi a', 'a.*')->result();
+		$this->load->view('user/dashboard/main_map',$data);
+	}
 	public function index()
 	{
 		$data['parent'] = 'dashboard';

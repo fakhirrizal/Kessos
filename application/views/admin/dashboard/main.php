@@ -88,7 +88,7 @@
 				$style_td = 'style="text-align: left"';
 				$class_table = 'class="table"';
 				$id_enkrip = md5($id);
-				echo ("addMarker($lat, $lon, '<div $style><h3><b>$nama</b></h3><br><table $class_table><tbody><tr><td $style_td> Presentase Realisasi KUBE </td><td> 30% </td></tr><tr><td $style_td> Presentase Realisasi RUTILAHU </td><td> 30% </td></tr><tr><td $style_td> Presentase Realisasi SARLING </td><td> 30% </td></tr><tr><td></td><td></td></tr><tr></tbody></table><a href=peta_provinsi/$id_enkrip>Klik disini untuk data detail</a></div>');\n");
+				echo ("addMarker($lat, $lon, '<div $style><h3><b>$nama</b></h3><br><table $class_table><tbody><tr><td $style_td> Persentase Realisasi KUBE </td><td> 30% </td></tr><tr><td $style_td> Persentase Realisasi RUTILAHU </td><td> 30% </td></tr><tr><td $style_td> Persentase Realisasi SARLING </td><td> 30% </td></tr><tr><td></td><td></td></tr><tr></tbody></table><a href=peta_provinsi/$id_enkrip>Klik disini untuk data detail</a></div>');\n");
 			}
 		?>
 
