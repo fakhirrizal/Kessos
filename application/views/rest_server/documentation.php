@@ -651,7 +651,57 @@
 																		<li>Jika akan melaporkan beberapa indikator, pisahkan dengan tanda koma "<b>,</b>"</li>
 																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
 																	</ol>
-																	<p>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="portlet box yellow-saffron">
+												<div class="portlet-title">
+													<div class="caption">
+														<i></i>Laporan Rutilahu </div>
+													<div class="tools">
+														<a href="javascript:;" class="collapse"> </a>
+													</div>
+												</div>
+												<div class="portlet-body">
+													<div class="panel-group accordion" id="accordion3_2">
+													<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_1"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_rutilahu </a>
+																</h4>
+															</div>
+															<div id="collapse_3_2_1" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan id_laporan_rutilahu, yg berguna untuk menyimpan data rutilahu. Berikut data balikannya, </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_rutilahu": "int"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_2"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_rutilahu </a>
+																</h4>
+															</div>
+															<div id="collapse_3_2_2" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan data utama laporan rutilahu, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_anggota_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"keterangan": "string"<br>
+																		}
+																	</code>
 																</div>
 															</div>
 														</div>

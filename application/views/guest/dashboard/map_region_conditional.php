@@ -69,14 +69,13 @@
                         <div class="wt row">
                             <div class="col-md-10 col-sm-10 col-xs-9">
                                 <div class="col-md-2 col-sm-2 col-xs-12">
-                                    <a href="http://sikapdaya.kemsos.go.id">
+                                    <a href="http://www.kemsos.go.id">
                                         <img src="http://sikapdaya.kemsos.go.id/images/logo-with-text.png" alt="kemsos" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="col-md-8 col-sm-8 col-xs-12">
-                                    <h3><a href="http://sikapdaya.kemsos.go.id"><strong>SiKAPDAYA</strong></a></h3>
-                                    <h3><a href="http://sikapdaya.kemsos.go.id">Sistem Informasi Kinerja Pelaksanaan </a></h3>
-                                    <h3><a href="http://sikapdaya.kemsos.go.id">Program dan Kegiatan Pemberdayaan Sosial</a></h3>
+                                    <h3><a href="https://www.kemsos.go.id"><strong>SiPKURUS</strong></a></h3>
+                                    <h3><a href="https://www.kemsos.go.id">Sistem Informasi Pelaporan Kube, RTLH, dan Sarling</a></h3>
                                 </div>
                             </div>
                             <div class="col-md-2 col-sm-2 col-xs-12">
