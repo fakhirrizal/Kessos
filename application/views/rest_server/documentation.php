@@ -220,6 +220,25 @@
 																</div>
 															</div>
 														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_2" href="#collapse_2_2_3"> <span class="label label-success">GET</span>&nbsp;{url}/indikator?id_indikator={$id_indikator} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_2_3" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data indikator berdasarkan id_tipe yang dipilih (1: Pengadaan; 2: Proses; 3: Benefit), berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"tipe": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"indikator": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -613,7 +632,7 @@
 													</div>
 												</div>
 											</div> -->
-											<div class="portlet box red">
+											<!-- <div class="portlet box red">
 												<div class="portlet-title">
 													<div class="caption">
 														<i></i>Laporan Kube </div>
@@ -657,6 +676,211 @@
 														</div>
 													</div>
 												</div>
+											</div> -->
+											<div class="portlet box red-soft">
+												<div class="portlet-title">
+													<div class="caption">
+														<i></i>Laporan Kube </div>
+													<div class="tools">
+														<a href="javascript:;" class="collapse"> </a>
+													</div>
+												</div>
+												<div class="portlet-body">
+													<div class="panel-group accordion" id="accordion3_1">
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_1"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_kube </a>
+																</h4>
+															</div>
+															<div id="collapse_3_1_1" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan id_laporan_kube, yg berguna untuk menyimpan data kube. Berikut data balikannya, </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_kube": "int"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_2"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_kube </a>
+																</h4>
+															</div>
+															<div id="collapse_3_1_2" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan data utama laporan kube, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_kube": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_kube": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_anggota_kube": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"keterangan": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_3"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_kube </a>
+																</h4>
+															</div>
+															<div id="collapse_3_1_3" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan detail data laporan kube aspek fisik, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_kube": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"indikator_progres_fisik": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"penjelasan_progres_fisik": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>indikator_progres_fisik</b> hanya bisa 1 id_indikator sekali kirim data</li>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_4"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_kube </a>
+																</h4>
+															</div>
+															<div id="collapse_3_1_4" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan detail data laporan kube aspek fisik, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_kube": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"penjelasan_progres_keuangan": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_kube?id_kube={id_kube} </a>
+																</h4>
+															</div>
+															<div id="collapse_3_1_5" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan rekap dari suatu kelompok kube yg telah melaporkan aktifitasnya, berikut data balikannya, </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_kube": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_realisasi": "int"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"data_laporan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_laporan_kube": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"pelapor": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"persentase_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"persentase_anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"persentase_realisasi": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"keterangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"created_at": "YYYY-mm-dd HH:ii:ss"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
+																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_kube?id_kube={id_kube} </a>
+																</h4>
+															</div>
+															<div id="collapse_3_1_5" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan rekap dari suatu kelompok kube yg telah melaporkan aktifitasnya, berikut data balikannya, </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_laporan_kube": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"pelapor": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_realisasi": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"keterangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"created_at": "YYYY-mm-dd HH:ii:ss"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"progres_fisik": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_laporan_kube": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"tipe": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_fisik": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			],<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_laporan_kube": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"tipe": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
+																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
 											<div class="portlet box yellow-saffron">
 												<div class="portlet-title">
@@ -668,7 +892,7 @@
 												</div>
 												<div class="portlet-body">
 													<div class="panel-group accordion" id="accordion3_2">
-													<div class="panel panel-default">
+														<div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
 																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_1"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_rutilahu </a>
@@ -702,6 +926,366 @@
 																			"keterangan": "string"<br>
 																		}
 																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_3"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_rutilahu </a>
+																</h4>
+															</div>
+															<div id="collapse_3_2_3" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan detail data laporan rutilahu aspek fisik, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"indikator_progres_fisik": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"penjelasan_progres_fisik": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>indikator_progres_fisik</b> hanya bisa 1 id_indikator sekali kirim data</li>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_4"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_rutilahu </a>
+																</h4>
+															</div>
+															<div id="collapse_3_2_4" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan detail data laporan rutilahu aspek fisik, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"penjelasan_progres_keuangan": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_rutilahu?id_rutilahu={id_rutilahu} </a>
+																</h4>
+															</div>
+															<div id="collapse_3_2_5" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan rekap dari suatu kelompok rutilahu yg telah melaporkan aktifitasnya, berikut data balikannya, </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_realisasi": "int"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"data_laporan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_laporan_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"pelapor": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"persentase_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"persentase_anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"persentase_realisasi": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"keterangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"created_at": "YYYY-mm-dd HH:ii:ss"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
+																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_rutilahu?id_rutilahu={id_rutilahu} </a>
+																</h4>
+															</div>
+															<div id="collapse_3_2_5" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan rekap dari suatu kelompok rutilahu yg telah melaporkan aktifitasnya, berikut data balikannya, </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_laporan_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"pelapor": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_realisasi": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"keterangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"created_at": "YYYY-mm-dd HH:ii:ss"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"progres_fisik": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_laporan_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"tipe": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_fisik": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			],<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_laporan_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"tipe": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
+																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="portlet box green-haze">
+												<div class="portlet-title">
+													<div class="caption">
+														<i></i>Laporan Sarling </div>
+													<div class="tools">
+														<a href="javascript:;" class="collapse"> </a>
+													</div>
+												</div>
+												<div class="portlet-body">
+													<div class="panel-group accordion" id="accordion3_3">
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_1"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_sarling </a>
+																</h4>
+															</div>
+															<div id="collapse_3_3_1" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan id_laporan_sarling, yg berguna untuk menyimpan data sarling. Berikut data balikannya, </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_sarling": "int"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_2"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_sarling </a>
+																</h4>
+															</div>
+															<div id="collapse_3_3_2" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan data utama laporan sarling, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_sarling": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_sarling": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_anggota_sarling": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"keterangan": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_3"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_sarling </a>
+																</h4>
+															</div>
+															<div id="collapse_3_3_3" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan detail data laporan sarling aspek fisik, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_sarling": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"indikator_progres_fisik": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"penjelasan_progres_fisik": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>indikator_progres_fisik</b> hanya bisa 1 id_indikator sekali kirim data</li>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_4"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_sarling </a>
+																</h4>
+															</div>
+															<div id="collapse_3_3_4" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan detail data laporan sarling aspek fisik, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_laporan_sarling": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"penjelasan_progres_keuangan": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_sarling?id_sarling={id_sarling} </a>
+																</h4>
+															</div>
+															<div id="collapse_3_3_5" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan rekap dari suatu kelompok sarling yg telah melaporkan aktifitasnya, berikut data balikannya, </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_sarling": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_realisasi": "int"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"data_laporan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_laporan_sarling": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"pelapor": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"persentase_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"persentase_anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"persentase_realisasi": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"keterangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"created_at": "YYYY-mm-dd HH:ii:ss"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
+																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_sarling?id_sarling={id_sarling} </a>
+																</h4>
+															</div>
+															<div id="collapse_3_3_5" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan rekap dari suatu kelompok sarling yg telah melaporkan aktifitasnya, berikut data balikannya, </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_laporan_sarling": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"pelapor": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_anggaran": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"persentase_realisasi": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"keterangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"created_at": "YYYY-mm-dd HH:ii:ss"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"progres_fisik": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_laporan_sarling": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"tipe": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_fisik": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			],<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_laporan_sarling": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"tipe": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
+																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
 																</div>
 															</div>
 														</div>

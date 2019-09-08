@@ -17,7 +17,7 @@ class Provinsi extends REST_Controller {
 	}
 	function index_get() {
 		if($this->get('id_provinsi')!=NULL){
-			$hasil = $this->Main_model->getSelectedData('provinsi a', 'a.id_provinsi,a.nm_provinsi,a.wilayah', array('a.id_provinsi'=>$this->get('id_provinsi')))->result();
+			$hasil = $this->Main_model->getSelectedData('provinsi a', 'a.id_provinsi,a.nm_provinsi,a.wilayah', array('a.id_provinsi'=>$this->get('id_provinsi')))->row();
 			$this->response($hasil, 200);
 		}else{
 			$hasil = $this->Main_model->getSelectedData('provinsi a', 'a.id_provinsi,a.nm_provinsi,a.wilayah')->result();

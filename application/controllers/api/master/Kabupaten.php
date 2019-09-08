@@ -28,7 +28,7 @@ class Kabupaten extends REST_Controller {
 				'table' => 'provinsi f',
 				'on' => 'a.id_provinsi=f.id_provinsi',
 				'pos' => 'left'
-			))->result();
+			))->row();
 			$this->response($hasil, 200);
 		}else{
 			$hasil = $this->Main_model->getSelectedData('kabupaten a', 'a.id_kabupaten,a.nm_kabupaten,f.nm_provinsi','','','','','',array(

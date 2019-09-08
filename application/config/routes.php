@@ -192,6 +192,7 @@ $route['api/anggota_kube'] = 'api/kube/Member';
 $route['api/laporan_kube'] = 'api/kube/Report';
 
 $route['api/rutilahu'] = 'api/rutilahu/Master';
+$route['api/laporan_rutilahu'] = 'api/rutilahu/Report';
 
 /*
 | -------------------------------------------------------------------------

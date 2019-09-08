@@ -23,20 +23,10 @@
 			$.ajax({
 				data:{id:value,modul:'get_isian_indikator_by_id_kube'},
 				success: function(respond){
-					$("#list_indikator").html(respond);
+					$("#tampil_indikator").html(respond);
 				}
 			})
 		});
-
-		// $("#id_indikator").change(function(){
-		// 	var value=$(this).val();
-		// 	$.ajax({
-		// 		data:{id:value,modul:'get_indikator_by_tipe'},
-		// 		success: function(respond){
-		// 			$("#indikator").html(respond);
-		// 		}
-		// 	})
-		// });
 
 	})
 
@@ -80,97 +70,39 @@
 									</select>
 								</div>
 							</div>
-							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1">Pelapor <span class="required"> * </span></label>
-								<div class="col-md-10">
-									<div class="input-icon">
-										<select name='id_anggota_kube' id='id_anggota_kube' class="form-control select2-allow-clear" required>
-											<option value=''></option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<!-- <div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1">Fisik <span class="required"> * </span></label>
-								<div class="col-md-10">
-									<div class="input-icon">
-										<input type="text" class="form-control" name="fisik" placeholder="Type something" required>
-										<div class="form-control-focus"> </div>
-										<span class="help-block">Some help goes here...</span>
-										<i class="fa fa-list"></i>
-									</div>
-								</div>
-							</div>
-							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1">Persentase Fisik <span class="required"> * </span></label>
-								<div class="col-md-10">
-									<div class="input-icon">
-										<input type="number" class="form-control" name="persentase_fisik" placeholder="Type something" max='100' required>
-										<div class="form-control-focus"> </div>
-										<span class="help-block">Some help goes here...</span>
-										<i class="fa fa-list"></i>
-									</div>
-								</div>
-							</div> -->
-							<!-- <div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1">Tipe Indikator <span class="required"> * </span></label>
-								<div class="col-md-10">
-									<select name='id_indikator' id='id_indikator' class="form-control select2-allow-clear" required>
-										<option value=''></option>
-										<?php
-										foreach ($indikator as $key => $value) {
-											echo '<option value="'.$value->id_master_indikator.'">'.$value->master_indikator.'</option>';
-										}
-										?>
-									</select>
-								</div>
-							</div> -->
-							<!-- <div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1">Indikator <span class="required"> * </span></label>
-								<div class="col-md-10" id='indikator'>
-									<select name='indikator' id='indikator' class="form-control select2-allow-clear" required>
-										<option value=''></option>
-									</select>
-								</div>
-							</div> -->
-							<!-- <div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1">Keuangan <span class="required"> * </span></label>
-								<div class="col-md-10">
-									<div class="input-icon">
-										<input type="text" class="form-control" name="keuangan" id='rupiah' placeholder="Type something" required>
-										<div class="form-control-focus"> </div>
-										<span class="help-block">Some help goes here...</span>
-										<i class="fa fa-dollar"></i>
-									</div>
-								</div>
-							</div> -->
 							<hr>
-							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-3 control-label" for="form_control_1"><b>Indikator Progres Fisik</b></label>
-							</div>
-							<div class="form-group form-md-line-input has-danger" id='list_indikator'>
+							<div style='text-align: left'>
+								<label class="control-label uppercase" for="form_control_1"><b>Laporan Progres Aspek Fisik</b></label>
 							</div>
 							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-3 control-label" for="form_control_1"><b>Penjelasan Progres Fisik</b></label>
-							</div>
-							<?php
-							foreach ($indikator as $key => $i) {
-							?>
-							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1"><?= $i->master_indikator; ?></label>
-								<div class="col-md-10">
-									<div class="input-icon">
-										<input type="text" class="form-control" name="penjelasan_progres_fisik_<?= $i->id_master_indikator; ?>" placeholder="Type something">
-										<div class="form-control-focus"> </div>
-										<span class="help-block">Some help goes here...</span>
-										<i class="fa fa-list"></i>
-									</div>
+								<label class="col-md-2 control-label uppercase" for="form_control_1"></label>
+								<div class="col-md-10" id='tampil_indikator'>
+									<?php
+									foreach ($indikator as $key => $in) {
+									?>
+									<table class='table table-striped table-bordered'>
+										<thead>
+											<tr>
+												<th>Indikator Progres Fisik - <span class='uppercase'><?= $in->master_indikator; ?></span></th>
+												<th>Penjelasan Progres Fisik - <span class='uppercase'><?= $in->master_indikator; ?></span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+												</td>
+												<td>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<?php } ?>
 								</div>
 							</div>
-							<?php } ?>
 							<hr>
-							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-3 control-label" for="form_control_1"><b>Progres Keuangan</b></label>
+							<div style='text-align: left'>
+								<label class="control-label uppercase" for="form_control_1"><b>Laporan Progres Aspek Keuangan</b></label>
+								<br><br><b>Penggunaan Anggaran :</b>
 							</div>
 							<?php
 							$no = 0;
@@ -180,7 +112,7 @@
 								<label class="col-md-2 control-label" for="form_control_1"><?= $i->master_indikator; ?></label>
 								<div class="col-md-10">
 									<div class="input-icon">
-										<input type="number" class="form-control" name="progres_keuangan<?= $i->id_master_indikator; ?>" placeholder="Type something">
+										<input type="number" class="form-control" name="progres_keuangan_<?= $i->id_master_indikator; ?>" placeholder="Type something">
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Some help goes here...</span>
 										<i class="fa fa-list"></i>

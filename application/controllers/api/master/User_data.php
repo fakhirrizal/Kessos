@@ -21,7 +21,7 @@ class User_data extends REST_Controller {
 				'table' => 'user_profile f',
 				'on' => 'a.id=f.user_id',
 				'pos' => 'left'
-			))->result();
+			))->row();
 			$this->response($hasil, 200);
 		}else{
 			$hasil = $this->Main_model->getSelectedData('user a', 'a.id AS user_id,a.username,a.pass AS password,f.fullname AS nama_lengkap,f.nin AS nik,f.bdt_id AS id_bdt,f.pkh_id AS id_pkh,f.kks_id AS id_kks,f.birth_date AS tanggal_lahir,f.address AS alamat,f.photo AS foto',array('a.id !='=>'1','a.is_active'=>'1','a.deleted'=>'0'),'','','','',array(

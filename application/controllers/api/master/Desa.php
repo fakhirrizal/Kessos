@@ -90,7 +90,7 @@ class Desa extends REST_Controller {
 					'on' => 'a.id_kecamatan=c.id_kecamatan',
 					'pos' => 'left'
 				)
-			))->result();
+			))->row();
 			$this->response($hasil, 200);
 		}else{
 			$hasil = $this->Main_model->getSelectedData('desa a', 'a.id_desa,a.nm_desa,c.nm_kecamatan,b.nm_kabupaten,f.nm_provinsi','','','','','',array(

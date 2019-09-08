@@ -56,7 +56,7 @@ class Kecamatan extends REST_Controller {
 					'on' => 'a.id_kabupaten=b.id_kabupaten',
 					'pos' => 'left'
 				)
-			))->result();
+			))->row();
 			$this->response($hasil, 200);
 		}else{
 			$hasil = $this->Main_model->getSelectedData('kecamatan a', 'a.id_kecamatan,a.nm_kecamatan,b.nm_kabupaten,f.nm_provinsi','','','','','',array(

@@ -8,7 +8,7 @@
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span><a href='<?= site_url('/admin_side/laporan_rutilahu'); ?>'>Data Rutilahu (Kelompok Usaha Bersama)</a></span>
+		<span><a href='<?= site_url('/admin_side/laporan_rutilahu'); ?>'>Data Rutilahu (Rumah Tidak Layak Huni)</a></span>
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>

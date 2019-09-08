@@ -23,6 +23,13 @@ class Indikator extends REST_Controller {
 				'pos' => 'left'
 			))->result();
 			$this->response($hasil, 200);
+		}elseif($this->get('id_indikator')!=NULL){
+			$hasil = $this->Main_model->getSelectedData('indikator a', 'a.id_indikator,f.master_indikator AS tipe,a.indikator', array('a.id_indikator'=>$this->get('id_indikator')),'','','','',array(
+				'table' => 'master_indikator f',
+				'on' => 'a.id_master_indikator=f.id_master_indikator',
+				'pos' => 'left'
+			))->row();
+			$this->response($hasil, 200);
 		}else{
 			$hasil = $this->Main_model->getSelectedData('indikator a', 'a.id_indikator,f.master_indikator AS tipe,a.indikator','','','','','',array(
 				'table' => 'master_indikator f',

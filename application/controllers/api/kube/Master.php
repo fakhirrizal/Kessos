@@ -43,7 +43,7 @@ class Master extends REST_Controller {
 					'on' => 'a.id_jenis_usaha=e.id_jenis_usaha',
 					'pos' => 'left',
 				)
-			))->result();
+			))->row();
 			$this->response($hasil, 200);
 		}else{
 			$hasil = $this->Main_model->getSelectedData('kube a', 'a.id_kube,a.nama_tim AS nama_kelompok,a.alamat,a.rencana_anggaran,(SELECT COUNT(ak.id_anggota_kube) FROM anggota_kube ak WHERE ak.id_kube=a.id_kube) AS jumlah_anggota,e.jenis_usaha,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('a.deleted'=>'0'),'','','','',array(

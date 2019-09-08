@@ -41,12 +41,12 @@ $id_kube = '';
 								<div class="col-md-6">
 									<table class="table">
 										<tbody>
-                                            <tr>
+											<tr>
 												<td> Jenis Usaha </td>
 												<td> : </td>
 												<td><?php echo $row->jenis_usaha; ?></td>
 											</tr>
-                                            <tr>
+											<tr>
 												<td> Nama Kelompok </td>
 												<td> : </td>
 												<td><?php echo $row->nama_tim; ?></td>
@@ -177,22 +177,11 @@ $id_kube = '';
 										$no = 1;
 										foreach ($data_detail_laporan as $key => $value) {
 											$get_tanggal = explode(' ',$value->created_at);
-											$master_indikator = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_kube'=>$value->id_laporan_kube),'a.id_master_indikator ASC','','','a.id_master_indikator',array(
-												array(
-													'table' => 'master_indikator b',
-													'on' => 'a.id_master_indikator=b.id_master_indikator',
-													'pos' => 'LEFT'
-												),array(
-													'table' => 'indikator c',
-													'on' => 'a.indikator_progres_fisik=c.id_indikator',
-													'pos' => 'LEFT'
-												)
+											$detail_laporan = $this->Main_model->getSelectedData('detail_laporan_kube a', 'a.*,b.master_indikator', array('a.id_laporan_kube'=>$value->id_laporan_kube),'','','','',array(
+												'table' => 'master_indikator b',
+												'on' => 'a.id_master_indikator=b.id_master_indikator',
+												'pos' => 'LEFT',
 											))->result();
-											// $detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_kube'=>$value->id_laporan_kube),'a.id_master_indikator ASC','','','',array(
-											// 	'table' => 'master_indikator b',
-											// 	'on' => 'a.id_master_indikator=b.id_master_indikator',
-											// 	'pos' => 'LEFT'
-											// ))->result();
 											$return_on_click = "return confirm('Anda yakin?')";
 											echo'
 											<tr>
@@ -229,37 +218,25 @@ $id_kube = '';
 															</div>
 															<div id="collapse_'.$value->id_laporan_kube.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
 																<div class="panel-body">';
-																foreach ($master_indikator as $key => $mi) {
-																	$detail_laporan = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_kube'=>$value->id_laporan_kube,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
-																		array(
-																			'table' => 'master_indikator b',
-																			'on' => 'a.id_master_indikator=b.id_master_indikator',
-																			'pos' => 'LEFT'
-																		),array(
-																			'table' => 'indikator c',
-																			'on' => 'a.indikator_progres_fisik=c.id_indikator',
-																			'pos' => 'LEFT'
-																		)
-																	))->result();
-																	echo '<h4><b>'.$mi->master_indikator.'</b></h4>';
-																	echo '<b>Progres Fisik : </b><br>';
-																	foreach ($detail_laporan as $key => $dl) {
-																		echo $dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';
+																foreach ($detail_laporan as $key => $dl) {
+																	echo'<h4>'.$dl->master_indikator.'</h4>';
+																	echo'<p><b>Indikator</b> ';
+																	if($dl->indikator_progres_fisik==NULL){
+																		echo'';
+																	}else{
+																		$get_indikator = explode(',',$dl->indikator_progres_fisik);
+																		$data_tampung = array();
+																		for ($i=0; $i < count($get_indikator); $i++) {
+																			$indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.id_indikator'=>$get_indikator[$i]))->row();
+																			$data_tampung[] = $indikator->indikator;
+																		}
+																		$data_tampil_indikator = implode(', ',$data_tampung);
+																		echo $data_tampil_indikator;
 																	}
-																	$detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_kube'=>$value->id_laporan_kube,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
-																		'table' => 'master_indikator b',
-																		'on' => 'a.id_master_indikator=b.id_master_indikator',
-																		'pos' => 'LEFT'
-																	))->row();
-																	echo '<b>Progres Keuangan : </b>Rp '.number_format($detail_laporan_aspek_keuangan->progres_keuangan,2).'<br>';
+																	echo'</p>';
+																	echo'<p><b>Penjelasan Progres Fisik</b> '.$dl->penjelasan_progres_fisik.'</p>';
+																	echo'<p><b>Progres Keuangan</b> Rp '.number_format($dl->progres_keuangan,2).'</p>';
 																}
-																// foreach ($detail_laporan as $key => $dl) {
-																// 	echo '<b>'.$dl->master_indikator.'</b> - '.$dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';
-																// }
-																// echo '<hr>';
-																// foreach ($detail_laporan_aspek_keuangan as $key => $d_l_a_k) {
-																// 	echo $d_l_a_k->master_indikator.' : Rp '.number_format($d_l_a_k->progres_keuangan,2).'<br>';
-																// }
 															echo'</div>
 															</div>
 														</div>
