@@ -78,16 +78,36 @@
 
 		// Pengambilan data dari database
 		<?php
-			foreach ($data_marker as $key => $value) {
+			foreach ($data_all as $key => $value) {
 				$nama = $value->nm_desa;
 				$lat = $value->lintang;
 				$lon = $value->bujur;
 				$id = $value->id_desa;
 				$nama_file = '';
 				$style = 'style="text-align: center"';
+				$style_td = 'style="text-align: left"';
+				$class_table = 'class="table"';
 				$id_enkrip = md5($id);
-				$url = site_url('admin_side/peta_kecamatan/'.$id_enkrip);
-				echo ("addMarker($lat, $lon, '<div $style><b>$nama</b><br>3,980,222 (21%)<hr><a href=$url>Klik disini untuk data detail</a></div>');\n");
+				// echo ("addMarker($lat, $lon, '<div $style><b>$nama</b><br>3,980,222 (21%)<hr><a href=$url>Klik disini untuk data detail</a></div>');\n");
+				$persentase_kube = "0.00";
+				if($value->jumlah_kube=='0'){
+					echo'';
+				}else{
+					$persentase_kube = number_format(($value->persentase_realisasi_kube)/($value->jumlah_kube),2);
+				}
+				$persentase_rutilahu = "0.00";
+				if($value->jumlah_rutilahu=='0'){
+					echo'';
+				}else{
+					$persentase_rutilahu = number_format(($value->persentase_realisasi_rutilahu)/($value->jumlah_rutilahu),2);
+				}
+				$persentase_sarling = "0.00";
+				if($value->jumlah_sarling=='0'){
+					echo'';
+				}else{
+					$persentase_sarling = number_format(($value->persentase_realisasi_sarling)/($value->jumlah_sarling),2);
+				}
+				echo ("addMarker($lat, $lon, '<div $style><h3><b>$nama</b></h3><br><table $class_table><tbody><tr><td $style_td> Persentase Realisasi KUBE </td><td> $persentase_kube% </td></tr><tr><td $style_td> Persentase Realisasi RUTILAHU </td><td> $persentase_rutilahu% </td></tr><tr><td $style_td> Persentase Realisasi SARLING </td><td> $persentase_sarling% </td></tr><tr><td></td><td></td></tr><tr></tbody></table></div>');\n");
 			}
 		?>
 
@@ -122,189 +142,112 @@
 	google.maps.event.addDomListener(window, 'load', initMap);
 </script>
 
-<div class="c-content-contact-1 c-opt-1">
-	</div>
-</div>
-<div class="row">
-	<br>
-	<div class="tabbable-custom nav-justified">
-		<ul class="nav nav-tabs nav-justified">
-			<li class="active">
-				<a href="#tab_1_1_1" data-toggle="tab" aria-expanded="true"> Laporan Program Kube (Kelompok Usaha Bersama) </a>
-			</li>
-			<li class="">
-				<a href="#tab_1_1_4" data-toggle="tab" aria-expanded="false"> Laporan Program Rutilahu (Rumah Tidak Layak Huni) </a>
-			</li>
-		</ul>
-		<div class="tab-content">
-			<div class="tab-pane active" id="tab_1_1_1">
-				<!-- <div class="cbp-l-project-details-title">
-					<span>Keterangan Data</span>
-				</div> -->
-				<div class="cbp-l-project-details-list" style="text-align: center;">
-					<table class="table">
-						<thead>
-							<tr>
-								<th style='text-align: center'>#</th>
-								<th style='text-align: center'>Nama Kelurahan</th>
-								<th style='text-align: center'>Jumlah UMKM</th>
-								<th style='text-align: center'>Bidang Usaha Terbesar</th>
-								<th style='text-align: center'>Aksi</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php
-							$no = 1;
-							foreach ($data_marker as $key => $value) {
-							?>
-							<tr>
-								<td><?= $no++; ?>.</td>
-								<td><?= $value->nm_desa; ?></td>
-								<td><?= number_format($value->jumlah_umkm).' UMKM'; ?></td>
-								<td><?= $value->bidang_usaha_terbesar; ?></td>
-								<td>
-									<div class="btn-group" style="text-align: center;">
-										<button class="btn btn-xs green" type="button"> Detail Data
-											<!-- <i class="fa fa-eye"></i> -->
-										</button>
-									</div>
-								</td>
-							</tr><?php } ?>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div class="tab-pane" id="tab_1_1_4">
-				<!-- <div class="cbp-l-project-details-title">
-					<span>Keterangan Data</span>
-				</div> -->
-				<div class="cbp-l-project-details-list" style="text-align: justify;">
-					<table class="table">
-						<tbody>
-							<tr class="header">
-								<td class="idx"></td>
-								<td class="idx">#</td>
-								<td class="name">Wilayah</td>
-								<td class="sum pas1">Rumah Tidak Layak Huni</td>
-								<td class="sum pas2">Rumah Layak Huni</td>
-								<td class="sum sah">Terdata</td>
-								<td class="sum tsah">Estimasi Belum Terdata</td>
-							</tr>
-							<?php
-							$no=1;
-							foreach ($data_marker as $key => $value) {
-							?>
-							<tr class="row">
-								<td class="idx"><?= $no++; ?>.</td>
-								<td class="name darken">
-									<a href="#pilpres:1"><?= $value->nm_desa ?></a>
-								</td>
-								<td class="sum pas pas1 per ">
-									<span class="abs"><?= number_format($value->rutilahu).' Rumah'; ?></span>
-								</td>
-								<td class="sum pas pas2 per win">
-									<span class="abs"><?= number_format($value->rulahu).' Rumah'; ?></span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah"><?= number_format($value->terdata).' Rumah'; ?></span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah"><?= number_format($value->estimasi_belum_terdata).' Rumah'; ?></span>
-								</td>
-							</tr><?php } ?>
-							<!-- <tr class="row">
-								<td class="idx">1.</td>
-								<td class="name darken">
-									<a href="#pilpres:1">Kamal Muara</a>
-								</td>
-								<td class="sum pas pas1 per ">
-									<span class="abs">397.188</span><span class="per"> (14,46%)</span>
-								</td>
-								<td class="sum pas pas2 per win">
-									<span class="abs">2.349.288</span><span class="per"> (85,54%)</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">2.740.814</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">89.733</span>
-								</td>
-							</tr>
-							<tr class="row">
-								<td class="idx">2.</td>
-								<td class="name darken">
-									<a href="#pilpres:6728">Kapuk Muara</a>
-								</td>
-								<td class="sum pas pas1 per win">
-									<span class="abs">3.878.670</span><span class="per"> (52,19%)</span>
-								</td>
-								<td class="sum pas pas2 per ">
-									<span class="abs">3.553.749</span><span class="per"> (47,81%)</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">7.405.496</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">134.702</span>
-								</td>
-							</tr>
-							<tr class="row">
-								<td class="idx">3</td>
-								<td class="name darken">
-									<a href="#pilpres:12920">Pluit</a>
-								</td>
-								<td class="sum pas pas1 per ">
-									<span class="abs">404.728</span><span class="per"> (14,05%)</span>
-								</td>
-								<td class="sum pas pas2 per win">
-									<span class="abs">2.476.300</span><span class="per"> (85,95%)</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">2.879.305</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">43.324</span>
-								</td>
-							</tr>
-							<tr class="row">
-								<td class="idx">4</td>
-								<td class="name darken">
-									<a href="#pilpres:12920">Penjagalan</a>
-								</td>
-								<td class="sum pas pas1 per ">
-									<span class="abs">94.728</span><span class="per"> (10,96%)</span>
-								</td>
-								<td class="sum pas pas2 per win">
-									<span class="abs">1.321.333</span><span class="per"> (64,71%)</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">1.123.305</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">43.324</span>
-								</td>
-							</tr>
-							<tr class="row">
-								<td class="idx">5</td>
-								<td class="name darken">
-									<a href="#pilpres:12920">Penjaringan</a>
-								</td>
-								<td class="sum pas pas1 per ">
-									<span class="abs">404.728</span><span class="per"> (14,05%)</span>
-								</td>
-								<td class="sum pas pas2 per win">
-									<span class="abs">2.476.300</span><span class="per"> (85,95%)</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">2.879.305</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">43.324</span>
-								</td>
-							</tr> -->
-						</tbody>
-					</table>
-				</div>
+<div class="page-content-inner">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="portlet light ">
+				<div class="portlet-body">
+					<div class="table-toolbar">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="tabbable-line">
+									<table class="table table-striped table-bordered" id="tbl1">
+										<thead>
+											<tr>
+												<th style="text-align: center;" width="4%"> # </th>
+												<th style="text-align: center;"> Kelurahan/ Desa </th>
+												<th style="text-align: center;"> Realisasi Kube </th>
+												<th style="text-align: center;"> Realisasi Rutilahu </th>
+												<th style="text-align: center;"> Realisasi Sarling </th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php
+											$no = 1;
+											foreach ($data_all as $key => $value) {
+												$persentase_kube = 0;
+												$persentase_fisik_kube = 0;
+												$anggaran_kube = 0;
+												$persentase_anggaran_kube = 0;
+												if($value->jumlah_kube=='0'){
+													echo'';
+												}else{
+													$persentase_kube = ($value->persentase_realisasi_kube)/($value->jumlah_kube);
+													$persentase_fisik_kube = ($value->persentase_fisik_kube)/($value->jumlah_kube);
+													$anggaran_kube = ($value->anggaran_kube)/($value->jumlah_kube);
+													$persentase_anggaran_kube = ($value->persentase_anggaran_kube)/($value->jumlah_kube);
+												}
+												$persentase_rutilahu = 0;
+												$persentase_fisik_rutilahu = 0;
+												$anggaran_rutilahu = 0;
+												$persentase_anggaran_rutilahu = 0;
+												if($value->jumlah_rutilahu=='0'){
+													echo'';
+												}else{
+													$persentase_rutilahu = ($value->persentase_realisasi_rutilahu)/($value->jumlah_rutilahu);
+													$persentase_fisik_rutilahu = ($value->persentase_fisik_rutilahu)/($value->jumlah_rutilahu);
+													$anggaran_rutilahu = ($value->anggaran_rutilahu)/($value->jumlah_rutilahu);
+													$persentase_anggaran_rutilahu = ($value->persentase_anggaran_rutilahu)/($value->jumlah_rutilahu);
+												}
+												$persentase_sarling = 0;
+												$persentase_fisik_sarling = 0;
+												$anggaran_sarling = 0;
+												$persentase_anggaran_sarling = 0;
+												if($value->jumlah_sarling=='0'){
+													echo'';
+												}else{
+													$persentase_sarling = ($value->persentase_realisasi_sarling)/($value->jumlah_sarling);
+													$persentase_fisik_sarling = ($value->persentase_fisik_sarling)/($value->jumlah_sarling);
+													$anggaran_sarling = ($value->anggaran_sarling)/($value->jumlah_sarling);
+													$persentase_anggaran_sarling = ($value->persentase_anggaran_sarling)/($value->jumlah_sarling);
+												}
+												echo'
+												<tr>
+													<td style="text-align: center;">'.$no++.'.</td>
+													<td>'.$value->nm_desa.'</td>
+													<td style="text-align: center;">'.number_format($persentase_kube,2).'%</td>
+													<td style="text-align: center;">'.number_format($persentase_rutilahu,2).'%</td>
+													<td style="text-align: center;">'.number_format($persentase_sarling,2).'%</td>
+												</tr>
+												<tr>
+													<td colspan="5">
+														<div class="panel-group accordion" id="accordion'.$value->id_desa.'">
+															<div class="panel panel-default">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion'.$value->id_desa.'" href="#collapse_'.$value->id_desa.'_1" aria-expanded="false"> Detail Data </a>
+																	</h4>
+																</div>
+																<div id="collapse_'.$value->id_desa.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+																	<div class="panel-body">
+																	<h4><b>Kube (Kelompok Usaha Bersama)</b></h4>
+																	- Jumlah Kube : '.number_format($value->jumlah_kube).' Kelompok<br>
+																	- Rata-rata progres aspek fisik per kelompok '.number_format($persentase_fisik_kube,2).'%<br>
+																	- Rata-rata penyerapan anggaran tiap kelompok sebesar Rp '.number_format($anggaran_kube,2).' ('.number_format($persentase_anggaran_kube,2).'%)
+																	<h4><b>Rutilahu (Rumah Tidak Layak Huni)</b></h4>
+																	- Jumlah Rutilahu : '.number_format($value->jumlah_rutilahu).' Kelompok<br>
+																	- Rata-rata progres aspek fisik per kelompok '.number_format($persentase_fisik_rutilahu,2).'%<br>
+																	- Rata-rata penyerapan anggaran tiap kelompok sebesar Rp '.number_format($anggaran_rutilahu,2).' ('.number_format($persentase_anggaran_rutilahu,2).'%)
+																	<h4><b>Sarling (Sarana Lingkungan)</b></h4>
+																	- Jumlah Sarling : '.number_format($value->jumlah_sarling).' Tim<br>
+																	- Rata-rata progres aspek fisik per tim '.number_format($persentase_fisik_sarling,2).'%<br>
+																	- Rata-rata penyerapan anggaran tiap tim sebesar Rp '.number_format($anggaran_sarling,2).' ('.number_format($persentase_anggaran_sarling,2).'%)
+																	</div>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												';
+											}
+											?>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>		
 			</div>
 		</div>
 	</div>

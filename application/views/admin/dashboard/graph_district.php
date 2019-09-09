@@ -114,13 +114,6 @@
 								</script>
 								<div id="g"></div>
 								<div class="tabbable-line">
-									<div class="table-toolbar">
-										<div class="row">
-											<div class="col-md-6">
-												<a data-toggle="modal" data-target="#tambahdataanggota" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
-											</div>
-										</div>
-									</div>
 									<table class="table table-striped table-bordered" id="tbl1">
 										<thead>
 											<tr>

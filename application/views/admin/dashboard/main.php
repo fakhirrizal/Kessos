@@ -78,7 +78,7 @@
 
 		// Pengambilan data dari database
 		<?php
-			foreach ($data_marker as $key => $value) {
+			foreach ($data_all as $key => $value) {
 				$nama = $value->nm_provinsi;
 				$lat = $value->lintang;
 				$lon = $value->bujur;
@@ -88,7 +88,25 @@
 				$style_td = 'style="text-align: left"';
 				$class_table = 'class="table"';
 				$id_enkrip = md5($id);
-				echo ("addMarker($lat, $lon, '<div $style><h3><b>$nama</b></h3><br><table $class_table><tbody><tr><td $style_td> Persentase Realisasi KUBE </td><td> 30% </td></tr><tr><td $style_td> Persentase Realisasi RUTILAHU </td><td> 30% </td></tr><tr><td $style_td> Persentase Realisasi SARLING </td><td> 30% </td></tr><tr><td></td><td></td></tr><tr></tbody></table><a href=peta_provinsi/$id_enkrip>Klik disini untuk data detail</a></div>');\n");
+				$persentase_kube = "0.00";
+				if($value->jumlah_kube=='0'){
+					echo'';
+				}else{
+					$persentase_kube = number_format(($value->persentase_realisasi_kube)/($value->jumlah_kube),2);
+				}
+				$persentase_rutilahu = "0.00";
+				if($value->jumlah_rutilahu=='0'){
+					echo'';
+				}else{
+					$persentase_rutilahu = number_format(($value->persentase_realisasi_rutilahu)/($value->jumlah_rutilahu),2);
+				}
+				$persentase_sarling = "0.00";
+				if($value->jumlah_sarling=='0'){
+					echo'';
+				}else{
+					$persentase_sarling = number_format(($value->persentase_realisasi_sarling)/($value->jumlah_sarling),2);
+				}
+				echo ("addMarker($lat, $lon, '<div $style><h3><b>$nama</b></h3><br><table $class_table><tbody><tr><td $style_td> Persentase Realisasi KUBE </td><td> $persentase_kube% </td></tr><tr><td $style_td> Persentase Realisasi RUTILAHU </td><td> $persentase_rutilahu% </td></tr><tr><td $style_td> Persentase Realisasi SARLING </td><td> $persentase_sarling% </td></tr><tr><td></td><td></td></tr><tr></tbody></table><a href=peta_provinsi/$id_enkrip>Klik disini untuk data detail</a></div>');\n");
 			}
 		?>
 
@@ -123,266 +141,117 @@
 	google.maps.event.addDomListener(window, 'load', initMap);
 </script>
 
-<div class="c-content-contact-1 c-opt-1">
-	</div>
-</div>
-<div class="row">
-	<br>
-	<div class="tabbable-custom nav-justified">
-		<ul class="nav nav-tabs nav-justified">
-			<li class="active">
-				<a href="#tab_1_1_1" data-toggle="tab" aria-expanded="true"> Laporan Program Kube (Kelompok Usaha Bersama) </a>
-			</li>
-			<li class="">
-				<a href="#tab_1_1_2" data-toggle="tab" aria-expanded="false"> Laporan Program Rutilahu (Rumah Tidak Layak Huni) </a>
-			</li>
-			<li class="">
-				<a href="#tab_1_1_3" data-toggle="tab" aria-expanded="false"> Laporan Program Sarling (Sarana Lingkungan) </a>
-			</li>
-		</ul>
-		<div class="tab-content">
-			<div class="tab-pane active" id="tab_1_1_1">
-				<!-- <div class="cbp-l-project-details-title">
-					<span>Keterangan Data</span>
-				</div> -->
-				<div class="cbp-l-project-details-list" style="text-align: center;">
-					<table class="table">
-						<thead>
-							<tr>
-								<th style='text-align: center'>#</th>
-								<th style='text-align: center'>Nama Provinsi</th>
-								<th style='text-align: center'>Rencana Kube</th>
-								<th style='text-align: center'>Realisasi Kube</th>
-								<th style='text-align: center'>Rencana Keuangan</th>
-								<th style='text-align: center'>Realisasi Keuangan</th>
-								<th style='text-align: center'>Realisasi Fisik</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1.</td>
-								<td>Jawa Tengah</td>
-								<td>2.980</td>
-								<td>12.009</td>
-								<td>2.980</td>
-								<td>29.81 %</td>
-								<td>11.11 %</td>
-								<!-- <td>
-									<div class="btn-group" style="text-align: center;">
-										<button class="btn btn-xs green" type="button"> Detail Data
-											<i class="fa fa-eye"></i>
-										</button>
-									</div>
-								</td> -->
-							</tr>
-							<tr>
-								<td>2.</td>
-								<td>Jawa Barat</td>
-								<td>4.107</td>
-								<td>90.009</td>
-								<td>4.107</td>
-								<td>41.07 %</td>
-								<td>90.01 %</td>
-								<!-- <td>
-									<div class="btn-group" style="text-align: center;">
-										<button class="btn btn-xs green" type="button"> Detail Data
-											<i class="fa fa-eye"></i>
-										</button>
-									</div>
-								</td> -->
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div class="tab-pane" id="tab_1_1_2">
-				<!-- <div class="cbp-l-project-details-title">
-					<span>Keterangan Data</span>
-				</div> -->
-				<div class="cbp-l-project-details-list" style="text-align: justify;">
-					<table class="table">
-						<tbody>
-							<tr class="header">
-								<td class="idx"></td>
-								<td class="idx">#</td>
-								<td class="name">Nama Provinsi</td>
-								<td class="sum pas1">Rencana RTLH</td>
-								<td class="sum pas2">Realisasi RLTH</td>
-								<td class="sum sah">Rencana Keuangan</td>
-								<td class="sum tsah">Realisasi Keuangan</td>
-								<td class="sum tsah">Realisasi Fisik</td>
-							</tr>
-							<tr class="row">
-								<td class="idx">1.</td>
-								<td class="name darken">
-									<a href="#pilpres:1">ACEH</a>
-								</td>
-								<td class="sum pas pas1 per ">
-									<span class="abs">397.188</span>
-								</td>
-								<td class="sum pas pas2 per win">
-									<span class="abs">2.349.288</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">2.740.814</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">89.73 %</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">89.73 %</span>
-								</td>
-								<!-- <td>
-									<div class="btn-group" style="text-align: center;">
-										<button class="btn btn-xs green" type="button"> Detail Data
-											<i class="fa fa-eye"></i>
-										</button>
-									</div>
-								</td> -->
-							</tr>
-							<tr class="row">
-								<td class="idx">2.</td>
-								<td class="name darken">
-									<a href="#pilpres:6728">SUMATERA UTARA</a>
-								</td>
-								<td class="sum pas pas1 per win">
-									<span class="abs">3.878.670</span>
-								</td>
-								<td class="sum pas pas2 per ">
-									<span class="abs">3.553.749</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">7.405.496</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">14.71 %</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">43.31 %</span>
-								</td>
-								<!-- <td>
-									<div class="btn-group" style="text-align: center;">
-										<button class="btn btn-xs green" type="button"> Detail Data
-											<i class="fa fa-eye"></i>
-										</button>
-									</div>
-								</td> -->
-							</tr>
-							<tr class="row">
-								<td class="idx">3</td>
-								<td class="name darken">
-									<a href="#pilpres:12920">SUMATERA BARAT</a>
-								</td>
-								<td class="sum pas pas1 per ">
-									<span class="abs">404.728</span>
-								</td>
-								<td class="sum pas pas2 per win">
-									<span class="abs">2.476.300</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">2.879.305</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">43.32 %</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">43.32 %</span>
-								</td>
-								<!-- <td>
-									<div class="btn-group" style="text-align: center;">
-										<button class="btn btn-xs green" type="button"> Detail Data
-											<i class="fa fa-eye"></i>
-										</button>
-									</div>
-								</td> -->
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-			<div class="tab-pane" id="tab_1_1_3">
-				<!-- <div class="cbp-l-project-details-title">
-					<span>Keterangan Data</span>
-				</div> -->
-				<div class="cbp-l-project-details-list" style="text-align: justify;">
-					<table class="table">
-						<tbody>
-							<tr class="header">
-								<td class="idx"></td>
-								<td class="idx">#</td>
-								<td class="name">Nama Provinsi</td>
-								<td class="sum pas1">Rencana Sarling</td>
-								<td class="sum pas2">Realisasi Sarling</td>
-								<td class="sum sah">Rencana Keuangan</td>
-								<td class="sum tsah">Realisasi Keuangan</td>
-								<td>Realisasi Fisik</td>
-							</tr>
-							<tr class="row">
-								<td class="idx">1.</td>
-								<td class="name darken">
-									<a href="#pilpres:1">ACEH</a>
-								</td>
-								<td class="sum pas pas1 per ">
-									<span class="abs">397.188</span>
-								</td>
-								<td class="sum pas pas2 per win">
-									<span class="abs">2.349.288</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">2.740.814</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">89.73 %</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">89.73 %</span>
-								</td>
-							</tr>
-							<tr class="row">
-								<td class="idx">2.</td>
-								<td class="name darken">
-									<a href="#pilpres:6728">SUMATERA UTARA</a>
-								</td>
-								<td class="sum pas pas1 per win">
-									<span class="abs">3.878.670</span>
-								</td>
-								<td class="sum pas pas2 per ">
-									<span class="abs">3.553.749</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">7.405.496</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">14.70 %</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">13.70 %</span>
-								</td>
-							</tr>
-							<tr class="row">
-								<td class="idx">3</td>
-								<td class="name darken">
-									<a href="#pilpres:12920">SUMATERA BARAT</a>
-								</td>
-								<td class="sum pas pas1 per ">
-									<span class="abs">404.728</span>
-								</td>
-								<td class="sum pas pas2 per win">
-									<span class="abs">2.476.300</span>
-								</td>
-								<td class="sum sah error">
-									<span class="sah">2.879.305</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">43.32 %</span>
-								</td>
-								<td class="sum tsah">
-									<span class="tsah">43.32 %</span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+<div class="page-content-inner">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="portlet light ">
+				<div class="portlet-body">
+					<div class="table-toolbar">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="tabbable-line">
+									<table class="table table-striped table-bordered" id="tbl1">
+										<thead>
+											<tr>
+												<th style="text-align: center;" width="4%"> # </th>
+												<th style="text-align: center;"> Provinsi </th>
+												<th style="text-align: center;"> Realisasi Kube </th>
+												<th style="text-align: center;"> Realisasi Rutilahu </th>
+												<th style="text-align: center;"> Realisasi Sarling </th>
+												<th style="text-align: center;" width="7%"> Aksi </th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php
+											$no = 1;
+											foreach ($data_all as $key => $value) {
+												$persentase_kube = 0;
+												$persentase_fisik_kube = 0;
+												$anggaran_kube = 0;
+												$persentase_anggaran_kube = 0;
+												if($value->jumlah_kube=='0'){
+													echo'';
+												}else{
+													$persentase_kube = ($value->persentase_realisasi_kube)/($value->jumlah_kube);
+													$persentase_fisik_kube = ($value->persentase_fisik_kube)/($value->jumlah_kube);
+													$anggaran_kube = ($value->anggaran_kube)/($value->jumlah_kube);
+													$persentase_anggaran_kube = ($value->persentase_anggaran_kube)/($value->jumlah_kube);
+												}
+												$persentase_rutilahu = 0;
+												$persentase_fisik_rutilahu = 0;
+												$anggaran_rutilahu = 0;
+												$persentase_anggaran_rutilahu = 0;
+												if($value->jumlah_rutilahu=='0'){
+													echo'';
+												}else{
+													$persentase_rutilahu = ($value->persentase_realisasi_rutilahu)/($value->jumlah_rutilahu);
+													$persentase_fisik_rutilahu = ($value->persentase_fisik_rutilahu)/($value->jumlah_rutilahu);
+													$anggaran_rutilahu = ($value->anggaran_rutilahu)/($value->jumlah_rutilahu);
+													$persentase_anggaran_rutilahu = ($value->persentase_anggaran_rutilahu)/($value->jumlah_rutilahu);
+												}
+												$persentase_sarling = 0;
+												$persentase_fisik_sarling = 0;
+												$anggaran_sarling = 0;
+												$persentase_anggaran_sarling = 0;
+												if($value->jumlah_sarling=='0'){
+													echo'';
+												}else{
+													$persentase_sarling = ($value->persentase_realisasi_sarling)/($value->jumlah_sarling);
+													$persentase_fisik_sarling = ($value->persentase_fisik_sarling)/($value->jumlah_sarling);
+													$anggaran_sarling = ($value->anggaran_sarling)/($value->jumlah_sarling);
+													$persentase_anggaran_sarling = ($value->persentase_anggaran_sarling)/($value->jumlah_sarling);
+												}
+												echo'
+												<tr>
+													<td style="text-align: center;">'.$no++.'.</td>
+													<td><a href="'.site_url().'admin_side/peta_provinsi/'.md5($value->id_provinsi).'">'.$value->nm_provinsi.'</a></td>
+													<td style="text-align: center;">'.number_format($persentase_kube,2).'%</td>
+													<td style="text-align: center;">'.number_format($persentase_rutilahu,2).'%</td>
+													<td style="text-align: center;">'.number_format($persentase_sarling,2).'%</td>
+													<td style="text-align: center;">
+														<a class="btn btn-xs green" href="'.site_url().'admin_side/peta_provinsi/'.md5($value->id_provinsi).'">
+														<i class="icon-eye"></i> Detail Data </a>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="6">
+														<div class="panel-group accordion" id="accordion'.$value->id_provinsi.'">
+															<div class="panel panel-default">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion'.$value->id_provinsi.'" href="#collapse_'.$value->id_provinsi.'_1" aria-expanded="false"> Detail Data </a>
+																	</h4>
+																</div>
+																<div id="collapse_'.$value->id_provinsi.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+																	<div class="panel-body">
+																	<h4><b>Kube (Kelompok Usaha Bersama)</b></h4>
+																	- Jumlah Kube : '.number_format($value->jumlah_kube).' Kelompok<br>
+																	- Rata-rata progres aspek fisik per kelompok '.number_format($persentase_fisik_kube,2).'%<br>
+																	- Rata-rata penyerapan anggaran tiap kelompok sebesar Rp '.number_format($anggaran_kube,2).' ('.number_format($persentase_anggaran_kube,2).'%)
+																	<h4><b>Rutilahu (Rumah Tidak Layak Huni)</b></h4>
+																	- Jumlah Rutilahu : '.number_format($value->jumlah_rutilahu).' Kelompok<br>
+																	- Rata-rata progres aspek fisik per kelompok '.number_format($persentase_fisik_rutilahu,2).'%<br>
+																	- Rata-rata penyerapan anggaran tiap kelompok sebesar Rp '.number_format($anggaran_rutilahu,2).' ('.number_format($persentase_anggaran_rutilahu,2).'%)
+																	<h4><b>Sarling (Sarana Lingkungan)</b></h4>
+																	- Jumlah Sarling : '.number_format($value->jumlah_sarling).' Tim<br>
+																	- Rata-rata progres aspek fisik per tim '.number_format($persentase_fisik_sarling,2).'%<br>
+																	- Rata-rata penyerapan anggaran tiap tim sebesar Rp '.number_format($anggaran_sarling,2).' ('.number_format($persentase_anggaran_sarling,2).'%)
+																	</div>
+																</div>
+															</div>
+														</div>
+													</td>
+												</tr>
+												';
+											}
+											?>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>		
 			</div>
 		</div>
 	</div>

@@ -114,13 +114,6 @@
 								</script>
 								<div id="g"></div>
 								<div class="tabbable-line">
-									<div class="table-toolbar">
-										<div class="row">
-											<div class="col-md-6">
-												<a data-toggle="modal" data-target="#tambahdataanggota" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
-											</div>
-										</div>
-									</div>
 									<table class="table table-striped table-bordered" id="tbl1">
 										<thead>
 											<tr>
@@ -180,7 +173,7 @@
 													<td style="text-align: center;">'.number_format($persentase_rutilahu,2).'%</td>
 													<td style="text-align: center;">'.number_format($persentase_sarling,2).'%</td>
 													<td style="text-align: center;">
-														<a class="btn btn-xs green" href="'.site_url().'/min_side/dasbor_grafik_provinsi/'.md5($value->id_provinsi).'">
+														<a class="btn btn-xs green" href="'.site_url().'admin_side/dasbor_grafik_provinsi/'.md5($value->id_provinsi).'">
 														<i class="icon-eye"></i> Detail Data </a>
 													</td>
 												</tr>

@@ -59,12 +59,12 @@
                                         <img src="http://sikapdaya.kemsos.go.id/images/logo-with-text.png" alt="kemsos" class="img-responsive">
                                     </a>
                                 </div>
-                                <div class="col-md-8 col-sm-8 col-xs-12">
-                                    <h3><a href="https://www.kemsos.go.id"><strong>SiPKURUS</strong></a></h3>
-                                    <h3><a href="https://www.kemsos.go.id">Sistem Informasi Pelaporan Kube, RTLH, dan Sarling</a></h3>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <h3><strong>SIM-KRS</strong></h3>
+                                    <h3>Sistem Informasi Manajemen Kube, Rutilahu dan Sarling<br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
                                 </div>
                             </div>
-                            <div class="col-md-2 col-sm-2 col-xs-12">
+                            <div class="col-md-1 col-sm-1 col-xs-12">
                                 <a href="<?=base_url('login')?>" class="btn btn-danger">Manajemen <i class="icon-key"></i></a>
                             </div>
                         </div>
