@@ -307,7 +307,7 @@
 														<div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
-																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_1" href="#collapse_2_1_3"> <span class="label label-success">GET</span>&nbsp;{url}/anggota_kube?user_id={user_id}&id_kube={$id_kube} </a>
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_1" href="#collapse_2_1_3"> <span class="label label-success">GET</span>&nbsp;{url}/anggota_kube?user_id={$user_id}&id_kube={$id_kube} </a>
 																</h4>
 															</div>
 															<div id="collapse_2_1_3" class="panel-collapse in">
@@ -784,7 +784,7 @@
 														<div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
-																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_kube?id_kube={id_kube} </a>
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_kube?id_kube={$id_kube} </a>
 																</h4>
 															</div>
 															<div id="collapse_3_1_5" class="panel-collapse in">
@@ -830,10 +830,10 @@
 														<div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
-																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_kube?id_kube={id_kube} </a>
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_6"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_kube?id_laporan_kube={$id_laporan_kube} </a>
 																</h4>
 															</div>
-															<div id="collapse_3_1_5" class="panel-collapse in">
+															<div id="collapse_3_1_6" class="panel-collapse in">
 																<div class="panel-body">
 																	<p> Fungsi untuk mendapatkan rekap dari suatu kelompok kube yg telah melaporkan aktifitasnya, berikut data balikannya, </p>
 																	<code>
@@ -874,6 +874,31 @@
 																	<ol>
 																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
 																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_7"> <span class="label label-danger">GET</span>&nbsp;{url}/hapus_laporan?id_laporan_kube={$id_laporan_kube} </a>
+																</h4>
+															</div>
+															<div id="collapse_3_1_7" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menghapus data laporan Kube, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"message": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Keluaran dari field "<b>Message</b>" yaitu "<b>Success</b>", dan "<b>Failed</b>"</li>
 																	</ol>
 																	</p>
 																</div>
@@ -989,7 +1014,7 @@
 														<div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
-																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_rutilahu?id_rutilahu={id_rutilahu} </a>
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_rutilahu?id_rutilahu={$id_rutilahu} </a>
 																</h4>
 															</div>
 															<div id="collapse_3_2_5" class="panel-collapse in">
@@ -1035,10 +1060,10 @@
 														<div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
-																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_rutilahu?id_rutilahu={id_rutilahu} </a>
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_6"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_rutilahu?id_laporan_rutilahu={$id_laporan_rutilahu} </a>
 																</h4>
 															</div>
-															<div id="collapse_3_2_5" class="panel-collapse in">
+															<div id="collapse_3_2_6" class="panel-collapse in">
 																<div class="panel-body">
 																	<p> Fungsi untuk mendapatkan rekap dari suatu kelompok rutilahu yg telah melaporkan aktifitasnya, berikut data balikannya, </p>
 																	<code>
@@ -1079,6 +1104,31 @@
 																	<ol>
 																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
 																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_7"> <span class="label label-danger">GET</span>&nbsp;{url}/hapus_laporan?id_laporan_rutilahu={$id_laporan_rutilahu} </a>
+																</h4>
+															</div>
+															<div id="collapse_3_2_7" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menghapus data laporan Rutilahu, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"message": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Keluaran dari field "<b>Message</b>" yaitu "<b>Success</b>", dan "<b>Failed</b>"</li>
 																	</ol>
 																	</p>
 																</div>
@@ -1194,7 +1244,7 @@
 														<div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
-																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_sarling?id_sarling={id_sarling} </a>
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_sarling?id_sarling={$id_sarling} </a>
 																</h4>
 															</div>
 															<div id="collapse_3_3_5" class="panel-collapse in">
@@ -1240,10 +1290,10 @@
 														<div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
-																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_5"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_sarling?id_sarling={id_sarling} </a>
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_6"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_sarling?id_laporan_sarling={$id_laporan_sarling} </a>
 																</h4>
 															</div>
-															<div id="collapse_3_3_5" class="panel-collapse in">
+															<div id="collapse_3_3_6" class="panel-collapse in">
 																<div class="panel-body">
 																	<p> Fungsi untuk mendapatkan rekap dari suatu kelompok sarling yg telah melaporkan aktifitasnya, berikut data balikannya, </p>
 																	<code>
@@ -1284,6 +1334,31 @@
 																	<ol>
 																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
 																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_7"> <span class="label label-danger">GET</span>&nbsp;{url}/hapus_laporan?id_laporan_sarling={$id_laporan_sarling} </a>
+																</h4>
+															</div>
+															<div id="collapse_3_3_7" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menghapus data laporan Sarling, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"message": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Keluaran dari field "<b>Message</b>" yaitu "<b>Success</b>", dan "<b>Failed</b>"</li>
 																	</ol>
 																	</p>
 																</div>

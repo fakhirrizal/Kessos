@@ -32,13 +32,13 @@
 												text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
 											},
 											subtitle: {
-												text: 'Kube, Rutilahu, dan Sarling Periode 2019'
+												text: 'Kube, Rutilahu, dan Sarling Kecamatan <?= $data_kecamatan->nm_kecamatan; ?>'
 											},
 											xAxis: {
 												categories: [
 													<?php
 													foreach ($data_all as $key => $value) {
-														echo "'".$value->nm_provinsi."',";
+														echo "'".$value->nm_desa."',";
 													}
 													?>
 												]
@@ -125,11 +125,10 @@
 										<thead>
 											<tr>
 												<th style="text-align: center;" width="4%"> # </th>
-												<th style="text-align: center;"> Provinsi </th>
+												<th style="text-align: center;"> Kelurahan/ Desa </th>
 												<th style="text-align: center;"> Realisasi Kube </th>
 												<th style="text-align: center;"> Realisasi Rutilahu </th>
 												<th style="text-align: center;"> Realisasi Sarling </th>
-												<th style="text-align: center;" width="7%"> Aksi </th>
 											</tr>
 										</thead>
 										<tbody>
@@ -175,25 +174,21 @@
 												echo'
 												<tr>
 													<td style="text-align: center;">'.$no++.'.</td>
-													<td><a href="'.site_url().'admin_side/dasbor_grafik_provinsi/'.md5($value->id_provinsi).'">'.$value->nm_provinsi.'</a></td>
+													<td>'.$value->nm_desa.'</td>
 													<td style="text-align: center;">'.number_format($persentase_kube,2).'%</td>
 													<td style="text-align: center;">'.number_format($persentase_rutilahu,2).'%</td>
 													<td style="text-align: center;">'.number_format($persentase_sarling,2).'%</td>
-													<td style="text-align: center;">
-														<a class="btn btn-xs green" href="'.site_url().'/min_side/dasbor_grafik_provinsi/'.md5($value->id_provinsi).'">
-														<i class="icon-eye"></i> Detail Data </a>
-													</td>
 												</tr>
 												<tr>
-													<td colspan="6">
-														<div class="panel-group accordion" id="accordion'.$value->id_provinsi.'">
+													<td colspan="5">
+														<div class="panel-group accordion" id="accordion'.$value->id_desa.'">
 															<div class="panel panel-default">
 																<div class="panel-heading">
 																	<h4 class="panel-title">
-																		<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion'.$value->id_provinsi.'" href="#collapse_'.$value->id_provinsi.'_1" aria-expanded="false"> Detail Data </a>
+																		<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion'.$value->id_desa.'" href="#collapse_'.$value->id_desa.'_1" aria-expanded="false"> Detail Data </a>
 																	</h4>
 																</div>
-																<div id="collapse_'.$value->id_provinsi.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+																<div id="collapse_'.$value->id_desa.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
 																	<div class="panel-body">
 																	<h4><b>Kube (Kelompok Usaha Bersama)</b></h4>
 																	- Jumlah Kube : '.number_format($value->jumlah_kube).' Kelompok<br>
@@ -219,32 +214,6 @@
 										</tbody>
 									</table>
 								</div>
-								<!-- <table class="table table-striped table-bordered" id='data1'>
-									<thead>
-										<tr>			
-											<th>Nama</th>
-											<th>Alamat</th>
-											<th>Pekerjaan</th>
-											<th>Usia</th>
-											<th>Status</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>				
-											<td>Andi</td>
-											<td>Jakarta</td>
-											<td>Web Designer</td>
-											<td>21</td>
-											<td>Aktif</td>
-										</tr>
-									</tbody>
-								</table>
-
-								<script type="text/javascript">
-									$(document).ready(function(){
-										$('#data1').DataTable();
-									});
-								</script> -->
 							</div>
 						</div>
 					</div>

@@ -84,6 +84,9 @@ $route['admin_side/peta_kabupaten/(:any)'] = 'admin/Dashboard/city/$1';
 $route['admin_side/peta_kecamatan/(:any)'] = 'admin/Dashboard/sub_district/$1';
 
 $route['admin_side/dasbor_grafik'] = 'admin/Dashboard/main_graph';
+$route['admin_side/dasbor_grafik_provinsi/(:any)'] = 'admin/Dashboard/graph_province/$1';
+$route['admin_side/dasbor_grafik_kabupaten/(:any)'] = 'admin/Dashboard/graph_region/$1';
+$route['admin_side/dasbor_grafik_kecamatan/(:any)'] = 'admin/Dashboard/graph_district/$1';
 
 $route['admin_side/administrator'] = 'admin/Master/administrator_data';
 $route['admin_side/tambah_data_admin'] = 'admin/Master/add_administrator_data';
@@ -193,6 +196,8 @@ $route['api/laporan_kube'] = 'api/kube/Report';
 
 $route['api/rutilahu'] = 'api/rutilahu/Master';
 $route['api/laporan_rutilahu'] = 'api/rutilahu/Report';
+
+$route['api/hapus_laporan'] = 'api/Other/delete_report';
 
 /*
 | -------------------------------------------------------------------------
