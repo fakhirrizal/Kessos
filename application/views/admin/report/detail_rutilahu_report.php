@@ -172,17 +172,18 @@ $id_rutilahu = '';
 										$no = 1;
 										foreach ($data_detail_laporan as $key => $value) {
 											$get_tanggal = explode(' ',$value->created_at);
-											$master_indikator = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu),'a.id_master_indikator ASC','','','a.id_master_indikator',array(
-												array(
-													'table' => 'master_indikator b',
-													'on' => 'a.id_master_indikator=b.id_master_indikator',
-													'pos' => 'LEFT'
-												),array(
-													'table' => 'indikator c',
-													'on' => 'a.indikator_progres_fisik=c.id_indikator',
-													'pos' => 'LEFT'
-												)
-											))->result();
+											// $master_indikator = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu),'a.id_master_indikator ASC','','','a.id_master_indikator',array(
+											// 	array(
+											// 		'table' => 'master_indikator b',
+											// 		'on' => 'a.id_master_indikator=b.id_master_indikator',
+											// 		'pos' => 'LEFT'
+											// 	),array(
+											// 		'table' => 'indikator c',
+											// 		'on' => 'a.indikator_progres_fisik=c.id_indikator',
+											// 		'pos' => 'LEFT'
+											// 	)
+											// ))->result();
+											$master_indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
 											// $detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu),'a.id_master_indikator ASC','','','',array(
 											// 	'table' => 'master_indikator b',
 											// 	'on' => 'a.id_master_indikator=b.id_master_indikator',
@@ -236,17 +237,26 @@ $id_rutilahu = '';
 																			'pos' => 'LEFT'
 																		)
 																	))->result();
-																	echo '<h4><b>'.$mi->master_indikator.'</b></h4>';
-																	echo '<b>Progres Fisik : </b><br>';
-																	foreach ($detail_laporan as $key => $dl) {
-																		echo $dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';
-																	}
 																	$detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
 																		'table' => 'master_indikator b',
 																		'on' => 'a.id_master_indikator=b.id_master_indikator',
 																		'pos' => 'LEFT'
 																	))->row();
-																	echo '<b>Progres Keuangan : </b>Rp '.number_format($detail_laporan_aspek_keuangan->progres_keuangan,2).'<br>';
+																	if($detail_laporan==NULL AND $detail_laporan_aspek_keuangan==NULL){
+																		echo'';
+																	}else{
+																		echo '<h4><b>'.$mi->master_indikator.'</b></h4>';
+																		echo '<b>Progres Fisik : </b><br>';
+																		foreach ($detail_laporan as $key => $dl) {
+																			echo $dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';
+																		}
+																		// $detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
+																		// 	'table' => 'master_indikator b',
+																		// 	'on' => 'a.id_master_indikator=b.id_master_indikator',
+																		// 	'pos' => 'LEFT'
+																		// ))->row();
+																		echo '<b>Progres Keuangan : </b>Rp '.number_format($detail_laporan_aspek_keuangan->progres_keuangan,2).'<br>';
+																	}
 																}
 																// foreach ($detail_laporan as $key => $dl) {
 																// 	echo '<b>'.$dl->master_indikator.'</b> - '.$dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';

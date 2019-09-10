@@ -187,7 +187,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="hor-menu  ">
 						<ul class="nav navbar-nav">
 							<li class="menu-dropdown classic-menu-dropdown <?php if($parent=='home'){echo 'active';}else{echo '';} ?>">
-								<a href="<?php echo site_url('admin_side/beranda'); ?>"><i class="icon-home"></i> Beranda
+								<a href="<?php echo site_url('admin_side/beranda'); ?>"><i class="icon-bulb"></i> Profil
 								</a>
 							</li>
 							<!-- <li class="menu-dropdown classic-menu-dropdown <?php if($parent=='dashboard'){echo 'active';}else{echo '';} ?>">
@@ -288,10 +288,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<a href="<?php echo site_url('admin_side/log_activity'); ?>"><i class="fa fa-rss"></i> Log Activity
 								</a>
 							</li>
-							<li class="menu-dropdown classic-menu-dropdown <?php if($parent=='about'){echo 'active';}else{echo '';} ?>">
+							<!-- <li class="menu-dropdown classic-menu-dropdown <?php if($parent=='about'){echo 'active';}else{echo '';} ?>">
 								<a href="<?php echo site_url('admin_side/tentang_aplikasi'); ?>"><i class="icon-bulb"></i> Tentang Aplikasi
 								</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 					<!-- END MEGA MENU -->

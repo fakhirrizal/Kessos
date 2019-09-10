@@ -244,6 +244,167 @@ class Report extends CI_Controller {
         $this->load->view('admin/report/detail_kube_report',$data);
         $this->load->view('admin/template/footer');
     }
+    public function edit_kube_report(){
+        $data['parent'] = 'report';
+        $data['child'] = 'kube';
+        $data['grand_child'] = '';
+        $get_id_kube = $this->Main_model->getSelectedData('laporan_kube a', 'a.*,b.fullname',array('md5(a.id_laporan_kube)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
+            'table' => 'user_profile b',
+            'on' => 'a.user_id=b.user_id',
+            'pos' => 'LEFT'
+        ))->row();
+        $data['data_detail_laporan'] = $get_id_kube;
+        $data['status_laporan'] = $this->Main_model->getSelectedData('status_laporan_kube a', 'a.*', array('a.id_kube'=>$get_id_kube->id_kube))->row();
+        $data['data_utama'] = $this->Main_model->getSelectedData('kube a', 'a.*,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa,e.jenis_usaha', array('a.id_kube'=>$get_id_kube->id_kube,'a.deleted'=>'0'),'','','','',array(
+            array(
+                'table' => 'provinsi f',
+                'on' => 'a.id_provinsi=f.id_provinsi',
+                'pos' => 'left',
+            ),
+            array(
+                'table' => 'kabupaten b',
+                'on' => 'a.id_kabupaten=b.id_kabupaten',
+                'pos' => 'left',
+            ),
+            array(
+                'table' => 'kecamatan c',
+                'on' => 'a.id_kecamatan=c.id_kecamatan',
+                'pos' => 'left',
+            ),
+            array(
+                'table' => 'desa d',
+                'on' => 'a.id_desa=d.id_desa',
+                'pos' => 'left',
+            ),
+            array(
+				'table' => 'jenis_usaha e',
+				'on' => 'a.id_jenis_usaha=e.id_jenis_usaha',
+				'pos' => 'left'
+			)
+        ))->row();
+        $data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
+        $this->load->view('admin/template/header',$data);
+        $this->load->view('admin/report/edit_kube_report',$data);
+        $this->load->view('admin/template/footer');
+    }
+    public function update_kube_report(){
+        $this->db->trans_start();
+        $get_id_laporan_kube = $this->Main_model->getSelectedData('laporan_kube a', 'a.*', array('md5(a.id_laporan_kube)'=>$this->input->post('id_laporan_kube')))->row_array();
+        $get_data_kube = $this->Main_model->getSelectedData('kube a', 'a.*', array('md5(a.id_kube)'=>$this->input->post('id_kube')))->row();
+        $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $total_uang = 0;
+        $get_indikator = array();
+
+        foreach ($indikator as $key => $value) {
+            $push = $this->input->post('progres_keuangan_'.$value->id_master_indikator);
+            if($push==NULL){
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_keuangan a', 'a.*', array('md5(a.id_laporan_kube)'=>$this->input->post('id_laporan_kube'),'a.id_master_indikator'=>$value->id_master_indikator))->row();
+                if($check_value==NULL){
+                    echo'';
+                }else{
+                    $total_uang -= $check_value->progres_keuangan;
+                    $this->Main_model->deleteData('detail_laporan_kube_aspek_keuangan',array('id_detail_laporan_kube'=>$check_value->id_detail_laporan_kube));
+                }
+            }else{
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_keuangan a', 'a.*', array('md5(a.id_laporan_kube)'=>$this->input->post('id_laporan_kube'),'a.id_master_indikator'=>$value->id_master_indikator))->row();
+                if($check_value==NULL){
+                    $total_uang += $this->input->post('progres_keuangan_'.$value->id_master_indikator);
+                    $data_insert2b = array(
+                        'id_laporan_kube' => $get_id_laporan_kube['id_laporan_kube'],
+                        'id_master_indikator' => $value->id_master_indikator,
+                        'progres_keuangan' => $this->input->post('progres_keuangan_'.$value->id_master_indikator)
+                    );
+                    // print_r($data_insert2b);
+                    $this->Main_model->insertData('detail_laporan_kube_aspek_keuangan',$data_insert2b);
+                }else{
+                    $total_uang += $this->input->post('progres_keuangan_'.$value->id_master_indikator);
+                    $data_insert2b = array(
+                        'progres_keuangan' => $this->input->post('progres_keuangan_'.$value->id_master_indikator)
+                    );
+                    // print_r($data_insert2b);
+                    $this->Main_model->updateData('detail_laporan_kube_aspek_keuangan',$data_insert2b,array('id_detail_laporan_kube'=>$check_value->id_detail_laporan_kube));
+                }
+            }
+        }
+
+        foreach ($data_indikator as $key => $value) {
+            $push = $this->input->post('indikator_progres_fisik_'.$value->id_indikator);
+            if($push==NULL){
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_fisik a', 'a.*', array('md5(a.id_laporan_kube)'=>$this->input->post('id_laporan_kube'),'a.indikator_progres_fisik'=>$value->id_indikator))->row();
+                if($check_value==NULL){
+                    echo'';
+                }else{
+                    $this->Main_model->deleteData('detail_laporan_kube_aspek_fisik',array('id_detail_laporan_kube'=>$check_value->id_detail_laporan_kube));
+                }
+            }else{
+                array_push($get_indikator,implode(',',$this->input->post('indikator_progres_fisik_'.$value->id_indikator)));
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_fisik a', 'a.*', array('md5(a.id_laporan_kube)'=>$this->input->post('id_laporan_kube'),'a.indikator_progres_fisik'=>$value->id_indikator))->row();
+                if($check_value==NULL){
+                    $data_insert2a = array(
+                        'id_laporan_kube' => $get_id_laporan_kube['id_laporan_kube'],
+                        'id_master_indikator' => $value->id_master_indikator,
+                        'indikator_progres_fisik' => $value->id_indikator,
+                        'penjelasan_progres_fisik' => $this->input->post('penjelasan_progres_fisik_'.$value->id_indikator)
+                    );
+                    // print_r($data_insert2a);
+                    $this->Main_model->insertData('detail_laporan_kube_aspek_fisik',$data_insert2a);
+                }else{
+                    $data_insert2a = array(
+                        'penjelasan_progres_fisik' => $this->input->post('penjelasan_progres_fisik_'.$value->id_indikator)
+                    );
+                    // print_r($data_insert2a);
+                    $this->Main_model->updateData('detail_laporan_kube_aspek_fisik',$data_insert2a,array('id_detail_laporan_kube'=>$check_value->id_detail_laporan_kube));
+                }
+            }
+        }
+
+        $tampung_indikator = implode(',',$get_indikator);
+        $explode_indikator = explode(',',$tampung_indikator);
+        $persentase_fisik = (count($explode_indikator)/count($data_indikator))*100;
+        $data_insert1 = array(
+            'indikator' => $tampung_indikator,
+            'persentase_fisik' => $persentase_fisik,
+            'anggaran' => $total_uang,
+            'persentase_anggaran' => ($total_uang/$get_data_kube->rencana_anggaran)*100,
+            'persentase_realisasi' => ((($total_uang/$get_data_kube->rencana_anggaran)*100)+$persentase_fisik)/2,
+            'keterangan' => $this->input->post('keterangan')
+        );
+        // print_r($data_insert1);
+        $this->Main_model->updateData('laporan_kube',$data_insert1,array('id_laporan_kube'=>$get_id_laporan_kube['id_laporan_kube']));
+        
+        $get_total_uang = $this->Main_model->getSelectedData('kube a', 'a.*,(SELECT SUM(b.anggaran) FROM laporan_kube b WHERE b.id_kube=a.id_kube AND b.deleted="0") AS total_uang', array('md5(a.id_kube)'=>$this->input->post('id_kube'),'a.deleted'=>'0'))->row();
+        $get_total_indikator = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_fisik a', 'a.*', array('md5(b.id_kube)'=>$this->input->post('id_kube'),'b.deleted'=>'0'),'','','','a.indikator_progres_fisik',array(
+            'table' => 'laporan_kube b',
+            'on' => 'a.id_laporan_kube=b.id_laporan_kube',
+            'pos' => 'LEFT'
+        ))->result();
+        $total_indikator = array();
+        foreach ($get_total_indikator as $key => $value) {
+            array_push($total_indikator,$value->indikator_progres_fisik);
+        }
+        $persentase_realisasi = ((($get_total_uang->total_uang/$get_data_kube->rencana_anggaran)*100)+((count($total_indikator)/count($data_indikator))*100))/2;
+        $data_update1 = array(
+            'indikator' => implode(',',$total_indikator),
+            'persentase_fisik' => (count($total_indikator)/count($data_indikator))*100,
+            'anggaran' => $get_total_uang->total_uang,
+            'persentase_anggaran' => ($get_total_uang->total_uang/$get_data_kube->rencana_anggaran)*100,
+            'persentase_realisasi' => $persentase_realisasi
+        );
+        // print_r($data_update1);
+        $this->Main_model->updateData('status_laporan_kube',$data_update1,array('md5(id_kube)'=>$this->input->post('id_kube')));
+
+        $this->Main_model->log_activity($this->session->userdata('id'),'Updating data',"Update Kube's report data (".$get_data_kube->nama_tim.")",$this->session->userdata('location'));
+        $this->db->trans_complete();
+        if($this->db->trans_status() === false){
+            $this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diperbarui.<br /></div>' );
+            echo "<script>window.location='".base_url()."admin_side/ubah_data_laporan_kube/".$this->input->post('id_laporan_kube')."'</script>";
+        }
+        else{
+            $this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diperbarui.<br /></div>' );
+            echo "<script>window.location='".base_url()."admin_side/detil_laporan_kube/".$this->input->post('id_kube')."'</script>";
+        }
+    }
     public function delete_kube_report(){
         $this->db->trans_start();
         $get_data = $this->Main_model->getSelectedData('laporan_kube a', 'a.*',array('md5(a.id_laporan_kube)'=>$this->uri->segment(3)))->row();
@@ -519,6 +680,162 @@ class Report extends CI_Controller {
         $this->load->view('admin/template/header',$data);
         $this->load->view('admin/report/detail_rutilahu_report',$data);
         $this->load->view('admin/template/footer');
+    }
+    public function edit_rutilahu_report(){
+        $data['parent'] = 'report';
+        $data['child'] = 'rutilahu';
+        $data['grand_child'] = '';
+        $get_id_rutilahu = $this->Main_model->getSelectedData('laporan_rutilahu a', 'a.*,b.fullname',array('md5(a.id_laporan_rutilahu)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
+            'table' => 'user_profile b',
+            'on' => 'a.user_id=b.user_id',
+            'pos' => 'LEFT'
+        ))->row();
+        $data['data_detail_laporan'] = $get_id_rutilahu;
+        $data['status_laporan'] = $this->Main_model->getSelectedData('status_laporan_rutilahu a', 'a.*', array('a.id_rutilahu'=>$get_id_rutilahu->id_rutilahu))->row();
+        $data['data_utama'] = $this->Main_model->getSelectedData('rutilahu a', 'a.*,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('a.id_rutilahu'=>$get_id_rutilahu->id_rutilahu,'a.deleted'=>'0'),'','','','',array(
+            array(
+                'table' => 'provinsi f',
+                'on' => 'a.id_provinsi=f.id_provinsi',
+                'pos' => 'left',
+            ),
+            array(
+                'table' => 'kabupaten b',
+                'on' => 'a.id_kabupaten=b.id_kabupaten',
+                'pos' => 'left',
+            ),
+            array(
+                'table' => 'kecamatan c',
+                'on' => 'a.id_kecamatan=c.id_kecamatan',
+                'pos' => 'left',
+            ),
+            array(
+                'table' => 'desa d',
+                'on' => 'a.id_desa=d.id_desa',
+                'pos' => 'left',
+            )
+        ))->row();
+        $data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
+        $this->load->view('admin/template/header',$data);
+        $this->load->view('admin/report/edit_rutilahu_report',$data);
+        $this->load->view('admin/template/footer');
+    }
+    public function update_rutilahu_report(){
+        $this->db->trans_start();
+        $get_id_laporan_rutilahu = $this->Main_model->getSelectedData('laporan_rutilahu a', 'a.*', array('md5(a.id_laporan_rutilahu)'=>$this->input->post('id_laporan_rutilahu')))->row_array();
+        $get_data_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*', array('md5(a.id_rutilahu)'=>$this->input->post('id_rutilahu')))->row();
+        $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $total_uang = 0;
+        $get_indikator = array();
+
+        foreach ($indikator as $key => $value) {
+            $push = $this->input->post('progres_keuangan_'.$value->id_master_indikator);
+            if($push==NULL){
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_keuangan a', 'a.*', array('md5(a.id_laporan_rutilahu)'=>$this->input->post('id_laporan_rutilahu'),'a.id_master_indikator'=>$value->id_master_indikator))->row();
+                if($check_value==NULL){
+                    echo'';
+                }else{
+                    $total_uang -= $check_value->progres_keuangan;
+                    $this->Main_model->deleteData('detail_laporan_rutilahu_aspek_keuangan',array('id_detail_laporan_rutilahu'=>$check_value->id_detail_laporan_rutilahu));
+                }
+            }else{
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_keuangan a', 'a.*', array('md5(a.id_laporan_rutilahu)'=>$this->input->post('id_laporan_rutilahu'),'a.id_master_indikator'=>$value->id_master_indikator))->row();
+                if($check_value==NULL){
+                    $total_uang += $this->input->post('progres_keuangan_'.$value->id_master_indikator);
+                    $data_insert2b = array(
+                        'id_laporan_rutilahu' => $get_id_laporan_rutilahu['id_laporan_rutilahu'],
+                        'id_master_indikator' => $value->id_master_indikator,
+                        'progres_keuangan' => $this->input->post('progres_keuangan_'.$value->id_master_indikator)
+                    );
+                    // print_r($data_insert2b);
+                    $this->Main_model->insertData('detail_laporan_rutilahu_aspek_keuangan',$data_insert2b);
+                }else{
+                    $total_uang += $this->input->post('progres_keuangan_'.$value->id_master_indikator);
+                    $data_insert2b = array(
+                        'progres_keuangan' => $this->input->post('progres_keuangan_'.$value->id_master_indikator)
+                    );
+                    // print_r($data_insert2b);
+                    $this->Main_model->updateData('detail_laporan_rutilahu_aspek_keuangan',$data_insert2b,array('id_detail_laporan_rutilahu'=>$check_value->id_detail_laporan_rutilahu));
+                }
+            }
+        }
+
+        foreach ($data_indikator as $key => $value) {
+            $push = $this->input->post('indikator_progres_fisik_'.$value->id_indikator);
+            if($push==NULL){
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_fisik a', 'a.*', array('md5(a.id_laporan_rutilahu)'=>$this->input->post('id_laporan_rutilahu'),'a.indikator_progres_fisik'=>$value->id_indikator))->row();
+                if($check_value==NULL){
+                    echo'';
+                }else{
+                    $this->Main_model->deleteData('detail_laporan_rutilahu_aspek_fisik',array('id_detail_laporan_rutilahu'=>$check_value->id_detail_laporan_rutilahu));
+                }
+            }else{
+                array_push($get_indikator,implode(',',$this->input->post('indikator_progres_fisik_'.$value->id_indikator)));
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_fisik a', 'a.*', array('md5(a.id_laporan_rutilahu)'=>$this->input->post('id_laporan_rutilahu'),'a.indikator_progres_fisik'=>$value->id_indikator))->row();
+                if($check_value==NULL){
+                    $data_insert2a = array(
+                        'id_laporan_rutilahu' => $get_id_laporan_rutilahu['id_laporan_rutilahu'],
+                        'id_master_indikator' => $value->id_master_indikator,
+                        'indikator_progres_fisik' => $value->id_indikator,
+                        'penjelasan_progres_fisik' => $this->input->post('penjelasan_progres_fisik_'.$value->id_indikator)
+                    );
+                    // print_r($data_insert2a);
+                    $this->Main_model->insertData('detail_laporan_rutilahu_aspek_fisik',$data_insert2a);
+                }else{
+                    $data_insert2a = array(
+                        'penjelasan_progres_fisik' => $this->input->post('penjelasan_progres_fisik_'.$value->id_indikator)
+                    );
+                    // print_r($data_insert2a);
+                    $this->Main_model->updateData('detail_laporan_rutilahu_aspek_fisik',$data_insert2a,array('id_detail_laporan_rutilahu'=>$check_value->id_detail_laporan_rutilahu));
+                }
+            }
+        }
+
+        $tampung_indikator = implode(',',$get_indikator);
+        $explode_indikator = explode(',',$tampung_indikator);
+        $persentase_fisik = (count($explode_indikator)/count($data_indikator))*100;
+        $data_insert1 = array(
+            'indikator' => $tampung_indikator,
+            'persentase_fisik' => $persentase_fisik,
+            'anggaran' => $total_uang,
+            'persentase_anggaran' => ($total_uang/$get_data_rutilahu->rencana_anggaran)*100,
+            'persentase_realisasi' => ((($total_uang/$get_data_rutilahu->rencana_anggaran)*100)+$persentase_fisik)/2,
+            'keterangan' => $this->input->post('keterangan')
+        );
+        // print_r($data_insert1);
+        $this->Main_model->updateData('laporan_rutilahu',$data_insert1,array('id_laporan_rutilahu'=>$get_id_laporan_rutilahu['id_laporan_rutilahu']));
+        
+        $get_total_uang = $this->Main_model->getSelectedData('rutilahu a', 'a.*,(SELECT SUM(b.anggaran) FROM laporan_rutilahu b WHERE b.id_rutilahu=a.id_rutilahu AND b.deleted="0") AS total_uang', array('md5(a.id_rutilahu)'=>$this->input->post('id_rutilahu'),'a.deleted'=>'0'))->row();
+        $get_total_indikator = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_fisik a', 'a.*', array('md5(b.id_rutilahu)'=>$this->input->post('id_rutilahu'),'b.deleted'=>'0'),'','','','a.indikator_progres_fisik',array(
+            'table' => 'laporan_rutilahu b',
+            'on' => 'a.id_laporan_rutilahu=b.id_laporan_rutilahu',
+            'pos' => 'LEFT'
+        ))->result();
+        $total_indikator = array();
+        foreach ($get_total_indikator as $key => $value) {
+            array_push($total_indikator,$value->indikator_progres_fisik);
+        }
+        $persentase_realisasi = ((($get_total_uang->total_uang/$get_data_rutilahu->rencana_anggaran)*100)+((count($total_indikator)/count($data_indikator))*100))/2;
+        $data_update1 = array(
+            'indikator' => implode(',',$total_indikator),
+            'persentase_fisik' => (count($total_indikator)/count($data_indikator))*100,
+            'anggaran' => $get_total_uang->total_uang,
+            'persentase_anggaran' => ($get_total_uang->total_uang/$get_data_rutilahu->rencana_anggaran)*100,
+            'persentase_realisasi' => $persentase_realisasi
+        );
+        // print_r($data_update1);
+        $this->Main_model->updateData('status_laporan_rutilahu',$data_update1,array('md5(id_rutilahu)'=>$this->input->post('id_rutilahu')));
+
+        $this->Main_model->log_activity($this->session->userdata('id'),'Updating data',"Update Rutilahu's report data (".$get_data_rutilahu->nama_kelompok.")",$this->session->userdata('location'));
+        $this->db->trans_complete();
+        if($this->db->trans_status() === false){
+            $this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diperbarui.<br /></div>' );
+            echo "<script>window.location='".base_url()."admin_side/ubah_data_laporan_rutilahu/".$this->input->post('id_laporan_rutilahu')."'</script>";
+        }
+        else{
+            $this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diperbarui.<br /></div>' );
+            echo "<script>window.location='".base_url()."admin_side/detil_laporan_rutilahu/".$this->input->post('id_rutilahu')."'</script>";
+        }
     }
     public function delete_rutilahu_report(){
         $this->db->trans_start();
@@ -800,6 +1117,162 @@ class Report extends CI_Controller {
         $this->load->view('admin/template/header',$data);
         $this->load->view('admin/report/detail_sarling_report',$data);
         $this->load->view('admin/template/footer');
+    }
+    public function edit_sarling_report(){
+        $data['parent'] = 'report';
+        $data['child'] = 'sarling';
+        $data['grand_child'] = '';
+        $get_id_sarling = $this->Main_model->getSelectedData('laporan_sarling a', 'a.*,b.fullname',array('md5(a.id_laporan_sarling)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
+            'table' => 'user_profile b',
+            'on' => 'a.user_id=b.user_id',
+            'pos' => 'LEFT'
+        ))->row();
+        $data['data_detail_laporan'] = $get_id_sarling;
+        $data['status_laporan'] = $this->Main_model->getSelectedData('status_laporan_sarling a', 'a.*', array('a.id_sarling'=>$get_id_sarling->id_sarling))->row();
+        $data['data_utama'] = $this->Main_model->getSelectedData('sarling a', 'a.*,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('a.id_sarling'=>$get_id_sarling->id_sarling,'a.deleted'=>'0'),'','','','',array(
+            array(
+                'table' => 'provinsi f',
+                'on' => 'a.id_provinsi=f.id_provinsi',
+                'pos' => 'left',
+            ),
+            array(
+                'table' => 'kabupaten b',
+                'on' => 'a.id_kabupaten=b.id_kabupaten',
+                'pos' => 'left',
+            ),
+            array(
+                'table' => 'kecamatan c',
+                'on' => 'a.id_kecamatan=c.id_kecamatan',
+                'pos' => 'left',
+            ),
+            array(
+                'table' => 'desa d',
+                'on' => 'a.id_desa=d.id_desa',
+                'pos' => 'left',
+            )
+        ))->row();
+        $data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
+        $this->load->view('admin/template/header',$data);
+        $this->load->view('admin/report/edit_sarling_report',$data);
+        $this->load->view('admin/template/footer');
+    }
+    public function update_sarling_report(){
+        $this->db->trans_start();
+        $get_id_laporan_sarling = $this->Main_model->getSelectedData('laporan_sarling a', 'a.*', array('md5(a.id_laporan_sarling)'=>$this->input->post('id_laporan_sarling')))->row_array();
+        $get_data_sarling = $this->Main_model->getSelectedData('sarling a', 'a.*', array('md5(a.id_sarling)'=>$this->input->post('id_sarling')))->row();
+        $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $total_uang = 0;
+        $get_indikator = array();
+
+        foreach ($indikator as $key => $value) {
+            $push = $this->input->post('progres_keuangan_'.$value->id_master_indikator);
+            if($push==NULL){
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_sarling_aspek_keuangan a', 'a.*', array('md5(a.id_laporan_sarling)'=>$this->input->post('id_laporan_sarling'),'a.id_master_indikator'=>$value->id_master_indikator))->row();
+                if($check_value==NULL){
+                    echo'';
+                }else{
+                    $total_uang -= $check_value->progres_keuangan;
+                    $this->Main_model->deleteData('detail_laporan_sarling_aspek_keuangan',array('id_detail_laporan_sarling'=>$check_value->id_detail_laporan_sarling));
+                }
+            }else{
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_sarling_aspek_keuangan a', 'a.*', array('md5(a.id_laporan_sarling)'=>$this->input->post('id_laporan_sarling'),'a.id_master_indikator'=>$value->id_master_indikator))->row();
+                if($check_value==NULL){
+                    $total_uang += $this->input->post('progres_keuangan_'.$value->id_master_indikator);
+                    $data_insert2b = array(
+                        'id_laporan_sarling' => $get_id_laporan_sarling['id_laporan_sarling'],
+                        'id_master_indikator' => $value->id_master_indikator,
+                        'progres_keuangan' => $this->input->post('progres_keuangan_'.$value->id_master_indikator)
+                    );
+                    // print_r($data_insert2b);
+                    $this->Main_model->insertData('detail_laporan_sarling_aspek_keuangan',$data_insert2b);
+                }else{
+                    $total_uang += $this->input->post('progres_keuangan_'.$value->id_master_indikator);
+                    $data_insert2b = array(
+                        'progres_keuangan' => $this->input->post('progres_keuangan_'.$value->id_master_indikator)
+                    );
+                    // print_r($data_insert2b);
+                    $this->Main_model->updateData('detail_laporan_sarling_aspek_keuangan',$data_insert2b,array('id_detail_laporan_sarling'=>$check_value->id_detail_laporan_sarling));
+                }
+            }
+        }
+
+        foreach ($data_indikator as $key => $value) {
+            $push = $this->input->post('indikator_progres_fisik_'.$value->id_indikator);
+            if($push==NULL){
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_sarling_aspek_fisik a', 'a.*', array('md5(a.id_laporan_sarling)'=>$this->input->post('id_laporan_sarling'),'a.indikator_progres_fisik'=>$value->id_indikator))->row();
+                if($check_value==NULL){
+                    echo'';
+                }else{
+                    $this->Main_model->deleteData('detail_laporan_sarling_aspek_fisik',array('id_detail_laporan_sarling'=>$check_value->id_detail_laporan_sarling));
+                }
+            }else{
+                array_push($get_indikator,implode(',',$this->input->post('indikator_progres_fisik_'.$value->id_indikator)));
+                $check_value = $this->Main_model->getSelectedData('detail_laporan_sarling_aspek_fisik a', 'a.*', array('md5(a.id_laporan_sarling)'=>$this->input->post('id_laporan_sarling'),'a.indikator_progres_fisik'=>$value->id_indikator))->row();
+                if($check_value==NULL){
+                    $data_insert2a = array(
+                        'id_laporan_sarling' => $get_id_laporan_sarling['id_laporan_sarling'],
+                        'id_master_indikator' => $value->id_master_indikator,
+                        'indikator_progres_fisik' => $value->id_indikator,
+                        'penjelasan_progres_fisik' => $this->input->post('penjelasan_progres_fisik_'.$value->id_indikator)
+                    );
+                    // print_r($data_insert2a);
+                    $this->Main_model->insertData('detail_laporan_sarling_aspek_fisik',$data_insert2a);
+                }else{
+                    $data_insert2a = array(
+                        'penjelasan_progres_fisik' => $this->input->post('penjelasan_progres_fisik_'.$value->id_indikator)
+                    );
+                    // print_r($data_insert2a);
+                    $this->Main_model->updateData('detail_laporan_sarling_aspek_fisik',$data_insert2a,array('id_detail_laporan_sarling'=>$check_value->id_detail_laporan_sarling));
+                }
+            }
+        }
+
+        $tampung_indikator = implode(',',$get_indikator);
+        $explode_indikator = explode(',',$tampung_indikator);
+        $persentase_fisik = (count($explode_indikator)/count($data_indikator))*100;
+        $data_insert1 = array(
+            'indikator' => $tampung_indikator,
+            'persentase_fisik' => $persentase_fisik,
+            'anggaran' => $total_uang,
+            'persentase_anggaran' => ($total_uang/$get_data_sarling->rencana_anggaran)*100,
+            'persentase_realisasi' => ((($total_uang/$get_data_sarling->rencana_anggaran)*100)+$persentase_fisik)/2,
+            'keterangan' => $this->input->post('keterangan')
+        );
+        // print_r($data_insert1);
+        $this->Main_model->updateData('laporan_sarling',$data_insert1,array('id_laporan_sarling'=>$get_id_laporan_sarling['id_laporan_sarling']));
+        
+        $get_total_uang = $this->Main_model->getSelectedData('sarling a', 'a.*,(SELECT SUM(b.anggaran) FROM laporan_sarling b WHERE b.id_sarling=a.id_sarling AND b.deleted="0") AS total_uang', array('md5(a.id_sarling)'=>$this->input->post('id_sarling'),'a.deleted'=>'0'))->row();
+        $get_total_indikator = $this->Main_model->getSelectedData('detail_laporan_sarling_aspek_fisik a', 'a.*', array('md5(b.id_sarling)'=>$this->input->post('id_sarling'),'b.deleted'=>'0'),'','','','a.indikator_progres_fisik',array(
+            'table' => 'laporan_sarling b',
+            'on' => 'a.id_laporan_sarling=b.id_laporan_sarling',
+            'pos' => 'LEFT'
+        ))->result();
+        $total_indikator = array();
+        foreach ($get_total_indikator as $key => $value) {
+            array_push($total_indikator,$value->indikator_progres_fisik);
+        }
+        $persentase_realisasi = ((($get_total_uang->total_uang/$get_data_sarling->rencana_anggaran)*100)+((count($total_indikator)/count($data_indikator))*100))/2;
+        $data_update1 = array(
+            'indikator' => implode(',',$total_indikator),
+            'persentase_fisik' => (count($total_indikator)/count($data_indikator))*100,
+            'anggaran' => $get_total_uang->total_uang,
+            'persentase_anggaran' => ($get_total_uang->total_uang/$get_data_sarling->rencana_anggaran)*100,
+            'persentase_realisasi' => $persentase_realisasi
+        );
+        // print_r($data_update1);
+        $this->Main_model->updateData('status_laporan_sarling',$data_update1,array('md5(id_sarling)'=>$this->input->post('id_sarling')));
+
+        $this->Main_model->log_activity($this->session->userdata('id'),'Updating data',"Update Sarling's report data (".$get_data_sarling->nama_tim.")",$this->session->userdata('location'));
+        $this->db->trans_complete();
+        if($this->db->trans_status() === false){
+            $this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diperbarui.<br /></div>' );
+            echo "<script>window.location='".base_url()."admin_side/ubah_data_laporan_sarling/".$this->input->post('id_laporan_sarling')."'</script>";
+        }
+        else{
+            $this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diperbarui.<br /></div>' );
+            echo "<script>window.location='".base_url()."admin_side/detil_laporan_sarling/".$this->input->post('id_sarling')."'</script>";
+        }
     }
     public function delete_sarling_report(){
         $this->db->trans_start();

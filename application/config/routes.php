@@ -162,18 +162,24 @@ $route['admin_side/laporan_kube'] = 'admin/Report/kube';
 $route['admin_side/tambah_laporan_kube'] = 'admin/Report/add_kube_report';
 $route['admin_side/simpan_laporan_kube'] = 'admin/Report/save_kube_report';
 $route['admin_side/detil_laporan_kube/(:any)'] = 'admin/Report/detail_kube_report/$1';
+$route['admin_side/ubah_data_laporan_kube/(:any)'] = 'admin/Report/edit_kube_report/$1';
+$route['admin_side/perbarui_laporan_kube'] = 'admin/Report/update_kube_report';
 $route['admin_side/hapus_data_laporan_kube/(:any)'] = 'admin/Report/delete_kube_report/$1';
 
 $route['admin_side/laporan_rutilahu'] = 'admin/Report/rutilahu';
 $route['admin_side/tambah_laporan_rutilahu'] = 'admin/Report/add_rutilahu_report';
 $route['admin_side/simpan_laporan_rutilahu'] = 'admin/Report/save_rutilahu_report';
 $route['admin_side/detil_laporan_rutilahu/(:any)'] = 'admin/Report/detail_rutilahu_report/$1';
+$route['admin_side/ubah_data_laporan_rutilahu/(:any)'] = 'admin/Report/edit_rutilahu_report/$1';
+$route['admin_side/perbarui_laporan_rutilahu'] = 'admin/Report/update_rutilahu_report';
 $route['admin_side/hapus_data_laporan_rutilahu/(:any)'] = 'admin/Report/delete_rutilahu_report/$1';
 
 $route['admin_side/laporan_sarling'] = 'admin/Report/sarling';
 $route['admin_side/tambah_laporan_sarling'] = 'admin/Report/add_sarling_report';
 $route['admin_side/simpan_laporan_sarling'] = 'admin/Report/save_sarling_report';
 $route['admin_side/detil_laporan_sarling/(:any)'] = 'admin/Report/detail_sarling_report/$1';
+$route['admin_side/ubah_data_laporan_sarling/(:any)'] = 'admin/Report/edit_sarling_report/$1';
+$route['admin_side/perbarui_laporan_sarling'] = 'admin/Report/update_sarling_report';
 $route['admin_side/hapus_data_laporan_sarling/(:any)'] = 'admin/Report/delete_sarling_report/$1';
 
 /* REST API */
