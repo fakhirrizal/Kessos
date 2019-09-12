@@ -872,8 +872,54 @@
 																	<p>
 																	Keterangan:
 																	<ol>
-																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
-																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																		<li>Field <b>indikator</b> di array <b>data_utama</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
+																		<li>Array <b>progres_fisik</b> dan <b>progres_keuangan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_8"> <span class="label label-warning">PUT</span>&nbsp;{url}/laporan_kube </a>
+																</h4>
+															</div>
+															<div id="collapse_3_1_8" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mengubah data laporan kube, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_laporan_kube": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"keterangan": "string"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"progres_fisik": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator_progres_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_fisik": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			],<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>id_laporan_kube</b> digunakan sebagai parameter untuk mengubah data lain </li>
+																		<li>Array <b>progres_fisik</b> bisa memiliki lebih dari satu array </li>
+																		<li>Field <b>indikator_progres_fisik</b> hanya bisa 1 id_indikator sekali kirim data </li>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit) </li>
+																		<li>Array <b>progres_keuangan</b> bisa memiliki lebih dari satu array </li>
 																	</ol>
 																	</p>
 																</div>
@@ -1102,8 +1148,54 @@
 																	<p>
 																	Keterangan:
 																	<ol>
-																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
-																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																		<li>Field <b>indikator</b> di array <b>data_utama</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
+																		<li>Array <b>progres_fisik</b> dan <b>progres_keuangan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_8"> <span class="label label-warning">PUT</span>&nbsp;{url}/laporan_rutilahu </a>
+																</h4>
+															</div>
+															<div id="collapse_3_2_8" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mengubah data laporan rutilahu, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_laporan_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"keterangan": "string"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"progres_fisik": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator_progres_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_fisik": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			],<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>id_laporan_rutilahu</b> digunakan sebagai parameter untuk mengubah data lain </li>
+																		<li>Array <b>progres_fisik</b> bisa memiliki lebih dari satu array </li>
+																		<li>Field <b>indikator_progres_fisik</b> hanya bisa 1 id_indikator sekali kirim data </li>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit) </li>
+																		<li>Array <b>progres_keuangan</b> bisa memiliki lebih dari satu array </li>
 																	</ol>
 																	</p>
 																</div>
@@ -1332,8 +1424,54 @@
 																	<p>
 																	Keterangan:
 																	<ol>
-																		<li>Field <b>indikator</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
-																		<li>Array <b>data_laporan</b> bisa memiliki lebih dari satu array </li>
+																		<li>Field <b>indikator</b> di array <b>data_utama</b> berupa kumpulan id_indikator yang dipisahkan "<b>,</b>" </li>
+																		<li>Array <b>progres_fisik</b> dan <b>progres_keuangan</b> bisa memiliki lebih dari satu array </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_8"> <span class="label label-warning">PUT</span>&nbsp;{url}/laporan_sarling </a>
+																</h4>
+															</div>
+															<div id="collapse_3_3_8" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mengubah data laporan sarling, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_laporan_sarling": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"keterangan": "string"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"progres_fisik": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator_progres_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_fisik": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			],<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Field <b>id_laporan_sarling</b> digunakan sebagai parameter untuk mengubah data lain </li>
+																		<li>Array <b>progres_fisik</b> bisa memiliki lebih dari satu array </li>
+																		<li>Field <b>indikator_progres_fisik</b> hanya bisa 1 id_indikator sekali kirim data </li>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit) </li>
+																		<li>Array <b>progres_keuangan</b> bisa memiliki lebih dari satu array </li>
 																	</ol>
 																	</p>
 																</div>
@@ -1383,7 +1521,7 @@
 			</div>
 		</div>
 		<div class="page-footer">
-			<div class="container">2019 © Kementerian Sosial Republik Indonesia - Metronic by keenthemes.
+			<div class="container">2019 © Kementerian Sosial Republik Indonesia.
 			</div>
 		</div>
 		<div class="scroll-to-top">

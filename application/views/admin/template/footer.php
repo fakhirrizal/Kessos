@@ -86,7 +86,7 @@
         <!-- END PRE-FOOTER -->
         <!-- BEGIN INNER FOOTER -->
         <div class="page-footer">
-            <div class="container"> 2019 &copy; Kementerian Sosial Republik Indonesia - Metronic by keenthemes.
+            <div class="container"> 2019 &copy; Kementerian Sosial Republik Indonesia.
             </div>
         </div>
         <div class="scroll-to-top">
