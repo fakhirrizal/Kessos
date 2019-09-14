@@ -201,7 +201,12 @@ $route['api/anggota_kube'] = 'api/kube/Member';
 $route['api/laporan_kube'] = 'api/kube/Report';
 
 $route['api/rutilahu'] = 'api/rutilahu/Master';
+$route['api/anggota_rutilahu'] = 'api/rutilahu/Member';
 $route['api/laporan_rutilahu'] = 'api/rutilahu/Report';
+
+$route['api/sarling'] = 'api/sarling/Master';
+$route['api/anggota_sarling'] = 'api/sarling/Member';
+$route['api/laporan_sarling'] = 'api/sarling/Report';
 
 $route['api/hapus_laporan'] = 'api/Other/delete_report';
 

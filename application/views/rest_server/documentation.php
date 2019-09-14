@@ -324,6 +324,168 @@
 													</div>
 												</div>
 											</div>
+											<div class="portlet box grey-salsa">
+												<div class="portlet-title">
+													<div class="caption">
+														<i></i>Data Rutilahu (Rumah Tidak Layak Huni) </div>
+													<div class="tools">
+														<a href="javascript:;" class="collapse"> </a>
+													</div>
+												</div>
+												<div class="portlet-body">
+													<div class="panel-group accordion" id="accordion2_5">
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_5" href="#collapse_2_5_1"> <span class="label label-success">GET</span>&nbsp;{url}/rutilahu </a>
+																</h4>
+															</div>
+															<div id="collapse_2_5_1" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat semua data rutilahu, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nama_kelompok": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"rencana_anggaran": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"jumlah_anggota": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_5" href="#collapse_2_5_2"> <span class="label label-success">GET</span>&nbsp;{url}/rutilahu?id_rutilahu={$id_rutilahu} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_5_2" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data rutilahu berdasarkan id_rutilahu yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nama_kelompok": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"rencana_anggaran": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"jumlah_anggota": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_5" href="#collapse_2_5_3"> <span class="label label-success">GET</span>&nbsp;{url}/anggota_rutilahu?user_id={$user_id}&id_rutilahu={$id_rutilahu} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_5_3" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan id_anggota_rutilahu, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_anggota_rutilahu": "int"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="portlet box green-jungle">
+												<div class="portlet-title">
+													<div class="caption">
+														<i></i>Data Sarling (Sarana Lingkungan) </div>
+													<div class="tools">
+														<a href="javascript:;" class="collapse"> </a>
+													</div>
+												</div>
+												<div class="portlet-body">
+													<div class="panel-group accordion" id="accordion2_6">
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_6" href="#collapse_2_6_1"> <span class="label label-success">GET</span>&nbsp;{url}/sarling </a>
+																</h4>
+															</div>
+															<div id="collapse_2_6_1" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat semua data sarling, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_sarling": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nama_tim": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"rencana_anggaran": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"jumlah_anggota": "int",<br>&nbsp; &nbsp; &nbsp;
+                                                                            "jenis_sarling": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_6" href="#collapse_2_6_2"> <span class="label label-success">GET</span>&nbsp;{url}/sarling?id_sarling={$id_sarling} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_6_2" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data sarling berdasarkan id_sarling yang dipilih, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_sarling": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nama_kelompok": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"alamat": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"rencana_anggaran": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"jumlah_anggota": "int",<br>&nbsp; &nbsp; &nbsp;
+                                                                            "jenis_sarling": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_provinsi": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kabupaten": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_kecamatan": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"nm_desa": "string"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_6" href="#collapse_2_6_3"> <span class="label label-success">GET</span>&nbsp;{url}/anggota_sarling?user_id={$user_id}&id_sarling={$id_sarling} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_6_3" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk mendapatkan id_anggota_sarling, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_anggota_sarling": "int"<br>
+																		}
+																	</code>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 											<div class="portlet box purple">
 												<div class="portlet-title">
 													<div class="caption">

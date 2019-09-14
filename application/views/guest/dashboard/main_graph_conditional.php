@@ -45,6 +45,11 @@
         <link type="text/plain" rel="author" href="http://sikapdaya.kemsos.go.id/humans.txt">
 
         <link rel="shortcut icon" href="http://sikapdaya.kemsos.go.id/favicon.ico">
+        <style>
+            div.footer {
+                line-height: 2;
+            }
+        </style>
 
     </head>
     <body class="" cz-shortcut-listen="true">

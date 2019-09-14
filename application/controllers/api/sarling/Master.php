@@ -16,8 +16,8 @@ class Master extends REST_Controller {
 		$this->methods['users_delete']['limit'] = 50; // 50 requests per hour per user/key
 	}
 	function index_get() {
-		if($this->get('id_rutilahu')!=NULL){
-			$hasil = $this->Main_model->getSelectedData('rutilahu a', 'a.id_rutilahu,a.nama_kelompok,a.alamat,a.rencana_anggaran,(SELECT COUNT(ak.id_anggota_rutilahu) FROM anggota_rutilahu ak WHERE ak.id_rutilahu=a.id_rutilahu) AS jumlah_anggota,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('id_rutilahu'=>$this->get('id_rutilahu'),'a.deleted'=>'0'),'','','','',array(
+		if($this->get('id_sarling')!=NULL){
+			$hasil = $this->Main_model->getSelectedData('sarling a', 'a.id_sarling,a.nama_tim,a.alamat,a.rencana_anggaran,(SELECT COUNT(ak.id_anggota_sarling) FROM anggota_sarling ak WHERE ak.id_sarling=a.id_sarling) AS jumlah_anggota,e.jenis_sarling,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('id_sarling'=>$this->get('id_sarling'),'a.deleted'=>'0'),'','','','',array(
 				array(
 					'table' => 'provinsi f',
 					'on' => 'a.id_provinsi=f.id_provinsi',
@@ -36,12 +36,17 @@ class Master extends REST_Controller {
 				array(
 					'table' => 'desa d',
 					'on' => 'a.id_desa=d.id_desa',
+					'pos' => 'left',
+				),
+				array(
+					'table' => 'jenis_sarling e',
+					'on' => 'a.id_jenis_sarling=e.id_jenis_sarling',
 					'pos' => 'left',
 				)
 			))->row();
 			$this->response($hasil, 200);
 		}else{
-			$hasil = $this->Main_model->getSelectedData('rutilahu a', 'a.id_rutilahu,a.nama_kelompok,a.alamat,a.rencana_anggaran,(SELECT COUNT(ak.id_anggota_rutilahu) FROM anggota_rutilahu ak WHERE ak.id_rutilahu=a.id_rutilahu) AS jumlah_anggota,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('a.deleted'=>'0'),'','','','',array(
+			$hasil = $this->Main_model->getSelectedData('sarling a', 'a.id_sarling,a.nama_tim,a.alamat,a.rencana_anggaran,(SELECT COUNT(ak.id_anggota_sarling) FROM anggota_sarling ak WHERE ak.id_sarling=a.id_sarling) AS jumlah_anggota,e.jenis_sarling,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('a.deleted'=>'0'),'','','','',array(
 				array(
 					'table' => 'provinsi f',
 					'on' => 'a.id_provinsi=f.id_provinsi',
@@ -60,6 +65,11 @@ class Master extends REST_Controller {
 				array(
 					'table' => 'desa d',
 					'on' => 'a.id_desa=d.id_desa',
+					'pos' => 'left',
+				),
+				array(
+					'table' => 'jenis_sarling e',
+					'on' => 'a.id_jenis_sarling=e.id_jenis_sarling',
 					'pos' => 'left',
 				)
 			))->result();
