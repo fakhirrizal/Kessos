@@ -52,6 +52,8 @@
 								<th style="text-align: center;" width="4%"> # </th>
 								<th style="text-align: center;"> Jenis Sarling </th>
 								<th style="text-align: center;"> Nama Tim </th>
+								<th style="text-align: center;"> Tahun Program </th>
+								<th style="text-align: center;"> Tahap </th>
 								<th style="text-align: center;"> Alamat Sarling </th>
 								<th style="text-align: center;"> Rencana Anggaran </th>
 								<th style="text-align: center;"> Provinsi </th>
@@ -76,6 +78,8 @@
 											{ mData: 'number', sClass: "alignCenter" },
 											{ mData: 'jenis_sarling' },
 											{ mData: 'nama_tim' },
+											{ mData: 'tahun', sClass: "alignCenter" } ,
+											{ mData: 'tahap', sClass: "alignCenter" } ,
 											{ mData: 'alamat', sClass: "alignCenter" } ,
 											{ mData: 'rencana_anggaran', sClass: "alignCenter" },
 											{ mData: 'nm_provinsi', sClass: "alignCenter" },
@@ -151,6 +155,32 @@
 								<div class="input-icon">
 									<select name='id_kabupaten' id='id_kabupaten' class="form-control select2-allow-clear" required>
 										<option value=''></option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group form-md-line-input has-danger">
+							<label class="col-md-3 control-label" for="form_control_1">Tahun Program <span class="required"> * </span></label>
+							<div class="col-md-3">
+								<div class="input-icon">
+									<select name='tahun' class="form-control select2-allow-clear" required>
+										<option value=''>-- Pilih --</option>
+										<option value='2015'>2015</option>
+										<option value='2016'>2016</option>
+										<option value='2017'>2017</option>
+										<option value='2018'>2018</option>
+										<option value='2019'>2019</option>
+									</select>
+								</div>
+							</div>
+							<label class="col-md-2 control-label" for="form_control_1">Tahap <span class="required"> * </span></label>
+							<div class="col-md-4">
+								<div class="input-icon">
+									<select name='tahap' class="form-control select2-allow-clear" required>
+										<option value=''>-- Pilih --</option>
+										<option value='1'>Tahap 1</option>
+										<option value='2'>Tahap 2</option>
+										<option value='3'>Tahap 3</option>
 									</select>
 								</div>
 							</div>

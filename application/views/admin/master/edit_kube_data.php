@@ -77,6 +77,32 @@
 						<input type="hidden" name="id_kube" value="<?= md5($row->id_kube); ?>">
 						<div class="form-body">
 							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1">Tahun Program <span class="required"> * </span></label>
+								<div class="col-md-3">
+									<div class="input-icon">
+										<select name='tahun' class="form-control select2-allow-clear" required>
+											<option value=''>-- Pilih --</option>
+											<option value='2015' <?php if($row->tahun=='2015'){echo'selected';}else{echo'';} ?>>2015</option>
+											<option value='2016' <?php if($row->tahun=='2016'){echo'selected';}else{echo'';} ?>>2016</option>
+											<option value='2017' <?php if($row->tahun=='2017'){echo'selected';}else{echo'';} ?>>2017</option>
+											<option value='2018' <?php if($row->tahun=='2018'){echo'selected';}else{echo'';} ?>>2018</option>
+											<option value='2019' <?php if($row->tahun=='2019'){echo'selected';}else{echo'';} ?>>2019</option>
+										</select>
+									</div>
+								</div>
+								<label class="col-md-2 control-label" for="form_control_1">Tahap <span class="required"> * </span></label>
+								<div class="col-md-3">
+									<div class="input-icon">
+										<select name='tahap' class="form-control select2-allow-clear" required>
+											<option value=''>-- Pilih --</option>
+											<option value='1' <?php if($row->tahap=='1'){echo'selected';}else{echo'';} ?>>Tahap 1</option>
+											<option value='2' <?php if($row->tahap=='2'){echo'selected';}else{echo'';} ?>>Tahap 2</option>
+											<option value='3' <?php if($row->tahap=='3'){echo'selected';}else{echo'';} ?>>Tahap 3</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Jenis Usaha <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<div class="input-icon">

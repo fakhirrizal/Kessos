@@ -62,6 +62,7 @@ $route['data_peta_kabupaten'] = 'guest/Dashboard/map_region';
 $route['data_peta_kecamatan/(:any)'] = 'guest/Dashboard/map_district/$1';
 $route['data_peta_kecamatan'] = 'guest/Dashboard/map_district';
 $route['data_grafik'] = 'guest/Dashboard/main_graph';
+$route['info'] = 'guest/App/info';
 
 /* Auth */
 $route['login'] = 'Auth/login';
@@ -84,9 +85,9 @@ $route['admin_side/peta_kabupaten/(:any)'] = 'admin/Dashboard/city/$1';
 $route['admin_side/peta_kecamatan/(:any)'] = 'admin/Dashboard/sub_district/$1';
 
 $route['admin_side/dasbor_grafik'] = 'admin/Dashboard/main_graph';
-$route['admin_side/dasbor_grafik_provinsi/(:any)'] = 'admin/Dashboard/graph_province/$1';
-$route['admin_side/dasbor_grafik_kabupaten/(:any)'] = 'admin/Dashboard/graph_region/$1';
-$route['admin_side/dasbor_grafik_kecamatan/(:any)'] = 'admin/Dashboard/graph_district/$1';
+$route['admin_side/dasbor_grafik_provinsi/(:any)/(:any)'] = 'admin/Dashboard/graph_province/$1/$2';
+$route['admin_side/dasbor_grafik_kabupaten/(:any)/(:any)'] = 'admin/Dashboard/graph_region/$1/$2';
+$route['admin_side/dasbor_grafik_kecamatan/(:any)/(:any)'] = 'admin/Dashboard/graph_district/$1/$2';
 
 $route['admin_side/administrator'] = 'admin/Master/administrator_data';
 $route['admin_side/tambah_data_admin'] = 'admin/Master/add_administrator_data';

@@ -57,103 +57,7 @@ class Report extends REST_Controller {
 		}
 	}
 
-	// function index_post() {
-	// 	$this->db->trans_start();
-	// 	$get_data_anggota = $this->Main_model->getSelectedData('anggota_sarling a', 'a.*', array('a.id_anggota_sarling'=>$this->post('id_anggota_sarling')))->row();
-	// 	$get_id_laporan_sarling = $this->Main_model->getLastID('laporan_sarling','id_laporan_sarling');
-	// 	$get_data_sarling = $this->Main_model->getSelectedData('sarling a', 'a.*', array('a.id_sarling'=>$this->post('id_sarling')))->row();
-	// 	$data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
-
-	// 	$data_insert2 = array(
-	// 		'id_laporan_sarling' => $get_id_laporan_sarling['id_laporan_sarling']+1,
-	// 		'id_master_indikator' => $this->post('id_tipe_indikator'),
-	// 		'indikator_progres_fisik' => $this->post('indikator'),
-	// 		'penjelasan_progres_fisik' => $this->post('penjelasan_progres_fisik'),
-	// 		'progres_keuangan' => $this->post('progres_keuangan')
-	// 	);
-	// 	$this->Main_model->insertData('detail_laporan_sarling',$data_insert2);
-
-	// 	$gabung_indikator = '';
-	// 	$cek_laporan_sarling = $this->Main_model->getSelectedData('laporan_sarling a', 'a.*', array('a.id_sarling'=>$this->post('id_sarling'),'a.deleted'=>'0'),'a.created_at DESC','1')->row();
-	// 	$explode_indikator = explode(',',$gabung_indikator);
-	// 	$get_status_laporan_sarling = $this->Main_model->getSelectedData('status_laporan_sarling a', 'a.*', array('a.id_sarling'=>$this->post('id_sarling')))->row();
-	// 	$persentase_fisik = (count($explode_indikator)/count($data_indikator))*100;
-	// 	if($cek_laporan_sarling==NULL){
-	// 		$gabung_indikator = $this->post('indikator');
-	// 		$data_insert1 = array(
-	// 			'id_laporan_sarling' => $get_id_laporan_sarling['id_laporan_sarling']+1,
-	// 			'id_anggota_sarling' => $this->post('id_anggota_sarling'),
-	// 			'user_id' => $get_data_anggota->user_id,
-	// 			'id_sarling' => $this->post('id_sarling'),
-	// 			'indikator' => $this->post('indikator'),
-	// 			'persentase_fisik' => $persentase_fisik,
-	// 			'anggaran' => $this->post('progres_keuangan'),
-	// 			'persentase_anggaran' => ($this->post('progres_keuangan')/$get_data_sarling->rencana_anggaran)*100,
-	// 			'persentase_realisasi' => ((($this->post('progres_keuangan')/$get_data_sarling->rencana_anggaran)*100)+$persentase_fisik)/2,
-	// 			'keterangan' => $this->post('keterangan'),
-	// 			'created_at' => date('Y-m-d H:i:s'),
-	// 			'created_by' => $get_data_anggota->user_id
-	// 		);
-	// 		$this->Main_model->insertData('laporan_sarling',$data_insert1);
-	// 	}else{
-	// 		$a = $cek_laporan_sarling->indikator;
-	// 		$b = $this->post('indikator');
-	// 		$array1 = explode(',',$a);
-	// 		$array2 = explode(',',$b);
-	// 		$result = array_merge($array1, $array2);
-	// 		$uniques = array_unique($result);
-	// 		$string = implode(',',$uniques);
-	// 		$gabung_indikator = $string;
-	// 		$data_insert1 = array(
-	// 			'id_laporan_sarling' => $get_id_laporan_sarling['id_laporan_sarling']+1,
-	// 			'id_anggota_sarling' => $this->post('id_anggota_sarling'),
-	// 			'user_id' => $get_data_anggota->user_id,
-	// 			'id_sarling' => $this->post('id_sarling'),
-	// 			'indikator' => $string,
-	// 			'persentase_fisik' => $persentase_fisik,
-	// 			'anggaran' => $this->post('progres_keuangan'),
-	// 			'persentase_anggaran' => ($this->post('progres_keuangan')/$get_data_sarling->rencana_anggaran)*100,
-	// 			'persentase_realisasi' => ((($this->post('progres_keuangan')/$get_data_sarling->rencana_anggaran)*100)+$persentase_fisik)/2,
-	// 			'keterangan' => $this->post('keterangan'),
-	// 			'created_at' => date('Y-m-d H:i:s'),
-	// 			'created_by' => $get_data_anggota->user_id
-	// 		);
-	// 		$this->Main_model->insertData('laporan_sarling',$data_insert1);
-	// 	}
-
-	// 	if($get_status_laporan_sarling==NULL){
-	// 		$persentase_anggaran = ($this->post('progres_keuangan')/$get_data_sarling->rencana_anggaran)*100;
-	// 		$persentase_realisasi = ($persentase_anggaran+$persentase_fisik)/2;
-	// 		$data_insert3 = array(
-	// 			'id_sarling' => $this->post('id_sarling'),
-	// 			'persentase_fisik' => $persentase_fisik,
-	// 			'anggaran' => $this->post('progres_keuangan'),
-	// 			'persentase_anggaran' => $persentase_anggaran,
-	// 			'persentase_realisasi' => $persentase_realisasi
-	// 		);
-	// 		$this->Main_model->insertData('status_laporan_sarling',$data_insert3);
-	// 	}else{
-	// 		$persentase_anggaran = (($this->post('progres_keuangan')+$get_status_laporan_sarling->anggaran)/$get_data_sarling->rencana_anggaran)*100;
-	// 		$persentase_realisasi = ($persentase_anggaran+$persentase_fisik)/2;
-	// 		$data_update1 = array(
-	// 			'persentase_fisik' => $persentase_fisik,
-	// 			'anggaran' => $this->post('progres_keuangan')+$get_status_laporan_sarling->anggaran,
-	// 			'persentase_anggaran' => $persentase_anggaran,
-	// 			'persentase_realisasi' => $persentase_realisasi
-	// 		);
-	// 		$this->Main_model->updateData('status_laporan_sarling',$data_update1,array('id_sarling'=>$get_status_laporan_sarling->id_sarling));
-	// 	}
-	// 	$this->Main_model->log_activity($get_data_anggota->user_id,'Adding data',"Add sarling's report data (".$get_data_sarling->nama_tim.") via Mobile Apps");
-	// 	$this->db->trans_complete();
-	// 	if($this->db->trans_status() === false){
-	// 		$hasil['status'] = 'Gagal';
-	// 		$this->response($hasil, 200);
-	// 	}
-	// 	else{
-	// 		$hasil['status'] = 'Sukses';
-	// 		$this->response($hasil, 200);
-	// 	}
-	// }
+	/*
 	function index_post(){
 		if($this->post('id_sarling')!=NULL){
 			$this->db->trans_start();
@@ -289,13 +193,105 @@ class Report extends REST_Controller {
 			}
 		}
 	}
+	*/
+	function index_post(){
+		$this->db->trans_start();
+		$get_id_laporan_sarling = $this->Main_model->getLastID('laporan_sarling','id_laporan_sarling');
+        $get_data_sarling = $this->Main_model->getSelectedData('sarling a', 'a.*,(SELECT k.id_anggota_sarling FROM anggota_sarling k WHERE k.id_sarling=a.id_sarling AND k.jabatan_kelompok="Ketua") AS ketua,(SELECT i.user_id FROM anggota_sarling i WHERE i.id_sarling=a.id_sarling AND i.jabatan_kelompok="Ketua") AS id_ketua', array('a.id_sarling'=>$this->post('data_utama')['id_sarling']))->row();
+        $get_status_laporan_sarling = $this->Main_model->getSelectedData('status_laporan_sarling a', 'a.*', array('a.id_sarling'=>$this->post('data_utama')['id_sarling']))->row();
+		$get_data_anggota = $this->Main_model->getSelectedData('anggota_sarling a', 'a.*', array('a.id_anggota_sarling'=>$this->post('data_utama')['id_anggota_sarling']))->row();
+		$data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.program'=>'3'))->result();
+
+		$total_uang = 0;
+		$progres_keuangan = $this->post('progres_keuangan');
+		foreach ($progres_keuangan as $key => $value) {
+			$total_uang += $value['progres_keuangan'];
+			$data_insert2b = array(
+				'id_laporan_sarling' => $get_id_laporan_sarling['id_laporan_sarling']+1,
+				'id_master_indikator' => $value['id_tipe_indikator'],
+				'progres_keuangan' => $value['progres_keuangan']
+			);
+			// print_r($data_insert2b);
+			$this->Main_model->insertData('detail_laporan_sarling_aspek_keuangan',$data_insert2b);
+		}
+
+		$get_indikator = array();
+		$progres_fisik = $this->post('progres_fisik');
+		foreach ($progres_fisik as $key => $value) {
+			array_push($get_indikator,$value['indikator_progres_fisik']);
+			$data_insert2a = array(
+				'id_laporan_sarling' => $get_id_laporan_sarling['id_laporan_sarling']+1,
+				'id_master_indikator' => $value['id_tipe_indikator'],
+				'indikator_progres_fisik' => $value['indikator_progres_fisik'],
+				'penjelasan_progres_fisik' => $value['penjelasan_progres_fisik']
+			);
+			// print_r($data_insert2a);
+			$this->Main_model->insertData('detail_laporan_sarling_aspek_fisik',$data_insert2a);
+		}
+		
+		$data_insert1 = array(
+            'id_laporan_sarling' => $get_id_laporan_sarling['id_laporan_sarling']+1,
+			'id_anggota_sarling' => $this->post('data_utama')['id_anggota_sarling'],
+			'user_id' => $get_data_anggota->user_id,
+			'id_sarling' => $this->post('data_utama')['id_sarling'],
+            'indikator' => implode(',',$get_indikator),
+            'persentase_fisik' => ((count($get_indikator))/(count($data_indikator)))*100,
+            'anggaran' => $total_uang,
+            'persentase_anggaran' => ($total_uang/$get_data_sarling->rencana_anggaran)*100,
+            'persentase_realisasi' => ((((count($get_indikator))/(count($data_indikator)))*100)+(($total_uang/$get_data_sarling->rencana_anggaran)*100))/2,
+            'keterangan' => $this->post('data_utama')['keterangan'],
+			'created_at' => date('Y-m-d H:i:s'),
+			'created_by' => $get_data_anggota->user_id
+        );
+        // print_r($data_insert1);
+		$this->Main_model->insertData('laporan_sarling',$data_insert1);
+		
+		if($get_status_laporan_sarling==NULL){
+            $data_insert3 = array(
+                'id_sarling' => $this->post('data_utama')['id_sarling'],
+                'indikator' => implode(',',$get_indikator),
+                'persentase_fisik' => ((count($get_indikator))/(count($data_indikator)))*100,
+                'anggaran' => $total_uang,
+                'persentase_anggaran' => ($total_uang/$get_data_sarling->rencana_anggaran)*100,
+            	'persentase_realisasi' => ((((count($get_indikator))/(count($data_indikator)))*100)+(($total_uang/$get_data_sarling->rencana_anggaran)*100))/2
+            );
+            // print_r($data_insert3);
+            $this->Main_model->insertData('status_laporan_sarling',$data_insert3);
+        }else{
+            $bb = explode(',',$get_status_laporan_sarling->indikator);
+            $c = array_unique(array_merge($get_indikator,$bb));
+            $d = implode(',',$c);
+            $persentase_fisik = (count($c)/count($data_indikator))*100;
+            $persentase_anggaran = (($total_uang+$get_status_laporan_sarling->anggaran)/$get_data_sarling->rencana_anggaran)*100;
+            $persentase_realisasi = ($persentase_anggaran+$persentase_fisik)/2;
+            $data_update1 = array(
+                'indikator' => $d,
+                'persentase_fisik' => $persentase_fisik,
+                'anggaran' => $total_uang+$get_status_laporan_sarling->anggaran,
+                'persentase_anggaran' => $persentase_anggaran,
+                'persentase_realisasi' => $persentase_realisasi
+            );
+            // print_r($data_update1);
+            $this->Main_model->updateData('status_laporan_sarling',$data_update1,array('id_sarling'=>$get_status_laporan_sarling->id_sarling));
+        }
+
+		$this->db->trans_complete();
+		if($this->db->trans_status() === false){
+			$hasil['status'] = 'Gagal';
+			$this->response($hasil, 200);
+		}
+		else{
+			$hasil['status'] = 'Sukses';
+			$this->response($hasil, 200);
+		}
+	}
 
 	function index_put() {
 		$this->db->trans_start();
         $get_id_laporan_sarling = $this->Main_model->getSelectedData('laporan_sarling a', 'a.*', array('a.id_laporan_sarling'=>$this->put('data_utama')['id_laporan_sarling']))->row_array();
         $get_data_sarling = $this->Main_model->getSelectedData('sarling a', 'a.*', array('a.id_sarling'=>$get_id_laporan_sarling['id_sarling']))->row();
         $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.program'=>'3'))->result();
         $total_uang = 0;
         $get_indikator = array();
 		$progres_keuangan = $this->put('progres_keuangan');

@@ -191,22 +191,22 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</li>
 							<!-- <li class="menu-dropdown classic-menu-dropdown <?php if($parent=='dashboard'){echo 'active';}else{echo '';} ?>">
-								<a href="<?php echo site_url('admin_side/dasbor'); ?>"><i class="icon-frame"></i> Dasbor
+								<a href="<?php echo site_url('admin_side/dasbor'); ?>"><i class="icon-frame"></i> Dashboard
 								</a>
 							</li> -->
 							<li class="menu-dropdown classic-menu-dropdown <?php if($parent=='dashboard'){echo 'active';}else{echo '';} ?>">
-								<a href="javascript:;"><i class="icon-frame"></i> Dasbor
+								<a href="javascript:;"><i class="icon-frame"></i> Dashboard
 									<span class="arrow <?php if($parent=='dashboard'){echo 'open';}else{echo '';} ?>"></span>
 								</a>
 								<ul class="dropdown-menu pull-left">
 									<li class=" <?php if($child=='map'){echo 'active';}else{echo '';} ?>">
 										<a href="<?php echo site_url('admin_side/dasbor_peta'); ?>" class="nav-link nav-toggle ">
-											<i class="icon-map"></i> Dasbor Peta
+											<i class="icon-map"></i> Dashboard Peta
 										</a>
 									</li>
 									<li class=" <?php if($child=='graph'){echo 'active';}else{echo '';} ?>">
 										<a href="<?php echo site_url('admin_side/dasbor_grafik'); ?>" class="nav-link nav-toggle ">
-											<i class="icon-graph"></i> Dasbor Grafik
+											<i class="icon-graph"></i> Dashboard Grafik
 										</a>
 									</li>
 								</ul>

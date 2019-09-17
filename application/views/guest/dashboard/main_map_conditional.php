@@ -79,8 +79,9 @@
                                     </a>
                                 </div>
                                 <div class="col-md-9 col-sm-9 col-xs-12">
-                                    <h3><strong>SIM-KRS</strong></h3>
-                                    <h3>Sistem Informasi Manajemen Kube, Rutilahu dan Sarling<br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
+                                    <h3><strong>Dashboard Bantuan Sosial Reguler</strong></h3>
+                                    <!-- <h3>Sistem Informasi Manajemen Kube, Rutilahu dan Sarling<br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3> -->
+                                    <h3><br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-1 col-xs-12">
@@ -96,6 +97,9 @@
                                     <li>
                                         <a href="<?=base_url('data_grafik')?>"> Data dalam bentuk Grafik </a>
                                     </li>
+                                    <li>
+                                        <a href="<?=base_url('info')?>"> Info PFM </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="panel panel-flat panel-dayasos-portal">
@@ -105,7 +109,7 @@
                                         <div class="col-md-12">
                                             <form action="<?=base_url('data_peta');?>" method="post">
                                                 <div class="form-group form-md-line-input has-danger">
-                                                    <label class="col-md-1 control-label" for="form_control_1">Kegiatan</label>
+                                                    <label class="col-md-1 control-label" for="form_control_1">Program</label>
                                                     <div class="col-md-5">
                                                         <div class="input-icon">
                                                             <select name='kegiatan' class="form-control select2-allow-clear" required>
@@ -122,6 +126,7 @@
                                                                 <option value='1'>Wilayah I</option>
                                                                 <option value='2'>Wilayah II</option>
                                                                 <option value='3'>Wilayah III</option>
+                                                                <option value='4'>Indonesia</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -187,9 +192,16 @@
                             if($value->jml=='0'){
                                 echo'';
                             }else{
-                                $persentase_realisasi = number_format(($value->persentase_realisasi)/($value->jml),2);
+                                $persentase_realisasi = number_format(($value->jml),0);
+                                // $persentase_realisasi = number_format(($value->persentase_realisasi)/($value->jml),2);
                             }
-                            echo ("addMarker($lat, $lon, '<div $style><h3><b>$nama</b></h3><br><table $class_table><tbody><tr><td $style_td> Persentase Realisasi $judul </td><td> $persentase_realisasi% </td></tr><tr><td></td><td></td></tr><tr></tbody></table><a href=data_peta_provinsi/$id_enkrip>Klik disini untuk data detail</a></div>');\n");
+                            $eee = '';
+                            if($judul=='KUBE' OR $judul=='RUTILAHU'){
+                                $eee = 'Kelompok';
+                            }elseif($judul=='SARLING'){
+                                $eee = "Tim";
+                            }
+                            echo ("addMarker($lat, $lon, '<div $style><h3><b>$nama</b></h3><br><table $class_table><tbody><tr><td $style_td> Jumlah $judul </td><td> $persentase_realisasi $eee </td></tr><tr><td></td><td></td></tr><tr></tbody></table><a href=data_peta_provinsi/$id_enkrip>Klik disini untuk data detail</a></div>');\n");
                         }
                     ?>
 
@@ -210,7 +222,7 @@
                         infoWindow.open(map, marker);
                     });
                     }
-                    var situs = 'http://pfm.gbnku.co.id/assets/peta/';
+                    var situs = 'http://pfm.demokode.com/assets/peta/';
                     var nama_file = '<?php echo $nama_file ?>';
                     var situs_full = situs.concat(nama_file);
                     var kmldashboard = new google.maps.KmlLayer({

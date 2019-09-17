@@ -195,9 +195,18 @@
 																		{<br>&nbsp; &nbsp; &nbsp;
 																			"id_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
 																			"tipe": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"program": "int",<br>&nbsp; &nbsp; &nbsp;
 																			"indikator": "string"<br>
 																		}
 																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Program (1: Kube; 2: Rutilahu; 3: Sarling) </li>
+																	</ol>
+																	</p>
 																</div>
 															</div>
 														</div>
@@ -214,9 +223,18 @@
 																		{<br>&nbsp; &nbsp; &nbsp;
 																			"id_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
 																			"tipe": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"program": "int",<br>&nbsp; &nbsp; &nbsp;
 																			"indikator": "string"<br>
 																		}
 																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Program (1: Kube; 2: Rutilahu; 3: Sarling) </li>
+																	</ol>
+																	</p>
 																</div>
 															</div>
 														</div>
@@ -228,7 +246,35 @@
 															</div>
 															<div id="collapse_2_2_3" class="panel-collapse in">
 																<div class="panel-body">
-																	<p> Fungsi untuk melihat data indikator berdasarkan id_tipe yang dipilih (1: Pengadaan; 2: Proses; 3: Benefit), berikut data balikannya. </p>
+																	<p> Fungsi untuk melihat data indikator berdasarkan id_indikator tertentu, berikut data balikannya. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"id_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"tipe": "string",<br>&nbsp; &nbsp; &nbsp;
+																			"program": "int",<br>&nbsp; &nbsp; &nbsp;
+																			"indikator": "string"<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Program (1: Kube; 2: Rutilahu; 3: Sarling) </li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion2_2" href="#collapse_2_2_4"> <span class="label label-success">GET</span>&nbsp;{url}/indikator?program={$program} </a>
+																</h4>
+															</div>
+															<div id="collapse_2_2_4" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk melihat data indikator berdasarkan program yang dipilih (1: Kube; 2: Rutilahu; 3: Sarling), berikut data balikannya. </p>
 																	<code>
 																		{<br>&nbsp; &nbsp; &nbsp;
 																			"id_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
@@ -849,7 +895,7 @@
 												</div>
 												<div class="portlet-body">
 													<div class="panel-group accordion" id="accordion3_1">
-														<div class="panel panel-default">
+														<!-- <div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
 																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_1"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_kube </a>
@@ -928,8 +974,7 @@
 																		{<br>&nbsp; &nbsp; &nbsp;
 																			"id_laporan_kube": "int",<br>&nbsp; &nbsp; &nbsp;
 																			"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
-																			"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;
-																			"penjelasan_progres_keuangan": "string"<br>
+																			"progres_keuangan": "int"<br>
 																		}
 																	</code>
 																	<br>
@@ -938,6 +983,51 @@
 																	Keterangan:
 																	<ol>
 																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div> -->
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_1" href="#collapse_3_1_9"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_kube </a>
+																</h4>
+															</div>
+															<div id="collapse_3_1_9" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan data laporan kube, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_kube": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_anggota_kube": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"keterangan": "string"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"progres_fisik": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator_progres_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_fisik": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			],<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "int"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Array <b>progres_fisik</b> bisa memiliki lebih dari satu array </li>
+																		<li>Field <b>indikator_progres_fisik</b> hanya bisa 1 id_indikator sekali kirim data </li>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit) </li>
+																		<li>Array <b>progres_keuangan</b> bisa memiliki lebih dari satu array </li>
 																	</ol>
 																	</p>
 																</div>
@@ -1023,8 +1113,7 @@
 																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																					"id_laporan_kube": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																					"tipe": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"progres_keuangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																				}<br>&nbsp; &nbsp; &nbsp;
 																			]<br>
 																		}
@@ -1066,8 +1155,7 @@
 																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "int"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																				}<br>&nbsp; &nbsp; &nbsp;
 																			]<br>
 																		}
@@ -1125,7 +1213,7 @@
 												</div>
 												<div class="portlet-body">
 													<div class="panel-group accordion" id="accordion3_2">
-														<div class="panel panel-default">
+														<!-- <div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
 																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_1"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_rutilahu </a>
@@ -1204,8 +1292,7 @@
 																		{<br>&nbsp; &nbsp; &nbsp;
 																			"id_laporan_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;
 																			"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
-																			"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;
-																			"penjelasan_progres_keuangan": "string"<br>
+																			"progres_keuangan": "int"<br>
 																		}
 																	</code>
 																	<br>
@@ -1214,6 +1301,51 @@
 																	Keterangan:
 																	<ol>
 																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div> -->
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_9"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_rutilahu </a>
+																</h4>
+															</div>
+															<div id="collapse_3_2_9" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan data laporan rutilahu, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_anggota_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"keterangan": "string"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"progres_fisik": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator_progres_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_fisik": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			],<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "int"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Array <b>progres_fisik</b> bisa memiliki lebih dari satu array </li>
+																		<li>Field <b>indikator_progres_fisik</b> hanya bisa 1 id_indikator sekali kirim data </li>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit) </li>
+																		<li>Array <b>progres_keuangan</b> bisa memiliki lebih dari satu array </li>
 																	</ol>
 																	</p>
 																</div>
@@ -1299,8 +1431,7 @@
 																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																					"id_laporan_rutilahu": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																					"tipe": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"progres_keuangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																				}<br>&nbsp; &nbsp; &nbsp;
 																			]<br>
 																		}
@@ -1342,8 +1473,7 @@
 																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "int"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																				}<br>&nbsp; &nbsp; &nbsp;
 																			]<br>
 																		}
@@ -1401,7 +1531,7 @@
 												</div>
 												<div class="portlet-body">
 													<div class="panel-group accordion" id="accordion3_3">
-														<div class="panel panel-default">
+														<!-- <div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
 																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_3" href="#collapse_3_3_1"> <span class="label label-success">GET</span>&nbsp;{url}/laporan_sarling </a>
@@ -1480,8 +1610,7 @@
 																		{<br>&nbsp; &nbsp; &nbsp;
 																			"id_laporan_sarling": "int",<br>&nbsp; &nbsp; &nbsp;
 																			"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;
-																			"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;
-																			"penjelasan_progres_keuangan": "string"<br>
+																			"progres_keuangan": "int"<br>
 																		}
 																	</code>
 																	<br>
@@ -1490,6 +1619,51 @@
 																	Keterangan:
 																	<ol>
 																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit)</li>
+																	</ol>
+																	</p>
+																</div>
+															</div>
+														</div> -->
+														<div class="panel panel-default">
+															<div class="panel-heading">
+																<h4 class="panel-title">
+																	<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion3_2" href="#collapse_3_2_9"> <span class="label label-info">POST</span>&nbsp;{url}/laporan_sarling </a>
+																</h4>
+															</div>
+															<div id="collapse_3_2_9" class="panel-collapse in">
+																<div class="panel-body">
+																	<p> Fungsi untuk menyimpan data laporan sarling, berikut parameter yang harus dipenuhi. </p>
+																	<code>
+																		{<br>&nbsp; &nbsp; &nbsp;
+																			"data_utama": {<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_sarling": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"id_anggota_sarling": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				"keterangan": "string"<br>&nbsp; &nbsp; &nbsp;
+																			},<br>&nbsp; &nbsp; &nbsp;
+																			"progres_fisik": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"indikator_progres_fisik": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"penjelasan_progres_fisik": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			],<br>&nbsp; &nbsp; &nbsp;
+																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "int"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																				}<br>&nbsp; &nbsp; &nbsp;
+																			]<br>
+																		}
+																	</code>
+																	<br>
+																	<br>
+																	<p>
+																	Keterangan:
+																	<ol>
+																		<li>Array <b>progres_fisik</b> bisa memiliki lebih dari satu array </li>
+																		<li>Field <b>indikator_progres_fisik</b> hanya bisa 1 id_indikator sekali kirim data </li>
+																		<li>Indikator harus sesuai dengan id_tipe_indikator (1: Pengadaan; 2: Proses; 3: Benefit) </li>
+																		<li>Array <b>progres_keuangan</b> bisa memiliki lebih dari satu array </li>
 																	</ol>
 																	</p>
 																</div>
@@ -1575,8 +1749,7 @@
 																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																					"id_laporan_sarling": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																					"tipe": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"progres_keuangan": "string",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																				}<br>&nbsp; &nbsp; &nbsp;
 																			]<br>
 																		}
@@ -1618,8 +1791,7 @@
 																			"progres_keuangan": [<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																				{<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																					"id_tipe_indikator": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"progres_keuangan": "int",<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-																					"penjelasan_progres_keuangan": "string"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+																					"progres_keuangan": "int"<br>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
 																				}<br>&nbsp; &nbsp; &nbsp;
 																			]<br>
 																		}

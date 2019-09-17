@@ -14,7 +14,7 @@ foreach ($indikator as $key => $in) {
             <td>
                 <div class="md-checkbox-list">
                     <?php
-                    $get_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*',array('a.id_master_indikator'=>$in->id_master_indikator))->result();
+                    $get_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*',array('a.id_master_indikator'=>$in->id_master_indikator,'a.program'=>'2'))->result();
                     foreach ($get_indikator as $key => $value) {
                         $checked = '';
                         for ($l=0; $l < count($list_indikator); $l++) {
@@ -38,7 +38,7 @@ foreach ($indikator as $key => $in) {
             <td>
                 <div class="md-checkbox-list">
                     <?php
-                    $get_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*',array('a.id_master_indikator'=>$in->id_master_indikator))->result();
+                    $get_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*',array('a.id_master_indikator'=>$in->id_master_indikator,'a.program'=>'2'))->result();
                     foreach ($get_indikator as $key => $value) {
                         $nilai = '';
                         for ($l=0; $l < count($list_indikator); $l++) {

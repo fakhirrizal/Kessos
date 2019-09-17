@@ -181,6 +181,8 @@ class Master extends CI_Controller {
 						}
 						$data_insert_kube = array(
 							'id_kube' => $get_id_kube['id_kube']+1,
+							'tahun' => $this->input->post('tahun'),
+							'tahap' => $this->input->post('tahap'),
 							'id_jenis_usaha' => $id_jenis_usaha,
 							'nama_tim' => $nama_tim,
 							'alamat' => '',
@@ -343,6 +345,8 @@ class Master extends CI_Controller {
 								';
 			$isi['number'] = $no++.'.';
 			$isi['nama_tim'] = $value->nama_tim;
+			$isi['tahun'] = $value->tahun;
+			$isi['tahap'] = 'Tahap '.$value->tahap;
 			$isi['jenis_usaha'] = $value->jenis_usaha;
 			// $isi['alamat'] = $value->alamat;
 			$isi['rencana_anggaran'] = 'Rp '.number_format($value->rencana_anggaran,2);
@@ -398,6 +402,8 @@ class Master extends CI_Controller {
 		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_insert1 = array(
 			'id_kube' => $get_id_kube['id_kube']+1,
+			'tahun' => $this->input->post('tahun'),
+			'tahap' => $this->input->post('tahap'),
 			'id_jenis_usaha' => $this->input->post('id_jenis_usaha'),
 			'nama_tim' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
@@ -497,6 +503,8 @@ class Master extends CI_Controller {
 		$this->db->trans_start();
 		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_update = array(
+			'tahun' => $this->input->post('tahun'),
+			'tahap' => $this->input->post('tahap'),
 			'id_jenis_usaha' => $this->input->post('id_jenis_usaha'),
 			'nama_tim' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
@@ -806,6 +814,8 @@ class Master extends CI_Controller {
 						$nama_tim = $row['D'];
 						$data_insert_rutilahu = array(
 							'id_rutilahu' => $get_id_rutilahu['id_rutilahu']+1,
+							'tahun' => $this->input->post('tahun'),
+							'tahap' => $this->input->post('tahap'),
 							'nama_kelompok' => $nama_tim,
 							'alamat' => $row['L'],
 							'rencana_anggaran' => '0',
@@ -952,6 +962,8 @@ class Master extends CI_Controller {
 								';
 			$isi['number'] = $no++.'.';
 			$isi['nama_tim'] = $value->nama_kelompok;
+			$isi['tahun'] = $value->tahun;
+			$isi['tahap'] = 'Tahap '.$value->tahap;
 			$isi['alamat'] = $value->alamat;
 			$isi['rencana_anggaran'] = 'Rp '.number_format($value->rencana_anggaran,2);
 			$isi['nm_provinsi'] = $value->nm_provinsi;
@@ -1004,6 +1016,8 @@ class Master extends CI_Controller {
 		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_insert = array(
 			'nama_kelompok' => $this->input->post('nama_tim'),
+			'tahun' => $this->input->post('tahun'),
+			'tahap' => $this->input->post('tahap'),
 			'alamat' => $this->input->post('alamat'),
 			// 'rencana_anggaran' => $rencana_anggaran,
 			'id_provinsi' => $this->input->post('id_provinsi'),
@@ -1087,6 +1101,8 @@ class Master extends CI_Controller {
 		$this->db->trans_start();
 		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_update = array(
+			'tahun' => $this->input->post('tahun'),
+			'tahap' => $this->input->post('tahap'),
 			'nama_kelompok' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
 			// 'rencana_anggaran' => $rencana_anggaran,
@@ -1407,6 +1423,8 @@ class Master extends CI_Controller {
 						}
 						$data_insert_sarling = array(
 							'id_sarling' => $get_id_sarling['id_sarling']+1,
+							'tahun' => $this->input->post('tahun'),
+							'tahap' => $this->input->post('tahap'),
 							'id_jenis_sarling' => $id_jenis_usaha,
 							'nama_tim' => $nama_tim,
 							'alamat' => $row['K'],
@@ -1550,6 +1568,8 @@ class Master extends CI_Controller {
 								';
 			$isi['number'] = $no++.'.';
 			$isi['nama_tim'] = $value->nama_tim;
+			$isi['tahun'] = $value->tahun;
+			$isi['tahap'] = 'Tahap '.$value->tahap;
 			$isi['jenis_sarling'] = $value->jenis_sarling;
 			$isi['alamat'] = $value->alamat;
 			$isi['rencana_anggaran'] = 'Rp '.number_format($value->rencana_anggaran,2);
@@ -1603,6 +1623,8 @@ class Master extends CI_Controller {
 		$this->db->trans_start();
 		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_insert = array(
+			'tahun' => $this->input->post('tahun'),
+			'tahap' => $this->input->post('tahap'),
 			'id_jenis_sarling' => $this->input->post('id_jenis_sarling'),
 			'nama_tim' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),
@@ -1695,6 +1717,8 @@ class Master extends CI_Controller {
 		$this->db->trans_start();
 		// $rencana_anggaran = preg_replace("/[^0-9]/", "", $this->input->post('rencana_anggaran'));
 		$data_update = array(
+			'tahun' => $this->input->post('tahun'),
+			'tahap' => $this->input->post('tahap'),
 			'id_jenis_sarling' => $this->input->post('id_jenis_sarling'),
 			'nama_tim' => $this->input->post('nama_tim'),
 			'alamat' => $this->input->post('alamat'),

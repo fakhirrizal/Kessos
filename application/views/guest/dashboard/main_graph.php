@@ -64,8 +64,9 @@
                                     </a>
                                 </div>
                                 <div class="col-md-9 col-sm-9 col-xs-12">
-                                    <h3><strong>SIM-KRS</strong></h3>
-                                    <h3>Sistem Informasi Manajemen Kube, Rutilahu dan Sarling<br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
+                                    <h3><strong>Dashboard Bantuan Sosial Reguler</strong></h3>
+                                    <!-- <h3>Sistem Informasi Manajemen Kube, Rutilahu dan Sarling<br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3> -->
+                                    <h3><br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-1 col-xs-12">
@@ -81,6 +82,9 @@
                                     <li class="active">
                                         <a href="#"> Data dalam bentuk Grafik </a>
                                     </li>
+                                    <li>
+                                        <a href="<?=base_url('info')?>"> Info PFM </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="panel panel-flat panel-dayasos-portal">
@@ -90,7 +94,7 @@
                                         <div class="col-md-12">
                                             <form action="<?=base_url('data_grafik');?>" method="post">
                                                 <div class="form-group form-md-line-input has-danger">
-                                                    <label class="col-md-1 control-label" for="form_control_1">Kegiatan</label>
+                                                    <label class="col-md-1 control-label" for="form_control_1">Program</label>
                                                     <div class="col-md-5">
                                                         <div class="input-icon">
                                                             <select name='kegiatan' class="form-control select2-allow-clear" required>
@@ -107,6 +111,7 @@
                                                                 <option value='1'>Wilayah I</option>
                                                                 <option value='2'>Wilayah II</option>
                                                                 <option value='3'>Wilayah III</option>
+                                                                <option value='4'>Indonesia</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -122,122 +127,107 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-12">
+                                            <div class="grafik" style="width:100%; height:400px;"></div>
                                             <script type="text/javascript">
-                                                $(document).ready(function() {
-                                                    $('#g').highcharts({
-                                                        credits: { enabled: false },chart: {
-                                                            type: 'column',
-                                                            // backgroundColor:"#B0C4DE"
-                                                            options3d: {
-                                                                enabled: true,
-                                                                alpha: 0,
-                                                                beta: 20
+                                                $('.grafik').highcharts({
+                                                    chart: {
+                                                        type: 'line',
+                                                        marginTop: 80
+                                                    },
+                                                    credits: {
+                                                        enabled: false
+                                                    }, 
+                                                    tooltip: {
+                                                        shared: true,
+                                                        crosshairs: true,
+                                                        headerFormat: '<b>{point.key}</b><br/>'
+                                                    },
+                                                    title: {
+                                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                                    },
+                                                    subtitle: {
+                                                        text: 'Jumlah Kube, RLTH, dan Sarling Periode 2019'
+                                                    },
+                                                    xAxis: {
+                                                        categories: [
+                                                                        <?php
+                                                                        foreach ($data_kube as $key => $value) {
+                                                                            echo "'".$value->nm_provinsi."',";
+                                                                        }
+                                                                        ?>
+                                                                    ],
+                                                        labels: {
+                                                            rotation: 0,
+                                                            align: 'right',
+                                                            style: {
+                                                                fontSize: '10px',
+                                                                fontFamily: 'Verdana, sans-serif'
                                                             }
-                                                        },
+                                                        }
+                                                    },
+                                                    yAxis: {
+                                                        min: 0,
                                                         title: {
-                                                            text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
-                                                        },
-                                                        subtitle: {
-                                                            text: 'Kube, Rutilahu, dan Sarling Periode 2019'
-                                                        },
-                                                        xAxis: {
-                                                            categories: [
-                                                                <?php
-                                                                foreach ($data_kube as $key => $value) {
-                                                                    echo "'".$value->nm_provinsi."',";
+                                                            text: 'Kelompok/ Tim'
+                                                        }
+                                                    },
+                                                    legend: {
+                                                        enabled: true
+                                                    },
+                                                    series:[
+                                                                {
+                                                                    name: 'Kube',
+                                                                    data: [
+                                                                        <?php
+                                                                            foreach ($data_kube as $key => $fff) {
+                                                                                $persentase = 0;
+                                                                                if($fff->jumlah_kube=='0'){
+                                                                                    echo'';
+                                                                                }else{
+                                                                                    $persentase = $fff->jumlah_kube;
+                                                                                }
+                                                                                echo number_format($persentase,0).",";
+                                                                            }
+                                                                        ?>
+                                                                    ],
+
+                                                                },
+                                                                {
+                                                                    name: 'Rutilahu',
+                                                                    data: [
+                                                                        <?php
+                                                                            foreach ($data_rutilahu as $key => $fff) {
+                                                                                $persentase = 0;
+                                                                                if($fff->jumlah_rutilahu=='0'){
+                                                                                    echo'';
+                                                                                }else{
+                                                                                    $persentase = $fff->jumlah_rutilahu;
+                                                                                }
+                                                                                echo number_format($persentase,0).",";
+                                                                            }
+                                                                        ?>
+                                                                    ],
+
+                                                                },
+                                                                {
+                                                                    name: 'Sarling',
+                                                                    data: [
+                                                                        <?php
+                                                                            foreach ($data_sarling as $key => $fff) {
+                                                                                $persentase = 0;
+                                                                                if($fff->jumlah_sarling=='0'){
+                                                                                    echo'';
+                                                                                }else{
+                                                                                    $persentase = $fff->jumlah_sarling;
+                                                                                }
+                                                                                echo number_format($persentase,0).",";
+                                                                            }
+                                                                        ?>
+                                                                    ],
                                                                 }
-                                                                ?>
-                                                                // 'Nama Provinsi'
                                                             ]
-                                                        },
-                                                        yAxis: {
-                                                            min: 0,
-                                                            title: {
-                                                                text: 'Persentase Realisasi (%)'
-                                                            }
-                                                        },
-                                                        tooltip: {
-                                                            // pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
-                                                            shared: true
-                                                        },
-                                                        // plotOptions: {
-                                                        //     column: {
-                                                        //         pointPadding: 0.2,
-                                                        //         borderWidth: 0
-                                                        //     }
-                                                        // },
-                                                        plotOptions: {
-                                                            column: {
-                                                                stacking: 'normal'
-                                                            }
-                                                        },
-                                                        series: [
-                                                            <?php
-                                                                // foreach ($data_kube as $key => $fff) {
-                                                                //     $persentase = 0;
-                                                                //     if($fff->jumlah_kube=='0'){
-                                                                //         echo'';
-                                                                //     }else{
-                                                                //         $persentase = ($fff->persentase_realisasi)/($fff->jumlah_kube);
-                                                                //     }
-                                                                //     echo "{ name: '".$fff->nm_provinsi." (Persentase Realisasi ".number_format($persentase,2)." %)',data: [".$persentase."]},";
-                                                                // }
-                                                            ?>
-                                                            {
-                                                                name: 'Kube',
-                                                                data: [
-                                                                    <?php
-                                                                        foreach ($data_kube as $key => $fff) {
-                                                                            $persentase = 0;
-                                                                            if($fff->jumlah_kube=='0'){
-                                                                                echo'';
-                                                                            }else{
-                                                                                $persentase = ($fff->persentase_realisasi)/($fff->jumlah_kube);
-                                                                            }
-                                                                            echo number_format($persentase,2).",";
-                                                                        }
-                                                                    ?>
-                                                                ],
-
-                                                            },
-                                                            {
-                                                                name: 'Rutilahu',
-                                                                data: [
-                                                                    <?php
-                                                                        foreach ($data_rutilahu as $key => $fff) {
-                                                                            $persentase = 0;
-                                                                            if($fff->jumlah_rutilahu=='0'){
-                                                                                echo'';
-                                                                            }else{
-                                                                                $persentase = ($fff->persentase_realisasi)/($fff->jumlah_rutilahu);
-                                                                            }
-                                                                            echo number_format($persentase,2).",";
-                                                                        }
-                                                                    ?>
-                                                                ],
-
-                                                            },
-                                                            {
-                                                                name: 'Sarling',
-                                                                data: [
-                                                                    <?php
-                                                                        foreach ($data_sarling as $key => $fff) {
-                                                                            $persentase = 0;
-                                                                            if($fff->jumlah_sarling=='0'){
-                                                                                echo'';
-                                                                            }else{
-                                                                                $persentase = ($fff->persentase_realisasi)/($fff->jumlah_sarling);
-                                                                            }
-                                                                            echo number_format($persentase,2).",";
-                                                                        }
-                                                                    ?>
-                                                                ],
-                                                            }
-                                                        ]
-                                                    });
                                                 });
                                             </script>
-                                            <div id="g"></div>
                                         </div>
                                     </div>
                                     

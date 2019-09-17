@@ -19,3 +19,8 @@ Tanggal 10 September 2019
     - UPDATE `desa` SET `bujur` = '114.573809', `lintang` = '-8.226539' WHERE `desa`.`id_desa` = '5101010007';
     - UPDATE `desa` SET `bujur` = '114.484215', `lintang` = '-8.247196' WHERE `desa`.`id_desa` = '5101010002';
     - UPDATE `desa` SET `bujur` = '114.555072', `lintang` = '-8.213250' WHERE `desa`.`id_desa` = '5101010009';
+Tanggal 16 September 2019
+    - ALTER TABLE `kube` ADD `tahun` INT(4) NOT NULL AFTER `id_kube`, ADD `tahap` INT(2) NOT NULL AFTER `tahun`;
+    - ALTER TABLE `rutilahu` ADD `tahun` INT(4) NOT NULL AFTER `id_rutilahu`, ADD `tahap` INT(2) NOT NULL AFTER `tahun`;
+    - ALTER TABLE `sarling` ADD `tahun` INT(4) NOT NULL AFTER `id_sarling`, ADD `tahap` INT(2) NOT NULL AFTER `tahun`;
+    - ALTER TABLE `indikator` ADD `program` ENUM('1','2','3') NOT NULL COMMENT '1=Kube,2=Rutilahu,3=Sarling' AFTER `id_master_indikator`;

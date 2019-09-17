@@ -57,103 +57,7 @@ class Report extends REST_Controller {
 		}
 	}
 
-	// function index_post() {
-	// 	$this->db->trans_start();
-	// 	$get_data_anggota = $this->Main_model->getSelectedData('anggota_kube a', 'a.*', array('a.id_anggota_kube'=>$this->post('id_anggota_kube')))->row();
-	// 	$get_id_laporan_kube = $this->Main_model->getLastID('laporan_kube','id_laporan_kube');
-	// 	$get_data_kube = $this->Main_model->getSelectedData('kube a', 'a.*', array('a.id_kube'=>$this->post('id_kube')))->row();
-	// 	$data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
-
-	// 	$data_insert2 = array(
-	// 		'id_laporan_kube' => $get_id_laporan_kube['id_laporan_kube']+1,
-	// 		'id_master_indikator' => $this->post('id_tipe_indikator'),
-	// 		'indikator_progres_fisik' => $this->post('indikator'),
-	// 		'penjelasan_progres_fisik' => $this->post('penjelasan_progres_fisik'),
-	// 		'progres_keuangan' => $this->post('progres_keuangan')
-	// 	);
-	// 	$this->Main_model->insertData('detail_laporan_kube',$data_insert2);
-
-	// 	$gabung_indikator = '';
-	// 	$cek_laporan_kube = $this->Main_model->getSelectedData('laporan_kube a', 'a.*', array('a.id_kube'=>$this->post('id_kube'),'a.deleted'=>'0'),'a.created_at DESC','1')->row();
-	// 	$explode_indikator = explode(',',$gabung_indikator);
-	// 	$get_status_laporan_kube = $this->Main_model->getSelectedData('status_laporan_kube a', 'a.*', array('a.id_kube'=>$this->post('id_kube')))->row();
-	// 	$persentase_fisik = (count($explode_indikator)/count($data_indikator))*100;
-	// 	if($cek_laporan_kube==NULL){
-	// 		$gabung_indikator = $this->post('indikator');
-	// 		$data_insert1 = array(
-	// 			'id_laporan_kube' => $get_id_laporan_kube['id_laporan_kube']+1,
-	// 			'id_anggota_kube' => $this->post('id_anggota_kube'),
-	// 			'user_id' => $get_data_anggota->user_id,
-	// 			'id_kube' => $this->post('id_kube'),
-	// 			'indikator' => $this->post('indikator'),
-	// 			'persentase_fisik' => $persentase_fisik,
-	// 			'anggaran' => $this->post('progres_keuangan'),
-	// 			'persentase_anggaran' => ($this->post('progres_keuangan')/$get_data_kube->rencana_anggaran)*100,
-	// 			'persentase_realisasi' => ((($this->post('progres_keuangan')/$get_data_kube->rencana_anggaran)*100)+$persentase_fisik)/2,
-	// 			'keterangan' => $this->post('keterangan'),
-	// 			'created_at' => date('Y-m-d H:i:s'),
-	// 			'created_by' => $get_data_anggota->user_id
-	// 		);
-	// 		$this->Main_model->insertData('laporan_kube',$data_insert1);
-	// 	}else{
-	// 		$a = $cek_laporan_kube->indikator;
-	// 		$b = $this->post('indikator');
-	// 		$array1 = explode(',',$a);
-	// 		$array2 = explode(',',$b);
-	// 		$result = array_merge($array1, $array2);
-	// 		$uniques = array_unique($result);
-	// 		$string = implode(',',$uniques);
-	// 		$gabung_indikator = $string;
-	// 		$data_insert1 = array(
-	// 			'id_laporan_kube' => $get_id_laporan_kube['id_laporan_kube']+1,
-	// 			'id_anggota_kube' => $this->post('id_anggota_kube'),
-	// 			'user_id' => $get_data_anggota->user_id,
-	// 			'id_kube' => $this->post('id_kube'),
-	// 			'indikator' => $string,
-	// 			'persentase_fisik' => $persentase_fisik,
-	// 			'anggaran' => $this->post('progres_keuangan'),
-	// 			'persentase_anggaran' => ($this->post('progres_keuangan')/$get_data_kube->rencana_anggaran)*100,
-	// 			'persentase_realisasi' => ((($this->post('progres_keuangan')/$get_data_kube->rencana_anggaran)*100)+$persentase_fisik)/2,
-	// 			'keterangan' => $this->post('keterangan'),
-	// 			'created_at' => date('Y-m-d H:i:s'),
-	// 			'created_by' => $get_data_anggota->user_id
-	// 		);
-	// 		$this->Main_model->insertData('laporan_kube',$data_insert1);
-	// 	}
-
-	// 	if($get_status_laporan_kube==NULL){
-	// 		$persentase_anggaran = ($this->post('progres_keuangan')/$get_data_kube->rencana_anggaran)*100;
-	// 		$persentase_realisasi = ($persentase_anggaran+$persentase_fisik)/2;
-	// 		$data_insert3 = array(
-	// 			'id_kube' => $this->post('id_kube'),
-	// 			'persentase_fisik' => $persentase_fisik,
-	// 			'anggaran' => $this->post('progres_keuangan'),
-	// 			'persentase_anggaran' => $persentase_anggaran,
-	// 			'persentase_realisasi' => $persentase_realisasi
-	// 		);
-	// 		$this->Main_model->insertData('status_laporan_kube',$data_insert3);
-	// 	}else{
-	// 		$persentase_anggaran = (($this->post('progres_keuangan')+$get_status_laporan_kube->anggaran)/$get_data_kube->rencana_anggaran)*100;
-	// 		$persentase_realisasi = ($persentase_anggaran+$persentase_fisik)/2;
-	// 		$data_update1 = array(
-	// 			'persentase_fisik' => $persentase_fisik,
-	// 			'anggaran' => $this->post('progres_keuangan')+$get_status_laporan_kube->anggaran,
-	// 			'persentase_anggaran' => $persentase_anggaran,
-	// 			'persentase_realisasi' => $persentase_realisasi
-	// 		);
-	// 		$this->Main_model->updateData('status_laporan_kube',$data_update1,array('id_kube'=>$get_status_laporan_kube->id_kube));
-	// 	}
-	// 	$this->Main_model->log_activity($get_data_anggota->user_id,'Adding data',"Add kube's report data (".$get_data_kube->nama_tim.") via Mobile Apps");
-	// 	$this->db->trans_complete();
-	// 	if($this->db->trans_status() === false){
-	// 		$hasil['status'] = 'Gagal';
-	// 		$this->response($hasil, 200);
-	// 	}
-	// 	else{
-	// 		$hasil['status'] = 'Sukses';
-	// 		$this->response($hasil, 200);
-	// 	}
-	// }
+	/*
 	function index_post(){
 		if($this->post('id_kube')!=NULL){
 			$this->db->trans_start();
@@ -289,13 +193,105 @@ class Report extends REST_Controller {
 			}
 		}
 	}
+	*/
+	function index_post(){
+		$this->db->trans_start();
+		$get_id_laporan_kube = $this->Main_model->getLastID('laporan_kube','id_laporan_kube');
+        $get_data_kube = $this->Main_model->getSelectedData('kube a', 'a.*,(SELECT k.id_anggota_kube FROM anggota_kube k WHERE k.id_kube=a.id_kube AND k.jabatan_kelompok="Ketua") AS ketua,(SELECT i.user_id FROM anggota_kube i WHERE i.id_kube=a.id_kube AND i.jabatan_kelompok="Ketua") AS id_ketua', array('a.id_kube'=>$this->post('data_utama')['id_kube']))->row();
+        $get_status_laporan_kube = $this->Main_model->getSelectedData('status_laporan_kube a', 'a.*', array('a.id_kube'=>$this->post('data_utama')['id_kube']))->row();
+		$get_data_anggota = $this->Main_model->getSelectedData('anggota_kube a', 'a.*', array('a.id_anggota_kube'=>$this->post('data_utama')['id_anggota_kube']))->row();
+		$data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.program'=>'1'))->result();
+
+		$total_uang = 0;
+		$progres_keuangan = $this->post('progres_keuangan');
+		foreach ($progres_keuangan as $key => $value) {
+			$total_uang += $value['progres_keuangan'];
+			$data_insert2b = array(
+				'id_laporan_kube' => $get_id_laporan_kube['id_laporan_kube']+1,
+				'id_master_indikator' => $value['id_tipe_indikator'],
+				'progres_keuangan' => $value['progres_keuangan']
+			);
+			// print_r($data_insert2b);
+			$this->Main_model->insertData('detail_laporan_kube_aspek_keuangan',$data_insert2b);
+		}
+
+		$get_indikator = array();
+		$progres_fisik = $this->post('progres_fisik');
+		foreach ($progres_fisik as $key => $value) {
+			array_push($get_indikator,$value['indikator_progres_fisik']);
+			$data_insert2a = array(
+				'id_laporan_kube' => $get_id_laporan_kube['id_laporan_kube']+1,
+				'id_master_indikator' => $value['id_tipe_indikator'],
+				'indikator_progres_fisik' => $value['indikator_progres_fisik'],
+				'penjelasan_progres_fisik' => $value['penjelasan_progres_fisik']
+			);
+			// print_r($data_insert2a);
+			$this->Main_model->insertData('detail_laporan_kube_aspek_fisik',$data_insert2a);
+		}
+		
+		$data_insert1 = array(
+            'id_laporan_kube' => $get_id_laporan_kube['id_laporan_kube']+1,
+			'id_anggota_kube' => $this->post('data_utama')['id_anggota_kube'],
+			'user_id' => $get_data_anggota->user_id,
+			'id_kube' => $this->post('data_utama')['id_kube'],
+            'indikator' => implode(',',$get_indikator),
+            'persentase_fisik' => ((count($get_indikator))/(count($data_indikator)))*100,
+            'anggaran' => $total_uang,
+            'persentase_anggaran' => ($total_uang/$get_data_kube->rencana_anggaran)*100,
+            'persentase_realisasi' => ((((count($get_indikator))/(count($data_indikator)))*100)+(($total_uang/$get_data_kube->rencana_anggaran)*100))/2,
+            'keterangan' => $this->post('data_utama')['keterangan'],
+			'created_at' => date('Y-m-d H:i:s'),
+			'created_by' => $get_data_anggota->user_id
+        );
+        // print_r($data_insert1);
+		$this->Main_model->insertData('laporan_kube',$data_insert1);
+		
+		if($get_status_laporan_kube==NULL){
+            $data_insert3 = array(
+                'id_kube' => $this->post('data_utama')['id_kube'],
+                'indikator' => implode(',',$get_indikator),
+                'persentase_fisik' => ((count($get_indikator))/(count($data_indikator)))*100,
+                'anggaran' => $total_uang,
+                'persentase_anggaran' => ($total_uang/$get_data_kube->rencana_anggaran)*100,
+            	'persentase_realisasi' => ((((count($get_indikator))/(count($data_indikator)))*100)+(($total_uang/$get_data_kube->rencana_anggaran)*100))/2
+            );
+            // print_r($data_insert3);
+            $this->Main_model->insertData('status_laporan_kube',$data_insert3);
+        }else{
+            $bb = explode(',',$get_status_laporan_kube->indikator);
+            $c = array_unique(array_merge($get_indikator,$bb));
+            $d = implode(',',$c);
+            $persentase_fisik = (count($c)/count($data_indikator))*100;
+            $persentase_anggaran = (($total_uang+$get_status_laporan_kube->anggaran)/$get_data_kube->rencana_anggaran)*100;
+            $persentase_realisasi = ($persentase_anggaran+$persentase_fisik)/2;
+            $data_update1 = array(
+                'indikator' => $d,
+                'persentase_fisik' => $persentase_fisik,
+                'anggaran' => $total_uang+$get_status_laporan_kube->anggaran,
+                'persentase_anggaran' => $persentase_anggaran,
+                'persentase_realisasi' => $persentase_realisasi
+            );
+            // print_r($data_update1);
+            $this->Main_model->updateData('status_laporan_kube',$data_update1,array('id_kube'=>$get_status_laporan_kube->id_kube));
+        }
+
+		$this->db->trans_complete();
+		if($this->db->trans_status() === false){
+			$hasil['status'] = 'Gagal';
+			$this->response($hasil, 200);
+		}
+		else{
+			$hasil['status'] = 'Sukses';
+			$this->response($hasil, 200);
+		}
+	}
 
 	function index_put() {
 		$this->db->trans_start();
         $get_id_laporan_kube = $this->Main_model->getSelectedData('laporan_kube a', 'a.*', array('a.id_laporan_kube'=>$this->put('data_utama')['id_laporan_kube']))->row_array();
         $get_data_kube = $this->Main_model->getSelectedData('kube a', 'a.*', array('a.id_kube'=>$get_id_laporan_kube['id_kube']))->row();
         $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.program'=>'1'))->result();
         $total_uang = 0;
         $get_indikator = array();
 		$progres_keuangan = $this->put('progres_keuangan');

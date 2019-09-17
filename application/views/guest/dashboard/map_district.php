@@ -79,8 +79,9 @@
                                     </a>
                                 </div>
                                 <div class="col-md-9 col-sm-9 col-xs-12">
-                                    <h3><strong>SIM-KRS</strong></h3>
-                                    <h3>Sistem Informasi Manajemen Kube, Rutilahu dan Sarling<br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
+                                    <h3><strong>Dashboard Bantuan Sosial Reguler</strong></h3>
+                                    <!-- <h3>Sistem Informasi Manajemen Kube, Rutilahu dan Sarling<br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3> -->
+                                    <h3><br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-1 col-xs-12">
@@ -96,6 +97,9 @@
                                     <li>
                                         <a href="<?=base_url('data_grafik')?>"> Data dalam bentuk Grafik </a>
                                     </li>
+                                    <li>
+                                        <a href="<?=base_url('info')?>"> Info PFM </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="panel panel-flat panel-dayasos-portal">
@@ -108,7 +112,7 @@
                                                 <div class="form-group form-md-line-input has-danger">
                                                     <div class="col-md-2">
                                                     </div>
-                                                    <label class="col-md-1 control-label" for="form_control_1">Kegiatan</label>
+                                                    <label class="col-md-1 control-label" for="form_control_1">Program</label>
                                                     <div class="col-md-5">
                                                         <div class="input-icon">
                                                             <select name='kegiatan' class="form-control select2-allow-clear" required>
@@ -184,21 +188,25 @@
                             if($value->jumlah_kube=='0'){
                                 echo'';
                             }else{
-                                $persentase_realisasi_kube = number_format(($value->persentase_realisasi_kube)/($value->jumlah_kube),2);
+                                $persentase_realisasi_kube = number_format(($value->jumlah_kube),0);
+                                // $persentase_realisasi_kube = number_format(($value->persentase_realisasi_kube)/($value->jumlah_kube),2);
                             }
                             $persentase_realisasi_rutilahu = 0;
                             if($value->jumlah_rutilahu=='0'){
                                 echo'';
                             }else{
-                                $persentase_realisasi_rutilahu = number_format(($value->persentase_realisasi_rutilahu)/($value->jumlah_rutilahu),2);
+                                $persentase_realisasi_rutilahu = number_format(($value->jumlah_rutilahu),0);
+                                // $persentase_realisasi_rutilahu = number_format(($value->persentase_realisasi_rutilahu)/($value->jumlah_rutilahu),2);
                             }
                             $persentase_realisasi_sarling = 0;
                             if($value->jumlah_sarling=='0'){
                                 echo'';
                             }else{
-                                $persentase_realisasi_sarling = number_format(($value->persentase_realisasi_sarling)/($value->jumlah_sarling),2);
+                                $persentase_realisasi_sarling = number_format(($value->jumlah_sarling),0);
+                                // $persentase_realisasi_sarling = number_format(($value->persentase_realisasi_sarling)/($value->jumlah_sarling),2);
                             }
-                            echo ("addMarker($lat, $lon, '<div $style><h3><b>$nama</b></h3><br><table $class_table><tbody><tr><td $style_td> Persentase Realisasi KUBE </td><td> $persentase_realisasi_kube% </td></tr><tr><td $style_td> Persentase Realisasi RUTILAHU </td><td> $persentase_realisasi_rutilahu% </td></tr><tr><td $style_td> Persentase Realisasi SARLING </td><td> $persentase_realisasi_sarling% </td></tr><tr><td></td><td></td></tr><tr></tbody></table></div>');\n");
+                            echo ("addMarker($lat, $lon, '<div $style><h3><b>$nama</b></h3><br><table $class_table><tbody><tr><td $style_td> Jumlah KUBE </td><td> $persentase_realisasi_kube Kelompok </td></tr><tr><td $style_td> Jumlah RUTILAHU </td><td> $persentase_realisasi_rutilahu Kelompok </td></tr><tr><td $style_td> Jumlah SARLING </td><td> $persentase_realisasi_sarling Tim </td></tr><tr><td></td><td></td></tr><tr></tbody></table></div>');\n");
+                            // echo ("addMarker($lat, $lon, '<div $style><h3><b>$nama</b></h3><br><table $class_table><tbody><tr><td $style_td> Persentase Realisasi KUBE </td><td> $persentase_realisasi_kube% </td></tr><tr><td $style_td> Persentase Realisasi RUTILAHU </td><td> $persentase_realisasi_rutilahu% </td></tr><tr><td $style_td> Persentase Realisasi SARLING </td><td> $persentase_realisasi_sarling% </td></tr><tr><td></td><td></td></tr><tr></tbody></table></div>');\n");
                         }
                     ?>
 
@@ -221,7 +229,7 @@
                         infoWindow.open(map, marker);
                     });
                     }
-                    var situs = 'http://pfm.gbnku.co.id/assets/peta_kec/';
+                    var situs = 'http://pfm.demokode.com/assets/peta_kec/';
                     var nama_file = '<?php echo $kml ?>';
                     var situs_full = situs.concat(nama_file);
                     var kmldashboard = new google.maps.KmlLayer({

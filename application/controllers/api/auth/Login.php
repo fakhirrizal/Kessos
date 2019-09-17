@@ -54,7 +54,11 @@ class Login extends REST_Controller {
 					}else{
 						foreach ($role as $key => $value2) {
 							if($value2->role_id=='2'){
-								$get_anggota_kube = $this->Main_model->getSelectedData('anggota_kube a', 'a.*', array('a.user_id'=>$value2->user_id),'','1')->row();
+								$get_anggota_kube = $this->Main_model->getSelectedData('anggota_kube a', 'a.*', array('a.user_id'=>$value2->user_id,'b.deleted'=>'0'),'','1','','',array(
+									'table' => 'kube b',
+									'on' => 'a.id_kube=b.id_kube',
+									'pos' => 'left'
+								))->row();
 								$hasil['user_id'] = $value2->user_id;
 								$hasil['nama'] = $value2->fullname;
 								$hasil['nik'] = $value2->nin;
@@ -65,7 +69,11 @@ class Login extends REST_Controller {
 								$hasil['id_kegiatan'] = $get_anggota_kube->id_kube;
 								$this->response($hasil, 200);
 							}elseif($value2->role_id=='3'){
-								$get_anggota_rutilahu = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*', array('a.user_id'=>$value2->user_id),'','1')->row();
+								$get_anggota_rutilahu = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*', array('a.user_id'=>$value2->user_id,'b.deleted'=>'0'),'','1','','',array(
+									'table' => 'rutilahu b',
+									'on' => 'a.id_rutilahu=b.id_rutilahu',
+									'pos' => 'left'
+								))->row();
 								$hasil['user_id'] = $value2->user_id;
 								$hasil['nama'] = $value2->fullname;
 								$hasil['nik'] = $value2->nin;
@@ -76,7 +84,11 @@ class Login extends REST_Controller {
 								$hasil['id_kegiatan'] = $get_anggota_rutilahu->id_rutilahu;
 								$this->response($hasil, 200);
 							}else{
-								$get_anggota_sarling = $this->Main_model->getSelectedData('anggota_sarling a', 'a.*', array('a.user_id'=>$value2->user_id),'','1')->row();
+								$get_anggota_sarling = $this->Main_model->getSelectedData('anggota_sarling a', 'a.*', array('a.user_id'=>$value2->user_id,'b.deleted'=>'0'),'','1','','',array(
+									'table' => 'sarling b',
+									'on' => 'a.id_sarling=b.id_sarling',
+									'pos' => 'left'
+								))->row();
 								$hasil['user_id'] = $value2->user_id;
 								$hasil['nama'] = $value2->fullname;
 								$hasil['nik'] = $value2->nin;

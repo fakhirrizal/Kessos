@@ -21,4 +21,7 @@ class App extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 	}
+	public function info(){
+		$this->load->view('guest/app/info');
+	}
 }

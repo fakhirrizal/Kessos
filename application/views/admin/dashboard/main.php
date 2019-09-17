@@ -31,7 +31,7 @@
 <div class="page-content-inner">
 	<div class="m-heading-1 border-green m-bordered">
 		<h3>Catatan</h3>
-		<!-- <p> Ketika mengklik <b>Atur Ulang Sandi</b>, maka kata sandi otomatis menjadi "<b>1234</b>"</p> -->
+		<p> Data yang tersaji merupakan rekap dari Tahun 2019</p>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
@@ -129,7 +129,7 @@
 			infoWindow.open(map, marker);
 		});
 		}
-		var situs = 'http://pfm.gbnku.co.id/assets/peta/';
+		var situs = 'http://pfm.demokode.com/assets/peta/';
 		var nama_file = '<?php echo $nama_file ?>';
 		var situs_full = situs.concat(nama_file);
 		var kmldashboard = new google.maps.KmlLayer({
@@ -212,37 +212,37 @@
 														<a class="btn btn-xs green" href="'.site_url().'admin_side/peta_provinsi/'.md5($value->id_provinsi).'">
 														<i class="icon-eye"></i> Detail Data </a>
 													</td>
-												</tr>
-												<tr>
-													<td colspan="6">
-														<div class="panel-group accordion" id="accordion'.$value->id_provinsi.'">
-															<div class="panel panel-default">
-																<div class="panel-heading">
-																	<h4 class="panel-title">
-																		<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion'.$value->id_provinsi.'" href="#collapse_'.$value->id_provinsi.'_1" aria-expanded="false"> Detail Data </a>
-																	</h4>
-																</div>
-																<div id="collapse_'.$value->id_provinsi.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
-																	<div class="panel-body">
-																	<h4><b>Kube (Kelompok Usaha Bersama)</b></h4>
-																	- Jumlah Kube : '.number_format($value->jumlah_kube).' Kelompok<br>
-																	- Rata-rata progres aspek fisik per kelompok '.number_format($persentase_fisik_kube,2).'%<br>
-																	- Rata-rata penyerapan anggaran tiap kelompok sebesar Rp '.number_format($anggaran_kube,2).' ('.number_format($persentase_anggaran_kube,2).'%)
-																	<h4><b>Rutilahu (Rumah Tidak Layak Huni)</b></h4>
-																	- Jumlah Rutilahu : '.number_format($value->jumlah_rutilahu).' Kelompok<br>
-																	- Rata-rata progres aspek fisik per kelompok '.number_format($persentase_fisik_rutilahu,2).'%<br>
-																	- Rata-rata penyerapan anggaran tiap kelompok sebesar Rp '.number_format($anggaran_rutilahu,2).' ('.number_format($persentase_anggaran_rutilahu,2).'%)
-																	<h4><b>Sarling (Sarana Lingkungan)</b></h4>
-																	- Jumlah Sarling : '.number_format($value->jumlah_sarling).' Tim<br>
-																	- Rata-rata progres aspek fisik per tim '.number_format($persentase_fisik_sarling,2).'%<br>
-																	- Rata-rata penyerapan anggaran tiap tim sebesar Rp '.number_format($anggaran_sarling,2).' ('.number_format($persentase_anggaran_sarling,2).'%)
-																	</div>
-																</div>
-															</div>
-														</div>
-													</td>
-												</tr>
-												';
+												</tr>';
+												// echo'<tr>
+												// 	<td colspan="6">
+												// 		<div class="panel-group accordion" id="accordion'.$value->id_provinsi.'">
+												// 			<div class="panel panel-default">
+												// 				<div class="panel-heading">
+												// 					<h4 class="panel-title">
+												// 						<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion'.$value->id_provinsi.'" href="#collapse_'.$value->id_provinsi.'_1" aria-expanded="false"> Detail Data </a>
+												// 					</h4>
+												// 				</div>
+												// 				<div id="collapse_'.$value->id_provinsi.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+												// 					<div class="panel-body">
+												// 					<h4><b>Kube (Kelompok Usaha Bersama)</b></h4>
+												// 					- Jumlah Kube : '.number_format($value->jumlah_kube).' Kelompok<br>
+												// 					- Rata-rata progres aspek fisik per kelompok '.number_format($persentase_fisik_kube,2).'%<br>
+												// 					- Rata-rata penyerapan anggaran tiap kelompok sebesar Rp '.number_format($anggaran_kube,2).' ('.number_format($persentase_anggaran_kube,2).'%)
+												// 					<h4><b>Rutilahu (Rumah Tidak Layak Huni)</b></h4>
+												// 					- Jumlah Rutilahu : '.number_format($value->jumlah_rutilahu).' Kelompok<br>
+												// 					- Rata-rata progres aspek fisik per kelompok '.number_format($persentase_fisik_rutilahu,2).'%<br>
+												// 					- Rata-rata penyerapan anggaran tiap kelompok sebesar Rp '.number_format($anggaran_rutilahu,2).' ('.number_format($persentase_anggaran_rutilahu,2).'%)
+												// 					<h4><b>Sarling (Sarana Lingkungan)</b></h4>
+												// 					- Jumlah Sarling : '.number_format($value->jumlah_sarling).' Tim<br>
+												// 					- Rata-rata progres aspek fisik per tim '.number_format($persentase_fisik_sarling,2).'%<br>
+												// 					- Rata-rata penyerapan anggaran tiap tim sebesar Rp '.number_format($anggaran_sarling,2).' ('.number_format($persentase_anggaran_sarling,2).'%)
+												// 					</div>
+												// 				</div>
+												// 			</div>
+												// 		</div>
+												// 	</td>
+												// </tr>
+												// ';
 											}
 											?>
 										</tbody>

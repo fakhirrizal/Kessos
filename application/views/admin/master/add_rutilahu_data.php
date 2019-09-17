@@ -69,6 +69,32 @@
 					<form role="form" class="form-horizontal" action="<?=base_url('admin_side/simpan_data_rutilahu');?>" method="post">
 						<div class="form-body">
 							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1">Tahun Program <span class="required"> * </span></label>
+								<div class="col-md-3">
+									<div class="input-icon">
+										<select name='tahun' class="form-control select2-allow-clear" required>
+											<option value=''>-- Pilih --</option>
+											<option value='2015'>2015</option>
+											<option value='2016'>2016</option>
+											<option value='2017'>2017</option>
+											<option value='2018'>2018</option>
+											<option value='2019'>2019</option>
+										</select>
+									</div>
+								</div>
+								<label class="col-md-2 control-label" for="form_control_1">Tahap <span class="required"> * </span></label>
+								<div class="col-md-3">
+									<div class="input-icon">
+										<select name='tahap' class="form-control select2-allow-clear" required>
+											<option value=''>-- Pilih --</option>
+											<option value='1'>Tahap 1</option>
+											<option value='2'>Tahap 2</option>
+											<option value='3'>Tahap 3</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Nama Kelompok <span class="required"> * </span></label>
 								<div class="col-md-10">
 									<div class="input-icon">

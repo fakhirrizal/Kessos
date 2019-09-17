@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <div class="alert alert-info alert-dismissible" role="alert" style="text-align: justify;">
 	<!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
 	<i class="fa fa-warning"></i> <strong>Selamat Datang</strong> di Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II</a>

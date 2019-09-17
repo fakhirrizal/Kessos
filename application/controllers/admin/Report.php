@@ -107,7 +107,7 @@ class Report extends CI_Controller {
         $get_id_laporan_kube = $this->Main_model->getLastID('laporan_kube','id_laporan_kube');
         $get_data_kube = $this->Main_model->getSelectedData('kube a', 'a.*,(SELECT k.id_anggota_kube FROM anggota_kube k WHERE k.id_kube=a.id_kube AND k.jabatan_kelompok="Ketua") AS ketua,(SELECT i.user_id FROM anggota_kube i WHERE i.id_kube=a.id_kube AND i.jabatan_kelompok="Ketua") AS id_ketua', array('a.id_kube'=>$this->input->post('id_kube')))->row();
         $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.program'=>'1'))->result();
         $total_uang = 0;
         $get_indikator = array();
         foreach ($indikator as $key => $value) {
@@ -292,7 +292,7 @@ class Report extends CI_Controller {
         $get_id_laporan_kube = $this->Main_model->getSelectedData('laporan_kube a', 'a.*', array('md5(a.id_laporan_kube)'=>$this->input->post('id_laporan_kube')))->row_array();
         $get_data_kube = $this->Main_model->getSelectedData('kube a', 'a.*', array('md5(a.id_kube)'=>$this->input->post('id_kube')))->row();
         $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.program'=>'1'))->result();
         $total_uang = 0;
         $get_indikator = array();
 
@@ -549,7 +549,7 @@ class Report extends CI_Controller {
         $get_id_laporan_rutilahu = $this->Main_model->getLastID('laporan_rutilahu','id_laporan_rutilahu');
         $get_data_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*,(SELECT k.id_anggota_rutilahu FROM anggota_rutilahu k WHERE k.id_rutilahu=a.id_rutilahu AND k.jabatan_kelompok="Ketua") AS ketua,(SELECT i.user_id FROM anggota_rutilahu i WHERE i.id_rutilahu=a.id_rutilahu AND i.jabatan_kelompok="Ketua") AS id_ketua', array('a.id_rutilahu'=>$this->input->post('id_rutilahu')))->row();
         $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.program'=>'2'))->result();
         $total_uang = 0;
         $get_indikator = array();
         foreach ($indikator as $key => $value) {
@@ -724,7 +724,7 @@ class Report extends CI_Controller {
         $get_id_laporan_rutilahu = $this->Main_model->getSelectedData('laporan_rutilahu a', 'a.*', array('md5(a.id_laporan_rutilahu)'=>$this->input->post('id_laporan_rutilahu')))->row_array();
         $get_data_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*', array('md5(a.id_rutilahu)'=>$this->input->post('id_rutilahu')))->row();
         $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.program'=>'2'))->result();
         $total_uang = 0;
         $get_indikator = array();
 
@@ -981,7 +981,7 @@ class Report extends CI_Controller {
         $get_id_laporan_sarling = $this->Main_model->getLastID('laporan_sarling','id_laporan_sarling');
         $get_data_sarling = $this->Main_model->getSelectedData('sarling a', 'a.*,(SELECT k.id_anggota_sarling FROM anggota_sarling k WHERE k.id_sarling=a.id_sarling AND k.jabatan_kelompok="Ketua") AS ketua,(SELECT i.user_id FROM anggota_sarling i WHERE i.id_sarling=a.id_sarling AND i.jabatan_kelompok="Ketua") AS id_ketua', array('a.id_sarling'=>$this->input->post('id_sarling')))->row();
         $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.program'=>'3'))->result();
         $total_uang = 0;
         $get_indikator = array();
         foreach ($indikator as $key => $value) {
@@ -1161,7 +1161,7 @@ class Report extends CI_Controller {
         $get_id_laporan_sarling = $this->Main_model->getSelectedData('laporan_sarling a', 'a.*', array('md5(a.id_laporan_sarling)'=>$this->input->post('id_laporan_sarling')))->row_array();
         $get_data_sarling = $this->Main_model->getSelectedData('sarling a', 'a.*', array('md5(a.id_sarling)'=>$this->input->post('id_sarling')))->row();
         $indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
+        $data_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.program'=>'3'))->result();
         $total_uang = 0;
         $get_indikator = array();
 
