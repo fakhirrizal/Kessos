@@ -78,9 +78,9 @@
 									</label>
 								</th>
 								<th style="text-align: center;" width="4%"> # </th>
-								<th style="text-align: center;"> Nama Kelompok </th>
 								<th style="text-align: center;"> Tahun Program </th>
 								<th style="text-align: center;"> Tahap </th>
+								<th style="text-align: center;"> Nama Kelompok </th>
 								<th style="text-align: center;"> Jenis Usaha </th>
 								<!-- <th style="text-align: center;"> Alamat </th> -->
 								<th style="text-align: center;"> Rencana Anggaran </th>
@@ -189,9 +189,9 @@
 								"aoColumns": [
 											{ mData: 'checkbox', sClass: "alignCenter", "bSortable": false} ,
 											{ mData: 'number', sClass: "alignCenter" },
-											{ mData: 'nama_tim' },
 											{ mData: 'tahun', sClass: "alignCenter" } ,
 											{ mData: 'tahap', sClass: "alignCenter" } ,
+											{ mData: 'nama_tim' },
 											{ mData: 'jenis_usaha', sClass: "alignCenter" },
 											// { mData: 'alamat', sClass: "alignCenter" } ,
 											{ mData: 'rencana_anggaran', sClass: "alignCenter" },

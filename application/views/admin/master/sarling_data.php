@@ -51,9 +51,9 @@
 								</th>
 								<th style="text-align: center;" width="4%"> # </th>
 								<th style="text-align: center;"> Jenis Sarling </th>
-								<th style="text-align: center;"> Nama Tim </th>
 								<th style="text-align: center;"> Tahun Program </th>
 								<th style="text-align: center;"> Tahap </th>
+								<th style="text-align: center;"> Nama Tim </th>
 								<th style="text-align: center;"> Alamat Sarling </th>
 								<th style="text-align: center;"> Rencana Anggaran </th>
 								<th style="text-align: center;"> Provinsi </th>
@@ -77,9 +77,9 @@
 											{ mData: 'checkbox', sClass: "alignCenter", "bSortable": false} ,
 											{ mData: 'number', sClass: "alignCenter" },
 											{ mData: 'jenis_sarling' },
-											{ mData: 'nama_tim' },
 											{ mData: 'tahun', sClass: "alignCenter" } ,
 											{ mData: 'tahap', sClass: "alignCenter" } ,
+											{ mData: 'nama_tim' },
 											{ mData: 'alamat', sClass: "alignCenter" } ,
 											{ mData: 'rencana_anggaran', sClass: "alignCenter" },
 											{ mData: 'nm_provinsi', sClass: "alignCenter" },

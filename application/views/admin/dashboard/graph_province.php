@@ -44,8 +44,66 @@
                             <div class="col-md-12">
                             <?php
                             if(isset($data_utama_1)){
+                                $a = 0;
+                                $b = 0;
+                                $c = 0;
+                                foreach ($data_utama_1 as $key => $value) {
+                                    if($value->jumlah_kube=='0'){
+                                        echo'';
+                                    }else{
+                                        $a += $value->jumlah_kube;
+                                    }
+                                    if($value->jumlah_rutilahu=='0'){
+                                        echo'';
+                                    }else{
+                                        $b += $value->jumlah_rutilahu;
+                                    }
+                                    if($value->jumlah_sarling=='0'){
+                                        echo'';
+                                    }else{
+                                        $c += $value->jumlah_sarling;
+                                    }
+                                }
                             ?>
                             <hr>
+                            <div class="row widget-row">
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading">Jumlah KUBE</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-green icon-grid"></i>
+                                            <div class="widget-thumb-body">
+                                                <span class="widget-thumb-subtitle">Kelompok</span>
+                                                <span class="widget-thumb-body-stat" ><?= number_format($a/(count($data_utama_1))); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading">Jumlah RUTILAHU</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-red icon-home"></i>
+                                            <div class="widget-thumb-body">
+                                                <span class="widget-thumb-subtitle">Kelompok</span>
+                                                <span class="widget-thumb-body-stat"><?= number_format($b/(count($data_utama_1))); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading">Jumlah Sarling</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-purple icon-layers"></i>
+                                            <div class="widget-thumb-body">
+                                                <span class="widget-thumb-subtitle">Tim</span>
+                                                <span class="widget-thumb-body-stat"><?= number_format($c/(count($data_utama_1))); ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="grafik" style="width:100%; height:400px;"></div>
                             <div class="tabbable-line">
                                 <table class="table table-striped table-bordered" id="tbl1">
@@ -201,8 +259,72 @@
                             </script>
                             <?php
                             }elseif(isset($data_utama_2)){
+                                $d1 = 0;
+                                $d2 = 0;
+                                $e1 = 0;
+                                $e2 = 0;
+                                $f1 = 0;
+                                $f2 = 0;
+                                foreach ($data_utama_2 as $key => $value) {
+                                    if($value->jumlah_kube=='0'){
+                                        echo'';
+                                    }else{
+                                        $d1 += $value->jumlah_kube;
+                                        $d2 += $value->persentase_realisasi_kube;
+                                    }
+                                    if($value->jumlah_rutilahu=='0'){
+                                        echo'';
+                                    }else{
+                                        $e1 += $value->jumlah_rutilahu;
+                                        $e2 += $value->persentase_realisasi_rutilahu;
+                                    }
+                                    if($value->jumlah_sarling=='0'){
+                                        echo'';
+                                    }else{
+                                        $f1 += $value->jumlah_sarling;
+                                        $f2 += $value->persentase_realisasi_sarling;
+                                    }
+                                }
                             ?>
                             <hr>
+                            <div class="row widget-row">
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading">Realisasi KUBE</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-green icon-grid"></i>
+                                            <div class="widget-thumb-body">
+                                                <!-- <span class="widget-thumb-subtitle">Kelompok</span> -->
+                                                <span class="widget-thumb-body-stat"><?= number_format((($d2/$d1)/(count($data_utama_2))),2).'%'; ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading">Realisasi RUTILAHU</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-red icon-home"></i>
+                                            <div class="widget-thumb-body">
+                                                <!-- <span class="widget-thumb-subtitle">Kelompok</span> -->
+                                                <span class="widget-thumb-body-stat"><?= number_format((($e2/$e1)/(count($data_utama_2))),2).'%'; ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading">Realisasi Sarling</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-purple icon-layers"></i>
+                                            <div class="widget-thumb-body">
+                                                <!-- <span class="widget-thumb-subtitle">Tim</span> -->
+                                                <span class="widget-thumb-body-stat"><?= number_format((($f2/$f1)/(count($data_utama_2))),2).'%'; ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="grafik" style="width:100%; height:400px;"></div>
                             <div class="tabbable-line">
                                 <table class="table table-striped table-bordered" id="tbl1">
@@ -375,8 +497,78 @@
                             </script>
                             <?php
                             }elseif(isset($data_utama_3)){
+                                $g1 = 0;
+                                $g2 = 0;
+                                $g3 = 0;
+                                $h1 = 0;
+                                $h2 = 0;
+                                $h3 = 0;
+                                $i1 = 0;
+                                $i2 = 0;
+                                $i3 = 0;
+                                foreach ($data_utama_3 as $key => $value) {
+                                    if($value->jumlah_kube=='0'){
+                                        echo'';
+                                    }else{
+                                        $g1 += $value->anggaran_kube;
+                                        $g2 += $value->persentase_anggaran_kube;
+                                        $g3 += $value->jumlah_kube;
+                                    }
+                                    if($value->jumlah_rutilahu=='0'){
+                                        echo'';
+                                    }else{
+                                        $h1 += $value->anggaran_rutilahu;
+                                        $h2 += $value->persentase_anggaran_rutilahu;
+                                        $h3 += $value->jumlah_rutilahu;
+                                    }
+                                    if($value->jumlah_sarling=='0'){
+                                        echo'';
+                                    }else{
+                                        $i1 += $value->anggaran_sarling;
+                                        $i2 += $value->persentase_anggaran_sarling;
+                                        $i3 += $value->jumlah_sarling;
+                                    }
+                                }
                             ?>
                             <hr>
+                            <div class="row widget-row">
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading text-uppercase">Serapan Anggaran KUBE</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-green icon-grid"></i>
+                                            <div class="widget-thumb-body">
+                                                <span class="widget-thumb-subtitle"><?= 'Rp '.number_format((($g1/$g3)/(count($data_utama_3))),2); ?></span>
+                                                <span class="widget-thumb-body-stat"><?= number_format((($g2/$g3)/(count($data_utama_3))),2).'%'; ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading text-uppercase">Serapan Anggaran RUTILAHU</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-red icon-home"></i>
+                                            <div class="widget-thumb-body">
+                                                <span class="widget-thumb-subtitle"><?= 'Rp '.number_format((($h1/$h3)/(count($data_utama_3))),2); ?></span>
+                                                <span class="widget-thumb-body-stat"><?= number_format((($h2/$h3)/(count($data_utama_3))),2).'%'; ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading text-uppercase">Serapan Anggaran Sarling</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-purple icon-layers"></i>
+                                            <div class="widget-thumb-body">
+                                                <span class="widget-thumb-subtitle"><?= 'Rp '.number_format((($i1/$i3)/(count($data_utama_3))),2); ?></span>
+                                                <span class="widget-thumb-body-stat"><?= number_format((($i2/$i3)/(count($data_utama_3))),2).'%'; ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="grafik" style="width:100%; height:400px;"></div>
                             <div class="tabbable-line">
                                 <table class="table table-striped table-bordered" id="tbl1">
@@ -537,8 +729,69 @@
                             </script>
                             <?php
                             }elseif(isset($data_utama_4)){
+                                $j1 = 0;
+                                $j2 = 0;
+                                $k1 = 0;
+                                $k2 = 0;
+                                $l1 = 0;
+                                $l2 = 0;
+                                foreach ($data_utama_4 as $key => $value) {
+                                    if($value->jumlah_kube=='0'){
+                                        echo'';
+                                    }else{
+                                        $j1 += ($value->persentase_fisik_kube);
+                                        $j2 += ($value->jumlah_kube);
+                                    }
+                                    if($value->jumlah_rutilahu=='0'){
+                                        echo'';
+                                    }else{
+                                        $k1 += ($value->persentase_fisik_rutilahu);
+                                        $k2 += ($value->jumlah_rutilahu);
+                                    }
+                                    if($value->jumlah_sarling=='0'){
+                                        echo'';
+                                    }else{
+                                        $l1 += ($value->persentase_fisik_sarling);
+                                        $l2 += ($value->jumlah_sarling);
+                                    }
+                                }
                             ?>
                             <hr>
+                            <div class="row widget-row">
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading text-uppercase">Progres Fisik KUBE</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-green icon-grid"></i>
+                                            <div class="widget-thumb-body">
+                                                <span class="widget-thumb-body-stat"><?= number_format((($j1/$j2)/(count($data_utama_4))),2).'%'; ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading text-uppercase">Progres Fisik RUTILAHU</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-red icon-home"></i>
+                                            <div class="widget-thumb-body">
+                                                <span class="widget-thumb-body-stat"><?= number_format((($k1/$k2)/(count($data_utama_4))),2).'%'; ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
+                                        <h4 class="widget-thumb-heading text-uppercase">Progres Fisik Sarling</h4>
+                                        <div class="widget-thumb-wrap">
+                                            <i class="widget-thumb-icon bg-purple icon-layers"></i>
+                                            <div class="widget-thumb-body">
+                                                <span class="widget-thumb-body-stat"><?= number_format((($l1/$l2)/(count($data_utama_4))),2).'%'; ?></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="grafik" style="width:100%; height:400px;"></div>
                             <div class="tabbable-line">
                                 <table class="table table-striped table-bordered" id="tbl1">
