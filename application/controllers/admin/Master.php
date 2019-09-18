@@ -146,140 +146,114 @@ class Master extends CI_Controller {
 					// 	'o' => $row['O']
 					// );
 					// print_r($data_tes);
-					$jabatan = '';
-					if($row['G']=='K'){
-						$jabatan = 'Ketua';
-					}elseif($row['G']=='S'){
-						$jabatan = 'Sekretaris';
-					}elseif($row['G']=='B'){
-						$jabatan = 'Bendahara';
-					}
-					elseif($row['G']=='A'){
-						$jabatan = 'Anggota';
-					}else{
+					if($row['A']=='' AND $row['B']=='' AND $row['C']=='' AND $row['D']=='' AND $row['E']=='' AND $row['F']=='' AND $row['G']=='' AND $row['H']=='' AND $row['I']=='' AND $row['J']=='' AND $row['K']=='' AND $row['L']=='' AND $row['M']=='' AND $row['N']=='' AND $row['O']==''){
 						echo'';
-					}
-					if($row['A']!=NULL){
-						$get_id_kube = $this->Main_model->getLastID('kube','id_kube');
-						$get_id_kecamatan = $this->Main_model->getSelectedData('kecamatan a', 'a.*', array('a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_kecamatan" => $row['B']))->row();
-						$id_kecamatan = $get_id_kecamatan->id_kecamatan;
-						$get_id_desa = $this->Main_model->getSelectedData('desa a', 'a.*', array('a.id_kecamatan'=>$id_kecamatan,'a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_desa" => $row['C']))->row();
-						$id_desa = $get_id_desa->id_desa;
-						$nama_tim = $row['E'];
-						$cek_jenis_usaha = $this->Main_model->getSelectedData('jenis_usaha a', 'a.*', array("a.jenis_usaha" => $row['D']))->row();
-						if($cek_jenis_usaha==NULL){
-							$get_jenis_usaha = $this->Main_model->getLastID('jenis_usaha','id_jenis_usaha');
-							$insert_jenis_usaha = array(
-								'id_jenis_usaha' => $get_jenis_usaha['id_jenis_usaha']+1,
-								'jenis_usaha' => $row['D']
-							);
-							$this->Main_model->insertData('jenis_usaha',$insert_jenis_usaha);
-							// print_r($insert_jenis_usaha);
-							$id_jenis_usaha = $get_jenis_usaha['id_jenis_usaha']+1;
-						}else{
-							$id_jenis_usaha = $cek_jenis_usaha->id_jenis_usaha;
+					}else{
+						$jabatan = '';
+						if($row['G']=='K'){
+							$jabatan = 'Ketua';
+						}elseif($row['G']=='S'){
+							$jabatan = 'Sekretaris';
+						}elseif($row['G']=='B'){
+							$jabatan = 'Bendahara';
 						}
-						$data_insert_kube = array(
-							'id_kube' => $get_id_kube['id_kube']+1,
-							'tahun' => $this->input->post('tahun'),
-							'tahap' => $this->input->post('tahap'),
-							'id_jenis_usaha' => $id_jenis_usaha,
-							'nama_tim' => $nama_tim,
-							'alamat' => '',
-							'rencana_anggaran' => '0',
-							'id_provinsi' => $this->input->post('id_provinsi'),
-							'id_kabupaten' => $this->input->post('id_kabupaten'),
-							'id_kecamatan' => $id_kecamatan,
-							'id_desa' => $id_desa,
-							'created_at' => date('Y-m-d H:i:s'),
-							'created_by' => $this->session->userdata('id')
-						);
-						$this->Main_model->insertData('kube',$data_insert_kube);
-						// print_r($data_insert_kube);
-						$data_insert_status_laporan_kube = array(
-							'id_kube' => $get_id_kube['id_kube']+1,
-							'persentase_fisik' => 0,
-							'anggaran' => 0,
-							'persentase_anggaran' => 0,
-							'persentase_realisasi' => 0
-						);
-						$this->Main_model->insertData('status_laporan_kube',$data_insert_status_laporan_kube);
-						// print_r($data_insert_status_laporan_kube);
-						$id_kube = $get_id_kube['id_kube']+1;
-					}else{
-						echo'';
-					}
-					if($row['J']==NULL){
-						echo'';
-					}else{
-						$cek_nik = $this->Main_model->getSelectedData('user_profile a', 'a.*',array('a.nin'=>$row['J']))->row();
-						if($cek_nik==NULL){
-							$get_kube = $this->Main_model->getSelectedData('kube a', 'a.*',array('a.id_kube'=>$id_kube))->row();
-							$this->Main_model->updateData('kube',array('rencana_anggaran'=>(($get_kube->rencana_anggaran)+'2000000')),array('id_kube'=>$id_kube));
-
-							$get_user_id = $this->Main_model->getLastID('user','id');
-
-							$data_insert1 = array(
-								'id' => $get_user_id['id']+1,
-								'username' => $row['J'],
-								'pass' => $row['J'],
-								'is_active' => '1',
-								'created_by' => $this->session->userdata('id'),
-								'created_at' => date('Y-m-d H:i:s')
-							);
-							$this->Main_model->insertData('user',$data_insert1);
-							// print_r($data_insert1);
-
-							$data_insert2 = array(
-								'user_id' => $get_user_id['id']+1,
-								'fullname' => $row['H'],
-								'nin' => $row['J'],
-								'bdt_id' => $row['L'],
-								'pkh_id' => $row['M'],
-								'kks_id' => $row['N'],
-								'birth_date' => date('Y-m-d', strtotime($row['I']))
-							);
-							$this->Main_model->insertData('user_profile',$data_insert2);
-							// print_r($data_insert2);
-
-							$data_insert3 = array(
-								'user_id' => $get_user_id['id']+1,
-								'role_id' => '2'
-							);
-							$this->Main_model->insertData('user_to_role',$data_insert3);
-							// print_r($data_insert3);
-
-							$data_insert4 = array(
-								'user_id' => $get_user_id['id']+1,
-								'id_kube' => $id_kube,
-								'nama' => $row['H'],
-								'nik' => $row['J'],
-								'jabatan_kelompok' => $jabatan,
-								'no_kk' => $row['K'],
-								'keterangan' => $row['O']
-							);
-							$this->Main_model->insertData('anggota_kube',$data_insert4);
-							// print_r($data_insert4);
+						elseif($row['G']=='A'){
+							$jabatan = 'Anggota';
 						}else{
-							$cek_user_to_role = $this->Main_model->getSelectedData('user_to_role a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.role_id'=>'2'))->row();
-							if($cek_user_to_role==NULL){
+							echo'';
+						}
+						if($row['A']!=NULL){
+							$get_id_kube = $this->Main_model->getLastID('kube','id_kube');
+							$get_id_kecamatan = $this->Main_model->getSelectedData('kecamatan a', 'a.*', array('a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_kecamatan" => $row['B']))->row();
+							$id_kecamatan = $get_id_kecamatan->id_kecamatan;
+							$get_id_desa = $this->Main_model->getSelectedData('desa a', 'a.*', array('a.id_kecamatan'=>$id_kecamatan,'a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_desa" => $row['C']))->row();
+							$id_desa = $get_id_desa->id_desa;
+							$nama_tim = $row['E'];
+							$cek_jenis_usaha = $this->Main_model->getSelectedData('jenis_usaha a', 'a.*', array("a.jenis_usaha" => $row['D']))->row();
+							if($cek_jenis_usaha==NULL){
+								$get_jenis_usaha = $this->Main_model->getLastID('jenis_usaha','id_jenis_usaha');
+								$insert_jenis_usaha = array(
+									'id_jenis_usaha' => $get_jenis_usaha['id_jenis_usaha']+1,
+									'jenis_usaha' => $row['D']
+								);
+								$this->Main_model->insertData('jenis_usaha',$insert_jenis_usaha);
+								// print_r($insert_jenis_usaha);
+								$id_jenis_usaha = $get_jenis_usaha['id_jenis_usaha']+1;
+							}else{
+								$id_jenis_usaha = $cek_jenis_usaha->id_jenis_usaha;
+							}
+							$data_insert_kube = array(
+								'id_kube' => $get_id_kube['id_kube']+1,
+								'tahun' => $this->input->post('tahun'),
+								'tahap' => $this->input->post('tahap'),
+								'id_jenis_usaha' => $id_jenis_usaha,
+								'nama_tim' => $nama_tim,
+								'alamat' => '',
+								'rencana_anggaran' => '0',
+								'id_provinsi' => $this->input->post('id_provinsi'),
+								'id_kabupaten' => $this->input->post('id_kabupaten'),
+								'id_kecamatan' => $id_kecamatan,
+								'id_desa' => $id_desa,
+								'created_at' => date('Y-m-d H:i:s'),
+								'created_by' => $this->session->userdata('id')
+							);
+							$this->Main_model->insertData('kube',$data_insert_kube);
+							// print_r($data_insert_kube);
+							$data_insert_status_laporan_kube = array(
+								'id_kube' => $get_id_kube['id_kube']+1,
+								'persentase_fisik' => 0,
+								'anggaran' => 0,
+								'persentase_anggaran' => 0,
+								'persentase_realisasi' => 0
+							);
+							$this->Main_model->insertData('status_laporan_kube',$data_insert_status_laporan_kube);
+							// print_r($data_insert_status_laporan_kube);
+							$id_kube = $get_id_kube['id_kube']+1;
+						}else{
+							echo'';
+						}
+						if($row['J']==NULL){
+							echo'';
+						}else{
+							$cek_nik = $this->Main_model->getSelectedData('user_profile a', 'a.*',array('a.nin'=>$row['J']))->row();
+							if($cek_nik==NULL){
+								$get_kube = $this->Main_model->getSelectedData('kube a', 'a.*',array('a.id_kube'=>$id_kube))->row();
+								$this->Main_model->updateData('kube',array('rencana_anggaran'=>(($get_kube->rencana_anggaran)+'2000000')),array('id_kube'=>$id_kube));
+
+								$get_user_id = $this->Main_model->getLastID('user','id');
+
+								$data_insert1 = array(
+									'id' => $get_user_id['id']+1,
+									'username' => $row['J'],
+									'pass' => $row['J'],
+									'is_active' => '1',
+									'created_by' => $this->session->userdata('id'),
+									'created_at' => date('Y-m-d H:i:s')
+								);
+								$this->Main_model->insertData('user',$data_insert1);
+								// print_r($data_insert1);
+
+								$data_insert2 = array(
+									'user_id' => $get_user_id['id']+1,
+									'fullname' => $row['H'],
+									'nin' => $row['J'],
+									'bdt_id' => $row['L'],
+									'pkh_id' => $row['M'],
+									'kks_id' => $row['N'],
+									'birth_date' => date('Y-m-d', strtotime($row['I']))
+								);
+								$this->Main_model->insertData('user_profile',$data_insert2);
+								// print_r($data_insert2);
+
 								$data_insert3 = array(
-									'user_id' => $cek_nik->user_id,
+									'user_id' => $get_user_id['id']+1,
 									'role_id' => '2'
 								);
 								$this->Main_model->insertData('user_to_role',$data_insert3);
 								// print_r($data_insert3);
-							}else{
-								echo'';
-							}
-
-							$cek_anggota_kube = $this->Main_model->getSelectedData('anggota_kube a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.id_kube'=>$id_kube))->row();
-							if($cek_anggota_kube==NULL){
-								$get_kube = $this->Main_model->getSelectedData('kube a', 'a.*',array('a.id_kube'=>$id_kube))->row();
-								$this->Main_model->updateData('kube',array('rencana_anggaran'=>(($get_kube->rencana_anggaran)+'2000000')),array('id_kube'=>$id_kube));
 
 								$data_insert4 = array(
-									'user_id' => $cek_nik->user_id,
+									'user_id' => $get_user_id['id']+1,
 									'id_kube' => $id_kube,
 									'nama' => $row['H'],
 									'nik' => $row['J'],
@@ -290,7 +264,37 @@ class Master extends CI_Controller {
 								$this->Main_model->insertData('anggota_kube',$data_insert4);
 								// print_r($data_insert4);
 							}else{
-								echo'';
+								$cek_user_to_role = $this->Main_model->getSelectedData('user_to_role a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.role_id'=>'2'))->row();
+								if($cek_user_to_role==NULL){
+									$data_insert3 = array(
+										'user_id' => $cek_nik->user_id,
+										'role_id' => '2'
+									);
+									$this->Main_model->insertData('user_to_role',$data_insert3);
+									// print_r($data_insert3);
+								}else{
+									echo'';
+								}
+
+								$cek_anggota_kube = $this->Main_model->getSelectedData('anggota_kube a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.id_kube'=>$id_kube))->row();
+								if($cek_anggota_kube==NULL){
+									$get_kube = $this->Main_model->getSelectedData('kube a', 'a.*',array('a.id_kube'=>$id_kube))->row();
+									$this->Main_model->updateData('kube',array('rencana_anggaran'=>(($get_kube->rencana_anggaran)+'2000000')),array('id_kube'=>$id_kube));
+
+									$data_insert4 = array(
+										'user_id' => $cek_nik->user_id,
+										'id_kube' => $id_kube,
+										'nama' => $row['H'],
+										'nik' => $row['J'],
+										'jabatan_kelompok' => $jabatan,
+										'no_kk' => $row['K'],
+										'keterangan' => $row['O']
+									);
+									$this->Main_model->insertData('anggota_kube',$data_insert4);
+									// print_r($data_insert4);
+								}else{
+									echo'';
+								}
 							}
 						}
 					}
@@ -792,116 +796,90 @@ class Master extends CI_Controller {
 					// 	'm' => $row['M']
 					// );
 					// print_r($data_tes);
-					$jabatan = '';
-					if($row['F']=='K'){
-						$jabatan = 'Ketua';
-					}elseif($row['F']=='S'){
-						$jabatan = 'Sekretaris';
-					}elseif($row['F']=='B'){
-						$jabatan = 'Bendahara';
-					}
-					elseif($row['F']=='A'){
-						$jabatan = 'Anggota';
-					}else{
-						echo'';
-					}
-					if($row['A']!=NULL){
-						$get_id_rutilahu = $this->Main_model->getLastID('rutilahu','id_rutilahu');
-						$get_id_kecamatan = $this->Main_model->getSelectedData('kecamatan a', 'a.*', array('a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_kecamatan" => $row['B']))->row();
-						$id_kecamatan = $get_id_kecamatan->id_kecamatan;
-						$get_id_desa = $this->Main_model->getSelectedData('desa a', 'a.*', array('a.id_kecamatan'=>$id_kecamatan,'a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_desa" => $row['C']))->row();
-						$id_desa = $get_id_desa->id_desa;
-						$nama_tim = $row['D'];
-						$data_insert_rutilahu = array(
-							'id_rutilahu' => $get_id_rutilahu['id_rutilahu']+1,
-							'tahun' => $this->input->post('tahun'),
-							'tahap' => $this->input->post('tahap'),
-							'nama_kelompok' => $nama_tim,
-							'alamat' => $row['L'],
-							'rencana_anggaran' => '0',
-							'id_provinsi' => $this->input->post('id_provinsi'),
-							'id_kabupaten' => $this->input->post('id_kabupaten'),
-							'id_kecamatan' => $id_kecamatan,
-							'id_desa' => $id_desa,
-							'created_at' => date('Y-m-d H:i:s'),
-							'created_by' => $this->session->userdata('id')
-						);
-						$this->Main_model->insertData('rutilahu',$data_insert_rutilahu);
-						// print_r($data_insert_rutilahu);
-						$id_rutilahu = $get_id_rutilahu['id_rutilahu']+1;
-					}else{
-						echo'';
-					}
-					if($row['H']==NULL){
+					if($row['A']=='' AND $row['B']=='' AND $row['C']=='' AND $row['D']=='' AND $row['E']=='' AND $row['F']=='' AND $row['G']=='' AND $row['H']=='' AND $row['I']=='' AND $row['J']=='' AND $row['K']=='' AND $row['L']=='' AND $row['M']==''){
 						echo'';
 					}else{
-						$cek_nik = $this->Main_model->getSelectedData('user_profile a', 'a.*',array('a.nin'=>$row['H']))->row();
-						if($cek_nik==NULL){
-							$get_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*',array('a.id_rutilahu'=>$id_rutilahu))->row();
-							$this->Main_model->updateData('rutilahu',array('rencana_anggaran'=>(($get_rutilahu->rencana_anggaran)+'15000000')),array('id_rutilahu'=>$id_rutilahu));
-
-							$get_user_id = $this->Main_model->getLastID('user','id');
-
-							$data_insert1 = array(
-								'id' => $get_user_id['id']+1,
-								'username' => $row['H'],
-								'pass' => $row['H'],
-								'is_active' => '1',
-								'created_by' => $this->session->userdata('id'),
-								'created_at' => date('Y-m-d H:i:s')
-							);
-							$this->Main_model->insertData('user',$data_insert1);
-							// print_r($data_insert1);
-
-							$data_insert2 = array(
-								'user_id' => $get_user_id['id']+1,
-								'fullname' => $row['G'],
-								'nin' => $row['H'],
-								'bdt_id' => $row['J'],
-								'pkh_id' => $row['K'],
-								'address' => $row['L']
-							);
-							$this->Main_model->insertData('user_profile',$data_insert2);
-							// print_r($data_insert2);
-
-							$data_insert3 = array(
-								'user_id' => $get_user_id['id']+1,
-								'role_id' => '3'
-							);
-							$this->Main_model->insertData('user_to_role',$data_insert3);
-							// print_r($data_insert3);
-
-							$data_insert4 = array(
-								'user_id' => $get_user_id['id']+1,
-								'id_rutilahu' => $id_rutilahu,
-								'nama' => $row['G'],
-								'nik' => $row['H'],
-								'jabatan_kelompok' => $jabatan,
-								'no_kk' => $row['I'],
-								'keterangan' => $row['M']
-							);
-							$this->Main_model->insertData('anggota_rutilahu',$data_insert4);
-							// print_r($data_insert4);
+						$jabatan = '';
+						if($row['F']=='K'){
+							$jabatan = 'Ketua';
+						}elseif($row['F']=='S'){
+							$jabatan = 'Sekretaris';
+						}elseif($row['F']=='B'){
+							$jabatan = 'Bendahara';
+						}
+						elseif($row['F']=='A'){
+							$jabatan = 'Anggota';
 						}else{
-							$cek_user_to_role = $this->Main_model->getSelectedData('user_to_role a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.role_id'=>'2'))->row();
-							if($cek_user_to_role==NULL){
+							echo'';
+						}
+						if($row['A']!=NULL){
+							$get_id_rutilahu = $this->Main_model->getLastID('rutilahu','id_rutilahu');
+							$get_id_kecamatan = $this->Main_model->getSelectedData('kecamatan a', 'a.*', array('a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_kecamatan" => $row['B']))->row();
+							$id_kecamatan = $get_id_kecamatan->id_kecamatan;
+							$get_id_desa = $this->Main_model->getSelectedData('desa a', 'a.*', array('a.id_kecamatan'=>$id_kecamatan,'a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_desa" => $row['C']))->row();
+							$id_desa = $get_id_desa->id_desa;
+							$nama_tim = $row['D'];
+							$data_insert_rutilahu = array(
+								'id_rutilahu' => $get_id_rutilahu['id_rutilahu']+1,
+								'tahun' => $this->input->post('tahun'),
+								'tahap' => $this->input->post('tahap'),
+								'nama_kelompok' => $nama_tim,
+								'alamat' => $row['L'],
+								'rencana_anggaran' => '0',
+								'id_provinsi' => $this->input->post('id_provinsi'),
+								'id_kabupaten' => $this->input->post('id_kabupaten'),
+								'id_kecamatan' => $id_kecamatan,
+								'id_desa' => $id_desa,
+								'created_at' => date('Y-m-d H:i:s'),
+								'created_by' => $this->session->userdata('id')
+							);
+							$this->Main_model->insertData('rutilahu',$data_insert_rutilahu);
+							// print_r($data_insert_rutilahu);
+							$id_rutilahu = $get_id_rutilahu['id_rutilahu']+1;
+						}else{
+							echo'';
+						}
+						if($row['H']==NULL){
+							echo'';
+						}else{
+							$cek_nik = $this->Main_model->getSelectedData('user_profile a', 'a.*',array('a.nin'=>$row['H']))->row();
+							if($cek_nik==NULL){
+								$get_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*',array('a.id_rutilahu'=>$id_rutilahu))->row();
+								$this->Main_model->updateData('rutilahu',array('rencana_anggaran'=>(($get_rutilahu->rencana_anggaran)+'15000000')),array('id_rutilahu'=>$id_rutilahu));
+
+								$get_user_id = $this->Main_model->getLastID('user','id');
+
+								$data_insert1 = array(
+									'id' => $get_user_id['id']+1,
+									'username' => $row['H'],
+									'pass' => $row['H'],
+									'is_active' => '1',
+									'created_by' => $this->session->userdata('id'),
+									'created_at' => date('Y-m-d H:i:s')
+								);
+								$this->Main_model->insertData('user',$data_insert1);
+								// print_r($data_insert1);
+
+								$data_insert2 = array(
+									'user_id' => $get_user_id['id']+1,
+									'fullname' => $row['G'],
+									'nin' => $row['H'],
+									'bdt_id' => $row['J'],
+									'pkh_id' => $row['K'],
+									'address' => $row['L']
+								);
+								$this->Main_model->insertData('user_profile',$data_insert2);
+								// print_r($data_insert2);
+
 								$data_insert3 = array(
-									'user_id' => $cek_nik->user_id,
+									'user_id' => $get_user_id['id']+1,
 									'role_id' => '3'
 								);
 								$this->Main_model->insertData('user_to_role',$data_insert3);
 								// print_r($data_insert3);
-							}else{
-								echo'';
-							}
 
-							$cek_anggota_rutilahu = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.id_rutilahu'=>$id_rutilahu))->row();
-							if($cek_anggota_rutilahu==NULL){
-								$get_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*',array('a.id_rutilahu'=>$id_rutilahu))->row();
-								$this->Main_model->updateData('rutilahu',array('rencana_anggaran'=>(($get_rutilahu->rencana_anggaran)+'15000000')),array('id_rutilahu'=>$id_rutilahu));
-								
 								$data_insert4 = array(
-									'user_id' => $cek_nik->user_id,
+									'user_id' => $get_user_id['id']+1,
 									'id_rutilahu' => $id_rutilahu,
 									'nama' => $row['G'],
 									'nik' => $row['H'],
@@ -912,7 +890,37 @@ class Master extends CI_Controller {
 								$this->Main_model->insertData('anggota_rutilahu',$data_insert4);
 								// print_r($data_insert4);
 							}else{
-								echo'';
+								$cek_user_to_role = $this->Main_model->getSelectedData('user_to_role a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.role_id'=>'2'))->row();
+								if($cek_user_to_role==NULL){
+									$data_insert3 = array(
+										'user_id' => $cek_nik->user_id,
+										'role_id' => '3'
+									);
+									$this->Main_model->insertData('user_to_role',$data_insert3);
+									// print_r($data_insert3);
+								}else{
+									echo'';
+								}
+
+								$cek_anggota_rutilahu = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.id_rutilahu'=>$id_rutilahu))->row();
+								if($cek_anggota_rutilahu==NULL){
+									$get_rutilahu = $this->Main_model->getSelectedData('rutilahu a', 'a.*',array('a.id_rutilahu'=>$id_rutilahu))->row();
+									$this->Main_model->updateData('rutilahu',array('rencana_anggaran'=>(($get_rutilahu->rencana_anggaran)+'15000000')),array('id_rutilahu'=>$id_rutilahu));
+									
+									$data_insert4 = array(
+										'user_id' => $cek_nik->user_id,
+										'id_rutilahu' => $id_rutilahu,
+										'nama' => $row['G'],
+										'nik' => $row['H'],
+										'jabatan_kelompok' => $jabatan,
+										'no_kk' => $row['I'],
+										'keterangan' => $row['M']
+									);
+									$this->Main_model->insertData('anggota_rutilahu',$data_insert4);
+									// print_r($data_insert4);
+								}else{
+									echo'';
+								}
 							}
 						}
 					}
@@ -1388,121 +1396,98 @@ class Master extends CI_Controller {
 					// 	'l' => $row['L']
 					// );
 					// print_r($data_tes);
-					$jabatan = '';
-					if($row['G']=='K'){
-						$jabatan = 'Ketua';
-					}elseif($row['G']=='S'){
-						$jabatan = 'Sekretaris';
-					}elseif($row['G']=='B'){
-						$jabatan = 'Bendahara';
-					}
-					elseif($row['G']=='A'){
-						$jabatan = 'Anggota';
-					}else{
+					if($row['A']=='' AND $row['B']=='' AND $row['C']=='' AND $row['D']=='' AND $row['E']=='' AND $row['F']=='' AND $row['G']=='' AND $row['H']=='' AND $row['I']=='' AND $row['J']=='' AND $row['K']=='' AND $row['L']==''){
 						echo'';
-					}
-					if($row['A']!=NULL){
-						$get_id_sarling = $this->Main_model->getLastID('sarling','id_sarling');
-						$get_id_kecamatan = $this->Main_model->getSelectedData('kecamatan a', 'a.*', array('a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_kecamatan" => $row['B']))->row();
-						$id_kecamatan = $get_id_kecamatan->id_kecamatan;
-						$get_id_desa = $this->Main_model->getSelectedData('desa a', 'a.*', array('a.id_kecamatan'=>$id_kecamatan,'a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_desa" => $row['C']))->row();
-						$id_desa = $get_id_desa->id_desa;
-						$nama_tim = $row['D'];
-						$cek_jenis_usaha = $this->Main_model->getSelectedData('jenis_sarling a', 'a.*', array("a.jenis_sarling" => $row['E']))->row();
-						if($cek_jenis_usaha==NULL){
-							$get_jenis_usaha = $this->Main_model->getLastID('jenis_sarling','id_jenis_sarling');
-							$insert_jenis_usaha = array(
-								'id_jenis_sarling' => $get_jenis_usaha['id_jenis_sarling']+1,
-								'jenis_sarling' => $row['E']
-							);
-							$this->Main_model->insertData('jenis_sarling',$insert_jenis_usaha);
-							// print_r($insert_jenis_usaha);
-							$id_jenis_usaha = $get_jenis_usaha['id_jenis_sarling']+1;
-						}else{
-							$id_jenis_usaha = $cek_jenis_usaha->id_jenis_sarling;
+					}else{
+						$jabatan = '';
+						if($row['G']=='K'){
+							$jabatan = 'Ketua';
+						}elseif($row['G']=='S'){
+							$jabatan = 'Sekretaris';
+						}elseif($row['G']=='B'){
+							$jabatan = 'Bendahara';
 						}
-						$data_insert_sarling = array(
-							'id_sarling' => $get_id_sarling['id_sarling']+1,
-							'tahun' => $this->input->post('tahun'),
-							'tahap' => $this->input->post('tahap'),
-							'id_jenis_sarling' => $id_jenis_usaha,
-							'nama_tim' => $nama_tim,
-							'alamat' => $row['K'],
-							'rencana_anggaran' => '0',
-							'id_provinsi' => $this->input->post('id_provinsi'),
-							'id_kabupaten' => $this->input->post('id_kabupaten'),
-							'id_kecamatan' => $id_kecamatan,
-							'id_desa' => $id_desa,
-							'created_at' => date('Y-m-d H:i:s'),
-							'created_by' => $this->session->userdata('id')
-						);
-						$this->Main_model->insertData('sarling',$data_insert_sarling);
-						// print_r($data_insert_sarling);
-						$id_sarling = $get_id_sarling['id_sarling']+1;
-					}else{
-						echo'';
-					}
-					if($row['I']==NULL){
-						echo'';
-					}else{
-						$cek_nik = $this->Main_model->getSelectedData('user_profile a', 'a.*',array('a.nin'=>$row['I']))->row();
-						if($cek_nik==NULL){
-							$get_user_id = $this->Main_model->getLastID('user','id');
-
-							$data_insert1 = array(
-								'id' => $get_user_id['id']+1,
-								'username' => $row['I'],
-								'pass' => $row['I'],
-								'is_active' => '1',
-								'created_by' => $this->session->userdata('id'),
-								'created_at' => date('Y-m-d H:i:s')
-							);
-							$this->Main_model->insertData('user',$data_insert1);
-							// print_r($data_insert1);
-
-							$data_insert2 = array(
-								'user_id' => $get_user_id['id']+1,
-								'fullname' => $row['H'],
-								'nin' => $row['I']
-							);
-							$this->Main_model->insertData('user_profile',$data_insert2);
-							// print_r($data_insert2);
-
-							$data_insert3 = array(
-								'user_id' => $get_user_id['id']+1,
-								'role_id' => '4'
-							);
-							$this->Main_model->insertData('user_to_role',$data_insert3);
-							// print_r($data_insert3);
-
-							$data_insert4 = array(
-								'user_id' => $get_user_id['id']+1,
-								'id_sarling' => $id_sarling,
-								'nama' => $row['H'],
-								'nik' => $row['I'],
-								'jabatan_kelompok' => $jabatan,
-								'jabatan_masyarakat' => $row['J'],
-								'keterangan' => $row['L']
-							);
-							$this->Main_model->insertData('anggota_sarling',$data_insert4);
-							// print_r($data_insert4);
+						elseif($row['G']=='A'){
+							$jabatan = 'Anggota';
 						}else{
-							$cek_user_to_role = $this->Main_model->getSelectedData('user_to_role a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.role_id'=>'2'))->row();
-							if($cek_user_to_role==NULL){
+							echo'';
+						}
+						if($row['A']!=NULL){
+							$get_id_sarling = $this->Main_model->getLastID('sarling','id_sarling');
+							$get_id_kecamatan = $this->Main_model->getSelectedData('kecamatan a', 'a.*', array('a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_kecamatan" => $row['B']))->row();
+							$id_kecamatan = $get_id_kecamatan->id_kecamatan;
+							$get_id_desa = $this->Main_model->getSelectedData('desa a', 'a.*', array('a.id_kecamatan'=>$id_kecamatan,'a.id_kabupaten'=>$this->input->post('id_kabupaten'),'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_desa" => $row['C']))->row();
+							$id_desa = $get_id_desa->id_desa;
+							$nama_tim = $row['D'];
+							$cek_jenis_usaha = $this->Main_model->getSelectedData('jenis_sarling a', 'a.*', array("a.jenis_sarling" => $row['E']))->row();
+							if($cek_jenis_usaha==NULL){
+								$get_jenis_usaha = $this->Main_model->getLastID('jenis_sarling','id_jenis_sarling');
+								$insert_jenis_usaha = array(
+									'id_jenis_sarling' => $get_jenis_usaha['id_jenis_sarling']+1,
+									'jenis_sarling' => $row['E']
+								);
+								$this->Main_model->insertData('jenis_sarling',$insert_jenis_usaha);
+								// print_r($insert_jenis_usaha);
+								$id_jenis_usaha = $get_jenis_usaha['id_jenis_sarling']+1;
+							}else{
+								$id_jenis_usaha = $cek_jenis_usaha->id_jenis_sarling;
+							}
+							$data_insert_sarling = array(
+								'id_sarling' => $get_id_sarling['id_sarling']+1,
+								'tahun' => $this->input->post('tahun'),
+								'tahap' => $this->input->post('tahap'),
+								'id_jenis_sarling' => $id_jenis_usaha,
+								'nama_tim' => $nama_tim,
+								'alamat' => $row['K'],
+								'rencana_anggaran' => '0',
+								'id_provinsi' => $this->input->post('id_provinsi'),
+								'id_kabupaten' => $this->input->post('id_kabupaten'),
+								'id_kecamatan' => $id_kecamatan,
+								'id_desa' => $id_desa,
+								'created_at' => date('Y-m-d H:i:s'),
+								'created_by' => $this->session->userdata('id')
+							);
+							$this->Main_model->insertData('sarling',$data_insert_sarling);
+							// print_r($data_insert_sarling);
+							$id_sarling = $get_id_sarling['id_sarling']+1;
+						}else{
+							echo'';
+						}
+						if($row['I']==NULL){
+							echo'';
+						}else{
+							$cek_nik = $this->Main_model->getSelectedData('user_profile a', 'a.*',array('a.nin'=>$row['I']))->row();
+							if($cek_nik==NULL){
+								$get_user_id = $this->Main_model->getLastID('user','id');
+
+								$data_insert1 = array(
+									'id' => $get_user_id['id']+1,
+									'username' => $row['I'],
+									'pass' => $row['I'],
+									'is_active' => '1',
+									'created_by' => $this->session->userdata('id'),
+									'created_at' => date('Y-m-d H:i:s')
+								);
+								$this->Main_model->insertData('user',$data_insert1);
+								// print_r($data_insert1);
+
+								$data_insert2 = array(
+									'user_id' => $get_user_id['id']+1,
+									'fullname' => $row['H'],
+									'nin' => $row['I']
+								);
+								$this->Main_model->insertData('user_profile',$data_insert2);
+								// print_r($data_insert2);
+
 								$data_insert3 = array(
-									'user_id' => $cek_nik->user_id,
+									'user_id' => $get_user_id['id']+1,
 									'role_id' => '4'
 								);
 								$this->Main_model->insertData('user_to_role',$data_insert3);
 								// print_r($data_insert3);
-							}else{
-								echo'';
-							}
 
-							$cek_anggota_sarling = $this->Main_model->getSelectedData('anggota_sarling a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.id_sarling'=>$id_sarling))->row();
-							if($cek_anggota_sarling==NULL){
 								$data_insert4 = array(
-									'user_id' => $cek_nik->user_id,
+									'user_id' => $get_user_id['id']+1,
 									'id_sarling' => $id_sarling,
 									'nama' => $row['H'],
 									'nik' => $row['I'],
@@ -1513,7 +1498,34 @@ class Master extends CI_Controller {
 								$this->Main_model->insertData('anggota_sarling',$data_insert4);
 								// print_r($data_insert4);
 							}else{
-								echo'';
+								$cek_user_to_role = $this->Main_model->getSelectedData('user_to_role a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.role_id'=>'2'))->row();
+								if($cek_user_to_role==NULL){
+									$data_insert3 = array(
+										'user_id' => $cek_nik->user_id,
+										'role_id' => '4'
+									);
+									$this->Main_model->insertData('user_to_role',$data_insert3);
+									// print_r($data_insert3);
+								}else{
+									echo'';
+								}
+
+								$cek_anggota_sarling = $this->Main_model->getSelectedData('anggota_sarling a', 'a.*',array('a.user_id'=>$cek_nik->user_id,'a.id_sarling'=>$id_sarling))->row();
+								if($cek_anggota_sarling==NULL){
+									$data_insert4 = array(
+										'user_id' => $cek_nik->user_id,
+										'id_sarling' => $id_sarling,
+										'nama' => $row['H'],
+										'nik' => $row['I'],
+										'jabatan_kelompok' => $jabatan,
+										'jabatan_masyarakat' => $row['J'],
+										'keterangan' => $row['L']
+									);
+									$this->Main_model->insertData('anggota_sarling',$data_insert4);
+									// print_r($data_insert4);
+								}else{
+									echo'';
+								}
 							}
 						}
 					}
