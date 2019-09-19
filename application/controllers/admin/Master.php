@@ -1439,7 +1439,7 @@ class Master extends CI_Controller {
 								'id_jenis_sarling' => $id_jenis_usaha,
 								'nama_tim' => $nama_tim,
 								'alamat' => $row['K'],
-								'rencana_anggaran' => '0',
+								'rencana_anggaran' => '50000000',
 								'id_provinsi' => $this->input->post('id_provinsi'),
 								'id_kabupaten' => $this->input->post('id_kabupaten'),
 								'id_kecamatan' => $id_kecamatan,

@@ -1,3 +1,4 @@
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <ul class="page-breadcrumb breadcrumb">
 	<li>
 		<span>Panduan Penggunaan Aplikasi</span>
