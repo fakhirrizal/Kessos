@@ -91,6 +91,9 @@
                                 }
                             ?>
                             <hr>
+                            <div style='text-align: center'>
+                            <h3><b>Jumlah Kube, RLTH, dan Sarling <?= $wilayah; ?> Tahun <?= $periode; ?></b></h3>
+                            </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
                                     <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
@@ -99,7 +102,7 @@
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
                                                 <span class="widget-thumb-subtitle">Kelompok</span>
-                                                <span class="widget-thumb-body-stat" ><?= number_format($a/(count($data_utama_1b))); ?></span>
+                                                <span class="widget-thumb-body-stat" ><?= number_format($a); ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -111,7 +114,7 @@
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
                                                 <span class="widget-thumb-subtitle">Kelompok</span>
-                                                <span class="widget-thumb-body-stat"><?= number_format($b/(count($data_utama_1b))); ?></span>
+                                                <span class="widget-thumb-body-stat"><?= number_format($b); ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -123,7 +126,7 @@
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
                                                 <span class="widget-thumb-subtitle">Tim</span>
-                                                <span class="widget-thumb-body-stat"><?= number_format($c/(count($data_utama_1b))); ?></span>
+                                                <span class="widget-thumb-body-stat"><?= number_format($c); ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -197,11 +200,11 @@
                                         headerFormat: '<b>{point.key}</b><br/>'
                                     },
                                     title: {
-                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                        text: ''
                                     },
-                                    subtitle: {
-                                        text: 'Jumlah Kube, RLTH, dan Sarling Tahun <?= $periode; ?>'
-                                    },
+                                    // subtitle: {
+                                    //     text: 'Jumlah Kube, RLTH, dan Sarling Tahun <?= $periode; ?>'
+                                    // },
                                     xAxis: {
                                         categories: [
                                                         <?php
@@ -305,6 +308,9 @@
                                     }
                                 }
                             ?><hr>
+                            <div style='text-align: center'>
+                            <h3><b>Jumlah Kube, RLTH, dan Sarling Indonesia Tahun <?= $periode; ?></b></h3>
+                            </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
                                     <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
@@ -411,11 +417,11 @@
                                         headerFormat: '<b>{point.key}</b><br/>'
                                     },
                                     title: {
-                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                        text: ''
                                     },
-                                    subtitle: {
-                                        text: 'Jumlah Kube, RLTH, dan Sarling Tahun <?= $periode; ?>'
-                                    },
+                                    // subtitle: {
+                                    //     text: 'Jumlah Kube, RLTH, dan Sarling Tahun <?= $periode; ?>'
+                                    // },
                                     xAxis: {
                                         categories: [
                                                         <?php
@@ -526,6 +532,9 @@
                                 }
                             ?>
                             <hr>
+                            <div style='text-align: center'>
+                            <h3><b>Rekap Realisasi Program Kube, RLTH dan Sarling Indonesia Tahun <?= $periode; ?></b></h3>
+                            </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
                                     <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
@@ -649,11 +658,11 @@
                                         headerFormat: '<b>{point.key}</b><br/>'
                                     },
                                     title: {
-                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                        text: ''
                                     },
-                                    subtitle: {
-                                        text: 'Rekap Realisasi Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
-                                    },
+                                    // subtitle: {
+                                    //     text: 'Rekap Realisasi Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
+                                    // },
                                     xAxis: {
                                         categories: [
                                                         <?php
@@ -764,6 +773,9 @@
                                 }
                             ?>
                             <hr>
+                            <div style='text-align: center'>
+                            <h3><b>Rekap Realisasi Program Kube, RLTH dan Sarling <?= $wilayah; ?> Tahun <?= $periode; ?></b></h3>
+                            </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
                                     <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
@@ -887,11 +899,11 @@
                                         headerFormat: '<b>{point.key}</b><br/>'
                                     },
                                     title: {
-                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                        text: ''
                                     },
-                                    subtitle: {
-                                        text: 'Rekap Realisasi Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
-                                    },
+                                    // subtitle: {
+                                    //     text: 'Rekap Realisasi Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
+                                    // },
                                     xAxis: {
                                         categories: [
                                                         <?php
@@ -1008,6 +1020,9 @@
                                 }
                             ?>
                             <hr>
+                            <div style='text-align: center'>
+                            <h3><b>Rekap Serapan Bantuan Keuangan untuk Program Kube, RLTH dan Sarling Indonesia Tahun <?= $periode; ?></b></h3>
+                            </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
                                     <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
@@ -1119,11 +1134,11 @@
                                         headerFormat: '<b>{point.key}</b><br/>'
                                     },
                                     title: {
-                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                        text: ''
                                     },
-                                    subtitle: {
-                                        text: 'Rekap Serapan Bantuan Keuangan untuk Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
-                                    },
+                                    // subtitle: {
+                                    //     text: 'Rekap Serapan Bantuan Keuangan untuk Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
+                                    // },
                                     xAxis: {
                                         categories: [
                                                         <?php
@@ -1240,6 +1255,9 @@
                                 }
                             ?>
                             <hr>
+                            <div style='text-align: center'>
+                            <h3><b>Rekap Serapan Bantuan Keuangan untuk Program Kube, RLTH dan Sarling <?= $wilayah; ?> Tahun <?= $periode; ?></b></h3>
+                            </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
                                     <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
@@ -1351,11 +1369,11 @@
                                         headerFormat: '<b>{point.key}</b><br/>'
                                     },
                                     title: {
-                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                        text: ''
                                     },
-                                    subtitle: {
-                                        text: 'Rekap Serapan Bantuan Keuangan untuk Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
-                                    },
+                                    // subtitle: {
+                                    //     text: 'Rekap Serapan Bantuan Keuangan untuk Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
+                                    // },
                                     xAxis: {
                                         categories: [
                                                         <?php
@@ -1466,6 +1484,9 @@
                                 }
                             ?>
                             <hr>
+                            <div style='text-align: center'>
+                            <h3><b>Rekap Progress Fisik Program Kube, RLTH dan Sarling Indonesia Tahun <?= $periode; ?></b></h3>
+                            </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
                                     <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
@@ -1568,11 +1589,11 @@
                                         headerFormat: '<b>{point.key}</b><br/>'
                                     },
                                     title: {
-                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                        text: ''
                                     },
-                                    subtitle: {
-                                        text: 'Rekap Progress Fisik Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
-                                    },
+                                    // subtitle: {
+                                    //     text: 'Rekap Progress Fisik Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
+                                    // },
                                     xAxis: {
                                         categories: [
                                                         <?php
@@ -1683,6 +1704,9 @@
                                 }
                             ?>
                             <hr>
+                            <div style='text-align: center'>
+                            <h3><b>Rekap Progress Fisik Program Kube, RLTH dan Sarling <?= $wilayah; ?> Tahun <?= $periode; ?></b></h3>
+                            </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
                                     <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
@@ -1785,11 +1809,11 @@
                                         headerFormat: '<b>{point.key}</b><br/>'
                                     },
                                     title: {
-                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                        text: ''
                                     },
-                                    subtitle: {
-                                        text: 'Rekap Progress Fisik Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
-                                    },
+                                    // subtitle: {
+                                    //     text: 'Rekap Progress Fisik Program Kube, RLTH dan Sarling Tahun <?= $periode; ?>'
+                                    // },
                                     xAxis: {
                                         categories: [
                                                         <?php
@@ -1874,6 +1898,9 @@
                             }elseif(isset($jenis_kube)){
                             ?>
                             <hr>
+                            <div style='text-align: center'>
+                            <h3><b><?= $judul; ?></b></h3>
+                            </div>
                             <div class="grafik" style="width:100%; height:400px;"></div>
                             <div class="tabbable-line">
                                 <table class="table table-striped table-bordered" id="tbl1">
@@ -1930,11 +1957,11 @@
                                         pointFormat: '{series.name}: {point.y} Kelompok (<b>{point.percentage:.1f}%)</b>'
                                     },
                                     title: {
-                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                        text: ''
                                     },
-                                    subtitle: {
-                                        text: 'Jenis Usaha Kube di Seluruh Provinsi Tahun <?= $periode; ?>'
-                                    },
+                                    // subtitle: {
+                                    //     text: 'Jenis Usaha Kube di Seluruh Provinsi Tahun <?= $periode; ?>'
+                                    // },
                                     xAxis: {
                                         categories: ['Jumlah'],
                                         labels: {
@@ -1991,6 +2018,9 @@
                             }elseif(isset($jenis_sarling)){
                             ?>
                             <hr>
+                            <div style='text-align: center'>
+                            <h3><b><?= $judul; ?></b></h3>
+                            </div>
                             <div class="grafik" style="width:100%; height:400px;"></div>
                             <div class="tabbable-line">
                                 <table class="table table-striped table-bordered" id="tbl1">
@@ -2047,11 +2077,11 @@
                                         pointFormat: '{series.name}: {point.y} Tim (<b>{point.percentage:.1f}%)</b>'
                                     },
                                     title: {
-                                        text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
+                                        text: ''
                                     },
-                                    subtitle: {
-                                        text: 'Jenis Sarling di Seluruh Provinsi Tahun <?= $periode; ?>'
-                                    },
+                                    // subtitle: {
+                                    //     text: 'Jenis Sarling di Seluruh Provinsi Tahun <?= $periode; ?>'
+                                    // },
                                     xAxis: {
                                         categories: ['Jumlah'],
                                         labels: {

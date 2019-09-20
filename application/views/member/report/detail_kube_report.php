@@ -8,7 +8,7 @@
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span><a href='<?= site_url('/admin_side/laporan_rutilahu'); ?>'>Data Rutilahu (Rumah Tidak Layak Huni)</a></span>
+		<span><a href='<?= site_url('/member_side/laporan_kube'); ?>'>Data Kube (Kelompok Usaha Bersama)</a></span>
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
@@ -18,7 +18,7 @@
 <?= $this->session->flashdata('sukses') ?>
 <?= $this->session->flashdata('gagal') ?>
 <?php
-$id_rutilahu = '';
+$id_kube = '';
 ?>
 <div class="page-content-inner">
 	<div class="m-heading-1 border-green m-bordered">
@@ -36,15 +36,20 @@ $id_rutilahu = '';
 						if(isset($data_utama)){
 							foreach($data_utama as $row)
 							{
-								$id_rutilahu = $row->id_rutilahu;
+								$id_kube = $row->id_kube;
 						?>
 								<div class="col-md-6">
 									<table class="table">
 										<tbody>
-											<tr>
+                                            <tr>
+												<td> Jenis Usaha </td>
+												<td> : </td>
+												<td><?php echo $row->jenis_usaha; ?></td>
+											</tr>
+                                            <tr>
 												<td> Nama Kelompok </td>
 												<td> : </td>
-												<td><?php echo $row->nama_kelompok; ?></td>
+												<td><?php echo $row->nama_tim; ?></td>
 											</tr>
 											<tr>
 												<td> Alamat </td>
@@ -153,7 +158,7 @@ $id_rutilahu = '';
 								<div class="table-toolbar">
 									<div class="row">
 										<div class="col-md-6">
-											<a href="<?php echo site_url('admin_side/tambah_laporan_rutilahu'); ?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
+											<a href="<?php echo site_url('member_side/tambah_laporan_kube'); ?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
 										</div>
 									</div>
 								</div>
@@ -172,7 +177,7 @@ $id_rutilahu = '';
 										$no = 1;
 										foreach ($data_detail_laporan as $key => $value) {
 											$get_tanggal = explode(' ',$value->created_at);
-											// $master_indikator = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu),'a.id_master_indikator ASC','','','a.id_master_indikator',array(
+											// $master_indikator = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_kube'=>$value->id_laporan_kube),'a.id_master_indikator ASC','','','a.id_master_indikator',array(
 											// 	array(
 											// 		'table' => 'master_indikator b',
 											// 		'on' => 'a.id_master_indikator=b.id_master_indikator',
@@ -182,9 +187,9 @@ $id_rutilahu = '';
 											// 		'on' => 'a.indikator_progres_fisik=c.id_indikator',
 											// 		'pos' => 'LEFT'
 											// 	)
-											// ))->result();
-											$master_indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
-											// $detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu),'a.id_master_indikator ASC','','','',array(
+                                            // ))->result();
+                                            $master_indikator = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
+											// $detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_kube'=>$value->id_laporan_kube),'a.id_master_indikator ASC','','','',array(
 											// 	'table' => 'master_indikator b',
 											// 	'on' => 'a.id_master_indikator=b.id_master_indikator',
 											// 	'pos' => 'LEFT'
@@ -203,11 +208,11 @@ $id_rutilahu = '';
 														</button>
 														<ul class="dropdown-menu pull-right" role="menu">
 															<li>
-																<a href="'.site_url('admin_side/ubah_data_laporan_rutilahu/'.md5($value->id_laporan_rutilahu)).'">
+																<a href="'.site_url('member_side/ubah_data_laporan_kube/'.md5($value->id_laporan_kube)).'">
 																	<i class="icon-wrench"></i> Ubah Data </a>
 															</li>
 															<li>
-																<a onclick="'.$return_on_click.'" href="'.site_url('admin_side/hapus_data_laporan_rutilahu/'.md5($value->id_laporan_rutilahu)).'">
+																<a onclick="'.$return_on_click.'" href="'.site_url('member_side/hapus_data_laporan_kube/'.md5($value->id_laporan_kube)).'">
 																	<i class="icon-trash"></i> Hapus Data </a>
 															</li>
 														</ul>
@@ -216,17 +221,17 @@ $id_rutilahu = '';
 											</tr>
 											<tr>
 												<td colspan="5">
-													<div class="panel-group accordion" id="accordion'.$value->id_laporan_rutilahu.'">
+													<div class="panel-group accordion" id="accordion'.$value->id_laporan_kube.'">
 														<div class="panel panel-default">
 															<div class="panel-heading">
 																<h4 class="panel-title">
-																	<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion'.$value->id_laporan_rutilahu.'" href="#collapse_'.$value->id_laporan_rutilahu.'_1" aria-expanded="false"> Detail Laporan </a>
+																	<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion'.$value->id_laporan_kube.'" href="#collapse_'.$value->id_laporan_kube.'_1" aria-expanded="false"> Detail Laporan </a>
 																</h4>
 															</div>
-															<div id="collapse_'.$value->id_laporan_rutilahu.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+															<div id="collapse_'.$value->id_laporan_kube.'_1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
 																<div class="panel-body">';
 																foreach ($master_indikator as $key => $mi) {
-																	$detail_laporan = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
+																	$detail_laporan = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_fisik a', 'a.*,b.master_indikator,c.indikator', array('a.id_laporan_kube'=>$value->id_laporan_kube,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
 																		array(
 																			'table' => 'master_indikator b',
 																			'on' => 'a.id_master_indikator=b.id_master_indikator',
@@ -236,28 +241,24 @@ $id_rutilahu = '';
 																			'on' => 'a.indikator_progres_fisik=c.id_indikator',
 																			'pos' => 'LEFT'
 																		)
-																	))->result();
-																	$detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
+                                                                    ))->result();
+                                                                    $detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_kube_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_kube'=>$value->id_laporan_kube,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
 																		'table' => 'master_indikator b',
 																		'on' => 'a.id_master_indikator=b.id_master_indikator',
 																		'pos' => 'LEFT'
-																	))->row();
-																	if($detail_laporan==NULL AND $detail_laporan_aspek_keuangan==NULL){
+                                                                    ))->row();
+                                                                    if($detail_laporan==NULL AND $detail_laporan_aspek_keuangan==NULL){
 																		echo'';
 																	}else{
-																		echo '<h4><b>'.$mi->master_indikator.'</b></h4>';
-																		echo '<b>Progres Fisik : </b><br>';
-																		foreach ($detail_laporan as $key => $dl) {
-																			echo $dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';
-																		}
-																		// $detail_laporan_aspek_keuangan = $this->Main_model->getSelectedData('detail_laporan_rutilahu_aspek_keuangan a', 'a.*,b.master_indikator', array('a.id_laporan_rutilahu'=>$value->id_laporan_rutilahu,'a.id_master_indikator'=>$mi->id_master_indikator),'a.id_master_indikator ASC','','','',array(
-																		// 	'table' => 'master_indikator b',
-																		// 	'on' => 'a.id_master_indikator=b.id_master_indikator',
-																		// 	'pos' => 'LEFT'
-																		// ))->row();
-																		echo '<b>Progres Keuangan : </b>Rp '.number_format($detail_laporan_aspek_keuangan->progres_keuangan,2).'<br>';
-																	}
-																}
+                                                                        echo '<h4><b>'.$mi->master_indikator.'</b></h4>';
+                                                                        echo '<b>Progres Fisik : </b><br>';
+                                                                        foreach ($detail_laporan as $key => $dl) {
+                                                                            echo $dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';
+                                                                        }
+                                                                        
+                                                                        echo '<b>Progres Keuangan : </b>Rp '.number_format($detail_laporan_aspek_keuangan->progres_keuangan,2).'<br>';
+                                                                    }
+                                                                }
 																// foreach ($detail_laporan as $key => $dl) {
 																// 	echo '<b>'.$dl->master_indikator.'</b> - '.$dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';
 																// }
@@ -279,7 +280,7 @@ $id_rutilahu = '';
 							</div>
 						</div>
 						<div class="col-md-12" >
-						<hr><a href="<?php echo base_url()."admin_side/laporan_rutilahu"; ?>" class="btn btn-info" role="button"><i class="fa fa-angle-double-left"></i> Kembali</a></div>
+						<hr><a href="<?php echo base_url()."member_side/laporan_kube"; ?>" class="btn btn-info" role="button"><i class="fa fa-angle-double-left"></i> Kembali</a></div>
 					</div>
 				</div>
 			</div>
@@ -305,7 +306,7 @@ $id_rutilahu = '';
 		// 		"order": [[ 0, "asc" ]],
 		// 		"bProcessing": true,
 		// 		"ajax" : {
-		// 			url:"<?= site_url('admin/Report/json_laporan_rutilahu'); ?>",
+		// 			url:"<?= site_url('member/Report/json_laporan_kube'); ?>",
 		// 			data: {id: '<?= $this->uri->segment(3); ?>'}
 		// 		},
 		// 		"aoColumns": [

@@ -8,7 +8,7 @@
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span><a href='<?= site_url('/admin_side/laporan_rutilahu'); ?>'>Data Rutilahu (Rumah Tidak Layak Huni)</a></span>
+		<span><a href='<?= site_url('/member_side/laporan_rutilahu'); ?>'>Data Rutilahu (Rumah Tidak Layak Huni)</a></span>
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
@@ -153,7 +153,7 @@ $id_rutilahu = '';
 								<div class="table-toolbar">
 									<div class="row">
 										<div class="col-md-6">
-											<a href="<?php echo site_url('admin_side/tambah_laporan_rutilahu'); ?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
+											<a href="<?php echo site_url('member_side/tambah_laporan_rutilahu'); ?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
 										</div>
 									</div>
 								</div>
@@ -203,11 +203,11 @@ $id_rutilahu = '';
 														</button>
 														<ul class="dropdown-menu pull-right" role="menu">
 															<li>
-																<a href="'.site_url('admin_side/ubah_data_laporan_rutilahu/'.md5($value->id_laporan_rutilahu)).'">
+																<a href="'.site_url('member_side/ubah_data_laporan_rutilahu/'.md5($value->id_laporan_rutilahu)).'">
 																	<i class="icon-wrench"></i> Ubah Data </a>
 															</li>
 															<li>
-																<a onclick="'.$return_on_click.'" href="'.site_url('admin_side/hapus_data_laporan_rutilahu/'.md5($value->id_laporan_rutilahu)).'">
+																<a onclick="'.$return_on_click.'" href="'.site_url('member_side/hapus_data_laporan_rutilahu/'.md5($value->id_laporan_rutilahu)).'">
 																	<i class="icon-trash"></i> Hapus Data </a>
 															</li>
 														</ul>
@@ -279,7 +279,7 @@ $id_rutilahu = '';
 							</div>
 						</div>
 						<div class="col-md-12" >
-						<hr><a href="<?php echo base_url()."admin_side/laporan_rutilahu"; ?>" class="btn btn-info" role="button"><i class="fa fa-angle-double-left"></i> Kembali</a></div>
+						<hr><a href="<?php echo base_url()."member_side/laporan_rutilahu"; ?>" class="btn btn-info" role="button"><i class="fa fa-angle-double-left"></i> Kembali</a></div>
 					</div>
 				</div>
 			</div>
@@ -305,7 +305,7 @@ $id_rutilahu = '';
 		// 		"order": [[ 0, "asc" ]],
 		// 		"bProcessing": true,
 		// 		"ajax" : {
-		// 			url:"<?= site_url('admin/Report/json_laporan_rutilahu'); ?>",
+		// 			url:"<?= site_url('member/Report/json_laporan_rutilahu'); ?>",
 		// 			data: {id: '<?= $this->uri->segment(3); ?>'}
 		// 		},
 		// 		"aoColumns": [

@@ -158,7 +158,7 @@ $id_kube = '';
 								<div class="table-toolbar">
 									<div class="row">
 										<div class="col-md-6">
-											<a data-toggle="modal" data-target="#tambahdataanggota" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
+											<a href="<?php echo site_url('admin_side/tambah_laporan_kube'); ?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
 										</div>
 									</div>
 								</div>

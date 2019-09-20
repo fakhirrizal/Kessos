@@ -1,5 +1,5 @@
 <?php
-if(($this->session->userdata('id'))==NULL){
+if(($this->session->userdata('id'))==NULL OR ($this->session->userdata('role_id'))!='1'){
             echo "<script>alert('Harap login terlebih dahulu')</script>";
             echo "<script>window.location='".base_url('login')."'</script>";
         }
