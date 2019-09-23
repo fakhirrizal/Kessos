@@ -134,7 +134,7 @@
 		draggable : true
 	});
 
-	var situs = 'http://kemensos.aplikasiku.online/assets/peta/';
+	var situs = 'http://pfm.demokode.com/assets/peta/';
 	var nama_file = '<?php echo $data_utama->kml; ?>';
 	var situs_full = situs.concat(nama_file);
 	var kmldashboard = new google.maps.KmlLayer({

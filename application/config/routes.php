@@ -192,7 +192,6 @@ $route['member_side/cleaning_log'] = 'member/App/cleaning_log';
 $route['member_side/tentang_aplikasi'] = 'member/App/about';
 $route['member_side/bantuan'] = 'member/App/helper';
 
-$route['member_side/laporan_kube'] = 'member/Report/kube';
 $route['member_side/tambah_laporan_kube'] = 'member/Report/add_kube_report';
 $route['member_side/simpan_laporan_kube'] = 'member/Report/save_kube_report';
 $route['member_side/detil_laporan_kube/(:any)'] = 'member/Report/detail_kube_report/$1';
@@ -200,7 +199,6 @@ $route['member_side/ubah_data_laporan_kube/(:any)'] = 'member/Report/edit_kube_r
 $route['member_side/perbarui_laporan_kube'] = 'member/Report/update_kube_report';
 $route['member_side/hapus_data_laporan_kube/(:any)'] = 'member/Report/delete_kube_report/$1';
 
-$route['member_side/laporan_rutilahu'] = 'member/Report/rutilahu';
 $route['member_side/tambah_laporan_rutilahu'] = 'member/Report/add_rutilahu_report';
 $route['member_side/simpan_laporan_rutilahu'] = 'member/Report/save_rutilahu_report';
 $route['member_side/detil_laporan_rutilahu/(:any)'] = 'member/Report/detail_rutilahu_report/$1';
@@ -208,7 +206,6 @@ $route['member_side/ubah_data_laporan_rutilahu/(:any)'] = 'member/Report/edit_ru
 $route['member_side/perbarui_laporan_rutilahu'] = 'member/Report/update_rutilahu_report';
 $route['member_side/hapus_data_laporan_rutilahu/(:any)'] = 'member/Report/delete_rutilahu_report/$1';
 
-$route['member_side/laporan_sarling'] = 'member/Report/sarling';
 $route['member_side/tambah_laporan_sarling'] = 'member/Report/add_sarling_report';
 $route['member_side/simpan_laporan_sarling'] = 'member/Report/save_sarling_report';
 $route['member_side/detil_laporan_sarling/(:any)'] = 'member/Report/detail_sarling_report/$1';

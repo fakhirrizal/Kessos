@@ -169,7 +169,7 @@
 		draggable : true
 	});
 
-	var situs = 'http://kemensos.aplikasiku.online/assets/peta_kabupaten/';
+	var situs = 'http://pfm.demokode.com/assets/peta_kabupaten/';
 	var nama_file = '<?php echo $data_utama->kml; ?>';
 	var situs_full = situs.concat(nama_file);
 	var kmldashboard = new google.maps.KmlLayer({

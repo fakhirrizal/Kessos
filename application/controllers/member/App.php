@@ -73,7 +73,7 @@ class App extends CI_Controller {
 		$data['parent'] = 'log_activity';
 		$data['child'] = '';
 		$data['grand_child'] = '';
-		$data['data_tabel'] = $this->Main_model->getSelectedData('activity_logs a', 'a.*,b.fullname', '', "a.activity_time DESC",'','','',array(
+		$data['data_tabel'] = $this->Main_model->getSelectedData('activity_logs a', 'a.*,b.fullname', array('a.user_id'=>$this->session->userdata('id')), "a.activity_time DESC",'','','',array(
 			'table' => 'user_profile b',
 			'on' => 'a.user_id=b.user_id',
 			'pos' => 'left',
