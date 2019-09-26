@@ -25,10 +25,10 @@
         <link href="<?=base_url('assets/pages/css/blog.min.css');?>" rel="stylesheet" type="text/css" />
         
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="http://code.highcharts.com/highcharts-3d.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script> -->
         <!-- <script src="<?=base_url('application/views/dashboard/chart/chart_full.js');?>" type="text/javascript"></script> -->
 
         <meta name="author" content="Kementerian Sosial Republik Indonesia">
@@ -127,8 +127,8 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="grafik" style="width:100%; height:400px;"></div>
-                                            <script type="text/javascript">
+                                            <div class="grafik" id='chartdiv' style="width:100%;"></div>
+                                            <!-- <script type="text/javascript">
                                                 $('.grafik').highcharts({
                                                     chart: {
                                                         type: 'line',
@@ -227,7 +227,108 @@
                                                                 }
                                                             ]
                                                 });
+                                            </script> -->
+                                            <script src="https://www.amcharts.com/lib/4/core.js"></script>
+                                            <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+                                            <script src="https://www.amcharts.com/lib/4/themes/kelly.js"></script>
+                                            <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+                                            <!-- Chart code -->
+                                            <script>
+                                            am4core.ready(function() {
+
+                                            // Themes begin
+                                            am4core.useTheme(am4themes_kelly);
+                                            am4core.useTheme(am4themes_animated);
+                                            // Themes end
+
+                                            // Create chart instance
+                                            var chart = am4core.create("chartdiv", am4charts.XYChart);
+                                            var title = chart.titles.create();
+                                            title.text = "Jumlah Kube, RLTH, dan Sarling di Indonesia Periode 2019";
+                                            title.fontSize = 25;
+                                            title.marginBottom = 30;
+
+                                            // Add data
+                                            chart.data = [
+                                            <?php
+                                                foreach ($data_utama as $key => $fff) {
+                                                    echo '{"nm_provinsi": "'.$fff->nm_provinsi.'",';
+                                                    $persentase1 = 0;
+                                                    if($fff->jumlah_kube=='0'){
+                                                        echo'';
+                                                    }else{
+                                                        $persentase1 = $fff->jumlah_kube;
+                                                    }
+                                                    echo '"kube": '.number_format($persentase1,0).',';
+                                                    $persentase2 = 0;
+                                                    if($fff->jumlah_rutilahu=='0'){
+                                                        echo'';
+                                                    }else{
+                                                        $persentase2 = $fff->jumlah_rutilahu;
+                                                    }
+                                                    echo '"rutilahu": '.number_format($persentase2,0).',';
+                                                    $persentase3 = 0;
+                                                    if($fff->jumlah_sarling=='0'){
+                                                        echo'';
+                                                    }else{
+                                                        $persentase3 = $fff->jumlah_sarling;
+                                                    }
+                                                    echo '"sarling": '.number_format($persentase3,0).'},';
+                                                }
+                                            ?>];
+
+                                            // Create category axis
+                                            var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+                                            categoryAxis.dataFields.category = "nm_provinsi";
+                                            categoryAxis.renderer.opposite = true;
+
+                                            // Create value axis
+                                            var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                                            valueAxis.renderer.inversed = true;
+                                            valueAxis.title.text = "Kelompok/ Tim";
+                                            valueAxis.renderer.minLabelPosition = 0.01;
+
+                                            // Create series
+                                            var series1 = chart.series.push(new am4charts.LineSeries());
+                                            series1.dataFields.valueY = "kube";
+                                            series1.dataFields.categoryX = "nm_provinsi";
+                                            series1.name = "Kube";
+                                            series1.strokeWidth = 3;
+                                            series1.bullets.push(new am4charts.CircleBullet());
+                                            series1.tooltipText = "{categoryX}: {valueY} Kelompok";
+                                            series1.legendSettings.valueText = "{valueY}";
+                                            series1.visible  = false;
+
+                                            var series2 = chart.series.push(new am4charts.LineSeries());
+                                            series2.dataFields.valueY = "rutilahu";
+                                            series2.dataFields.categoryX = "nm_provinsi";
+                                            series2.name = 'Rutilahu';
+                                            series2.strokeWidth = 3;
+                                            series2.bullets.push(new am4charts.CircleBullet());
+                                            series2.tooltipText = "{categoryX}: {valueY} Kelompok";
+                                            series2.legendSettings.valueText = "{valueY}";
+
+                                            var series3 = chart.series.push(new am4charts.LineSeries());
+                                            series3.dataFields.valueY = "sarling";
+                                            series3.dataFields.categoryX = "nm_provinsi";
+                                            series3.name = 'Sarling';
+                                            series3.strokeWidth = 3;
+                                            series3.bullets.push(new am4charts.CircleBullet());
+                                            series3.tooltipText = "{categoryX}: {valueY} Tim";
+                                            series3.legendSettings.valueText = "{valueY}";
+
+                                            // Add chart cursor
+                                            chart.cursor = new am4charts.XYCursor();
+                                            chart.cursor.behavior = "zoomY";
+
+                                            // Add legend
+                                            chart.legend = new am4charts.Legend();
+
+                                            }); // end am4core.ready()
                                             </script>
+
+                                            <!-- HTML -->
                                         </div>
                                     </div>
                                     

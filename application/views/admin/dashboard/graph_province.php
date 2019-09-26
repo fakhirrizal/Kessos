@@ -67,41 +67,41 @@
                             ?>
                             <hr>
                             <div style='text-align: center'>
-                            <h3><b>Jumlah Kube, RLTH, dan Sarling <?= $data_provinsi->nm_provinsi; ?> Tahun <?= $periode; ?></b></h3>
+                            <h3><b>Jumlah Kube, RLTH, dan Sarling <?= $data_provinsi->nm_provinsi; ?> Tahun <?= $periode; ?></b></h3><br>
                             </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading">Jumlah KUBE</h4>
+                                    <div class="widget-thumb text-uppercase margin-bottom-20 " style="background-color:#32C5D2">
+                                        <h4 class="widget-thumb-heading"><font color='white'>Jumlah KUBE</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle">Kelompok</span>
-                                                <span class="widget-thumb-body-stat" ><?= number_format($a); ?></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'>Kelompok</font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format($a); ?></font></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading">Jumlah RUTILAHU</h4>
+                                    <div class="widget-thumb text-uppercase margin-bottom-20 " style="background-color:#E7505A">
+                                        <h4 class="widget-thumb-heading"><font color='white'>Jumlah RUTILAHU</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle">Kelompok</span>
-                                                <span class="widget-thumb-body-stat"><?= number_format($b); ?></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'>Kelompok</font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format($b); ?></font></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading">Jumlah Sarling</h4>
+                                    <div class="widget-thumb text-uppercase margin-bottom-20 " style="background-color:#8E44AD">
+                                        <h4 class="widget-thumb-heading"><font color='white'>Jumlah Sarling</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle">Tim</span>
-                                                <span class="widget-thumb-body-stat"><?= number_format($c); ?></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'>Tim</font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format($c); ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -291,41 +291,41 @@
                             ?>
                             <hr>
                             <div style='text-align: center'>
-                            <h3><b>Rekap Realisasi Program Kube, RLTH dan Sarling <?= $data_provinsi->nm_provinsi; ?> Tahun <?= $periode; ?></b></h3>
+                            <h3><b>Rekap Realisasi Program Kube, RLTH dan Sarling <?= $data_provinsi->nm_provinsi; ?> Tahun <?= $periode; ?></b></h3><br>
                             </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading">Realisasi KUBE</h4>
+                                    <div class="widget-thumb text-uppercase margin-bottom-20 " style="background-color:#32C5D2">
+                                        <h4 class="widget-thumb-heading"><font color='white'>Realisasi KUBE</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
-                                                <!-- <span class="widget-thumb-subtitle">Kelompok</span> -->
-                                                <span class="widget-thumb-body-stat"><?= number_format((($d2/$d1)/(count($data_utama_2))),2).'%'; ?></span>
+                                                <!-- <span class="widget-thumb-subtitle"><font color='white'>Kelompok</font></span> -->
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($d2/$d1)/(count($data_utama_2))),2).'%'; ?></font></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading">Realisasi RUTILAHU</h4>
+                                    <div class="widget-thumb text-uppercase margin-bottom-20 " style="background-color:#E7505A">
+                                        <h4 class="widget-thumb-heading"><font color='white'>Realisasi RUTILAHU</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
-                                                <!-- <span class="widget-thumb-subtitle">Kelompok</span> -->
-                                                <span class="widget-thumb-body-stat"><?= number_format((($e2/$e1)/(count($data_utama_2))),2).'%'; ?></span>
+                                                <!-- <span class="widget-thumb-subtitle"><font color='white'>Kelompok</font></span> -->
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($e2/$e1)/(count($data_utama_2))),2).'%'; ?></font></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white text-uppercase margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading">Realisasi Sarling</h4>
+                                    <div class="widget-thumb text-uppercase margin-bottom-20 " style="background-color:#8E44AD">
+                                        <h4 class="widget-thumb-heading"><font color='white'>Realisasi Sarling</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
-                                                <!-- <span class="widget-thumb-subtitle">Tim</span> -->
-                                                <span class="widget-thumb-body-stat"><?= number_format((($f2/$f1)/(count($data_utama_2))),2).'%'; ?></span>
+                                                <!-- <span class="widget-thumb-subtitle"><font color='white'>Tim</font></span> -->
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($f2/$f1)/(count($data_utama_2))),2).'%'; ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -538,41 +538,41 @@
                             ?>
                             <hr>
                             <div style='text-align: center'>
-                            <h3><b>Rekap Serapan Bantuan Keuangan untuk Program Kube, RLTH dan Sarling <?= $data_provinsi->nm_provinsi; ?> Tahun <?= $periode; ?></b></h3>
+                            <h3><b>Rekap Serapan Bantuan Keuangan untuk Program Kube, RLTH dan Sarling <?= $data_provinsi->nm_provinsi; ?> Tahun <?= $periode; ?></b></h3><br>
                             </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading text-uppercase">Serapan Anggaran KUBE</h4>
+                                    <div class="widget-thumb margin-bottom-20 " style="background-color:#32C5D2">
+                                        <h4 class="widget-thumb-heading text-uppercase"><font color='white'>Serapan Anggaran KUBE</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><?= 'Rp '.number_format((($g1/$g3)/(count($data_utama_3))),2); ?></span>
-                                                <span class="widget-thumb-body-stat"><?= number_format((($g2/$g3)/(count($data_utama_3))),2).'%'; ?></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($g1/$g3)/(count($data_utama_3))),2); ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($g2/$g3)/(count($data_utama_3))),2).'%'; ?></font></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading text-uppercase">Serapan Anggaran RUTILAHU</h4>
+                                    <div class="widget-thumb margin-bottom-20 " style="background-color:#E7505A">
+                                        <h4 class="widget-thumb-heading text-uppercase"><font color='white'>Serapan Anggaran RUTILAHU</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><?= 'Rp '.number_format((($h1/$h3)/(count($data_utama_3))),2); ?></span>
-                                                <span class="widget-thumb-body-stat"><?= number_format((($h2/$h3)/(count($data_utama_3))),2).'%'; ?></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($h1/$h3)/(count($data_utama_3))),2); ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($h2/$h3)/(count($data_utama_3))),2).'%'; ?></font></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading text-uppercase">Serapan Anggaran Sarling</h4>
+                                    <div class="widget-thumb margin-bottom-20 " style="background-color:#8E44AD">
+                                        <h4 class="widget-thumb-heading text-uppercase"><font color='white'>Serapan Anggaran Sarling</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><?= 'Rp '.number_format((($i1/$i3)/(count($data_utama_3))),2); ?></span>
-                                                <span class="widget-thumb-body-stat"><?= number_format((($i2/$i3)/(count($data_utama_3))),2).'%'; ?></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($i1/$i3)/(count($data_utama_3))),2); ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($i2/$i3)/(count($data_utama_3))),2).'%'; ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -767,38 +767,38 @@
                             ?>
                             <hr>
                             <div style='text-align: center'>
-                            <h3><b>Rekap Progress Fisik Program Kube, RLTH dan Sarling <?= $data_provinsi->nm_provinsi; ?> Tahun <?= $periode; ?></b></h3>
+                            <h3><b>Rekap Progress Fisik Program Kube, RLTH dan Sarling <?= $data_provinsi->nm_provinsi; ?> Tahun <?= $periode; ?></b></h3><br>
                             </div>
                             <div class="row widget-row">
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading text-uppercase">Progres Fisik KUBE</h4>
+                                    <div class="widget-thumb margin-bottom-20 " style="background-color:#32C5D2">
+                                        <h4 class="widget-thumb-heading text-uppercase"><font color='white'>Progres Fisik KUBE</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-body-stat"><?= number_format((($j1/$j2)/(count($data_utama_4))),2).'%'; ?></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($j1/$j2)/(count($data_utama_4))),2).'%'; ?></font></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading text-uppercase">Progres Fisik RUTILAHU</h4>
+                                    <div class="widget-thumb margin-bottom-20 " style="background-color:#E7505A">
+                                        <h4 class="widget-thumb-heading text-uppercase"><font color='white'>Progres Fisik RUTILAHU</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-body-stat"><?= number_format((($k1/$k2)/(count($data_utama_4))),2).'%'; ?></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($k1/$k2)/(count($data_utama_4))),2).'%'; ?></font></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="widget-thumb widget-bg-color-white margin-bottom-20 ">
-                                        <h4 class="widget-thumb-heading text-uppercase">Progres Fisik Sarling</h4>
+                                    <div class="widget-thumb margin-bottom-20 " style="background-color:#8E44AD">
+                                        <h4 class="widget-thumb-heading text-uppercase"><font color='white'>Progres Fisik Sarling</font></h4>
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-body-stat"><?= number_format((($l1/$l2)/(count($data_utama_4))),2).'%'; ?></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($l1/$l2)/(count($data_utama_4))),2).'%'; ?></font></span>
                                             </div>
                                         </div>
                                     </div>

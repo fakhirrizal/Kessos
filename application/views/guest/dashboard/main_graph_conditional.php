@@ -25,10 +25,10 @@
         <link href="<?=base_url('assets/pages/css/blog.min.css');?>" rel="stylesheet" type="text/css" />
         
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="http://code.highcharts.com/highcharts-3d.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script> -->
         <!-- <script src="<?=base_url('application/views/dashboard/chart/chart_full.js');?>" type="text/javascript"></script> -->
 
         <meta name="author" content="Kementerian Sosial Republik Indonesia">
@@ -128,53 +128,28 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <script type="text/javascript">
-                                                $(document).ready(function() {
-                                                    $('#g').highcharts({
-                                                        credits: { enabled: false },chart: {
-                                                            type: 'column',
-                                                            // backgroundColor:"#B0C4DE"
-                                                            options3d: {
-                                                                enabled: true,
-                                                                alpha: 0,
-                                                                beta: 20
-                                                            }
-                                                        },
-                                                        title: {
-                                                            text: 'Rekap Data Penanganan Fakir Miskin Perkotaan'
-                                                        },
-                                                        subtitle: {
-                                                            text: 'Jumlah <?= $judul; ?> Periode 2019'
-                                                        },
-                                                        xAxis: {
-                                                            categories: [
-                                                                'Nama Provinsi'
-                                                            ]
-                                                        },
-                                                        yAxis: {
-                                                            min: 0,
-                                                            title: {
-                                                                // text: 'Persentase Realisasi (%)'
-                                                                text: 'Kelompok/ Tim'
-                                                            }
-                                                        },
-                                                        // tooltip: {
-                                                        //     pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
-                                                        //     shared: true
-                                                        // },
-                                                        plotOptions: {
-                                                            column: {
-                                                                pointPadding: 0.2,
-                                                                borderWidth: 0
-                                                            }
-                                                        },
-                                                        // plotOptions: {
-                                                        //     column: {
-                                                        //         stacking: 'normal'
-                                                        //     }
-                                                        // },
-                                                        series: [
-                                                            <?php
+                                            <!-- Resources -->
+                                            <script src="https://www.amcharts.com/lib/4/core.js"></script>
+                                            <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+                                            <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+                                            <!-- Chart code -->
+                                            <script>
+                                            am4core.ready(function() {
+
+                                            // Themes begin
+                                            am4core.useTheme(am4themes_animated);
+                                            // Themes end
+
+                                            // Create chart instance
+                                            var chart = am4core.create("chartdiv", am4charts.XYChart3D);
+                                            var title = chart.titles.create();
+                                            title.text = "Jumlah <?= $judul; ?> Periode 2019";
+                                            title.fontSize = 25;
+                                            title.marginBottom = 30;
+
+                                            // Add data
+                                            chart.data = [<?php
                                                                 foreach ($data_utama as $key => $fff) {
                                                                     $persentase = 0;
                                                                     if($fff->jml=='0'){
@@ -185,12 +160,54 @@
                                                                     }
                                                                     echo "{ name: '".$fff->nm_provinsi."',data: [".number_format($persentase,0)."]},";
                                                                 }
-                                                            ?>
-                                                        ]
-                                                    });
-                                                });
+                                                            ?>];
+
+                                            // Create axes
+                                            let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+                                            categoryAxis.dataFields.category = "name";
+                                            categoryAxis.renderer.labels.template.rotation = 270;
+                                            categoryAxis.renderer.labels.template.hideOversized = false;
+                                            categoryAxis.renderer.minGridDistance = 20;
+                                            categoryAxis.renderer.labels.template.horizontalCenter = "right";
+                                            categoryAxis.renderer.labels.template.verticalCenter = "middle";
+                                            categoryAxis.tooltip.label.rotation = 270;
+                                            categoryAxis.tooltip.label.horizontalCenter = "right";
+                                            categoryAxis.tooltip.label.verticalCenter = "middle";
+
+                                            let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                                            valueAxis.title.text = "Kelompok/ Tim";
+                                            valueAxis.title.fontWeight = "bold";
+
+                                            // Create series
+                                            var series = chart.series.push(new am4charts.ColumnSeries3D());
+                                            series.dataFields.valueY = "data";
+                                            series.dataFields.categoryX = "name";
+                                            series.name = "Visits";
+                                            series.tooltipText = "{categoryX}: [bold]{valueY}[/]";
+                                            series.columns.template.fillOpacity = .8;
+
+                                            var columnTemplate = series.columns.template;
+                                            columnTemplate.strokeWidth = 2;
+                                            columnTemplate.strokeOpacity = 1;
+                                            columnTemplate.stroke = am4core.color("#FFFFFF");
+
+                                            columnTemplate.adapter.add("fill", function(fill, target) {
+                                            return chart.colors.getIndex(target.dataItem.index);
+                                            })
+
+                                            columnTemplate.adapter.add("stroke", function(stroke, target) {
+                                            return chart.colors.getIndex(target.dataItem.index);
+                                            })
+
+                                            chart.cursor = new am4charts.XYCursor();
+                                            chart.cursor.lineX.strokeOpacity = 0;
+                                            chart.cursor.lineY.strokeOpacity = 0;
+
+                                            }); // end am4core.ready()
                                             </script>
-                                            <div id="g"></div>
+
+                                            <!-- HTML -->
+                                            <div id="chartdiv"></div>
                                         </div>
                                     </div>
                                     
