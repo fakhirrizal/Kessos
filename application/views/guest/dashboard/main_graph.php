@@ -297,7 +297,7 @@
                                             series1.strokeWidth = 3;
                                             series1.bullets.push(new am4charts.CircleBullet());
                                             series1.tooltipText = "{categoryX}: {valueY} Kelompok";
-                                            series1.legendSettings.valueText = "{valueY}";
+                                            series1.legendSettings.valueText = "{valueY} Kelompok";
                                             series1.visible  = false;
 
                                             var series2 = chart.series.push(new am4charts.LineSeries());
@@ -307,7 +307,7 @@
                                             series2.strokeWidth = 3;
                                             series2.bullets.push(new am4charts.CircleBullet());
                                             series2.tooltipText = "{categoryX}: {valueY} Kelompok";
-                                            series2.legendSettings.valueText = "{valueY}";
+                                            series2.legendSettings.valueText = "{valueY} Kelompok";
 
                                             var series3 = chart.series.push(new am4charts.LineSeries());
                                             series3.dataFields.valueY = "sarling";
@@ -316,7 +316,7 @@
                                             series3.strokeWidth = 3;
                                             series3.bullets.push(new am4charts.CircleBullet());
                                             series3.tooltipText = "{categoryX}: {valueY} Tim";
-                                            series3.legendSettings.valueText = "{valueY}";
+                                            series3.legendSettings.valueText = "{valueY} Tim";
 
                                             // Add chart cursor
                                             chart.cursor = new am4charts.XYCursor();
