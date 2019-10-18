@@ -56,7 +56,7 @@ else{
 							<li class="dropdown dropdown-user dropdown-dark">
 								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 									<img alt="" class="img-circle" src="https://cdn1.iconfinder.com/data/icons/rcons-user-action/512/user-512.png">
-									<span class="username username-hide-mobile">Administrator</span>
+									<span class="username username-hide-mobile">KPM</span>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-default">
 									<li>
@@ -126,7 +126,7 @@ else{
 										</a>
 									</li>
 									<li class=" <?php if($child=='detail_rutilahu'){echo 'active';}else{echo '';} ?>">
-										<a href="<?php echo site_url('member_side/detil_laporan_rutilahu'.md5($get_data->id_rutilahu)); ?>" class="nav-link nav-toggle ">
+										<a href="<?php echo site_url('member_side/detil_laporan_rutilahu/'.md5($get_data->id_rutilahu)); ?>" class="nav-link nav-toggle ">
 											<i class="icon-layers"></i> Rekap Laporan Rutilahu
 										</a>
 									</li>
@@ -140,7 +140,7 @@ else{
 										</a>
 									</li>
 									<li class=" <?php if($child=='detail_sarling'){echo 'active';}else{echo '';} ?>">
-										<a href="<?php echo site_url('member_side/detil_laporan_sarling'.md5($get_data->id_sarling)); ?>" class="nav-link nav-toggle ">
+										<a href="<?php echo site_url('member_side/detil_laporan_sarling/'.md5($get_data->id_sarling)); ?>" class="nav-link nav-toggle ">
 											<i class="icon-layers"></i> Rekap Laporan Sarling
 										</a>
 									</li>

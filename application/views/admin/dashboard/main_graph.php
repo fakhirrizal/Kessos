@@ -10,7 +10,7 @@
 <?= $this->session->flashdata('sukses') ?>
 <?= $this->session->flashdata('gagal') ?>
 <div class="page-content-inner">
-	<div class="m-heading-1 border-green m-bordered">
+	<div class="m-heading-1 border-yellow m-bordered" style="background-color:#FAD405;">
 		<h3>Catatan</h3>
 		<p> Tampilan standar adalah rekap data Tahun <?= date('Y'); ?></p>
 	</div>
@@ -955,7 +955,7 @@
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
                                                 <!-- <span class="widget-thumb-subtitle"><font color='white'>Kelompok</font></span> -->
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($d2/$d1)/(count($data_utama_2b))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_2b)=='0' OR $d1=='0'){echo'0.00%';}else{ echo number_format((($d2/$d1)/(count($data_utama_2b))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -967,7 +967,7 @@
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
                                                 <!-- <span class="widget-thumb-subtitle"><font color='white'>Kelompok</font></span> -->
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($e2/$e1)/(count($data_utama_2b))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_2b)=='0' OR $e1=='0'){echo'0.00%';}else{ echo number_format((($e2/$e1)/(count($data_utama_2b))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -979,7 +979,7 @@
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
                                                 <!-- <span class="widget-thumb-subtitle"><font color='white'>Tim</font></span> -->
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($f2/$f1)/(count($data_utama_2b))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_2b)=='0' OR $f1=='0'){echo'0.00%';}else{ echo number_format((($f2/$f1)/(count($data_utama_2b))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1201,7 +1201,7 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format(($g1/$g3),2); ?></font></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format(($g1),2); ?></font></span>
                                                 <span class="widget-thumb-body-stat"><font color='white'><?= number_format(($g2/$g3),2).'%'; ?></font></span>
                                             </div>
                                         </div>
@@ -1213,7 +1213,7 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format(($h1/$h3),2); ?></font></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format(($h1),2); ?></font></span>
                                                 <span class="widget-thumb-body-stat"><font color='white'><?= number_format(($h2/$h3),2).'%'; ?></font></span>
                                             </div>
                                         </div>
@@ -1225,7 +1225,7 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format(($i1/$i3),2); ?></font></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format(($i1),2); ?></font></span>
                                                 <span class="widget-thumb-body-stat"><font color='white'><?= number_format(($i2/$i3),2).'%'; ?></font></span>
                                             </div>
                                         </div>
@@ -1254,7 +1254,8 @@
                                             if($value->jumlah_kube=='0'){
                                                 echo'';
                                             }else{
-                                                $anggaran_kube = ($value->anggaran_kube)/($value->jumlah_kube);
+                                                // $anggaran_kube = ($value->anggaran_kube)/($value->jumlah_kube);
+                                                $anggaran_kube += ($value->anggaran_kube);
                                                 $persentase_anggaran_kube = ($value->persentase_anggaran_kube)/($value->jumlah_kube);
                                             }
                                             $anggaran_rutilahu = 0;
@@ -1262,7 +1263,8 @@
                                             if($value->jumlah_rutilahu=='0'){
                                                 echo'';
                                             }else{
-                                                $anggaran_rutilahu = ($value->anggaran_rutilahu)/($value->jumlah_rutilahu);
+                                                // $anggaran_rutilahu = ($value->anggaran_rutilahu)/($value->jumlah_rutilahu);
+                                                $anggaran_rutilahu += ($value->anggaran_rutilahu);
                                                 $persentase_anggaran_rutilahu = ($value->persentase_anggaran_rutilahu)/($value->jumlah_rutilahu);
                                             }
                                             $anggaran_sarling = 0;
@@ -1270,7 +1272,8 @@
                                             if($value->jumlah_sarling=='0'){
                                                 echo'';
                                             }else{
-                                                $anggaran_sarling = ($value->anggaran_sarling)/($value->jumlah_sarling);
+                                                // $anggaran_sarling = ($value->anggaran_sarling)/($value->jumlah_sarling);
+                                                $anggaran_sarling += ($value->anggaran_sarling);
                                                 $persentase_anggaran_sarling = ($value->persentase_anggaran_sarling)/($value->jumlah_sarling);
                                             }
                                             echo'
@@ -1401,6 +1404,9 @@
                                 $i1 = 0;
                                 $i2 = 0;
                                 $i3 = 0;
+                                $sum_ang_k = 0;
+                                $sum_ang_r = 0;
+                                $sum_ang_s = 0;
                                 foreach ($data_utama_3b as $key => $value) {
                                     if($value->jumlah_kube=='0'){
                                         echo'';
@@ -1408,6 +1414,8 @@
                                         $g1 += $value->anggaran_kube;
                                         $g2 += $value->persentase_anggaran_kube;
                                         $g3 += $value->jumlah_kube;
+                                        $hitung = ($value->anggaran_kube)/($value->jumlah_kube);
+                                        $sum_ang_k += $g1;
                                     }
                                     if($value->jumlah_rutilahu=='0'){
                                         echo'';
@@ -1415,6 +1423,8 @@
                                         $h1 += $value->anggaran_rutilahu;
                                         $h2 += $value->persentase_anggaran_rutilahu;
                                         $h3 += $value->jumlah_rutilahu;
+                                        $hitung = ($value->anggaran_rutilahu)/($value->jumlah_rutilahu);
+                                        $sum_ang_r += $h1;
                                     }
                                     if($value->jumlah_sarling=='0'){
                                         echo'';
@@ -1422,6 +1432,8 @@
                                         $i1 += $value->anggaran_sarling;
                                         $i2 += $value->persentase_anggaran_sarling;
                                         $i3 += $value->jumlah_sarling;
+                                        $hitung = ($value->anggaran_sarling)/($value->jumlah_sarling);
+                                        $sum_ang_s += $i1;
                                     }
                                 }
                             ?>
@@ -1436,8 +1448,8 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($g1/$g3)/(count($data_utama_3b))),2); ?></font></span>
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($g2/$g3)/(count($data_utama_3b))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format($g1,2); ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_3b)=='0' OR $g3=='0'){echo'0.00%';}else{ echo number_format((($g2/$g3)/(count($data_utama_3b))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1448,8 +1460,8 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($h1/$h3)/(count($data_utama_3b))),2); ?></font></span>
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($h2/$h3)/(count($data_utama_3b))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format($h1,2); ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_3b)=='0'OR $h3=='0'){echo'0.00%';}else{ echo number_format((($h2/$h3)/(count($data_utama_3b))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1460,8 +1472,8 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($i1/$i3)/(count($data_utama_3b))),2); ?></font></span>
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($i2/$i3)/(count($data_utama_3b))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format($i1,2); ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_3b)=='0' OR $i3=='0'){echo'0.00%';}else{ echo number_format((($i2/$i3)/(count($data_utama_3b))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1489,7 +1501,7 @@
                                             if($value->jumlah_kube=='0'){
                                                 echo'';
                                             }else{
-                                                $anggaran_kube = ($value->anggaran_kube)/($value->jumlah_kube);
+                                                $anggaran_kube += ($value->anggaran_kube);
                                                 $persentase_anggaran_kube = ($value->persentase_anggaran_kube)/($value->jumlah_kube);
                                             }
                                             $anggaran_rutilahu = 0;
@@ -1497,7 +1509,7 @@
                                             if($value->jumlah_rutilahu=='0'){
                                                 echo'';
                                             }else{
-                                                $anggaran_rutilahu = ($value->anggaran_rutilahu)/($value->jumlah_rutilahu);
+                                                $anggaran_rutilahu += ($value->anggaran_rutilahu);
                                                 $persentase_anggaran_rutilahu = ($value->persentase_anggaran_rutilahu)/($value->jumlah_rutilahu);
                                             }
                                             $anggaran_sarling = 0;
@@ -1505,7 +1517,7 @@
                                             if($value->jumlah_sarling=='0'){
                                                 echo'';
                                             }else{
-                                                $anggaran_sarling = ($value->anggaran_sarling)/($value->jumlah_sarling);
+                                                $anggaran_sarling += ($value->anggaran_sarling);
                                                 $persentase_anggaran_sarling = ($value->persentase_anggaran_sarling)/($value->jumlah_sarling);
                                             }
                                             echo'
@@ -1665,7 +1677,7 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format(($j1/$j2),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if($j2=='0'){echo'0.00%';}else{ echo number_format(($j1/$j2),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1676,7 +1688,7 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format(($k1/$k2),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if($k2=='0'){echo'0.00%';}else{ echo number_format(($k1/$k2),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1687,7 +1699,7 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format(($l1/$l2),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if($l2=='0'){echo'0.00%';}else{ echo number_format(($l1/$l2),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1885,7 +1897,7 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($j1/$j2)/(count($data_utama_4b))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_4b)=='0' OR $j2=='0'){echo'0.00%';}else{ echo number_format((($j1/$j2)/(count($data_utama_4b))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1896,7 +1908,7 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($k1/$k2)/(count($data_utama_4b))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_4b)=='0' OR $k2=='0'){echo'0.00%';}else{ echo number_format((($k1/$k2)/(count($data_utama_4b))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -1907,7 +1919,7 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($l1/$l2)/(count($data_utama_4b))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_4b)=='0' OR $l2=='0'){echo'0.00%';}else{ echo number_format((($l1/$l2)/(count($data_utama_4b))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>

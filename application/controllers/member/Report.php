@@ -482,7 +482,7 @@ class Report extends CI_Controller {
         }
         else{
             $this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil ditambahkan.<br /></div>' );
-            echo "<script>window.location='".base_url()."member_side/detail_laporan_rutilahu/".md5($this->input->post('id_rutilahu'))."'</script>";
+            echo "<script>window.location='".base_url()."member_side/detil_laporan_rutilahu/".md5($this->input->post('id_rutilahu'))."'</script>";
         }
     }
     public function detail_rutilahu_report()

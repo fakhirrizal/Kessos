@@ -35,7 +35,7 @@ class Dashboard extends CI_Controller {
 			}
 			$this->load->view('guest/dashboard/main_map_conditional',$data);
 		}else{
-			$data['data_marker'] = $this->Main_model->getSelectedData('provinsi a', 'a.*,(SELECT SUM(s.persentase_realisasi) FROM kube k LEFT JOIN status_laporan_kube s ON k.id_kube=s.id_kube WHERE k.id_provinsi=a.id_provinsi) AS persentase_realisasi_kube,(SELECT COUNT(k.id_kube) FROM kube k WHERE k.id_provinsi=a.id_provinsi AND k.tahun="2019" AND k.deleted="0") AS jumlah_kube,(SELECT SUM(s.persentase_realisasi) FROM rutilahu k LEFT JOIN status_laporan_rutilahu s ON k.id_rutilahu=s.id_rutilahu WHERE k.id_provinsi=a.id_provinsi) AS persentase_realisasi_rutilahu,(SELECT COUNT(k.id_rutilahu) FROM rutilahu k WHERE k.id_provinsi=a.id_provinsi AND k.tahun="2019" AND k.deleted="0") AS jumlah_rutilahu,(SELECT SUM(s.persentase_realisasi) FROM sarling k LEFT JOIN status_laporan_sarling s ON k.id_sarling=s.id_sarling WHERE k.id_provinsi=a.id_provinsi) AS persentase_realisasi_sarling,(SELECT COUNT(k.id_sarling) FROM sarling k WHERE k.id_provinsi=a.id_provinsi AND k.tahun="2019" AND k.deleted="0") AS jumlah_sarling')->result();
+			$data['data_marker'] = $this->Main_model->getSelectedData('provinsi a', 'a.*,(SELECT SUM(s.persentase_realisasi) FROM kube k LEFT JOIN status_laporan_kube s ON k.id_kube=s.id_kube WHERE k.id_provinsi=a.id_provinsi) AS persentase_realisasi_kube,(SELECT COUNT(k.id_kube) FROM kube k WHERE k.id_provinsi=a.id_provinsi AND k.tahun="2019" AND k.deleted="0") AS jumlah_kube,(SELECT SUM(s.persentase_realisasi) FROM rutilahu k LEFT JOIN status_laporan_rutilahu s ON k.id_rutilahu=s.id_rutilahu WHERE k.id_provinsi=a.id_provinsi) AS persentase_realisasi_rutilahu,(SELECT COUNT(k.id_rutilahu) FROM rutilahu k WHERE k.id_provinsi=a.id_provinsi AND k.tahun="2019" AND k.deleted="0") AS jumlah_rutilahu,(SELECT SUM(s.persentase_realisasi) FROM sarling k LEFT JOIN status_laporan_sarling s ON k.id_sarling=s.id_sarling WHERE k.id_provinsi=a.id_provinsi) AS persentase_realisasi_sarling,(SELECT COUNT(k.id_sarling) FROM sarling k WHERE k.id_provinsi=a.id_provinsi AND k.tahun="2019" AND k.deleted="0") AS jumlah_sarling',array('a.wilayah'=>'2'))->result();
 			$this->load->view('guest/dashboard/main_map',$data);
 		}
 	}
@@ -152,22 +152,22 @@ class Dashboard extends CI_Controller {
 		if($this->input->post('kegiatan')=='a'){
 			$data['judul'] = 'KUBE';
 			$data['uuid'] = $uuid;
-			$data['data_marker'] = $this->Main_model->getSelectedData('desa a', 'a.*,(SELECT SUM(s.persentase_realisasi) FROM kube k LEFT JOIN status_laporan_kube s ON k.id_kube=s.id_kube WHERE k.id_desa=a.id_desa) AS persentase_realisasi,(SELECT COUNT(k.id_kube) FROM kube k WHERE k.id_desa=a.id_desa AND k.jumlah="2019") AS jml',array('md5(a.id_kecamatan)'=>$uuid))->result();
+			$data['data_marker'] = $this->Main_model->getSelectedData('desa a', 'a.*,(SELECT SUM(s.persentase_realisasi) FROM kube k LEFT JOIN status_laporan_kube s ON k.id_kube=s.id_kube WHERE k.id_desa=a.id_desa) AS persentase_realisasi,(SELECT COUNT(k.id_kube) FROM kube k WHERE k.id_desa=a.id_desa AND k.tahun="2019") AS jml',array('md5(a.id_kecamatan)'=>$uuid))->result();
 			$this->load->view('guest/dashboard/map_district_conditional',$data);
 		}
 		elseif($this->input->post('kegiatan')=='b'){
 			$data['judul'] = 'RUTILAHU';
 			$data['uuid'] = $uuid;
-			$data['data_marker'] = $this->Main_model->getSelectedData('desa a', 'a.*,(SELECT SUM(s.persentase_realisasi) FROM rutilahu k LEFT JOIN status_laporan_rutilahu s ON k.id_rutilahu=s.id_rutilahu WHERE k.id_desa=a.id_desa) AS persentase_realisasi,(SELECT COUNT(k.id_rutilahu) FROM rutilahu k WHERE k.id_desa=a.id_desa AND k.jumlah="2019") AS jml',array('md5(a.id_kecamatan)'=>$uuid))->result();
+			$data['data_marker'] = $this->Main_model->getSelectedData('desa a', 'a.*,(SELECT SUM(s.persentase_realisasi) FROM rutilahu k LEFT JOIN status_laporan_rutilahu s ON k.id_rutilahu=s.id_rutilahu WHERE k.id_desa=a.id_desa) AS persentase_realisasi,(SELECT COUNT(k.id_rutilahu) FROM rutilahu k WHERE k.id_desa=a.id_desa AND k.tahun="2019") AS jml',array('md5(a.id_kecamatan)'=>$uuid))->result();
 			$this->load->view('guest/dashboard/map_district_conditional',$data);
 		}
 		elseif($this->input->post('kegiatan')=='c'){
 			$data['judul'] = 'SARLING';
 			$data['uuid'] = $uuid;
-			$data['data_marker'] = $this->Main_model->getSelectedData('desa a', 'a.*,(SELECT SUM(s.persentase_realisasi) FROM sarling k LEFT JOIN status_laporan_sarling s ON k.id_sarling=s.id_sarling WHERE k.id_desa=a.id_desa) AS persentase_realisasi,(SELECT COUNT(k.id_sarling) FROM sarling k WHERE k.id_desa=a.id_desa AND k.jumlah="2019") AS jml',array('md5(a.id_kecamatan)'=>$uuid))->result();
+			$data['data_marker'] = $this->Main_model->getSelectedData('desa a', 'a.*,(SELECT SUM(s.persentase_realisasi) FROM sarling k LEFT JOIN status_laporan_sarling s ON k.id_sarling=s.id_sarling WHERE k.id_desa=a.id_desa) AS persentase_realisasi,(SELECT COUNT(k.id_sarling) FROM sarling k WHERE k.id_desa=a.id_desa AND k.tahun="2019") AS jml',array('md5(a.id_kecamatan)'=>$uuid))->result();
 			$this->load->view('guest/dashboard/map_district_conditional',$data);
 		}else{
-			$data['data_marker'] = $this->Main_model->getSelectedData('desa a', 'a.*,(SELECT SUM(s.persentase_realisasi) FROM kube k LEFT JOIN status_laporan_kube s ON k.id_kube=s.id_kube WHERE k.id_desa=a.id_desa) AS persentase_realisasi_kube,(SELECT COUNT(k.id_kube) FROM kube k WHERE k.id_desa=a.id_desa AND k.jumlah="2019") AS jumlah_kube,(SELECT SUM(s.persentase_realisasi) FROM rutilahu k LEFT JOIN status_laporan_rutilahu s ON k.id_rutilahu=s.id_rutilahu WHERE k.id_desa=a.id_desa) AS persentase_realisasi_rutilahu,(SELECT COUNT(k.id_rutilahu) FROM rutilahu k WHERE k.id_desa=a.id_desa AND k.jumlah="2019") AS jumlah_rutilahu,(SELECT SUM(s.persentase_realisasi) FROM sarling k LEFT JOIN status_laporan_sarling s ON k.id_sarling=s.id_sarling WHERE k.id_desa=a.id_desa) AS persentase_realisasi_sarling,(SELECT COUNT(k.id_sarling) FROM sarling k WHERE k.id_desa=a.id_desa AND k.jumlah="2019") AS jumlah_sarling',array('md5(a.id_kecamatan)'=>$uuid))->result();
+			$data['data_marker'] = $this->Main_model->getSelectedData('desa a', 'a.*,(SELECT SUM(s.persentase_realisasi) FROM kube k LEFT JOIN status_laporan_kube s ON k.id_kube=s.id_kube WHERE k.id_desa=a.id_desa) AS persentase_realisasi_kube,(SELECT COUNT(k.id_kube) FROM kube k WHERE k.id_desa=a.id_desa AND k.tahun="2019") AS jumlah_kube,(SELECT SUM(s.persentase_realisasi) FROM rutilahu k LEFT JOIN status_laporan_rutilahu s ON k.id_rutilahu=s.id_rutilahu WHERE k.id_desa=a.id_desa) AS persentase_realisasi_rutilahu,(SELECT COUNT(k.id_rutilahu) FROM rutilahu k WHERE k.id_desa=a.id_desa AND k.tahun="2019") AS jumlah_rutilahu,(SELECT SUM(s.persentase_realisasi) FROM sarling k LEFT JOIN status_laporan_sarling s ON k.id_sarling=s.id_sarling WHERE k.id_desa=a.id_desa) AS persentase_realisasi_sarling,(SELECT COUNT(k.id_sarling) FROM sarling k WHERE k.id_desa=a.id_desa AND k.tahun="2019") AS jumlah_sarling',array('md5(a.id_kecamatan)'=>$uuid))->result();
 			$this->load->view('guest/dashboard/map_district',$data);
 		}
 	}

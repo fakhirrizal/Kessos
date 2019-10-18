@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ditjen PFM - Kementerian Sosial Republik Indonesia</title>
 
-        <link rel="stylesheet" href="http://sikapdaya.kemsos.go.id/css/limitless.css">
-        <link rel="stylesheet" href="http://sikapdaya.kemsos.go.id/css/core.css">
-        <!-- <link rel="stylesheet" href="http://sikapdaya.kemsos.go.id/css/components.css"> -->
-        <link rel="stylesheet" href="http://sikapdaya.kemsos.go.id/css/colors.css">
-        <link rel="stylesheet" href="http://sikapdaya.kemsos.go.id/css/app.css">
+        <link rel="stylesheet" href="https://sikapdaya.kemsos.go.id/css/limitless.css">
+        <link rel="stylesheet" href="https://sikapdaya.kemsos.go.id/css/core.css">
+        <!-- <link rel="stylesheet" href="https://sikapdaya.kemsos.go.id/css/components.css"> -->
+        <link rel="stylesheet" href="https://sikapdaya.kemsos.go.id/css/colors.css">
+        <link rel="stylesheet" href="https://sikapdaya.kemsos.go.id/css/app.css">
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <link href="<?=base_url('assets/global/plugins/font-awesome/css/font-awesome.min.css');?>" rel="stylesheet" type="text/css" />
         <link href="<?=base_url('assets/global/plugins/simple-line-icons/simple-line-icons.min.css');?>" rel="stylesheet" type="text/css" />
@@ -47,7 +47,7 @@
 
         <meta name="author" content="Kementerian Sosial Republik Indonesia">
         <meta name="description" content="Kementerian Sosial Republik Indonesia">
-        <link rel="canonical" href="http://sikapdaya.kemsos.go.id">
+        <link rel="canonical" href="https://sikapdaya.kemsos.go.id">
 
         <meta name="description" content="Kementerian Sosial Republik Indonesia">
 
@@ -56,9 +56,9 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-        <link type="text/plain" rel="author" href="http://sikapdaya.kemsos.go.id/humans.txt">
+        <link type="text/plain" rel="author" href="https://sikapdaya.kemsos.go.id/humans.txt">
 
-        <link rel="shortcut icon" href="http://sikapdaya.kemsos.go.id/favicon.ico">
+        <link rel="shortcut icon" href="https://sikapdaya.kemsos.go.id/favicon.ico">
         <style>
             div.footer {
                 line-height: 2;
@@ -75,13 +75,13 @@
                             <div class="col-md-10 col-sm-10 col-xs-9">
                                 <div class="col-md-2 col-sm-2 col-xs-12">
                                     <a href="http://www.kemsos.go.id">
-                                        <img src="http://sikapdaya.kemsos.go.id/images/logo-with-text.png" alt="kemsos" class="img-responsive">
+                                        <img src="https://sikapdaya.kemsos.go.id/images/logo-with-text.png" alt="kemsos" class="img-responsive">
                                     </a>
                                 </div>
                                 <div class="col-md-9 col-sm-9 col-xs-12">
-                                    <h3><strong>Dashboard Bantuan Sosial Reguler</strong></h3>
+                                    <h2><strong>Dashboard Bantuan Sosial Reguler</strong></h2>
                                     <!-- <h3>Sistem Informasi Manajemen Kube, Rutilahu dan Sarling<br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3> -->
-                                    <h3><br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
+                                    <h3>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-1 col-xs-12">
@@ -152,7 +152,7 @@
                             Contact Person Office 021-3103637/79 /EXT 2529
                             <br>Alamat Email : sekretariat@kemsos.go.id
                             <br>
-                            © 2019 <a href="#">Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II - Kementerian Sosial RI</a>.
+                            © 2019 <a href="#">Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II - Kementerian Sosial RI</a>.<br><br><br><br>
                             </div>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
                     usr:  null ,
                 };
             </script> -->
-            <!-- <script type="text/javascript" src="http://sikapdaya.kemsos.go.id/js/app.js"></script> -->
+            <!-- <script type="text/javascript" src="https://sikapdaya.kemsos.go.id/js/app.js"></script> -->
             <script src="<?=base_url('assets/global/plugins/jquery.min.js');?>" type="text/javascript"></script>
             <script src="<?=base_url('assets/global/plugins/bootstrap/js/bootstrap.min.js');?>" type="text/javascript"></script>
             <script src="<?=base_url('assets/global/plugins/js.cookie.min.js');?>" type="text/javascript"></script>

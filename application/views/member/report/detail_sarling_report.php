@@ -21,7 +21,7 @@
 $id_sarling = '';
 ?>
 <div class="page-content-inner">
-	<div class="m-heading-1 border-green m-bordered">
+	<div class="m-heading-1 border-yellow m-bordered" style="background-color:#FAD405;">
 		<h3>Catatan</h3>
 		<!-- <p> 1. Ketika mengklik <b>Atur Ulang Sandi</b>, maka kata sandi otomatis menjadi "<b>1234</b>"</p>
 		<p> 2. Untuk <b>username</b> dan <b>password</b> dari anggota baru diambil dari isian <b>NIK</b>.</p> -->
@@ -101,9 +101,11 @@ $id_sarling = '';
 									</table>
 								</div>
 						<?php }} ?>
+					</div>
 						<br>
 						<br>
 						<br>
+					<div class='row'>
 						<?php
 						if(isset($status_laporan)){
 						?>

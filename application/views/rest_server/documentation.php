@@ -36,7 +36,7 @@
 				<div class="page-content">
 					<div class="container">
 						<div class="page-content-inner">
-							<div class="m-heading-1 border-green m-bordered">
+							<div class="m-heading-1 border-yellow m-bordered" style="background-color:#FAD405;">
 								<h2>Dokumentasi API</h2>
 								<p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
 							</div>

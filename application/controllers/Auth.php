@@ -177,7 +177,7 @@ class Auth extends CI_Controller {
 	}
 	public function logout(){
 		$this->session->sess_destroy();
-		echo "<script>window.location='".base_url('login')."'</script>";
+		echo "<script>window.location='".base_url()."'</script>";
 	}
 	public function forget_password() {
 		$q1 = "SELECT a.*,b.fullname FROM user a LEFT JOIN user_profile b ON a.id=b.user_id WHERE a.email='".$this->input->post('email')."' AND a.deleted='0'";

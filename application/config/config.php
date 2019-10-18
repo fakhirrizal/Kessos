@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost:8080/kemensos/';
-// $config['base_url'] = 'http://pfm.demokode.com/';
+// $config['base_url'] = 'https://pfm.demokode.com/';
 
 /*
 |--------------------------------------------------------------------------

@@ -29,7 +29,7 @@
 <?= $this->session->flashdata('sukses') ?>
 <?= $this->session->flashdata('gagal') ?>
 <div class="page-content-inner">
-	<div class="m-heading-1 border-green m-bordered">
+	<div class="m-heading-1 border-yellow m-bordered" style="background-color:#FAD405;">
 		<h3>Catatan</h3>
 		<p> Data yang tersaji merupakan rekap dari Tahun 2019</p>
 	</div>

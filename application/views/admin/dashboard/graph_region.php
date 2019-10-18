@@ -6,7 +6,7 @@
 <?= $this->session->flashdata('sukses') ?>
 <?= $this->session->flashdata('gagal') ?>
 <div class="page-content-inner">
-	<div class="m-heading-1 border-green m-bordered">
+	<div class="m-heading-1 border-yellow m-bordered" style="background-color:#FAD405;">
 		<h3>Catatan</h3>
 		<p> Tampilan standar adalah rekap data Tahun <?= date('Y'); ?></p>
 	</div>
@@ -544,8 +544,8 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($g1/$g3)/(count($data_utama_3))),2); ?></font></span>
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($g2/$g3)/(count($data_utama_3))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($g1)),2); ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if($g3=='0' OR count($data_utama_3)=='0'){echo'0.00%';}else{ echo number_format((($g2/$g3)/(count($data_utama_3))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -556,8 +556,8 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($h1/$h3)/(count($data_utama_3))),2); ?></font></span>
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($h2/$h3)/(count($data_utama_3))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($h1)),2); ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if($h3=='0' OR count($data_utama_3)=='0'){echo'0.00%';}else{ echo number_format((($h2/$h3)/(count($data_utama_3))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -568,8 +568,8 @@
                                         <div class="widget-thumb-wrap">
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
-                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($i1/$i3)/(count($data_utama_3))),2); ?></font></span>
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($i2/$i3)/(count($data_utama_3))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-subtitle"><font color='white'><?= 'Rp '.number_format((($i1)),2); ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if($i3=='0' OR count($data_utama_3)=='0'){echo'0.00%';}else{ echo number_format((($i2/$i3)/(count($data_utama_3))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -597,7 +597,7 @@
                                             if($value->jumlah_kube=='0'){
                                                 echo'';
                                             }else{
-                                                $anggaran_kube = ($value->anggaran_kube)/($value->jumlah_kube);
+                                                $anggaran_kube += ($value->anggaran_kube);
                                                 $persentase_anggaran_kube = ($value->persentase_anggaran_kube)/($value->jumlah_kube);
                                             }
                                             $anggaran_rutilahu = 0;
@@ -605,7 +605,7 @@
                                             if($value->jumlah_rutilahu=='0'){
                                                 echo'';
                                             }else{
-                                                $anggaran_rutilahu = ($value->anggaran_rutilahu)/($value->jumlah_rutilahu);
+                                                $anggaran_rutilahu += ($value->anggaran_rutilahu);
                                                 $persentase_anggaran_rutilahu = ($value->persentase_anggaran_rutilahu)/($value->jumlah_rutilahu);
                                             }
                                             $anggaran_sarling = 0;
@@ -613,7 +613,7 @@
                                             if($value->jumlah_sarling=='0'){
                                                 echo'';
                                             }else{
-                                                $anggaran_sarling = ($value->anggaran_sarling)/($value->jumlah_sarling);
+                                                $anggaran_sarling += ($value->anggaran_sarling);
                                                 $persentase_anggaran_sarling = ($value->persentase_anggaran_sarling)/($value->jumlah_sarling);
                                             }
                                             echo'
