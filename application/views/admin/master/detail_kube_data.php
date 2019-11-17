@@ -124,9 +124,9 @@ $id_kube = '';
 											<thead>
 												<tr>
 													<th style="text-align: center;" width="4%"> # </th>
+													<th style="text-align: center;"> Jabatan Kelompok </th>
 													<th style="text-align: center;"> Nama </th>
 													<th style="text-align: center;"> NIK </th>
-													<th style="text-align: center;"> Jabatan Kelompok </th>
 													<th style="text-align: center;"> No. KK </th>
 													<th style="text-align: center;" width="7%"> Aksi </th>
 												</tr>
@@ -267,9 +267,9 @@ $id_kube = '';
 				},
 				"aoColumns": [
 							{ mData: 'number', sClass: "alignCenter" },
+							{ mData: 'jabatan', sClass: "alignCenter" },
 							{ mData: 'nama' },
 							{ mData: 'nik', sClass: "alignCenter" },
-							{ mData: 'jabatan', sClass: "alignCenter" },
 							{ mData: 'no_kk', sClass: "alignCenter" } ,
 							{ mData: 'action' }
 						]

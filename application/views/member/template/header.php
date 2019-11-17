@@ -47,22 +47,22 @@ else{
 						<ul class="nav navbar-nav pull-right">
 							<li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
 								<a href="#" class="dropdown-toggle" title="Notifikasi">
-									<i class="icon-bell"></i>
+									<!-- <i class="icon-bell"></i> -->
 								</a>
 							</li>
-							<li class="droddown dropdown-separator">
+							<!-- <li class="droddown dropdown-separator">
 								<span class="separator"></span>
-							</li>
+							</li> -->
 							<li class="dropdown dropdown-user dropdown-dark">
 								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 									<img alt="" class="img-circle" src="https://cdn1.iconfinder.com/data/icons/rcons-user-action/512/user-512.png">
 									<span class="username username-hide-mobile">KPM</span>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-default">
-									<li>
+									<!-- <li>
 										<a href="#!">
 											<i class="icon-user"></i> Profil </a>
-									</li>
+									</li> -->
 									<li>
 										<a href="<?php echo site_url('member_side/bantuan'); ?>">
 											<i class="icon-rocket"></i> Bantuan
@@ -81,7 +81,7 @@ else{
 			</div>
 			<div class="page-header-menu">
 				<div class="container">
-					<form class="search-form" action="javascript:;" method="GET">
+					<!-- <form class="search-form" action="javascript:;" method="GET">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Cari" name="query">
 							<span class="input-group-btn">
@@ -90,7 +90,7 @@ else{
 								</a>
 							</span>
 						</div>
-					</form>
+					</form> -->
 					<div class="hor-menu  ">
 						<ul class="nav navbar-nav">
 							<li class="menu-dropdown classic-menu-dropdown <?php if($parent=='home'){echo 'active';}else{echo '';} ?>">

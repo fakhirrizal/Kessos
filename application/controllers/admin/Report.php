@@ -6,48 +6,204 @@ class Report extends CI_Controller {
         parent::__construct();
     }
     /* Kube (Kelompok Usaha Bersama) */
+    public function download_kube_data()
+	{
+		$get_data = '';
+		if($this->input->post('kab')!=NULL){
+            $get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.id_kabupaten'=>$this->input->post('kab'),'a.deleted'=>'0'),'','','','',array(
+                array(
+                    'table' => 'jenis_usaha b',
+                    'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'provinsi c',
+                    'on' => 'a.id_provinsi=c.id_provinsi',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kabupaten d',
+                    'on' => 'a.id_kabupaten=d.id_kabupaten',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kecamatan e',
+                    'on' => 'a.id_kecamatan=e.id_kecamatan',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'desa f',
+                    'on' => 'a.id_desa=f.id_desa',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'status_laporan_kube g',
+                    'on' => 'a.id_kube=g.id_kube',
+                    'pos' => 'RIGHT'
+                )
+            ))->result();
+		}else{
+			$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.id_provinsi'=>$this->input->post('prov'),'a.deleted'=>'0'),'','','','',array(
+                array(
+                    'table' => 'jenis_usaha b',
+                    'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'provinsi c',
+                    'on' => 'a.id_provinsi=c.id_provinsi',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kabupaten d',
+                    'on' => 'a.id_kabupaten=d.id_kabupaten',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kecamatan e',
+                    'on' => 'a.id_kecamatan=e.id_kecamatan',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'desa f',
+                    'on' => 'a.id_desa=f.id_desa',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'status_laporan_kube g',
+                    'on' => 'a.id_kube=g.id_kube',
+                    'pos' => 'RIGHT'
+                )
+            ))->result();
+		}
+		$data['data_cetak'] = $get_data;
+		$this->load->view('admin/report/cetak_data_kube',$data);
+	}
     public function kube(){
         $data['parent'] = 'report';
         $data['child'] = 'kube';
         $data['grand_child'] = '';
+        $data['prov'] = '';
+		$data['kabkot'] = '';
+		if($this->input->post('id_provinsi')!=NULL){
+			$data['prov'] = $this->input->post('id_provinsi');
+		}else{
+			echo'';
+		}
+		if($this->input->post('id_kabupaten')!=NULL){
+			$data['kabkot'] = $this->input->post('id_kabupaten');
+		}else{
+			echo'';
+		}
+        $data['provinsi'] =  $this->Main_model->getSelectedData('provinsi a', 'a.*')->result();
         $this->load->view('admin/template/header',$data);
         $this->load->view('admin/report/kube',$data);
         $this->load->view('admin/template/footer');
     }
     public function json_kube(){
         $jumlah_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
-        $get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0'),'','','','',array(
-            array(
-                'table' => 'jenis_usaha b',
-                'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'provinsi c',
-                'on' => 'a.id_provinsi=c.id_provinsi',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'kabupaten d',
-                'on' => 'a.id_kabupaten=d.id_kabupaten',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'kecamatan e',
-                'on' => 'a.id_kecamatan=e.id_kecamatan',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'desa f',
-                'on' => 'a.id_desa=f.id_desa',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'status_laporan_kube g',
-                'on' => 'a.id_kube=g.id_kube',
-                'pos' => 'RIGHT'
-            )
-        ))->result();
+        if($this->input->post('prov')!=NULL){
+			if($this->input->post('kabkot')!=NULL){
+				$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0','a.id_kabupaten'=>$this->input->post('kabkot')),'','','','',array(
+                    array(
+                        'table' => 'jenis_usaha b',
+                        'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'provinsi c',
+                        'on' => 'a.id_provinsi=c.id_provinsi',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kabupaten d',
+                        'on' => 'a.id_kabupaten=d.id_kabupaten',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kecamatan e',
+                        'on' => 'a.id_kecamatan=e.id_kecamatan',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'desa f',
+                        'on' => 'a.id_desa=f.id_desa',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'status_laporan_kube g',
+                        'on' => 'a.id_kube=g.id_kube',
+                        'pos' => 'RIGHT'
+                    )
+                ))->result();
+			}else{
+				$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0','a.id_provinsi'=>$this->input->post('prov')),'','','','',array(
+                    array(
+                        'table' => 'jenis_usaha b',
+                        'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'provinsi c',
+                        'on' => 'a.id_provinsi=c.id_provinsi',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kabupaten d',
+                        'on' => 'a.id_kabupaten=d.id_kabupaten',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kecamatan e',
+                        'on' => 'a.id_kecamatan=e.id_kecamatan',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'desa f',
+                        'on' => 'a.id_desa=f.id_desa',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'status_laporan_kube g',
+                        'on' => 'a.id_kube=g.id_kube',
+                        'pos' => 'RIGHT'
+                    )
+                ))->result();
+			}
+		}else{
+            $get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0'),'','','','',array(
+                array(
+                    'table' => 'jenis_usaha b',
+                    'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'provinsi c',
+                    'on' => 'a.id_provinsi=c.id_provinsi',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kabupaten d',
+                    'on' => 'a.id_kabupaten=d.id_kabupaten',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kecamatan e',
+                    'on' => 'a.id_kecamatan=e.id_kecamatan',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'desa f',
+                    'on' => 'a.id_desa=f.id_desa',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'status_laporan_kube g',
+                    'on' => 'a.id_kube=g.id_kube',
+                    'pos' => 'RIGHT'
+                )
+            ))->result();
+        }
         $data_tampil = array();
         $no = 1;
         foreach ($get_data as $key => $value) {
@@ -178,7 +334,7 @@ class Report extends CI_Controller {
             $bb = explode(',',$get_status_laporan_kube->indikator);
             $c = array_unique(array_merge($get_indikator,$bb));
             $d = implode(',',$c);
-            $persentase_fisik2 = (count($c)/count($data_indikator))*100;
+            $persentase_fisik2 = (count(array_filter($c))/count($data_indikator))*100;
             $persentase_anggaran = (($total_uang+$get_status_laporan_kube->anggaran)/$get_data_kube->rencana_anggaran)*100;
             $persentase_realisasi = ($persentase_anggaran+$persentase_fisik2)/2;
             $data_update1 = array(
@@ -453,43 +609,179 @@ class Report extends CI_Controller {
         }
     }
     /* Rutilahu (Rumah Tidak Layak Huni) */
+    public function download_rutilahu_data()
+	{
+		$get_data = '';
+		if($this->input->post('kab')!=NULL){
+            $get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.id_kabupaten'=>$this->input->post('kab'),'a.deleted'=>'0'),'','','','',array(
+                array(
+                    'table' => 'provinsi c',
+                    'on' => 'a.id_provinsi=c.id_provinsi',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kabupaten d',
+                    'on' => 'a.id_kabupaten=d.id_kabupaten',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kecamatan e',
+                    'on' => 'a.id_kecamatan=e.id_kecamatan',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'desa f',
+                    'on' => 'a.id_desa=f.id_desa',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'status_laporan_rutilahu g',
+                    'on' => 'a.id_rutilahu=g.id_rutilahu',
+                    'pos' => 'RIGHT'
+                )
+            ))->result();
+		}else{
+			$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.id_provinsi'=>$this->input->post('prov'),'a.deleted'=>'0'),'','','','',array(
+                array(
+                    'table' => 'provinsi c',
+                    'on' => 'a.id_provinsi=c.id_provinsi',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kabupaten d',
+                    'on' => 'a.id_kabupaten=d.id_kabupaten',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kecamatan e',
+                    'on' => 'a.id_kecamatan=e.id_kecamatan',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'desa f',
+                    'on' => 'a.id_desa=f.id_desa',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'status_laporan_rutilahu g',
+                    'on' => 'a.id_rutilahu=g.id_rutilahu',
+                    'pos' => 'RIGHT'
+                )
+            ))->result();
+		}
+		$data['data_cetak'] = $get_data;
+		$this->load->view('admin/report/cetak_data_rutilahu',$data);
+	}
     public function rutilahu(){
         $data['parent'] = 'report';
         $data['child'] = 'rutilahu';
         $data['grand_child'] = '';
+        $data['prov'] = '';
+		$data['kabkot'] = '';
+		if($this->input->post('id_provinsi')!=NULL){
+			$data['prov'] = $this->input->post('id_provinsi');
+		}else{
+			echo'';
+		}
+		if($this->input->post('id_kabupaten')!=NULL){
+			$data['kabkot'] = $this->input->post('id_kabupaten');
+		}else{
+			echo'';
+		}
+        $data['provinsi'] =  $this->Main_model->getSelectedData('provinsi a', 'a.*')->result();
         $this->load->view('admin/template/header',$data);
         $this->load->view('admin/report/rutilahu',$data);
         $this->load->view('admin/template/footer');
     }
     public function json_rutilahu(){
         $jumlah_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
-        $get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0'),'','','','',array(
-            array(
-                'table' => 'provinsi c',
-                'on' => 'a.id_provinsi=c.id_provinsi',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'kabupaten d',
-                'on' => 'a.id_kabupaten=d.id_kabupaten',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'kecamatan e',
-                'on' => 'a.id_kecamatan=e.id_kecamatan',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'desa f',
-                'on' => 'a.id_desa=f.id_desa',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'status_laporan_rutilahu g',
-                'on' => 'a.id_rutilahu=g.id_rutilahu',
-                'pos' => 'RIGHT'
-            )
-        ))->result();
+        if($this->input->post('prov')!=NULL){
+			if($this->input->post('kabkot')!=NULL){
+				$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0','a.id_kabupaten'=>$this->input->post('kabkot')),'','','','',array(
+                    array(
+                        'table' => 'provinsi c',
+                        'on' => 'a.id_provinsi=c.id_provinsi',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kabupaten d',
+                        'on' => 'a.id_kabupaten=d.id_kabupaten',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kecamatan e',
+                        'on' => 'a.id_kecamatan=e.id_kecamatan',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'desa f',
+                        'on' => 'a.id_desa=f.id_desa',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'status_laporan_rutilahu g',
+                        'on' => 'a.id_rutilahu=g.id_rutilahu',
+                        'pos' => 'RIGHT'
+                    )
+                ))->result();
+			}else{
+				$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0','a.id_provinsi'=>$this->input->post('prov')),'','','','',array(
+                    array(
+                        'table' => 'provinsi c',
+                        'on' => 'a.id_provinsi=c.id_provinsi',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kabupaten d',
+                        'on' => 'a.id_kabupaten=d.id_kabupaten',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kecamatan e',
+                        'on' => 'a.id_kecamatan=e.id_kecamatan',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'desa f',
+                        'on' => 'a.id_desa=f.id_desa',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'status_laporan_rutilahu g',
+                        'on' => 'a.id_rutilahu=g.id_rutilahu',
+                        'pos' => 'RIGHT'
+                    )
+                ))->result();
+			}
+		}else{
+            $get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0'),'','','','',array(
+                array(
+                    'table' => 'provinsi c',
+                    'on' => 'a.id_provinsi=c.id_provinsi',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kabupaten d',
+                    'on' => 'a.id_kabupaten=d.id_kabupaten',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kecamatan e',
+                    'on' => 'a.id_kecamatan=e.id_kecamatan',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'desa f',
+                    'on' => 'a.id_desa=f.id_desa',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'status_laporan_rutilahu g',
+                    'on' => 'a.id_rutilahu=g.id_rutilahu',
+                    'pos' => 'RIGHT'
+                )
+            ))->result();
+        }
         $data_tampil = array();
         $no = 1;
         foreach ($get_data as $key => $value) {
@@ -620,7 +912,7 @@ class Report extends CI_Controller {
             $bb = explode(',',$get_status_laporan_rutilahu->indikator);
             $c = array_unique(array_merge($get_indikator,$bb));
             $d = implode(',',$c);
-            $persentase_fisik2 = (count($c)/count($data_indikator))*100;
+            $persentase_fisik2 = (count(array_filter($c))/count($data_indikator))*100;
             $persentase_anggaran = (($total_uang+$get_status_laporan_rutilahu->anggaran)/$get_data_rutilahu->rencana_anggaran)*100;
             $persentase_realisasi = ($persentase_anggaran+$persentase_fisik2)/2;
             $data_update1 = array(
@@ -885,43 +1177,179 @@ class Report extends CI_Controller {
         }
     }
     /* Sarling (Sarana Lingkungan) */
+    public function download_sarling_data()
+	{
+		$get_data = '';
+		if($this->input->post('kab')!=NULL){
+            $get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.id_kabupaten'=>$this->input->post('kab'),'a.deleted'=>'0'),'','','','',array(
+                array(
+                    'table' => 'provinsi c',
+                    'on' => 'a.id_provinsi=c.id_provinsi',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kabupaten d',
+                    'on' => 'a.id_kabupaten=d.id_kabupaten',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kecamatan e',
+                    'on' => 'a.id_kecamatan=e.id_kecamatan',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'desa f',
+                    'on' => 'a.id_desa=f.id_desa',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'status_laporan_sarling g',
+                    'on' => 'a.id_sarling=g.id_sarling',
+                    'pos' => 'RIGHT'
+                )
+            ))->result();
+		}else{
+			$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.id_provinsi'=>$this->input->post('prov'),'a.deleted'=>'0'),'','','','',array(
+                array(
+                    'table' => 'provinsi c',
+                    'on' => 'a.id_provinsi=c.id_provinsi',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kabupaten d',
+                    'on' => 'a.id_kabupaten=d.id_kabupaten',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kecamatan e',
+                    'on' => 'a.id_kecamatan=e.id_kecamatan',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'desa f',
+                    'on' => 'a.id_desa=f.id_desa',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'status_laporan_sarling g',
+                    'on' => 'a.id_sarling=g.id_sarling',
+                    'pos' => 'RIGHT'
+                )
+            ))->result();
+		}
+		$data['data_cetak'] = $get_data;
+		$this->load->view('admin/report/cetak_data_sarling',$data);
+	}
     public function sarling(){
         $data['parent'] = 'report';
         $data['child'] = 'sarling';
         $data['grand_child'] = '';
+        $data['prov'] = '';
+		$data['kabkot'] = '';
+		if($this->input->post('id_provinsi')!=NULL){
+			$data['prov'] = $this->input->post('id_provinsi');
+		}else{
+			echo'';
+		}
+		if($this->input->post('id_kabupaten')!=NULL){
+			$data['kabkot'] = $this->input->post('id_kabupaten');
+		}else{
+			echo'';
+		}
+        $data['provinsi'] =  $this->Main_model->getSelectedData('provinsi a', 'a.*')->result();
         $this->load->view('admin/template/header',$data);
         $this->load->view('admin/report/sarling',$data);
         $this->load->view('admin/template/footer');
     }
     public function json_sarling(){
         $jumlah_indikator = $this->Main_model->getSelectedData('indikator a', 'a.*')->result();
-        $get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0'),'','','','',array(
-            array(
-                'table' => 'provinsi c',
-                'on' => 'a.id_provinsi=c.id_provinsi',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'kabupaten d',
-                'on' => 'a.id_kabupaten=d.id_kabupaten',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'kecamatan e',
-                'on' => 'a.id_kecamatan=e.id_kecamatan',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'desa f',
-                'on' => 'a.id_desa=f.id_desa',
-                'pos' => 'LEFT'
-            ),
-            array(
-                'table' => 'status_laporan_sarling g',
-                'on' => 'a.id_sarling=g.id_sarling',
-                'pos' => 'RIGHT'
-            )
-        ))->result();
+        if($this->input->post('prov')!=NULL){
+			if($this->input->post('kabkot')!=NULL){
+				$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0','a.id_kabupaten'=>$this->input->post('kabkot')),'','','','',array(
+                    array(
+                        'table' => 'provinsi c',
+                        'on' => 'a.id_provinsi=c.id_provinsi',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kabupaten d',
+                        'on' => 'a.id_kabupaten=d.id_kabupaten',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kecamatan e',
+                        'on' => 'a.id_kecamatan=e.id_kecamatan',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'desa f',
+                        'on' => 'a.id_desa=f.id_desa',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'status_laporan_sarling g',
+                        'on' => 'a.id_sarling=g.id_sarling',
+                        'pos' => 'RIGHT'
+                    )
+                ))->result();
+			}else{
+				$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0','a.id_provinsi'=>$this->input->post('prov')),'','','','',array(
+                    array(
+                        'table' => 'provinsi c',
+                        'on' => 'a.id_provinsi=c.id_provinsi',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kabupaten d',
+                        'on' => 'a.id_kabupaten=d.id_kabupaten',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'kecamatan e',
+                        'on' => 'a.id_kecamatan=e.id_kecamatan',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'desa f',
+                        'on' => 'a.id_desa=f.id_desa',
+                        'pos' => 'LEFT'
+                    ),
+                    array(
+                        'table' => 'status_laporan_sarling g',
+                        'on' => 'a.id_sarling=g.id_sarling',
+                        'pos' => 'RIGHT'
+                    )
+                ))->result();
+			}
+		}else{
+            $get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.*',array('a.deleted'=>'0'),'','','','',array(
+                array(
+                    'table' => 'provinsi c',
+                    'on' => 'a.id_provinsi=c.id_provinsi',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kabupaten d',
+                    'on' => 'a.id_kabupaten=d.id_kabupaten',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'kecamatan e',
+                    'on' => 'a.id_kecamatan=e.id_kecamatan',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'desa f',
+                    'on' => 'a.id_desa=f.id_desa',
+                    'pos' => 'LEFT'
+                ),
+                array(
+                    'table' => 'status_laporan_sarling g',
+                    'on' => 'a.id_sarling=g.id_sarling',
+                    'pos' => 'RIGHT'
+                )
+            ))->result();
+        }
         $data_tampil = array();
         $no = 1;
         foreach ($get_data as $key => $value) {
@@ -1052,7 +1480,7 @@ class Report extends CI_Controller {
             $bb = explode(',',$get_status_laporan_sarling->indikator);
             $c = array_unique(array_merge($get_indikator,$bb));
             $d = implode(',',$c);
-            $persentase_fisik2 = (count($c)/count($data_indikator))*100;
+            $persentase_fisik2 = (count(array_filter($c))/count($data_indikator))*100;
             $persentase_anggaran = (($total_uang+$get_status_laporan_sarling->anggaran)/$get_data_sarling->rencana_anggaran)*100;
             $persentase_realisasi = ($persentase_anggaran+$persentase_fisik2)/2;
             $data_update1 = array(

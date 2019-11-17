@@ -11,32 +11,190 @@ class Master extends CI_Controller {
 		$data['parent'] = 'master';
 		$data['child'] = 'administrator';
 		$data['grand_child'] = '';
-		// $data['data_tabel'] = $this->Main_model->getSelectedData('kube a', 'a.*', array('a.deleted'=>'0'), "a.fullname ASC")->result();
 		$this->load->view('admin/template/header',$data);
 		$this->load->view('admin/master/administrator_data',$data);
 		$this->load->view('admin/template/footer');
+	}
+	public function json_admin(){
+		$get_data1 = $this->Main_model->getSelectedData('user a', 'a.id,a.username,c.fullname,d.nm_provinsi',array("a.is_active" => '1','a.deleted' => '0','b.role_id' => '5','d.wilayah'=>'2'),'','','','',array(
+			array(
+				'table' => 'user_to_role b',
+				'on' => 'a.id=b.user_id',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'user_profile c',
+				'on' => 'a.id=c.user_id',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'provinsi d',
+				'on' => 'c.wilayah=d.id_provinsi',
+				'pos' => 'LEFT'
+			)
+		))->result();
+		$get_data2 = $this->Main_model->getSelectedData('user a', 'a.id,a.username,c.fullname,d.nm_kabupaten',array("a.is_active" => '1','a.deleted' => '0','b.role_id' => '6','e.wilayah'=>'2'),'','','','',array(
+			array(
+				'table' => 'user_to_role b',
+				'on' => 'a.id=b.user_id',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'user_profile c',
+				'on' => 'a.id=c.user_id',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'kabupaten d',
+				'on' => 'c.wilayah=d.id_kabupaten',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'provinsi e',
+				'on' => 'd.id_provinsi=e.id_provinsi',
+				'pos' => 'LEFT'
+			)
+		))->result();
+		$data_tampil = array();
+		$no = 1;
+		foreach ($get_data1 as $key => $value) {
+			$isi['checkbox'] =	'
+								<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+									<input type="checkbox" class="checkboxes" name="selected_id[]" value="'.$value->id.'"/>
+									<span></span>
+								</label>
+								';
+			$isi['number'] = $no++.'.';
+			$isi['nama'] = $value->fullname;
+			$isi['username'] = $value->username;
+			$isi['wilayah'] = $value->nm_provinsi;
+			$isi['keterangan'] = 'Admin Provinsi';
+			$return_on_click = "return confirm('Anda yakin?')";
+			$isi['action'] =	'
+								<div class="btn-group" style="text-align: center;">
+									<button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Aksi
+										<i class="fa fa-angle-down"></i>
+									</button>
+									<ul class="dropdown-menu" role="menu">
+										<li>
+											<a href="'.site_url('admin_side/ubah_data_admin/'.md5($value->id)).'">
+												<i class="icon-wrench"></i> Ubah Data </a>
+										</li>
+										<li>
+											<a onclick="'.$return_on_click.'" href="'.site_url('admin_side/hapus_data_admin/'.md5($value->id)).'">
+												<i class="icon-trash"></i> Hapus Data </a>
+										</li>
+										<li class="divider"> </li>
+										<li>
+											<a href="'.site_url('admin_side/atur_ulang_kata_sandi_admin/'.md5($value->id)).'">
+												<i class="fa fa-refresh"></i> Atur Ulang Sandi
+											</a>
+										</li>
+									</ul>
+								</div>
+								';
+			$data_tampil[] = $isi;
+		}
+		foreach ($get_data2 as $key => $value) {
+			$isi['checkbox'] =	'
+								<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
+									<input type="checkbox" class="checkboxes" name="selected_id[]" value="'.$value->id.'"/>
+									<span></span>
+								</label>
+								';
+			$isi['number'] = $no++.'.';
+			$isi['nama'] = $value->fullname;
+			$isi['username'] = $value->username;
+			$isi['wilayah'] = $value->nm_kabupaten;
+			$isi['keterangan'] = 'Admin Kabupaten/ Kota';
+			$return_on_click = "return confirm('Anda yakin?')";
+			$isi['action'] =	'
+								<div class="btn-group" style="text-align: center;">
+									<button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Aksi
+										<i class="fa fa-angle-down"></i>
+									</button>
+									<ul class="dropdown-menu" role="menu">
+										<li>
+											<a href="'.site_url('admin_side/ubah_data_admin/'.md5($value->id)).'">
+												<i class="icon-wrench"></i> Ubah Data </a>
+										</li>
+										<li>
+											<a onclick="'.$return_on_click.'" href="'.site_url('admin_side/hapus_data_admin/'.md5($value->id)).'">
+												<i class="icon-trash"></i> Hapus Data </a>
+										</li>
+										<li class="divider"> </li>
+										<li>
+											<a href="'.site_url('admin_side/atur_ulang_kata_sandi_admin/'.md5($value->id)).'">
+												<i class="fa fa-refresh"></i> Atur Ulang Sandi
+											</a>
+										</li>
+									</ul>
+								</div>
+								';
+			$data_tampil[] = $isi;
+		}
+		$results = array(
+			"sEcho" => 1,
+			"iTotalRecords" => count($data_tampil),
+			"iTotalDisplayRecords" => count($data_tampil),
+			"aaData"=>$data_tampil);
+		echo json_encode($results);
 	}
 	public function add_administrator_data()
 	{
 		$data['parent'] = 'master';
 		$data['child'] = 'administrator';
 		$data['grand_child'] = '';
+		$data['prov'] = $this->Main_model->getSelectedData('provinsi a', 'a.*')->result();
 		$this->load->view('admin/template/header',$data);
 		$this->load->view('admin/master/add_administrator_data',$data);
 		$this->load->view('admin/template/footer');
 	}
 	public function save_administrator_data(){
-		$this->db->trans_start();
-		// do something your code
-		$this->db->trans_complete();
-		if($this->db->trans_status() === false){
-			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
+		$cek_ = $this->Main_model->getSelectedData('user a', 'a.*',array('a.username'=>$this->input->post('un')))->row();
+		if($cek_==NULL){
+			$this->db->trans_start();
+			$get_user_id = $this->Main_model->getLastID('user','id');
+
+			$data_insert1 = array(
+				'id' => $get_user_id['id']+1,
+				'username' => $this->input->post('un'),
+				'pass' => $this->input->post('ps'),
+				'is_active' => '1',
+				'created_by' => $this->session->userdata('id'),
+				'created_at' => date('Y-m-d H:i:s')
+			);
+			$this->Main_model->insertData('user',$data_insert1);
+			// print_r($data_insert1);
+
+			$data_insert2 = array(
+				'user_id' => $get_user_id['id']+1,
+				'wilayah' => $this->input->post('wilayah')
+			);
+			$this->Main_model->insertData('user_profile',$data_insert2);
+			// print_r($data_insert2);
+
+			$data_insert3 = array(
+				'user_id' => $get_user_id['id']+1,
+				'role_id' => $this->input->post('ket')
+			);
+			$this->Main_model->insertData('user_to_role',$data_insert3);
+			// print_r($data_insert3);
+
+			$this->db->trans_complete();
+			if($this->db->trans_status() === false){
+				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal ditambahkan.<br /></div>' );
+				echo "<script>window.location='".base_url()."admin_side/tambah_data_admin/'</script>";
+			}
+			else{
+				$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil ditambahkan.<br /></div>' );
+				echo "<script>window.location='".base_url()."admin_side/administrator/'</script>";
+			}
+		}else{
+			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>Username telah digunakan.<br /></div>' );
 			echo "<script>window.location='".base_url()."admin_side/tambah_data_admin/'</script>";
 		}
-		else{
-			$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil ditambahkan.<br /></div>' );
-			echo "<script>window.location='".base_url()."admin_side/administrator/'</script>";
-		}
+		
 	}
 	public function detail_administrator_data()
 	{
@@ -55,27 +213,78 @@ class Master extends CI_Controller {
 		$data['parent'] = 'master';
 		$data['child'] = 'administrator';
 		$data['grand_child'] = '';
-		// $data['data_utama'] = $this->Main_model->getSelectedData('user a', 'a.*', array('md5(a.user_id)'=>$this->uri->segment(3),'a.deleted'=>'0'))->result();
+		$data['data_utama'] = $this->Main_model->getSelectedData('user a', 'a.*', array('md5(a.id)'=>$this->uri->segment(3),'a.deleted'=>'0'))->row();
 		$this->load->view('admin/template/header',$data);
 		$this->load->view('admin/master/edit_administrator_data',$data);
 		$this->load->view('admin/template/footer');
 	}
 	public function update_administrator_data(){
-		$this->db->trans_start();
-		// do something your code
-		$this->db->trans_complete();
-		if($this->db->trans_status() === false){
-			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diubah.<br /></div>' );
-			echo "<script>window.location='".base_url()."admin_side/ubah_data_admin/".$this->input->post('user_id')."'</script>";
-		}
-		else{
-			$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diubah.<br /></div>' );
+		if($this->input->post('un')!=NULL){
+			$cek_ = $this->db->query("SELECT a.* FROM user a WHERE a.username='".$this->input->post('un')."' AND md5(a.id) NOT IN ('".$this->input->post('user_id')."')")->row();
+			if($cek_==NULL){
+				$this->db->trans_start();
+				if($this->input->post('ps')!=NULL){
+					$data_insert1 = array(
+						'username' => $this->input->post('un'),
+						'pass' => $this->input->post('ps')
+					);
+					$this->Main_model->updateData('user',$data_insert1,array('md5(id)'=>$this->input->post('user_id')));
+					// print_r($data_insert1);
+				}
+				else{
+					$data_insert1 = array(
+						'username' => $this->input->post('un')
+					);
+					$this->Main_model->updateData('user',$data_insert1,array('md5(id)'=>$this->input->post('user_id')));
+					// print_r($data_insert1);
+				}
+
+				$this->db->trans_complete();
+				if($this->db->trans_status() === false){
+					$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diubah.<br /></div>' );
+					echo "<script>window.location='".base_url()."admin_side/tambah_data_admin/'</script>";
+				}
+				else{
+					$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diubah.<br /></div>' );
+					echo "<script>window.location='".base_url()."admin_side/administrator/'</script>";
+				}
+			}else{
+				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>Username telah digunakan.<br /></div>' );
+				echo "<script>window.location='".base_url()."admin_side/tambah_data_admin/'</script>";
+			}
+		}elseif($this->input->post('ps')!=NULL){
+			$this->db->trans_start();
+
+			$data_insert1 = array(
+				'pass' => $this->input->post('ps')
+			);
+			$this->Main_model->updateData('user',$data_insert1,array('md5(id)'=>$this->input->post('user_id')));
+			// print_r($data_insert1);
+
+			$this->db->trans_complete();
+			if($this->db->trans_status() === false){
+				$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diubah.<br /></div>' );
+				echo "<script>window.location='".base_url()."admin_side/tambah_data_admin/'</script>";
+			}
+			else{
+				$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diubah.<br /></div>' );
+				echo "<script>window.location='".base_url()."admin_side/administrator/'</script>";
+			}
+		}else{
 			echo "<script>window.location='".base_url()."admin_side/administrator/'</script>";
 		}
 	}
 	public function reset_password_administrator_account(){
 		$this->db->trans_start();
-		// do something your code
+		$user_id = '';
+		$name = '';
+		$get_data = $this->Main_model->getSelectedData('user_profile a', 'a.*',array('md5(a.user_id)'=>$this->uri->segment(3)))->row();
+		$user_id = $get_data->user_id;
+		$name = $get_data->fullname;
+
+		$this->Main_model->updateData('user',array('pass'=>'1234'),array('id'=>$user_id));
+
+		$this->Main_model->log_activity($this->session->userdata('id'),"Update admin's data","Reset password admin's account (".$name.")",$this->session->userdata('location'));
 		$this->db->trans_complete();
 		if($this->db->trans_status() === false){
 			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diubah.<br /></div>' );
@@ -86,9 +295,22 @@ class Master extends CI_Controller {
 			echo "<script>window.location='".base_url()."admin_side/administrator/'</script>";
 		}
 	}
+	public function download_admin_data(){
+		$this->load->view('admin/master/cetak_data_admin');
+	}
 	public function delete_administrator_data(){
 		$this->db->trans_start();
-		// do something your code
+		$user_id = '';
+		$name = '';
+		$get_data = $this->Main_model->getSelectedData('user_profile a', 'a.*',array('md5(a.user_id)'=>$this->uri->segment(3)))->row();
+		$user_id = $get_data->user_id;
+		$name = $get_data->fullname;
+
+		$this->Main_model->deleteData('user_profile',array('user_id'=>$user_id));
+		$this->Main_model->deleteData('user_to_role',array('user_id'=>$user_id));
+		$this->Main_model->deleteData('user',array('id'=>$user_id));
+
+		$this->Main_model->log_activity($this->session->userdata('id'),"Deleting admin's data","Delete admin's data (".$name.")",$this->session->userdata('location'));
 		$this->db->trans_complete();
 		if($this->db->trans_status() === false){
 			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal dihapus.<br /></div>' );
@@ -105,6 +327,18 @@ class Master extends CI_Controller {
 		$data['parent'] = 'master';
 		$data['child'] = 'kube';
 		$data['grand_child'] = '';
+		$data['prov'] = '';
+		$data['kabkot'] = '';
+		if($this->input->post('id_provinsi')!=NULL){
+			$data['prov'] = $this->input->post('id_provinsi');
+		}else{
+			echo'';
+		}
+		if($this->input->post('id_kabupaten')!=NULL){
+			$data['kabkot'] = $this->input->post('id_kabupaten');
+		}else{
+			echo'';
+		}
 		$data['provinsi'] =  $this->Main_model->getSelectedData('provinsi a', 'a.*')->result();
 		$this->load->view('admin/template/header',$data);
 		$this->load->view('admin/master/kube_data',$data);
@@ -311,33 +545,94 @@ class Master extends CI_Controller {
 		}
 	}
 	public function json_kube(){
-		$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0'),'','','','',array(
-			array(
-				'table' => 'jenis_usaha b',
-				'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'provinsi c',
-				'on' => 'a.id_provinsi=c.id_provinsi',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'kabupaten d',
-				'on' => 'a.id_kabupaten=d.id_kabupaten',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'kecamatan e',
-				'on' => 'a.id_kecamatan=e.id_kecamatan',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'desa f',
-				'on' => 'a.id_desa=f.id_desa',
-				'pos' => 'LEFT'
-			)
-		))->result();
+		$get_data = '';
+		if($this->input->post('prov')!=NULL){
+			if($this->input->post('kabkot')!=NULL){
+				$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0','a.id_kabupaten'=>$this->input->post('kabkot')),'','','','',array(
+					array(
+						'table' => 'jenis_usaha b',
+						'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'provinsi c',
+						'on' => 'a.id_provinsi=c.id_provinsi',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kabupaten d',
+						'on' => 'a.id_kabupaten=d.id_kabupaten',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kecamatan e',
+						'on' => 'a.id_kecamatan=e.id_kecamatan',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'desa f',
+						'on' => 'a.id_desa=f.id_desa',
+						'pos' => 'LEFT'
+					)
+				))->result();
+			}else{
+				$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0','a.id_provinsi'=>$this->input->post('prov')),'','','','',array(
+					array(
+						'table' => 'jenis_usaha b',
+						'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'provinsi c',
+						'on' => 'a.id_provinsi=c.id_provinsi',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kabupaten d',
+						'on' => 'a.id_kabupaten=d.id_kabupaten',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kecamatan e',
+						'on' => 'a.id_kecamatan=e.id_kecamatan',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'desa f',
+						'on' => 'a.id_desa=f.id_desa',
+						'pos' => 'LEFT'
+					)
+				))->result();
+			}
+		}else{
+			$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0'),'','','','',array(
+				array(
+					'table' => 'jenis_usaha b',
+					'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'provinsi c',
+					'on' => 'a.id_provinsi=c.id_provinsi',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kabupaten d',
+					'on' => 'a.id_kabupaten=d.id_kabupaten',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kecamatan e',
+					'on' => 'a.id_kecamatan=e.id_kecamatan',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'desa f',
+					'on' => 'a.id_desa=f.id_desa',
+					'pos' => 'LEFT'
+				)
+			))->result();
+		}
 		$data_tampil = array();
 		$no = 1;
 		foreach ($get_data as $key => $value) {
@@ -529,6 +824,69 @@ class Master extends CI_Controller {
 			$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diubah.<br /></div>' );
 			echo "<script>window.location='".base_url()."admin_side/kube/'</script>";
 		}
+	}
+	public function download_kube_data()
+	{
+		$get_data = '';
+		if($this->input->post('kab')!=NULL){
+			$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.id_kabupaten'=>$this->input->post('kab'),'a.deleted'=>'0'),'','','','',array(
+				array(
+					'table' => 'jenis_usaha b',
+					'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'provinsi c',
+					'on' => 'a.id_provinsi=c.id_provinsi',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kabupaten d',
+					'on' => 'a.id_kabupaten=d.id_kabupaten',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kecamatan e',
+					'on' => 'a.id_kecamatan=e.id_kecamatan',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'desa f',
+					'on' => 'a.id_desa=f.id_desa',
+					'pos' => 'LEFT'
+				)
+			))->result();
+		}else{
+			$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.id_provinsi'=>$this->input->post('prov'),'a.deleted'=>'0'),'','','','',array(
+				array(
+					'table' => 'jenis_usaha b',
+					'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'provinsi c',
+					'on' => 'a.id_provinsi=c.id_provinsi',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kabupaten d',
+					'on' => 'a.id_kabupaten=d.id_kabupaten',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kecamatan e',
+					'on' => 'a.id_kecamatan=e.id_kecamatan',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'desa f',
+					'on' => 'a.id_desa=f.id_desa',
+					'pos' => 'LEFT'
+				)
+			))->result();
+		}
+		$data['data_cetak'] = $get_data;
+		$this->load->view('admin/master/cetak_data_kube',$data);
 	}
 	public function delete_kube_data(){
 		$this->db->trans_start();
@@ -757,6 +1115,18 @@ class Master extends CI_Controller {
 		$data['parent'] = 'master';
 		$data['child'] = 'rutilahu';
 		$data['grand_child'] = '';
+		$data['prov'] = '';
+		$data['kabkot'] = '';
+		if($this->input->post('id_provinsi')!=NULL){
+			$data['prov'] = $this->input->post('id_provinsi');
+		}else{
+			echo'';
+		}
+		if($this->input->post('id_kabupaten')!=NULL){
+			$data['kabkot'] = $this->input->post('id_kabupaten');
+		}else{
+			echo'';
+		}
 		$data['provinsi'] =  $this->Main_model->getSelectedData('provinsi a', 'a.*')->result();
 		$this->load->view('admin/template/header',$data);
 		$this->load->view('admin/master/rutilahu_data',$data);
@@ -937,28 +1307,79 @@ class Master extends CI_Controller {
 		}
 	}
 	public function json_rutilahu(){
-		$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0'),'','','','',array(
-			array(
-				'table' => 'provinsi c',
-				'on' => 'a.id_provinsi=c.id_provinsi',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'kabupaten d',
-				'on' => 'a.id_kabupaten=d.id_kabupaten',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'kecamatan e',
-				'on' => 'a.id_kecamatan=e.id_kecamatan',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'desa f',
-				'on' => 'a.id_desa=f.id_desa',
-				'pos' => 'LEFT'
-			)
-		))->result();
+		$get_data = '';
+		if($this->input->post('prov')!=NULL){
+			if($this->input->post('kabkot')!=NULL){
+				$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0','a.id_kabupaten'=>$this->input->post('kabkot')),'','','','',array(
+					array(
+						'table' => 'provinsi c',
+						'on' => 'a.id_provinsi=c.id_provinsi',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kabupaten d',
+						'on' => 'a.id_kabupaten=d.id_kabupaten',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kecamatan e',
+						'on' => 'a.id_kecamatan=e.id_kecamatan',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'desa f',
+						'on' => 'a.id_desa=f.id_desa',
+						'pos' => 'LEFT'
+					)
+				))->result();
+			}else{
+				$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0','a.id_provinsi'=>$this->input->post('prov')),'','','','',array(
+					array(
+						'table' => 'provinsi c',
+						'on' => 'a.id_provinsi=c.id_provinsi',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kabupaten d',
+						'on' => 'a.id_kabupaten=d.id_kabupaten',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kecamatan e',
+						'on' => 'a.id_kecamatan=e.id_kecamatan',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'desa f',
+						'on' => 'a.id_desa=f.id_desa',
+						'pos' => 'LEFT'
+					)
+				))->result();
+			}
+		}else{
+			$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0'),'','','','',array(
+				array(
+					'table' => 'provinsi c',
+					'on' => 'a.id_provinsi=c.id_provinsi',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kabupaten d',
+					'on' => 'a.id_kabupaten=d.id_kabupaten',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kecamatan e',
+					'on' => 'a.id_kecamatan=e.id_kecamatan',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'desa f',
+					'on' => 'a.id_desa=f.id_desa',
+					'pos' => 'LEFT'
+				)
+			))->result();
+		}
 		$data_tampil = array();
 		$no = 1;
 		foreach ($get_data as $key => $value) {
@@ -1130,6 +1551,59 @@ class Master extends CI_Controller {
 			$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diubah.<br /></div>' );
 			echo "<script>window.location='".base_url()."admin_side/rutilahu/'</script>";
 		}
+	}
+	public function download_rutilahu_data()
+	{
+		$get_data = '';
+		if($this->input->post('kab')!=NULL){
+			$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.id_kabupaten'=>$this->input->post('kab'),'a.deleted'=>'0'),'','','','',array(
+				array(
+					'table' => 'provinsi c',
+					'on' => 'a.id_provinsi=c.id_provinsi',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kabupaten d',
+					'on' => 'a.id_kabupaten=d.id_kabupaten',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kecamatan e',
+					'on' => 'a.id_kecamatan=e.id_kecamatan',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'desa f',
+					'on' => 'a.id_desa=f.id_desa',
+					'pos' => 'LEFT'
+				)
+			))->result();
+		}else{
+			$get_data = $this->Main_model->getSelectedData('rutilahu a', 'a.*,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.id_provinsi'=>$this->input->post('prov'),'a.deleted'=>'0'),'','','','',array(
+				array(
+					'table' => 'provinsi c',
+					'on' => 'a.id_provinsi=c.id_provinsi',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kabupaten d',
+					'on' => 'a.id_kabupaten=d.id_kabupaten',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kecamatan e',
+					'on' => 'a.id_kecamatan=e.id_kecamatan',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'desa f',
+					'on' => 'a.id_desa=f.id_desa',
+					'pos' => 'LEFT'
+				)
+			))->result();
+		}
+		$data['data_cetak'] = $get_data;
+		$this->load->view('admin/master/cetak_data_rutilahu',$data);
 	}
 	public function delete_rutilahu_data(){
 		$this->db->trans_start();
@@ -1358,6 +1832,18 @@ class Master extends CI_Controller {
 		$data['parent'] = 'master';
 		$data['child'] = 'sarling';
 		$data['grand_child'] = '';
+		$data['prov'] = '';
+		$data['kabkot'] = '';
+		if($this->input->post('id_provinsi')!=NULL){
+			$data['prov'] = $this->input->post('id_provinsi');
+		}else{
+			echo'';
+		}
+		if($this->input->post('id_kabupaten')!=NULL){
+			$data['kabkot'] = $this->input->post('id_kabupaten');
+		}else{
+			echo'';
+		}
 		$data['provinsi'] =  $this->Main_model->getSelectedData('provinsi a', 'a.*')->result();
 		$this->load->view('admin/template/header',$data);
 		$this->load->view('admin/master/sarling_data',$data);
@@ -1542,33 +2028,93 @@ class Master extends CI_Controller {
 		}
 	}
 	public function json_sarling(){
-		$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,b.jenis_sarling,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0'),'','','','',array(
-			array(
-				'table' => 'jenis_sarling b',
-				'on' => 'a.id_jenis_sarling=b.id_jenis_sarling',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'provinsi c',
-				'on' => 'a.id_provinsi=c.id_provinsi',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'kabupaten d',
-				'on' => 'a.id_kabupaten=d.id_kabupaten',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'kecamatan e',
-				'on' => 'a.id_kecamatan=e.id_kecamatan',
-				'pos' => 'LEFT'
-			),
-			array(
-				'table' => 'desa f',
-				'on' => 'a.id_desa=f.id_desa',
-				'pos' => 'LEFT'
-			)
-		))->result();
+		if($this->input->post('prov')!=NULL){
+			if($this->input->post('kabkot')!=NULL){
+				$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,b.jenis_sarling,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0','a.id_kabupaten'=>$this->input->post('kabkot')),'','','','',array(
+					array(
+						'table' => 'jenis_sarling b',
+						'on' => 'a.id_jenis_sarling=b.id_jenis_sarling',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'provinsi c',
+						'on' => 'a.id_provinsi=c.id_provinsi',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kabupaten d',
+						'on' => 'a.id_kabupaten=d.id_kabupaten',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kecamatan e',
+						'on' => 'a.id_kecamatan=e.id_kecamatan',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'desa f',
+						'on' => 'a.id_desa=f.id_desa',
+						'pos' => 'LEFT'
+					)
+				))->result();
+			}else{
+				$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,b.jenis_sarling,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0','a.id_provinsi'=>$this->input->post('prov')),'','','','',array(
+					array(
+						'table' => 'jenis_sarling b',
+						'on' => 'a.id_jenis_sarling=b.id_jenis_sarling',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'provinsi c',
+						'on' => 'a.id_provinsi=c.id_provinsi',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kabupaten d',
+						'on' => 'a.id_kabupaten=d.id_kabupaten',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'kecamatan e',
+						'on' => 'a.id_kecamatan=e.id_kecamatan',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'desa f',
+						'on' => 'a.id_desa=f.id_desa',
+						'pos' => 'LEFT'
+					)
+				))->result();
+			}
+		}else{
+			$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,b.jenis_sarling,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0'),'','','','',array(
+				array(
+					'table' => 'jenis_sarling b',
+					'on' => 'a.id_jenis_sarling=b.id_jenis_sarling',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'provinsi c',
+					'on' => 'a.id_provinsi=c.id_provinsi',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kabupaten d',
+					'on' => 'a.id_kabupaten=d.id_kabupaten',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kecamatan e',
+					'on' => 'a.id_kecamatan=e.id_kecamatan',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'desa f',
+					'on' => 'a.id_desa=f.id_desa',
+					'pos' => 'LEFT'
+				)
+			))->result();
+		}
 		$data_tampil = array();
 		$no = 1;
 		foreach ($get_data as $key => $value) {
@@ -1751,6 +2297,69 @@ class Master extends CI_Controller {
 			$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diubah.<br /></div>' );
 			echo "<script>window.location='".base_url()."admin_side/sarling/'</script>";
 		}
+	}
+	public function download_sarling_data()
+	{
+		$get_data = '';
+		if($this->input->post('kab')!=NULL){
+			$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,b.jenis_sarling,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.id_kabupaten'=>$this->input->post('kab'),'a.deleted'=>'0'),'','','','',array(
+				array(
+					'table' => 'jenis_sarling b',
+					'on' => 'a.id_jenis_sarling=b.id_jenis_sarling',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'provinsi c',
+					'on' => 'a.id_provinsi=c.id_provinsi',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kabupaten d',
+					'on' => 'a.id_kabupaten=d.id_kabupaten',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kecamatan e',
+					'on' => 'a.id_kecamatan=e.id_kecamatan',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'desa f',
+					'on' => 'a.id_desa=f.id_desa',
+					'pos' => 'LEFT'
+				)
+			))->result();
+		}else{
+			$get_data = $this->Main_model->getSelectedData('sarling a', 'a.*,b.jenis_sarling,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.id_provinsi'=>$this->input->post('prov'),'a.deleted'=>'0'),'','','','',array(
+				array(
+					'table' => 'jenis_sarling b',
+					'on' => 'a.id_jenis_sarling=b.id_jenis_sarling',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'provinsi c',
+					'on' => 'a.id_provinsi=c.id_provinsi',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kabupaten d',
+					'on' => 'a.id_kabupaten=d.id_kabupaten',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'kecamatan e',
+					'on' => 'a.id_kecamatan=e.id_kecamatan',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'desa f',
+					'on' => 'a.id_desa=f.id_desa',
+					'pos' => 'LEFT'
+				)
+			))->result();
+		}
+		$data['data_cetak'] = $get_data;
+		$this->load->view('admin/master/cetak_data_sarling',$data);
 	}
 	public function delete_sarling_data(){
 		$this->db->trans_start();
@@ -1970,9 +2579,25 @@ class Master extends CI_Controller {
 	}
 	/* Other Function */
 	public function ajax_function(){
-		if($this->input->post('modul')=='get_kabupaten_by_id_provinsi'){
+		if($this->input->post('modul')=='get_data_kabupaten_by_keterangan_admin'){
+			if($this->input->post('id')=='6'){
+				echo'
+				<div class="form-group form-md-line-input has-danger">
+					<label class="col-md-2 control-label" for="form_control_1">Kabupaten/ Kota <span class="required"> * </span></label>
+					<div class="col-md-10">
+						<div class="input-icon">
+							<select name="wilayah" id="id_kabupaten" class="form-control select2-allow-clear" required>
+								<option value="">-- Pilih Kabupaten/ Kota --</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				';
+			}else{echo'';}
+		}
+		elseif($this->input->post('modul')=='get_kabupaten_by_id_provinsi'){
 			$data = $this->Main_model->getSelectedData('kabupaten a', 'a.*', array('a.id_provinsi'=>$this->input->post('id')))->result();
-			echo'<option value=""></option>';
+			echo'<option value="">-- Pilih Kabupaten/ Kota --</option>';
 			foreach ($data as $key => $value) {
 				echo'<option value="'.$value->id_kabupaten.'">'.$value->nm_kabupaten.'</option>';
 			}
@@ -2217,6 +2842,87 @@ class Master extends CI_Controller {
 			$data['data_master'] = $this->Main_model->getSelectedData('status_laporan_sarling a', 'a.*', array('a.id_sarling'=>$this->input->post('id')),'','1')->row();
 			$this->load->view('admin/report/ajax_list_indicator3',$data);
 			// print_r($data);
+		}
+		elseif($this->input->post('modul')=='get_isian_rencana_anggaran_pengadaan_by_id_kube'){
+			$id_kube = $this->input->post('id');
+			$get_anggaran = $this->db->query("SELECT a.* FROM laporan_kube a LEFT JOIN detail_laporan_kube_aspek_keuangan b ON a.id_laporan_kube=b.id_laporan_kube WHERE id_kube='".$id_kube."' AND a.deleted='0' AND b.id_master_indikator='1'")->result();
+			$nilai = 0;
+			foreach ($get_anggaran as $key => $value) {
+				$nilai += $value->anggaran;
+			}
+			echo'Telah dilaporkan Rp '.number_format($nilai,2).' pada laporan sebelumnya';
+		}
+		elseif($this->input->post('modul')=='get_isian_rencana_anggaran_proses_by_id_kube'){
+			$id_kube = $this->input->post('id');
+			$get_anggaran = $this->db->query("SELECT a.* FROM laporan_kube a LEFT JOIN detail_laporan_kube_aspek_keuangan b ON a.id_laporan_kube=b.id_laporan_kube WHERE id_kube='".$id_kube."' AND a.deleted='0' AND b.id_master_indikator='2'")->result();
+			$nilai = 0;
+			foreach ($get_anggaran as $key => $value) {
+				$nilai += $value->anggaran;
+			}
+			echo'Telah dilaporkan Rp '.number_format($nilai,2).' pada laporan sebelumnya';
+		}
+		elseif($this->input->post('modul')=='get_isian_rencana_anggaran_benefit_by_id_kube'){
+			$id_kube = $this->input->post('id');
+			$get_anggaran = $this->db->query("SELECT a.* FROM laporan_kube a LEFT JOIN detail_laporan_kube_aspek_keuangan b ON a.id_laporan_kube=b.id_laporan_kube WHERE id_kube='".$id_kube."' AND a.deleted='0' AND b.id_master_indikator='3'")->result();
+			$nilai = 0;
+			foreach ($get_anggaran as $key => $value) {
+				$nilai += $value->anggaran;
+			}
+			echo'Telah dilaporkan Rp '.number_format($nilai,2).' pada laporan sebelumnya';
+		}
+		elseif($this->input->post('modul')=='get_isian_rencana_anggaran_pengadaan_by_id_rutilahu'){
+			$id_rutilahu = $this->input->post('id');
+			$get_anggaran = $this->db->query("SELECT a.* FROM laporan_rutilahu a LEFT JOIN detail_laporan_rutilahu_aspek_keuangan b ON a.id_laporan_rutilahu=b.id_laporan_rutilahu WHERE id_rutilahu='".$id_rutilahu."' AND a.deleted='0' AND b.id_master_indikator='1'")->result();
+			$nilai = 0;
+			foreach ($get_anggaran as $key => $value) {
+				$nilai += $value->anggaran;
+			}
+			echo'Telah dilaporkan Rp '.number_format($nilai,2).' pada laporan sebelumnya';
+		}
+		elseif($this->input->post('modul')=='get_isian_rencana_anggaran_proses_by_id_rutilahu'){
+			$id_rutilahu = $this->input->post('id');
+			$get_anggaran = $this->db->query("SELECT a.* FROM laporan_rutilahu a LEFT JOIN detail_laporan_rutilahu_aspek_keuangan b ON a.id_laporan_rutilahu=b.id_laporan_rutilahu WHERE id_rutilahu='".$id_rutilahu."' AND a.deleted='0' AND b.id_master_indikator='2'")->result();
+			$nilai = 0;
+			foreach ($get_anggaran as $key => $value) {
+				$nilai += $value->anggaran;
+			}
+			echo'Telah dilaporkan Rp '.number_format($nilai,2).' pada laporan sebelumnya';
+		}
+		elseif($this->input->post('modul')=='get_isian_rencana_anggaran_benefit_by_id_rutilahu'){
+			$id_rutilahu = $this->input->post('id');
+			$get_anggaran = $this->db->query("SELECT a.* FROM laporan_rutilahu a LEFT JOIN detail_laporan_rutilahu_aspek_keuangan b ON a.id_laporan_rutilahu=b.id_laporan_rutilahu WHERE id_rutilahu='".$id_rutilahu."' AND a.deleted='0' AND b.id_master_indikator='3'")->result();
+			$nilai = 0;
+			foreach ($get_anggaran as $key => $value) {
+				$nilai += $value->anggaran;
+			}
+			echo'Telah dilaporkan Rp '.number_format($nilai,2).' pada laporan sebelumnya';
+		}
+		elseif($this->input->post('modul')=='get_isian_rencana_anggaran_pengadaan_by_id_sarling'){
+			$id_sarling = $this->input->post('id');
+			$get_anggaran = $this->db->query("SELECT a.* FROM laporan_sarling a LEFT JOIN detail_laporan_sarling_aspek_keuangan b ON a.id_laporan_sarling=b.id_laporan_sarling WHERE id_sarling='".$id_sarling."' AND a.deleted='0' AND b.id_master_indikator='1'")->result();
+			$nilai = 0;
+			foreach ($get_anggaran as $key => $value) {
+				$nilai += $value->anggaran;
+			}
+			echo'Telah dilaporkan Rp '.number_format($nilai,2).' pada laporan sebelumnya';
+		}
+		elseif($this->input->post('modul')=='get_isian_rencana_anggaran_proses_by_id_sarling'){
+			$id_sarling = $this->input->post('id');
+			$get_anggaran = $this->db->query("SELECT a.* FROM laporan_sarling a LEFT JOIN detail_laporan_sarling_aspek_keuangan b ON a.id_laporan_sarling=b.id_laporan_sarling WHERE id_sarling='".$id_sarling."' AND a.deleted='0' AND b.id_master_indikator='2'")->result();
+			$nilai = 0;
+			foreach ($get_anggaran as $key => $value) {
+				$nilai += $value->anggaran;
+			}
+			echo'Telah dilaporkan Rp '.number_format($nilai,2).' pada laporan sebelumnya';
+		}
+		elseif($this->input->post('modul')=='get_isian_rencana_anggaran_benefit_by_id_sarling'){
+			$id_sarling = $this->input->post('id');
+			$get_anggaran = $this->db->query("SELECT a.* FROM laporan_sarling a LEFT JOIN detail_laporan_sarling_aspek_keuangan b ON a.id_laporan_sarling=b.id_laporan_sarling WHERE id_sarling='".$id_sarling."' AND a.deleted='0' AND b.id_master_indikator='3'")->result();
+			$nilai = 0;
+			foreach ($get_anggaran as $key => $value) {
+				$nilai += $value->anggaran;
+			}
+			echo'Telah dilaporkan Rp '.number_format($nilai,2).' pada laporan sebelumnya';
 		}
 		// elseif($this->input->post('modul')=='get_indikator_by_tipe'){
 		// 	$data = $this->Main_model->getSelectedData('indikator a', 'a.*', array('a.id_master_indikator'=>$this->input->post('id')))->result();

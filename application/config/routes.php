@@ -183,7 +183,52 @@ $route['admin_side/ubah_data_laporan_sarling/(:any)'] = 'admin/Report/edit_sarli
 $route['admin_side/perbarui_laporan_sarling'] = 'admin/Report/update_sarling_report';
 $route['admin_side/hapus_data_laporan_sarling/(:any)'] = 'admin/Report/delete_sarling_report/$1';
 
-/* Member */
+/* Admin Wilayah (Provinsi atau Kabupaten/ Kota) */
+$route['spv/launcher'] = 'spv/App/launcher';
+$route['spv/beranda'] = 'spv/App/home';
+$route['spv/menu'] = 'spv/App/menu';
+$route['spv/log_activity'] = 'spv/App/log_activity';
+$route['spv/cleaning_log'] = 'spv/App/cleaning_log';
+$route['spv/tentang_aplikasi'] = 'spv/App/about';
+$route['spv/bantuan'] = 'spv/App/helper';
+
+$route['spv/dasbor_peta'] = 'spv/Dashboard';
+$route['spv/peta_provinsi/(:any)'] = 'spv/Dashboard/province/$1';
+$route['spv/peta_kabupaten/(:any)'] = 'spv/Dashboard/city/$1';
+$route['spv/peta_kecamatan/(:any)'] = 'spv/Dashboard/sub_district/$1';
+
+$route['spv/dasbor_grafik'] = 'spv/Dashboard/main_graph';
+$route['spv/dasbor_grafik_provinsi/(:any)'] = 'spv/Dashboard/graph_province/$1';
+$route['spv/dasbor_grafik_provinsi/(:any)/(:any)'] = 'spv/Dashboard/graph_province/$1/$2';
+$route['spv/dasbor_grafik_kabupaten/(:any)'] = 'spv/Dashboard/graph_region/$1';
+$route['spv/dasbor_grafik_kabupaten/(:any)/(:any)'] = 'spv/Dashboard/graph_region/$1/$2';
+$route['spv/dasbor_grafik_kecamatan/(:any)/(:any)'] = 'spv/Dashboard/graph_district/$1/$2';
+
+$route['spv/laporan_kube'] = 'spv/Report/kube';
+$route['spv/tambah_laporan_kube'] = 'spv/Report/add_kube_report';
+$route['spv/simpan_laporan_kube'] = 'spv/Report/save_kube_report';
+$route['spv/detil_laporan_kube/(:any)'] = 'spv/Report/detail_kube_report/$1';
+$route['spv/ubah_data_laporan_kube/(:any)'] = 'spv/Report/edit_kube_report/$1';
+$route['spv/perbarui_laporan_kube'] = 'spv/Report/update_kube_report';
+$route['spv/hapus_data_laporan_kube/(:any)'] = 'spv/Report/delete_kube_report/$1';
+
+$route['spv/laporan_rutilahu'] = 'spv/Report/rutilahu';
+$route['spv/tambah_laporan_rutilahu'] = 'spv/Report/add_rutilahu_report';
+$route['spv/simpan_laporan_rutilahu'] = 'spv/Report/save_rutilahu_report';
+$route['spv/detil_laporan_rutilahu/(:any)'] = 'spv/Report/detail_rutilahu_report/$1';
+$route['spv/ubah_data_laporan_rutilahu/(:any)'] = 'spv/Report/edit_rutilahu_report/$1';
+$route['spv/perbarui_laporan_rutilahu'] = 'spv/Report/update_rutilahu_report';
+$route['spv/hapus_data_laporan_rutilahu/(:any)'] = 'spv/Report/delete_rutilahu_report/$1';
+
+$route['spv/laporan_sarling'] = 'spv/Report/sarling';
+$route['spv/tambah_laporan_sarling'] = 'spv/Report/add_sarling_report';
+$route['spv/simpan_laporan_sarling'] = 'spv/Report/save_sarling_report';
+$route['spv/detil_laporan_sarling/(:any)'] = 'spv/Report/detail_sarling_report/$1';
+$route['spv/ubah_data_laporan_sarling/(:any)'] = 'spv/Report/edit_sarling_report/$1';
+$route['spv/perbarui_laporan_sarling'] = 'spv/Report/update_sarling_report';
+$route['spv/hapus_data_laporan_sarling/(:any)'] = 'spv/Report/delete_sarling_report/$1';
+
+/* Member a.k.a Anggota Kelompok */
 $route['member_side/launcher'] = 'member/App/launcher';
 $route['member_side/beranda'] = 'member/App/home';
 $route['member_side/menu'] = 'member/App/menu';
@@ -191,6 +236,42 @@ $route['member_side/log_activity'] = 'member/App/log_activity';
 $route['member_side/cleaning_log'] = 'member/App/cleaning_log';
 $route['member_side/tentang_aplikasi'] = 'member/App/about';
 $route['member_side/bantuan'] = 'member/App/helper';
+
+$route['spv/kube'] = 'spv/Master/kube_data';
+$route['spv/tambah_data_kube'] = 'spv/Master/add_kube_data';
+$route['spv/simpan_data_kube'] = 'spv/Master/save_kube_data';
+$route['spv/detil_data_kube/(:any)'] = 'spv/Master/detail_kube_data/$1';
+$route['spv/ubah_data_kube/(:any)'] = 'spv/Master/edit_kube_data/$1';
+$route['spv/perbarui_data_kube'] = 'spv/Master/update_kube_data';
+$route['spv/simpan_data_anggota_kube'] = 'spv/Master/save_kube_member';
+$route['spv/perbarui_data_anggota_kube'] = 'spv/Master/update_kube_member';
+$route['spv/atur_ulang_kata_sandi_anggota_kube/(:any)'] = 'spv/Master/reset_password_kube_member_account/$1';
+$route['spv/hapus_data_kube/(:any)'] = 'spv/Master/delete_kube_data/$1';
+$route['spv/hapus_data_anggota_kube/(:any)'] = 'spv/Master/delete_kube_member/$1';
+
+$route['spv/rutilahu'] = 'spv/Master/rutilahu_data';
+$route['spv/tambah_data_rutilahu'] = 'spv/Master/add_rutilahu_data';
+$route['spv/simpan_data_rutilahu'] = 'spv/Master/save_rutilahu_data';
+$route['spv/detil_data_rutilahu/(:any)'] = 'spv/Master/detail_rutilahu_data/$1';
+$route['spv/ubah_data_rutilahu/(:any)'] = 'spv/Master/edit_rutilahu_data/$1';
+$route['spv/perbarui_data_rutilahu'] = 'spv/Master/update_rutilahu_data';
+$route['spv/simpan_data_anggota_rutilahu'] = 'spv/Master/save_rutilahu_member';
+$route['spv/perbarui_data_anggota_rutilahu'] = 'spv/Master/update_rutilahu_member';
+$route['spv/atur_ulang_kata_sandi_anggota_rutilahu/(:any)'] = 'spv/Master/reset_password_rutilahu_member_account/$1';
+$route['spv/hapus_data_rutilahu/(:any)'] = 'spv/Master/delete_rutilahu_data/$1';
+$route['spv/hapus_data_anggota_rutilahu/(:any)'] = 'spv/Master/delete_rutilahu_member/$1';
+
+$route['spv/sarling'] = 'spv/Master/sarling_data';
+$route['spv/tambah_data_sarling'] = 'spv/Master/add_sarling_data';
+$route['spv/simpan_data_sarling'] = 'spv/Master/save_sarling_data';
+$route['spv/detil_data_sarling/(:any)'] = 'spv/Master/detail_sarling_data/$1';
+$route['spv/ubah_data_sarling/(:any)'] = 'spv/Master/edit_sarling_data/$1';
+$route['spv/perbarui_data_sarling'] = 'spv/Master/update_sarling_data';
+$route['spv/simpan_data_anggota_sarling'] = 'spv/Master/save_sarling_member';
+$route['spv/perbarui_data_anggota_sarling'] = 'spv/Master/update_sarling_member';
+$route['spv/atur_ulang_kata_sandi_anggota_sarling/(:any)'] = 'spv/Master/reset_password_sarling_member_account/$1';
+$route['spv/hapus_data_sarling/(:any)'] = 'spv/Master/delete_sarling_data/$1';
+$route['spv/hapus_data_anggota_sarling/(:any)'] = 'spv/Master/delete_sarling_member/$1';
 
 $route['member_side/tambah_laporan_kube'] = 'member/Report/add_kube_report';
 $route['member_side/simpan_laporan_kube'] = 'member/Report/save_kube_report';

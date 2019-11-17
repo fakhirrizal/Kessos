@@ -123,9 +123,9 @@ $id_sarling = '';
 											<thead>
 												<tr>
 													<th style="text-align: center;" width="4%"> # </th>
+													<th style="text-align: center;"> Jabatan Tim </th>
 													<th style="text-align: center;"> Nama </th>
 													<th style="text-align: center;"> NIK </th>
-													<th style="text-align: center;"> Jabatan Tim </th>
 													<th style="text-align: center;"> Jabatan di Masyarakat </th>
 													<th style="text-align: center;" width="7%"> Aksi </th>
 												</tr>
@@ -266,9 +266,9 @@ $id_sarling = '';
 				},
 				"aoColumns": [
 							{ mData: 'number', sClass: "alignCenter" },
+							{ mData: 'jabatan', sClass: "alignCenter" },
 							{ mData: 'nama' },
 							{ mData: 'nik', sClass: "alignCenter" },
-							{ mData: 'jabatan', sClass: "alignCenter" },
 							{ mData: 'jabatan_masyarakat', sClass: "alignCenter" } ,
 							{ mData: 'action' }
 						]

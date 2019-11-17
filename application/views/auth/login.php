@@ -169,7 +169,7 @@
 				<div class="form-group">
 					<button type="submit" class="btn btn-success btn-lg btn-block signup-btn">Masuk</button>
 				</div>
-				<div class="text-center small"><a href="#">Lupa Kata Sandi?</a></div>
+				<!-- <div class="text-center small"><a href="#">Lupa Kata Sandi?</a></div> -->
 			</form>
 			<!-- <div class="text-center small">Don't have an account? <a href="#">Sign up</a></div> -->
 			<script>

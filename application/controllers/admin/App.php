@@ -124,4 +124,72 @@ class App extends CI_Controller {
 			$this->load->view('admin/app/ajax_detail_log_aktifitas',$data);
 		}
 	}
+	public function create_admin_data(){
+		$data_p = $this->Main_model->getSelectedData('provinsi a', 'a.*')->result();
+		foreach ($data_p as $key => $value) {
+			$this->db->trans_start();
+			$get_user_id = $this->Main_model->getLastID('user','id');
+
+			$data_insert1 = array(
+				'id' => $get_user_id['id']+1,
+				'username' => $value->nm_provinsi.' '.$value->id_provinsi,
+				'pass' => '12345',
+				'is_active' => '1',
+				'created_by' => $this->session->userdata('id'),
+				'created_at' => date('Y-m-d H:i:s')
+			);
+			$this->Main_model->insertData('user',$data_insert1);
+			// print_r($data_insert1);
+
+			$data_insert2 = array(
+				'user_id' => $get_user_id['id']+1,
+				'fullname' => $value->nm_provinsi,
+				'wilayah' => $value->id_provinsi
+			);
+			$this->Main_model->insertData('user_profile',$data_insert2);
+			// print_r($data_insert2);
+
+			$data_insert3 = array(
+				'user_id' => $get_user_id['id']+1,
+				'role_id' => '5'
+			);
+			$this->Main_model->insertData('user_to_role',$data_insert3);
+			// print_r($data_insert3);
+
+			$this->db->trans_complete();
+		}
+		$data_k = $this->Main_model->getSelectedData('kabupaten a', 'a.*')->result();
+		foreach ($data_k as $key => $value) {
+			$this->db->trans_start();
+			$get_user_id = $this->Main_model->getLastID('user','id');
+
+			$data_insert1 = array(
+				'id' => $get_user_id['id']+1,
+				'username' => $value->nm_kabupaten.' '.$value->id_kabupaten,
+				'pass' => '12345',
+				'is_active' => '1',
+				'created_by' => $this->session->userdata('id'),
+				'created_at' => date('Y-m-d H:i:s')
+			);
+			$this->Main_model->insertData('user',$data_insert1);
+			// print_r($data_insert1);
+
+			$data_insert2 = array(
+				'user_id' => $get_user_id['id']+1,
+				'fullname' => $value->nm_kabupaten,
+				'wilayah' => $value->id_kabupaten
+			);
+			$this->Main_model->insertData('user_profile',$data_insert2);
+			// print_r($data_insert2);
+
+			$data_insert3 = array(
+				'user_id' => $get_user_id['id']+1,
+				'role_id' => '6'
+			);
+			$this->Main_model->insertData('user_to_role',$data_insert3);
+			// print_r($data_insert3);
+
+			$this->db->trans_complete();
+		}
+	}
 }

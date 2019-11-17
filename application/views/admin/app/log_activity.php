@@ -21,11 +21,11 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="btn-group">
-									<button type='submit' id="sample_editable_1_new" class="btn sbold red"> Hapus
+									<!-- <button type='submit' id="sample_editable_1_new" class="btn sbold red"> Hapus
 										<i class="fa fa-trash"></i>
-									</button>
+									</button> -->
 								</div>
-									<span class="separator">|</span>
+									<!-- <span class="separator">|</span> -->
 									<a href="<?=base_url('admin_side/cleaning_log');?>" class="btn red uppercase">Kosongkan Log <i class="fa fa-trash"></i> </a>
 							</div>
 						</div>

@@ -1,4 +1,37 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+
+		$.ajaxSetup({
+			type:"POST",
+			url: "<?php echo site_url('/admin/Master/ajax_function')?>",
+			cache: false,
+		});
+
+		$("#id_provinsi").change(function(){
+			var value=$(this).val();
+			$.ajax({
+				data:{id:value,modul:'get_kabupaten_by_id_provinsi'},
+				success: function(respond){
+					$("#id_kabupaten").html(respond);
+				}
+			})
+		});
+
+		$("#id_provinsi2").change(function(){
+			var value=$(this).val();
+			$.ajax({
+				data:{id:value,modul:'get_kabupaten_by_id_provinsi'},
+				success: function(respond){
+					$("#id_kabupaten2").html(respond);
+				}
+			})
+		});
+
+	})
+
+</script>
 <style media="all" type="text/css">
     .alignCenter { text-align: center; }
 </style>
@@ -21,17 +54,48 @@
 		<div class="col-md-12">
 			<div class="portlet light ">
 				<div class="portlet-body">
+					<div class="col-md-12">
+						<form method='post' action='<?=site_url('admin_side/laporan_rutilahu');?>'>
+							<div class="form-group select2-bootstrap-prepend" >
+								<label class="control-label col-md-3">Opsi pencarian berdasarkan wilayah</label>
+								<div class="col-md-3">
+									<select id='id_provinsi' name='id_provinsi' class="form-control" required>
+										<option value="">-- Pilih Provinsi --</option>
+										<?php
+										foreach ($provinsi as $key => $value) {
+											echo '<option value="'.$value->id_provinsi.'">'.$value->nm_provinsi.'</option>';
+										}
+										?>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<select id='id_kabupaten' name='id_kabupaten' class="form-control">
+										<option value="">-- Pilih Kabupaten/ Kota --</option>
+									</select>
+								</div>
+								<div class="col-md-2">
+									<button type="submit" class="btn btn-danger">Proses</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<br>
+					<br>
+					<hr>
 					<form action="#" method="post" onsubmit="return deleteConfirm();"/>
 					<div class="table-toolbar">
 						<div class="row">
 							<div class="col-md-8">
 								<div class="btn-group">
-									<button type='submit' id="sample_editable_1_new" class="btn sbold red"> Hapus
+									<!-- <button type='submit' id="sample_editable_1_new" class="btn sbold red"> Hapus
 										<i class="fa fa-trash"></i>
-									</button>
+									</button> -->
 								</div>
-									<span class="separator">|</span>
+									<!-- <span class="separator">|</span> -->
 									<a href="<?=base_url('admin_side/tambah_laporan_rutilahu');?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
+							</div>
+							<div class="col-md-4" style='text-align: right;'>
+								<a href="#" class="btn btn-default" data-toggle="modal" data-target="#fe">Ekspor Data <i class="fa fa-cloud-download"></i></a>
 							</div>
 						</div>
 					</div>
@@ -63,7 +127,10 @@
 								"order": [[ 1, "asc" ]],
 								"bProcessing": true,
 								"ajax" : {
-									url:"<?= site_url('admin/Report/json_rutilahu'); ?>"
+									type:"POST",
+									url: "<?php echo site_url('admin/Report/json_rutilahu')?>",
+									data:{prov:"<?= $prov; ?>",kabkot:'<?= $kabkot; ?>'},
+									cache: false
 								},
 								"aoColumns": [
 											{ mData: 'checkbox', sClass: "alignCenter", "bSortable": false} ,
@@ -89,6 +156,46 @@
 						}
 					}
 					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="fe" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Form Ekspor</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-body">
+					<div class="row">
+						<form method='post' action='<?=base_url('admin/Report/download_rutilahu_data');?>'>
+							
+							<label class="control-label col-md-2">Provinsi <span class="required"> * </span></label>
+							<div class="col-md-3">
+								<select name='prov' id='id_provinsi2' class="form-control select2-allow-clear" required>
+									<option value=""></option>
+									<?php
+									foreach ($provinsi as $key => $value) {
+										echo'<option value="'.$value->id_provinsi.'">'.$value->nm_provinsi.'</option>';
+									}
+									?>
+								</select>
+							</div>
+							<label class="control-label col-md-2">Kabupaten/ Kota </label>
+							<div class="col-md-3">
+								<select name='kab' id='id_kabupaten2' class="form-control select2-allow-clear">
+									<option value=""></option>
+								</select>
+							</div>
+							<div class="col-md-1">
+								<!-- <a href="<?=base_url('admin/Report/download_admin_data');?>" class="btn btn-default">Ekspor Data <i class="fa fa-cloud-download"></i></a> -->
+								<button type='submit' class="btn btn-primary">Ekspor Data</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

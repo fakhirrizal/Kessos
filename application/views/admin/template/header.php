@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									$data_notif = 0;
 								?>
 								<a href="#" class="dropdown-toggle" title="Notifikasi">
-									<i class="icon-bell"></i>
+									<!-- <i class="icon-bell"></i> -->
 									<!-- <span class="badge badge-default"><?= count($data_notif); ?></span> -->
 								</a>
 								<!-- <ul class="dropdown-menu">
@@ -128,20 +128,20 @@ License: You must have a valid license purchased only from themeforest(the above
 									</li>
 								</ul> -->
 							</li>
-							<li class="droddown dropdown-separator">
+							<!-- <li class="droddown dropdown-separator">
 								<span class="separator"></span>
-							</li>
+							</li> -->
 							<!-- BEGIN USER LOGIN DROPDOWN -->
 							<li class="dropdown dropdown-user dropdown-dark">
 								<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-									<img alt="" class="img-circle" src="https://cdn1.iconfinder.com/data/icons/rcons-user-action/512/user-512.png">
+									<img alt="" class="img-circle" src="https://i-love-png.com/images/profile_png_1113533.png">
 									<span class="username username-hide-mobile">Administrator</span>
 								</a>
 								<ul class="dropdown-menu dropdown-menu-default">
-									<li>
+									<!-- <li>
 										<a href="#!">
 											<i class="icon-user"></i> Profil </a>
-									</li>
+									</li> -->
 									<li>
 										<a href="<?php echo site_url('admin_side/bantuan'); ?>">
 											<i class="icon-rocket"></i> Bantuan
@@ -170,7 +170,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="page-header-menu">
 				<div class="container">
 					<!-- BEGIN HEADER SEARCH BOX -->
-					<form class="search-form" action="javascript:;" method="GET">
+					<!-- <form class="search-form" action="javascript:;" method="GET">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Cari" name="query">
 							<span class="input-group-btn">
@@ -179,7 +179,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</a>
 							</span>
 						</div>
-					</form>
+					</form> -->
 					<!-- END HEADER SEARCH BOX -->
 					<!-- BEGIN MEGA MENU -->
 					<!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
@@ -216,11 +216,11 @@ License: You must have a valid license purchased only from themeforest(the above
 									<span class="arrow <?php if($parent=='master'){echo 'open';}else{echo '';} ?>"></span>
 								</a>
 								<ul class="dropdown-menu pull-left">
-									<!-- <li class=" <?php if($child=='administrator'){echo 'active';}else{echo '';} ?>">
+									<li class=" <?php if($child=='administrator'){echo 'active';}else{echo '';} ?>">
 										<a href="<?php echo site_url('admin_side/administrator'); ?>" class="nav-link nav-toggle ">
 											<i class="icon-user-following"></i> Data Admin
 										</a>
-									</li> -->
+									</li>
 									<li class=" <?php if($child=='kube'){echo 'active';}else{echo '';} ?>">
 										<a href="<?php echo site_url('admin_side/kube'); ?>" class="nav-link nav-toggle ">
 											<i class="icon-grid"></i> Data Kube

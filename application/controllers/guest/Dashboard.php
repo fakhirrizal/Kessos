@@ -174,6 +174,7 @@ class Dashboard extends CI_Controller {
 	/* Graph */
 	public function main_graph(){
 		$data = array();
+		$data['selected_kegiatan'] = $this->input->post('kegiatan');
 		if($this->input->post('kegiatan')=='a'){
 			$data['judul'] = 'Kube (Kelompok Usaha Bersama)';
 			if($this->input->post('wilayah')=='4'){

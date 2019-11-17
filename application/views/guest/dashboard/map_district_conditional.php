@@ -80,12 +80,12 @@
                                 </div>
                                 <div class="col-md-9 col-sm-9 col-xs-12">
                                     <h2><strong>Dashboard Bantuan Sosial Reguler</strong></h2>
-                                    <!-- <h3>Sistem Informasi Manajemen Kube, Rutilahu dan Sarling<br>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3> -->
-                                    <h3>Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
+                                    <!-- <h3>Sistem Informasi Manajemen Kube, Rutilahu dan Sarling<br>Direktorat Penanganan Fakir Miskin Wilayah II<br>Kementerian Sosial Republik Indonesia</h3> -->
+                                    <h3>Direktorat Penanganan Fakir Miskin Wilayah II<br>Kementerian Sosial Republik Indonesia</h3>
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-1 col-xs-12">
-                                <a href="<?=base_url('login')?>" class="btn btn-danger">Manajemen <i class="icon-key"></i></a>
+                                <br><br><br><a href="<?=base_url('login')?>" class="btn btn-danger">Manajemen <i class="icon-key"></i></a>
                             </div>
                         </div>
                         <div class="tab-content">
@@ -141,10 +141,10 @@
                             </div>
                             <hr>
                             <div class="footer text-muted text-center">
-                            Contact Person Office 021-3103637/79 /EXT 2529
+                            <!-- Contact Person Office 021-3103637/79 /EXT 2529
                             <br>Alamat Email : sekretariat@kemsos.go.id
-                            <br>
-                            © 2019 <a href="#">Direktorat Penanganan Fakir Miskin Perkotaan Wilayah II - Kementerian Sosial RI</a>.<br><br><br><br>
+                            <br> -->
+                            © 2019 <a href="#">Direktorat Penanganan Fakir Miskin Wilayah II - Kementerian Sosial RI</a>.<br><br><br>
                             </div>
                         </div>
                     </div>

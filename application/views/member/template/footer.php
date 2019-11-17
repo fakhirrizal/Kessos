@@ -9,7 +9,7 @@
         <!-- END CONTAINER -->
         <!-- BEGIN FOOTER -->
 		<!-- BEGIN PRE-FOOTER -->
-        <div class="page-prefooter">
+        <!-- <div class="page-prefooter">
             <div class="container">
                 <div class="row">
 					<style type="text/css">
@@ -20,7 +20,6 @@
 							display: inline-block;
 							margin: 0;
 							padding: 0;
-							/* For IE, the outcast */
 							zoom:1;
 							*display: inline;
 						}
@@ -29,7 +28,7 @@
 							padding: 2px 5px;
 						}
 					</style>
-                    <!-- <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
+                    <div class="col-md-3 col-sm-6 col-xs-12 footer-block">
                         <h2>About</h2>
                         <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam dolore. </p>
                     </div>
@@ -45,7 +44,7 @@
                                 </div>
                             </form>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="col-md-6 col-sm-6 col-xs-12 footer-block" style="text-align: center;">
 						<h2>Follow Us On</h2>
 						<div class='wrapper'>
@@ -82,7 +81,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- END PRE-FOOTER -->
         <!-- BEGIN INNER FOOTER -->
         <div class="page-footer">

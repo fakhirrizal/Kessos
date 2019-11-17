@@ -10,10 +10,16 @@ class Report extends CI_Controller {
         $data['parent'] = 'report';
         $data['child'] = 'kube';
         $data['grand_child'] = '';
-        $data['kube'] = $this->Main_model->getSelectedData('kube a', 'a.*,e.nm_kabupaten', array('a.deleted'=>'0'),'','','','',array(
-            'table' => 'kabupaten e',
-            'on' => 'a.id_kabupaten=e.id_kabupaten',
-            'pos' => 'left'
+        $data['kube'] = $this->Main_model->getSelectedData('kube a', 'a.*,e.nm_kabupaten,j.jenis_usaha', array('a.deleted'=>'0'),'','','','',array(
+            array(
+                'table' => 'kabupaten e',
+                'on' => 'a.id_kabupaten=e.id_kabupaten',
+                'pos' => 'left'
+            ),array(
+                'table' => 'jenis_usaha j',
+                'on' => 'a.id_jenis_usaha=j.id_jenis_usaha',
+                'pos' => 'left'
+            )
         ))->result();
         $data['indikator'] = $this->Main_model->getSelectedData('master_indikator a', 'a.*')->result();
         $this->load->view('member/template/header',$data);
@@ -96,7 +102,7 @@ class Report extends CI_Controller {
             $bb = explode(',',$get_status_laporan_kube->indikator);
             $c = array_unique(array_merge($get_indikator,$bb));
             $d = implode(',',$c);
-            $persentase_fisik2 = (count($c)/count($data_indikator))*100;
+            $persentase_fisik2 = (count(array_filter($c))/count($data_indikator))*100;
             $persentase_anggaran = (($total_uang+$get_status_laporan_kube->anggaran)/$get_data_kube->rencana_anggaran)*100;
             $persentase_realisasi = ($persentase_anggaran+$persentase_fisik2)/2;
             $data_update1 = array(
@@ -461,7 +467,7 @@ class Report extends CI_Controller {
             $bb = explode(',',$get_status_laporan_rutilahu->indikator);
             $c = array_unique(array_merge($get_indikator,$bb));
             $d = implode(',',$c);
-            $persentase_fisik2 = (count($c)/count($data_indikator))*100;
+            $persentase_fisik2 = (count(array_filter($c))/count($data_indikator))*100;
             $persentase_anggaran = (($total_uang+$get_status_laporan_rutilahu->anggaran)/$get_data_rutilahu->rencana_anggaran)*100;
             $persentase_realisasi = ($persentase_anggaran+$persentase_fisik2)/2;
             $data_update1 = array(
@@ -816,7 +822,7 @@ class Report extends CI_Controller {
             $bb = explode(',',$get_status_laporan_sarling->indikator);
             $c = array_unique(array_merge($get_indikator,$bb));
             $d = implode(',',$c);
-            $persentase_fisik2 = (count($c)/count($data_indikator))*100;
+            $persentase_fisik2 = (count(array_filter($c))/count($data_indikator))*100;
             $persentase_anggaran = (($total_uang+$get_status_laporan_sarling->anggaran)/$get_data_sarling->rencana_anggaran)*100;
             $persentase_realisasi = ($persentase_anggaran+$persentase_fisik2)/2;
             $data_update1 = array(

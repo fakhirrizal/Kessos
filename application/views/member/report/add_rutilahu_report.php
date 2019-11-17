@@ -25,6 +25,21 @@
 				<div class="portlet-body">
 					<form role="form" class="form-horizontal" action="<?=base_url('member_side/simpan_laporan_rutilahu');?>" method="post" enctype='multipart/form-data'>
 						<div class="form-body">
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1">Data Rutilahu</label>
+								<div class="col-md-10">
+									<div class="input-icon">
+										<?php
+										$get_data_user = $this->Main_model->getSelectedData('anggota_rutilahu a', 'a.*', array("a.user_id" => $this->session->userdata('id')))->row();
+										$get_data_r = $this->Main_model->getSelectedData('rutilahu a', 'a.*', array("a.id_rutilahu" => $get_data_user->id_rutilahu))->row();
+										?>
+										<input type="text" class="form-control" value="<?= $get_data_r->nama_kelompok.' - '.$get_data_r->alamat; ?>" readonly>
+										<div class="form-control-focus"> </div>
+										<span class="help-block">Some help goes here...</span>
+										<i class="fa fa-list"></i>
+									</div>
+								</div>
+							</div>
 							<div style='text-align: left'>
 								<label class="control-label uppercase" for="form_control_1"><b>Laporan Progres Aspek Fisik</b></label>
 							</div>
@@ -48,19 +63,23 @@
 							<?php
 							$no = 0;
 							foreach ($indikator as $key => $i) {
+								if($i->id_master_indikator=='1'){
+									// ini yg baru, yg lama ada 3 master indikator
 							?>
 							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1"><?= $i->master_indikator; ?></label>
+								<!-- <label class="col-md-2 control-label" for="form_control_1"><?= $i->master_indikator; ?></label> -->
+								<label class="col-md-2 control-label" for="form_control_1"><?= 'Anggaran yg telah terpakai'; ?></label>
 								<div class="col-md-10">
 									<div class="input-icon">
 										<input type="number" class="form-control" name="progres_keuangan_<?= $i->id_master_indikator; ?>" placeholder="Type something">
 										<div class="form-control-focus"> </div>
-										<span class="help-block">Some help goes here...</span>
+										<span class="help-block"><div id='progres_keuangan_<?= $i->id_master_indikator; ?>'></div></span>
+										<!-- Telah dilaporkan Rp 8.000.000,00 pada laporan sebelumnya -->
 										<i class="fa fa-list"></i>
 									</div>
 								</div>
 							</div>
-							<?php } ?>
+							<?php }else{echo'';}} ?>
 							<hr>
 							<div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Keterangan</label>

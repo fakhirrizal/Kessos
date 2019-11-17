@@ -118,7 +118,7 @@
 								<label class="col-md-2 control-label" for="form_control_1"></label>
 								<div class="col-md-5">
 									<div class="input-icon">
-										<input type="text" class="form-control" name='latitude' id='latitude' readonly="">
+										<input type="text" class="form-control" name='latitude' id='latitude' >
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Garis lintang</span>
 										<i class="icon-pin"></i>
@@ -126,7 +126,7 @@
 								</div>
 								<div class="col-md-5">
 									<div class="input-icon">
-									<input type="text" class="form-control" name='longitude' id='longitude' readonly="">
+									<input type="text" class="form-control" name='longitude' id='longitude' >
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Garis Bujur</span>
 										<i class="icon-pin"></i>

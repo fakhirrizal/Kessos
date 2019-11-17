@@ -301,7 +301,7 @@
                                             <i class="widget-thumb-icon bg-green icon-grid"></i>
                                             <div class="widget-thumb-body">
                                                 <!-- <span class="widget-thumb-subtitle"><font color='white'>Kelompok</font></span> -->
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($d2/$d1)/(count($data_utama_2))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_2)=='0'){echo'0.00%';}else{echo number_format((($d2/$d1)/(count($data_utama_2))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -313,7 +313,7 @@
                                             <i class="widget-thumb-icon bg-red icon-home"></i>
                                             <div class="widget-thumb-body">
                                                 <!-- <span class="widget-thumb-subtitle"><font color='white'>Kelompok</font></span> -->
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($e2/$e1)/(count($data_utama_2))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_2)=='0'){echo'0.00%';}elseif($e1=='0'){echo'0.00%';}else{echo number_format((($e2/$e1)/(count($data_utama_2))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>
@@ -325,7 +325,7 @@
                                             <i class="widget-thumb-icon bg-purple icon-layers"></i>
                                             <div class="widget-thumb-body">
                                                 <!-- <span class="widget-thumb-subtitle"><font color='white'>Tim</font></span> -->
-                                                <span class="widget-thumb-body-stat"><font color='white'><?= number_format((($f2/$f1)/(count($data_utama_2))),2).'%'; ?></font></span>
+                                                <span class="widget-thumb-body-stat"><font color='white'><?php if(count($data_utama_2)=='0'){echo'0.00%';}elseif($f1=='0'){echo'0.00%';}else{echo number_format((($f2/$f1)/(count($data_utama_2))),2).'%';} ?></font></span>
                                             </div>
                                         </div>
                                     </div>

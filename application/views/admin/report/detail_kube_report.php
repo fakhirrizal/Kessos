@@ -252,13 +252,23 @@ $id_kube = '';
                                                                     if($detail_laporan==NULL AND $detail_laporan_aspek_keuangan==NULL){
 																		echo'';
 																	}else{
+																		if($mi->master_indikator=='Pengadaan'){
+																			echo '<b>Anggaran yg telah terpakai : </b>Rp '.number_format($detail_laporan_aspek_keuangan->progres_keuangan,2).'<br>';
+																		}else{
+																			echo'';
+																		}
                                                                         echo '<h4><b>'.$mi->master_indikator.'</b></h4>';
                                                                         echo '<b>Progres Fisik : </b><br>';
                                                                         foreach ($detail_laporan as $key => $dl) {
-                                                                            echo $dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';
+																			// echo $dl->indikator.' &rarr; '.$dl->penjelasan_progres_fisik.'<br>';
+																			if($dl->penjelasan_progres_fisik==NULL){
+																				echo $dl->indikator.'<br>';
+																			}else{
+																				echo $dl->indikator.' ('.$dl->penjelasan_progres_fisik.')<br>';
+																			}
                                                                         }
                                                                         
-                                                                        echo '<b>Progres Keuangan : </b>Rp '.number_format($detail_laporan_aspek_keuangan->progres_keuangan,2).'<br>';
+                                                                        // echo '<b>Progres Keuangan : </b>Rp '.number_format($detail_laporan_aspek_keuangan->progres_keuangan,2).'<br>'; ini yg lama
                                                                     }
                                                                 }
 																// foreach ($detail_laporan as $key => $dl) {

@@ -1,11 +1,14 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style media="all" type="text/css">
+    .alignCenter { text-align: center; }
+</style>
 <ul class="page-breadcrumb breadcrumb">
 	<li>
 		<span>Master</span>
 		<i class="fa fa-circle"></i>
 	</li>
 	<li>
-		<span>Data Siswa</span>
+		<span>Data Admin</span>
 	</li>
 </ul>
 <?= $this->session->flashdata('sukses') ?>
@@ -13,7 +16,8 @@
 <div class="page-content-inner">
 	<div class="m-heading-1 border-yellow m-bordered" style="background-color:#FAD405;">
 		<h3>Catatan</h3>
-		<p> Ketika mengklik <b>Atur Ulang Sandi</b>, maka kata sandi otomatis menjadi "<b>1234</b>"</p>
+		<p> 1. Ketika mengklik <b>Atur Ulang Sandi</b>, maka kata sandi otomatis menjadi "<b>1234</b>"</p>
+		<p> 2. Data ekspor berupa file excel (<b>.xls</b>)</p>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
@@ -36,21 +40,21 @@
 					<form action="#" method="post" onsubmit="return deleteConfirm();"/>
 					<div class="table-toolbar">
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-8">
 								<div class="btn-group">
-									<button type='submit' id="sample_editable_1_new" class="btn sbold red"> Hapus
+									<!-- <button type='submit' id="sample_editable_1_new" class="btn sbold red"> Hapus
 										<i class="fa fa-trash"></i>
-									</button>
+									</button> -->
 								</div>
-									<span class="separator">|</span>
+									<!-- <span class="separator">|</span> -->
 									<a href="<?=base_url('admin_side/tambah_data_admin');?>" class="btn green uppercase">Tambah Data <i class="fa fa-plus"></i> </a>
-								<!-- <button id="sample_editable_1_new" onclick="window.location.href='<?=base_url('Master/admin');?>'" class="btn sbold green"> Tambah Data Baru
-									<i class="fa fa-plus"></i>
-								</button> -->
+							</div>
+							<div class="col-md-4" style='text-align: right;'>
+								<a href="<?=base_url('admin/Master/download_admin_data');?>" class="btn btn-default">Ekspor Data <i class="fa fa-cloud-download"></i></a>
 							</div>
 						</div>
 					</div>
-					<table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
+					<table class="table table-striped table-bordered table-hover table-checkable order-column" id="tbl">
 						<thead>
 							<tr>
 								<th width="3%">
@@ -62,60 +66,34 @@
 								<th style="text-align: center;" width="4%"> # </th>
 								<th style="text-align: center;"> Nama </th>
 								<th style="text-align: center;"> Username </th>
-								<th style="text-align: center;"> Email </th>
+								<th style="text-align: center;"> Wilayah </th>
+								<th style="text-align: center;"> Keterangan </th>
 								<th style="text-align: center;" width="7%"> Aksi </th>
 							</tr>
 						</thead>
-						<tbody>
-							<?php
-							$no = 1;
-							// foreach ($data_tabel as $key => $value) {
-							?>
-							<tr class="odd gradeX">
-								<td style="text-align: center;">
-									<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-										<input type="checkbox" class="checkboxes" name="selected_id[]" value="#"/>
-										<span></span>
-									</label>
-								</td>
-								<td style="text-align: center;"><?= $no++.'.'; ?></td>
-								<td style="text-align: center;">Imam Fajrul Falah</td>
-								<td style="text-align: center;">imam_fajrul</td>
-								<td style="text-align: center;">imam@gmail.com</td>
-								<td>
-									<div class="btn-group" style="text-align: center;">
-										<button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> Aksi
-											<i class="fa fa-angle-down"></i>
-										</button>
-										<ul class="dropdown-menu" role="menu">
-											<li>
-												<a href="<?=site_url('admin_side/detail_data_admin/');?>">
-													<i class="icon-eye"></i> Detail Data </a>
-											</li>
-											<li>
-												<a href="<?=site_url('admin_side/ubah_data_admin/');?>">
-													<i class="icon-wrench"></i> Ubah Data </a>
-											</li>
-											<li>
-												<a onclick="return confirm('Anda yakin?')" href="<?=site_url('admin_side/hapus_data_admin/');?>">
-													<i class="icon-trash"></i> Hapus Data </a>
-											</li>
-											<li class="divider"> </li>
-											<li>
-												<a href="<?=site_url('admin_side/atur_ulang_kata_sandi_admin/');?>">
-													<i class="fa fa-refresh"></i> Atur Ulang Sandi
-												</a>
-											</li>
-										</ul>
-									</div>
-								</td>
-							</tr>
-							<?php
-							// }
-							?>
-						</tbody>
 					</table>
 					</form>
+					<script type="text/javascript" language="javascript" >
+						$(document).ready(function(){
+							$('#tbl').dataTable({
+								"order": [[ 1, "asc" ]],
+								"bProcessing": true,
+								"ajax" : {
+									url:"<?= site_url('admin/Master/json_admin'); ?>"
+								},
+								"aoColumns": [
+											{ mData: 'checkbox', sClass: "alignCenter", "bSortable": false} ,
+											{ mData: 'number', sClass: "alignCenter" },
+											{ mData: 'nama' } ,
+											{ mData: 'username', sClass: "alignCenter" } ,
+											{ mData: 'wilayah', sClass: "alignCenter" },
+											{ mData: 'keterangan', sClass: "alignCenter" },
+											{ mData: 'action' }
+										]
+							});
+
+						});
+					</script>
 					<script type="text/javascript">
 					function deleteConfirm(){
 						var result = confirm("Yakin akan menghapus data ini?");

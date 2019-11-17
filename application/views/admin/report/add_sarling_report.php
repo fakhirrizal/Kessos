@@ -28,6 +28,36 @@
 			})
 		});
 
+		$("#id_sarling").change(function(){
+			var value=$(this).val();
+			$.ajax({
+				data:{id:value,modul:'get_isian_rencana_anggaran_pengadaan_by_id_sarling'},
+				success: function(respond){
+					$("#progres_keuangan_1").html(respond);
+				}
+			})
+		});
+
+		$("#id_sarling").change(function(){
+			var value=$(this).val();
+			$.ajax({
+				data:{id:value,modul:'get_isian_rencana_anggaran_proses_by_id_sarling'},
+				success: function(respond){
+					$("#progres_keuangan_2").html(respond);
+				}
+			})
+		});
+
+		$("#id_sarling").change(function(){
+			var value=$(this).val();
+			$.ajax({
+				data:{id:value,modul:'get_isian_rencana_anggaran_benefit_by_id_sarling'},
+				success: function(respond){
+					$("#progres_keuangan_3").html(respond);
+				}
+			})
+		});
+
 	})
 
 </script>
@@ -107,19 +137,21 @@
 							<?php
 							$no = 0;
 							foreach ($indikator as $key => $i) {
+								if($i->id_master_indikator=='1'){
 							?>
 							<div class="form-group form-md-line-input has-danger">
-								<label class="col-md-2 control-label" for="form_control_1"><?= $i->master_indikator; ?></label>
+								<!-- <label class="col-md-2 control-label" for="form_control_1"><?= $i->master_indikator; ?></label> -->
+								<label class="col-md-2 control-label" for="form_control_1"><?= 'Anggaran yg telah terpakai'; ?></label>
 								<div class="col-md-10">
 									<div class="input-icon">
 										<input type="number" class="form-control" name="progres_keuangan_<?= $i->id_master_indikator; ?>" placeholder="Type something">
 										<div class="form-control-focus"> </div>
-										<span class="help-block">Some help goes here...</span>
+										<span class="help-block"><div id='progres_keuangan_<?= $i->id_master_indikator; ?>'></div></span>
 										<i class="fa fa-list"></i>
 									</div>
 								</div>
 							</div>
-							<?php } ?>
+							<?php }else{echo'';}} ?>
 							<hr>
 							<div class="form-group form-md-line-input has-danger">
 								<label class="col-md-2 control-label" for="form_control_1">Keterangan</label>
