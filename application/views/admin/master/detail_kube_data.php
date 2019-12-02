@@ -42,9 +42,19 @@ $id_kube = '';
 									<table class="table">
 										<tbody>
 											<tr>
+												<td> ID Kube </td>
+												<td> : </td>
+												<td><?php echo $row->no_kube; ?></td>
+											</tr>
+											<tr>
 												<td> Jenis Usaha </td>
 												<td> : </td>
 												<td><?php echo $row->jenis_usaha; ?></td>
+											</tr>
+											<tr>
+												<td> Jenis Usaha Pengembangan </td>
+												<td> : </td>
+												<td><?php echo $row->jenis_usaha_pengembangan; ?></td>
 											</tr>
 											<tr>
 												<td> Nama Kelompok </td>
@@ -52,14 +62,24 @@ $id_kube = '';
 												<td><?php echo $row->nama_tim; ?></td>
 											</tr>
 											<tr>
-												<td> Alamat </td>
-												<td> : </td>
-												<td><?php echo $row->alamat; ?></td>
-											</tr>
-											<tr>
 												<td> Rencana Anggaran </td>
 												<td> : </td>
 												<td><?php echo 'Rp '.number_format($row->rencana_anggaran,2); ?></td>
+											</tr>
+											<tr>
+												<td> Tahun Bantuan Kube </td>
+												<td> : </td>
+												<td><?php echo $row->tahun; ?></td>
+											</tr>
+											<tr>
+												<td> Pendamping </td>
+												<td> : </td>
+												<td><?php echo $row->pendamping; ?></td>
+											</tr>
+											<tr>
+												<td> ID Pendamping </td>
+												<td> : </td>
+												<td><?php echo $row->no_pendamping; ?></td>
 											</tr>
 											<tr>
 												<td> </td>
@@ -91,6 +111,11 @@ $id_kube = '';
 												<td> Kelurahan/ Desa </td>
 												<td> : </td>
 												<td><?php echo $row->nm_desa; ?></td>
+											</tr>
+											<tr>
+												<td> Alamat </td>
+												<td> : </td>
+												<td><?php echo $row->alamat; ?></td>
 											</tr>
 											<tr>
 												<td> </td>
@@ -220,6 +245,17 @@ $id_kube = '';
 									<div class="col-md-9">
 										<div class="input-icon">
 											<input type="text" class="form-control" name="no_kk" placeholder="Type something" required>
+											<div class="form-control-focus"> </div>
+											<span class="help-block">Some help goes here...</span>
+											<i class="fa fa-credit-card"></i>
+										</div>
+									</div>
+								</div>
+								<div class="form-group form-md-line-input has-danger">
+									<label class="col-md-3 control-label" for="form_control_1">Nomor HP</label>
+									<div class="col-md-9">
+										<div class="input-icon">
+											<input type="text" class="form-control" name="no_hp" placeholder="Type something" >
 											<div class="form-control-focus"> </div>
 											<span class="help-block">Some help goes here...</span>
 											<i class="fa fa-credit-card"></i>

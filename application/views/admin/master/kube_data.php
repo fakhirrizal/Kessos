@@ -114,7 +114,8 @@
 								<a href="#" class="btn btn-default" data-toggle="modal" data-target="#fe">Ekspor Data <i class="fa fa-cloud-download"></i></a>
 								<span class="separator">|</span>
 								<a href="#" class="btn btn-info" data-toggle="modal" data-target="#fi">Impor Data <i class="fa fa-cloud-upload"></i></a>
-								<a href="<?=base_url()?>import_data_template/template_kube.xlsx" class="btn btn-warning">Unduh Template</a>
+								<a href="<?=base_url()?>import_data_template/template_import_kube.xlsx" class="btn btn-warning">Unduh Template</a>
+								<!-- <a href="<?=base_url()?>import_data_template/template_kube.xlsx" class="btn btn-warning">Unduh Template</a> -->
 							</div>
 						</div>
 					</div>
@@ -128,16 +129,21 @@
 									</label>
 								</th>
 								<th style="text-align: center;" width="4%"> # </th>
-								<th style="text-align: center;"> Tahun Program </th>
-								<th style="text-align: center;"> Tahap </th>
-								<th style="text-align: center;"> Nama Kelompok </th>
-								<th style="text-align: center;"> Jenis Usaha </th>
-								<!-- <th style="text-align: center;"> Alamat </th> -->
-								<th style="text-align: center;"> Rencana Anggaran </th>
 								<th style="text-align: center;"> Provinsi </th>
 								<th style="text-align: center;"> Kabupaten </th>
 								<th style="text-align: center;"> Kecamatan </th>
 								<th style="text-align: center;"> Desa </th>
+								<th style="text-align: center;"> ID Kube </th>
+								<th style="text-align: center;"> Nama Kelompok </th>
+								<th style="text-align: center;"> Alamat </th>
+								<th style="text-align: center;"> Ketua Kelompok </th>
+								<th style="text-align: center;"> No. HP </th>
+								<th style="text-align: center;"> Tahun Program </th>
+								<th style="text-align: center;"> Jenis Usaha Pokok </th>
+								<th style="text-align: center;"> Jenis Usaha Pengembangan </th>
+								<th style="text-align: center;"> Pendamping </th>
+								<th style="text-align: center;"> ID Pendamping </th>
+								<th style="text-align: center;"> Status </th>
 								<th style="text-align: center;" width="7%"> Aksi </th>
 							</tr>
 						</thead>
@@ -242,16 +248,21 @@
 								"aoColumns": [
 											{ mData: 'checkbox', sClass: "alignCenter", "bSortable": false} ,
 											{ mData: 'number', sClass: "alignCenter" },
-											{ mData: 'tahun', sClass: "alignCenter" } ,
-											{ mData: 'tahap', sClass: "alignCenter" } ,
-											{ mData: 'nama_tim' },
-											{ mData: 'jenis_usaha', sClass: "alignCenter" },
-											// { mData: 'alamat', sClass: "alignCenter" } ,
-											{ mData: 'rencana_anggaran', sClass: "alignCenter" },
 											{ mData: 'nm_provinsi', sClass: "alignCenter" },
 											{ mData: 'nm_kabupaten', sClass: "alignCenter" },
 											{ mData: 'nm_kecamatan', sClass: "alignCenter" },
 											{ mData: 'nm_desa', sClass: "alignCenter" },
+											{ mData: 'no_kube', sClass: "alignCenter" },
+											{ mData: 'nama_tim' },
+											{ mData: 'alamat', sClass: "alignCenter" } ,
+											{ mData: 'ketua', sClass: "alignCenter" } ,
+											{ mData: 'no_hp', sClass: "alignCenter" } ,
+											{ mData: 'tahun', sClass: "alignCenter" } ,
+											{ mData: 'jenis_usaha', sClass: "alignCenter" },
+											{ mData: 'jenis_usaha_pengembangan', sClass: "alignCenter" },
+											{ mData: 'pendamping', sClass: "alignCenter" },
+											{ mData: 'no_pendamping', sClass: "alignCenter" },
+											{ mData: 'status', sClass: "alignCenter" },
 											{ mData: 'action' }
 										]
 							});
@@ -361,11 +372,11 @@
 			<form role="form" action="<?php echo base_url()."admin/Master/import_kube_data"; ?>" method='post' enctype="multipart/form-data">
 				<div class="modal-body">
 					<div class="form-body">
-						<div class="form-group form-md-line-input has-danger">
+						<!-- <div class="form-group form-md-line-input has-danger">
 							<label class="col-md-3 control-label" for="form_control_1">Provinsi <span class="required"> * </span></label>
 							<div class="col-md-9">
 								<div class="input-icon">
-									<select name='id_provinsi' id='id_provinsi' class="form-control select2-allow-clear" required>
+									<select name='id_provinsi' id='id_provinsi2' class="form-control select2-allow-clear" required>
 										<option value=''></option>
 										<?php
 										foreach ($provinsi as $key => $value) {
@@ -375,19 +386,19 @@
 									</select>
 								</div>
 							</div>
-						</div>
-						<div class="form-group form-md-line-input has-danger">
+						</div> -->
+						<!-- <div class="form-group form-md-line-input has-danger">
 							<label class="col-md-3 control-label" for="form_control_1">Kabupaten/ Kota <span class="required"> * </span></label>
 							<div class="col-md-9">
 								<div class="input-icon">
-									<select name='id_kabupaten' id='id_kabupaten' class="form-control select2-allow-clear" required>
+									<select name='id_kabupaten' id='id_kabupaten2' class="form-control select2-allow-clear" required>
 										<option value=''></option>
 									</select>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="form-group form-md-line-input has-danger">
-							<label class="col-md-3 control-label" for="form_control_1">Tahun Program <span class="required"> * </span></label>
+							<!-- <label class="col-md-3 control-label" for="form_control_1">Tahun Program <span class="required"> * </span></label>
 							<div class="col-md-3">
 								<div class="input-icon">
 									<select name='tahun' class="form-control select2-allow-clear" required>
@@ -399,8 +410,8 @@
 										<option value='2019'>2019</option>
 									</select>
 								</div>
-							</div>
-							<label class="col-md-2 control-label" for="form_control_1">Tahap <span class="required"> * </span></label>
+							</div> -->
+							<!-- <label class="col-md-2 control-label" for="form_control_1">Tahap <span class="required"> * </span></label>
 							<div class="col-md-4">
 								<div class="input-icon">
 									<select name='tahap' class="form-control select2-allow-clear" required>
@@ -410,7 +421,7 @@
 										<option value='3'>Tahap 3</option>
 									</select>
 								</div>
-							</div>
+							</div> -->
 						</div>
 						<div class="form-group form-md-line-input has-danger">
 							<label class="col-md-3 control-label" for="form_control_1">File Import <span class="required"> * </span></label>

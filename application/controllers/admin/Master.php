@@ -344,7 +344,7 @@ class Master extends CI_Controller {
 		$this->load->view('admin/master/kube_data',$data);
 		$this->load->view('admin/template/footer');
 	}
-	public function import_kube_data(){
+	public function import_kube_data_old(){
 		include APPPATH.'third_party/PHPExcel/PHPExcel.php';
 		$namafile = date('YmdHis').'.xlsx';
 		$config['upload_path'] = 'data_upload/kube/';
@@ -544,11 +544,344 @@ class Master extends CI_Controller {
 			echo "<script>window.location='".base_url()."admin_side/kube/'</script>";
 		}
 	}
+	public function import_kube_data__old(){
+		include APPPATH.'third_party/PHPExcel/PHPExcel.php';
+		$namafile = date('YmdHis').'.xlsx';
+		$config['upload_path'] = 'data_upload/kube/';
+		$config['allowed_types'] = 'xlsx';
+		$config['max_size']	= '7048';
+		$config['overwrite'] = true;
+		$config['file_name'] = $namafile;
+
+		$this->upload->initialize($config);
+		if($this->upload->do_upload('fmasuk')){
+			$excelreader = new PHPExcel_Reader_Excel2007();
+			$loadexcel = $excelreader->load('data_upload/kube/'.$namafile);
+			$sheet = $loadexcel->getActiveSheet()->toArray(null, true, true ,true);
+			$numrow = 1;
+			$id_kube = '';
+			foreach($sheet as $row){
+				if($numrow > 1){
+					// $data_tes = array(
+					// 	'a' => $row['A'],
+					// 	'b' => $row['B'],
+					// 	'c' => $row['C'],
+					// 	'd' => $row['D'],
+					// 	'e' => $row['E'],
+					// 	'f' => $row['F'],
+					// 	'g' => $row['G'],
+					// 	'h' => $row['H'],
+					// 	'i' => $row['I'],
+					// 	'j' => $row['J'],
+					// 	'k' => $row['K'],
+					// 	'l' => $row['L'],
+					// 	'm' => $row['M'],
+					// 	'n' => $row['N'],
+					// 	'o' => $row['O']
+					// );
+					// print_r($data_tes);
+					if($row['A']=='' AND $row['B']=='' AND $row['C']=='' AND $row['D']=='' AND $row['E']=='' AND $row['F']=='' AND $row['G']=='' AND $row['H']=='' AND $row['I']=='' AND $row['J']=='' AND $row['K']=='' AND $row['L']=='' AND $row['M']=='' AND $row['N']=='' AND $row['O']==''){
+						echo'';
+					}else{
+						// baru
+						$cek_id_kube = $this->Main_model->getSelectedData('kube a', 'a.*', array('a.no_kube' => $row['E']))->row();
+						if($cek_id_kube==NULL){
+							$get_id_kube = $this->Main_model->getLastID('kube','id_kube');
+                            $get_id_kabupaten = $this->Main_model->getSelectedData('kabupaten a', 'a.*', array('a.nm_kabupaten'=>$row['B']))->row();
+							$get_id_kecamatan = $this->Main_model->getSelectedData('kecamatan a', 'a.*', array('a.id_kabupaten'=>$get_id_kabupaten->id_kabupaten,'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_kecamatan" => $row['C']))->row();
+							$id_kecamatan = $get_id_kecamatan->id_kecamatan;
+							$get_id_desa = $this->Main_model->getSelectedData('desa a', 'a.*', array('a.id_kecamatan'=>$id_kecamatan,'a.id_kabupaten'=>$get_id_kabupaten->id_kabupaten,'a.id_provinsi'=>$this->input->post('id_provinsi'),"a.nm_desa" => $row['D']))->row();
+							$id_desa = $get_id_desa->id_desa;
+							$nama_tim = $row['F'];
+							$cek_jenis_usaha = $this->Main_model->getSelectedData('jenis_usaha a', 'a.*', array("a.jenis_usaha" => $row['K']))->row();
+							$id_jenis_usaha = '';
+							if($cek_jenis_usaha==NULL){
+								$get_jenis_usaha = $this->Main_model->getLastID('jenis_usaha','id_jenis_usaha');
+								$insert_jenis_usaha = array(
+									'id_jenis_usaha' => $get_jenis_usaha['id_jenis_usaha']+1,
+									'jenis_usaha' => $row['K']
+								);
+								$this->Main_model->insertData('jenis_usaha',$insert_jenis_usaha);
+								// print_r($insert_jenis_usaha);
+								$id_jenis_usaha = $get_jenis_usaha['id_jenis_usaha']+1;
+							}else{
+								$id_jenis_usaha = $cek_jenis_usaha->id_jenis_usaha;
+							}
+							$id_jenis_usaha_pengembangan = '';
+							if($row['L']==NULL){
+								echo'';
+							}else{
+								$cek_jenis_usaha_pengembangan = $this->Main_model->getSelectedData('jenis_usaha_pengembangan a', 'a.*', array("a.jenis_usaha_pengembangan" => $row['L']))->row();
+								if($cek_jenis_usaha_pengembangan==NULL){
+									$get_jenis_usaha_pengembangan = $this->Main_model->getLastID('jenis_usaha_pengembangan','id_jenis_usaha_pengembangan');
+									$insert_jenis_usaha_pengembangan = array(
+										'id_jenis_usaha_pengembangan' => $get_jenis_usaha_pengembangan['id_jenis_usaha_pengembangan']+1,
+										'jenis_usaha_pengembangan' => $row['L']
+									);
+									$this->Main_model->insertData('jenis_usaha_pengembangan',$insert_jenis_usaha_pengembangan);
+									// print_r($insert_jenis_usaha_pengembangan);
+									$id_jenis_usaha_pengembangan = $get_jenis_usaha_pengembangan['id_jenis_usaha_pengembangan']+1;
+								}else{
+									$id_jenis_usaha_pengembangan = $cek_jenis_usaha_pengembangan->id_jenis_usaha_pengembangan;
+								}
+							}
+							$id_pendamping = '';
+							if($row['N']==NULL){
+								echo'';
+							}else{
+								$cek_pendamping = $this->Main_model->getSelectedData('pendamping a', 'a.*', array("a.no_pendamping" => $row['N']))->row();
+								if($cek_pendamping==NULL){
+									$get_pendamping = $this->Main_model->getLastID('pendamping','id_pendamping');
+									$insert_pendamping = array(
+										'id_pendamping' => $get_pendamping['id_pendamping']+1,
+										'pendamping' => $row['M'],
+										'no_pendamping' => $row['N']
+
+									);
+									$this->Main_model->insertData('pendamping',$insert_pendamping);
+									// print_r($insert_pendamping);
+									$id_pendamping = $get_pendamping['id_pendamping']+1;
+								}else{
+									$id_pendamping = $cek_pendamping->id_pendamping;
+								}
+							}
+							$anggaran = 0;
+							if($row['H']==NULL){
+								echo'';
+							}else{
+								$anggaran = '2000000';
+								$data_insert4 = array(
+									'id_kube' => $get_id_kube['id_kube']+1,
+									'nama' => $row['H'],
+									'jabatan_kelompok' => 'Ketua',
+									'no_hp' => $row['I']
+								);
+								$this->Main_model->insertData('anggota_kube',$data_insert4);
+								// print_r($data_insert4);
+							}
+							$no_kube = '';
+							if($row['E']==NULL){
+								$no_kube = $get_id_kube['id_kube']+1;
+							}else{
+								$no_kube = $row['E'];
+							}
+							$status_kube = '';
+							if($row['O']==NULL){
+								$status_kube = 'Ada';
+							}else{
+								$status_kube = $row['O'];
+							}
+							$data_insert_kube = array(
+								'id_kube' => $get_id_kube['id_kube']+1,
+								'no_kube' => $no_kube,
+								'tahun' => $row['J'],
+								'tahap' => '',
+								'id_jenis_usaha' => $id_jenis_usaha,
+								'id_jenis_usaha_pengembangan' => $id_jenis_usaha_pengembangan,
+								'nama_tim' => $nama_tim,
+								'alamat' => $row['G'],
+								'rencana_anggaran' => $anggaran,
+								'id_provinsi' => $this->input->post('id_provinsi'),
+								'id_kabupaten' => $get_id_kabupaten->id_kabupaten,
+								'id_kecamatan' => $id_kecamatan,
+								'id_desa' => $id_desa,
+								'id_pendamping' => $id_pendamping,
+								'status' => $status_kube,
+								'created_at' => date('Y-m-d H:i:s'),
+								'created_by' => $this->session->userdata('id')
+							);
+							$this->Main_model->insertData('kube',$data_insert_kube);
+							// print_r($data_insert_kube);
+							$data_insert_status_laporan_kube = array(
+								'id_kube' => $get_id_kube['id_kube']+1,
+								'persentase_fisik' => 0,
+								'anggaran' => 0,
+								'persentase_anggaran' => 0,
+								'persentase_realisasi' => 0
+							);
+							$this->Main_model->insertData('status_laporan_kube',$data_insert_status_laporan_kube);
+							// print_r($data_insert_status_laporan_kube);
+						}else{
+							echo'';
+						}
+					}
+				}
+				$numrow++;
+			}
+			$this->Main_model->log_activity($this->session->userdata('id'),'Importing data',"Import kube data (with kube's member)",$this->session->userdata('location'));
+
+			$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diupload.<br /></div>' );
+			echo "<script>window.location='".base_url()."admin_side/kube/'</script>";
+		}else{
+			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diupload.<br /></div>' );
+			echo "<script>window.location='".base_url()."admin_side/kube/'</script>";
+		}
+	}
+	public function import_kube_data(){
+		include APPPATH.'third_party/PHPExcel/PHPExcel.php';
+		$namafile = date('YmdHis').'.xlsx';
+		$config['upload_path'] = 'data_upload/kube/';
+		$config['allowed_types'] = 'xlsx';
+		$config['max_size']	= '7048';
+		$config['overwrite'] = true;
+		$config['file_name'] = $namafile;
+
+		$this->upload->initialize($config);
+		if($this->upload->do_upload('fmasuk')){
+			$excelreader = new PHPExcel_Reader_Excel2007();
+			$loadexcel = $excelreader->load('data_upload/kube/'.$namafile);
+			$sheet = $loadexcel->getActiveSheet()->toArray(null, true, true ,true);
+			$numrow = 1;
+			$id_kube = '';
+			foreach($sheet as $row){
+				if($numrow > 1){
+				
+					if($row['A']=='' AND $row['B']=='' AND $row['C']=='' AND $row['D']=='' AND $row['E']=='' AND $row['F']=='' AND $row['G']=='' AND $row['H']=='' AND $row['I']=='' AND $row['J']=='' AND $row['K']=='' AND $row['L']=='' AND $row['M']=='' AND $row['N']=='' AND $row['O']==''){
+						echo'';
+					}else{
+						// baru
+						$cek_id_kube = $this->Main_model->getSelectedData('kube a', 'a.*', array('a.no_kube' => $row['F']))->row();
+						if($cek_id_kube==NULL){
+							$get_id_kube = $this->Main_model->getLastID('kube','id_kube');
+                            $get_id_provinsi = $this->Main_model->getSelectedData('provinsi a', 'a.*', array('a.nm_provinsi'=>$row['B']))->row();
+                            $get_id_kabupaten = $this->Main_model->getSelectedData('kabupaten a', 'a.*', array('a.nm_kabupaten'=>$row['C']))->row();
+							$get_id_kecamatan = $this->Main_model->getSelectedData('kecamatan a', 'a.*', array('a.id_kabupaten'=>$get_id_kabupaten->id_kabupaten,'a.id_provinsi'=>$get_id_provinsi->id_provinsi,"a.nm_kecamatan" => $row['D']))->row();
+							$id_kecamatan = $get_id_kecamatan->id_kecamatan;
+							$get_id_desa = $this->Main_model->getSelectedData('desa a', 'a.*', array('a.id_kecamatan'=>$id_kecamatan,'a.id_kabupaten'=>$get_id_kabupaten->id_kabupaten,'a.id_provinsi'=>$get_id_provinsi->id_provinsi,"a.nm_desa" => $row['E']))->row();
+							$id_desa = $get_id_desa->id_desa;
+							$nama_tim = $row['G'];
+							$cek_jenis_usaha = $this->Main_model->getSelectedData('jenis_usaha a', 'a.*', array("a.jenis_usaha" => $row['K']))->row();
+							$id_jenis_usaha = '';
+							if($cek_jenis_usaha==NULL){
+								$get_jenis_usaha = $this->Main_model->getLastID('jenis_usaha','id_jenis_usaha');
+								$insert_jenis_usaha = array(
+									'id_jenis_usaha' => $get_jenis_usaha['id_jenis_usaha']+1,
+									'jenis_usaha' => $row['K']
+								);
+								$this->Main_model->insertData('jenis_usaha',$insert_jenis_usaha);
+								// print_r($insert_jenis_usaha);
+								$id_jenis_usaha = $get_jenis_usaha['id_jenis_usaha']+1;
+							}else{
+								$id_jenis_usaha = $cek_jenis_usaha->id_jenis_usaha;
+							}
+							$id_jenis_usaha_pengembangan = '';
+							if($row['L']==NULL){
+								echo'';
+							}else{
+								$cek_jenis_usaha_pengembangan = $this->Main_model->getSelectedData('jenis_usaha_pengembangan a', 'a.*', array("a.jenis_usaha_pengembangan" => $row['L']))->row();
+								if($cek_jenis_usaha_pengembangan==NULL){
+									$get_jenis_usaha_pengembangan = $this->Main_model->getLastID('jenis_usaha_pengembangan','id_jenis_usaha_pengembangan');
+									$insert_jenis_usaha_pengembangan = array(
+										'id_jenis_usaha_pengembangan' => $get_jenis_usaha_pengembangan['id_jenis_usaha_pengembangan']+1,
+										'jenis_usaha_pengembangan' => $row['L']
+									);
+									$this->Main_model->insertData('jenis_usaha_pengembangan',$insert_jenis_usaha_pengembangan);
+									// print_r($insert_jenis_usaha_pengembangan);
+									$id_jenis_usaha_pengembangan = $get_jenis_usaha_pengembangan['id_jenis_usaha_pengembangan']+1;
+								}else{
+									$id_jenis_usaha_pengembangan = $cek_jenis_usaha_pengembangan->id_jenis_usaha_pengembangan;
+								}
+							}
+							$id_pendamping = '';
+							if($row['M']==NULL){
+								echo'';
+							}else{
+								$cek_pendamping = $this->Main_model->getSelectedData('pendamping a', 'a.*', array("a.pendamping" => $row['M']))->row();
+								if($cek_pendamping==NULL){
+									$get_pendamping = $this->Main_model->getLastID('pendamping','id_pendamping');
+									$insert_pendamping = array(
+										'id_pendamping' => $get_pendamping['id_pendamping']+1,
+										'pendamping' => $row['M'],
+										'no_pendamping' => $row['N']
+
+									);
+									$this->Main_model->insertData('pendamping',$insert_pendamping);
+									// print_r($insert_pendamping);
+									$id_pendamping = $get_pendamping['id_pendamping']+1;
+								}else{
+									$id_pendamping = $cek_pendamping->id_pendamping;
+								}
+							}
+							$anggaran = 0;
+							if($row['H']==NULL){
+								echo'';
+							}else{
+								$anggaran = '2000000';
+								$data_insert4 = array(
+									'id_kube' => $get_id_kube['id_kube']+1,
+									'nama' => $row['I'],
+									'jabatan_kelompok' => 'Ketua',
+									'no_hp' => $row['J']
+								);
+								$this->Main_model->insertData('anggota_kube',$data_insert4);
+								// print_r($data_insert4);
+							}
+							$no_kube = '';
+							if($row['F']==NULL){
+								$no_kube = $get_id_kube['id_kube']+1;
+							}else{
+								$no_kube = $row['F'];
+							}
+							$status_kube = '';
+							if($row['O']==NULL){
+								$status_kube = 'Ada';
+							}else{
+								$status_kube = $row['O'];
+							}
+							$data_insert_kube = array(
+								'id_kube' => $get_id_kube['id_kube']+1,
+								'no_kube' => $no_kube,
+								'tahun' => $row['A'],
+								'tahap' => '',
+								'id_jenis_usaha' => $id_jenis_usaha,
+								'id_jenis_usaha_pengembangan' => $id_jenis_usaha_pengembangan,
+								'nama_tim' => $nama_tim,
+								'alamat' => $row['H'],
+								'rencana_anggaran' => $anggaran,
+								'id_provinsi' => $get_id_provinsi->id_provinsi,
+								'id_kabupaten' => $get_id_kabupaten->id_kabupaten,
+								'id_kecamatan' => $id_kecamatan,
+								'id_desa' => $id_desa,
+								'id_pendamping' => $id_pendamping,
+								'status' => $status_kube,
+								'created_at' => date('Y-m-d H:i:s'),
+								'created_by' => $this->session->userdata('id')
+							);
+							$this->Main_model->insertData('kube',$data_insert_kube);
+							// print_r($data_insert_kube);
+							$cek_status = $this->Main_model->getSelectedData('status_laporan_kube a', 'a.*', array("a.id_kube" => $get_id_kube['id_kube']+1))->row();
+							if($cek_status==NULL){
+								$data_insert_status_laporan_kube = array(
+									'id_kube' => $get_id_kube['id_kube']+1,
+									'persentase_fisik' => 0,
+									'anggaran' => 0,
+									'persentase_anggaran' => 0,
+									'persentase_realisasi' => 0
+								);
+								$this->Main_model->insertData('status_laporan_kube',$data_insert_status_laporan_kube);
+								// print_r($data_insert_status_laporan_kube);
+							}else{echo'';}
+						}else{
+							echo'';
+						}
+					}
+				}
+				$numrow++;
+			}
+			$this->Main_model->log_activity($this->session->userdata('id'),'Importing data',"Import kube data (with kube's member)",$this->session->userdata('location'));
+
+			$this->session->set_flashdata('sukses','<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Yeah! </strong>data telah berhasil diupload.<br /></div>' );
+			echo "<script>window.location='".base_url()."admin_side/kube/'</script>";
+		}else{
+			$this->session->set_flashdata('gagal','<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert"><i class="ace-icon fa fa-times"></i></button><strong></i>Oops! </strong>data gagal diupload.<br /></div>' );
+			echo "<script>window.location='".base_url()."admin_side/kube/'</script>";
+		}
+	}
 	public function json_kube(){
 		$get_data = '';
 		if($this->input->post('prov')!=NULL){
 			if($this->input->post('kabkot')!=NULL){
-				$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0','a.id_kabupaten'=>$this->input->post('kabkot')),'','','','',array(
+				$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.jenis_usaha_pengembangan,gh.pendamping,gh.no_pendamping',array('a.deleted'=>'0','a.id_kabupaten'=>$this->input->post('kabkot')),'','','','',array(
 					array(
 						'table' => 'jenis_usaha b',
 						'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
@@ -572,11 +905,21 @@ class Master extends CI_Controller {
 					array(
 						'table' => 'desa f',
 						'on' => 'a.id_desa=f.id_desa',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'jenis_usaha_pengembangan g',
+						'on' => 'a.id_jenis_usaha_pengembangan=g.id_jenis_usaha_pengembangan',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'pendamping gh',
+						'on' => 'a.id_pendamping=gh.id_pendamping',
 						'pos' => 'LEFT'
 					)
 				))->result();
 			}else{
-				$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0','a.id_provinsi'=>$this->input->post('prov')),'','','','',array(
+				$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.jenis_usaha_pengembangan,gh.pendamping,gh.no_pendamping',array('a.deleted'=>'0','a.id_provinsi'=>$this->input->post('prov')),'','','','',array(
 					array(
 						'table' => 'jenis_usaha b',
 						'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
@@ -600,12 +943,22 @@ class Master extends CI_Controller {
 					array(
 						'table' => 'desa f',
 						'on' => 'a.id_desa=f.id_desa',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'jenis_usaha_pengembangan g',
+						'on' => 'a.id_jenis_usaha_pengembangan=g.id_jenis_usaha_pengembangan',
+						'pos' => 'LEFT'
+					),
+					array(
+						'table' => 'pendamping gh',
+						'on' => 'a.id_pendamping=gh.id_pendamping',
 						'pos' => 'LEFT'
 					)
 				))->result();
 			}
 		}else{
-			$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa',array('a.deleted'=>'0'),'','','','',array(
+			$get_data = $this->Main_model->getSelectedData('kube a', 'a.*,b.jenis_usaha,c.nm_provinsi,d.nm_kabupaten,e.nm_kecamatan,f.nm_desa,g.jenis_usaha_pengembangan,gh.pendamping,gh.no_pendamping',array('a.deleted'=>'0'),'','','','',array(
 				array(
 					'table' => 'jenis_usaha b',
 					'on' => 'a.id_jenis_usaha=b.id_jenis_usaha',
@@ -630,6 +983,16 @@ class Master extends CI_Controller {
 					'table' => 'desa f',
 					'on' => 'a.id_desa=f.id_desa',
 					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'jenis_usaha_pengembangan g',
+					'on' => 'a.id_jenis_usaha_pengembangan=g.id_jenis_usaha_pengembangan',
+					'pos' => 'LEFT'
+				),
+				array(
+					'table' => 'pendamping gh',
+					'on' => 'a.id_pendamping=gh.id_pendamping',
+					'pos' => 'LEFT'
 				)
 			))->result();
 		}
@@ -643,16 +1006,29 @@ class Master extends CI_Controller {
 								</label>
 								';
 			$isi['number'] = $no++.'.';
+			$isi['no_kube'] = $value->no_kube;
 			$isi['nama_tim'] = $value->nama_tim;
 			$isi['tahun'] = $value->tahun;
 			$isi['tahap'] = 'Tahap '.$value->tahap;
 			$isi['jenis_usaha'] = $value->jenis_usaha;
-			// $isi['alamat'] = $value->alamat;
+			$isi['jenis_usaha_pengembangan'] = $value->jenis_usaha_pengembangan;
+			$get_ketua = $this->Main_model->getSelectedData('anggota_kube a', 'a.*', array('a.id_kube'=>$value->id_kube,'a.jabatan_kelompok'=>'Ketua'), '', '1')->row();
+			if($get_ketua==NULL){
+				$isi['ketua'] = '-';
+				$isi['no_hp'] = '-';
+			}else{
+				$isi['ketua'] = $get_ketua->nama;
+				$isi['no_hp'] = $get_ketua->no_hp;
+			}
+			$isi['alamat'] = $value->alamat;
 			$isi['rencana_anggaran'] = 'Rp '.number_format($value->rencana_anggaran,2);
 			$isi['nm_provinsi'] = $value->nm_provinsi;
 			$isi['nm_kabupaten'] = $value->nm_kabupaten;
 			$isi['nm_kecamatan'] = $value->nm_kecamatan;
 			$isi['nm_desa'] = $value->nm_desa;
+			$isi['pendamping'] = $value->pendamping;
+			$isi['no_pendamping'] = $value->no_pendamping;
+			$isi['status'] = $value->status;
 			$return_on_click = "return confirm('Anda yakin?')";
 			$isi['action'] =	'
 								<div class="dropdown">
@@ -739,7 +1115,7 @@ class Master extends CI_Controller {
 		$data['parent'] = 'master';
 		$data['child'] = 'kube';
 		$data['grand_child'] = '';
-		$data['data_utama'] = $this->Main_model->getSelectedData('kube a', 'a.*,e.jenis_usaha,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa', array('md5(a.id_kube)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
+		$data['data_utama'] = $this->Main_model->getSelectedData('kube a', 'a.*,e.jenis_usaha,f.nm_provinsi,b.nm_kabupaten,c.nm_kecamatan,d.nm_desa,g.jenis_usaha_pengembangan,gh.pendamping,gh.no_pendamping', array('md5(a.id_kube)'=>$this->uri->segment(3),'a.deleted'=>'0'),'','','','',array(
 			array(
 				'table' => 'provinsi f',
 				'on' => 'a.id_provinsi=f.id_provinsi',
@@ -764,6 +1140,16 @@ class Master extends CI_Controller {
 				'table' => 'jenis_usaha e',
 				'on' => 'a.id_jenis_usaha=e.id_jenis_usaha',
 				'pos' => 'left',
+			),
+			array(
+				'table' => 'jenis_usaha_pengembangan g',
+				'on' => 'a.id_jenis_usaha_pengembangan=g.id_jenis_usaha_pengembangan',
+				'pos' => 'LEFT'
+			),
+			array(
+				'table' => 'pendamping gh',
+				'on' => 'a.id_pendamping=gh.id_pendamping',
+				'pos' => 'LEFT'
 			)
 		))->result();
 		$this->load->view('admin/template/header',$data);
@@ -957,7 +1343,8 @@ class Master extends CI_Controller {
 						'nama' => $this->input->post('nama'),
 						'nik' => $this->input->post('nik'),
 						'jabatan_kelompok' => $this->input->post('jabatan_kelompok'),
-						'no_kk' => $this->input->post('no_kk')
+						'no_kk' => $this->input->post('no_kk'),
+						'no_hp' => $this->input->post('no_hp')
 					);
 					$this->Main_model->insertData('anggota_kube',$data_insert4);
 
@@ -2682,6 +3069,17 @@ class Master extends CI_Controller {
 							</div>
 						</div>
 					</div>
+					<div class="form-group form-md-line-input has-danger">
+						<label class="col-md-3 control-label" for="form_control_1">Nomor HP</label>
+						<div class="col-md-9">
+							<div class="input-icon">
+								<input type="text" class="form-control" name="no_hp" value="'.$data->no_hp.'" required>
+								<div class="form-control-focus"> </div>
+								<span class="help-block">Some help goes here...</span>
+								<i class="fa fa-credit-card"></i>
+							</div>
+						</div>
+					</div>
 				</div>
 				<br>
 				<div class="form-actions margin-top-9">
@@ -2741,6 +3139,17 @@ class Master extends CI_Controller {
 						<div class="col-md-9">
 							<div class="input-icon">
 								<input type="text" class="form-control" name="no_kk" value="'.$data->no_kk.'" required>
+								<div class="form-control-focus"> </div>
+								<span class="help-block">Some help goes here...</span>
+								<i class="fa fa-credit-card"></i>
+							</div>
+						</div>
+					</div>
+					<div class="form-group form-md-line-input has-danger">
+						<label class="col-md-3 control-label" for="form_control_1">Nomor HP</label>
+						<div class="col-md-9">
+							<div class="input-icon">
+								<input type="text" class="form-control" name="no_hp" value="'.$data->no_hp.'" required>
 								<div class="form-control-focus"> </div>
 								<span class="help-block">Some help goes here...</span>
 								<i class="fa fa-credit-card"></i>
@@ -2944,5 +3353,22 @@ class Master extends CI_Controller {
 			// 	echo'<option value="'.$value->id_indikator.'">'.$value->indikator.'</option>';
 			// }
 		// }
+	}
+	public function hapus_anggota_kube(){
+		$get_data = $this->Main_model->getSelectedData('user_to_role a', 'a.*',array('a.role_id'=>'2'))->result();
+		foreach ($get_data as $key => $value) {
+			$user_id = $value->user_id;
+			$this->Main_model->deleteData('user_profile',array('user_id'=>$user_id));
+			$this->Main_model->deleteData('user_to_role',array('user_id'=>$user_id));
+			$this->Main_model->deleteData('user',array('id'=>$user_id));
+		}
+	}
+	public function hapus_jenis_usaha(){
+		$getdata = $this->db->query("SELECT a.*,(select count(b.id_kube) from kube b where b.id_jenis_usaha=a.id_jenis_usaha) as jml FROM jenis_usaha a")->result();
+		foreach ($getdata as $key => $value) {
+			if($value->jml=='0'){
+				$this->Main_model->deleteData('jenis_usaha',array('id_jenis_usaha'=>$value->id_jenis_usaha));
+			}else{echo'';}
+		}
 	}
 }
