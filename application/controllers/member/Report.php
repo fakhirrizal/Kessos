@@ -115,6 +115,31 @@ class Report extends CI_Controller {
             // print_r($data_update1);
             $this->Main_model->updateData('status_laporan_kube',$data_update1,array('id_kube'=>$get_status_laporan_kube->id_kube));
         }
+        $nmfile = "file_".time(); // nama file saya beri nama langsung dan diikuti fungsi time
+        $config['upload_path'] = dirname($_SERVER["SCRIPT_FILENAME"]).'/data_upload/kube/laporan/'; // path folder
+        $config['allowed_types'] = 'jpg|png|jpeg|bmp'; // type yang dapat diakses bisa anda sesuaikan
+        $config['max_size'] = '3072'; // maksimum besar file 3M
+        $config['max_width']  = '5000'; // lebar maksimum 5000 px
+        $config['max_height']  = '5000'; // tinggi maksimu 5000 px
+        $config['file_name'] = $nmfile; // nama yang terupload nantinya
+
+        $this->upload->initialize($config);
+        if(isset($_FILES['foto']['name']))
+        {
+            if(!$this->upload->do_upload('foto'))
+            {
+                echo'';
+            }
+            else
+            {
+                $gbr = $this->upload->data();
+                $data_insert_file = array(
+                    'id_laporan_kube' => $get_id_laporan_kube['id_laporan_kube']+1,
+                    'file' => $gbr['file_name']
+                );
+                $this->Main_model->insertData("foto_laporan_kube",$data_insert_file);
+            }
+        }else{echo'';}
         $this->Main_model->log_activity($this->session->userdata('id'),'Adding data',"Add Kube's report data (".$get_data_kube->nama_tim.")",$this->session->userdata('location'));
         $this->db->trans_complete();
         if($this->db->trans_status() === false){
@@ -480,6 +505,31 @@ class Report extends CI_Controller {
             // print_r($data_update1);
             $this->Main_model->updateData('status_laporan_rutilahu',$data_update1,array('id_rutilahu'=>$get_status_laporan_rutilahu->id_rutilahu));
         }
+        $nmfile = "file_".time(); // nama file saya beri nama langsung dan diikuti fungsi time
+        $config['upload_path'] = dirname($_SERVER["SCRIPT_FILENAME"]).'/data_upload/rutilahu/laporan/'; // path folder
+        $config['allowed_types'] = 'jpg|png|jpeg|bmp'; // type yang dapat diakses bisa anda sesuaikan
+        $config['max_size'] = '3072'; // maksimum besar file 3M
+        $config['max_width']  = '5000'; // lebar maksimum 5000 px
+        $config['max_height']  = '5000'; // tinggi maksimu 5000 px
+        $config['file_name'] = $nmfile; // nama yang terupload nantinya
+
+        $this->upload->initialize($config);
+        if(isset($_FILES['foto']['name']))
+        {
+            if(!$this->upload->do_upload('foto'))
+            {
+                echo'';
+            }
+            else
+            {
+                $gbr = $this->upload->data();
+                $data_insert_file = array(
+                    'id_laporan_rutilahu' => $get_id_laporan_rutilahu['id_laporan_rutilahu']+1,
+                    'file' => $gbr['file_name']
+                );
+                $this->Main_model->insertData("foto_laporan_rutilahu",$data_insert_file);
+            }
+        }else{echo'';}
         $this->Main_model->log_activity($this->session->userdata('id'),'Adding data',"Add Rutilahu's report data (".$get_data_rutilahu->nama_kelompok.")",$this->session->userdata('location'));
         $this->db->trans_complete();
         if($this->db->trans_status() === false){
@@ -835,6 +885,31 @@ class Report extends CI_Controller {
             // print_r($data_update1);
             $this->Main_model->updateData('status_laporan_sarling',$data_update1,array('id_sarling'=>$get_status_laporan_sarling->id_sarling));
         }
+        $nmfile = "file_".time(); // nama file saya beri nama langsung dan diikuti fungsi time
+        $config['upload_path'] = dirname($_SERVER["SCRIPT_FILENAME"]).'/data_upload/sarling/laporan/'; // path folder
+        $config['allowed_types'] = 'jpg|png|jpeg|bmp'; // type yang dapat diakses bisa anda sesuaikan
+        $config['max_size'] = '3072'; // maksimum besar file 3M
+        $config['max_width']  = '5000'; // lebar maksimum 5000 px
+        $config['max_height']  = '5000'; // tinggi maksimu 5000 px
+        $config['file_name'] = $nmfile; // nama yang terupload nantinya
+
+        $this->upload->initialize($config);
+        if(isset($_FILES['foto']['name']))
+        {
+            if(!$this->upload->do_upload('foto'))
+            {
+                echo'';
+            }
+            else
+            {
+                $gbr = $this->upload->data();
+                $data_insert_file = array(
+                    'id_laporan_sarling' => $get_id_laporan_sarling['id_laporan_sarling']+1,
+                    'file' => $gbr['file_name']
+                );
+                $this->Main_model->insertData("foto_laporan_sarling",$data_insert_file);
+            }
+        }else{echo'';}
         $this->Main_model->log_activity($this->session->userdata('id'),'Adding data',"Add sarling's report data (".$get_data_sarling->nama_tim.")",$this->session->userdata('location'));
         $this->db->trans_complete();
         if($this->db->trans_status() === false){
@@ -1091,4 +1166,19 @@ class Report extends CI_Controller {
             echo "<script>window.location='".base_url()."member_side/detil_laporan_sarling/".md5($get_data->id_sarling)."'</script>";
         }
     }
+    /* Other Function */
+	public function ajax_function(){
+		if($this->input->post('modul')=='modul_foto_laporan_kube'){
+            $get_data = $this->Main_model->getSelectedData('foto_laporan_kube a', 'a.*', array('md5(a.id_laporan_kube)'=>$this->input->post('id')))->row();
+            echo '<div style="text-align:center"><img src="'.base_url().'/data_upload/kube/laporan/'.$get_data->file.'" width="100%"></div>';
+        }
+        elseif($this->input->post('modul')=='modul_foto_laporan_rutilahu'){
+            $get_data = $this->Main_model->getSelectedData('foto_laporan_rutilahu a', 'a.*', array('md5(a.id_laporan_rutilahu)'=>$this->input->post('id')))->row();
+            echo '<div style="text-align:center"><img src="'.base_url().'/data_upload/rutilahu/laporan/'.$get_data->file.'" width="100%"></div>';
+        }
+        elseif($this->input->post('modul')=='modul_foto_laporan_sarling'){
+            $get_data = $this->Main_model->getSelectedData('foto_laporan_sarling a', 'a.*', array('md5(a.id_laporan_sarling)'=>$this->input->post('id')))->row();
+            echo '<div style="text-align:center"><img src="'.base_url().'/data_upload/sarling/laporan/'.$get_data->file.'" width="100%"></div>';
+        }
+	}
 }

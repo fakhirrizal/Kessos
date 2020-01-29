@@ -312,6 +312,41 @@ $id_kube = '';
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="detaildata" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="myModalLabel">Foto Laporan Kube</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<div class="box box-primary" id='formdetaildata' >
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$.ajaxSetup({
+				type:"POST",
+				url: "<?php echo site_url(); ?>member/Report/ajax_function",
+				cache: false,
+			});
+			$('.detaildata').click(function(){
+			var id = $(this).attr("id");
+			var modul = 'modul_foto_laporan_kube';
+			$.ajax({
+				data: {id:id,modul:modul},
+				success:function(data){
+					$('#formdetaildata').html(data);
+					$('#detaildata').modal("show");
+					// $('#formdetaildata').html(data);
+				}
+			});
+			});
+		});
+	</script>
 	<script type="text/javascript" language="javascript" >
 		// $(document).ready(function(){
 		// 	$('#tbl1').dataTable({

@@ -18,6 +18,9 @@
 	<div class="m-heading-1 border-yellow m-bordered" style="background-color:#FAD405;">
 		<h3>Catatan</h3>
 		<p> 1. Kolom isian dengan tanda bintang (<font color='red'>*</font>) adalah wajib untuk di isi.</p>
+		<p> 2. Ketentuan file foto yang diupload:</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Format berupa file <b>.png</b>/ <b>.jpg</b>/ <b>.bmp</b>/ <b>.jpeg</b></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Ukuran maksimum file <b>3 MB</b></p>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
@@ -93,6 +96,17 @@
 										<div class="form-control-focus"> </div>
 										<span class="help-block">Some help goes here...</span>
 										<i class="fa fa-list"></i>
+									</div>
+								</div>
+							</div>
+							<div class="form-group form-md-line-input has-danger">
+								<label class="col-md-2 control-label" for="form_control_1">Foto <span class="required"> * </span></label>
+								<div class="col-md-10">
+									<div class="input-icon">
+										<input type="file" class="form-control" name="foto" placeholder="Type something" required>
+										<div class="form-control-focus"> </div>
+										<span class="help-block">Some help goes here...</span>
+										<i class="fa fa-file-image-o"></i>
 									</div>
 								</div>
 							</div>
