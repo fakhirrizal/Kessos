@@ -162,7 +162,7 @@ $id_sarling = '';
 				</div>
 				<div class="modal-body">
 					<div class="box box-primary">
-						<form role="form" class="form-horizontal" action="<?=base_url('spv/simpan_data_anggota_sarling');?>" method="post"  enctype='multipart/form-data'>
+						<form role="form" class="form-horizontal" action="<?=base_url('spv/simpan_data_anggota_sarling');?>" method="post" enctype='multipart/form-data'>
 							<input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>">
 							<input type="hidden" name="id_sarling" value="<?= $id_sarling; ?>">
 							<div class="form-body">

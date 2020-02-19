@@ -192,7 +192,7 @@ $id_kube = '';
 				</div>
 				<div class="modal-body">
 					<div class="box box-primary">
-						<form role="form" class="form-horizontal" action="<?=base_url('admin_side/simpan_data_anggota_kube');?>" method="post"  enctype='multipart/form-data'>
+						<form role="form" class="form-horizontal" action="<?=base_url('admin_side/simpan_data_anggota_kube');?>" method="post" enctype='multipart/form-data'>
 							<input type="hidden" name="<?=$this->security->get_csrf_token_name();?>" value="<?=$this->security->get_csrf_hash();?>">
 							<input type="hidden" name="id_kube" value="<?= $id_kube; ?>">
 							<div class="form-body">
